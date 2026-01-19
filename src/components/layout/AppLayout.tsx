@@ -1,20 +1,31 @@
 import { ReactNode } from "react";
-import { Sidebar } from "./Sidebar";
-import { MobileNav } from "./MobileNav";
+import { ThreePanelLayout } from "./ThreePanelLayout";
 
 interface AppLayoutProps {
   children: ReactNode;
-  showSidebar?: boolean;
+  showRightPanel?: boolean;
+  rightPanelContent?: ReactNode;
 }
 
-export function AppLayout({ children, showSidebar = true }: AppLayoutProps) {
+/**
+ * AppLayout - Main application layout wrapper
+ * Uses the 3-panel system: Left (Context), Main (Work), Right (Intelligence)
+ * 
+ * @param children - Main panel content
+ * @param showRightPanel - Whether to show the right intelligence panel (default: true)
+ * @param rightPanelContent - Custom content for the right panel
+ */
+export function AppLayout({ 
+  children, 
+  showRightPanel = true,
+  rightPanelContent 
+}: AppLayoutProps) {
   return (
-    <div className="min-h-screen bg-background">
-      <div className="flex">
-        {showSidebar && <Sidebar />}
-        <main className="flex-1 pb-20 lg:pb-0">{children}</main>
-      </div>
-      <MobileNav />
-    </div>
+    <ThreePanelLayout 
+      showRightPanel={showRightPanel}
+      rightPanelContent={rightPanelContent}
+    >
+      {children}
+    </ThreePanelLayout>
   );
 }

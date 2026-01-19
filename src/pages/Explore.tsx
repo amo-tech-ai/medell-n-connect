@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { Search, SlidersHorizontal } from "lucide-react";
+import { Search, SlidersHorizontal, MapPin } from "lucide-react";
 import { AppLayout } from "@/components/layout/AppLayout";
 import { PlaceCard } from "@/components/places/PlaceCard";
 import { CategoryFilter } from "@/components/places/CategoryFilter";
@@ -17,6 +17,50 @@ const filterCategories = [
   { id: "events", label: "Things to Do" },
   { id: "cars", label: "Cars" },
 ];
+
+// Right panel content for Explore page
+function ExploreRightPanelContent({ 
+  places, 
+  selectedPlace, 
+  onPlaceSelect 
+}: { 
+  places: Place[];
+  selectedPlace: Place | null;
+  onPlaceSelect: (place: Place | null) => void;
+}) {
+  return (
+    <div className="space-y-4">
+      {/* Map Section */}
+      <section>
+        <div className="flex items-center gap-2 mb-3">
+          <MapPin className="w-4 h-4 text-primary" />
+          <h3 className="font-semibold text-sm text-foreground">Map View</h3>
+        </div>
+        <div className="rounded-xl overflow-hidden border border-border h-[300px]">
+          <MapView
+            places={places}
+            selectedPlace={selectedPlace}
+            onPlaceSelect={onPlaceSelect}
+          />
+        </div>
+      </section>
+
+      {/* Quick Stats */}
+      <section className="p-3 rounded-xl bg-secondary/50 border border-border">
+        <div className="grid grid-cols-2 gap-4 text-center">
+          <div>
+            <p className="text-2xl font-bold text-primary">{places.length}</p>
+            <p className="text-xs text-muted-foreground">Places found</p>
+          </div>
+          <div>
+            <p className="text-2xl font-bold text-accent">4.5+</p>
+            <p className="text-xs text-muted-foreground">Avg rating</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
 
 export default function Explore() {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -61,90 +105,86 @@ export default function Explore() {
   };
 
   return (
-    <AppLayout>
-      <div className="flex flex-col lg:flex-row min-h-screen">
-        {/* Main Content */}
-        <div className="flex-1 lg:max-w-3xl">
-          {/* Header */}
-          <div className="sticky top-0 bg-background/95 backdrop-blur-sm z-20 px-4 lg:px-6 py-4 border-b border-border">
-            <div className="flex items-center justify-between mb-4">
-              <NeighborhoodSelector
-                selected={neighborhood}
-                onSelect={setNeighborhood}
-              />
-              <Button variant="outline" size="icon" className="lg:hidden">
-                <SlidersHorizontal className="w-4 h-4" />
-              </Button>
-            </div>
+    <AppLayout
+      rightPanelContent={
+        <ExploreRightPanelContent 
+          places={filteredPlaces}
+          selectedPlace={selectedPlace}
+          onPlaceSelect={setSelectedPlace}
+        />
+      }
+    >
+      <div className="min-h-screen">
+        {/* Header */}
+        <div className="sticky top-0 bg-background/95 backdrop-blur-sm z-20 px-4 lg:px-6 py-4 border-b border-border">
+          <div className="flex items-center justify-between mb-4">
+            <NeighborhoodSelector
+              selected={neighborhood}
+              onSelect={setNeighborhood}
+            />
+            <Button variant="outline" size="icon" className="lg:hidden">
+              <SlidersHorizontal className="w-4 h-4" />
+            </Button>
+          </div>
 
-            {/* Search */}
-            <div className="relative mb-4">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-              <Input
-                placeholder="Search places, vibes, or cravings..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10 bg-card border-border"
-              />
-            </div>
-
-            {/* Category Filters */}
-            <CategoryFilter
-              categories={filterCategories}
-              activeCategory={activeCategory}
-              onCategoryChange={setActiveCategory}
+          {/* Search */}
+          <div className="relative mb-4">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+            <Input
+              placeholder="Search places, vibes, or cravings..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="pl-10 bg-card border-border"
             />
           </div>
 
-          {/* Content */}
-          <div className="px-4 lg:px-6 py-6 space-y-8">
-            {/* Context Banner */}
-            <ContextBanner neighborhood={neighborhood} />
-
-            {/* Places by Category */}
-            {activeCategory === "all" ? (
-              Object.entries(groupedPlaces).map(([category, places]) =>
-                places.length > 0 ? (
-                  <section key={category}>
-                    <div className="flex items-center justify-between mb-4">
-                      <h2 className="text-xl font-bold text-foreground">
-                        {categoryLabels[category as PlaceCategory]}
-                      </h2>
-                      <button className="text-sm text-primary hover:underline">
-                        See more
-                      </button>
-                    </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      {places.slice(0, 2).map((place) => (
-                        <PlaceCard key={place.id} place={place} />
-                      ))}
-                    </div>
-                  </section>
-                ) : null
-              )
-            ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {filteredPlaces.map((place) => (
-                  <PlaceCard key={place.id} place={place} />
-                ))}
-              </div>
-            )}
-
-            {filteredPlaces.length === 0 && (
-              <div className="text-center py-12">
-                <p className="text-muted-foreground">No places found matching your criteria.</p>
-              </div>
-            )}
-          </div>
+          {/* Category Filters */}
+          <CategoryFilter
+            categories={filterCategories}
+            activeCategory={activeCategory}
+            onCategoryChange={setActiveCategory}
+          />
         </div>
 
-        {/* Map Panel - Hidden on mobile */}
-        <div className="hidden lg:block flex-1 sticky top-0 h-screen">
-          <MapView
-            places={filteredPlaces}
-            selectedPlace={selectedPlace}
-            onPlaceSelect={setSelectedPlace}
-          />
+        {/* Content */}
+        <div className="px-4 lg:px-6 py-6 space-y-8">
+          {/* Context Banner */}
+          <ContextBanner neighborhood={neighborhood} />
+
+          {/* Places by Category */}
+          {activeCategory === "all" ? (
+            Object.entries(groupedPlaces).map(([category, places]) =>
+              places.length > 0 ? (
+                <section key={category}>
+                  <div className="flex items-center justify-between mb-4">
+                    <h2 className="text-xl font-bold text-foreground">
+                      {categoryLabels[category as PlaceCategory]}
+                    </h2>
+                    <button className="text-sm text-primary hover:underline">
+                      See more
+                    </button>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {places.slice(0, 4).map((place) => (
+                      <PlaceCard key={place.id} place={place} />
+                    ))}
+                  </div>
+                </section>
+              ) : null
+            )
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {filteredPlaces.map((place) => (
+                <PlaceCard key={place.id} place={place} />
+              ))}
+            </div>
+          )}
+
+          {filteredPlaces.length === 0 && (
+            <div className="text-center py-12">
+              <p className="text-muted-foreground">No places found matching your criteria.</p>
+            </div>
+          )}
         </div>
       </div>
     </AppLayout>

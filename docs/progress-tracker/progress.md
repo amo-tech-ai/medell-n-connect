@@ -20,7 +20,7 @@
 | 13 | Backend | Edge Functions | 2-3 | todo | [prompt](../prompts/13-edge-functions.md) |
 | 14 | AI | AI Agents | 2-3 | todo | [prompt](../prompts/14-ai-agents.md) |
 | 15 | Core | Home Dashboard | 1 | todo | [prompt](../prompts/15-home-dashboard.md) |
-| 16 | System | 3-Panel Layout | 1 | doing | [prompt](../prompts/16-3-panel-system.md) |
+| 16 | System | 3-Panel Layout | 1 | done | [prompt](../prompts/16-3-panel-system.md) |
 | 17 | Reference | User Journeys | — | done | [prompt](../prompts/17-user-journey.md) |
 | 18 | Reference | Wizards Guide | — | done | [prompt](../prompts/18-wizards.md) |
 
@@ -35,7 +35,8 @@
 | ✅ | Authentication | — | done | Email + Google OAuth |
 | ✅ | Home page | 08 | done | Hero, categories, featured |
 | ✅ | Documentation structure | — | done | /docs, /rules |
-| 1.1 | 3-panel layout refinement | 16 | doing | Mobile responsive |
+| ✅ | 3-panel layout system | 16 | done | ThreePanelLayout, LeftPanel, RightPanel |
+| ✅ | Responsive navigation | 16 | done | Mobile bottom nav + sheet |
 | 2.1 | Apartments list | 03 | todo | Next priority |
 | 2.2 | Apartments detail | 03 | todo | — |
 | 3.1 | Cars list | 04 | todo | — |

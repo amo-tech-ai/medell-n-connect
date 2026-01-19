@@ -9,6 +9,17 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 ## [Unreleased]
 
 ### Added
+- **3-Panel Layout System** (Step 1.1 ✅)
+  - `ThreePanelLayout` shell component with context provider
+  - `LeftPanel` component with collapsible support
+  - `RightPanel` component with contextual content
+  - Desktop: 3 fixed panels (240px | flex | 320px)
+  - Tablet: Collapsible left + drawer right
+  - Mobile: Bottom nav + bottom sheet
+- **Responsive Mobile Navigation** (Step 1.2 ✅)
+  - Updated `MobileNav` with AI icon
+  - Safe area inset support for notched phones
+  - Sheet-based right panel as bottom sheet
 - Documentation structure (`/docs`, `/rules`)
 - Progress tracker system
 - Next steps implementation guide

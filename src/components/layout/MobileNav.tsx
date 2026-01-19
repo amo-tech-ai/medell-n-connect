@@ -1,25 +1,31 @@
 import { Link, useLocation } from "react-router-dom";
 import { Home, Compass, Heart, User } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useAuth } from "@/hooks/useAuth";
 
 const navItems = [
   { icon: Home, label: "Home", path: "/" },
   { icon: Compass, label: "Explore", path: "/explore" },
   { icon: Heart, label: "Saved", path: "/saved" },
-  { icon: User, label: "Profile", path: "/profile" },
 ];
 
 export function MobileNav() {
   const location = useLocation();
+  const { user } = useAuth();
+
+  const allItems = [
+    ...navItems,
+    { icon: User, label: user ? "Profile" : "Login", path: user ? "/saved" : "/login" },
+  ];
 
   return (
     <nav className="lg:hidden fixed bottom-0 left-0 right-0 bg-card border-t border-border z-50">
       <div className="flex items-center justify-around py-2 px-4">
-        {navItems.map((item) => {
+        {allItems.map((item) => {
           const isActive = location.pathname === item.path;
           return (
             <Link
-              key={item.path}
+              key={item.path + item.label}
               to={item.path}
               className={cn(
                 "flex flex-col items-center gap-1 px-4 py-2 rounded-xl transition-all",

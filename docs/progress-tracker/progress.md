@@ -4,38 +4,54 @@
 
 ## Prompts
 
-| ID | Area | Item | Status | Owner | Links |
-|----|------|------|--------|-------|-------|
-| 03 | Listings | Apartments | todo | — | [prompt](../prompts/03-listings-apartments.md) |
-| 04 | Listings | Cars | todo | — | [prompt](../prompts/04-listings-cars.md) |
-| 05 | Listings | Restaurants | todo | — | [prompt](../prompts/05-listings-restaurants.md) |
-| 06 | Listings | Events | todo | — | [prompt](../prompts/06-listings-events.md) |
-| 07 | Core | Saved/Favorites | todo | — | [prompt](../prompts/07-saved-favorites.md) |
-| 08 | Core | Explore | doing | — | [prompt](../prompts/08-explore-discover.md) |
-| 09 | Core | Trips | todo | — | [prompt](../prompts/09-trips-planning.md) |
-| 10 | Core | Bookings | todo | — | [prompt](../prompts/10-bookings-module.md) |
-| 12 | Backend | Supabase Schema | done | — | [prompt](../prompts/12-supabase-schema.md) |
-| 13 | Backend | Edge Functions | todo | — | [prompt](../prompts/13-edge-functions.md) |
+| ID | Area | Item | Phase | Status | Links |
+|----|------|------|-------|--------|-------|
+| 00 | Reference | Index | — | done | [prompt](../prompts/00-index.md) |
+| 03 | Listings | Apartments | 1 | todo | [prompt](../prompts/03-listings-apartments.md) |
+| 04 | Listings | Cars | 1 | todo | [prompt](../prompts/04-listings-cars.md) |
+| 05 | Listings | Restaurants | 1 | todo | [prompt](../prompts/05-listings-restaurants.md) |
+| 06 | Listings | Events | 1 | todo | [prompt](../prompts/06-listings-events.md) |
+| 07 | Core | Saved/Favorites | 1 | todo | [prompt](../prompts/07-saved-favorites.md) |
+| 08 | Core | Explore | 1-2 | doing | [prompt](../prompts/08-explore-discover.md) |
+| 09 | Core | Trips | 2 | todo | [prompt](../prompts/09-trips-planning.md) |
+| 10 | Core | Bookings | 2 | todo | [prompt](../prompts/10-bookings-module.md) |
+| 11 | AI | Chatbot System | 3 | todo | [prompt](../prompts/11-chatbot-system.md) |
+| 12 | Backend | Supabase Schema | 1 | done | [prompt](../prompts/12-supabase-schema.md) |
+| 13 | Backend | Edge Functions | 2-3 | todo | [prompt](../prompts/13-edge-functions.md) |
+| 14 | AI | AI Agents | 2-3 | todo | [prompt](../prompts/14-ai-agents.md) |
+| 15 | Core | Home Dashboard | 1 | todo | [prompt](../prompts/15-home-dashboard.md) |
+| 16 | System | 3-Panel Layout | 1 | doing | [prompt](../prompts/16-3-panel-system.md) |
+| 17 | Reference | User Journeys | — | done | [prompt](../prompts/17-user-journey.md) |
+| 18 | Reference | Wizards Guide | — | done | [prompt](../prompts/18-wizards.md) |
 
-## Tasks
+## Implementation Order
 
-| Task | Prompt | Status | Notes |
-|------|--------|--------|-------|
-| Auth setup | — | done | Email + Google OAuth |
-| Home page | 08 | done | Hero, categories, featured |
-| Explore page | 08 | doing | Basic layout complete |
-| Map integration | 08 | todo | Needs Mapbox/Google Maps |
-| Apartments list | 03 | todo | — |
-| Apartments detail | 03 | todo | — |
-| Cars list | 04 | todo | — |
-| Cars detail | 04 | todo | — |
-| Restaurants list | 05 | todo | — |
-| Restaurants detail | 05 | todo | — |
-| Events list | 06 | todo | — |
-| Events detail | 06 | todo | — |
-| Saved dashboard | 07 | todo | Basic page exists |
-| Collections | 07 | todo | — |
-| Trips list | 09 | todo | — |
-| Trip detail | 09 | todo | — |
-| Bookings dashboard | 10 | todo | — |
-| Booking wizards | 10 | todo | — |
+> Follow [NEXT-STEPS.md](../NEXT-STEPS.md) for detailed guidance.
+
+| Step | Task | Prompt | Status | Notes |
+|------|------|--------|--------|-------|
+| ✅ | Project setup | — | done | Vite + React + TS |
+| ✅ | Supabase connection | 12 | done | Connected to `medellin` |
+| ✅ | Authentication | — | done | Email + Google OAuth |
+| ✅ | Home page | 08 | done | Hero, categories, featured |
+| ✅ | Documentation structure | — | done | /docs, /rules |
+| 1.1 | 3-panel layout refinement | 16 | doing | Mobile responsive |
+| 2.1 | Apartments list | 03 | todo | Next priority |
+| 2.2 | Apartments detail | 03 | todo | — |
+| 3.1 | Cars list | 04 | todo | — |
+| 3.2 | Cars detail | 04 | todo | — |
+| 4.1 | Restaurants list | 05 | todo | — |
+| 4.2 | Restaurants detail | 05 | todo | — |
+| 5.1 | Events list | 06 | todo | — |
+| 5.2 | Events detail | 06 | todo | — |
+| 6.1 | Saved dashboard upgrade | 07 | todo | — |
+| 6.2 | Collections CRUD | 07 | todo | — |
+| 7.1 | Map integration | 08 | todo | Mapbox or Google Maps |
+| 8.1 | Home dashboard | 15 | todo | Post-login experience |
+| 9.1 | Trips list | 09 | todo | Phase 2 |
+| 9.2 | Trip detail | 09 | todo | Phase 2 |
+| 10.1 | Bookings dashboard | 10 | todo | Phase 2 |
+| 10.2 | Booking wizards | 10 | todo | Phase 2 |
+| 11.1 | Edge functions | 13 | todo | Phase 2-3 |
+| 12.1 | AI chatbot | 11 | todo | Phase 3 |
+| 13.1 | AI agents | 14 | todo | Phase 3 |

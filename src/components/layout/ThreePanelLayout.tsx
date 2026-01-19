@@ -28,6 +28,9 @@ export function usePanelContext() {
   return context;
 }
 
+// Alias for convenience
+export const usePanel = usePanelContext;
+
 interface ThreePanelLayoutProps {
   children: ReactNode;
   rightPanelContent?: ReactNode;

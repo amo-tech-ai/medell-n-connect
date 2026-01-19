@@ -20,13 +20,32 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
   - Updated `MobileNav` with AI icon
   - Safe area inset support for notched phones
   - Sheet-based right panel as bottom sheet
+- **Apartments Module** (Steps 2.1-2.2 ✅)
+  - `Apartments` list page with search, filters, and grid
+  - `ApartmentDetail` page with image gallery, amenities, and house rules
+  - `ApartmentCard` component with save functionality
+  - `ApartmentFilters` with neighborhood, price, bedrooms, amenities
+  - `useApartments` hook with React Query + Supabase
+- **Cars Module** (Steps 3.1-3.2 ✅)
+  - `Cars` list page with search, filters, and grid
+  - `CarDetail` page with features, rental info, and pricing
+  - `CarCard` component with save functionality
+  - `CarFilters` with vehicle type, transmission, features
+  - `useCars` hook with React Query + Supabase
+- **Shared Listings Components**
+  - `FilterChips` for active filter display
+  - `ListingSkeleton` for loading states
+  - `EmptyState` for no results
+  - `useSavedPlaces` hook for favorites
+- **Types System**
+  - `src/types/listings.ts` with Apartment, Car, and filter types
+- **Navigation Updates**
+  - Listings section in LeftPanel with Apartments/Cars links
 - Documentation structure (`/docs`, `/rules`)
 - Progress tracker system
 - Next steps implementation guide
 
 ### Planned
-- Apartments list and detail pages
-- Cars list and detail pages
 - Restaurants list and detail pages
 - Events list and detail pages
 - Real map integration

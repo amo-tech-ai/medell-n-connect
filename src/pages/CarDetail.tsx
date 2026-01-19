@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, MapPin, Users, Fuel, Star, Heart, Share2, Calendar, CheckCircle, Gauge, Settings2 } from "lucide-react";
-import { ThreePanelLayout, usePanel } from "@/components/layout/ThreePanelLayout";
+import { ThreePanelLayout, usePanelContext } from "@/components/layout/ThreePanelLayout";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
@@ -103,7 +103,7 @@ export default function CarDetail() {
   const { user } = useAuth();
   const { data: isSaved } = useIsSaved(id!, "car");
   const toggleSave = useToggleSave();
-  const { setRightPanelContent } = usePanel();
+  const { setRightPanelContent } = usePanelContext();
 
   // Set right panel content when car loads
   if (car && setRightPanelContent) {

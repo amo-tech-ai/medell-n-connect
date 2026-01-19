@@ -7,8 +7,8 @@
 | ID | Area | Item | Phase | Status | Links |
 |----|------|------|-------|--------|-------|
 | 00 | Reference | Index | — | done | [prompt](../prompts/00-index.md) |
-| 03 | Listings | Apartments | 1 | todo | [prompt](../prompts/03-listings-apartments.md) |
-| 04 | Listings | Cars | 1 | todo | [prompt](../prompts/04-listings-cars.md) |
+| 03 | Listings | Apartments | 1 | done | [prompt](../prompts/03-listings-apartments.md) |
+| 04 | Listings | Cars | 1 | done | [prompt](../prompts/04-listings-cars.md) |
 | 05 | Listings | Restaurants | 1 | todo | [prompt](../prompts/05-listings-restaurants.md) |
 | 06 | Listings | Events | 1 | todo | [prompt](../prompts/06-listings-events.md) |
 | 07 | Core | Saved/Favorites | 1 | todo | [prompt](../prompts/07-saved-favorites.md) |
@@ -37,11 +37,11 @@
 | ✅ | Documentation structure | — | done | /docs, /rules |
 | ✅ | 3-panel layout system | 16 | done | ThreePanelLayout, LeftPanel, RightPanel |
 | ✅ | Responsive navigation | 16 | done | Mobile bottom nav + sheet |
-| 2.1 | Apartments list | 03 | todo | Next priority |
-| 2.2 | Apartments detail | 03 | todo | — |
-| 3.1 | Cars list | 04 | todo | — |
-| 3.2 | Cars detail | 04 | todo | — |
-| 4.1 | Restaurants list | 05 | todo | — |
+| ✅ | Apartments list | 03 | done | List page with filters |
+| ✅ | Apartments detail | 03 | done | Detail page with right panel |
+| ✅ | Cars list | 04 | done | List page with filters |
+| ✅ | Cars detail | 04 | done | Detail page with right panel |
+| 4.1 | Restaurants list | 05 | todo | Next priority |
 | 4.2 | Restaurants detail | 05 | todo | — |
 | 5.1 | Events list | 06 | todo | — |
 | 5.2 | Events detail | 06 | todo | — |

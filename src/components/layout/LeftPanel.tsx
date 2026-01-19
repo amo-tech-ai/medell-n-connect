@@ -6,17 +6,25 @@ import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { Separator } from "@/components/ui/separator";
 
-const mainNavItems = [
+interface NavItem {
+  icon: typeof Home;
+  label: string;
+  path: string;
+  badge?: string;
+  protected?: boolean;
+}
+
+const mainNavItems: NavItem[] = [
   { icon: Home, label: "Home", path: "/" },
   { icon: Compass, label: "Explore", path: "/explore" },
 ];
 
-const listingsNavItems = [
+const listingsNavItems: NavItem[] = [
   { icon: Building2, label: "Apartments", path: "/apartments" },
   { icon: Car, label: "Cars", path: "/cars" },
 ];
 
-const userNavItems = [
+const userNavItems: NavItem[] = [
   { icon: Heart, label: "Saved", path: "/saved", protected: true },
   { icon: Sparkles, label: "Concierge", path: "/concierge", badge: "Soon", protected: true },
 ];
@@ -30,7 +38,7 @@ export function LeftPanel({ collapsed = false, onToggle }: LeftPanelProps) {
   const location = useLocation();
   const { user, signOut } = useAuth();
 
-  const NavItem = ({ item }: { item: typeof navItems[0] }) => {
+  const NavItemComponent = ({ item }: { item: NavItem }) => {
     const isActive = location.pathname === item.path;
     const content = (
       <Link
@@ -112,7 +120,7 @@ export function LeftPanel({ collapsed = false, onToggle }: LeftPanelProps) {
       <nav className={cn("flex-1 p-4 space-y-1 overflow-y-auto", collapsed && "p-2")}>
         {/* Main Navigation */}
         {mainNavItems.map((item) => (
-          <NavItem key={item.path} item={item} />
+          <NavItemComponent key={item.path} item={item} />
         ))}
         
         {!collapsed && (
@@ -125,7 +133,7 @@ export function LeftPanel({ collapsed = false, onToggle }: LeftPanelProps) {
         {collapsed && <Separator className="my-2" />}
         
         {listingsNavItems.map((item) => (
-          <NavItem key={item.path} item={item} />
+          <NavItemComponent key={item.path} item={item} />
         ))}
         
         {!collapsed && (
@@ -138,7 +146,7 @@ export function LeftPanel({ collapsed = false, onToggle }: LeftPanelProps) {
         {collapsed && <Separator className="my-2" />}
         
         {userNavItems.map((item) => (
-          <NavItem key={item.path} item={item} />
+          <NavItemComponent key={item.path} item={item} />
         ))}
       </nav>
 

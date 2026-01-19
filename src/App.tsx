@@ -8,7 +8,11 @@ import { ProtectedRoute } from "@/components/auth/ProtectedRoute";
 import Index from "./pages/Index";
 import Explore from "./pages/Explore";
 import Apartments from "./pages/Apartments";
+import ApartmentDetail from "./pages/ApartmentDetail";
 import Cars from "./pages/Cars";
+import CarDetail from "./pages/CarDetail";
+import Restaurants from "./pages/Restaurants";
+import RestaurantDetail from "./pages/RestaurantDetail";
 import PlaceDetail from "./pages/PlaceDetail";
 import Saved from "./pages/Saved";
 import Concierge from "./pages/Concierge";
@@ -31,9 +35,11 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/explore" element={<Explore />} />
             <Route path="/apartments" element={<Apartments />} />
-            <Route path="/apartments/:id" element={<PlaceDetail />} />
+            <Route path="/apartments/:id" element={<ApartmentDetail />} />
             <Route path="/cars" element={<Cars />} />
-            <Route path="/cars/:id" element={<PlaceDetail />} />
+            <Route path="/cars/:id" element={<CarDetail />} />
+            <Route path="/restaurants" element={<Restaurants />} />
+            <Route path="/restaurants/:id" element={<RestaurantDetail />} />
             <Route path="/:type/:id" element={<PlaceDetail />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />

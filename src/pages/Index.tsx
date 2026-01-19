@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Home, Utensils, Calendar, Car, MapPin, Star } from "lucide-react";
+import { ArrowRight, Home, Utensils, Calendar, Car, MapPin, Star, LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { mockPlaces, categories } from "@/lib/mockData";
 import { PlaceCard } from "@/components/places/PlaceCard";
+import { useAuth } from "@/hooks/useAuth";
 import heroImage from "@/assets/hero-medellin.jpg";
 
 const categoryIcons = {
@@ -14,6 +15,7 @@ const categoryIcons = {
 
 export default function Index() {
   const featuredPlaces = mockPlaces.slice(0, 4);
+  const { user, signOut } = useAuth();
 
   return (
     <div className="min-h-screen bg-background">
@@ -33,9 +35,23 @@ export default function Index() {
             <Link to="/saved" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
               Saved
             </Link>
-            <Button variant="hero" size="sm">
-              Sign In
-            </Button>
+            {user ? (
+              <div className="flex items-center gap-3">
+                <span className="text-primary-foreground/80 text-sm">
+                  {user.email?.split("@")[0]}
+                </span>
+                <Button variant="hero" size="sm" onClick={signOut}>
+                  <LogOut className="w-4 h-4 mr-1" />
+                  Sign Out
+                </Button>
+              </div>
+            ) : (
+              <Link to="/login">
+                <Button variant="hero" size="sm">
+                  Sign In
+                </Button>
+              </Link>
+            )}
           </nav>
         </div>
       </header>

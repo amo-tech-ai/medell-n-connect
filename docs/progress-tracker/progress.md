@@ -9,7 +9,7 @@
 | 00 | Reference | Index | — | done | [prompt](../prompts/00-index.md) |
 | 03 | Listings | Apartments | 1 | done | [prompt](../prompts/03-listings-apartments.md) |
 | 04 | Listings | Cars | 1 | done | [prompt](../prompts/04-listings-cars.md) |
-| 05 | Listings | Restaurants | 1 | todo | [prompt](../prompts/05-listings-restaurants.md) |
+| 05 | Listings | Restaurants | 1 | done | [prompt](../prompts/05-listings-restaurants.md) |
 | 06 | Listings | Events | 1 | todo | [prompt](../prompts/06-listings-events.md) |
 | 07 | Core | Saved/Favorites | 1 | todo | [prompt](../prompts/07-saved-favorites.md) |
 | 08 | Core | Explore | 1-2 | doing | [prompt](../prompts/08-explore-discover.md) |
@@ -41,9 +41,9 @@
 | ✅ | Apartments detail | 03 | done | Detail page with right panel |
 | ✅ | Cars list | 04 | done | List page with filters |
 | ✅ | Cars detail | 04 | done | Detail page with right panel |
-| 4.1 | Restaurants list | 05 | todo | Next priority |
-| 4.2 | Restaurants detail | 05 | todo | — |
-| 5.1 | Events list | 06 | todo | — |
+| ✅ | Restaurants list | 05 | done | List page with filters |
+| ✅ | Restaurants detail | 05 | done | Detail page with right panel |
+| 5.1 | Events list | 06 | todo | Next priority |
 | 5.2 | Events detail | 06 | todo | — |
 | 6.1 | Saved dashboard upgrade | 07 | todo | — |
 | 6.2 | Collections CRUD | 07 | todo | — |

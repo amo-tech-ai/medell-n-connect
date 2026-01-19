@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Home, Compass, Heart, Sparkles, User, LogOut, ChevronLeft, ChevronRight, Building2, Car } from "lucide-react";
+import { Home, Compass, Heart, Sparkles, User, LogOut, ChevronLeft, ChevronRight, Building2, Car, UtensilsCrossed } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
@@ -22,6 +22,7 @@ const mainNavItems: NavItem[] = [
 const listingsNavItems: NavItem[] = [
   { icon: Building2, label: "Apartments", path: "/apartments" },
   { icon: Car, label: "Cars", path: "/cars" },
+  { icon: UtensilsCrossed, label: "Restaurants", path: "/restaurants" },
 ];
 
 const userNavItems: NavItem[] = [

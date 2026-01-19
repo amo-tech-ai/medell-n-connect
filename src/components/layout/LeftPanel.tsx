@@ -1,13 +1,22 @@
 import { Link, useLocation } from "react-router-dom";
-import { Home, Compass, Heart, Sparkles, User, LogOut, ChevronLeft, ChevronRight, Calendar, Car, Utensils } from "lucide-react";
+import { Home, Compass, Heart, Sparkles, User, LogOut, ChevronLeft, ChevronRight, Building2, Car } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { Separator } from "@/components/ui/separator";
 
-const navItems = [
+const mainNavItems = [
   { icon: Home, label: "Home", path: "/" },
   { icon: Compass, label: "Explore", path: "/explore" },
+];
+
+const listingsNavItems = [
+  { icon: Building2, label: "Apartments", path: "/apartments" },
+  { icon: Car, label: "Cars", path: "/cars" },
+];
+
+const userNavItems = [
   { icon: Heart, label: "Saved", path: "/saved", protected: true },
   { icon: Sparkles, label: "Concierge", path: "/concierge", badge: "Soon", protected: true },
 ];
@@ -100,8 +109,35 @@ export function LeftPanel({ collapsed = false, onToggle }: LeftPanelProps) {
       )}
 
       {/* Navigation */}
-      <nav className={cn("flex-1 p-4 space-y-1", collapsed && "p-2")}>
-        {navItems.map((item) => (
+      <nav className={cn("flex-1 p-4 space-y-1 overflow-y-auto", collapsed && "p-2")}>
+        {/* Main Navigation */}
+        {mainNavItems.map((item) => (
+          <NavItem key={item.path} item={item} />
+        ))}
+        
+        {!collapsed && (
+          <div className="pt-4 pb-2">
+            <p className="px-4 text-xs font-medium text-muted-foreground uppercase tracking-wider">
+              Listings
+            </p>
+          </div>
+        )}
+        {collapsed && <Separator className="my-2" />}
+        
+        {listingsNavItems.map((item) => (
+          <NavItem key={item.path} item={item} />
+        ))}
+        
+        {!collapsed && (
+          <div className="pt-4 pb-2">
+            <p className="px-4 text-xs font-medium text-muted-foreground uppercase tracking-wider">
+              Personal
+            </p>
+          </div>
+        )}
+        {collapsed && <Separator className="my-2" />}
+        
+        {userNavItems.map((item) => (
           <NavItem key={item.path} item={item} />
         ))}
       </nav>

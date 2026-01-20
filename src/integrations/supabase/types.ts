@@ -952,6 +952,84 @@ export type Database = {
           },
         ]
       }
+      proactive_suggestions: {
+        Row: {
+          action_url: string | null
+          agent_name: string | null
+          confidence_score: number | null
+          created_at: string
+          description: string | null
+          expires_at: string | null
+          id: string
+          metadata: Json | null
+          priority: number | null
+          reasoning: string | null
+          responded_at: string | null
+          shown_at: string | null
+          status: string | null
+          suggestion_data: Json | null
+          title: string
+          trip_id: string | null
+          type: string
+          user_id: string
+        }
+        Insert: {
+          action_url?: string | null
+          agent_name?: string | null
+          confidence_score?: number | null
+          created_at?: string
+          description?: string | null
+          expires_at?: string | null
+          id?: string
+          metadata?: Json | null
+          priority?: number | null
+          reasoning?: string | null
+          responded_at?: string | null
+          shown_at?: string | null
+          status?: string | null
+          suggestion_data?: Json | null
+          title: string
+          trip_id?: string | null
+          type: string
+          user_id: string
+        }
+        Update: {
+          action_url?: string | null
+          agent_name?: string | null
+          confidence_score?: number | null
+          created_at?: string
+          description?: string | null
+          expires_at?: string | null
+          id?: string
+          metadata?: Json | null
+          priority?: number | null
+          reasoning?: string | null
+          responded_at?: string | null
+          shown_at?: string | null
+          status?: string | null
+          suggestion_data?: Json | null
+          title?: string
+          trip_id?: string | null
+          type?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "proactive_suggestions_trip_id_fkey"
+            columns: ["trip_id"]
+            isOneToOne: false
+            referencedRelation: "trips"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "proactive_suggestions_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       profiles: {
         Row: {
           ai_enabled: boolean | null

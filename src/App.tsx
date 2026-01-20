@@ -13,6 +13,8 @@ import Cars from "./pages/Cars";
 import CarDetail from "./pages/CarDetail";
 import Restaurants from "./pages/Restaurants";
 import RestaurantDetail from "./pages/RestaurantDetail";
+import Events from "./pages/Events";
+import EventDetail from "./pages/EventDetail";
 import PlaceDetail from "./pages/PlaceDetail";
 import Saved from "./pages/Saved";
 import Concierge from "./pages/Concierge";
@@ -40,6 +42,8 @@ const App = () => (
             <Route path="/cars/:id" element={<CarDetail />} />
             <Route path="/restaurants" element={<Restaurants />} />
             <Route path="/restaurants/:id" element={<RestaurantDetail />} />
+            <Route path="/events" element={<Events />} />
+            <Route path="/events/:id" element={<EventDetail />} />
             <Route path="/:type/:id" element={<PlaceDetail />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />

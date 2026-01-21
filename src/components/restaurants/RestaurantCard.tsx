@@ -1,17 +1,19 @@
 import { Heart, Star, MapPin, Clock, Leaf, Check } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
-import { useState } from "react";
+import { useState, useContext, createContext } from "react";
 import type { Restaurant } from "@/types/restaurant";
 import { useAuth } from "@/hooks/useAuth";
 import { useIsSaved, useToggleSave } from "@/hooks/useSavedPlaces";
 import restaurantPlaceholder from "@/assets/restaurant-1.jpg";
+import { RestaurantDetailPanel } from "@/components/panels/RestaurantDetailPanel";
 
 interface RestaurantCardProps {
   restaurant: Restaurant;
   variant?: "default" | "compact";
+  onSelect?: (restaurant: Restaurant) => void;
 }
 
 const priceLevelDisplay = (level: number) => "$".repeat(level);
@@ -25,7 +27,7 @@ const dietaryIcons: Record<string, string> = {
   kosher: "✡️",
 };
 
-export function RestaurantCard({ restaurant, variant = "default" }: RestaurantCardProps) {
+export function RestaurantCard({ restaurant, variant = "default", onSelect }: RestaurantCardProps) {
   const { user } = useAuth();
   const { data: isSaved = false } = useIsSaved(restaurant.id, "restaurant");
   const toggleSave = useToggleSave();
@@ -42,18 +44,31 @@ export function RestaurantCard({ restaurant, variant = "default" }: RestaurantCa
     });
   };
 
+  const handleCardClick = (e: React.MouseEvent) => {
+    if (onSelect) {
+      e.preventDefault();
+      onSelect(restaurant);
+    }
+    // If no onSelect, let the Link handle navigation
+  };
+
   const mainImage = !imageError && (restaurant.primary_image_url || restaurant.images?.[0]?.url)
     ? restaurant.primary_image_url || restaurant.images?.[0]?.url
     : restaurantPlaceholder;
 
-  return (
-    <Link
-      to={`/restaurants/${restaurant.id}`}
-      className={cn(
-        "group block bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300",
+  const CardWrapper = onSelect ? 'div' : Link;
+  const cardProps = onSelect 
+    ? { onClick: handleCardClick, className: cn(
+        "group block bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300 cursor-pointer",
         variant === "compact" && "flex"
       )}
-    >
+    : { to: `/restaurants/${restaurant.id}`, className: cn(
+        "group block bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300",
+        variant === "compact" && "flex"
+      )};
+
+  return (
+    <CardWrapper {...cardProps as any}>
       {/* Image */}
       <div
         className={cn(
@@ -157,6 +172,6 @@ export function RestaurantCard({ restaurant, variant = "default" }: RestaurantCa
           </div>
         )}
       </div>
-    </Link>
+    </CardWrapper>
   );
 }

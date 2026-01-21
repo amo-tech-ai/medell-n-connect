@@ -14,6 +14,7 @@ import eventPlaceholder from "@/assets/event-1.jpg";
 interface ExploreCardProps {
   place: ExplorePlaceResult;
   variant?: "default" | "compact";
+  onSelect?: (place: ExplorePlaceResult) => void;
 }
 
 const placeholders: Record<string, string> = {
@@ -45,7 +46,7 @@ const typeRoutes: Record<string, string> = {
   event: "events",
 };
 
-export function ExploreCard({ place, variant = "default" }: ExploreCardProps) {
+export function ExploreCard({ place, variant = "default", onSelect }: ExploreCardProps) {
   const { data: isSaved = false } = useIsSaved(place.id, place.type);
   const toggleSave = useToggleSave();
 
@@ -59,17 +60,29 @@ export function ExploreCard({ place, variant = "default" }: ExploreCardProps) {
     });
   };
 
+  const handleCardClick = (e: React.MouseEvent) => {
+    if (onSelect) {
+      e.preventDefault();
+      onSelect(place);
+    }
+  };
+
   const image = place.image || placeholders[place.type];
   const detailUrl = `/${typeRoutes[place.type]}/${place.id}`;
 
-  return (
-    <Link
-      to={detailUrl}
-      className={cn(
-        "group block bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300",
+  const CardWrapper = onSelect ? 'div' : Link;
+  const cardProps = onSelect 
+    ? { onClick: handleCardClick, className: cn(
+        "group block bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300 cursor-pointer",
         variant === "compact" && "flex"
       )}
-    >
+    : { to: detailUrl, className: cn(
+        "group block bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300",
+        variant === "compact" && "flex"
+      )};
+
+  return (
+    <CardWrapper {...cardProps as any}>
       {/* Image */}
       <div
         className={cn(
@@ -153,6 +166,6 @@ export function ExploreCard({ place, variant = "default" }: ExploreCardProps) {
           </div>
         )}
       </div>
-    </Link>
+    </CardWrapper>
   );
 }

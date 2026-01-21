@@ -1,26 +1,43 @@
-# 3‑Panel System — Implementation Checklist
+# 3-Panel System — Implementation Checklist
 
-## Status: ✅ 100% Complete
+## Status: ✅ REBUILT FROM SCRATCH
 
-## Fix Applied
-- **Issue**: Duplicate panels on tablet/mobile (Sheet + inline column)
-- **Solution**: Sheet now conditionally renders with `!isDesktop` JS check (not just CSS)
+## New Architecture (Per Spec)
 
-## Architecture
+### Core Files
+- `src/context/ThreePanelContext.tsx` - Global state (selectedItem, rightPanelOpen, openDetailPanel, closeDetailPanel)
+- `src/components/explore/ThreePanelLayout.tsx` - New layout component with provider
+- `src/components/explore/RightDetailPanel.tsx` - Slide-in detail panel with hero, actions, AI pitch
+
+### Layout Behavior
 ```
-Desktop (≥1024px): Left | Main | Right (inline column)
-Tablet (768-1023px): Left | Main + Sheet drawer (FAB trigger)
-Mobile (<768px): Main + Bottom nav + Bottom sheet (FAB trigger)
+Desktop (≥1024px): Left (280px) | Center (flex) | Right (500px slide-in)
+Tablet (768-1023px): Left (collapsible) | Center (flex) | Right (overlay)
+Mobile (<768px): Center (full) | Bottom nav | Right (full-screen overlay)
 ```
 
 ## Verified Features
-- [x] Card click → Right panel updates (no navigation)
-- [x] Desktop: inline right panel only
-- [x] Tablet/Mobile: Sheet only (no duplicate)
-- [x] Auto-open Sheet on card click (non-desktop)
-- [x] Save button doesn't trigger panel change
-- [x] "View Full Page" deep links work
+- [x] Card click → Right panel slides in with item details
+- [x] Hero image with overlaid title/rating/price
+- [x] "Why you'll love it" AI pitch section
+- [x] Quick info cards (Open Now, Distance)
+- [x] Action bar (Add to Trip, Save, Share)
+- [x] ESC key closes panel
+- [x] Backdrop overlay on mobile/tablet
+- [x] URL sync (?detail=id)
+- [x] Selected card gets ring highlight
+- [x] No duplicate panels (Sheet removed)
 
-## Key Files
-- `src/components/layout/ThreePanelLayout.tsx` - Added `isDesktop` hook, conditional Sheet
-- `docs/prompts/21-right-panel-architecture.md` - Architecture docs
+## Pages Updated
+- [x] `/explore` - Full 3-panel with card selection
+- [x] `/restaurants` - Uses new ThreePanelLayout
+- [x] `/apartments` - Uses new ThreePanelLayout
+- [x] `/cars` - Uses new ThreePanelLayout
+- [x] `/events` - Uses new ThreePanelLayout
+
+## Card Components Updated (isSelected prop)
+- [x] ExploreCard
+- [x] RestaurantCard
+- [x] ApartmentCard
+- [x] CarCard
+- [x] EventCard

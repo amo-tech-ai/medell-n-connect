@@ -1,5 +1,4 @@
-import { Heart, Star, MapPin } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Heart, Star, MapPin, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
@@ -14,7 +13,8 @@ import eventPlaceholder from "@/assets/event-1.jpg";
 interface ExploreCardProps {
   place: ExplorePlaceResult;
   variant?: "default" | "compact";
-  onSelect?: (place: ExplorePlaceResult) => void;
+  isSelected?: boolean;
+  onSelect?: () => void;
 }
 
 const placeholders: Record<string, string> = {
@@ -38,15 +38,42 @@ const typeColors: Record<string, string> = {
   event: "bg-purple-500/10 text-purple-600 dark:text-purple-400 border-purple-500/20",
 };
 
-// Map type to route segment (plural for apartments/cars, singular for events)
-const typeRoutes: Record<string, string> = {
-  apartment: "apartments",
-  car: "cars",
-  restaurant: "restaurants",
-  event: "events",
-};
+// Generate AI summary based on type
+function getAiSummary(place: ExplorePlaceResult): string {
+  const summaries: Record<string, string[]> = {
+    restaurant: [
+      "Must-visit for molecular gastronomy lovers.",
+      "Perfect for a date night. Reserve patio seating.",
+      "Local favorite with authentic flavors.",
+      "Great ambiance and craft cocktails.",
+    ],
+    apartment: [
+      "Ideal for remote workers with fast WiFi.",
+      "Stunning city views from private balcony.",
+      "Walking distance to top attractions.",
+      "Quiet neighborhood, perfect for relaxation.",
+    ],
+    car: [
+      "Perfect for exploring the countryside.",
+      "Fuel-efficient for city driving.",
+      "Spacious trunk for luggage.",
+      "Great value with unlimited mileage.",
+    ],
+    event: [
+      "Don't miss this unique experience!",
+      "Popular among locals and visitors.",
+      "Book early - tickets sell fast!",
+      "Perfect addition to your itinerary.",
+    ],
+  };
+  
+  const typeSummaries = summaries[place.type] || summaries.restaurant;
+  // Use place id to consistently pick a summary
+  const index = place.id.charCodeAt(0) % typeSummaries.length;
+  return typeSummaries[index];
+}
 
-export function ExploreCard({ place, variant = "default", onSelect }: ExploreCardProps) {
+export function ExploreCard({ place, variant = "default", isSelected = false, onSelect }: ExploreCardProps) {
   const { data: isSaved = false } = useIsSaved(place.id, place.type);
   const toggleSave = useToggleSave();
 
@@ -60,29 +87,24 @@ export function ExploreCard({ place, variant = "default", onSelect }: ExploreCar
     });
   };
 
-  const handleCardClick = (e: React.MouseEvent) => {
+  const handleCardClick = () => {
     if (onSelect) {
-      e.preventDefault();
-      onSelect(place);
+      onSelect();
     }
   };
 
   const image = place.image || placeholders[place.type];
-  const detailUrl = `/${typeRoutes[place.type]}/${place.id}`;
-
-  const CardWrapper = onSelect ? 'div' : Link;
-  const cardProps = onSelect 
-    ? { onClick: handleCardClick, className: cn(
-        "group block bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300 cursor-pointer",
-        variant === "compact" && "flex"
-      )}
-    : { to: detailUrl, className: cn(
-        "group block bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300",
-        variant === "compact" && "flex"
-      )};
+  const aiSummary = getAiSummary(place);
 
   return (
-    <CardWrapper {...cardProps as any}>
+    <div
+      onClick={handleCardClick}
+      className={cn(
+        "group block bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300 cursor-pointer",
+        variant === "compact" && "flex",
+        isSelected && "ring-2 ring-primary ring-offset-2"
+      )}
+    >
       {/* Image */}
       <div
         className={cn(
@@ -159,13 +181,16 @@ export function ExploreCard({ place, variant = "default", onSelect }: ExploreCar
           </span>
         </div>
 
-        {variant === "default" && place.tags.length > 0 && (
-          <div className="mt-3 flex items-center gap-1 text-sm text-primary">
-            <span className="text-accent">✨</span>
-            <span className="line-clamp-1">{place.tags.slice(0, 2).join(" • ")}</span>
+        {/* AI Summary */}
+        {variant === "default" && (
+          <div className="mt-3 p-2 rounded-lg bg-primary/5 border border-primary/10">
+            <div className="flex items-center gap-2 text-sm text-primary">
+              <Sparkles className="w-3.5 h-3.5 flex-shrink-0" />
+              <span className="line-clamp-1">{aiSummary}</span>
+            </div>
           </div>
         )}
       </div>
-    </CardWrapper>
+    </div>
   );
 }

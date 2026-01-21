@@ -12,10 +12,11 @@ import carPlaceholder from "@/assets/car-1.jpg";
 interface CarCardProps {
   car: Car;
   variant?: "default" | "compact";
+  isSelected?: boolean;
   onSelect?: (car: Car) => void;
 }
 
-export function CarCard({ car, variant = "default", onSelect }: CarCardProps) {
+export function CarCard({ car, variant = "default", isSelected = false, onSelect }: CarCardProps) {
   const { user } = useAuth();
   const { data: isSaved = false } = useIsSaved(car.id, "car");
   const toggleSave = useToggleSave();
@@ -60,7 +61,8 @@ export function CarCard({ car, variant = "default", onSelect }: CarCardProps) {
   const cardProps = onSelect 
     ? { onClick: handleCardClick, className: cn(
         "group block bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300 cursor-pointer",
-        variant === "compact" && "flex"
+        variant === "compact" && "flex",
+        isSelected && "ring-2 ring-primary ring-offset-2"
       )}
     : { to: `/cars/${car.id}`, className: cn(
         "group block bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300",

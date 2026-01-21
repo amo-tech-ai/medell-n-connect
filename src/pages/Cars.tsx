@@ -1,53 +1,30 @@
 import { useState } from "react";
 import { Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
-import { ThreePanelLayout, usePanelContext } from "@/components/layout/ThreePanelLayout";
+import { ThreePanelLayout, useThreePanelContext } from "@/components/explore/ThreePanelLayout";
 import { CarCard } from "@/components/cars/CarCard";
 import { CarFiltersBar } from "@/components/cars/CarFilters";
 import { ListingSkeleton } from "@/components/listings/ListingSkeleton";
 import { EmptyState } from "@/components/listings/EmptyState";
-import { CarDetailPanel } from "@/components/panels/CarDetailPanel";
 import { useCars, useVehicleTypes } from "@/hooks/useCars";
-import type { CarFilters } from "@/types/listings";
+import type { CarFilters, Car } from "@/types/listings";
+import type { SelectedItem } from "@/context/ThreePanelContext";
 
-// Default right panel content when no car is selected
-function CarsDefaultRightPanel() {
-  return (
-    <div className="space-y-6">
-      <div>
-        <h3 className="font-semibold mb-3">Price Comparison</h3>
-        <div className="grid grid-cols-2 gap-3">
-          <div className="bg-muted/50 rounded-lg p-3 text-center">
-            <div className="text-2xl font-bold text-primary">$45</div>
-            <div className="text-xs text-muted-foreground">Avg. Daily</div>
-          </div>
-          <div className="bg-muted/50 rounded-lg p-3 text-center">
-            <div className="text-2xl font-bold text-primary">$280</div>
-            <div className="text-xs text-muted-foreground">Avg. Weekly</div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <h3 className="font-semibold mb-3">Popular Types</h3>
-        <ul className="space-y-2 text-sm">
-          <li className="flex justify-between"><span>SUV</span><span className="text-muted-foreground">Best for trips</span></li>
-          <li className="flex justify-between"><span>Sedan</span><span className="text-muted-foreground">City driving</span></li>
-          <li className="flex justify-between"><span>Compact</span><span className="text-muted-foreground">Budget option</span></li>
-        </ul>
-      </div>
-    </div>
-  );
-}
-
-// Inner content component that can use panel context
 function CarsContent() {
   const [filters, setFilters] = useState<CarFilters>({});
+  const [selectedId, setSelectedId] = useState<string | null>(null);
   const { data, isLoading, error } = useCars(filters);
   const { data: vehicleTypes = [] } = useVehicleTypes();
-  const { setRightPanelContent } = usePanelContext();
+  const { openDetailPanel } = useThreePanelContext();
 
-  const handleCarSelect = (car: any) => {
-    setRightPanelContent(<CarDetailPanel car={car} />);
+  const handleCarSelect = (car: Car) => {
+    setSelectedId(car.id);
+    const selectedItem: SelectedItem = {
+      type: "car",
+      id: car.id,
+      data: car,
+    };
+    openDetailPanel(selectedItem);
   };
 
   return (
@@ -96,7 +73,8 @@ function CarsContent() {
           {data.cars.map((car) => (
             <CarCard 
               key={car.id} 
-              car={car} 
+              car={car}
+              isSelected={selectedId === car.id}
               onSelect={() => handleCarSelect(car)}
             />
           ))}
@@ -108,7 +86,7 @@ function CarsContent() {
 
 export default function Cars() {
   return (
-    <ThreePanelLayout rightPanelContent={<CarsDefaultRightPanel />}>
+    <ThreePanelLayout>
       <CarsContent />
     </ThreePanelLayout>
   );

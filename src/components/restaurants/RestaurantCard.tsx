@@ -13,6 +13,7 @@ import { RestaurantDetailPanel } from "@/components/panels/RestaurantDetailPanel
 interface RestaurantCardProps {
   restaurant: Restaurant;
   variant?: "default" | "compact";
+  isSelected?: boolean;
   onSelect?: (restaurant: Restaurant) => void;
 }
 
@@ -27,7 +28,7 @@ const dietaryIcons: Record<string, string> = {
   kosher: "✡️",
 };
 
-export function RestaurantCard({ restaurant, variant = "default", onSelect }: RestaurantCardProps) {
+export function RestaurantCard({ restaurant, variant = "default", isSelected = false, onSelect }: RestaurantCardProps) {
   const { user } = useAuth();
   const { data: isSaved = false } = useIsSaved(restaurant.id, "restaurant");
   const toggleSave = useToggleSave();
@@ -60,7 +61,8 @@ export function RestaurantCard({ restaurant, variant = "default", onSelect }: Re
   const cardProps = onSelect 
     ? { onClick: handleCardClick, className: cn(
         "group block bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300 cursor-pointer",
-        variant === "compact" && "flex"
+        variant === "compact" && "flex",
+        isSelected && "ring-2 ring-primary ring-offset-2"
       )}
     : { to: `/restaurants/${restaurant.id}`, className: cn(
         "group block bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300",

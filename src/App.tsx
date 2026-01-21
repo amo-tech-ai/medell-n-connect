@@ -94,22 +94,8 @@ const App = () => (
                 </ProtectedRoute>
               }
             />
-            <Route
-              path="/concierge"
-              element={
-                <ProtectedRoute>
-                  <Chat />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/chat"
-              element={
-                <ProtectedRoute>
-                  <Chat />
-                </ProtectedRoute>
-              }
-            />
+            <Route path="/concierge" element={<Chat />} />
+            <Route path="/chat" element={<Chat />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

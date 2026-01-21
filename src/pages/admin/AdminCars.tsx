@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
+import { useNavigate } from "react-router-dom";
 import { AdminLayout } from "@/components/admin/AdminLayout";
 import { AdminHeader } from "@/components/admin/AdminHeader";
 import { AdminPagination } from "@/components/admin/AdminPagination";
@@ -8,21 +9,24 @@ import { useAdminListings, useDeleteListing, useToggleListingStatus } from "@/ho
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import type { Database } from "@/integrations/supabase/types";
+import { useDebounce } from "@/hooks/useDebounce";
 
 type CarRentalRow = Database["public"]["Tables"]["car_rentals"]["Row"];
 
 function AdminCarsContent() {
+  const navigate = useNavigate();
   const [search, setSearch] = useState("");
   const [status, setStatus] = useState("all");
   const [page, setPage] = useState(1);
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [editingItem, setEditingItem] = useState<CarRentalRow | null>(null);
 
-  const { data, isLoading } = useAdminListings("car_rentals", { search, status, page });
+  const debouncedSearch = useDebounce(search, 300);
+  const { data, isLoading } = useAdminListings("car_rentals", { search: debouncedSearch, status, page });
   const deleteMutation = useDeleteListing("car_rentals");
   const toggleStatusMutation = useToggleListingStatus("car_rentals");
 
-  const columns: Column<CarRentalRow>[] = [
+  const columns: Column<CarRentalRow>[] = useMemo(() => [
     {
       key: "make",
       header: "Vehicle",
@@ -81,7 +85,11 @@ function AdminCarsContent() {
       header: "Featured",
       render: (item) => item.featured ? <Badge className="bg-accent text-accent-foreground">Featured</Badge> : null,
     },
-  ];
+  ], []);
+
+  const handleView = (item: CarRentalRow) => {
+    navigate(`/cars/${item.id}`);
+  };
 
   const handleEdit = (item: CarRentalRow) => {
     setEditingItem(item);
@@ -133,6 +141,7 @@ function AdminCarsContent() {
           data={(data?.listings as CarRentalRow[]) || []}
           columns={columns}
           isLoading={isLoading}
+          onView={handleView}
           onEdit={handleEdit}
           onDelete={handleDelete}
           onToggleStatus={handleToggleStatus}

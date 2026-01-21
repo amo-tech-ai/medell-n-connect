@@ -9,68 +9,51 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 ## [Unreleased]
 
 ### Added
-- **3-Panel Layout System** (Step 1.1 ✅)
-  - `ThreePanelLayout` shell component with context provider
-  - `LeftPanel` component with collapsible support
-  - `RightPanel` component with contextual content
-  - Desktop: 3 fixed panels (240px | flex | 320px)
-  - Tablet: Collapsible left + drawer right
-  - Mobile: Bottom nav + bottom sheet
-- **Responsive Mobile Navigation** (Step 1.2 ✅)
-  - Updated `MobileNav` with AI icon
-  - Safe area inset support for notched phones
-  - Sheet-based right panel as bottom sheet
-- **Apartments Module** (Steps 2.1-2.2 ✅)
-  - `Apartments` list page with search, filters, and grid
-  - `ApartmentDetail` page with image gallery, amenities, and house rules
-  - `ApartmentCard` component with save functionality
-  - `ApartmentFilters` with neighborhood, price, bedrooms, amenities
-  - `useApartments` hook with React Query + Supabase
-- **Cars Module** (Steps 3.1-3.2 ✅)
-  - `Cars` list page with search, filters, and grid
-  - `CarDetail` page with features, rental info, and pricing
-  - `CarCard` component with save functionality
-  - `CarFilters` with vehicle type, transmission, features
-  - `useCars` hook with React Query + Supabase
-- **Shared Listings Components**
-  - `FilterChips` for active filter display
-  - `ListingSkeleton` for loading states
-  - `EmptyState` for no results
-  - `useSavedPlaces` hook for favorites
-- **Types System**
-  - `src/types/listings.ts` with Apartment, Car, and filter types
-- **Navigation Updates**
-  - Listings section in LeftPanel with Apartments/Cars links
-- Documentation structure (`/docs`, `/rules`)
-- Progress tracker system
-- Next steps implementation guide
+- **3-Panel System REBUILT** (January 2026 ✅)
+  - Complete rewrite from scratch following new architecture
+  - `ThreePanelContext` - Global state for selectedItem, rightPanelOpen, URL sync
+  - `ThreePanelLayout` - Responsive shell (Desktop/Tablet/Mobile)
+  - `RightDetailPanel` - Slide-in detail view with hero, AI pitch, actions
+  - Desktop: 280px Left | Flex Center | 500px slide-in Right
+  - Tablet: Collapsible Left | Right overlay
+  - Mobile: Full-screen Right overlay with bottom nav
+  - ESC key closes panel, URL sync with `?detail=id`
+  - Card selection highlighting across all types
 
-- **Restaurants Module** (Steps 4.1-4.2 ✅)
-  - `Restaurants` list page with cuisine, price level, dietary filters
-  - `RestaurantDetail` page with hours, reviews, and location
-  - `RestaurantCard` component with save functionality
-  - `useRestaurants` hook with React Query + Supabase
-- **Events Module** (Steps 5.1-5.2 ✅)
-  - `Events` list page with date, category, and price filters
-  - `EventDetail` page with ticket info and venue details
-  - `EventCard` component with save functionality
-  - `useEvents` hook with React Query + Supabase
-- **Saved/Favorites Module** (Steps 6.1-6.2 ✅)
-  - Upgraded `/saved` page with 3-panel layout
-  - Collections CRUD (create, edit, delete)
-  - Type filters (All/Stays/Cars/Restaurants/Events)
-  - Move to collection and notes dialogs
-  - `useCollections` and `useEnrichedSavedPlaces` hooks
-- **Explore Module Upgrade** (Step 7.x ✅)
-  - `useExplorePlaces` hook - unified Supabase queries across all tables
-  - `useExploreCounts` hook - counts per category
-  - `ExploreCard` component with real save persistence
-  - `ExploreCategoryTabs` with result counts
-  - `ExploreMapView` with color-coded pins by type
-  - "See more" links to specific listing pages
+- **Unified Card Selection** (January 2026 ✅)
+  - `RestaurantCard` - isSelected prop, onSelect handler
+  - `ApartmentCard` - isSelected prop, onSelect handler
+  - `CarCard` - isSelected prop, onSelect handler
+  - `EventCard` - isSelected prop, onSelect handler
+  - `ExploreCard` - isSelected prop, onSelect handler
 
-### Planned
-- Real map integration (Google Maps/Mapbox)
+- **Right Panel Detail Views** (January 2026 ✅)
+  - Dynamic content based on item type
+  - Hero image with overlaid title/rating/price
+  - "Why you'll love it" AI pitch section
+  - Quick info cards (Open Now, Distance)
+  - Action bar (Add to Trip, Save, Share)
+
+- **Type-Specific Detail Panels** (January 2026 ✅)
+  - `RestaurantDetailPanel` - Cuisine, hours, pricing
+  - `ApartmentDetailPanel` - Amenities, pricing, host
+  - `CarDetailPanel` - Features, rental info
+  - `EventDetailPanel` - Date, venue, tickets
+
+### Changed
+- All listing pages now use unified `ThreePanelLayout`
+- Removed duplicate Sheet/drawer on desktop
+- Fixed panel leaking between breakpoints
+
+### Planned (Next Steps)
+- **Phase 2: Trips & Bookings**
+  - Trips module (`/trips`, `/trips/:id`, `/trips/new`)
+  - Booking wizards (Apartments, Cars, Restaurants, Events)
+  - Add to Trip functionality from detail panels
+- **Phase 3: AI Integration**
+  - 4-Tab Chatbot system
+  - AI agents (Trip Planner, Booking Agent, Explore Agent)
+  - Edge functions for AI gateway
 
 ---
 

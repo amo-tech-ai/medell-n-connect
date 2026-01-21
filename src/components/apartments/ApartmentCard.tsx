@@ -12,9 +12,10 @@ import apartmentPlaceholder from "@/assets/apartment-1.jpg";
 interface ApartmentCardProps {
   apartment: Apartment;
   variant?: "default" | "compact";
+  onSelect?: (apartment: Apartment) => void;
 }
 
-export function ApartmentCard({ apartment, variant = "default" }: ApartmentCardProps) {
+export function ApartmentCard({ apartment, variant = "default", onSelect }: ApartmentCardProps) {
   const { user } = useAuth();
   const { data: isSaved = false } = useIsSaved(apartment.id, "apartment");
   const toggleSave = useToggleSave();
@@ -24,7 +25,6 @@ export function ApartmentCard({ apartment, variant = "default" }: ApartmentCardP
     e.preventDefault();
     e.stopPropagation();
     if (!user) {
-      // Could redirect to login
       return;
     }
     toggleSave.mutate({
@@ -32,6 +32,13 @@ export function ApartmentCard({ apartment, variant = "default" }: ApartmentCardP
       locationType: "apartment",
       isSaved,
     });
+  };
+
+  const handleCardClick = (e: React.MouseEvent) => {
+    if (onSelect) {
+      e.preventDefault();
+      onSelect(apartment);
+    }
   };
 
   const mainImage = !imageError && apartment.images?.[0] ? apartment.images[0] : apartmentPlaceholder;
@@ -43,14 +50,19 @@ export function ApartmentCard({ apartment, variant = "default" }: ApartmentCardP
     ? `$${apartment.price_daily.toLocaleString()}/day`
     : "Contact for price";
 
-  return (
-    <Link
-      to={`/apartments/${apartment.id}`}
-      className={cn(
-        "group block bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300",
+  const CardWrapper = onSelect ? 'div' : Link;
+  const cardProps = onSelect 
+    ? { onClick: handleCardClick, className: cn(
+        "group block bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300 cursor-pointer",
         variant === "compact" && "flex"
       )}
-    >
+    : { to: `/apartments/${apartment.id}`, className: cn(
+        "group block bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300",
+        variant === "compact" && "flex"
+      )};
+
+  return (
+    <CardWrapper {...cardProps as any}>
       {/* Image */}
       <div
         className={cn(
@@ -172,6 +184,6 @@ export function ApartmentCard({ apartment, variant = "default" }: ApartmentCardP
           </div>
         )}
       </div>
-    </Link>
+    </CardWrapper>
   );
 }

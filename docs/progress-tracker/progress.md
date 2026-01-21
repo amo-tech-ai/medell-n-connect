@@ -13,6 +13,7 @@
 | 06 | Listings | Events | 1 | done | [prompt](../prompts/06-listings-events.md) |
 | 07 | Core | Saved/Favorites | 1 | todo | [prompt](../prompts/07-saved-favorites.md) |
 | 08 | Core | Explore | 1-2 | doing | [prompt](../prompts/08-explore-discover.md) |
+| 19 | System | Right Panel Detail View | 1 | doing | [prompt](../prompts/19-right-panel-detail-view.md) |
 | 09 | Core | Trips | 2 | todo | [prompt](../prompts/09-trips-planning.md) |
 | 10 | Core | Bookings | 2 | todo | [prompt](../prompts/10-bookings-module.md) |
 | 11 | AI | Chatbot System | 3 | todo | [prompt](../prompts/11-chatbot-system.md) |

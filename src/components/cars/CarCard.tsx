@@ -12,9 +12,10 @@ import carPlaceholder from "@/assets/car-1.jpg";
 interface CarCardProps {
   car: Car;
   variant?: "default" | "compact";
+  onSelect?: (car: Car) => void;
 }
 
-export function CarCard({ car, variant = "default" }: CarCardProps) {
+export function CarCard({ car, variant = "default", onSelect }: CarCardProps) {
   const { user } = useAuth();
   const { data: isSaved = false } = useIsSaved(car.id, "car");
   const toggleSave = useToggleSave();
@@ -29,6 +30,13 @@ export function CarCard({ car, variant = "default" }: CarCardProps) {
       locationType: "car",
       isSaved,
     });
+  };
+
+  const handleCardClick = (e: React.MouseEvent) => {
+    if (onSelect) {
+      e.preventDefault();
+      onSelect(car);
+    }
   };
 
   const mainImage = !imageError && car.images?.[0] ? car.images[0] : carPlaceholder;
@@ -48,14 +56,19 @@ export function CarCard({ car, variant = "default" }: CarCardProps) {
     minivan: "Minivan",
   };
 
-  return (
-    <Link
-      to={`/cars/${car.id}`}
-      className={cn(
-        "group block bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300",
+  const CardWrapper = onSelect ? 'div' : Link;
+  const cardProps = onSelect 
+    ? { onClick: handleCardClick, className: cn(
+        "group block bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300 cursor-pointer",
         variant === "compact" && "flex"
       )}
-    >
+    : { to: `/cars/${car.id}`, className: cn(
+        "group block bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300",
+        variant === "compact" && "flex"
+      )};
+
+  return (
+    <CardWrapper {...cardProps as any}>
       {/* Image */}
       <div
         className={cn(
@@ -182,6 +195,6 @@ export function CarCard({ car, variant = "default" }: CarCardProps) {
           </div>
         )}
       </div>
-    </Link>
+    </CardWrapper>
   );
 }

@@ -12,9 +12,10 @@ import eventPlaceholder from "@/assets/event-1.jpg";
 
 interface EventCardProps {
   event: Event;
+  onSelect?: (event: Event) => void;
 }
 
-export function EventCard({ event }: EventCardProps) {
+export function EventCard({ event, onSelect }: EventCardProps) {
   const { user } = useAuth();
   const { data: isSaved = false } = useIsSaved(event.id, "event");
   const toggleSave = useToggleSave();
@@ -28,6 +29,13 @@ export function EventCard({ event }: EventCardProps) {
       locationType: "event",
       isSaved,
     });
+  };
+
+  const handleCardClick = (e: React.MouseEvent) => {
+    if (onSelect) {
+      e.preventDefault();
+      onSelect(event);
+    }
   };
 
   const formatEventDate = (dateString: string) => {
@@ -70,9 +78,17 @@ export function EventCard({ event }: EventCardProps) {
 
   const isFree = !event.ticket_price_min && !event.ticket_price_max;
 
+  const CardWrapper = onSelect ? 'div' : Link;
+  const cardProps = onSelect 
+    ? { onClick: handleCardClick }
+    : { to: `/events/${event.id}` };
+
   return (
-    <Link to={`/events/${event.id}`}>
-      <Card className="group overflow-hidden border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300">
+    <CardWrapper {...cardProps as any}>
+      <Card className={cn(
+        "group overflow-hidden border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300",
+        onSelect && "cursor-pointer"
+      )}>
         <div className="relative aspect-[16/9] overflow-hidden">
           <img
             src={event.primary_image_url || eventPlaceholder}
@@ -158,6 +174,6 @@ export function EventCard({ event }: EventCardProps) {
           </div>
         </CardContent>
       </Card>
-    </Link>
+    </CardWrapper>
   );
 }

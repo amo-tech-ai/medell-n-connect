@@ -1,5 +1,32 @@
 # Changelog
 
+## [2026-01-21] - Google Maps Integration for Itinerary Builder
+
+### Added
+- **GoogleMapView** component - Interactive Google Maps with street-level tiles, zoom/pan, and custom markers
+- **google-directions** edge function - Secure Google Routes API calls for real routing data
+- **useGoogleDirections** hook - Client-side hook for fetching directions
+- Polyline decoding and rendering for actual road routes
+- Real travel times from Google's traffic-aware routing
+- Auto-fetch directions when day selection changes
+- "Get Directions" button for manual routing requests
+- VITE_GOOGLE_MAPS_API_KEY environment variable support
+- Seamless fallback to placeholder view when API key not configured
+
+### Changed
+- VisualItineraryBuilder now uses GoogleMapView instead of placeholder ItineraryMapView
+- Travel time indicators now display real Google-calculated durations when available
+- Haversine calculation remains as fallback when Google API unavailable
+- AI route optimization integrates with Google routing for validated travel times
+
+### Technical
+- Google Routes API v2 (computeRoutes) with traffic-aware preference
+- Advanced Marker Element API for custom styled pins
+- Encoded polyline decoding for route visualization
+- CORS-enabled edge function with proper error handling
+
+---
+
 ## [2026-01-21] - Map Visualization for Itinerary Builder
 
 ### Added

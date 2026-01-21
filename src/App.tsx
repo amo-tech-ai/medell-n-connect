@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "@/hooks/useAuth";
 import { ProtectedRoute } from "@/components/auth/ProtectedRoute";
+import { FloatingChatWidget } from "@/components/chat/FloatingChatWidget";
 import Index from "./pages/Index";
 import Explore from "./pages/Explore";
 import Apartments from "./pages/Apartments";
@@ -21,8 +22,6 @@ import Trips from "./pages/Trips";
 import TripDetail from "./pages/TripDetail";
 import TripNew from "./pages/TripNew";
 import Bookings from "./pages/Bookings";
-import Concierge from "./pages/Concierge";
-import Chat from "./pages/Chat";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import ForgotPassword from "./pages/ForgotPassword";
@@ -94,11 +93,11 @@ const App = () => (
                 </ProtectedRoute>
               }
             />
-            <Route path="/concierge" element={<Chat />} />
-            <Route path="/chat" element={<Chat />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
+          {/* Global Floating Chat Widget */}
+          <FloatingChatWidget />
         </AuthProvider>
       </BrowserRouter>
     </TooltipProvider>

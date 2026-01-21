@@ -45,10 +45,32 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 - Progress tracker system
 - Next steps implementation guide
 
+- **Restaurants Module** (Steps 4.1-4.2 ✅)
+  - `Restaurants` list page with cuisine, price level, dietary filters
+  - `RestaurantDetail` page with hours, reviews, and location
+  - `RestaurantCard` component with save functionality
+  - `useRestaurants` hook with React Query + Supabase
+- **Events Module** (Steps 5.1-5.2 ✅)
+  - `Events` list page with date, category, and price filters
+  - `EventDetail` page with ticket info and venue details
+  - `EventCard` component with save functionality
+  - `useEvents` hook with React Query + Supabase
+- **Saved/Favorites Module** (Steps 6.1-6.2 ✅)
+  - Upgraded `/saved` page with 3-panel layout
+  - Collections CRUD (create, edit, delete)
+  - Type filters (All/Stays/Cars/Restaurants/Events)
+  - Move to collection and notes dialogs
+  - `useCollections` and `useEnrichedSavedPlaces` hooks
+- **Explore Module Upgrade** (Step 7.x ✅)
+  - `useExplorePlaces` hook - unified Supabase queries across all tables
+  - `useExploreCounts` hook - counts per category
+  - `ExploreCard` component with real save persistence
+  - `ExploreCategoryTabs` with result counts
+  - `ExploreMapView` with color-coded pins by type
+  - "See more" links to specific listing pages
+
 ### Planned
-- Restaurants list and detail pages
-- Events list and detail pages
-- Real map integration
+- Real map integration (Google Maps/Mapbox)
 
 ---
 

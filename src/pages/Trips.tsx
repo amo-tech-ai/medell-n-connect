@@ -8,7 +8,7 @@ import { TripCard } from "@/components/trips/TripCard";
 import { TripFilters } from "@/components/trips/TripFilters";
 import { ListingSkeleton } from "@/components/listings/ListingSkeleton";
 import { EmptyState } from "@/components/listings/EmptyState";
-import { useTrips, useDeleteTrip } from "@/hooks/useTrips";
+import { useTrips, useDeleteTrip, useArchiveTrip, useUnarchiveTrip } from "@/hooks/useTrips";
 import { useAuth } from "@/hooks/useAuth";
 import type { Trip, TripStatus } from "@/types/trip";
 import type { SelectedItem } from "@/context/ThreePanelContext";
@@ -31,6 +31,7 @@ function TripsContent() {
   const [statusFilter, setStatusFilter] = useState<TripStatus | "all">("all");
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [tripToDelete, setTripToDelete] = useState<Trip | null>(null);
+  const [tripToArchive, setTripToArchive] = useState<Trip | null>(null);
   const { openDetailPanel } = useThreePanelContext();
 
   const filters = {
@@ -40,6 +41,8 @@ function TripsContent() {
 
   const { data, isLoading, error } = useTrips(filters);
   const deleteTrip = useDeleteTrip();
+  const archiveTrip = useArchiveTrip();
+  const unarchiveTrip = useUnarchiveTrip();
 
   const handleTripSelect = (trip: Trip) => {
     setSelectedId(trip.id);
@@ -64,6 +67,27 @@ function TripsContent() {
       setTripToDelete(null);
     } catch (error) {
       toast.error("Failed to delete trip");
+    }
+  };
+
+  const handleArchive = async () => {
+    if (!tripToArchive) return;
+    
+    try {
+      await archiveTrip.mutateAsync(tripToArchive.id);
+      toast.success("Trip archived");
+      setTripToArchive(null);
+    } catch (error) {
+      toast.error("Failed to archive trip");
+    }
+  };
+
+  const handleUnarchive = async (trip: Trip) => {
+    try {
+      await unarchiveTrip.mutateAsync(trip.id);
+      toast.success("Trip restored");
+    } catch (error) {
+      toast.error("Failed to restore trip");
     }
   };
 
@@ -130,6 +154,8 @@ function TripsContent() {
               onSelect={handleTripSelect}
               onEdit={handleEdit}
               onDelete={setTripToDelete}
+              onArchive={setTripToArchive}
+              onUnarchive={handleUnarchive}
             />
           ))}
         </div>
@@ -147,6 +173,23 @@ function TripsContent() {
             <AlertDialogCancel>Cancel</AlertDialogCancel>
             <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">
               Delete
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
+
+      <AlertDialog open={!!tripToArchive} onOpenChange={() => setTripToArchive(null)}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Archive Trip</AlertDialogTitle>
+            <AlertDialogDescription>
+              Archive "{tripToArchive?.title}"? Archived trips are marked as completed and moved to your history.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>Cancel</AlertDialogCancel>
+            <AlertDialogAction onClick={handleArchive}>
+              Archive
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>

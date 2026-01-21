@@ -1,4 +1,4 @@
-import { Calendar, MapPin, DollarSign, MoreVertical } from "lucide-react";
+import { Calendar, MapPin, DollarSign, MoreVertical, Archive, ArchiveRestore } from "lucide-react";
 import { format, differenceInDays, parseISO } from "date-fns";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -7,6 +7,7 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
@@ -18,6 +19,8 @@ interface TripCardProps {
   onSelect?: (trip: Trip) => void;
   onEdit?: (trip: Trip) => void;
   onDelete?: (trip: Trip) => void;
+  onArchive?: (trip: Trip) => void;
+  onUnarchive?: (trip: Trip) => void;
 }
 
 const statusColors: Record<TripStatus, string> = {
@@ -40,11 +43,14 @@ export function TripCard({
   onSelect,
   onEdit,
   onDelete,
+  onArchive,
+  onUnarchive,
 }: TripCardProps) {
   const startDate = parseISO(trip.start_date);
   const endDate = parseISO(trip.end_date);
   const days = differenceInDays(endDate, startDate) + 1;
   const status = trip.status as TripStatus;
+  const isArchived = status === 'completed' || status === 'cancelled';
 
   return (
     <Card
@@ -102,6 +108,19 @@ export function TripCard({
               <DropdownMenuItem onClick={() => onEdit?.(trip)}>
                 Edit trip
               </DropdownMenuItem>
+              {!isArchived && onArchive && (
+                <DropdownMenuItem onClick={() => onArchive(trip)}>
+                  <Archive className="w-4 h-4 mr-2" />
+                  Archive trip
+                </DropdownMenuItem>
+              )}
+              {isArchived && onUnarchive && (
+                <DropdownMenuItem onClick={() => onUnarchive(trip)}>
+                  <ArchiveRestore className="w-4 h-4 mr-2" />
+                  Restore trip
+                </DropdownMenuItem>
+              )}
+              <DropdownMenuSeparator />
               <DropdownMenuItem
                 className="text-destructive"
                 onClick={() => onDelete?.(trip)}

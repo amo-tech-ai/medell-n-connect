@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Heart, Sparkles, MapPin } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Heart, Sparkles, MapPin, Wand2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { AppLayout } from "@/components/layout/AppLayout";
 import { Button } from "@/components/ui/button";
@@ -10,9 +10,12 @@ import { CollectionsList } from "@/components/saved/CollectionsList";
 import { CreateCollectionDialog } from "@/components/saved/CreateCollectionDialog";
 import { MoveToCollectionDialog } from "@/components/saved/MoveToCollectionDialog";
 import { EditNotesDialog } from "@/components/saved/EditNotesDialog";
+import { CollectionSuggestions } from "@/components/saved/CollectionSuggestions";
 import { useEnrichedSavedPlaces, useSavedPlacesCount } from "@/hooks/useEnrichedSavedPlaces";
-import { useCollections, useCollection } from "@/hooks/useCollections";
+import { useCollections, useCollection, useCreateCollection, useAddToCollection } from "@/hooks/useCollections";
+import { useCollectionSuggestions, type CollectionSuggestion } from "@/hooks/useCollectionSuggestions";
 import { useAuth } from "@/hooks/useAuth";
+import { toast } from "sonner";
 import type { LocationType, EnrichedSavedPlace } from "@/types/saved";
 
 // Right panel content for Saved page
@@ -77,6 +80,7 @@ export default function Saved() {
   const { user } = useAuth();
   const [activeFilter, setActiveFilter] = useState<LocationType>("all");
   const [selectedCollectionId, setSelectedCollectionId] = useState<string | null>(null);
+  const [dismissedSuggestions, setDismissedSuggestions] = useState<string[]>([]);
 
   // Dialog states
   const [createCollectionOpen, setCreateCollectionOpen] = useState(false);
@@ -88,12 +92,63 @@ export default function Saved() {
     activeFilter,
     selectedCollectionId
   );
+  const { data: allSavedPlaces = [] } = useEnrichedSavedPlaces("all", null);
   const { data: countData } = useSavedPlacesCount();
   const { data: collections = [] } = useCollections();
   const { data: selectedCollection } = useCollection(selectedCollectionId || undefined);
 
+  // AI Suggestions
+  const { suggestions, getSuggestions, isLoading: isLoadingSuggestions, clearSuggestions } = useCollectionSuggestions();
+  const createCollection = useCreateCollection();
+  const addToCollection = useAddToCollection();
+
   const pageTitle = selectedCollection?.name || "Saved Places";
   const pageSubtitle = selectedCollection?.description || `${savedPlaces.length} places saved`;
+
+  // Filter out dismissed suggestions
+  const activeSuggestions = suggestions.filter(s => !dismissedSuggestions.includes(s.name));
+
+  const handleGetSuggestions = () => {
+    const placesForAnalysis = allSavedPlaces.map(p => ({
+      id: p.id,
+      location_id: p.location_id,
+      location_type: p.location_type,
+      title: p.resource?.title || '',
+      cuisine_types: undefined, // Would need to extend EnrichedSavedPlace if needed
+      neighborhood: p.resource?.location,
+      price_level: undefined,
+      rating: p.resource?.rating,
+    }));
+    getSuggestions(placesForAnalysis);
+  };
+
+  const handleCreateFromSuggestion = async (suggestion: CollectionSuggestion) => {
+    try {
+      const newCollection = await createCollection.mutateAsync({
+        name: suggestion.name,
+        description: suggestion.description,
+        emoji: suggestion.emoji,
+        color: suggestion.color,
+      });
+
+      // Add places to the new collection
+      for (const placeId of suggestion.placeIds) {
+        await addToCollection.mutateAsync({
+          savedPlaceId: placeId,
+          collectionId: newCollection.id,
+        });
+      }
+
+      toast.success(`Created "${suggestion.name}" with ${suggestion.placeIds.length} places`);
+      setDismissedSuggestions(prev => [...prev, suggestion.name]);
+    } catch (error) {
+      toast.error("Failed to create collection");
+    }
+  };
+
+  const handleDismissSuggestion = (suggestion: CollectionSuggestion) => {
+    setDismissedSuggestions(prev => [...prev, suggestion.name]);
+  };
 
   if (!user) {
     return (
@@ -153,7 +208,33 @@ export default function Saved() {
           </aside>
 
           {/* Main Content */}
-          <div className="flex-1 px-4 lg:px-6 py-6">
+          <div className="flex-1 px-4 lg:px-6 py-6 space-y-6">
+            {/* AI Collection Suggestions */}
+            {!selectedCollectionId && allSavedPlaces.length >= 3 && (
+              <div className="space-y-4">
+                {activeSuggestions.length > 0 ? (
+                  <CollectionSuggestions
+                    suggestions={activeSuggestions}
+                    onCreateCollection={handleCreateFromSuggestion}
+                    onDismiss={handleDismissSuggestion}
+                    isCreating={createCollection.isPending}
+                  />
+                ) : (
+                  <div className="flex justify-end">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={handleGetSuggestions}
+                      disabled={isLoadingSuggestions}
+                    >
+                      <Wand2 className="w-4 h-4 mr-2" />
+                      {isLoadingSuggestions ? "Analyzing..." : "Suggest Collections"}
+                    </Button>
+                  </div>
+                )}
+              </div>
+            )}
+
             {isLoading ? (
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {[1, 2, 3, 4].map((i) => (

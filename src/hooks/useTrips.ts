@@ -164,6 +164,42 @@ export function useDeleteTrip() {
   });
 }
 
+export function useArchiveTrip() {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: async (id: string) => {
+      const { error } = await supabase
+        .from("trips")
+        .update({ status: "completed" as TripStatus })
+        .eq("id", id);
+
+      if (error) throw error;
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["trips"] });
+    },
+  });
+}
+
+export function useUnarchiveTrip() {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: async (id: string) => {
+      const { error } = await supabase
+        .from("trips")
+        .update({ status: "draft" as TripStatus })
+        .eq("id", id);
+
+      if (error) throw error;
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["trips"] });
+    },
+  });
+}
+
 export function useUpcomingTrips(limit = 3) {
   const { user } = useAuth();
   const today = new Date().toISOString().split("T")[0];

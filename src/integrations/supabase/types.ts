@@ -1342,6 +1342,7 @@ export type Database = {
           priority: number | null
           saved_at: string
           tags: string[] | null
+          trip_id: string | null
           user_id: string
           view_count: number | null
         }
@@ -1356,6 +1357,7 @@ export type Database = {
           priority?: number | null
           saved_at?: string
           tags?: string[] | null
+          trip_id?: string | null
           user_id: string
           view_count?: number | null
         }
@@ -1370,6 +1372,7 @@ export type Database = {
           priority?: number | null
           saved_at?: string
           tags?: string[] | null
+          trip_id?: string | null
           user_id?: string
           view_count?: number | null
         }
@@ -1379,6 +1382,13 @@ export type Database = {
             columns: ["collection_id"]
             isOneToOne: false
             referencedRelation: "collections"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "saved_places_trip_id_fkey"
+            columns: ["trip_id"]
+            isOneToOne: false
+            referencedRelation: "trips"
             referencedColumns: ["id"]
           },
           {

@@ -224,8 +224,19 @@ const tools = [
 ];
 
 // System prompts for each tab/agent type - enhanced with tool awareness
-const systemPrompts: Record<string, string> = {
-  concierge: `You are the I Love Medellín AI Concierge - a friendly, knowledgeable local guide for Medellín, Colombia.
+const getSystemPrompt = (tab: string, tripContext?: { id: string; title: string; start_date: string; end_date: string; destination?: string } | null): string => {
+  const tripInfo = tripContext 
+    ? `\n\n🎯 ACTIVE TRIP CONTEXT:
+The user is currently planning/viewing: "${tripContext.title}"
+Dates: ${tripContext.start_date} to ${tripContext.end_date}
+${tripContext.destination ? `Destination: ${tripContext.destination}` : 'Destination: Medellín, Colombia'}
+
+When making recommendations, consider these trip dates and tailor suggestions accordingly.
+When adding items to trips, use this trip ID: ${tripContext.id}`
+    : '';
+
+  const basePrompts: Record<string, string> = {
+    concierge: `You are the I Love Medellín AI Concierge - a friendly, knowledgeable local guide for Medellín, Colombia.
 
 You have access to tools to search the database for real-time information about:
 - Restaurants (use search_restaurants)
@@ -243,9 +254,9 @@ Your expertise covers:
 - Budget planning and cost of living
 - Transportation options
 
-Be warm, helpful, and conversational. Provide specific, actionable advice.`,
+Be warm, helpful, and conversational. Provide specific, actionable advice.${tripInfo}`,
 
-  trips: `You are an expert Trip Planner for Medellín, Colombia. Help users create amazing itineraries.
+    trips: `You are an expert Trip Planner for Medellín, Colombia. Help users create amazing itineraries.
 
 You have access to tools:
 - get_user_trips: View user's existing trips
@@ -257,9 +268,9 @@ When creating itineraries:
 - Be specific with timing and locations
 - Include meal recommendations from actual restaurants
 - Consider travel time between locations
-- Suggest alternatives for different weather conditions`,
+- Suggest alternatives for different weather conditions${tripInfo}`,
 
-  explore: `You are a Discovery Agent for Medellín, Colombia. Help users find amazing places.
+    explore: `You are a Discovery Agent for Medellín, Colombia. Help users find amazing places.
 
 You MUST use the search tools to find real places:
 - search_restaurants: Find restaurants by cuisine, price, location
@@ -272,9 +283,9 @@ When recommending places:
 - Include the neighborhood
 - Mention price range ($ to $$$$)
 - Note ratings and reviews
-- Suggest best times to visit`,
+- Suggest best times to visit${tripInfo}`,
 
-  bookings: `You are a Booking Assistant for Medellín, Colombia. Help users manage reservations.
+    bookings: `You are a Booking Assistant for Medellín, Colombia. Help users manage reservations.
 
 You have access to tools:
 - get_user_bookings: View existing bookings
@@ -291,7 +302,10 @@ When helping with bookings:
 - Confirm dates, times, and party size
 - Mention pricing when relevant
 - Note any requirements (deposits, ID, etc.)
-- Provide next steps clearly`,
+- Provide next steps clearly${tripInfo}`,
+  };
+
+  return basePrompts[tab] || basePrompts.concierge;
 };
 
 // Initialize Supabase client
@@ -537,7 +551,7 @@ serve(async (req) => {
   }
 
   try {
-    const { messages, tab = "concierge", conversationId } = await req.json();
+    const { messages, tab = "concierge", conversationId, activeTripContext } = await req.json();
     const authHeader = req.headers.get("Authorization");
     
     const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
@@ -549,8 +563,8 @@ serve(async (req) => {
     const supabase = getSupabaseClient(authHeader);
     const userId = await getUserIdFromAuth(authHeader, supabase);
 
-    // Get the appropriate system prompt
-    const systemPrompt = systemPrompts[tab] || systemPrompts.concierge;
+    // Get the appropriate system prompt with trip context
+    const systemPrompt = getSystemPrompt(tab, activeTripContext);
 
     // Prepare messages with system prompt
     const aiMessages = [

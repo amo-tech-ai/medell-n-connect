@@ -1,6 +1,7 @@
 import { useState, useCallback, useRef } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
+import { useTripContext } from '@/context/TripContext';
 import { ChatMessage, Conversation, ChatTab, tabToAgentType } from '@/types/chat';
 import { toast } from 'sonner';
 
@@ -9,6 +10,7 @@ const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL || 'https://zkwcbyxiwklih
 
 export function useChat(activeTab: ChatTab) {
   const { user } = useAuth();
+  const { activeTrip } = useTripContext();
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [conversations, setConversations] = useState<Conversation[]>([]);
   const [currentConversation, setCurrentConversation] = useState<Conversation | null>(null);
@@ -156,6 +158,14 @@ export function useChat(activeTab: ChatTab) {
           })),
           tab: activeTab,
           conversationId: conversation.id,
+          // Pass active trip context to AI
+          activeTripContext: activeTrip ? {
+            id: activeTrip.id,
+            title: activeTrip.title,
+            start_date: activeTrip.start_date,
+            end_date: activeTrip.end_date,
+            destination: activeTrip.destination,
+          } : null,
         }),
         signal: abortControllerRef.current.signal,
       });
@@ -247,7 +257,7 @@ export function useChat(activeTab: ChatTab) {
       setIsLoading(false);
       setIsStreaming(false);
     }
-  }, [user, currentConversation, messages, activeTab, createConversation]);
+  }, [user, currentConversation, messages, activeTab, activeTrip, createConversation]);
 
   // Cancel streaming
   const cancelStream = useCallback(() => {

@@ -1,8 +1,12 @@
-import { MapPin, Calendar, Bookmark, Lightbulb, Clock, DollarSign } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { MapPin, Calendar, Bookmark, Lightbulb, Clock, DollarSign, Plane, Plus, ExternalLink } from 'lucide-react';
+import { format, parseISO, differenceInDays } from 'date-fns';
 import { ChatTab } from '@/types/chat';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { useTripContext } from '@/context/TripContext';
+import { useAuth } from '@/hooks/useAuth';
 
 interface ChatRightPanelProps {
   activeTab: ChatTab;
@@ -68,17 +72,94 @@ function ConciergePanel() {
 }
 
 function TripsPanel() {
+  const { user } = useAuth();
+  const { activeTrip, upcomingTrips, hasActiveTrip } = useTripContext();
+
+  const getTimeUntilTrip = (startDate: string) => {
+    const start = parseISO(startDate);
+    const today = new Date();
+    const days = differenceInDays(start, today);
+    if (days < 0) return 'In progress';
+    if (days === 0) return 'Starts today!';
+    if (days === 1) return 'Tomorrow';
+    return `In ${days} days`;
+  };
+
+  if (!user) {
+    return (
+      <div className="p-4 rounded-xl bg-muted/50 text-center">
+        <Plane className="w-8 h-8 mx-auto text-muted-foreground mb-2" />
+        <p className="text-sm text-muted-foreground mb-3">Sign in to plan trips</p>
+        <Button size="sm" asChild>
+          <Link to="/login">Sign In</Link>
+        </Button>
+      </div>
+    );
+  }
+
   return (
     <>
       <div>
-        <h3 className="font-semibold text-sm mb-3">Active Trip</h3>
-        <div className="p-4 rounded-xl bg-muted/50 text-center">
-          <p className="text-sm text-muted-foreground">No active trip</p>
-          <Button variant="link" size="sm" className="mt-2">
-            Create a trip
-          </Button>
-        </div>
+        <h3 className="font-semibold text-sm mb-3">Active Trip Context</h3>
+        {hasActiveTrip && activeTrip ? (
+          <div className="p-4 rounded-xl bg-primary/5 border border-primary/20">
+            <div className="flex items-start justify-between gap-2">
+              <div className="flex-1 min-w-0">
+                <p className="font-medium truncate">{activeTrip.title}</p>
+                <div className="flex items-center gap-1.5 text-xs text-muted-foreground mt-1">
+                  <Calendar className="w-3 h-3" />
+                  <span>
+                    {format(parseISO(activeTrip.start_date), 'MMM d')} -{' '}
+                    {format(parseISO(activeTrip.end_date), 'MMM d')}
+                  </span>
+                </div>
+                <Badge variant="secondary" className="mt-2 text-xs">
+                  {getTimeUntilTrip(activeTrip.start_date)}
+                </Badge>
+              </div>
+              <Button variant="ghost" size="icon" className="h-8 w-8 flex-shrink-0" asChild>
+                <Link to={`/trips/${activeTrip.id}`}>
+                  <ExternalLink className="w-4 h-4" />
+                </Link>
+              </Button>
+            </div>
+            <p className="text-xs text-muted-foreground mt-3 pt-3 border-t border-primary/10">
+              🤖 AI knows about this trip and can help you plan!
+            </p>
+          </div>
+        ) : (
+          <div className="p-4 rounded-xl bg-muted/50 text-center">
+            <p className="text-sm text-muted-foreground">No active trip selected</p>
+            <Button variant="link" size="sm" className="mt-2" asChild>
+              <Link to="/trips/new">
+                <Plus className="w-4 h-4 mr-1" />
+                Create a trip
+              </Link>
+            </Button>
+          </div>
+        )}
       </div>
+
+      {upcomingTrips.length > 0 && !hasActiveTrip && (
+        <div>
+          <h3 className="font-semibold text-sm mb-3">Upcoming Trips</h3>
+          <div className="space-y-2">
+            {upcomingTrips.slice(0, 3).map((trip) => (
+              <Link
+                key={trip.id}
+                to={`/trips/${trip.id}`}
+                className="block p-3 rounded-lg bg-muted/30 hover:bg-muted/50 transition-colors"
+              >
+                <p className="text-sm font-medium">{trip.title}</p>
+                <div className="flex items-center gap-1 text-xs text-muted-foreground mt-1">
+                  <Clock className="w-3 h-3" />
+                  {getTimeUntilTrip(trip.start_date)}
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
 
       <div>
         <h3 className="font-semibold text-sm mb-3">Trip Ideas</h3>

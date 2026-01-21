@@ -6,7 +6,7 @@ import { PlaceCard } from "@/components/places/PlaceCard";
 import { useAuth } from "@/hooks/useAuth";
 import { HeroSection } from "@/components/home/HeroSection";
 import { GetInspiredSlider } from "@/components/home/GetInspiredSlider";
-
+import { AIFeaturesSection } from "@/components/home/AIFeaturesSection";
 const categoryIcons = {
   apartments: Home,
   restaurants: Utensils,
@@ -111,6 +111,9 @@ export default function Index() {
           </div>
         </div>
       </section>
+
+      {/* AI Features Section */}
+      <AIFeaturesSection />
 
       {/* Featured Places */}
       <section className="py-16 bg-secondary/30">

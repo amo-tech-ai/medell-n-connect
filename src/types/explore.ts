@@ -14,6 +14,8 @@ export interface ExplorePlaceResult {
   priceLevel: number;
   tags: string[];
   coordinates: { lat: number; lng: number } | null;
+  // Original raw data from Supabase for detail panels
+  rawData?: any;
 }
 
 export interface ExploreFilters {

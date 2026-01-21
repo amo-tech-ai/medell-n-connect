@@ -121,19 +121,22 @@ function ExploreContent() {
   const handlePlaceSelect = (place: ExplorePlaceResult) => {
     setSelectedPlace(place);
     
+    // Use rawData for full entity data, fallback to place if not available
+    const entityData = place.rawData || place;
+    
     // Render the appropriate detail panel based on place type
     switch (place.type) {
       case "restaurant":
-        setRightPanelContent(<RestaurantDetailPanel restaurant={place as any} />);
+        setRightPanelContent(<RestaurantDetailPanel restaurant={entityData} />);
         break;
       case "apartment":
-        setRightPanelContent(<ApartmentDetailPanel apartment={place as any} />);
+        setRightPanelContent(<ApartmentDetailPanel apartment={entityData} />);
         break;
       case "car":
-        setRightPanelContent(<CarDetailPanel car={place as any} />);
+        setRightPanelContent(<CarDetailPanel car={entityData} />);
         break;
       case "event":
-        setRightPanelContent(<EventDetailPanel event={place as any} />);
+        setRightPanelContent(<EventDetailPanel event={entityData} />);
         break;
       default:
         // Reset to default panel if unknown type

@@ -1,5 +1,25 @@
 # Changelog
 
+## [2026-01-21] - Map Visualization for Itinerary Builder
+
+### Added
+- **ItineraryMapView** component - Visual route map with positioned pins and dashed route lines
+- **TravelTimeIndicator** component - Shows travel time/distance between activities with mode suggestion (walk/taxi/drive)
+- Haversine formula for accurate distance calculation between coordinates
+- Travel time estimation based on 25 km/h average city speed
+- Split view mode in VisualItineraryBuilder (List + Map side-by-side)
+- Map/List toggle in TripDetail page toolbar
+- SVG route lines with arrow markers connecting activity pins
+- Total travel time badge per selected day
+- Activity pins show step number, icon, and title
+
+### Changed
+- Updated VisualItineraryBuilder to support `showMapView` prop
+- TripDetail now includes map toggle for builder view
+- Travel time indicators appear between items when map view is active
+
+---
+
 ## [2026-01-21] - Collections, Itinerary Builder, Events Enhancement
 
 ### Added

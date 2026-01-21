@@ -5,6 +5,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { Separator } from "@/components/ui/separator";
+import { TripSelector } from "@/components/trips/TripSelector";
 
 interface NavItem {
   icon: typeof Home;
@@ -119,6 +120,11 @@ export function LeftPanel({ collapsed = false, onToggle }: LeftPanelProps) {
           )}
         </Button>
       )}
+
+      {/* Trip Selector */}
+      <div className={cn("px-4 pt-4", collapsed && "px-2")}>
+        <TripSelector collapsed={collapsed} />
+      </div>
 
       {/* Navigation */}
       <nav className={cn("flex-1 p-4 space-y-1 overflow-y-auto", collapsed && "p-2")}>

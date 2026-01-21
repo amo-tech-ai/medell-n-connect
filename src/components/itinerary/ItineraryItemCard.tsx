@@ -1,4 +1,4 @@
-import { GripVertical, MapPin, Clock, Trash2, Edit2 } from "lucide-react";
+import { GripVertical, MapPin, Clock, Trash2, Edit2, Navigation } from "lucide-react";
 import { format, parseISO } from "date-fns";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -10,6 +10,7 @@ interface ItemCardProps {
   isDragging?: boolean;
   onRemove?: () => void;
   onEdit?: () => void;
+  previousItem?: TripItem | null;
 }
 
 const itemTypeColors: Record<TripItemType, string> = {
@@ -42,9 +43,37 @@ const itemTypeIcons: Record<TripItemType, string> = {
   note: "📝",
 };
 
-export function ItemCard({ item, isDragging, onRemove, onEdit }: ItemCardProps) {
+export function ItemCard({ item, isDragging, onRemove, onEdit, previousItem }: ItemCardProps) {
   const itemType = item.item_type as TripItemType;
   const startTime = item.start_at ? format(parseISO(item.start_at), "h:mm a") : null;
+
+  // Generate navigation URL to Google Maps / Apple Maps
+  const getNavigationUrl = () => {
+    if (!item.latitude || !item.longitude) return null;
+    
+    const destination = `${item.latitude},${item.longitude}`;
+    const destinationName = encodeURIComponent(item.title);
+    
+    // Check if previous item has coordinates for directions
+    if (previousItem?.latitude && previousItem?.longitude) {
+      const origin = `${previousItem.latitude},${previousItem.longitude}`;
+      // Google Maps directions URL
+      return `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}&destination_place_id=${destinationName}&travelmode=driving`;
+    }
+    
+    // Just navigate to the location
+    return `https://www.google.com/maps/search/?api=1&query=${destination}&query_place_id=${destinationName}`;
+  };
+
+  const handleNavigate = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    const url = getNavigationUrl();
+    if (url) {
+      window.open(url, '_blank', 'noopener,noreferrer');
+    }
+  };
+
+  const hasLocation = item.latitude && item.longitude;
 
   return (
     <div
@@ -91,6 +120,17 @@ export function ItemCard({ item, isDragging, onRemove, onEdit }: ItemCardProps) 
 
       {/* Actions */}
       <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+        {hasLocation && (
+          <Button
+            variant="ghost"
+            size="icon"
+            className="h-7 w-7 text-primary hover:text-primary"
+            onClick={handleNavigate}
+            title="Open in Google Maps"
+          >
+            <Navigation className="w-3.5 h-3.5" />
+          </Button>
+        )}
         {onEdit && (
           <Button
             variant="ghost"

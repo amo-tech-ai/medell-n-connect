@@ -47,7 +47,10 @@
 | ✅ | Events detail | 06 | done | Detail page with right panel |
 | ✅ | Saved dashboard upgrade | 07 | done | 3-panel layout, type filters |
 | ✅ | Collections CRUD | 07 | done | Create/edit/delete collections |
-| 7.1 | Map integration | 08 | todo | Mapbox or Google Maps |
+| ✅ | Explore unified search | 08 | done | Supabase multi-table queries |
+| ✅ | Explore category tabs | 08 | done | Counts per category |
+| ✅ | ExploreCard component | 08 | done | Unified card with real save |
+| 7.1 | Real map integration | 08 | todo | Mapbox or Google Maps |
 | 8.1 | Home dashboard | 15 | todo | Post-login experience |
 | 9.1 | Trips list | 09 | todo | Phase 2 |
 | 9.2 | Trip detail | 09 | todo | Phase 2 |

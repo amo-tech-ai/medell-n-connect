@@ -2,6 +2,12 @@
 
 ## Completed Features
 
+### Phase 2.3 - Map Visualization (January 2026)
+- ✅ **Itinerary Map View** - Route visualization with pins and dashed route lines
+- ✅ **Travel Time Estimates** - Haversine distance calculation, 25 km/h average speed
+- ✅ **TravelTimeIndicator** - Between-activity travel info with mode suggestions
+- ✅ **Split View Builder** - List + Map side-by-side with toggle
+
 ### Phase 2.2 - Collections & Itinerary (January 2026)
 - ✅ **Custom Collections System** - Full CRUD with card grid, preview images, color-coding
 - ✅ **Visual Itinerary Builder** - Drag-and-drop with @dnd-kit, day-by-day planning

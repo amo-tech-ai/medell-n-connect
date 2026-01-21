@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { format, parseISO, differenceInDays, addDays } from "date-fns";
-import { ArrowLeft, Calendar, MapPin, DollarSign, Edit2, Loader2, Map } from "lucide-react";
+import { ArrowLeft, Calendar, MapPin, DollarSign, Map, List } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { ThreePanelLayout } from "@/components/explore/ThreePanelLayout";
 import { VisualItineraryBuilder } from "@/components/itinerary/VisualItineraryBuilder";
 import { DayTimeline } from "@/components/trips/DayTimeline";
@@ -28,6 +29,7 @@ function TripDetailContent() {
   const navigate = useNavigate();
   const [selectedDay, setSelectedDay] = useState<number>(0);
   const [viewTab, setViewTab] = useState<"timeline" | "builder">("builder");
+  const [showMap, setShowMap] = useState<boolean>(true);
   
   const { data: trip, isLoading, error } = useTrip(id!);
   const updateTrip = useUpdateTrip();
@@ -160,18 +162,35 @@ function TripDetailContent() {
 
       {/* Itinerary View Tabs */}
       <Tabs value={viewTab} onValueChange={(v) => setViewTab(v as "timeline" | "builder")}>
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between flex-wrap gap-2">
           <h2 className="text-xl font-semibold">Itinerary</h2>
-          <TabsList>
-            <TabsTrigger value="builder">
-              <Edit2 className="w-4 h-4 mr-1" />
-              Builder
-            </TabsTrigger>
-            <TabsTrigger value="timeline">
-              <Calendar className="w-4 h-4 mr-1" />
-              Timeline
-            </TabsTrigger>
-          </TabsList>
+          <div className="flex items-center gap-2">
+            {/* Map toggle (only for builder view) */}
+            {viewTab === "builder" && (
+              <ToggleGroup
+                type="single"
+                value={showMap ? "map" : "list"}
+                onValueChange={(v) => setShowMap(v === "map")}
+                size="sm"
+              >
+                <ToggleGroupItem value="list" aria-label="List view only">
+                  <List className="w-4 h-4" />
+                </ToggleGroupItem>
+                <ToggleGroupItem value="map" aria-label="List + Map view">
+                  <Map className="w-4 h-4" />
+                </ToggleGroupItem>
+              </ToggleGroup>
+            )}
+            <TabsList>
+              <TabsTrigger value="builder">
+                Builder
+              </TabsTrigger>
+              <TabsTrigger value="timeline">
+                <Calendar className="w-4 h-4 mr-1" />
+                Timeline
+              </TabsTrigger>
+            </TabsList>
+          </div>
         </div>
 
         <TabsContent value="builder" className="mt-4">
@@ -183,6 +202,7 @@ function TripDetailContent() {
             onRemoveItem={handleRemoveItem}
             selectedDay={selectedDay}
             onDaySelect={setSelectedDay}
+            showMapView={showMap}
             onAddItem={(dayIndex) => {
               toast.info("Browse listings and use 'Add to Trip' to add items!");
             }}

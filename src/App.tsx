@@ -20,6 +20,7 @@ import Saved from "./pages/Saved";
 import Trips from "./pages/Trips";
 import TripDetail from "./pages/TripDetail";
 import TripNew from "./pages/TripNew";
+import Bookings from "./pages/Bookings";
 import Concierge from "./pages/Concierge";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
@@ -81,6 +82,14 @@ const App = () => (
               element={
                 <ProtectedRoute>
                   <TripDetail />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/bookings"
+              element={
+                <ProtectedRoute>
+                  <Bookings />
                 </ProtectedRoute>
               }
             />

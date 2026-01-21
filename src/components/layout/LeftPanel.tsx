@@ -26,8 +26,13 @@ const listingsNavItems: NavItem[] = [
   { icon: CalendarDays, label: "Events", path: "/events" },
 ];
 
+import { Home, Compass, Heart, Sparkles, User, LogOut, ChevronLeft, ChevronRight, Building2, Car, UtensilsCrossed, CalendarDays, Plane, CalendarCheck } from "lucide-react";
+
+// ... keep existing code
+
 const userNavItems: NavItem[] = [
   { icon: Plane, label: "My Trips", path: "/trips", protected: true },
+  { icon: CalendarCheck, label: "Bookings", path: "/bookings", protected: true },
   { icon: Heart, label: "Saved", path: "/saved", protected: true },
   { icon: Sparkles, label: "Concierge", path: "/concierge", badge: "Soon", protected: true },
 ];

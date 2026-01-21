@@ -27,6 +27,14 @@ import Signup from "./pages/Signup";
 import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
 import NotFound from "./pages/NotFound";
+// Admin pages
+import {
+  AdminDashboard,
+  AdminApartments,
+  AdminRestaurants,
+  AdminEvents,
+  AdminCars,
+} from "./pages/admin";
 
 const queryClient = new QueryClient();
 
@@ -93,6 +101,12 @@ const App = () => (
                 </ProtectedRoute>
               }
             />
+            {/* Admin Routes */}
+            <Route path="/admin" element={<AdminDashboard />} />
+            <Route path="/admin/apartments" element={<AdminApartments />} />
+            <Route path="/admin/restaurants" element={<AdminRestaurants />} />
+            <Route path="/admin/events" element={<AdminEvents />} />
+            <Route path="/admin/cars" element={<AdminCars />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

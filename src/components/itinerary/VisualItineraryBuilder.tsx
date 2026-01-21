@@ -16,7 +16,7 @@ import {
   verticalListSortingStrategy,
 } from "@dnd-kit/sortable";
 import { format, parseISO, addDays, isSameDay } from "date-fns";
-import { Plus, Map, List, Clock, MapPin, Route } from "lucide-react";
+import { Plus, Map, List, Route, Sparkles, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -55,6 +55,8 @@ interface VisualItineraryBuilderProps {
   selectedDay?: number;
   onDaySelect?: (dayIndex: number) => void;
   showMapView?: boolean;
+  onOptimizeRoute?: (dayItems: TripItem[], dayDate: string) => Promise<void>;
+  isOptimizing?: boolean;
 }
 
 export function VisualItineraryBuilder({
@@ -68,6 +70,8 @@ export function VisualItineraryBuilder({
   selectedDay = 0,
   onDaySelect,
   showMapView = false,
+  onOptimizeRoute,
+  isOptimizing = false,
 }: VisualItineraryBuilderProps) {
   const [activeId, setActiveId] = useState<string | null>(null);
   const [selectedItemId, setSelectedItemId] = useState<string | null>(null);
@@ -246,6 +250,26 @@ export function VisualItineraryBuilder({
                         </div>
                       </CardTitle>
                       <div className="flex items-center gap-2">
+                        {/* AI Optimize Button */}
+                        {isSelected && dayItems.length >= 2 && onOptimizeRoute && (
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="h-7 text-xs gap-1"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              onOptimizeRoute(dayItems, format(day, "yyyy-MM-dd"));
+                            }}
+                            disabled={isOptimizing}
+                          >
+                            {isOptimizing ? (
+                              <Loader2 className="w-3 h-3 animate-spin" />
+                            ) : (
+                              <Sparkles className="w-3 h-3" />
+                            )}
+                            {isOptimizing ? "Optimizing..." : "AI Optimize"}
+                          </Button>
+                        )}
                         {/* Show travel time for the day */}
                         {isSelected && travelSegments.length > 0 && (
                           <Badge variant="outline" className="text-xs">

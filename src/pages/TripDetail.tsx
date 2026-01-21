@@ -11,7 +11,8 @@ import { ThreePanelLayout } from "@/components/explore/ThreePanelLayout";
 import { VisualItineraryBuilder } from "@/components/itinerary/VisualItineraryBuilder";
 import { DayTimeline } from "@/components/trips/DayTimeline";
 import { useTrip, useUpdateTrip } from "@/hooks/useTrips";
-import { useDeleteTripItem, useReorderTripItem } from "@/hooks/useTripItems";
+import { useDeleteTripItem, useReorderTripItem, useUpdateTripItem } from "@/hooks/useTripItems";
+import { useRouteOptimization } from "@/hooks/useRouteOptimization";
 import { EmptyState } from "@/components/listings/EmptyState";
 import { cn } from "@/lib/utils";
 import type { TripStatus, TripItem } from "@/types/trip";
@@ -35,6 +36,8 @@ function TripDetailContent() {
   const updateTrip = useUpdateTrip();
   const deleteTripItem = useDeleteTripItem();
   const reorderTripItem = useReorderTripItem();
+  const updateTripItem = useUpdateTripItem();
+  const { isOptimizing, optimizeRoute } = useRouteOptimization();
 
   const handleStatusChange = async (status: TripStatus) => {
     if (!trip) return;
@@ -67,6 +70,42 @@ function TripDetailContent() {
       toast.success("Item moved");
     } catch (error) {
       toast.error("Failed to move item");
+    }
+  };
+
+  const handleOptimizeRoute = async (dayItems: TripItem[], dayDate: string) => {
+    if (!trip) return;
+    
+    const result = await optimizeRoute(dayItems, dayDate);
+    
+    if (result && result.optimizedOrder.length > 0) {
+      // Apply the optimized order by updating each item's start_at with a time offset
+      const baseDate = parseISO(dayDate);
+      
+      // Update items in the optimized order with staggered times (1 hour apart)
+      for (let i = 0; i < result.optimizedOrder.length; i++) {
+        const itemId = result.optimizedOrder[i];
+        const item = dayItems.find(di => di.id === itemId);
+        if (item) {
+          const newTime = new Date(baseDate);
+          newTime.setHours(9 + i, 0, 0, 0); // Start at 9 AM, 1 hour apart
+          
+          await updateTripItem.mutateAsync({
+            id: itemId,
+            trip_id: trip.id,
+            start_at: newTime.toISOString(),
+          });
+        }
+      }
+      
+      toast.success(
+        `Route optimized! ${result.explanation}`,
+        { 
+          description: result.savings.timeMinutes > 0 
+            ? `Saved ~${result.savings.timeMinutes} min travel time`
+            : undefined
+        }
+      );
     }
   };
 
@@ -203,6 +242,8 @@ function TripDetailContent() {
             selectedDay={selectedDay}
             onDaySelect={setSelectedDay}
             showMapView={showMap}
+            onOptimizeRoute={handleOptimizeRoute}
+            isOptimizing={isOptimizing}
             onAddItem={(dayIndex) => {
               toast.info("Browse listings and use 'Add to Trip' to add items!");
             }}

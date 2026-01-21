@@ -29,37 +29,35 @@ export function ChatInput({ onSend, onCancel, isLoading, isStreaming, placeholde
   };
 
   return (
-    <div className="p-4 border-t border-border bg-background/80 backdrop-blur-sm">
-      <div className="flex items-end gap-3 max-w-3xl mx-auto">
-        <Textarea
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          onKeyDown={handleKeyDown}
-          placeholder={placeholder || 'Type your message...'}
-          className="min-h-[48px] max-h-[200px] resize-none rounded-xl"
-          rows={1}
-          disabled={isLoading}
-        />
-        {isStreaming ? (
-          <Button
-            size="icon"
-            variant="destructive"
-            onClick={onCancel}
-            className="h-12 w-12 rounded-xl flex-shrink-0"
-          >
-            <Square className="w-4 h-4" />
-          </Button>
-        ) : (
-          <Button
-            size="icon"
-            onClick={handleSend}
-            disabled={!input.trim() || isLoading}
-            className="h-12 w-12 rounded-xl flex-shrink-0"
-          >
-            <Send className="w-4 h-4" />
-          </Button>
-        )}
-      </div>
+    <div className="flex items-center gap-2">
+      <Textarea
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        onKeyDown={handleKeyDown}
+        placeholder={placeholder || 'Type your message...'}
+        className="min-h-[44px] max-h-[120px] resize-none rounded-full px-4 py-3 text-sm"
+        rows={1}
+        disabled={isLoading}
+      />
+      {isStreaming ? (
+        <Button
+          size="icon"
+          variant="destructive"
+          onClick={onCancel}
+          className="h-10 w-10 rounded-full flex-shrink-0"
+        >
+          <Square className="w-4 h-4" />
+        </Button>
+      ) : (
+        <Button
+          size="icon"
+          onClick={handleSend}
+          disabled={!input.trim() || isLoading}
+          className="h-10 w-10 rounded-full flex-shrink-0"
+        >
+          <Send className="w-4 h-4" />
+        </Button>
+      )}
     </div>
   );
 }

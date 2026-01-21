@@ -4,7 +4,8 @@ import { useAuth } from '@/hooks/useAuth';
 import { ChatMessage, Conversation, ChatTab, tabToAgentType } from '@/types/chat';
 import { toast } from 'sonner';
 
-const SUPABASE_URL = 'https://zkwcbyxiwklihegjhuql.supabase.co';
+// Use environment variable with fallback for the Supabase URL
+const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL || 'https://zkwcbyxiwklihegjhuql.supabase.co';
 
 export function useChat(activeTab: ChatTab) {
   const { user } = useAuth();
@@ -136,11 +137,17 @@ export function useChat(activeTab: ChatTab) {
       // Get session for auth
       const { data: { session } } = await supabase.auth.getSession();
 
+      // Use anon key as fallback for unauthenticated users
+      const anonKey = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
+      const authHeader = session?.access_token 
+        ? `Bearer ${session.access_token}` 
+        : `Bearer ${anonKey}`;
+
       const response = await fetch(`${SUPABASE_URL}/functions/v1/ai-chat`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${session?.access_token || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inprd2NieXhpd2tsaWhlZ2podXFsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjY0MTUyNDIsImV4cCI6MjA4MTk5MTI0Mn0.XFif2SYWfDs-MD-HQbGJ2VC0GoCr_n5yd_HBx2MHUUY'}`,
+          'Authorization': authHeader,
         },
         body: JSON.stringify({
           messages: [...messages, userMessage].map(m => ({

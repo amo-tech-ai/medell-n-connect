@@ -3,11 +3,11 @@ import { AdminLayout } from "@/components/admin/AdminLayout";
 import { AdminHeader } from "@/components/admin/AdminHeader";
 import { AdminPagination } from "@/components/admin/AdminPagination";
 import { ListingDataTable, StatusBadge, Column } from "@/components/admin/ListingDataTable";
+import { ListingFormDialog } from "@/components/admin/ListingFormDialog";
 import { useAdminListings, useDeleteListing, useToggleListingStatus } from "@/hooks/useAdminListings";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import type { Database } from "@/integrations/supabase/types";
-import { toast } from "sonner";
 import { format } from "date-fns";
 
 type EventRow = Database["public"]["Tables"]["events"]["Row"];
@@ -16,6 +16,8 @@ function AdminEventsContent() {
   const [search, setSearch] = useState("");
   const [status, setStatus] = useState("all");
   const [page, setPage] = useState(1);
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [editingItem, setEditingItem] = useState<EventRow | null>(null);
 
   const { data, isLoading } = useAdminListings("events", { search, status, page });
   const deleteMutation = useDeleteListing("events");
@@ -83,7 +85,8 @@ function AdminEventsContent() {
   ];
 
   const handleEdit = (item: EventRow) => {
-    toast.info(`Edit functionality coming soon for: ${item.name}`);
+    setEditingItem(item);
+    setIsFormOpen(true);
   };
 
   const handleDelete = (item: EventRow) => {
@@ -94,6 +97,16 @@ function AdminEventsContent() {
     toggleStatusMutation.mutate({ id: item.id, isActive: !item.is_active });
   };
 
+  const handleCreate = () => {
+    setEditingItem(null);
+    setIsFormOpen(true);
+  };
+
+  const handleCloseForm = () => {
+    setIsFormOpen(false);
+    setEditingItem(null);
+  };
+
   return (
     <div className="min-h-screen">
       <AdminHeader
@@ -102,7 +115,7 @@ function AdminEventsContent() {
         searchPlaceholder="Search events..."
         searchValue={search}
         onSearchChange={setSearch}
-        onCreateClick={() => toast.info("Create form coming soon")}
+        onCreateClick={handleCreate}
         createLabel="Add Event"
       />
 
@@ -138,6 +151,14 @@ function AdminEventsContent() {
           />
         )}
       </div>
+
+      {/* Form Dialog */}
+      <ListingFormDialog
+        type="events"
+        isOpen={isFormOpen}
+        onClose={handleCloseForm}
+        listing={editingItem}
+      />
     </div>
   );
 }

@@ -3,11 +3,11 @@ import { AdminLayout } from "@/components/admin/AdminLayout";
 import { AdminHeader } from "@/components/admin/AdminHeader";
 import { AdminPagination } from "@/components/admin/AdminPagination";
 import { ListingDataTable, StatusBadge, Column } from "@/components/admin/ListingDataTable";
+import { ListingFormDialog } from "@/components/admin/ListingFormDialog";
 import { useAdminListings, useDeleteListing, useToggleListingStatus } from "@/hooks/useAdminListings";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import type { Database } from "@/integrations/supabase/types";
-import { toast } from "sonner";
 
 type CarRentalRow = Database["public"]["Tables"]["car_rentals"]["Row"];
 
@@ -15,6 +15,8 @@ function AdminCarsContent() {
   const [search, setSearch] = useState("");
   const [status, setStatus] = useState("all");
   const [page, setPage] = useState(1);
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [editingItem, setEditingItem] = useState<CarRentalRow | null>(null);
 
   const { data, isLoading } = useAdminListings("car_rentals", { search, status, page });
   const deleteMutation = useDeleteListing("car_rentals");
@@ -82,7 +84,8 @@ function AdminCarsContent() {
   ];
 
   const handleEdit = (item: CarRentalRow) => {
-    toast.info(`Edit functionality coming soon for: ${item.make} ${item.model}`);
+    setEditingItem(item);
+    setIsFormOpen(true);
   };
 
   const handleDelete = (item: CarRentalRow) => {
@@ -93,6 +96,16 @@ function AdminCarsContent() {
     toggleStatusMutation.mutate({ id: item.id, isActive: item.status !== "active" });
   };
 
+  const handleCreate = () => {
+    setEditingItem(null);
+    setIsFormOpen(true);
+  };
+
+  const handleCloseForm = () => {
+    setIsFormOpen(false);
+    setEditingItem(null);
+  };
+
   return (
     <div className="min-h-screen">
       <AdminHeader
@@ -101,7 +114,7 @@ function AdminCarsContent() {
         searchPlaceholder="Search vehicles..."
         searchValue={search}
         onSearchChange={setSearch}
-        onCreateClick={() => toast.info("Create form coming soon")}
+        onCreateClick={handleCreate}
         createLabel="Add Vehicle"
       />
 
@@ -137,6 +150,14 @@ function AdminCarsContent() {
           />
         )}
       </div>
+
+      {/* Form Dialog */}
+      <ListingFormDialog
+        type="car_rentals"
+        isOpen={isFormOpen}
+        onClose={handleCloseForm}
+        listing={editingItem}
+      />
     </div>
   );
 }

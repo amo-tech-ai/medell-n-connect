@@ -3,11 +3,11 @@ import { AdminLayout } from "@/components/admin/AdminLayout";
 import { AdminHeader } from "@/components/admin/AdminHeader";
 import { AdminPagination } from "@/components/admin/AdminPagination";
 import { ListingDataTable, StatusBadge, Column } from "@/components/admin/ListingDataTable";
+import { ListingFormDialog } from "@/components/admin/ListingFormDialog";
 import { useAdminListings, useDeleteListing, useToggleListingStatus } from "@/hooks/useAdminListings";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import type { Database } from "@/integrations/supabase/types";
-import { toast } from "sonner";
 
 type RestaurantRow = Database["public"]["Tables"]["restaurants"]["Row"];
 
@@ -15,6 +15,8 @@ function AdminRestaurantsContent() {
   const [search, setSearch] = useState("");
   const [status, setStatus] = useState("all");
   const [page, setPage] = useState(1);
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [editingItem, setEditingItem] = useState<RestaurantRow | null>(null);
 
   const { data, isLoading } = useAdminListings("restaurants", { search, status, page });
   const deleteMutation = useDeleteListing("restaurants");
@@ -48,9 +50,7 @@ function AdminRestaurantsContent() {
       render: (item) => (
         <div className="flex flex-wrap gap-1">
           {item.cuisine_types?.slice(0, 2).map((cuisine) => (
-            <Badge key={cuisine} variant="secondary" className="text-xs">
-              {cuisine}
-            </Badge>
+            <Badge key={cuisine} variant="secondary" className="text-xs">{cuisine}</Badge>
           ))}
         </div>
       ),
@@ -58,20 +58,12 @@ function AdminRestaurantsContent() {
     {
       key: "price_level",
       header: "Price",
-      render: (item) => (
-        <span className="font-medium text-emerald-600">
-          {priceLevelDisplay(item.price_level)}
-        </span>
-      ),
+      render: (item) => <span className="font-medium text-primary">{priceLevelDisplay(item.price_level)}</span>,
     },
     {
       key: "rating",
       header: "Rating",
-      render: (item) => (
-        <span>
-          ⭐ {item.rating?.toFixed(1) || "N/A"} ({item.rating_count || 0})
-        </span>
-      ),
+      render: (item) => <span>⭐ {item.rating?.toFixed(1) || "N/A"} ({item.rating_count || 0})</span>,
     },
     {
       key: "is_active",
@@ -86,7 +78,8 @@ function AdminRestaurantsContent() {
   ];
 
   const handleEdit = (item: RestaurantRow) => {
-    toast.info(`Edit functionality coming soon for: ${item.name}`);
+    setEditingItem(item);
+    setIsFormOpen(true);
   };
 
   const handleDelete = (item: RestaurantRow) => {
@@ -97,6 +90,16 @@ function AdminRestaurantsContent() {
     toggleStatusMutation.mutate({ id: item.id, isActive: !item.is_active });
   };
 
+  const handleCreate = () => {
+    setEditingItem(null);
+    setIsFormOpen(true);
+  };
+
+  const handleCloseForm = () => {
+    setIsFormOpen(false);
+    setEditingItem(null);
+  };
+
   return (
     <div className="min-h-screen">
       <AdminHeader
@@ -105,12 +108,11 @@ function AdminRestaurantsContent() {
         searchPlaceholder="Search restaurants..."
         searchValue={search}
         onSearchChange={setSearch}
-        onCreateClick={() => toast.info("Create form coming soon")}
+        onCreateClick={handleCreate}
         createLabel="Add Restaurant"
       />
 
       <div className="p-6 space-y-4">
-        {/* Status Filter */}
         <Tabs value={status} onValueChange={setStatus}>
           <TabsList>
             <TabsTrigger value="all">All</TabsTrigger>
@@ -119,7 +121,6 @@ function AdminRestaurantsContent() {
           </TabsList>
         </Tabs>
 
-        {/* Table */}
         <ListingDataTable
           data={(data?.listings as RestaurantRow[]) || []}
           columns={columns}
@@ -130,7 +131,6 @@ function AdminRestaurantsContent() {
           getStatus={(item) => item.is_active}
         />
 
-        {/* Pagination */}
         {data && (
           <AdminPagination
             currentPage={page}
@@ -141,6 +141,13 @@ function AdminRestaurantsContent() {
           />
         )}
       </div>
+
+      <ListingFormDialog
+        type="restaurants"
+        isOpen={isFormOpen}
+        onClose={handleCloseForm}
+        listing={editingItem}
+      />
     </div>
   );
 }

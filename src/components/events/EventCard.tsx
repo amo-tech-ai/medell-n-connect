@@ -12,10 +12,11 @@ import eventPlaceholder from "@/assets/event-1.jpg";
 
 interface EventCardProps {
   event: Event;
+  isSelected?: boolean;
   onSelect?: (event: Event) => void;
 }
 
-export function EventCard({ event, onSelect }: EventCardProps) {
+export function EventCard({ event, isSelected = false, onSelect }: EventCardProps) {
   const { user } = useAuth();
   const { data: isSaved = false } = useIsSaved(event.id, "event");
   const toggleSave = useToggleSave();
@@ -87,7 +88,8 @@ export function EventCard({ event, onSelect }: EventCardProps) {
     <CardWrapper {...cardProps as any}>
       <Card className={cn(
         "group overflow-hidden border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300",
-        onSelect && "cursor-pointer"
+        onSelect && "cursor-pointer",
+        isSelected && "ring-2 ring-primary ring-offset-2"
       )}>
         <div className="relative aspect-[16/9] overflow-hidden">
           <img

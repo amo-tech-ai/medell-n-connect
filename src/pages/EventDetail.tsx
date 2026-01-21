@@ -171,7 +171,7 @@ export default function EventDetail() {
 
   if (isLoading) {
     return (
-      <ThreePanelLayout rightPanelContent={<Skeleton className="h-96" />}>
+      <ThreePanelLayout>
         <div className="space-y-6">
           <Skeleton className="h-8 w-32" />
           <Skeleton className="h-80 w-full rounded-xl" />
@@ -199,7 +199,7 @@ export default function EventDetail() {
   }
 
   return (
-    <ThreePanelLayout rightPanelContent={rightPanelContent}>
+    <ThreePanelLayout>
       <div className="space-y-6">
         {/* Back Link */}
         <Link

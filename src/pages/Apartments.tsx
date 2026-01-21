@@ -1,53 +1,30 @@
 import { useState } from "react";
 import { Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
-import { ThreePanelLayout, usePanelContext } from "@/components/layout/ThreePanelLayout";
+import { ThreePanelLayout, useThreePanelContext } from "@/components/explore/ThreePanelLayout";
 import { ApartmentCard } from "@/components/apartments/ApartmentCard";
 import { ApartmentFiltersBar } from "@/components/apartments/ApartmentFilters";
 import { ListingSkeleton } from "@/components/listings/ListingSkeleton";
 import { EmptyState } from "@/components/listings/EmptyState";
-import { ApartmentDetailPanel } from "@/components/panels/ApartmentDetailPanel";
 import { useApartments, useNeighborhoods } from "@/hooks/useApartments";
-import type { ApartmentFilters } from "@/types/listings";
+import type { ApartmentFilters, Apartment } from "@/types/listings";
+import type { SelectedItem } from "@/context/ThreePanelContext";
 
-// Default right panel content when no apartment is selected
-function ApartmentsDefaultRightPanel() {
-  return (
-    <div className="space-y-6">
-      <div>
-        <h3 className="font-semibold mb-3">Quick Stats</h3>
-        <div className="grid grid-cols-2 gap-3">
-          <div className="bg-muted/50 rounded-lg p-3 text-center">
-            <div className="text-2xl font-bold text-primary">$1,200</div>
-            <div className="text-xs text-muted-foreground">Avg. Monthly</div>
-          </div>
-          <div className="bg-muted/50 rounded-lg p-3 text-center">
-            <div className="text-2xl font-bold text-primary">85%</div>
-            <div className="text-xs text-muted-foreground">Available</div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <h3 className="font-semibold mb-3">Top Neighborhoods</h3>
-        <ul className="space-y-2 text-sm">
-          <li className="flex justify-between"><span>El Poblado</span><span className="text-muted-foreground">24 listings</span></li>
-          <li className="flex justify-between"><span>Laureles</span><span className="text-muted-foreground">18 listings</span></li>
-          <li className="flex justify-between"><span>Envigado</span><span className="text-muted-foreground">12 listings</span></li>
-        </ul>
-      </div>
-    </div>
-  );
-}
-
-// Inner content component that can use panel context
 function ApartmentsContent() {
   const [filters, setFilters] = useState<ApartmentFilters>({});
+  const [selectedId, setSelectedId] = useState<string | null>(null);
   const { data, isLoading, error } = useApartments(filters);
   const { data: neighborhoods = [] } = useNeighborhoods();
-  const { setRightPanelContent } = usePanelContext();
+  const { openDetailPanel } = useThreePanelContext();
 
-  const handleApartmentSelect = (apartment: any) => {
-    setRightPanelContent(<ApartmentDetailPanel apartment={apartment} />);
+  const handleApartmentSelect = (apartment: Apartment) => {
+    setSelectedId(apartment.id);
+    const selectedItem: SelectedItem = {
+      type: "apartment",
+      id: apartment.id,
+      data: apartment,
+    };
+    openDetailPanel(selectedItem);
   };
 
   return (
@@ -96,7 +73,8 @@ function ApartmentsContent() {
           {data.apartments.map((apt) => (
             <ApartmentCard 
               key={apt.id} 
-              apartment={apt} 
+              apartment={apt}
+              isSelected={selectedId === apt.id}
               onSelect={() => handleApartmentSelect(apt)}
             />
           ))}
@@ -108,7 +86,7 @@ function ApartmentsContent() {
 
 export default function Apartments() {
   return (
-    <ThreePanelLayout rightPanelContent={<ApartmentsDefaultRightPanel />}>
+    <ThreePanelLayout>
       <ApartmentsContent />
     </ThreePanelLayout>
   );

@@ -12,10 +12,11 @@ import apartmentPlaceholder from "@/assets/apartment-1.jpg";
 interface ApartmentCardProps {
   apartment: Apartment;
   variant?: "default" | "compact";
+  isSelected?: boolean;
   onSelect?: (apartment: Apartment) => void;
 }
 
-export function ApartmentCard({ apartment, variant = "default", onSelect }: ApartmentCardProps) {
+export function ApartmentCard({ apartment, variant = "default", isSelected = false, onSelect }: ApartmentCardProps) {
   const { user } = useAuth();
   const { data: isSaved = false } = useIsSaved(apartment.id, "apartment");
   const toggleSave = useToggleSave();
@@ -54,7 +55,8 @@ export function ApartmentCard({ apartment, variant = "default", onSelect }: Apar
   const cardProps = onSelect 
     ? { onClick: handleCardClick, className: cn(
         "group block bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300 cursor-pointer",
-        variant === "compact" && "flex"
+        variant === "compact" && "flex",
+        isSelected && "ring-2 ring-primary ring-offset-2"
       )}
     : { to: `/apartments/${apartment.id}`, className: cn(
         "group block bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300",

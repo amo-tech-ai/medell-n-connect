@@ -117,14 +117,7 @@ export default function Saved() {
   }
 
   return (
-    <AppLayout
-      rightPanelContent={
-        <SavedRightPanelContent
-          totalCount={countData?.total || 0}
-          collections={collections.length}
-        />
-      }
-    >
+    <AppLayout>
       <div className="min-h-screen">
         {/* Header */}
         <div className="sticky top-0 bg-background/95 backdrop-blur-sm z-20 px-4 lg:px-6 py-4 border-b border-border">

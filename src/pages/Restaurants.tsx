@@ -1,59 +1,32 @@
-import { useState, useCallback } from "react";
+import { useState } from "react";
 import { Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
-import { ThreePanelLayout, usePanelContext } from "@/components/layout/ThreePanelLayout";
+import { ThreePanelLayout, useThreePanelContext } from "@/components/explore/ThreePanelLayout";
 import { RestaurantCard } from "@/components/restaurants/RestaurantCard";
 import { RestaurantFiltersBar } from "@/components/restaurants/RestaurantFilters";
 import { ListingSkeleton } from "@/components/listings/ListingSkeleton";
 import { EmptyState } from "@/components/listings/EmptyState";
-import { RestaurantDetailPanel } from "@/components/panels/RestaurantDetailPanel";
 import { useRestaurants, useCuisineTypes, useDietaryOptions } from "@/hooks/useRestaurants";
 import type { Restaurant, RestaurantFilters } from "@/types/restaurant";
-
-function RestaurantsDefaultRightPanel() {
-  return (
-    <div className="space-y-6">
-      <div>
-        <h3 className="font-semibold mb-3">Quick Stats</h3>
-        <div className="grid grid-cols-2 gap-3">
-          <div className="bg-muted/50 rounded-lg p-3 text-center">
-            <div className="text-2xl font-bold text-primary">4.5</div>
-            <div className="text-xs text-muted-foreground">Avg. Rating</div>
-          </div>
-          <div className="bg-muted/50 rounded-lg p-3 text-center">
-            <div className="text-2xl font-bold text-primary">$$</div>
-            <div className="text-xs text-muted-foreground">Avg. Price</div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <h3 className="font-semibold mb-3">Tonight's Picks</h3>
-        <p className="text-sm text-muted-foreground">AI-powered recommendations coming soon</p>
-      </div>
-      <div>
-        <h3 className="font-semibold mb-3">Popular Cuisines</h3>
-        <ul className="space-y-2 text-sm">
-          <li className="flex justify-between"><span>Colombian</span><span className="text-muted-foreground">Traditional</span></li>
-          <li className="flex justify-between"><span>Italian</span><span className="text-muted-foreground">Popular</span></li>
-          <li className="flex justify-between"><span>Japanese</span><span className="text-muted-foreground">Trending</span></li>
-        </ul>
-      </div>
-    </div>
-  );
-}
+import type { SelectedItem } from "@/context/ThreePanelContext";
 
 function RestaurantsContent() {
   const [filters, setFilters] = useState<RestaurantFilters>({});
-  const [selectedRestaurant, setSelectedRestaurant] = useState<Restaurant | null>(null);
+  const [selectedId, setSelectedId] = useState<string | null>(null);
   const { data, isLoading, error } = useRestaurants(filters);
   const { data: cuisineTypes = [] } = useCuisineTypes();
   const { data: dietaryOptions = [] } = useDietaryOptions();
-  const { setRightPanelContent } = usePanelContext();
+  const { openDetailPanel } = useThreePanelContext();
 
-  const handleRestaurantSelect = useCallback((restaurant: Restaurant) => {
-    setSelectedRestaurant(restaurant);
-    setRightPanelContent(<RestaurantDetailPanel restaurant={restaurant} />);
-  }, [setRightPanelContent]);
+  const handleRestaurantSelect = (restaurant: Restaurant) => {
+    setSelectedId(restaurant.id);
+    const selectedItem: SelectedItem = {
+      type: "restaurant",
+      id: restaurant.id,
+      data: restaurant,
+    };
+    openDetailPanel(selectedItem);
+  };
 
   return (
     <div className="p-6 space-y-6">
@@ -100,6 +73,7 @@ function RestaurantsContent() {
             <RestaurantCard 
               key={restaurant.id} 
               restaurant={restaurant} 
+              isSelected={selectedId === restaurant.id}
               onSelect={handleRestaurantSelect}
             />
           ))}
@@ -111,7 +85,7 @@ function RestaurantsContent() {
 
 export default function Restaurants() {
   return (
-    <ThreePanelLayout rightPanelContent={<RestaurantsDefaultRightPanel />}>
+    <ThreePanelLayout>
       <RestaurantsContent />
     </ThreePanelLayout>
   );

@@ -1,141 +1,28 @@
 import { useState } from "react";
-import { Calendar, MapPin, Sparkles } from "lucide-react";
-import { ThreePanelLayout, usePanelContext } from "@/components/layout/ThreePanelLayout";
+import { Calendar, MapPin } from "lucide-react";
+import { ThreePanelLayout, useThreePanelContext } from "@/components/explore/ThreePanelLayout";
 import { EventCard } from "@/components/events/EventCard";
 import { EventFilters } from "@/components/events/EventFilters";
 import { ListingSkeleton } from "@/components/listings/ListingSkeleton";
 import { EmptyState } from "@/components/listings/EmptyState";
-import { EventDetailPanel } from "@/components/panels/EventDetailPanel";
 import { useEvents } from "@/hooks/useEvents";
-import type { EventFilters as EventFiltersType } from "@/types/event";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
-import { format, addDays } from "date-fns";
+import type { EventFilters as EventFiltersType, Event } from "@/types/event";
+import type { SelectedItem } from "@/context/ThreePanelContext";
 
-// Default right panel content
-function EventsDefaultRightPanel({ 
-  events,
-  thisWeekEvents,
-  eventTypeCounts,
-}: {
-  events: any[] | undefined;
-  thisWeekEvents: any[] | undefined;
-  eventTypeCounts: Record<string, number>;
-}) {
-  return (
-    <div className="space-y-6">
-      {/* Quick Stats */}
-      <Card>
-        <CardHeader className="pb-3">
-          <CardTitle className="text-base flex items-center gap-2">
-            <Calendar className="w-4 h-4" />
-            Events Overview
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-3">
-          <div className="flex justify-between items-center">
-            <span className="text-sm text-muted-foreground">Total Events</span>
-            <span className="font-semibold">{events?.length || 0}</span>
-          </div>
-          <div className="flex justify-between items-center">
-            <span className="text-sm text-muted-foreground">This Week</span>
-            <span className="font-semibold">{thisWeekEvents?.length || 0}</span>
-          </div>
-          <Separator />
-          <div className="space-y-2">
-            <p className="text-sm font-medium">By Category</p>
-            <div className="flex flex-wrap gap-1">
-              {Object.entries(eventTypeCounts).map(([type, count]) => (
-                <Badge key={type} variant="secondary" className="text-xs">
-                  {type}: {count}
-                </Badge>
-              ))}
-            </div>
-          </div>
-        </CardContent>
-      </Card>
-
-      {/* This Week Highlights */}
-      {thisWeekEvents && thisWeekEvents.length > 0 && (
-        <Card>
-          <CardHeader className="pb-3">
-            <CardTitle className="text-base flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-primary" />
-              Happening This Week
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-3">
-            {thisWeekEvents.slice(0, 4).map((event) => (
-              <div
-                key={event.id}
-                className="flex items-start gap-3 p-2 rounded-lg hover:bg-muted/50 transition-colors cursor-pointer"
-              >
-                <div className="text-center bg-primary/10 rounded-lg px-2 py-1 min-w-[48px]">
-                  <div className="text-xs text-muted-foreground">
-                    {format(new Date(event.event_start_time), "MMM")}
-                  </div>
-                  <div className="text-lg font-bold text-primary">
-                    {format(new Date(event.event_start_time), "d")}
-                  </div>
-                </div>
-                <div className="flex-1 min-w-0">
-                  <p className="text-sm font-medium line-clamp-1">{event.name}</p>
-                  <p className="text-xs text-muted-foreground line-clamp-1">
-                    {event.address || event.city}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </CardContent>
-        </Card>
-      )}
-
-      {/* Location Info */}
-      <Card>
-        <CardHeader className="pb-3">
-          <CardTitle className="text-base flex items-center gap-2">
-            <MapPin className="w-4 h-4" />
-            Location
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="text-sm text-muted-foreground">
-            Showing events in <span className="font-medium text-foreground">Medellín</span> and surrounding areas.
-          </p>
-        </CardContent>
-      </Card>
-    </div>
-  );
-}
-
-// Inner content component that can use panel context
 function EventsContent() {
   const [filters, setFilters] = useState<EventFiltersType>({});
+  const [selectedId, setSelectedId] = useState<string | null>(null);
   const { data: events, isLoading, error } = useEvents(filters);
-  const { setRightPanelContent } = usePanelContext();
+  const { openDetailPanel } = useThreePanelContext();
 
-  // Get upcoming events count by type
-  const getEventTypeCounts = () => {
-    if (!events) return {};
-    return events.reduce((acc, event) => {
-      const type = event.event_type || "other";
-      acc[type] = (acc[type] || 0) + 1;
-      return acc;
-    }, {} as Record<string, number>);
-  };
-
-  const eventTypeCounts = getEventTypeCounts();
-
-  // Get events happening this week
-  const thisWeekEvents = events?.filter((event) => {
-    const eventDate = new Date(event.event_start_time);
-    const weekFromNow = addDays(new Date(), 7);
-    return eventDate <= weekFromNow && eventDate >= new Date();
-  });
-
-  const handleEventSelect = (event: any) => {
-    setRightPanelContent(<EventDetailPanel event={event} />);
+  const handleEventSelect = (event: Event) => {
+    setSelectedId(event.id);
+    const selectedItem: SelectedItem = {
+      type: "event",
+      id: event.id,
+      data: event,
+    };
+    openDetailPanel(selectedItem);
   };
 
   return (
@@ -179,7 +66,8 @@ function EventsContent() {
           {events?.map((event) => (
             <EventCard 
               key={event.id} 
-              event={event} 
+              event={event}
+              isSelected={selectedId === event.id}
               onSelect={() => handleEventSelect(event)}
             />
           ))}
@@ -190,33 +78,8 @@ function EventsContent() {
 }
 
 export default function Events() {
-  const [filters] = useState<EventFiltersType>({});
-  const { data: events } = useEvents(filters);
-
-  // Get events happening this week for default panel
-  const thisWeekEvents = events?.filter((event) => {
-    const eventDate = new Date(event.event_start_time);
-    const weekFromNow = addDays(new Date(), 7);
-    return eventDate <= weekFromNow && eventDate >= new Date();
-  });
-
-  // Get event type counts for default panel
-  const eventTypeCounts = events?.reduce((acc, event) => {
-    const type = event.event_type || "other";
-    acc[type] = (acc[type] || 0) + 1;
-    return acc;
-  }, {} as Record<string, number>) || {};
-
   return (
-    <ThreePanelLayout 
-      rightPanelContent={
-        <EventsDefaultRightPanel 
-          events={events}
-          thisWeekEvents={thisWeekEvents}
-          eventTypeCounts={eventTypeCounts}
-        />
-      }
-    >
+    <ThreePanelLayout>
       <EventsContent />
     </ThreePanelLayout>
   );

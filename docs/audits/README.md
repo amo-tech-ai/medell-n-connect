@@ -44,10 +44,10 @@ Complete analysis of:
 2. Build admin dashboard
 3. Normalize layout patterns
 
-### Medium-term (AI)
-1. Implement tool calling
-2. Add preview→apply flow
-3. Context enrichment
+### Medium-term (AI) — ✅ PHASE 1 COMPLETE
+1. ~~Implement tool calling~~ → Added 7 tools (search_restaurants, search_apartments, search_cars, search_events, get_user_trips, get_user_bookings, create_booking_preview)
+2. Add preview→apply flow → create_booking_preview implemented (requires UI confirmation)
+3. Context enrichment → User ID extracted from JWT, passed to user-specific tools
 
 ## Phase 1 Completion: 90%
 - ✅ Hardcoded URL removed from useChat.ts

@@ -81,6 +81,38 @@ export function useUpdateTripItem() {
   });
 }
 
+export function useReorderTripItem() {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: async ({
+      id,
+      trip_id,
+      newStartAt,
+    }: {
+      id: string;
+      trip_id: string;
+      newStartAt: string;
+    }) => {
+      const { data, error } = await supabase
+        .from("trip_items")
+        .update({
+          start_at: newStartAt,
+          updated_at: new Date().toISOString(),
+        })
+        .eq("id", id)
+        .select()
+        .single();
+
+      if (error) throw error;
+      return { ...data, trip_id } as TripItem;
+    },
+    onSuccess: (data) => {
+      queryClient.invalidateQueries({ queryKey: ["trip", data.trip_id] });
+    },
+  });
+}
+
 export function useDeleteTripItem() {
   const queryClient = useQueryClient();
 

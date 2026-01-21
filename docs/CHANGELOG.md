@@ -1,5 +1,25 @@
 # Changelog
 
+## [2026-01-21] - Collections, Itinerary Builder, Events Enhancement
+
+### Added
+- **Collections Page** (`/collections`) - Grid view of user collections with preview thumbnails
+- **CollectionCard** component with image grid, edit/delete/share actions
+- **VisualItineraryBuilder** - Drag-and-drop itinerary planning with @dnd-kit
+- **EventsCalendar** - Month view calendar for event discovery
+- **EnhancedEventFilters** - Date presets, category/neighborhood/price filters, view mode toggle
+- `useCollectionPreviews` hook for fetching collection thumbnail images
+- `useReorderTripItem` hook for drag-and-drop item reordering
+- Extended `EventFilters` type with category, neighborhood, priceRange, dateRange
+
+### Changed
+- Updated Events page with calendar view and enhanced filtering
+- Updated TripDetail page with tabbed Builder/Timeline views
+- Added Collections route to App.tsx
+
+---
+
+
 All notable changes to I Love Medellín are documented here.
 
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)

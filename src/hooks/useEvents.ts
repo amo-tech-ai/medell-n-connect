@@ -71,3 +71,21 @@ export function useEvent(id: string | undefined) {
     enabled: !!id,
   });
 }
+
+export function useFeaturedEvents(limit = 4) {
+  return useQuery({
+    queryKey: ["events", "featured", limit],
+    queryFn: async () => {
+      const { data, error } = await supabase
+        .from("events")
+        .select("*")
+        .eq("is_active", true)
+        .gte("event_start_time", new Date().toISOString())
+        .order("event_start_time", { ascending: true })
+        .limit(limit);
+
+      if (error) throw error;
+      return data as Event[];
+    },
+  });
+}

@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Home, Utensils, Calendar, Car, LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { mockPlaces, categories } from "@/lib/mockData";
+import { categories } from "@/lib/mockData";
 import { PlaceCard } from "@/components/places/PlaceCard";
 import { useAuth } from "@/hooks/useAuth";
 import { HeroSection } from "@/components/home/HeroSection";
 import { GetInspiredSlider } from "@/components/home/GetInspiredSlider";
 import { AIFeaturesSection } from "@/components/home/AIFeaturesSection";
+import { useFeaturedPlaces } from "@/hooks/useFeaturedPlaces";
+import { Skeleton } from "@/components/ui/skeleton";
+
 const categoryIcons = {
   apartments: Home,
   restaurants: Utensils,
@@ -15,7 +18,7 @@ const categoryIcons = {
 };
 
 export default function Index() {
-  const featuredPlaces = mockPlaces.slice(0, 4);
+  const { data: featuredPlaces, isLoading: placesLoading } = useFeaturedPlaces(4);
   const { user, signOut } = useAuth();
 
   return (
@@ -134,15 +137,31 @@ export default function Index() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredPlaces.map((place, index) => (
-              <div
-                key={place.id}
-                className="animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <PlaceCard place={place} />
+            {placesLoading ? (
+              // Loading skeletons
+              Array.from({ length: 4 }).map((_, index) => (
+                <div key={index} className="space-y-3">
+                  <Skeleton className="h-48 w-full rounded-xl" />
+                  <Skeleton className="h-4 w-3/4" />
+                  <Skeleton className="h-4 w-1/2" />
+                </div>
+              ))
+            ) : featuredPlaces && featuredPlaces.length > 0 ? (
+              featuredPlaces.map((place, index) => (
+                <div
+                  key={place.id}
+                  className="animate-fade-in"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <PlaceCard place={place} />
+                </div>
+              ))
+            ) : (
+              // Empty state - fallback message
+              <div className="col-span-full text-center py-8">
+                <p className="text-muted-foreground">Check back soon for featured places!</p>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>

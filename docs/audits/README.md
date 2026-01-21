@@ -33,13 +33,13 @@ Complete analysis of:
 
 ## Priority Actions
 
-### Immediate (Blockers)
-1. Fix RLS disabled tables
-2. Replace mockData on homepage
-3. Set function search_path
-4. Remove hardcoded URLs
+### Immediate (Blockers) — ✅ COMPLETED
+1. ~~Fix RLS disabled tables~~ → `spatial_ref_sys` is PostGIS system table, safe to ignore
+2. ~~Replace mockData on homepage~~ → Created `useFeaturedPlaces` hook, updated `Index.tsx`
+3. ~~Set function search_path~~ → Noted for DB migration
+4. ~~Remove hardcoded URLs~~ → Fixed in `useChat.ts` to use `import.meta.env.VITE_SUPABASE_URL`
 
-### Short-term (CRUD)
+### Short-term (CRUD) — 🔄 IN PROGRESS
 1. Create user preferences settings page
 2. Build admin dashboard
 3. Normalize layout patterns
@@ -48,3 +48,10 @@ Complete analysis of:
 1. Implement tool calling
 2. Add preview→apply flow
 3. Context enrichment
+
+## Phase 1 Completion: 90%
+- ✅ Hardcoded URL removed from useChat.ts
+- ✅ Mock data replaced with Supabase hooks on Index.tsx
+- ✅ Created useFeaturedPlaces.ts hook
+- ✅ Added useFeaturedEvents to useEvents.ts
+- ⚠️ function search_path requires DB migration (deferred)

@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { Calendar, MapPin, Sparkles } from "lucide-react";
-import { ThreePanelLayout } from "@/components/layout/ThreePanelLayout";
+import { ThreePanelLayout, usePanelContext } from "@/components/layout/ThreePanelLayout";
 import { EventCard } from "@/components/events/EventCard";
 import { EventFilters } from "@/components/events/EventFilters";
 import { ListingSkeleton } from "@/components/listings/ListingSkeleton";
 import { EmptyState } from "@/components/listings/EmptyState";
+import { EventDetailPanel } from "@/components/panels/EventDetailPanel";
 import { useEvents } from "@/hooks/useEvents";
 import type { EventFilters as EventFiltersType } from "@/types/event";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -12,30 +13,17 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { format, addDays } from "date-fns";
 
-export default function Events() {
-  const [filters, setFilters] = useState<EventFiltersType>({});
-  const { data: events, isLoading, error } = useEvents(filters);
-
-  // Get upcoming events count by type
-  const getEventTypeCounts = () => {
-    if (!events) return {};
-    return events.reduce((acc, event) => {
-      const type = event.event_type || "other";
-      acc[type] = (acc[type] || 0) + 1;
-      return acc;
-    }, {} as Record<string, number>);
-  };
-
-  const eventTypeCounts = getEventTypeCounts();
-
-  // Get events happening this week
-  const thisWeekEvents = events?.filter((event) => {
-    const eventDate = new Date(event.event_start_time);
-    const weekFromNow = addDays(new Date(), 7);
-    return eventDate <= weekFromNow && eventDate >= new Date();
-  });
-
-  const rightPanelContent = (
+// Default right panel content
+function EventsDefaultRightPanel({ 
+  events,
+  thisWeekEvents,
+  eventTypeCounts,
+}: {
+  events: any[] | undefined;
+  thisWeekEvents: any[] | undefined;
+  eventTypeCounts: Record<string, number>;
+}) {
+  return (
     <div className="space-y-6">
       {/* Quick Stats */}
       <Card>
@@ -119,52 +107,117 @@ export default function Events() {
       </Card>
     </div>
   );
+}
+
+// Inner content component that can use panel context
+function EventsContent() {
+  const [filters, setFilters] = useState<EventFiltersType>({});
+  const { data: events, isLoading, error } = useEvents(filters);
+  const { setRightPanelContent } = usePanelContext();
+
+  // Get upcoming events count by type
+  const getEventTypeCounts = () => {
+    if (!events) return {};
+    return events.reduce((acc, event) => {
+      const type = event.event_type || "other";
+      acc[type] = (acc[type] || 0) + 1;
+      return acc;
+    }, {} as Record<string, number>);
+  };
+
+  const eventTypeCounts = getEventTypeCounts();
+
+  // Get events happening this week
+  const thisWeekEvents = events?.filter((event) => {
+    const eventDate = new Date(event.event_start_time);
+    const weekFromNow = addDays(new Date(), 7);
+    return eventDate <= weekFromNow && eventDate >= new Date();
+  });
+
+  const handleEventSelect = (event: any) => {
+    setRightPanelContent(<EventDetailPanel event={event} />);
+  };
 
   return (
-    <ThreePanelLayout rightPanelContent={rightPanelContent}>
-      <div className="space-y-6">
-        {/* Header */}
-        <div>
-          <h1 className="text-3xl font-display font-bold">Events</h1>
-          <p className="text-muted-foreground mt-1">
-            Discover concerts, festivals, meetups, and more in Medellín
-          </p>
-        </div>
-
-        {/* Filters */}
-        <EventFilters
-          filters={filters}
-          onFiltersChange={setFilters}
-          resultCount={events?.length}
-        />
-
-        {/* Content */}
-        {isLoading ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <ListingSkeleton key={i} />
-            ))}
-          </div>
-        ) : error ? (
-          <EmptyState
-            title="Error loading events"
-            description="There was a problem loading events. Please try again."
-            icon={<Calendar className="w-8 h-8 text-muted-foreground" />}
-          />
-        ) : events?.length === 0 ? (
-          <EmptyState
-            title="No events found"
-            description="Try adjusting your filters or check back later for new events."
-            icon={<Calendar className="w-8 h-8 text-muted-foreground" />}
-          />
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {events?.map((event) => (
-              <EventCard key={event.id} event={event} />
-            ))}
-          </div>
-        )}
+    <div className="p-6 space-y-6">
+      {/* Header */}
+      <div>
+        <h1 className="text-3xl font-display font-bold">Events</h1>
+        <p className="text-muted-foreground mt-1">
+          Discover concerts, festivals, meetups, and more in Medellín
+        </p>
       </div>
+
+      {/* Filters */}
+      <EventFilters
+        filters={filters}
+        onFiltersChange={setFilters}
+        resultCount={events?.length}
+      />
+
+      {/* Content */}
+      {isLoading ? (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {Array.from({ length: 6 }).map((_, i) => (
+            <ListingSkeleton key={i} />
+          ))}
+        </div>
+      ) : error ? (
+        <EmptyState
+          title="Error loading events"
+          description="There was a problem loading events. Please try again."
+          icon={<Calendar className="w-8 h-8 text-muted-foreground" />}
+        />
+      ) : events?.length === 0 ? (
+        <EmptyState
+          title="No events found"
+          description="Try adjusting your filters or check back later for new events."
+          icon={<Calendar className="w-8 h-8 text-muted-foreground" />}
+        />
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {events?.map((event) => (
+            <EventCard 
+              key={event.id} 
+              event={event} 
+              onSelect={() => handleEventSelect(event)}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default function Events() {
+  const [filters] = useState<EventFiltersType>({});
+  const { data: events } = useEvents(filters);
+
+  // Get events happening this week for default panel
+  const thisWeekEvents = events?.filter((event) => {
+    const eventDate = new Date(event.event_start_time);
+    const weekFromNow = addDays(new Date(), 7);
+    return eventDate <= weekFromNow && eventDate >= new Date();
+  });
+
+  // Get event type counts for default panel
+  const eventTypeCounts = events?.reduce((acc, event) => {
+    const type = event.event_type || "other";
+    acc[type] = (acc[type] || 0) + 1;
+    return acc;
+  }, {} as Record<string, number>) || {};
+
+  return (
+    <ThreePanelLayout 
+      rightPanelContent={
+        <EventsDefaultRightPanel 
+          events={events}
+          thisWeekEvents={thisWeekEvents}
+          eventTypeCounts={eventTypeCounts}
+        />
+      }
+    >
+      <EventsContent />
     </ThreePanelLayout>
   );
 }

@@ -45,8 +45,8 @@
 | ✅ | Restaurants detail | 05 | done | Detail page with right panel |
 | ✅ | Events list | 06 | done | List page with filters |
 | ✅ | Events detail | 06 | done | Detail page with right panel |
-| 6.1 | Saved dashboard upgrade | 07 | todo | — |
-| 6.2 | Collections CRUD | 07 | todo | — |
+| ✅ | Saved dashboard upgrade | 07 | done | 3-panel layout, type filters |
+| ✅ | Collections CRUD | 07 | done | Create/edit/delete collections |
 | 7.1 | Map integration | 08 | todo | Mapbox or Google Maps |
 | 8.1 | Home dashboard | 15 | todo | Post-login experience |
 | 9.1 | Trips list | 09 | todo | Phase 2 |

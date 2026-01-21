@@ -70,16 +70,16 @@ export function EventFilters({
       <div className="flex flex-wrap gap-3">
         {/* Event Type */}
         <Select
-          value={filters.eventType || ""}
+          value={filters.eventType || "all"}
           onValueChange={(value) =>
-            updateFilter("eventType", value || undefined)
+            updateFilter("eventType", value === "all" ? undefined : value)
           }
         >
           <SelectTrigger className="w-[160px]">
             <SelectValue placeholder="Event Type" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="">All Types</SelectItem>
+            <SelectItem value="all">All Types</SelectItem>
             {EVENT_TYPES.map((type) => (
               <SelectItem key={type.value} value={type.value}>
                 {type.label}

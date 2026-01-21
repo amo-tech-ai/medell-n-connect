@@ -44,12 +44,24 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 - All listing pages now use unified `ThreePanelLayout`
 - Removed duplicate Sheet/drawer on desktop
 - Fixed panel leaking between breakpoints
+- LeftPanel now includes "My Trips" navigation link
+
+### Added (Phase 2)
+- **Trips Module** (January 2026 ✅)
+  - `/trips` - Trip list page with filters (draft, active, completed)
+  - `/trips/:id` - Trip detail with day-by-day timeline
+  - `/trips/new` - Trip creation wizard (4 steps)
+  - `TripCard` component with status badges
+  - `DayTimeline` component for itinerary view
+  - `TripWizard` with date picker and budget
+  - `AddToTripDialog` - Add any listing to a trip
+  - `useTrips`, `useTripItems` hooks for data management
+  - Protected routes requiring authentication
 
 ### Planned (Next Steps)
-- **Phase 2: Trips & Bookings**
-  - Trips module (`/trips`, `/trips/:id`, `/trips/new`)
-  - Booking wizards (Apartments, Cars, Restaurants, Events)
-  - Add to Trip functionality from detail panels
+- **Phase 2.2: Booking Wizards**
+  - Apartments, Cars, Restaurants, Events booking flows
+  - `/bookings` dashboard
 - **Phase 3: AI Integration**
   - 4-Tab Chatbot system
   - AI agents (Trip Planner, Booking Agent, Explore Agent)

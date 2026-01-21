@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Home, Compass, Heart, Sparkles, User, LogOut, ChevronLeft, ChevronRight, Building2, Car, UtensilsCrossed, CalendarDays } from "lucide-react";
+import { Home, Compass, Heart, Sparkles, User, LogOut, ChevronLeft, ChevronRight, Building2, Car, UtensilsCrossed, CalendarDays, Plane } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
@@ -27,6 +27,7 @@ const listingsNavItems: NavItem[] = [
 ];
 
 const userNavItems: NavItem[] = [
+  { icon: Plane, label: "My Trips", path: "/trips", protected: true },
   { icon: Heart, label: "Saved", path: "/saved", protected: true },
   { icon: Sparkles, label: "Concierge", path: "/concierge", badge: "Soon", protected: true },
 ];

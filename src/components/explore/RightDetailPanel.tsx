@@ -9,7 +9,6 @@ import {
   Sparkles, 
   Star,
   ExternalLink,
-  Plus
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -17,6 +16,8 @@ import { cn } from "@/lib/utils";
 import { useThreePanelContext, SelectedItem } from "@/context/ThreePanelContext";
 import { useIsSaved, useToggleSave } from "@/hooks/useSavedPlaces";
 import { useAuth } from "@/hooks/useAuth";
+import { AddToTripDialog } from "@/components/trips/AddToTripDialog";
+import type { TripItemType } from "@/types/trip";
 
 import apartmentPlaceholder from "@/assets/apartment-1.jpg";
 import carPlaceholder from "@/assets/car-1.jpg";
@@ -221,10 +222,21 @@ export function RightDetailPanel({ className }: RightDetailPanelProps) {
         {/* Action Bar */}
         <div className="sticky top-0 bg-background z-10 p-4 border-b border-border">
           <div className="flex gap-2">
-            <Button className="flex-1" variant="default">
-              <Plus className="w-4 h-4 mr-2" />
-              Add to Trip
-            </Button>
+            <AddToTripDialog
+              itemType={type as TripItemType}
+              sourceId={selectedItem.id}
+              title={title}
+              description={description}
+              locationName={data.neighborhood || data.address}
+              address={data.address}
+              latitude={data.latitude}
+              longitude={data.longitude}
+              trigger={
+                <Button className="flex-1" variant="default">
+                  Add to Trip
+                </Button>
+              }
+            />
             <Button
               variant="outline"
               size="icon"

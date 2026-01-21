@@ -1,11 +1,10 @@
-import { ReactNode, createContext, useContext, useState } from "react";
+import { ReactNode, createContext, useContext, useState, useEffect } from "react";
 import { LeftPanel } from "./LeftPanel";
 import { RightPanel } from "./RightPanel";
 import { MobileNav } from "./MobileNav";
-import { useIsMobile } from "@/hooks/use-mobile";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { Sparkles, X } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 // Context for panel state management
@@ -37,21 +36,61 @@ interface ThreePanelLayoutProps {
   showRightPanel?: boolean;
 }
 
+// Custom hook to detect if we're on desktop (lg breakpoint)
+function useIsDesktop() {
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const checkDesktop = () => {
+      setIsDesktop(window.innerWidth >= 1024);
+    };
+    
+    checkDesktop();
+    window.addEventListener("resize", checkDesktop);
+    return () => window.removeEventListener("resize", checkDesktop);
+  }, []);
+
+  return isDesktop;
+}
+
+// Custom hook to detect if we're on tablet (md to lg)
+function useIsTablet() {
+  const [isTablet, setIsTablet] = useState(false);
+
+  useEffect(() => {
+    const checkTablet = () => {
+      const width = window.innerWidth;
+      setIsTablet(width >= 768 && width < 1024);
+    };
+    
+    checkTablet();
+    window.addEventListener("resize", checkTablet);
+    return () => window.removeEventListener("resize", checkTablet);
+  }, []);
+
+  return isTablet;
+}
+
 export function ThreePanelLayout({
   children,
   rightPanelContent,
   showRightPanel = true,
 }: ThreePanelLayoutProps) {
-  const isMobile = useIsMobile();
+  const isDesktop = useIsDesktop();
+  const isTablet = useIsTablet();
   const [leftCollapsed, setLeftCollapsed] = useState(false);
   const [rightVisible, setRightVisible] = useState(false);
   const [dynamicRightContent, setRightPanelContent] = useState<ReactNode>(null);
 
   // When content changes from a card click, automatically open the drawer/bottom-sheet
   // on tablet/mobile so the user immediately sees the right panel.
+  // On desktop, the right panel is always visible so no need to "open" anything.
   const setRightPanelContentAndOpen = (content: ReactNode) => {
     setRightPanelContent(content);
-    if (showRightPanel) setRightVisible(true);
+    // Only auto-open Sheet on non-desktop (tablet/mobile)
+    if (showRightPanel && !isDesktop) {
+      setRightVisible(true);
+    }
   };
 
   const actualRightContent = rightPanelContent || dynamicRightContent;
@@ -64,11 +103,11 @@ export function ThreePanelLayout({
         rightVisible,
         setRightVisible,
         rightPanelContent: actualRightContent,
-         setRightPanelContent: setRightPanelContentAndOpen,
+        setRightPanelContent: setRightPanelContentAndOpen,
       }}
     >
       <div className="min-h-screen bg-background">
-        {/* Desktop/Tablet Layout */}
+        {/* Desktop Layout (≥1024px) - Full 3-panel grid */}
         <div className="hidden lg:grid lg:grid-cols-[240px_1fr_320px] min-h-screen">
           {/* Left Panel - Context/Navigation */}
           <LeftPanel />
@@ -78,15 +117,17 @@ export function ThreePanelLayout({
             {children}
           </main>
 
-          {/* Right Panel - Intelligence */}
-          {showRightPanel && (
+          {/* Right Panel - Intelligence (always visible on desktop) */}
+          {showRightPanel ? (
             <RightPanel>
               {actualRightContent}
             </RightPanel>
+          ) : (
+            <div /> 
           )}
         </div>
 
-        {/* Tablet Layout (768px - 1023px) */}
+        {/* Tablet Layout (768px - 1023px) - 2 columns + Sheet drawer */}
         <div className="hidden md:flex lg:hidden min-h-screen">
           {/* Collapsible Left Panel */}
           <div
@@ -98,33 +139,15 @@ export function ThreePanelLayout({
             <LeftPanel collapsed={leftCollapsed} onToggle={() => setLeftCollapsed(!leftCollapsed)} />
           </div>
 
-          {/* Main Panel */}
-          <main className="flex-1 overflow-y-auto pb-0">
+          {/* Main Panel - takes full remaining width */}
+          <main className="flex-1 overflow-y-auto">
             {children}
           </main>
 
-          {/* Right Panel as Drawer */}
-          {showRightPanel && (
-            <Sheet open={rightVisible} onOpenChange={setRightVisible}>
-              <SheetTrigger asChild>
-                <Button
-                  size="icon"
-                  variant="outline"
-                  className="fixed right-4 bottom-4 z-40 rounded-full shadow-elevated bg-primary text-primary-foreground hover:bg-primary/90"
-                >
-                  <Sparkles className="w-5 h-5" />
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right" className="w-[320px] p-0">
-                <RightPanel isDrawer>
-                  {actualRightContent}
-                </RightPanel>
-              </SheetContent>
-            </Sheet>
-          )}
+          {/* NO right panel column here - uses Sheet instead */}
         </div>
 
-        {/* Mobile Layout (< 768px) */}
+        {/* Mobile Layout (< 768px) - Single column + bottom nav */}
         <div className="md:hidden min-h-screen pb-20">
           {/* Main Panel - Full Screen */}
           <main className="min-h-screen">
@@ -134,27 +157,44 @@ export function ThreePanelLayout({
           {/* Bottom Navigation (Left Panel becomes bottom nav) */}
           <MobileNav />
 
-          {/* Right Panel as Bottom Sheet */}
-          {showRightPanel && (
-            <Sheet open={rightVisible} onOpenChange={setRightVisible}>
-              <SheetTrigger asChild>
-                <Button
-                  size="icon"
-                  variant="outline"
-                  className="fixed right-4 bottom-24 z-40 rounded-full shadow-elevated bg-primary text-primary-foreground hover:bg-primary/90"
-                >
-                  <Sparkles className="w-5 h-5" />
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="bottom" className="h-[70vh] rounded-t-3xl p-0">
-                <div className="w-12 h-1.5 bg-muted rounded-full mx-auto mt-3" />
-                <RightPanel isDrawer>
-                  {actualRightContent}
-                </RightPanel>
-              </SheetContent>
-            </Sheet>
-          )}
+          {/* NO right panel column here - uses Sheet instead */}
         </div>
+
+        {/* 
+          Sheet/Drawer for tablet and mobile ONLY
+          Rendered conditionally based on JS to prevent portal content 
+          from appearing on desktop even when CSS hides the trigger 
+        */}
+        {showRightPanel && !isDesktop && (
+          <Sheet open={rightVisible} onOpenChange={setRightVisible}>
+            <SheetTrigger asChild>
+              <Button
+                size="icon"
+                variant="outline"
+                className={cn(
+                  "fixed z-40 rounded-full shadow-elevated bg-primary text-primary-foreground hover:bg-primary/90",
+                  isTablet ? "right-4 bottom-4" : "right-4 bottom-24"
+                )}
+              >
+                <Sparkles className="w-5 h-5" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent 
+              side={isTablet ? "right" : "bottom"} 
+              className={cn(
+                "p-0",
+                isTablet ? "w-[320px]" : "h-[70vh] rounded-t-3xl"
+              )}
+            >
+              {!isTablet && (
+                <div className="w-12 h-1.5 bg-muted rounded-full mx-auto mt-3" />
+              )}
+              <RightPanel isDrawer>
+                {actualRightContent}
+              </RightPanel>
+            </SheetContent>
+          </Sheet>
+        )}
       </div>
     </PanelContext.Provider>
   );

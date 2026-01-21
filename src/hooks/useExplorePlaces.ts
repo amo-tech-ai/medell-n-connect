@@ -26,7 +26,7 @@ export function useExplorePlaces(filters: ExploreFilters) {
       if (includeApartments) {
         let query = supabase
           .from("apartments")
-          .select("id, title, description, images, neighborhood, rating, price_monthly, price_daily, latitude, longitude, amenities")
+          .select("*")
           .eq("status", "active")
           .limit(20);
 
@@ -61,6 +61,7 @@ export function useExplorePlaces(filters: ExploreFilters) {
               coordinates: apt.latitude && apt.longitude 
                 ? { lat: apt.latitude, lng: apt.longitude }
                 : null,
+              rawData: apt,
             }));
           })
         );
@@ -69,7 +70,7 @@ export function useExplorePlaces(filters: ExploreFilters) {
       if (includeCars) {
         let query = supabase
           .from("car_rentals")
-          .select("id, make, model, year, description, images, rating, price_daily, features")
+          .select("*")
           .eq("status", "active")
           .limit(20);
 
@@ -94,7 +95,8 @@ export function useExplorePlaces(filters: ExploreFilters) {
               price: `$${car.price_daily}/day`,
               priceLevel: car.price_daily > 200 ? 4 : car.price_daily > 100 ? 3 : car.price_daily > 50 ? 2 : 1,
               tags: car.features?.slice(0, 3) || [],
-              coordinates: null, // Cars don't have fixed locations
+              coordinates: null,
+              rawData: car,
             }));
           })
         );
@@ -103,7 +105,7 @@ export function useExplorePlaces(filters: ExploreFilters) {
       if (includeRestaurants) {
         let query = supabase
           .from("restaurants")
-          .select("id, name, description, primary_image_url, city, rating, price_level, cuisine_types, latitude, longitude")
+          .select("*")
           .eq("is_active", true)
           .limit(20);
 
@@ -137,6 +139,7 @@ export function useExplorePlaces(filters: ExploreFilters) {
               coordinates: rest.latitude && rest.longitude 
                 ? { lat: rest.latitude, lng: rest.longitude }
                 : null,
+              rawData: rest,
             }));
           })
         );
@@ -145,7 +148,7 @@ export function useExplorePlaces(filters: ExploreFilters) {
       if (includeEvents) {
         let query = supabase
           .from("events")
-          .select("id, name, description, primary_image_url, city, rating, ticket_price_min, event_type, tags, latitude, longitude, event_start_time")
+          .select("*")
           .eq("is_active", true)
           .gte("event_start_time", new Date().toISOString())
           .order("event_start_time", { ascending: true })
@@ -178,6 +181,7 @@ export function useExplorePlaces(filters: ExploreFilters) {
               coordinates: evt.latitude && evt.longitude 
                 ? { lat: evt.latitude, lng: evt.longitude }
                 : null,
+              rawData: evt,
             }));
           })
         );

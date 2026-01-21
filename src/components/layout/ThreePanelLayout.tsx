@@ -47,6 +47,13 @@ export function ThreePanelLayout({
   const [rightVisible, setRightVisible] = useState(false);
   const [dynamicRightContent, setRightPanelContent] = useState<ReactNode>(null);
 
+  // When content changes from a card click, automatically open the drawer/bottom-sheet
+  // on tablet/mobile so the user immediately sees the right panel.
+  const setRightPanelContentAndOpen = (content: ReactNode) => {
+    setRightPanelContent(content);
+    if (showRightPanel) setRightVisible(true);
+  };
+
   const actualRightContent = rightPanelContent || dynamicRightContent;
 
   return (
@@ -57,7 +64,7 @@ export function ThreePanelLayout({
         rightVisible,
         setRightVisible,
         rightPanelContent: actualRightContent,
-        setRightPanelContent,
+         setRightPanelContent: setRightPanelContentAndOpen,
       }}
     >
       <div className="min-h-screen bg-background">

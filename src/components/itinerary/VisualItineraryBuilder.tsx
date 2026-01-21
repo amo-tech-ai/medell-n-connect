@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, useCallback } from "react";
 import {
   DndContext,
   DragOverlay,
@@ -16,20 +16,20 @@ import {
   verticalListSortingStrategy,
 } from "@dnd-kit/sortable";
 import { format, parseISO, addDays, isSameDay } from "date-fns";
-import { Plus, Map, List, Route, Sparkles, Loader2 } from "lucide-react";
+import { Plus, Route, Sparkles, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { cn } from "@/lib/utils";
 import { SortableItem } from "./SortableItem";
 import { ItemCard } from "./ItineraryItemCard";
-import { ItineraryMapView } from "./ItineraryMapView";
+import { GoogleMapView } from "./GoogleMapView";
 import { TravelTimeIndicator } from "./TravelTimeIndicator";
+import { useGoogleDirections, type DirectionsResult } from "@/hooks/useGoogleDirections";
 import type { TripItem, TripItemType } from "@/types/trip";
 
-// Haversine formula for distance calculation
+// Haversine formula for distance calculation (fallback when no Google directions)
 function calculateDistance(lat1: number, lng1: number, lat2: number, lng2: number): number {
   const R = 6371;
   const dLat = ((lat2 - lat1) * Math.PI) / 180;
@@ -44,6 +44,9 @@ function estimateTravelTime(distanceKm: number): number {
   return Math.round((distanceKm / 25) * 60);
 }
 
+// Google Maps API Key - loaded from env
+const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || "";
+
 interface VisualItineraryBuilderProps {
   startDate: string;
   endDate: string;
@@ -57,6 +60,7 @@ interface VisualItineraryBuilderProps {
   showMapView?: boolean;
   onOptimizeRoute?: (dayItems: TripItem[], dayDate: string) => Promise<void>;
   isOptimizing?: boolean;
+  onDirectionsUpdate?: (result: DirectionsResult | null) => void;
 }
 
 export function VisualItineraryBuilder({
@@ -72,9 +76,13 @@ export function VisualItineraryBuilder({
   showMapView = false,
   onOptimizeRoute,
   isOptimizing = false,
+  onDirectionsUpdate,
 }: VisualItineraryBuilderProps) {
   const [activeId, setActiveId] = useState<string | null>(null);
   const [selectedItemId, setSelectedItemId] = useState<string | null>(null);
+  
+  // Google Directions hook
+  const { getDirections, result: directionsResult, isLoading: isLoadingDirections } = useGoogleDirections();
 
   const sensors = useSensors(
     useSensor(PointerSensor, {
@@ -133,8 +141,20 @@ export function VisualItineraryBuilder({
     return itemsByDay[selectedDay] || [];
   }, [itemsByDay, selectedDay]);
 
-  // Calculate travel segments for selected day
+  // Calculate travel segments for selected day - use Google Directions if available
   const travelSegments = useMemo(() => {
+    // If we have Google Directions result, use that data
+    if (directionsResult?.success && directionsResult.legs) {
+      const dayItems = selectedDayItems.filter((i) => i.latitude && i.longitude);
+      return directionsResult.legs.map((leg, i) => ({
+        from: dayItems[i],
+        to: dayItems[i + 1],
+        distanceKm: leg.distanceMeters / 1000,
+        durationMinutes: Math.round(leg.durationSeconds / 60),
+      })).filter(seg => seg.from && seg.to);
+    }
+    
+    // Fallback to Haversine calculation
     const segments: { from: TripItem; to: TripItem; distanceKm: number; durationMinutes: number }[] = [];
     const dayItems = selectedDayItems.filter((i) => i.latitude && i.longitude);
     for (let i = 0; i < dayItems.length - 1; i++) {
@@ -144,7 +164,28 @@ export function VisualItineraryBuilder({
       segments.push({ from, to, distanceKm, durationMinutes: estimateTravelTime(distanceKm) });
     }
     return segments;
-  }, [selectedDayItems]);
+  }, [selectedDayItems, directionsResult]);
+
+  // Fetch directions when selected day items change
+  useEffect(() => {
+    const fetchDirections = async () => {
+      const validItems = selectedDayItems.filter(i => i.latitude && i.longitude);
+      if (validItems.length >= 2 && showMapView && GOOGLE_MAPS_API_KEY) {
+        const result = await getDirections(validItems);
+        onDirectionsUpdate?.(result);
+      }
+    };
+    fetchDirections();
+  }, [selectedDayItems, showMapView, getDirections, onDirectionsUpdate]);
+
+  // Handle request directions manually
+  const handleRequestDirections = useCallback(async () => {
+    const validItems = selectedDayItems.filter(i => i.latitude && i.longitude);
+    if (validItems.length >= 2) {
+      const result = await getDirections(validItems);
+      onDirectionsUpdate?.(result);
+    }
+  }, [selectedDayItems, getDirections, onDirectionsUpdate]);
 
   const activeItem = activeId ? items.find((i) => i.id === activeId) : null;
 
@@ -343,14 +384,27 @@ export function VisualItineraryBuilder({
         </DragOverlay>
       </DndContext>
 
-      {/* Map View */}
+      {/* Map View - Google Maps or Fallback */}
       {showMapView && (
         <div className="w-1/2 h-full">
-          <ItineraryMapView
-            items={selectedDayItems}
-            selectedItemId={selectedItemId}
-            onItemSelect={(item) => setSelectedItemId(item.id)}
-          />
+          {GOOGLE_MAPS_API_KEY ? (
+            <GoogleMapView
+              items={selectedDayItems}
+              selectedItemId={selectedItemId ?? undefined}
+              onItemSelect={(item) => setSelectedItemId(item.id)}
+              directionsResult={directionsResult}
+              isLoadingDirections={isLoadingDirections}
+              onRequestDirections={handleRequestDirections}
+              apiKey={GOOGLE_MAPS_API_KEY}
+            />
+          ) : (
+            <div className="flex items-center justify-center h-full bg-muted/50 rounded-xl">
+              <div className="text-center text-muted-foreground p-4">
+                <p className="font-medium">Google Maps Not Configured</p>
+                <p className="text-sm mt-1">Add VITE_GOOGLE_MAPS_API_KEY to enable interactive maps</p>
+              </div>
+            </div>
+          )}
         </div>
       )}
     </div>

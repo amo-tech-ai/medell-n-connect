@@ -7,3 +7,7 @@ verify_jwt = false
 [functions.ai-optimize-route]
 enabled = true
 verify_jwt = false
+
+[functions.google-directions]
+enabled = true
+verify_jwt = false

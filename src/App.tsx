@@ -19,6 +19,7 @@ import Events from "./pages/Events";
 import EventDetail from "./pages/EventDetail";
 import PlaceDetail from "./pages/PlaceDetail";
 import Saved from "./pages/Saved";
+import Collections from "./pages/Collections";
 import Trips from "./pages/Trips";
 import TripDetail from "./pages/TripDetail";
 import TripNew from "./pages/TripNew";
@@ -69,6 +70,14 @@ const App = () => (
               element={
                 <ProtectedRoute>
                   <Saved />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/collections"
+              element={
+                <ProtectedRoute>
+                  <Collections />
                 </ProtectedRoute>
               }
             />

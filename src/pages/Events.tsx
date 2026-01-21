@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Calendar, MapPin } from "lucide-react";
 import { ThreePanelLayout, useThreePanelContext } from "@/components/explore/ThreePanelLayout";
 import { EventCard } from "@/components/events/EventCard";
-import { EventFilters } from "@/components/events/EventFilters";
+import { EnhancedEventFilters } from "@/components/events/EnhancedEventFilters";
+import { EventsCalendar } from "@/components/events/EventsCalendar";
 import { ListingSkeleton } from "@/components/listings/ListingSkeleton";
 import { EmptyState } from "@/components/listings/EmptyState";
 import { useEvents } from "@/hooks/useEvents";
@@ -12,6 +13,8 @@ import type { SelectedItem } from "@/context/ThreePanelContext";
 function EventsContent() {
   const [filters, setFilters] = useState<EventFiltersType>({});
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [viewMode, setViewMode] = useState<"grid" | "list" | "calendar">("grid");
+  const [selectedDate, setSelectedDate] = useState<Date | undefined>();
   const { data: events, isLoading, error } = useEvents(filters);
   const { openDetailPanel } = useThreePanelContext();
 
@@ -35,11 +38,13 @@ function EventsContent() {
         </p>
       </div>
 
-      {/* Filters */}
-      <EventFilters
+      {/* Enhanced Filters */}
+      <EnhancedEventFilters
         filters={filters}
         onFiltersChange={setFilters}
         resultCount={events?.length}
+        viewMode={viewMode}
+        onViewModeChange={setViewMode}
       />
 
       {/* Content */}
@@ -55,6 +60,15 @@ function EventsContent() {
           description="There was a problem loading events. Please try again."
           icon={<Calendar className="w-8 h-8 text-muted-foreground" />}
         />
+      ) : viewMode === "calendar" ? (
+        <div className="max-w-lg mx-auto">
+          <EventsCalendar
+            events={events || []}
+            selectedDate={selectedDate}
+            onDateSelect={setSelectedDate}
+            onEventSelect={handleEventSelect}
+          />
+        </div>
       ) : events?.length === 0 ? (
         <EmptyState
           title="No events found"
@@ -62,7 +76,10 @@ function EventsContent() {
           icon={<Calendar className="w-8 h-8 text-muted-foreground" />}
         />
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className={viewMode === "list" 
+          ? "space-y-4" 
+          : "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        }>
           {events?.map((event) => (
             <EventCard 
               key={event.id} 

@@ -4,10 +4,17 @@ export type Event = Database["public"]["Tables"]["events"]["Row"];
 
 export interface EventFilters {
   eventType?: string;
+  category?: string;
   dateFrom?: string;
   dateTo?: string;
+  dateRange?: {
+    start: string;
+    end: string;
+  };
   isFree?: boolean;
   city?: string;
+  neighborhood?: string;
+  priceRange?: string;
   search?: string;
 }
 

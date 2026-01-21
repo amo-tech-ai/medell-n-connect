@@ -1,13 +1,16 @@
+import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { format, parseISO, differenceInDays } from "date-fns";
-import { ArrowLeft, Calendar, MapPin, DollarSign, Edit2, Loader2 } from "lucide-react";
+import { format, parseISO, differenceInDays, addDays } from "date-fns";
+import { ArrowLeft, Calendar, MapPin, DollarSign, Edit2, Loader2, Map } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ThreePanelLayout } from "@/components/explore/ThreePanelLayout";
+import { VisualItineraryBuilder } from "@/components/itinerary/VisualItineraryBuilder";
 import { DayTimeline } from "@/components/trips/DayTimeline";
 import { useTrip, useUpdateTrip } from "@/hooks/useTrips";
-import { useDeleteTripItem } from "@/hooks/useTripItems";
+import { useDeleteTripItem, useReorderTripItem } from "@/hooks/useTripItems";
 import { EmptyState } from "@/components/listings/EmptyState";
 import { cn } from "@/lib/utils";
 import type { TripStatus, TripItem } from "@/types/trip";
@@ -23,9 +26,13 @@ const statusColors: Record<TripStatus, string> = {
 function TripDetailContent() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
+  const [selectedDay, setSelectedDay] = useState<number>(0);
+  const [viewTab, setViewTab] = useState<"timeline" | "builder">("builder");
+  
   const { data: trip, isLoading, error } = useTrip(id!);
   const updateTrip = useUpdateTrip();
   const deleteTripItem = useDeleteTripItem();
+  const reorderTripItem = useReorderTripItem();
 
   const handleStatusChange = async (status: TripStatus) => {
     if (!trip) return;
@@ -43,6 +50,21 @@ function TripDetailContent() {
       toast.success("Item removed from trip");
     } catch (error) {
       toast.error("Failed to remove item");
+    }
+  };
+
+  const handleReorderItem = async (itemId: string, newDayIndex: number, newPosition: number) => {
+    if (!trip) return;
+    try {
+      const newStartAt = addDays(parseISO(trip.start_date), newDayIndex);
+      await reorderTripItem.mutateAsync({
+        id: itemId,
+        trip_id: trip.id,
+        newStartAt: newStartAt.toISOString(),
+      });
+      toast.success("Item moved");
+    } catch (error) {
+      toast.error("Failed to move item");
     }
   };
 
@@ -136,19 +158,51 @@ function TripDetailContent() {
         <p className="text-muted-foreground">{trip.description}</p>
       )}
 
-      {/* Day Timeline */}
-      <div>
-        <h2 className="text-xl font-semibold mb-4">Itinerary</h2>
-        <DayTimeline
-          startDate={trip.start_date}
-          endDate={trip.end_date}
-          items={trip.items}
-          onRemoveItem={handleRemoveItem}
-          onAddItem={(dayIndex) => {
-            toast.info("Add item feature coming soon!");
-          }}
-        />
-      </div>
+      {/* Itinerary View Tabs */}
+      <Tabs value={viewTab} onValueChange={(v) => setViewTab(v as "timeline" | "builder")}>
+        <div className="flex items-center justify-between">
+          <h2 className="text-xl font-semibold">Itinerary</h2>
+          <TabsList>
+            <TabsTrigger value="builder">
+              <Edit2 className="w-4 h-4 mr-1" />
+              Builder
+            </TabsTrigger>
+            <TabsTrigger value="timeline">
+              <Calendar className="w-4 h-4 mr-1" />
+              Timeline
+            </TabsTrigger>
+          </TabsList>
+        </div>
+
+        <TabsContent value="builder" className="mt-4">
+          <VisualItineraryBuilder
+            startDate={trip.start_date}
+            endDate={trip.end_date}
+            items={trip.items}
+            onReorderItem={handleReorderItem}
+            onRemoveItem={handleRemoveItem}
+            selectedDay={selectedDay}
+            onDaySelect={setSelectedDay}
+            onAddItem={(dayIndex) => {
+              toast.info("Browse listings and use 'Add to Trip' to add items!");
+            }}
+          />
+        </TabsContent>
+
+        <TabsContent value="timeline" className="mt-4">
+          <DayTimeline
+            startDate={trip.start_date}
+            endDate={trip.end_date}
+            items={trip.items}
+            onRemoveItem={handleRemoveItem}
+            selectedDay={selectedDay}
+            onDaySelect={setSelectedDay}
+            onAddItem={(dayIndex) => {
+              toast.info("Browse listings and use 'Add to Trip' to add items!");
+            }}
+          />
+        </TabsContent>
+      </Tabs>
     </div>
   );
 }

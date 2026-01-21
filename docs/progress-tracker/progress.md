@@ -1,5 +1,19 @@
 # Progress Tracker
 
+## Completed Features
+
+### Phase 2.2 - Collections & Itinerary (January 2026)
+- ✅ **Custom Collections System** - Full CRUD with card grid, preview images, color-coding
+- ✅ **Visual Itinerary Builder** - Drag-and-drop with @dnd-kit, day-by-day planning
+- ✅ **Events Discovery Enhancement** - Calendar view, enhanced filters, date presets
+
+### Phase 2.1 - Multi-Trip Management (January 2026)
+- ✅ **TripContext** - Global active trip state with localStorage persistence
+- ✅ **TripSelector** - Sidebar component to switch between trips
+- ✅ **Trip-scoped saved places** - `trip_id` column added to `saved_places`
+- ✅ **AI trip awareness** - Concierge knows active trip context
+
+
 > Single source of truth for all prompts and tasks.
 
 ## Prompts

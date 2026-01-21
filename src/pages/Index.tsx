@@ -5,6 +5,7 @@ import { mockPlaces, categories } from "@/lib/mockData";
 import { PlaceCard } from "@/components/places/PlaceCard";
 import { useAuth } from "@/hooks/useAuth";
 import { HeroSection } from "@/components/home/HeroSection";
+import { GetInspiredSlider } from "@/components/home/GetInspiredSlider";
 
 const categoryIcons = {
   apartments: Home,
@@ -71,6 +72,9 @@ export default function Index() {
 
       {/* Hero Section */}
       <HeroSection />
+
+      {/* Get Inspired Slider */}
+      <GetInspiredSlider />
 
       {/* Categories Section */}
       <section className="py-16 bg-background">

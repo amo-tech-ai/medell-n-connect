@@ -10,10 +10,9 @@ import { ChatRightPanel } from '@/components/chat/ChatRightPanel';
 import { useChat } from '@/hooks/useChat';
 import { ChatTab } from '@/types/chat';
 import { useAuth } from '@/hooks/useAuth';
-import { Navigate } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
-import { PanelLeftClose, PanelRightClose } from 'lucide-react';
+import { PanelLeftClose, PanelRightClose, Sparkles, Maximize2, X } from 'lucide-react';
 
 export default function Chat() {
   const { user, loading } = useAuth();
@@ -37,11 +36,10 @@ export default function Chat() {
     setMessages,
   } = useChat(activeTab);
 
-  // Fetch conversations when tab changes
+  // Fetch conversations when tab changes (only if logged in)
   useEffect(() => {
     if (user) {
       fetchConversations();
-      // Reset current conversation when switching tabs
       setCurrentConversation(null);
       setMessages([]);
     }
@@ -53,10 +51,6 @@ export default function Chat() {
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary" />
       </div>
     );
-  }
-
-  if (!user) {
-    return <Navigate to="/login" replace />;
   }
 
   const handleTabChange = (tab: ChatTab) => {
@@ -109,29 +103,46 @@ export default function Chat() {
 
         {/* Main Chat Panel */}
         <main className="flex-1 flex flex-col h-screen overflow-hidden">
-          {/* Tabs Header */}
-          <div className="px-4 py-3 border-b border-border flex items-center gap-4">
-            {!showLeftPanel && (
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setShowLeftPanel(true)}
-              >
-                <PanelLeftClose className="w-4 h-4 rotate-180" />
-              </Button>
-            )}
-            <div className="flex-1 flex justify-center">
+          {/* Chat Header with AI Icon */}
+          <div className="px-4 py-3 border-b border-border">
+            <div className="flex items-center justify-between mb-3">
+              <div className="flex items-center gap-3">
+                {!showLeftPanel && (
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    onClick={() => setShowLeftPanel(true)}
+                  >
+                    <PanelLeftClose className="w-4 h-4 rotate-180" />
+                  </Button>
+                )}
+                <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                  <Sparkles className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <h1 className="font-semibold text-foreground">AI Concierge</h1>
+                  <p className="text-xs text-muted-foreground">Context Aware • Always here</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-1">
+                <Button variant="ghost" size="icon" className="h-8 w-8">
+                  <Maximize2 className="w-4 h-4" />
+                </Button>
+                {!showRightPanel && (
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="h-8 w-8"
+                    onClick={() => setShowRightPanel(true)}
+                  >
+                    <PanelRightClose className="w-4 h-4 rotate-180" />
+                  </Button>
+                )}
+              </div>
+            </div>
+            <div className="flex justify-center">
               <ChatTabs activeTab={activeTab} onTabChange={handleTabChange} />
             </div>
-            {!showRightPanel && (
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setShowRightPanel(true)}
-              >
-                <PanelRightClose className="w-4 h-4 rotate-180" />
-              </Button>
-            )}
           </div>
 
           {/* Messages or Welcome */}

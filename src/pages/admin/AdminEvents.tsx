@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
+import { useNavigate } from "react-router-dom";
 import { AdminLayout } from "@/components/admin/AdminLayout";
 import { AdminHeader } from "@/components/admin/AdminHeader";
 import { AdminPagination } from "@/components/admin/AdminPagination";
@@ -9,21 +10,24 @@ import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import type { Database } from "@/integrations/supabase/types";
 import { format } from "date-fns";
+import { useDebounce } from "@/hooks/useDebounce";
 
 type EventRow = Database["public"]["Tables"]["events"]["Row"];
 
 function AdminEventsContent() {
+  const navigate = useNavigate();
   const [search, setSearch] = useState("");
   const [status, setStatus] = useState("all");
   const [page, setPage] = useState(1);
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [editingItem, setEditingItem] = useState<EventRow | null>(null);
 
-  const { data, isLoading } = useAdminListings("events", { search, status, page });
+  const debouncedSearch = useDebounce(search, 300);
+  const { data, isLoading } = useAdminListings("events", { search: debouncedSearch, status, page });
   const deleteMutation = useDeleteListing("events");
   const toggleStatusMutation = useToggleListingStatus("events");
 
-  const columns: Column<EventRow>[] = [
+  const columns: Column<EventRow>[] = useMemo(() => [
     {
       key: "name",
       header: "Event",
@@ -82,7 +86,11 @@ function AdminEventsContent() {
       header: "Verified",
       render: (item) => item.is_verified ? <Badge className="bg-blue-100 text-blue-700">Verified</Badge> : null,
     },
-  ];
+  ], []);
+
+  const handleView = (item: EventRow) => {
+    navigate(`/events/${item.id}`);
+  };
 
   const handleEdit = (item: EventRow) => {
     setEditingItem(item);
@@ -134,6 +142,7 @@ function AdminEventsContent() {
           data={(data?.listings as EventRow[]) || []}
           columns={columns}
           isLoading={isLoading}
+          onView={handleView}
           onEdit={handleEdit}
           onDelete={handleDelete}
           onToggleStatus={handleToggleStatus}

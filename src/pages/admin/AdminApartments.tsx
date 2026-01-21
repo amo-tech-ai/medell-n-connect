@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
+import { useNavigate } from "react-router-dom";
 import { AdminLayout } from "@/components/admin/AdminLayout";
 import { AdminHeader } from "@/components/admin/AdminHeader";
 import { AdminPagination } from "@/components/admin/AdminPagination";
@@ -8,21 +9,24 @@ import { useAdminListings, useDeleteListing, useToggleListingStatus } from "@/ho
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import type { Database } from "@/integrations/supabase/types";
+import { useDebounce } from "@/hooks/useDebounce";
 
 type ApartmentRow = Database["public"]["Tables"]["apartments"]["Row"];
 
 function AdminApartmentsContent() {
+  const navigate = useNavigate();
   const [search, setSearch] = useState("");
   const [status, setStatus] = useState("all");
   const [page, setPage] = useState(1);
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [editingItem, setEditingItem] = useState<ApartmentRow | null>(null);
 
-  const { data, isLoading } = useAdminListings("apartments", { search, status, page });
+  const debouncedSearch = useDebounce(search, 300);
+  const { data, isLoading } = useAdminListings("apartments", { search: debouncedSearch, status, page });
   const deleteMutation = useDeleteListing("apartments");
   const toggleStatusMutation = useToggleListingStatus("apartments");
 
-  const columns: Column<ApartmentRow>[] = [
+  const columns: Column<ApartmentRow>[] = useMemo(() => [
     {
       key: "title",
       header: "Property",
@@ -70,7 +74,11 @@ function AdminApartmentsContent() {
       header: "Featured",
       render: (item) => item.featured ? <Badge className="bg-accent text-accent-foreground">Featured</Badge> : null,
     },
-  ];
+  ], []);
+
+  const handleView = (item: ApartmentRow) => {
+    navigate(`/apartments/${item.id}`);
+  };
 
   const handleEdit = (item: ApartmentRow) => {
     setEditingItem(item);
@@ -122,6 +130,7 @@ function AdminApartmentsContent() {
           data={(data?.listings as ApartmentRow[]) || []}
           columns={columns}
           isLoading={isLoading}
+          onView={handleView}
           onEdit={handleEdit}
           onDelete={handleDelete}
           onToggleStatus={handleToggleStatus}

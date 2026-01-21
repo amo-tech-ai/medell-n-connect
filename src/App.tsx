@@ -17,6 +17,9 @@ import Events from "./pages/Events";
 import EventDetail from "./pages/EventDetail";
 import PlaceDetail from "./pages/PlaceDetail";
 import Saved from "./pages/Saved";
+import Trips from "./pages/Trips";
+import TripDetail from "./pages/TripDetail";
+import TripNew from "./pages/TripNew";
 import Concierge from "./pages/Concierge";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
@@ -54,6 +57,30 @@ const App = () => (
               element={
                 <ProtectedRoute>
                   <Saved />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/trips"
+              element={
+                <ProtectedRoute>
+                  <Trips />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/trips/new"
+              element={
+                <ProtectedRoute>
+                  <TripNew />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/trips/:id"
+              element={
+                <ProtectedRoute>
+                  <TripDetail />
                 </ProtectedRoute>
               }
             />

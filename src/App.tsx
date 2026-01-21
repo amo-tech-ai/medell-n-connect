@@ -22,6 +22,7 @@ import TripDetail from "./pages/TripDetail";
 import TripNew from "./pages/TripNew";
 import Bookings from "./pages/Bookings";
 import Concierge from "./pages/Concierge";
+import Chat from "./pages/Chat";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import ForgotPassword from "./pages/ForgotPassword";
@@ -97,7 +98,15 @@ const App = () => (
               path="/concierge"
               element={
                 <ProtectedRoute>
-                  <Concierge />
+                  <Chat />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/chat"
+              element={
+                <ProtectedRoute>
+                  <Chat />
                 </ProtectedRoute>
               }
             />

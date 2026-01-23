@@ -25,6 +25,7 @@ import Trips from "./pages/Trips";
 import TripDetail from "./pages/TripDetail";
 import TripNew from "./pages/TripNew";
 import Bookings from "./pages/Bookings";
+import Concierge from "./pages/Concierge";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import ForgotPassword from "./pages/ForgotPassword";
@@ -115,6 +116,7 @@ const App = () => (
                 </ProtectedRoute>
               }
             />
+            <Route path="/concierge" element={<Concierge />} />
             {/* Admin Routes */}
             <Route path="/admin" element={<AdminDashboard />} />
             <Route path="/admin/apartments" element={<AdminApartments />} />

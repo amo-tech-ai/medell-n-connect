@@ -31,6 +31,7 @@ import Signup from "./pages/Signup";
 import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
 import NotFound from "./pages/NotFound";
+import Sitemap from "./pages/Sitemap";
 // Admin pages
 import {
   AdminDashboard,
@@ -117,6 +118,7 @@ const App = () => (
               }
             />
             <Route path="/concierge" element={<Concierge />} />
+            <Route path="/sitemap" element={<Sitemap />} />
             {/* Admin Routes */}
             <Route path="/admin" element={<AdminDashboard />} />
             <Route path="/admin/apartments" element={<AdminApartments />} />

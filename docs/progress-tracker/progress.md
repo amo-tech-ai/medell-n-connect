@@ -1,6 +1,6 @@
 # Progress Tracker
 
-> **Last Updated:** January 23, 2026 | **Overall Completion:** 78%
+> **Last Updated:** January 23, 2026 | **Overall Completion:** 85%
 
 ---
 
@@ -9,7 +9,7 @@
 | Category | Done | Total | % Complete |
 |----------|------|-------|------------|
 | **Phase 1: Foundation** | 18 | 20 | 90% |
-| **Phase 2: Features** | 12 | 16 | 75% |
+| **Phase 2: Features** | 14 | 16 | 88% |
 | **Phase 3: AI** | 2 | 8 | 25% |
 | **Security & RLS** | 8 | 10 | 80% |
 
@@ -59,7 +59,7 @@
 
 ---
 
-## Phase 2: Features & Booking (75% Complete)
+## Phase 2: Features & Booking (88% Complete)
 
 ### ✅ Completed
 
@@ -77,15 +77,15 @@
 | Booking Filters/Search | 10 | ✅ | Status + type filters |
 | Apartment Booking Wizard | 10 | ✅ | Premium 5-step wizard |
 | Restaurant Booking Wizard | 10 | ✅ | Premium 4-step wizard |
-| Car Booking Wizard Premium | 10 | ✅ | 3-panel, weekly discounts, insurance |
+| Car Booking Wizard Premium | 10 | ✅ | 3-panel, weekly discounts, insurance tiers |
 | Event Booking Wizard Premium | 10 | ✅ | 3-panel, VIP perks, quantity selector |
+| Car Wizard Wired to Detail | 10 | ✅ | Dialog on /cars/:id |
+| Event Wizard Wired to Detail | 10 | ✅ | Dialog on /events/:id |
 
 ### ⏳ Remaining
 
 | Task | Prompt | Status | Notes |
 |------|--------|--------|-------|
-| Car Booking Wizard | 10 | 📋 TODO | Insurance options step |
-| Event Booking Wizard | 10 | 📋 TODO | Ticket selection step |
 | Onboarding Wizard (full) | 18 | 🔄 Partial | Only step 2/6 done |
 | Payment Integration | 10 | 📋 TODO | Stripe or demo |
 
@@ -178,11 +178,10 @@
 ## 🎯 Next Steps (Priority Order)
 
 1. **Fix RLS Issues** — Run migration to enable RLS on flagged tables
-2. **Car Booking Wizard** — Complete with insurance step
-3. **Event Booking Wizard** — Complete with ticket selection
-4. **Full Onboarding Wizard** — All 6 steps per prompt 18
-5. **Home Dashboard** — Personalized post-login experience
-6. **AI Router Function** — Intent classification for chat
+2. **Full Onboarding Wizard** — All 6 steps per prompt 18
+3. **Home Dashboard** — Personalized post-login experience
+4. **AI Router Function** — Intent classification for chat
+5. **Payment Integration** — Stripe demo or placeholder
 
 ---
 

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, MapPin, Users, Fuel, Star, Heart, Share2, Calendar, CheckCircle, Gauge, Settings2 } from "lucide-react";
 import { ThreePanelLayout, usePanelContext } from "@/components/layout/ThreePanelLayout";
@@ -7,13 +7,15 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { useCar } from "@/hooks/useCars";
 import { useToggleSave, useIsSaved } from "@/hooks/useSavedPlaces";
 import { useAuth } from "@/hooks/useAuth";
 import { cn } from "@/lib/utils";
+import { CarBookingWizardPremium } from "@/components/bookings/CarBookingWizardPremium";
 
 // Right panel content for car detail
-function CarDetailRightPanel({ car }: { car: any }) {
+function CarDetailRightPanel({ car, onBookNow }: { car: any; onBookNow: () => void }) {
   return (
     <div className="space-y-6">
       {/* Quick Actions */}
@@ -38,9 +40,9 @@ function CarDetailRightPanel({ car }: { car: any }) {
               <div className="text-xs text-muted-foreground">monthly</div>
             </div>
           </div>
-          <Button className="w-full" size="lg">
+          <Button className="w-full" size="lg" onClick={onBookNow}>
             <Calendar className="w-4 h-4 mr-2" />
-            Check Availability
+            Book Now
           </Button>
           <Button variant="outline" className="w-full">
             Contact Rental Company
@@ -106,14 +108,23 @@ function CarDetailContent() {
   const { data: isSaved } = useIsSaved(id!, "car");
   const toggleSave = useToggleSave();
   const { setRightPanelContent } = usePanelContext();
+  const [showBookingWizard, setShowBookingWizard] = useState(false);
+
+  const handleBookNow = () => {
+    if (!user) {
+      // Could redirect to login or show toast
+      return;
+    }
+    setShowBookingWizard(true);
+  };
 
   // Set right panel content when car loads
   useEffect(() => {
     if (car) {
-      setRightPanelContent(<CarDetailRightPanel car={car} />);
+      setRightPanelContent(<CarDetailRightPanel car={car} onBookNow={handleBookNow} />);
     }
     return () => setRightPanelContent(null);
-  }, [car, setRightPanelContent]);
+  }, [car, setRightPanelContent, user]);
 
   const handleSave = () => {
     if (!user || !car) return;
@@ -345,9 +356,32 @@ function CarDetailContent() {
             <div className="font-bold text-lg">${car.price_daily}/day</div>
             <p className="text-xs text-muted-foreground">${car.price_weekly}/week</p>
           </div>
-          <Button size="lg">Check Availability</Button>
+          <Button size="lg" onClick={handleBookNow}>Book Now</Button>
         </div>
       </div>
+
+      {/* Booking Wizard Dialog */}
+      <Dialog open={showBookingWizard} onOpenChange={setShowBookingWizard}>
+        <DialogContent className="max-w-6xl h-[90vh] p-0 overflow-hidden">
+          <CarBookingWizardPremium 
+            car={{
+              id: car.id,
+              make: car.make,
+              model: car.model,
+              year: car.year,
+              price_daily: car.price_daily,
+              price_weekly: car.price_weekly,
+              deposit_amount: car.deposit_amount,
+              insurance_included: car.insurance_included,
+              primary_image_url: car.images?.[0],
+              fuel_type: car.fuel_type,
+              transmission: car.transmission,
+            }}
+            onComplete={() => setShowBookingWizard(false)}
+            onCancel={() => setShowBookingWizard(false)}
+          />
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

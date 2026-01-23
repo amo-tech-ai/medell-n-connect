@@ -4,6 +4,10 @@ project_id = "zkwcbyxiwklihegjhuql"
 enabled = true
 verify_jwt = false
 
+[functions.ai-router]
+enabled = true
+verify_jwt = false
+
 [functions.ai-optimize-route]
 enabled = true
 verify_jwt = false

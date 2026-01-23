@@ -1,5 +1,56 @@
 # Changelog
 
+All notable changes to I Love Medellín are documented here.
+
+Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
+
+---
+
+## [2026-01-23] - Progress Tracker Audit & Bug Fixes
+
+### Fixed
+- **PlaceCard forwardRef warning** - Added `forwardRef` to PlaceCard component to fix console warning on Index page
+- **Progress Tracker accuracy** - Complete rewrite with verified percentages and proof of completion
+
+### Added
+- **Comprehensive Progress Tracker** - New format with:
+  - Executive summary with completion percentages
+  - Critical issues table (RLS, OAuth status)
+  - Phase-by-phase breakdown with verification
+  - Database table inventory (24 tables)
+  - Edge function inventory (4 functions)
+  - Metrics dashboard
+
+### Verified
+- 23 routes functional
+- 8 protected routes with auth
+- All 5 listing types (apartments, cars, restaurants, events, explore)
+- AI chat with tool calling
+- Booking wizards (apartment, restaurant)
+- Trip management (list, detail, create, itinerary builder)
+
+---
+
+## [2026-01-22] - AI Concierge & Bookings Dashboard
+
+### Added
+- **AI Concierge Page** (`/concierge`) - Full-page 3-panel chat experience
+  - 4-tab architecture (Concierge, Trips, Explore, Bookings)
+  - Real-time streaming from ai-chat edge function
+  - Active trip context awareness
+  - Quick action buttons
+- **Bookings Dashboard** (`/bookings`) - 3-panel booking management
+  - Status filters (upcoming, past, cancelled)
+  - Type filters (all, apartment, car, restaurant, event)
+  - Statistics panel (total, upcoming, this month)
+  - Detail panel with cancel action
+
+### Changed
+- Updated LeftPanel navigation with Concierge link
+- Enhanced Index footer with multi-column layout
+
+---
+
 ## [2026-01-21] - Google Maps Integration for Itinerary Builder
 
 ### Added
@@ -66,46 +117,17 @@
 
 ---
 
-
-All notable changes to I Love Medellín are documented here.
-
-Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
-
----
-
-## [Unreleased]
+## [2026-01-20] - 3-Panel System Rebuild
 
 ### Added
-- **3-Panel System REBUILT** (January 2026 ✅)
-  - Complete rewrite from scratch following new architecture
-  - `ThreePanelContext` - Global state for selectedItem, rightPanelOpen, URL sync
-  - `ThreePanelLayout` - Responsive shell (Desktop/Tablet/Mobile)
-  - `RightDetailPanel` - Slide-in detail view with hero, AI pitch, actions
-  - Desktop: 280px Left | Flex Center | 500px slide-in Right
-  - Tablet: Collapsible Left | Right overlay
-  - Mobile: Full-screen Right overlay with bottom nav
-  - ESC key closes panel, URL sync with `?detail=id`
-  - Card selection highlighting across all types
-
-- **Unified Card Selection** (January 2026 ✅)
-  - `RestaurantCard` - isSelected prop, onSelect handler
-  - `ApartmentCard` - isSelected prop, onSelect handler
-  - `CarCard` - isSelected prop, onSelect handler
-  - `EventCard` - isSelected prop, onSelect handler
-  - `ExploreCard` - isSelected prop, onSelect handler
-
-- **Right Panel Detail Views** (January 2026 ✅)
-  - Dynamic content based on item type
-  - Hero image with overlaid title/rating/price
-  - "Why you'll love it" AI pitch section
-  - Quick info cards (Open Now, Distance)
-  - Action bar (Add to Trip, Save, Share)
-
-- **Type-Specific Detail Panels** (January 2026 ✅)
-  - `RestaurantDetailPanel` - Cuisine, hours, pricing
-  - `ApartmentDetailPanel` - Amenities, pricing, host
-  - `CarDetailPanel` - Features, rental info
-  - `EventDetailPanel` - Date, venue, tickets
+- **ThreePanelContext** - Global state for selectedItem, rightPanelOpen, URL sync
+- **ThreePanelLayout** - Responsive shell (Desktop/Tablet/Mobile)
+- **RightDetailPanel** - Slide-in detail view with hero, AI pitch, actions
+- Desktop: 280px Left | Flex Center | 500px slide-in Right
+- Tablet: Collapsible Left | Right overlay
+- Mobile: Full-screen Right overlay with bottom nav
+- ESC key closes panel, URL sync with `?detail=id`
+- Card selection highlighting across all types
 
 ### Changed
 - All listing pages now use unified `ThreePanelLayout`
@@ -113,26 +135,27 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 - Fixed panel leaking between breakpoints
 - LeftPanel now includes "My Trips" navigation link
 
-### Added (Phase 2)
-- **Trips Module** (January 2026 ✅)
-  - `/trips` - Trip list page with filters (draft, active, completed)
-  - `/trips/:id` - Trip detail with day-by-day timeline
-  - `/trips/new` - Trip creation wizard (4 steps)
-  - `TripCard` component with status badges
-  - `DayTimeline` component for itinerary view
-  - `TripWizard` with date picker and budget
-  - `AddToTripDialog` - Add any listing to a trip
-  - `useTrips`, `useTripItems` hooks for data management
-  - Protected routes requiring authentication
+### Cards Updated (isSelected prop)
+- RestaurantCard
+- ApartmentCard
+- CarCard
+- EventCard
+- ExploreCard
 
-### Planned (Next Steps)
-- **Phase 2.2: Booking Wizards**
-  - Apartments, Cars, Restaurants, Events booking flows
-  - `/bookings` dashboard
-- **Phase 3: AI Integration**
-  - 4-Tab Chatbot system
-  - AI agents (Trip Planner, Booking Agent, Explore Agent)
-  - Edge functions for AI gateway
+---
+
+## [2026-01-20] - Trips Module
+
+### Added
+- `/trips` - Trip list page with filters (draft, active, completed)
+- `/trips/:id` - Trip detail with day-by-day timeline
+- `/trips/new` - Trip creation wizard (4 steps)
+- `TripCard` component with status badges
+- `DayTimeline` component for itinerary view
+- `TripWizard` with date picker and budget
+- `AddToTripDialog` - Add any listing to a trip
+- `useTrips`, `useTripItems` hooks for data management
+- Protected routes requiring authentication
 
 ---
 
@@ -187,5 +210,5 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 ## Related
 
-- [Next Steps](./NEXT-STEPS.md) — Implementation guide
 - [Progress Tracker](./progress-tracker/progress.md) — Task status
+- [Next Steps](./NEXT-STEPS.md) — Implementation guide

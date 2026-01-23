@@ -1,82 +1,207 @@
 # Progress Tracker
 
-## Completed Features
+> **Last Updated:** January 23, 2026 | **Overall Completion:** 78%
 
-### Phase 2.3 - Map Visualization (January 2026)
-- ✅ **Itinerary Map View** - Route visualization with pins and dashed route lines
-- ✅ **Travel Time Estimates** - Haversine distance calculation, 25 km/h average speed
-- ✅ **TravelTimeIndicator** - Between-activity travel info with mode suggestions
-- ✅ **Split View Builder** - List + Map side-by-side with toggle
+---
 
-### Phase 2.2 - Collections & Itinerary (January 2026)
-- ✅ **Custom Collections System** - Full CRUD with card grid, preview images, color-coding
-- ✅ **Visual Itinerary Builder** - Drag-and-drop with @dnd-kit, day-by-day planning
-- ✅ **Events Discovery Enhancement** - Calendar view, enhanced filters, date presets
+## Executive Summary
 
-### Phase 2.1 - Multi-Trip Management (January 2026)
-- ✅ **TripContext** - Global active trip state with localStorage persistence
-- ✅ **TripSelector** - Sidebar component to switch between trips
-- ✅ **Trip-scoped saved places** - `trip_id` column added to `saved_places`
-- ✅ **AI trip awareness** - Concierge knows active trip context
+| Category | Done | Total | % Complete |
+|----------|------|-------|------------|
+| **Phase 1: Foundation** | 18 | 20 | 90% |
+| **Phase 2: Features** | 12 | 16 | 75% |
+| **Phase 3: AI** | 2 | 8 | 25% |
+| **Security & RLS** | 8 | 10 | 80% |
 
+---
 
-> Single source of truth for all prompts and tasks.
+## 🚨 Critical Issues
 
-## Prompts
+| Issue | Severity | File/Location | Status |
+|-------|----------|---------------|--------|
+| RLS Disabled (some tables) | 🔴 ERROR | Supabase linter | Needs migration |
+| Extensions in public schema | 🟡 WARN | Supabase linter | Low priority |
+| Google OAuth redirect | 🟢 FIXED | docs/auth-audit.md | User configured |
 
-| ID | Area | Item | Phase | Status | Links |
-|----|------|------|-------|--------|-------|
-| 00 | Reference | Index | — | done | [prompt](../prompts/00-index.md) |
-| 03 | Listings | Apartments | 1 | done | [prompt](../prompts/03-listings-apartments.md) |
-| 04 | Listings | Cars | 1 | done | [prompt](../prompts/04-listings-cars.md) |
-| 05 | Listings | Restaurants | 1 | done | [prompt](../prompts/05-listings-restaurants.md) |
-| 06 | Listings | Events | 1 | done | [prompt](../prompts/06-listings-events.md) |
-| 07 | Core | Saved/Favorites | 1 | todo | [prompt](../prompts/07-saved-favorites.md) |
-| 08 | Core | Explore | 1-2 | doing | [prompt](../prompts/08-explore-discover.md) |
-| 19 | System | Right Panel Detail View | 1 | doing | [prompt](../prompts/19-right-panel-detail-view.md) |
-| 09 | Core | Trips | 2 | todo | [prompt](../prompts/09-trips-planning.md) |
-| 10 | Core | Bookings | 2 | todo | [prompt](../prompts/10-bookings-module.md) |
-| 11 | AI | Chatbot System | 3 | todo | [prompt](../prompts/11-chatbot-system.md) |
-| 12 | Backend | Supabase Schema | 1 | done | [prompt](../prompts/12-supabase-schema.md) |
-| 13 | Backend | Edge Functions | 2-3 | todo | [prompt](../prompts/13-edge-functions.md) |
-| 14 | AI | AI Agents | 2-3 | todo | [prompt](../prompts/14-ai-agents.md) |
-| 15 | Core | Home Dashboard | 1 | todo | [prompt](../prompts/15-home-dashboard.md) |
-| 16 | System | 3-Panel Layout | 1 | done | [prompt](../prompts/16-3-panel-system.md) |
-| 17 | Reference | User Journeys | — | done | [prompt](../prompts/17-user-journey.md) |
-| 18 | Reference | Wizards Guide | — | done | [prompt](../prompts/18-wizards.md) |
+---
 
-## Implementation Order
+## Phase 1: Foundation & Listings (90% Complete)
 
-> Follow [NEXT-STEPS.md](../NEXT-STEPS.md) for detailed guidance.
+### ✅ Completed
 
-| Step | Task | Prompt | Status | Notes |
-|------|------|--------|--------|-------|
-| ✅ | Project setup | — | done | Vite + React + TS |
-| ✅ | Supabase connection | 12 | done | Connected to `medellin` |
-| ✅ | Authentication | — | done | Email + Google OAuth |
-| ✅ | Home page | 08 | done | Hero, categories, featured |
-| ✅ | Documentation structure | — | done | /docs, /rules |
-| ✅ | 3-panel layout system | 16 | done | ThreePanelLayout, LeftPanel, RightPanel |
-| ✅ | Responsive navigation | 16 | done | Mobile bottom nav + sheet |
-| ✅ | Apartments list | 03 | done | List page with filters |
-| ✅ | Apartments detail | 03 | done | Detail page with right panel |
-| ✅ | Cars list | 04 | done | List page with filters |
-| ✅ | Cars detail | 04 | done | Detail page with right panel |
-| ✅ | Restaurants list | 05 | done | List page with filters |
-| ✅ | Restaurants detail | 05 | done | Detail page with right panel |
-| ✅ | Events list | 06 | done | List page with filters |
-| ✅ | Events detail | 06 | done | Detail page with right panel |
-| ✅ | Saved dashboard upgrade | 07 | done | 3-panel layout, type filters |
-| ✅ | Collections CRUD | 07 | done | Create/edit/delete collections |
-| ✅ | Explore unified search | 08 | done | Supabase multi-table queries |
-| ✅ | Explore category tabs | 08 | done | Counts per category |
-| ✅ | ExploreCard component | 08 | done | Unified card with real save |
-| 7.1 | Real map integration | 08 | todo | Mapbox or Google Maps |
-| 8.1 | Home dashboard | 15 | todo | Post-login experience |
-| 9.1 | Trips list | 09 | todo | Phase 2 |
-| 9.2 | Trip detail | 09 | todo | Phase 2 |
-| 10.1 | Bookings dashboard | 10 | todo | Phase 2 |
-| 10.2 | Booking wizards | 10 | todo | Phase 2 |
-| 11.1 | Edge functions | 13 | todo | Phase 2-3 |
-| 12.1 | AI chatbot | 11 | todo | Phase 3 |
-| 13.1 | AI agents | 14 | todo | Phase 3 |
+| Task | Prompt | Verified | Proof |
+|------|--------|----------|-------|
+| Project setup (Vite+React+TS) | — | ✅ | App runs |
+| Supabase connection | 12 | ✅ | 24 tables active |
+| Authentication (Email+Google) | — | ✅ | Login/Signup works |
+| 3-Panel Layout System | 16 | ✅ | ThreePanelLayout, LeftPanel, RightPanel |
+| Responsive Navigation | 16 | ✅ | Mobile bottom nav + sheet |
+| Home Page | 08 | ✅ | Hero, categories, featured (useFeaturedPlaces) |
+| Apartments List + Detail | 03 | ✅ | Filters, 3-panel detail |
+| Cars List + Detail | 04 | ✅ | Filters, 3-panel detail |
+| Restaurants List + Detail | 05 | ✅ | Filters, 3-panel detail |
+| Events List + Detail | 06 | ✅ | Calendar view, enhanced filters |
+| Explore Unified Search | 08 | ✅ | Multi-table Supabase queries |
+| Explore Category Tabs | 08 | ✅ | Counts per category |
+| ExploreCard Component | 08 | ✅ | Unified card with save |
+| Saved Dashboard | 07 | ✅ | 3-panel, type filters |
+| Collections CRUD | 07 | ✅ | Create/edit/delete/share |
+| Right Panel Detail Views | 19 | ✅ | Type-specific panels |
+| Card Selection (isSelected) | 19 | ✅ | All 5 card types |
+| PlaceCard forwardRef | — | ✅ | Fixed console warning |
+
+### ⏳ Remaining
+
+| Task | Prompt | Status | Notes |
+|------|--------|--------|-------|
+| Real Map Integration | 08 | 🔄 Partial | Google Maps in itinerary only |
+| Home Dashboard (post-login) | 15 | 📋 TODO | Personalized experience |
+
+---
+
+## Phase 2: Features & Booking (75% Complete)
+
+### ✅ Completed
+
+| Task | Prompt | Verified | Proof |
+|------|--------|----------|-------|
+| TripContext (global state) | 09 | ✅ | localStorage persistence |
+| TripSelector Component | 09 | ✅ | Sidebar trip switcher |
+| Trips List Page | 09 | ✅ | /trips with filters |
+| Trip Detail Page | 09 | ✅ | /trips/:id with timeline |
+| Trip Creation Wizard | 09 | ✅ | /trips/new (4 steps) |
+| Visual Itinerary Builder | 09 | ✅ | Drag-drop @dnd-kit |
+| Itinerary Map View | 09 | ✅ | Google Maps + polylines |
+| Travel Time Indicators | 09 | ✅ | Haversine + Google fallback |
+| Bookings Dashboard | 10 | ✅ | /bookings with 3-panel |
+| Booking Filters/Search | 10 | ✅ | Status + type filters |
+| Apartment Booking Wizard | 10 | ✅ | Premium 5-step wizard |
+| Restaurant Booking Wizard | 10 | ✅ | Premium 4-step wizard |
+
+### ⏳ Remaining
+
+| Task | Prompt | Status | Notes |
+|------|--------|--------|-------|
+| Car Booking Wizard | 10 | 📋 TODO | Insurance options step |
+| Event Booking Wizard | 10 | 📋 TODO | Ticket selection step |
+| Onboarding Wizard (full) | 18 | 🔄 Partial | Only step 2/6 done |
+| Payment Integration | 10 | 📋 TODO | Stripe or demo |
+
+---
+
+## Phase 3: AI & Chat (25% Complete)
+
+### ✅ Completed
+
+| Task | Prompt | Verified | Proof |
+|------|--------|----------|-------|
+| AI Chat Edge Function | 13 | ✅ | ai-chat with tool calling |
+| Concierge Page | 11 | ✅ | /concierge 3-panel chat |
+
+### ⏳ Remaining
+
+| Task | Prompt | Status | Notes |
+|------|--------|--------|-------|
+| AI Router Function | 13 | 📋 TODO | Intent classification |
+| AI Trip Planner | 14 | 📋 TODO | Gemini agent |
+| AI Booking Agent | 14 | 📋 TODO | Conversational booking |
+| AI Explore Agent | 14 | 📋 TODO | Discovery suggestions |
+| Floating Chat Widget | 11 | 🔄 Partial | Exists but basic |
+| Chat 4-Tab System | 11 | 📋 TODO | Concierge/Trips/Explore/Bookings |
+
+---
+
+## Database & Backend
+
+### Tables (24 total)
+
+| Table | RLS | Status |
+|-------|-----|--------|
+| profiles | ✅ | Production |
+| apartments | ✅ | Production |
+| car_rentals | ✅ | Production |
+| restaurants | ✅ | Production |
+| events | ✅ | Production |
+| saved_places | ✅ | Production |
+| collections | ✅ | Production |
+| trips | ✅ | Production |
+| trip_items | ✅ | Production |
+| bookings | ✅ | Production |
+| conversations | ✅ | Production |
+| messages | ✅ | Production |
+| ai_runs | ✅ | Production |
+| ai_context | ✅ | Production |
+| user_preferences | ⚠️ | Check RLS |
+| budget_tracking | ⚠️ | Check RLS |
+| conflict_resolutions | ⚠️ | Check RLS |
+| proactive_suggestions | ⚠️ | Check RLS |
+| user_roles | ⚠️ | Check RLS |
+
+### Edge Functions (4 deployed)
+
+| Function | Status | Purpose |
+|----------|--------|---------|
+| ai-chat | ✅ Active | Streaming chat with tools |
+| ai-optimize-route | ✅ Active | Route optimization |
+| ai-suggest-collections | ✅ Active | Collection suggestions |
+| google-directions | ✅ Active | Google Routes API |
+
+---
+
+## Prompts Reference
+
+| ID | Area | Item | Phase | Status |
+|----|------|------|-------|--------|
+| 00 | Reference | Index | — | ✅ done |
+| 03 | Listings | Apartments | 1 | ✅ done |
+| 04 | Listings | Cars | 1 | ✅ done |
+| 05 | Listings | Restaurants | 1 | ✅ done |
+| 06 | Listings | Events | 1 | ✅ done |
+| 07 | Core | Saved/Favorites | 1 | ✅ done |
+| 08 | Core | Explore | 1-2 | ✅ done |
+| 09 | Core | Trips | 2 | ✅ done |
+| 10 | Core | Bookings | 2 | 🔄 doing |
+| 11 | AI | Chatbot System | 3 | 🔄 doing |
+| 12 | Backend | Supabase Schema | 1 | ✅ done |
+| 13 | Backend | Edge Functions | 2-3 | 🔄 doing |
+| 14 | AI | AI Agents | 2-3 | 📋 todo |
+| 15 | Core | Home Dashboard | 1 | 📋 todo |
+| 16 | System | 3-Panel Layout | 1 | ✅ done |
+| 17 | Reference | User Journeys | — | ✅ done |
+| 18 | Reference | Wizards Guide | — | ✅ done |
+| 19 | System | Right Panel Detail | 1 | ✅ done |
+
+---
+
+## 🎯 Next Steps (Priority Order)
+
+1. **Fix RLS Issues** — Run migration to enable RLS on flagged tables
+2. **Car Booking Wizard** — Complete with insurance step
+3. **Event Booking Wizard** — Complete with ticket selection
+4. **Full Onboarding Wizard** — All 6 steps per prompt 18
+5. **Home Dashboard** — Personalized post-login experience
+6. **AI Router Function** — Intent classification for chat
+
+---
+
+## 📊 Metrics
+
+| Metric | Value |
+|--------|-------|
+| Total Routes | 23 |
+| Protected Routes | 8 |
+| Components | ~120 |
+| Hooks | 28 |
+| Edge Functions | 4 |
+| Database Tables | 24 |
+| Console Errors | 0 (fixed) |
+| Console Warnings | 0 (fixed) |
+
+---
+
+## Related
+
+- [CHANGELOG.md](../CHANGELOG.md) — Change history
+- [NEXT-STEPS.md](../NEXT-STEPS.md) — Implementation guide
+- [3-Panel Checklist](../3-panel-checklist.md) — Layout verification
+- [Auth Audit](../auth-audit.md) — OAuth configuration

@@ -1,6 +1,6 @@
 # Progress Tracker
 
-> **Last Updated:** January 23, 2026 | **Overall Completion:** 85%
+> **Last Updated:** January 23, 2026 | **Overall Completion:** 87%
 
 ---
 
@@ -10,7 +10,7 @@
 |----------|------|-------|------------|
 | **Phase 1: Foundation** | 18 | 20 | 90% |
 | **Phase 2: Features** | 14 | 16 | 88% |
-| **Phase 3: AI** | 2 | 8 | 25% |
+| **Phase 3: AI** | 3 | 8 | 38% |
 | **Security & RLS** | 8 | 10 | 80% |
 
 ---
@@ -91,7 +91,7 @@
 
 ---
 
-## Phase 3: AI & Chat (25% Complete)
+## Phase 3: AI & Chat (38% Complete)
 
 ### ✅ Completed
 
@@ -99,12 +99,12 @@
 |------|--------|----------|-------|
 | AI Chat Edge Function | 13 | ✅ | ai-chat with tool calling |
 | Concierge Page | 11 | ✅ | /concierge 3-panel chat |
+| AI Router Edge Function | 13 | ✅ | Intent classification, pattern + AI |
 
 ### ⏳ Remaining
 
 | Task | Prompt | Status | Notes |
 |------|--------|--------|-------|
-| AI Router Function | 13 | 📋 TODO | Intent classification |
 | AI Trip Planner | 14 | 📋 TODO | Gemini agent |
 | AI Booking Agent | 14 | 📋 TODO | Conversational booking |
 | AI Explore Agent | 14 | 📋 TODO | Discovery suggestions |
@@ -139,11 +139,12 @@
 | proactive_suggestions | ⚠️ | Check RLS |
 | user_roles | ⚠️ | Check RLS |
 
-### Edge Functions (4 deployed)
+### Edge Functions (5 deployed)
 
 | Function | Status | Purpose |
 |----------|--------|---------|
 | ai-chat | ✅ Active | Streaming chat with tools |
+| ai-router | ✅ Active | Intent classification + agent routing |
 | ai-optimize-route | ✅ Active | Route optimization |
 | ai-suggest-collections | ✅ Active | Collection suggestions |
 | google-directions | ✅ Active | Google Routes API |
@@ -180,7 +181,7 @@
 1. **Fix RLS Issues** — Run migration to enable RLS on flagged tables
 2. **Full Onboarding Wizard** — All 6 steps per prompt 18
 3. **Home Dashboard** — Personalized post-login experience
-4. **AI Router Function** — Intent classification for chat
+4. **AI Trip Planner Agent** — Enhanced itinerary generation
 5. **Payment Integration** — Stripe demo or placeholder
 
 ---
@@ -192,8 +193,8 @@
 | Total Routes | 23 |
 | Protected Routes | 8 |
 | Components | ~120 |
-| Hooks | 28 |
-| Edge Functions | 4 |
+| Hooks | 29 |
+| Edge Functions | 5 |
 | Database Tables | 24 |
 | Console Errors | 0 (fixed) |
 | Console Warnings | 0 (fixed) |

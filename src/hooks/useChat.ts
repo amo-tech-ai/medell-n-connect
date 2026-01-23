@@ -8,6 +8,16 @@ import { toast } from 'sonner';
 // Use environment variable with fallback for the Supabase URL
 const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL || 'https://zkwcbyxiwklihegjhuql.supabase.co';
 
+export interface IntentResult {
+  intent: string;
+  targetAgent: ChatTab;
+  confidence: number;
+  entities: Record<string, unknown>;
+  suggestedResponse?: string;
+  requiresAuth?: boolean;
+  reasoning?: string;
+}
+
 export function useChat(activeTab: ChatTab) {
   const { user } = useAuth();
   const { activeTrip } = useTripContext();
@@ -16,6 +26,7 @@ export function useChat(activeTab: ChatTab) {
   const [currentConversation, setCurrentConversation] = useState<Conversation | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isStreaming, setIsStreaming] = useState(false);
+  const [lastIntent, setLastIntent] = useState<IntentResult | null>(null);
   const abortControllerRef = useRef<AbortController | null>(null);
 
   // Fetch conversations for the current tab
@@ -89,9 +100,55 @@ export function useChat(activeTab: ChatTab) {
     await fetchMessages(conversation.id);
   }, [fetchMessages]);
 
-  // Send a message with streaming
+  // Route message through AI Router for intent classification
+  const routeMessage = useCallback(async (content: string): Promise<IntentResult | null> => {
+    try {
+      const { data: { session } } = await supabase.auth.getSession();
+      const anonKey = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
+      
+      const response = await fetch(`${SUPABASE_URL}/functions/v1/ai-router`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': session?.access_token 
+            ? `Bearer ${session.access_token}` 
+            : `Bearer ${anonKey}`,
+        },
+        body: JSON.stringify({
+          message: content,
+          currentTab: activeTab,
+          conversationHistory: messages.slice(-6).map(m => ({
+            role: m.role,
+            content: m.content,
+          })),
+          userContext: {
+            hasActiveTrip: !!activeTrip,
+            hasPendingBookings: false, // Could be enhanced later
+            currentPage: window.location.pathname,
+          },
+        }),
+      });
+
+      if (response.ok) {
+        const result = await response.json();
+        if (result.success && result.data) {
+          setLastIntent(result.data);
+          return result.data as IntentResult;
+        }
+      }
+      return null;
+    } catch (error) {
+      console.error('Intent routing error:', error);
+      return null;
+    }
+  }, [activeTab, messages, activeTrip]);
+
+  // Send a message with streaming (now includes intent routing)
   const sendMessage = useCallback(async (content: string) => {
     if (!user || !content.trim()) return;
+
+    // Route the message first to classify intent (non-blocking)
+    routeMessage(content).catch(console.error);
 
     // Create conversation if none exists
     let conversation = currentConversation;
@@ -292,10 +349,12 @@ export function useChat(activeTab: ChatTab) {
     currentConversation,
     isLoading,
     isStreaming,
+    lastIntent,
     fetchConversations,
     createConversation,
     selectConversation,
     sendMessage,
+    routeMessage,
     cancelStream,
     archiveConversation,
     setCurrentConversation,

@@ -77,6 +77,8 @@
 | Booking Filters/Search | 10 | ✅ | Status + type filters |
 | Apartment Booking Wizard | 10 | ✅ | Premium 5-step wizard |
 | Restaurant Booking Wizard | 10 | ✅ | Premium 4-step wizard |
+| Car Booking Wizard Premium | 10 | ✅ | 3-panel, weekly discounts, insurance |
+| Event Booking Wizard Premium | 10 | ✅ | 3-panel, VIP perks, quantity selector |
 
 ### ⏳ Remaining
 

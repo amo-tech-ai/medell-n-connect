@@ -6,10 +6,39 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 ---
 
+## [2026-01-23] - Premium Booking Wizards Wired to Detail Pages
+
+### Added
+- **CarBookingWizardPremium Integration** - Wired to `/cars/:id` detail page
+  - Opens in Dialog modal on "Book Now" click
+  - 3-panel layout with dates, pickup location, insurance tiers (Basic/Standard/Premium)
+  - Weekly discount logic for 7+ day rentals
+  - Delivery fee calculator ($25 for apartment/hotel delivery)
+  - Real-time price breakdown in right panel
+  
+- **EventBookingWizardPremium Integration** - Wired to `/events/:id` detail page
+  - Opens in Dialog modal on "Get Tickets" click
+  - 3-panel layout with ticket type selection (General/VIP)
+  - Quantity selector (1-10 tickets)
+  - VIP perks display (priority entry, reserved seating, etc.)
+  - Group booking acknowledgment (4+ tickets)
+
+### Changed
+- Updated CarDetail right panel with "Book Now" action button
+- Updated EventDetail right panel with "Get Tickets" action button
+- Added Dialog + DialogContent imports to both detail pages
+
+### Verified
+- RLS policies on bookings table: user_id = auth.uid() for SELECT/UPDATE
+- All 4 booking wizards (Apartment, Restaurant, Car, Event) now functional
+- Progress tracker updated to 85% overall completion
+
+---
+
 ## [2026-01-23] - Progress Tracker Audit & Bug Fixes
 
 ### Fixed
-- **PlaceCard forwardRef warning** - Added `forwardRef` to PlaceCard component to fix console warning on Index page
+- **PlaceCard forwardRef warning** - Fixed console warning on Index page
 - **Progress Tracker accuracy** - Complete rewrite with verified percentages and proof of completion
 
 ### Added

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import {
   ArrowLeft,
@@ -19,12 +20,14 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Skeleton } from "@/components/ui/skeleton";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { useEvent } from "@/hooks/useEvents";
 import { useIsSaved, useToggleSave } from "@/hooks/useSavedPlaces";
 import { useAuth } from "@/hooks/useAuth";
 import { cn } from "@/lib/utils";
 import { format } from "date-fns";
 import eventPlaceholder from "@/assets/event-1.jpg";
+import { EventBookingWizardPremium } from "@/components/bookings/EventBookingWizardPremium";
 
 export default function EventDetail() {
   const { id } = useParams<{ id: string }>();
@@ -32,6 +35,7 @@ export default function EventDetail() {
   const { user } = useAuth();
   const { data: isSaved = false } = useIsSaved(id || "", "event");
   const toggleSave = useToggleSave();
+  const [showBookingWizard, setShowBookingWizard] = useState(false);
 
   const handleSave = () => {
     if (event && user) {
@@ -41,6 +45,11 @@ export default function EventDetail() {
         isSaved,
       });
     }
+  };
+
+  const handleGetTickets = () => {
+    if (!user) return;
+    setShowBookingWizard(true);
   };
 
   const getEventTypeColor = (type: string | null) => {
@@ -97,18 +106,10 @@ export default function EventDetail() {
             <Share2 className="w-4 h-4 mr-2" />
             Share Event
           </Button>
-          {event.ticket_url && (
-            <Button className="w-full" asChild>
-              <a
-                href={event.ticket_url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Ticket className="w-4 h-4 mr-2" />
-                Get Tickets
-              </a>
-            </Button>
-          )}
+          <Button className="w-full" onClick={handleGetTickets}>
+            <Ticket className="w-4 h-4 mr-2" />
+            Get Tickets
+          </Button>
         </CardContent>
       </Card>
 
@@ -353,13 +354,39 @@ export default function EventDetail() {
                   rel="noopener noreferrer"
                 >
                   <Ticket className="w-4 h-4 mr-2" />
-                  Get Tickets
+                  External Tickets
                   <ExternalLink className="w-3 h-3 ml-auto" />
                 </a>
               </Button>
             )}
+            <Button className="justify-start" onClick={handleGetTickets}>
+              <Ticket className="w-4 h-4 mr-2" />
+              Book Tickets
+            </Button>
           </div>
         </div>
+
+        {/* Booking Wizard Dialog */}
+        <Dialog open={showBookingWizard} onOpenChange={setShowBookingWizard}>
+          <DialogContent className="max-w-6xl h-[90vh] p-0 overflow-hidden">
+            <EventBookingWizardPremium 
+              event={{
+                id: event.id,
+                name: event.name,
+                event_start_time: event.event_start_time,
+                event_end_time: event.event_end_time || undefined,
+                address: event.address || undefined,
+                venue_name: event.address || undefined,
+                ticket_price_min: event.ticket_price_min || undefined,
+                ticket_price_max: event.ticket_price_max || undefined,
+                primary_image_url: event.primary_image_url || undefined,
+                category: event.event_type || undefined,
+              }}
+              onComplete={() => setShowBookingWizard(false)}
+              onCancel={() => setShowBookingWizard(false)}
+            />
+          </DialogContent>
+        </Dialog>
       </div>
     </ThreePanelLayout>
   );

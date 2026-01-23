@@ -6,106 +6,112 @@
 
 @layer base {
   :root {
-    /* Medellín-inspired palette: Deep emerald, warm cream, golden accents */
-    --background: 40 33% 98%;
-    --foreground: 160 30% 15%;
+    /* Luxury Premium SaaS Palette: Warm off-white, charcoal, emerald accent */
+    --background: 40 25% 97%;
+    --foreground: 220 20% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 160 30% 15%;
+    --card-foreground: 220 20% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 160 30% 15%;
+    --popover-foreground: 220 20% 20%;
 
-    /* Deep emerald green - primary brand color */
-    --primary: 160 60% 18%;
-    --primary-foreground: 40 33% 98%;
+    /* Deep emerald green - used sparingly as accent */
+    --primary: 160 60% 22%;
+    --primary-foreground: 40 25% 97%;
 
     /* Warm cream secondary */
-    --secondary: 40 30% 95%;
-    --secondary-foreground: 160 30% 15%;
+    --secondary: 40 20% 94%;
+    --secondary-foreground: 220 20% 20%;
 
-    /* Muted sage */
-    --muted: 150 15% 90%;
-    --muted-foreground: 160 15% 45%;
+    /* Muted sage for subtle backgrounds */
+    --muted: 40 15% 92%;
+    --muted-foreground: 220 10% 50%;
 
-    /* Golden accent */
-    --accent: 45 90% 55%;
-    --accent-foreground: 160 30% 15%;
+    /* Emerald accent - sparingly used */
+    --accent: 160 45% 28%;
+    --accent-foreground: 40 25% 97%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 70% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 150 15% 88%;
-    --input: 150 15% 88%;
-    --ring: 160 60% 25%;
+    --border: 40 15% 88%;
+    --input: 40 15% 88%;
+    --ring: 160 50% 30%;
 
     --radius: 0.75rem;
 
-    /* Sidebar - matches primary theme */
-    --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 160 30% 25%;
-    --sidebar-primary: 160 60% 18%;
-    --sidebar-primary-foreground: 40 33% 98%;
-    --sidebar-accent: 150 20% 95%;
-    --sidebar-accent-foreground: 160 30% 15%;
-    --sidebar-border: 150 15% 90%;
-    --sidebar-ring: 160 60% 25%;
+    /* Sidebar - elegant understated */
+    --sidebar-background: 40 20% 96%;
+    --sidebar-foreground: 220 20% 25%;
+    --sidebar-primary: 160 60% 22%;
+    --sidebar-primary-foreground: 40 25% 97%;
+    --sidebar-accent: 40 15% 92%;
+    --sidebar-accent-foreground: 220 20% 20%;
+    --sidebar-border: 40 15% 88%;
+    --sidebar-ring: 160 50% 30%;
 
-    /* Custom tokens */
-    --emerald-deep: 160 60% 18%;
-    --emerald-light: 160 40% 35%;
-    --cream: 40 33% 98%;
-    --cream-dark: 40 20% 92%;
-    --gold: 45 90% 55%;
-    --gold-muted: 45 50% 75%;
+    /* Custom luxury tokens */
+    --emerald-deep: 160 60% 22%;
+    --emerald-light: 160 40% 40%;
+    --cream: 40 25% 97%;
+    --cream-dark: 40 18% 92%;
+    --charcoal: 220 20% 20%;
+    --charcoal-light: 220 15% 35%;
+    --gold: 42 80% 48%;
+    --gold-muted: 42 40% 70%;
     
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(160 60% 18%) 0%, hsl(160 50% 25%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(40 30% 98%) 100%);
+    /* Soft gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(160 60% 22%) 0%, hsl(160 45% 32%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(40 20% 98%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(40 20% 97%) 0%, hsl(40 15% 95%) 100%);
     
-    /* Shadows */
-    --shadow-soft: 0 4px 20px -4px hsl(160 30% 15% / 0.08);
-    --shadow-card: 0 2px 12px -2px hsl(160 30% 15% / 0.1);
-    --shadow-elevated: 0 12px 40px -8px hsl(160 30% 15% / 0.15);
+    /* Elegant shadows */
+    --shadow-soft: 0 1px 3px hsl(220 20% 20% / 0.04), 0 4px 16px hsl(220 20% 20% / 0.04);
+    --shadow-card: 0 1px 2px hsl(220 20% 20% / 0.04), 0 2px 8px hsl(220 20% 20% / 0.06);
+    --shadow-elevated: 0 4px 12px hsl(220 20% 20% / 0.08), 0 16px 48px hsl(220 20% 20% / 0.12);
   }
 
   .dark {
-    --background: 160 30% 8%;
-    --foreground: 40 33% 95%;
+    --background: 220 20% 8%;
+    --foreground: 40 20% 95%;
 
-    --card: 160 25% 12%;
-    --card-foreground: 40 33% 95%;
+    --card: 220 18% 12%;
+    --card-foreground: 40 20% 95%;
 
-    --popover: 160 25% 12%;
-    --popover-foreground: 40 33% 95%;
+    --popover: 220 18% 12%;
+    --popover-foreground: 40 20% 95%;
 
-    --primary: 160 50% 45%;
-    --primary-foreground: 160 30% 8%;
+    --primary: 160 45% 45%;
+    --primary-foreground: 220 20% 8%;
 
-    --secondary: 160 20% 18%;
-    --secondary-foreground: 40 33% 95%;
+    --secondary: 220 15% 18%;
+    --secondary-foreground: 40 20% 95%;
 
-    --muted: 160 15% 20%;
-    --muted-foreground: 150 15% 60%;
+    --muted: 220 12% 18%;
+    --muted-foreground: 40 10% 55%;
 
-    --accent: 45 80% 50%;
-    --accent-foreground: 160 30% 8%;
+    --accent: 160 40% 40%;
+    --accent-foreground: 220 20% 8%;
 
-    --destructive: 0 70% 50%;
+    --destructive: 0 65% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 160 15% 20%;
-    --input: 160 15% 20%;
-    --ring: 160 50% 45%;
+    --border: 220 12% 20%;
+    --input: 220 12% 20%;
+    --ring: 160 45% 45%;
 
-    --sidebar-background: 160 25% 10%;
-    --sidebar-foreground: 40 33% 90%;
-    --sidebar-primary: 160 50% 45%;
-    --sidebar-primary-foreground: 160 30% 8%;
-    --sidebar-accent: 160 20% 15%;
-    --sidebar-accent-foreground: 40 33% 95%;
-    --sidebar-border: 160 15% 18%;
-    --sidebar-ring: 160 50% 45%;
+    --sidebar-background: 220 18% 10%;
+    --sidebar-foreground: 40 18% 90%;
+    --sidebar-primary: 160 45% 45%;
+    --sidebar-primary-foreground: 220 20% 8%;
+    --sidebar-accent: 220 15% 16%;
+    --sidebar-accent-foreground: 40 20% 95%;
+    --sidebar-border: 220 12% 18%;
+    --sidebar-ring: 160 45% 45%;
+
+    --charcoal: 40 20% 90%;
+    --charcoal-light: 40 15% 70%;
   }
 }
 
@@ -116,16 +122,23 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "cv11", "ss01";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display;
+    @apply font-display tracking-tight;
   }
 }
 
 @layer utilities {
   .gradient-hero {
     background: var(--gradient-hero);
+  }
+  
+  .gradient-subtle {
+    background: var(--gradient-subtle);
   }
   
   .shadow-soft {
@@ -147,5 +160,22 @@
   /* Safe area for mobile bottom nav */
   .safe-area-inset-bottom {
     padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  /* Luxury card hover effect */
+  .hover-lift {
+    @apply transition-all duration-300;
+  }
+  .hover-lift:hover {
+    @apply shadow-elevated -translate-y-0.5;
+  }
+
+  /* Premium text styles */
+  .text-display {
+    @apply font-display tracking-tight;
+  }
+  
+  .text-body {
+    @apply font-sans tracking-normal leading-relaxed;
   }
 }

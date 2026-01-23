@@ -1,28 +1,30 @@
+import { forwardRef, useState } from "react";
 import { Heart, Star, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Place } from "@/lib/mockData";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
-import { useState } from "react";
 
 interface PlaceCardProps {
   place: Place;
   variant?: "default" | "compact";
 }
 
-export function PlaceCard({ place, variant = "default" }: PlaceCardProps) {
-  const [isSaved, setIsSaved] = useState(place.saved ?? false);
+export const PlaceCard = forwardRef<HTMLAnchorElement, PlaceCardProps>(
+  function PlaceCard({ place, variant = "default" }, ref) {
+    const [isSaved, setIsSaved] = useState(place.saved ?? false);
 
-  const categoryLabels: Record<string, string> = {
-    apartments: "STAYS",
-    restaurants: "RESTAURANTS",
-    events: "EVENTS",
-    cars: "CARS",
-  };
+    const categoryLabels: Record<string, string> = {
+      apartments: "STAYS",
+      restaurants: "RESTAURANTS",
+      events: "EVENTS",
+      cars: "CARS",
+    };
 
-  return (
-    <Link
+    return (
+      <Link
+        ref={ref}
       to={`/${place.type}/${place.id}`}
       className={cn(
         "group block bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300",
@@ -104,8 +106,9 @@ export function PlaceCard({ place, variant = "default" }: PlaceCardProps) {
             <span className="text-accent">✨</span>
             <span className="line-clamp-1">{place.tags.slice(0, 2).join(" • ")}</span>
           </div>
-        )}
-      </div>
-    </Link>
-  );
-}
+          )}
+        </div>
+      </Link>
+    );
+  }
+);

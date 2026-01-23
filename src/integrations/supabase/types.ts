@@ -1928,6 +1928,75 @@ export type Database = {
         }
         Relationships: []
       }
+      whatsapp_conversations: {
+        Row: {
+          created_at: string
+          id: string
+          last_message_at: string
+          message_count: number
+          phone_number: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          last_message_at?: string
+          message_count?: number
+          phone_number: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          last_message_at?: string
+          message_count?: number
+          phone_number?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      whatsapp_messages: {
+        Row: {
+          content: string
+          created_at: string
+          direction: string
+          external_id: string | null
+          id: string
+          message_type: string | null
+          phone_number: string
+          raw_payload: Json | null
+          sender: string
+          status: string | null
+          to_number: string | null
+        }
+        Insert: {
+          content: string
+          created_at?: string
+          direction: string
+          external_id?: string | null
+          id?: string
+          message_type?: string | null
+          phone_number: string
+          raw_payload?: Json | null
+          sender: string
+          status?: string | null
+          to_number?: string | null
+        }
+        Update: {
+          content?: string
+          created_at?: string
+          direction?: string
+          external_id?: string | null
+          id?: string
+          message_type?: string | null
+          phone_number?: string
+          raw_payload?: Json | null
+          sender?: string
+          status?: string | null
+          to_number?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       geography_columns: {

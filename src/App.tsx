@@ -8,6 +8,7 @@ import { TripProvider } from "@/context/TripContext";
 import { ProtectedRoute } from "@/components/auth/ProtectedRoute";
 import { FloatingChatWidget } from "@/components/chat/FloatingChatWidget";
 import Index from "./pages/Index";
+import Onboarding from "./pages/Onboarding";
 import Explore from "./pages/Explore";
 import Apartments from "./pages/Apartments";
 import ApartmentDetail from "./pages/ApartmentDetail";
@@ -51,6 +52,7 @@ const App = () => (
           <TripProvider>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/onboarding" element={<Onboarding />} />
             <Route path="/explore" element={<Explore />} />
             <Route path="/apartments" element={<Apartments />} />
             <Route path="/apartments/:id" element={<ApartmentDetail />} />

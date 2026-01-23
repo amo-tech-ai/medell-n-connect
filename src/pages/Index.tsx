@@ -189,14 +189,60 @@ export default function Index() {
       {/* Footer */}
       <footer className="py-12 bg-foreground text-background">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-2">
-              <span className="text-2xl">💚</span>
-              <span className="font-display text-xl font-semibold">I Love Medellín</span>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+            {/* Brand */}
+            <div className="col-span-2 md:col-span-1">
+              <div className="flex items-center gap-2 mb-4">
+                <span className="text-2xl">💚</span>
+                <span className="font-display text-lg font-semibold">I Love Medellín</span>
+              </div>
+              <p className="text-sm text-muted opacity-80">
+                Your AI-powered guide to the City of Eternal Spring.
+              </p>
             </div>
-            <p className="text-sm text-muted">
+
+            {/* Explore */}
+            <div>
+              <h4 className="font-semibold mb-4">Explore</h4>
+              <ul className="space-y-2 text-sm opacity-80">
+                <li><Link to="/apartments" className="hover:opacity-100 transition-opacity">Apartments</Link></li>
+                <li><Link to="/restaurants" className="hover:opacity-100 transition-opacity">Restaurants</Link></li>
+                <li><Link to="/events" className="hover:opacity-100 transition-opacity">Events</Link></li>
+                <li><Link to="/cars" className="hover:opacity-100 transition-opacity">Car Rentals</Link></li>
+              </ul>
+            </div>
+
+            {/* Features */}
+            <div>
+              <h4 className="font-semibold mb-4">Features</h4>
+              <ul className="space-y-2 text-sm opacity-80">
+                <li><Link to="/concierge" className="hover:opacity-100 transition-opacity">AI Concierge</Link></li>
+                <li><Link to="/trips" className="hover:opacity-100 transition-opacity">Trip Planning</Link></li>
+                <li><Link to="/bookings" className="hover:opacity-100 transition-opacity">Bookings</Link></li>
+                <li><Link to="/saved" className="hover:opacity-100 transition-opacity">Saved Places</Link></li>
+              </ul>
+            </div>
+
+            {/* Account */}
+            <div>
+              <h4 className="font-semibold mb-4">Account</h4>
+              <ul className="space-y-2 text-sm opacity-80">
+                <li><Link to="/login" className="hover:opacity-100 transition-opacity">Sign In</Link></li>
+                <li><Link to="/signup" className="hover:opacity-100 transition-opacity">Create Account</Link></li>
+                <li><Link to="/onboarding" className="hover:opacity-100 transition-opacity">Get Started</Link></li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="pt-8 border-t border-background/20 flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-sm opacity-60">
               © 2025 I Love Medellín. Made with 💚 in the City of Eternal Spring.
             </p>
+            <div className="flex items-center gap-4 text-sm opacity-60">
+              <a href="#" className="hover:opacity-100">Privacy</a>
+              <a href="#" className="hover:opacity-100">Terms</a>
+              <a href="#" className="hover:opacity-100">Contact</a>
+            </div>
           </div>
         </div>
       </footer>

@@ -67,7 +67,7 @@ prod: https://www.mdeai.co
 | 15 | 🟢 | [UX-025](UX-025-restaurant-card-rich.md) | [SAN-439](https://linear.app/sanjiovani/issue/SAN-439) | RestaurantCard rich | P1 | UX-022 |
 | 16 | ⚪ | [UX-028](UX-028-place-result-card-fallback-upgrade.md) | [SAN-440](https://linear.app/sanjiovani/issue/SAN-440) | PlaceResultCard fallback upgrade | P1 | UX-025 |
 | 17 | ⚪ | [UX-030](UX-030-card-system-tests.md) | [SAN-441](https://linear.app/sanjiovani/issue/SAN-441) | Pin parity + Playwright per domain | P1 | UX-022, UX-021 |
-| 18 | ⚪ | [UX-026](UX-026-attraction-card-rich.md) | [SAN-442](https://linear.app/sanjiovani/issue/SAN-442) | AttractionCard rich | P2 | UX-023 |
+| 18 | 🟢 | [UX-026](UX-026-attraction-card-rich.md) | [SAN-442](https://linear.app/sanjiovani/issue/SAN-442) | AttractionCard rich | P2 | UX-025 |
 | 19 | ⚪ | [UX-029](UX-029-retire-grounded-place-card.md) | [SAN-443](https://linear.app/sanjiovani/issue/SAN-443) | Retire GroundedPlaceCard orphan | P2 | UX-026 |
 | 20 | ⚪ | [UX-032](UX-032-new-chat-reset-thread-and-map.md) | [SAN-321](https://linear.app/sanjiovani/issue/SAN-321) | New chat reset thread + map | P2 | UX-015 |
 | 21 | ⚪ | [UX-033](UX-033-clear-stale-advanced-markers.md) | [SAN-323](https://linear.app/sanjiovani/issue/SAN-323) | Clear stale AdvancedMarkers | P2 | UX-015 |

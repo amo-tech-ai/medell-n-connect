@@ -276,7 +276,7 @@ Keep nightlife as an **event facet** (recommended): zero new pin category, inher
 | **M1** registrar + pin sync | ✅ Done | **UX-022** — `DomainResults`, agent/fast-path parity |
 | M0 shell | ⚪ Not started | UX-023 (does **not** block UX-022) |
 | M2 rich restaurant | ✅ Done | **UX-025** — `RestaurantCard` on fast path + agent |
-| M3 rich attraction | ⚪ Not started | UX-026 |
+| M3 rich attraction | ✅ Done | **UX-026** — `AttractionCard` |
 | M4 cleanup | ⚪ Not started | UX-029 after rich cards stable |
 | M5 tests | ⚪ Not started | UX-030 after UX-022 + **UX-021** |
 

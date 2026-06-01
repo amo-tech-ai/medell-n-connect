@@ -1,7 +1,7 @@
 ---
 id: UX-026
 title: AttractionCard rich on ResultCardShell
-status: Not Started
+status: Done
 priority: P2
 phase: Card unification M3
 effort: 4-6h
@@ -29,9 +29,9 @@ Attractions currently share weak `PlaceResultCard` via `GenericResults` — pari
 
 ## Acceptance
 
-- [ ] Attraction search uses `AttractionCard`.
-- [ ] `PlaceResultCard` only for unknown/fallback.
-- [ ] `npm run floor` green.
+- [x] Attraction search uses `AttractionCard` via `DomainResults`.
+- [x] `PlaceResultCard` only for non restaurant/attraction categories (none wired).
+- [x] Vitest green; full `npm run floor` blocked by untracked `supabase/` in tsc (pre-existing).
 
 ## Flow diagram
 

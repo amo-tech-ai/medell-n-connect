@@ -1,7 +1,7 @@
 ---
 id: UX-021
 title: WCAG aria-labels, testId defaults, data-result-kind on all cards
-status: Not Started
+status: Done
 priority: P0
 phase: Card unification — accessibility
 effort: 3-4h

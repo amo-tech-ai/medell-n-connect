@@ -1,7 +1,7 @@
 ---
 id: UX-030
 title: Card system tests — pin parity and Playwright per domain
-status: Not Started
+status: In Review
 priority: P1
 phase: Card unification M5 lock-in
 effort: 5-8h

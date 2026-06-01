@@ -2,7 +2,7 @@
 id: UX-031
 title: Live audit vertical smoke — 4-query regression matrix
 status: In Review
-note: e2e/live-audit-verticals.spec.ts exists on PR #27 only — not on main @ 5e20f3c
+note: e2e/live-audit-verticals.spec.ts on main — run npm run test:e2e:live-audit
 priority: P1
 phase: MVP — regression gate
 effort: 3-5h

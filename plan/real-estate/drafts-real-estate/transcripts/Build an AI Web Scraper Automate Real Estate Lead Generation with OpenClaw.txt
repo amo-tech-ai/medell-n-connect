@@ -1,0 +1,142 @@
+So welcome to the walk through of an
+
+
+open claw application I built for a
+
+
+client
+
+
+who wanted to scrape real estate agents
+
+
+data essentially wanted openclaw their
+
+
+AI agent to go into browser in a
+
+
+particular website from the excel sheet
+
+
+search the agent names
+
+
+and open their profiles get their data
+
+
+their bio IO their phone number and
+
+
+their
+
+
+emails. So once they had this just move
+
+
+on to next. So they wanted to do this
+
+
+kind of automation. So let's just see it
+
+
+in action.
+
+
+So here I run Python 3 scrap agents
+
+
+limit one cuz essentially it's hundreds
+
+
+of agents. I just wanted to show the
+
+
+instance of one. So open claw will be
+
+
+searching for Tommy Chan now.
+
+
+So as you can see that the agent
+
+
+automatically opened the browser the
+
+
+grid it to open it. It is on the search
+
+
+bar. Now it is it'll it press the Tommy
+
+
+Chan name. Now it'll make a s their
+
+
+profile. See it did the search. Now
+
+
+it'll open their profile. It'll open
+
+
+their profile. Get their bio. Get their
+
+
+phone numbers. Move on to next. So this
+
+
+is the automation. I'll show you the
+
+
+logs in Excel sheet to make sure that
+
+
+it's working the way we desired it. So
+
+
+as you can see that it just opened the
+
+
+profile all of its own. Now it'll get
+
+
+the bio, it'll get the phone number and
+
+
+email and it'll move on to next.
+
+
+So the script just finished running.
+
+
+I'll just show you that it got the phone
+
+
+as it is. It got the email as it is
+
+
+and I'll just show you in the Excel
+
+
+sheets that it just works
+
+
+and this is the Excel sheet phone number
+
+
+about it and this contains the entire
+
+
+thing. So yeah, that's the end of the
+
+
+walk through. Let me know if this makes
+
+
+sense or you want something similar for
+
+
+yourself as well. So I'll be happy to
+
+
+help you. Thank you.

@@ -1,0 +1,1168 @@
+As far as I know, nobody in the real
+
+
+estate industry has spent more time on
+
+
+Open Claw and trying to make Open Claw
+
+
+work for realtors than I have. This was
+
+
+a painful, exhausting process, but we
+
+
+learned a ton in the process. And I
+
+
+think we finally broke through. And I
+
+
+think that is most easily evidenced by
+
+
+the fact that I've been retweeted three
+
+
+times by Peter Steinberger, the guy who
+
+
+created Open Claw. And I genuinely
+
+
+believe that real estate stands to
+
+
+benefit more than almost any other
+
+
+industry from a technology like this.
+
+
+And I'm going to talk a little bit about
+
+
+why. If you are seeing this open cloth
+
+
+stuff and you're just like, "This is way
+
+
+too much for me. I just want it all put
+
+
+into a package and sold to me. I want I
+
+
+want the tool. I want the life-changing
+
+
+experience of it, but I don't want to go
+
+
+through the whole pain of creating it
+
+
+like you just mentioned. I got you. The
+
+
+link's in the description.
+
+
+meetyouhomeies.com.
+
+
+Check it out. If you're doing this job
+
+
+properly, you know, if you're a realtor
+
+
+who's busy, you will be out of the
+
+
+office. You'll be in your car. You'll be
+
+
+at showings. You'll be on listing
+
+
+appointments. You'll be at inspections.
+
+
+You're not sitting in front of your CRM.
+
+
+You're not sitting in your email. Real
+
+
+estate is a field job with a desk back
+
+
+end. Even though a lot of the magic
+
+
+happens in the CRM, in the email, and a
+
+
+lot of real estate professionals
+
+
+struggle because they can't get the
+
+
+economics of hiring someone to work to
+
+
+alleviate a lot of that administrative
+
+
+burden. And the the friction is exactly
+
+
+what AI operating systems solve. And I
+
+
+know I've been talking a lot about AI
+
+
+and jobs on this channel, especially
+
+
+real estate, because I think
+
+
+transparency matters a lot. And
+
+
+consumers deserve to know how technology
+
+
+is simplifying this industry so that
+
+
+they'll later see it, improve outcomes
+
+
+for them, most notably in fee
+
+
+compression in an industry that's been
+
+
+consistently
+
+
+heralded as overpaid. But realtors
+
+
+deserve to benefit from these
+
+
+technologies, too. So about a month ago,
+
+
+like right when OpenClaw first started
+
+
+going viral, like when it was originally
+
+
+called Claudebot, I saw it and I was
+
+
+like, "This sounds too good to be true."
+
+
+But I just dove right into it. And since
+
+
+then, and I think timing was kind of
+
+
+like fortunate. I had just had a newborn
+
+
+and I was like locked in the house
+
+
+anyway. And you know, I was just like
+
+
+kind of semi pat leave just like at a
+
+
+computer tinkering, right, with a with a
+
+
+baby there. And since then, I've built
+
+
+and open-sourced dozens of skills on
+
+
+Claw Hub. You can download them all for
+
+
+free. I'll link them in the description
+
+
+below. I've recorded thousands of hours
+
+
+inside a school group called AI and Open
+
+
+Claw for Realtors. I've documented every
+
+
+mistake, every iteration. Like I
+
+
+actually like we started this thing as
+
+
+just AI for realtors and and like I was
+
+
+getting fired up about like automating
+
+
+stuff back when it was like claude code
+
+
+plugins and like so we have claude code
+
+
+claud and chrome like literally how to
+
+
+do um a bunch of stuff in claude co-work
+
+
+like booking showings on like bro bro
+
+
+
+
+bro bro bro bro bro bro bro bro bro bro
+bro bro bro bro bro bro bro bro brok
+
+
+broker bay like how to get it to to do
+
+
+that
+
+
+um and that that really um expanded into
+
+
+using like into into growing openclaw.
+
+
+So, we built like all of the different
+
+
+missions, uh, offer drafter,
+
+
+um, how to build an open claw from
+
+
+scratch, um, basically how to create it
+
+
+as a AI real est real real estate
+
+
+assistant, what are all of the different
+
+
+SOPs, cuz one of the keys here is that
+
+
+you actually have to create like um,
+
+
+your standing standard operating
+
+
+procedures to coach it through all of
+
+
+these different tasks. We've taken all
+
+
+of that and made it free for you to just
+
+
+learn how to do it on your own. But most
+
+
+people still decide they don't want to
+
+
+do it on their own cuz it is a ton of
+
+
+work. And you most people in the real
+
+
+estate profession, they say, "I believe
+
+
+you. I just want the benefit. Give me
+
+
+the benefit. Sell me the benefit. I'm
+
+
+willing to pay a lot of money for the
+
+
+benefit." And so that's what we did.
+
+
+That's why we created Homie. Homie
+
+
+basically takes everything that I've
+
+
+learned from running real estate
+
+
+brokerage, being a real estate
+
+
+professional, all the jobs that we need
+
+
+automated away that can't be done or
+
+
+that that can be done by AI. There's a
+
+
+lot of stuff that can't be. and we built
+
+
+Homie and we basically started a wait
+
+
+list. We're going to just launch a
+
+
+hundred of these things at the end of
+
+
+April. And the reason we're just doing a
+
+
+hundred at first is because it's going
+
+
+to be a lot of work to get them on the
+
+
+rails, to get people on boarded, etc.
+
+
+So, if you want to join the wait list
+
+
+for that, click the link, the first link
+
+
+in the description, and you can get an
+
+
+out of the box ready to go Open Claw on
+
+
+your CRM with its own email, its own
+
+
+phone number, ready to do whatever you
+
+
+needed to do in your real estate
+
+
+business. You as a real estate
+
+
+professional can DIY an OpenClaw. My
+
+
+OpenClaw now does. It manages my CRM. It
+
+
+builds a lot of my content. It builds
+
+
+all of my funnels. It does all of my
+
+
+many chat automations. It sets calls for
+
+
+me from the CRM. It does home
+
+
+evaluations. It drafts listing
+
+
+presentations. It builds marketing plans
+
+
+for listings. It executes marketing
+
+
+plans for listings by doing voicemail
+
+
+drops, sending um just listed flyers,
+
+
+doing just listed phone calls, openhouse
+
+
+invitations. It manages showings and
+
+
+feedback. It books showings and
+
+
+schedules them into my calendar and
+
+
+notifies my clients. And when paperwork
+
+
+comes in, it manages the signbacks. It
+
+
+manages project manages the paperwork
+
+
+through it. It cuts the PDFs into the
+
+
+corresponding separate separated
+
+
+documents so they can go into our filing
+
+
+system for deal processing. It's
+
+
+actually insane how much work that this
+
+
+thing can do. I've figured out how to
+
+
+integrate it with pretty much every CRM
+
+
+that is available in the real estate
+
+
+space. Go high level is where I started
+
+
+because that's what I use. But I know a
+
+
+ton of realtors use follow-up boss. So I
+
+
+built that skill and you can get it for
+
+
+free. I built a KV core through their
+
+
+API. And you can do this stuff all
+
+
+easily like this. The the platform knows
+
+
+how to do it. I can text my openclaw,
+
+
+call soando or text text soando,
+
+
+login in the CRM, move them to nurture,
+
+
+follow up Friday, and it will do it very
+
+
+well. It updates the CRM. It triggers
+
+
+the automation. It drafts the follow
+
+
+follow-ups. I have screenless CRM
+
+
+management which is super valuable for
+
+
+me when I am on the road out of office
+
+
+afking as the kids call it which is what
+
+
+real estate professionals should be
+
+
+doing if they're doing their job
+
+
+properly out being out there serving
+
+
+clients. We built in a idx layer. So we
+
+
+have a idxmcp.
+
+
+It pulls listings. It analyzes
+
+
+properties. It structures deal
+
+
+summaries. It cross references rents. It
+
+
+can pull zoning for for properties based
+
+
+on maps. We've even built because I do a
+
+
+lot of rentals, we're already getting
+
+
+people's um we're already getting
+
+
+people's documents for underwriting,
+
+
+right? Um income, credit, etc. So, we
+
+
+buil we're building in underwriting
+
+
+logic, which is the same as mortgage
+
+
+underwriting logic on the intake. So,
+
+
+buyer data gets structured before I ever
+
+
+see it. We built a headless browser that
+
+
+would go in and book showings on broker
+
+
+bay, which is the platform that the
+
+
+Toronto Real Estate Board uses, but now
+
+
+requires a 2FA. So, we actually built an
+
+
+11 Labs voice layer, which I can go and
+
+
+tell my open claw to book a showing and
+
+
+it'll fire up a voice layer and call the
+
+
+office and book that showing. calls the
+
+
+listings off office, books a showings,
+
+
+handles conflicts, logs everything,
+
+
+creates a calendar invite, invites my
+
+
+clients to it. Calendar invite has the
+
+
+address in it so that I can click it
+
+
+when I'm on the road on my phone. That
+
+
+alone replaces hours of my time or
+
+
+administrative time every single week.
+
+
+And the idea isn't that it's going to
+
+
+replace an administrator. It's that it
+
+
+allow it frees up my administrator's
+
+
+time to do way higher value tasks. So, I
+
+
+now have a VA that is exceptionally more
+
+
+valuable than they were before. For a
+
+
+lot of agents, um like I co own a real
+
+
+estate brokerage and and a lot of agents
+
+
+in today's world are sort of in these
+
+
+like um downline cap and revshere style
+
+
+brokerages like EXP or Real Broker,
+
+
+which basically,
+
+
+you know, one of the ways that they make
+
+
+money is by recruiting agents. And my
+
+
+openclaw now recruits agents. If you're
+
+
+watching this video, there's a decent
+
+
+chance that my openclaw actually emailed
+
+
+it to you or it or my my open call
+
+
+actually built the targeting for this
+
+
+video on me boosting it on YouTube to
+
+
+make sure that it gets in front of
+
+
+realtors. It recruits agents for me. It
+
+
+targets purpose-built rental owners,
+
+
+which is my primary clientele. It finds
+
+
+unsold condo inventory. It scrapes
+
+
+sponsors for the events. I host uh five
+
+
+major multiplex events throughout the
+
+
+year. And we find sponsors through that
+
+
+by reaching out to them on LinkedIn and
+
+
+email. And it pulls the emails through
+
+
+Apollo and Rocket Reach and Hunter. It
+
+
+drafts outreach. It logs activity. It
+
+
+runs continuously 24/7. It does my a lot
+
+
+of my content. This is huge for me
+
+
+personally. Obviously, you know, I put
+
+
+out a ton of video. It researches my
+
+
+podcast. It drafts YouTube scripts. I
+
+
+just do them in bullets so that I can
+
+
+sort of add lib as I'm going. Like as an
+
+
+example, draft YouTube scripts is the
+
+
+bullet there and I'm ad libbing to it.
+
+
+It takes my episodes, podcast and
+
+
+YouTube, and it turns them into
+
+
+substacks, which again, these are just
+
+
+time-consuming things, but they're
+
+
+important because that means that my
+
+
+YouTube video now can go into somebody's
+
+
+inbox who subscribe to my newsletter,
+
+
+which increases the likelihood that they
+
+
+come back and see it and do a
+
+
+transaction with me. It sends email
+
+
+versions of everything to my audience.
+
+
+It responds to a lot of my YouTube
+
+
+comments. It organizes everything in
+
+
+Notion and it and it scans Notion for
+
+
+context and memory. It experiments with
+
+
+drafting offers. We're playing around
+
+
+with that one right now. It's pretty
+
+
+close. I think it'll be there in like a
+
+
+couple of months. And so, one idea can
+
+
+become like five different distribution
+
+
+channels. And and all of that is
+
+
+automatic. Before this system, I was
+
+
+spending 20 to 25 hours a week
+
+
+constantly context switching, manual
+
+
+formatting, manual lock, easily $2 to
+
+
+$4,000 a month in a labor equivalent for
+
+
+a virtual assistant or of my own time.
+
+
+thousands of dollars and now AI handles
+
+
+like 70 to 80% of that. I supervise VA,
+
+
+a virtual assistant supervises, an
+
+
+assistant or administrator supervises.
+
+
+That's the difference. And after open
+
+
+sourcing everything that we've been
+
+
+doing, you know, in an educational
+
+
+environment on school, like literally
+
+
+everything you need, you it'll tell you
+
+
+how to do it in a school group for free
+
+
+for $0. Don't pay any money to learn how
+
+
+to do this. After documenting thousands
+
+
+of hours, agents kept telling me after
+
+
+I've given them all of the resources to
+
+
+do it themselves, "This is too
+
+
+complicated. Can you just give me one
+
+
+that already [clears throat] works out
+
+
+of the box? I'll pay $5,000, $10,000,
+
+
+whatever you want." And so I realized
+
+
+this is a a very valuable tool. I've
+
+
+like because I've been retweeted by
+
+
+Peter Steinberger on this matter. I've
+
+
+had like my my week is fully booked of
+
+
+people just booking into my calendar to
+
+
+ask me questions about how I'm doing
+
+
+this stuff for real estate and I I tell
+
+
+them or I point them or I send them to
+
+
+send them the course or whatever and
+
+
+I'll give some a lot of people hopping
+
+
+on calls with me are a little bit more
+
+
+experienced so that's easier. But people
+
+
+who are like base level like just don't
+
+
+get it. Number one, it's super high risk
+
+
+to like start. I work at a tech company.
+
+
+I have a bit of a background in tech. I
+
+
+built some technology for like the
+
+
+Toronto Real Estate Board and, you know,
+
+
+work in data science. I know like a
+
+
+couple of coding languages. Like
+
+
+nothing,
+
+
+you know, even I even I'm like probably
+
+
+a high-risisk user for this. Um, but
+
+
+people who have like zero knowledge
+
+
+probably shouldn't be playing with this
+
+
+stuff. And that's when I realized
+
+
+because people want to spend so much
+
+
+money on this product, they want it just
+
+
+done for them and the risk factor is too
+
+
+high. I actually am probably solving a
+
+
+real problem by creating something. The
+
+
+industry doesn't need instructions here.
+
+
+It needs packaging. And so Shamir, who I
+
+
+brought on for an interview in another
+
+
+version of this video that I'm going to
+
+
+be putting out, um Shamir and I started
+
+
+Homie with a couple of other partners
+
+
+that we have at Valerie. So Shamir
+
+
+founded Valerie.ca. We're Canada's first
+
+
+AI powered real estate brokerage. We
+
+
+built a ton of tools, home evaluations,
+
+
+a lot of the things that I mentioned
+
+
+that OpenClaw is now doing for me. Homie
+
+
+takes everything that we built at
+
+
+Valerie and everything that I built
+
+
+inside OpenClaw and Shamir's built
+
+
+inside OpenClaw and it packages it into
+
+
+your own AI assistant for the real
+
+
+estate profession. We're always waiting
+
+
+for something like this. I call it an OS
+
+
+layer, although a lot of people flamed
+
+
+me for saying that on on X. Um, I don't
+
+
+think it's an OS yet, but I think it
+
+
+will be. Um, but now this exists, right?
+
+
+Like everybody was asking us for SAS of
+
+
+like everything that we're building at
+
+
+at Valerie and we just couldn't there
+
+
+was no way for us to like properly
+
+
+package and deliver that to
+
+
+professionals. But now that exists,
+
+
+openclaw has completely changed all of
+
+
+that. So I brought Jem in to talk about
+
+
+where this whole thing goes next and
+
+
+like his experience with it cuz I think
+
+
+like we've had very two very different
+
+
+experiences. he sees as like this very
+
+
+intelligent thing and he puts it on like
+
+
+really high intelligence tasks whereas I
+
+
+see it as like a workhorse and put it on
+
+
+like just total grindwork tasks like
+
+
+outbounding you know BD uh CRM like just
+
+
+follow-up call setting like just stuff
+
+
+that like I wish I had the time to do
+
+
+and I would be making way more money and
+
+
+way more impact if I was able to do
+
+
+those things. Um anyway, if you're
+
+
+interested, if you're looking for an out
+
+
+of the box like you know solution, check
+
+
+out Homie. It's um the links below here.
+
+
+Just meet yourhomies.com.
+
+
+And um we're going to be dropping it as
+
+
+a wait list. We're going to be dropping
+
+
+it in the next 2 months. Um for anybody
+
+
+on the wait list, if you are seeing this
+
+
+open claw stuff and you're just like,
+
+
+"This is way too much for me. I just
+
+
+want it all put into a package and sold
+
+
+to me. I want I want the tool. I want
+
+
+the life-changing experience of it, but
+
+
+I don't want to go through the whole
+
+
+pain of creating it like you just
+
+
+mentioned. I got you. the links in the
+
+
+description.

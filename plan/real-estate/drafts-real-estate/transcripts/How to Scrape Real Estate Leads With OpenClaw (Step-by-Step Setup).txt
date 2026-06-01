@@ -1,0 +1,523 @@
+How to scrape real estate leads with the
+
+
+power of open claw bot. So in this video
+
+
+I will show you how you can scrape three
+
+
+types of leads. Okay. So FSBO so owner
+
+
+direct leads which is best ROI for real
+
+
+estate agents. This is listing where
+
+
+owner contact is public. Second agent
+
+
+and brokerages leads. So agent
+
+
+directories plus listing pages with
+
+
+phone from the agent and email. And then
+
+
+third, landlords or property manager
+
+
+leads. Uh this is where it comes into
+
+
+play. Re rental listings plus management
+
+
+company pages. Okay. So the core idea
+
+
+here is to take an API connect it to
+
+
+open claw and then open claw uh we will
+
+
+use it to scrape those leads. Okay. So
+
+
+let's get started. So the first thing
+
+
+that you will need is you will need
+
+
+scraper API. This is a really good API
+
+
+where we would be able to go and
+
+
+integrate this with open claw. Okay.
+
+
+Once you log in, what you want to do is
+
+
+you want to go and use the free plan.
+
+
+You have the link in the description.
+
+
+And here we have around,000 API credits.
+
+
+If you want more, you can purchase more
+
+
+and upgrade to a larger plan. It's
+
+
+definitely recommended if you're going
+
+
+to do more volume. Make sure to copy the
+
+
+API key and also make sure to go to
+
+
+documentation right here because we will
+
+
+need the documentation to feed the open
+
+
+claw this documentation along with the
+
+
+API key. So the first thing what you
+
+
+want is you want to install scraper API
+
+
+inside open claw. So to do that I will
+
+
+just scroll here up to this chat just to
+
+
+show you how I did it. So first I said I
+
+
+want to integrate scraper API key and
+
+
+then I added my API key which is right
+
+
+here in my dashboard. Okay. And then I
+
+
+said make sure to remember this for
+
+
+future use. This is extremely important
+
+
+that you say to uh make sure to remember
+
+
+this for future use. Why? Because it
+
+
+will save it in a long-term memory open
+
+
+claw. And then open claw will be able as
+
+
+you can see right here will be able once
+
+
+you restart it to go back to your
+
+
+previous messages and you you you would
+
+
+be able to basically use scraper API
+
+
+again. So every restart open claw won't
+
+
+be able to remember what you talked
+
+
+about with it. So make sure to do that.
+
+
+Okay. Once I did this uh I basically
+
+
+went um here basically it was all the
+
+
+commands and then it says got it. your
+
+
+scraper API key is saved securely and
+
+
+I'll also use it for scraping tasks
+
+
+going forward every time open clause
+
+
+starts and then I added here uh this is
+
+
+how scraper API works this is the
+
+
+documentation and I added the
+
+
+documentation this is just an
+
+
+instructions to open clause so that
+
+
+openclaw knows okay this is actually how
+
+
+we're going to use scraper API so and
+
+
+then u you know obviously scraper API
+
+
+straightforward this is what openclaw
+
+
+said went through all of it and I just
+
+
+said scrape these websites for test. And
+
+
+again, just make sure to test it out.
+
+
+And as you can see, it went through the
+
+
+process and scraped the websites. By the
+
+
+end of all of this, uh, I got right
+
+
+here. Let me actually show you. So, I
+
+
+got basically websites scraped as you
+
+
+can see right here. Uh, but essentially
+
+
+what I wanted to show you right now once
+
+
+you install scraper API in OpenClaw, the
+
+
+next step is to go for those FSBO leads,
+
+
+agent or brokerages leads. and then
+
+
+landlords or property managed leads. Now
+
+
+to do this, you will need websites where
+
+
+you can find those type of leads. So to
+
+
+give you one example, this is one of the
+
+
+real estate for sale by owner website in
+
+
+Croatia. So what we're going to do is
+
+
+we're going to be copying this and
+
+
+scraping this. So we go into Open Claw
+
+
+and I'll go uh scrape this website.
+
+
+And what I will also do is I will go to
+
+
+chat GPT and I have it already here.
+
+
+Open call extra extraction prompt. I
+
+
+will paste this prompt in the
+
+
+description. So you have it as well. And
+
+
+as you can see, I will just go here and
+
+
+add this in here. By the way, I will
+
+
+remove only return JSON because I want
+
+
+exactly this. And then I'll go hit send.
+
+
+Okay. And uh yeah, essentially we're
+
+
+going to be scraping this website for u
+
+
+sale by owner leads. Uh and yeah, from
+
+
+there we're going to be also scraping
+
+
+other type of leads. I just want to show
+
+
+you an example here how this works. So
+
+
+let's wait a little bit and let's see
+
+
+what our Dexterbot will generate. As you
+
+
+can see, we're getting all of the
+
+
+listings right here, plus how much uh
+
+
+they cost as well. Plus, we're also
+
+
+getting the property address right here.
+
+
+As you can see, for some, we don't have
+
+
+property address. Obviously, this is
+
+
+depending on what's actually available
+
+
+on the website. Uh, so currently, as you
+
+
+can see, not many addresses are
+
+
+available on the website, but we can see
+
+
+the owner name and stuff like that. So,
+
+
+uh, as you can see, this is how you can
+
+
+scrape for sale by owner. Now, also,
+
+
+there are other ways how you can scrape
+
+
+like for example, Craigslist, you can
+
+
+scrape that as well. real estate by
+
+
+owner and this is the type FSBO plus
+
+
+rentals or you can go to Facebook
+
+
+marketplace public listings only. You
+
+
+can also scrape that if you want only
+
+
+public listing pages. Again, just make
+
+
+sure you're integrating the scraper API
+
+
+inside of it and you would be able to do
+
+
+that. Now, depending what you want to
+
+
+scrape, make sure that for example, as
+
+
+you can see, we have here this is an
+
+
+agent directory. So, if you want to
+
+
+scrape something like that, we have
+
+
+Zillow as well here, but if you want to
+
+
+scrape realtor.com,
+
+
+let's go to realtor.com to see if we can
+
+
+scrape, let's say, new listings here,
+
+
+and we can copy this. And what we can do
+
+
+is we can go back to OpenClaw, scrape
+
+
+this,
+
+
+and then we'll go back here, and we want
+
+
+to scrape this right here. So, we want
+
+
+to extract this right here. By the way,
+
+
+this prompt will be available in the
+
+
+description just so you know. So, you
+
+
+hit send and let's see what the Dexter
+
+
+will generate now and scrape. So, again,
+
+
+we are scraping for this particular uh
+
+
+page and we want to extract the agent
+
+
+name, brokerage name, phone, email,
+
+
+office address, listings, areas served,
+
+
+and profile URL. So, uh yeah, let's wait
+
+
+a little bit. So, as you can see, it
+
+
+says it will take 10 to 20 minutes uh
+
+
+for the outbound network. Now, sometimes
+
+
+it's better to have this locally hosted.
+
+
+I have this hosted on a VPS. So, and
+
+
+also I'm using an open AI API key. So,
+
+
+sometimes there is lag. Make sure you're
+
+
+hosting this locally because that's
+
+
+going to be the best possible solution.
+
+
+So, I showed you how to do the no FSB or
+
+
+uh FSBO
+
+
+uh listings. Now, if you uh have any
+
+
+questions or maybe comments around this,
+
+
+comment below. And also if you want to
+
+
+scrape all of these uh type of leads, I
+
+
+will leave this uh prom documentation in
+
+
+the description below. Also check out
+
+
+scraper API for more and we'll see you
+
+
+in the next

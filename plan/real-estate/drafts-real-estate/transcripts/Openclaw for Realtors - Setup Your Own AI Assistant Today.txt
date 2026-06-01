@@ -1,0 +1,541 @@
+Okay, so if you're a real estate agent
+
+
+and you want to learn how to set up
+
+
+OpenClaw, AI assistance, all that sort
+
+
+of stuff, check out this video. I want
+
+
+to show you what's possible today, right
+
+
+now. This is the command dashboard that
+
+
+OpenClaw, my AI assistant, has built out
+
+
+for himself. His name is Kai. He lives
+
+
+on my phone. I have it pulled up here.
+
+
+This is essentially my phone here. It's
+
+
+on Telegram, so I can chat with it back
+
+
+and forth. And while I chat with it, it
+
+
+does work for me. It sends emails on my
+
+
+behalf. It follows up with leads on my
+
+
+behalf. So, it does all of that sort of
+
+
+stuff for me. As you can see here, I
+
+
+have it giving my every morning it
+
+
+messages me with my hot leads that have
+
+
+come through, all of them and their
+
+
+statuses, any sort of pre-approvals that
+
+
+might have come through, my email inbox
+
+
+with any escros, my calendar. So, my
+
+
+calendar for the day, who I'm meeting
+
+
+with, ads, so it connects into my
+
+
+Facebook ads dashboard and what it does
+
+
+overnight. Again, uh I'm going to zoom
+
+
+down here a little bit. Uh, it can draft
+
+
+email reply. So I say, "Can you draft an
+
+
+email?" Great. It drafts an email reply.
+
+
+It lives on my Gmail. Okay, so this
+
+
+lives on my Gmail as it stands. So it
+
+
+drafts the email reply. It connects to
+
+
+my meta ads, my Gmail, my calendar, my
+
+
+CRM,
+
+
+all of that sort of stuff is done in
+
+
+here. It updates everything on what it's
+
+
+called, what's called its AI command
+
+
+center. Okay, that's what it's building
+
+
+out here. And the way to set this up,
+
+
+you want to go to openclaw.ai.
+
+
+on openclaw.ai AI you can run and you
+
+
+first need to figure out okay where do
+
+
+you want to run this AI tool in right so
+
+
+for me I run it on my Mac mini at home
+
+
+okay it's a computer you can run it on
+
+
+your computer right now your laptop just
+
+
+know that if you turn off your laptop or
+
+
+if you turn off your computer it will
+
+
+you won't be able to continue to chat
+
+
+with it so ideally you have it on a
+
+
+desktop computer that you can plug and
+
+
+leave on 24/7 when that comes time you
+
+
+want to open up terminal so search up
+
+
+terminal on your computer or uh uh CD if
+
+
+you're on on your on your Windows and
+
+
+you want to run this command this full
+
+
+command here curl hyphen FSSL and you
+
+
+want to run it right here. So you want
+
+
+to open up your uh your uh command
+
+
+terminal and then open and then paste
+
+
+this command this curl URL in here. I
+
+
+won't do it because I already have it
+
+
+set up. From there you will be able to
+
+
+go through the steps in setting up
+
+
+openclaw. From there, you need to
+
+
+connect Telegram or WhatsApp. I prefer
+
+
+Telegram. You can connect Discord, which
+
+
+is another messaging app, but Telegram
+
+
+is great because it works awesome. It's
+
+
+easy and it it's a couple clicks and it
+
+
+completely works fine. From there,
+
+
+here's what I want you to do different.
+
+
+When you set up OpenClaw, don't go
+
+
+through all the normal setup on the
+
+
+whatever like, you know, set this up,
+
+
+set that. Set up your Telegram first and
+
+
+foremost. And then within the Telegram,
+
+
+ask it, I want to set up Gmail. and my
+
+
+Gmail calendar. Can you help me do that?
+
+
+It will give you line by line
+
+
+instructions to open up Cloud Console,
+
+
+open up this, give it this key, give it
+
+
+that key, and from there it will be able
+
+
+to set it up for you within this
+
+
+messaging system. Next up is Facebook
+
+
+ads. Setting up a a developer account on
+
+
+Facebook, you have to do that on Ads
+
+
+Manager and you have to give it the
+
+
+client secret IDs there. Boom. Now you
+
+
+have Facebook access. So you can see
+
+
+what Facebook ads are doing. You can
+
+
+even give it permission to make changes
+
+
+on budget. If stuff is underperforming,
+
+
+you can have a trigger. You know, if
+
+
+cost per lead is really good is really
+
+
+good today, I can pump up the budget. If
+
+
+cost per lead is really high, I can put
+
+
+budget down, etc., etc., right? Um, your
+
+
+So, your calendar is a big one. Your
+
+
+CRM. So, I use go high level. So, on go
+
+
+high level, you can pull an API key on
+
+
+go high level and you can tell it, hey,
+
+
+I want to set up a go highle API so you
+
+
+can manage my stuff in my CRM. Here's my
+
+
+API key. Boom. Now has API key set up.
+
+
+And remember, this is all done ideally
+
+
+on your computer on your desktop
+
+
+privately. Now, if you don't want to set
+
+
+this up on your laptop, you don't want
+
+
+to set this up on your desktop, you can
+
+
+buy what's called a virtual private
+
+
+server. So, there's companies that exist
+
+
+like hostinger.com,
+
+
+and I can leave a description down
+
+
+below. You can buy for5 or $10 per month
+
+
+what's called a virtual private server.
+
+
+Essentially, this is literally just a
+
+
+computer on a server somewhere. The
+
+
+problem with this is it's a little bit
+
+
+more technical. So, if you're not
+
+
+technical, you might not want to set
+
+
+this up. But it saves you a lot of money
+
+
+if you don't have an if you have
+
+
+computer lying around that you're going
+
+
+to use. Okay? And I'm getting a lot of
+
+
+emails about this as I'm talking about
+
+
+it. So, anyways, you need to set this up
+
+
+because what it can do for you is so
+
+
+powerful. You can set up um jobs every
+
+
+morning, jobs every night, every two
+
+
+hours. For example, there is current
+
+
+news that I'm trying to stay up to date
+
+
+with. So, every hour I have it scan my
+
+
+Twitter feed, tell me if there's any
+
+
+upcoming current needs that I missed.
+
+
+And if there is, then send me a message.
+
+
+And it does that every hour silently in
+
+
+the background, and it messages me on
+
+
+what's going on. So, again, openclaw.ai.
+
+
+You can get that set up. If you need any
+
+
+help setting this up, by the way, I I
+
+
+know it's complicated. It can be. It
+
+
+doesn't have to take very long, but man,
+
+
+it saves you hours and hours and hours
+
+
+in your business. Trust me. Anyways,
+
+
+I've obviously done this several dozens
+
+
+times now and I have a lot of uh people
+
+
+that I work with that have done it. So,
+
+
+if you are interested in that, find the
+
+
+link down below. You can book a call.
+
+
+You can purchase that setup. I'm not
+
+
+sure how much longer I'm going to
+
+
+continue to do these oneto ones, but if
+
+
+you are interested in getting that set
+
+
+up, click down below. It's really no
+
+
+obligation and it will be worth the time
+
+
+and the money of you investing into this
+
+
+because once this is set up for your
+
+
+business, man, it is amazing and it
+
+
+saves you hours and hours and hours. It
+
+
+can do bank reconciliation. It can do
+
+
+invoicing. It it can take a hundred
+
+
+receipts for your business and
+
+
+categorize them by analyzing the images
+
+
+and putting them on folders, emailing
+
+
+them to your accountant. Like it is
+
+
+amazing the use cases that we can be set
+
+
+up. And if you're interested in that,
+
+
+click down below and uh we can get in
+
+
+contact and and let me know. Anyways, I
+
+
+hope this helps you try to get set up on
+
+
+here. I recommend, by the way, last
+
+
+thing I'll leave you with is I recommend
+
+
+using Claude as the brain of this, uh,
+
+
+as it stands right now. So, you can buy
+
+
+that for 20 bucks a month and plug it
+
+
+into here, uh, to your Open Claw. Open
+
+
+Claw's free, by the way. So, anyways, if
+
+
+you need any help setting this up, let
+
+
+me know. Otherwise, yeah, sign off.
+
+
+Peace.

@@ -1,0 +1,2752 @@
+OpenClaw/Cladbot
+
+
+is now helping me run my business. But
+
+
+if you don't know how to use it the
+
+
+right way, it is completely overhyped.
+
+
+So, I'm going to show you a couple use
+
+
+cases in this video on how I'm using it
+
+
+right now for real revenue use cases and
+
+
+how you can do the same thing, too. I
+
+
+literally spent probably 10 hours this
+
+
+week in getting everything going. I got
+
+
+a new Mac Mini for I'm going to explain
+
+
+why I got a Mac Mini for it. I'm going
+
+
+to explain the different security
+
+
+concerns. I'm going to explain the
+
+
+different hacks you should be doing to
+
+
+save on tokens, how you can speed things
+
+
+up a lot faster, how you can tie in with
+
+
+your business, and how you can just make
+
+
+it much more useful for you. And then
+
+
+I'm going to tell you my theory on how
+
+
+business is going to go, and how you
+
+
+might potentially have a bunch of these.
+
+
+You might have an army of these. So, by
+
+
+the end of this video, you're going to
+
+
+see my entire philosophy, and you're
+
+
+going to understand how to run this from
+
+
+a business and marketing and
+
+
+money-making standpoint. If all those
+
+
+things are interesting to you, then this
+
+
+is going to be interesting to you. And
+
+
+if you're tired of the AI hype, then
+
+
+this is also a video for you. So, let's
+
+
+get into it.
+
+
+The key thing is that you need to make
+
+
+sure that you have guardrails with this.
+
+
+I'm going to show you my setup just so
+
+
+you can start to get some ideas.
+
+
+Initially, I was a little, you know,
+
+
+skeptical, but now all the people that
+
+
+are making videos saying this is
+
+
+overhyped. It is only overhyped if you
+
+
+don't know how to use it. It's just like
+
+
+having a weapon. If you don't know how
+
+
+to use the weapon, what's the point of
+
+
+even having it, right? Cuz you don't
+
+
+know how to wield these superpowers. I'm
+
+
+going to show you how to wield these
+
+
+superpowers. Okay, so I have Telegram
+
+
+open over here. Telegram is my app of
+
+
+choice. And so when you're setting up
+
+
+OpenClaw, you have to make sure that
+
+
+you're hooking it in with WhatsApp,
+
+
+iMessage. I'm picking Telegram cuz they
+
+
+are big on they're big on privacy. The
+
+
+other thing too is they have these
+
+
+interesting topics that you can add,
+
+
+right? So, what I mean by that is you
+
+
+can have a chat where you can run
+
+
+multiple instances of it and that's
+
+
+actually one of the first ideas I'm
+
+
+going to give you here. So, I made a
+
+
+little chat here called AI squad. And
+
+
+so, within AI squad, I have general
+
+
+assistance, I have personal, I have
+
+
+these different sections over here. For
+
+
+example, I have one here on on SEO. So,
+
+
+you you can see right now, I'm not lying
+
+
+to you. It is literally working within
+
+
+our product. Okay? So, it's it's logged
+
+
+into our our product. It's initiated
+
+
+article for keyword over here. It's
+
+
+analyzing competitors and then it's
+
+
+basically helping us because our focus
+
+
+with clickflow is on creating production
+
+
+grade content for growth purposes more
+
+
+on the SEO side and we call it search
+
+
+everywhere optimization and we just want
+
+
+to make sure that you know the quality
+
+
+is really good right so 43 articles are
+
+
+now in review many are agile related
+
+
+okay um you know five pages need
+
+
+attention okay great so the key thing
+
+
+here is it's it's working and then I
+
+
+actually asked hit I said hey I don't
+
+
+want you to produce content that's
+
+
+cannibalizing content on our website oh
+
+
+he's like okay good point here the good
+
+
+news I'm showing you a couple examples
+
+
+is that the reason why you want to be
+
+
+using open claw, you're like, well, why
+
+
+is this different than, you know, using
+
+
+cloud code or anything like that? Cloud
+
+
+code is amazing. You should check out my
+
+
+videos on that. But this has contextual
+
+
+memory and this is something that's
+
+
+proactive. So, you want to think of it
+
+
+this way. When you think about a person
+
+
+that works on your team or works with
+
+
+you, there are people that literally
+
+
+level zero, they don't point out any
+
+
+problems. They kind of just don't do
+
+
+anything. There's no solutions, you
+
+
+know, they don't they don't even point
+
+
+out the problems, right? Then you got
+
+
+level one, you got people that point out
+
+
+the problems. They just complain all the
+
+
+time. They don't do much, right? Then
+
+
+you have people that they will spot the
+
+
+problem. They'll offer a solution, but
+
+
+they won't do the solution for you. Now
+
+
+the difference is by using Open
+
+
+Clawcloudbot
+
+
+in your hands, it's going to proactively
+
+
+spot problems, it's going to offer
+
+
+solutions and it's going to it's going
+
+
+to continue to solve for you depending
+
+
+on how much permissions you give it,
+
+
+depending on how much how much leeway
+
+
+you give it, right? And more on that in
+
+
+a little bit because you want to make
+
+
+sure you're very careful with this
+
+
+because there there are security
+
+
+concerns with this initially. So my
+
+
+point of this is that this is doing real
+
+
+work over here and it's actually helping
+
+
+me improve on the product. And the thing
+
+
+is the more that I work with it, it has
+
+
+contextual memory. So, it's it's going
+
+
+to it has long-term memory, has
+
+
+short-term memory as well. It's going to
+
+
+remember how I work and then it's going
+
+
+to continue to get better over time.
+
+
+Okay? And that's extremely valuable.
+
+
+Now, if I go over to personal, I
+
+
+actually asked it to make a app over
+
+
+here. And look, let me just show you
+
+
+what I did. I literally took a tweet,
+
+
+this p this person's tweet over here,
+
+
+and he just talked about making a health
+
+
+app. And I'm like, you know what? I
+
+
+spend 400 bucks a month on this this
+
+
+health thing internally. Like, I want
+
+
+something built for me where I don't
+
+
+have to pay that money anymore. Okay?
+
+
+And so, okay, now it's it's it's on it.
+
+
+It's building the foundation now, right?
+
+
+You know, body composition. Here's
+
+
+here's the foundation built. Um, you
+
+
+have a health.md, you know, it's going
+
+
+to I'm going to feed my daily food and
+
+
+workout logs in it. There's going to be
+
+
+percentile tracking. I want to gify to
+
+
+see how I'm beating myself over time and
+
+
+how tracking gets general population and
+
+
+how it works now, right? So, literally I
+
+
+I will tell you like I I do this this
+
+
+thing right now. I'm going to cancel
+
+
+pretty soon, but you know, I can I can
+
+
+sync this in with um you know, my aura,
+
+
+which is my sleep tracking, my function,
+
+
+health numbers, my blood work, uh my V2
+
+
+max, all these different things, right?
+
+
+That's phenomenal. One more thing I'll
+
+
+actually show you is I think from a
+
+
+product angle, maybe not a product
+
+
+angle, maybe general assistance over
+
+
+here. So, okay, what I did was I wanted
+
+
+to figure out and this is something that
+
+
+you should consider too is thinking
+
+
+about okay and and you maybe you can
+
+
+take a screenshot of this but you need
+
+
+to make sure that when you're setting
+
+
+this up that you are making it aware of
+
+
+token awareness, right? So, what I mean
+
+
+is, you know, if a task is going to cost
+
+
+greater than 50 cents, um then it should
+
+
+be asking, hey, this is going to cost,
+
+
+you know, more than 50 cents to do this
+
+
+and because things get expensive. I I
+
+
+was the 10 hours that I spent on this
+
+
+these last two days. I guess probably
+
+
+200 bucks or so. 150 to 200 bucks or so.
+
+
+So, you want to keep in mind too, you're
+
+
+not using Opus the whole the whole time,
+
+
+which is as of this recording is the
+
+
+best anthropic model. Maybe you're using
+
+
+Sonnet or maybe you're using uh Kimmy,
+
+
+which is the the Chinese open source
+
+
+model that came out recently that that
+
+
+that's very good. I chose to go with
+
+
+Sonnet just because I'm already paying
+
+
+anthropic and it's I'm not going to save
+
+
+that much more. Uh the difference
+
+
+between what I had before was I was
+
+
+spending maybe estimated $1,000 to
+
+
+$1,500 a month if I was going to
+
+
+continue to use it this way. now with a
+
+
+sonnet setup is maybe you know it's it's
+
+
+$66 a month or something like that and
+
+
+so if I move to Kimmy I might save $60
+
+
+so it becomes $6 a month so it becomes
+
+
+way cheaper all this stuff is going to
+
+
+become cheaper anyway and I do trust um
+
+
+Enthropic with my data more al because
+
+
+I'm I'm paying them as well versus an
+
+
+open source um Chinese model right now
+
+
+right if I was running it locally I
+
+
+think that'd be a different story so
+
+
+keep that in mind and that's something
+
+
+you need to decide right and so I'm
+
+
+going to come back to some of my my my
+
+
+decisions with the setup too in a little
+
+
+bit but you can see here okay response
+
+
+templates uh leading with outcomes not
+
+
+process and so I want this thing to not
+
+
+just, you know, give me a bunch of word
+
+
+soup. I just wanted to talk about how we
+
+
+how we do things and and talk about the
+
+
+potential outcomes. You know, batching
+
+
+rule, don't make API calls when one will
+
+
+do. Okay, that's a really good one. Code
+
+
+safety, get commit before changes, run
+
+
+tests uh after, never push domain
+
+
+without approval, anti-attern list,
+
+
+especially don't ask clarifying question
+
+
+when context is obvious, right? And so
+
+
+all these things I will say that maybe
+
+
+you're watching this right now, you're
+
+
+like, "Oh my god, I'm not technical. I
+
+
+don't know how to set this up." There
+
+
+are so many videos out there on setting
+
+
+up cloud code and also setting up you
+
+
+know openclaw/cloudbot
+
+
+and I think the most important thing is
+
+
+that you sit in the pain and you
+
+
+understand this stuff cuz I don't know
+
+
+how to code but I do understand systems
+
+
+thinking well and I do understand my
+
+
+business well and I do understand
+
+
+marketing well and so these are all
+
+
+things that if you have these in your
+
+
+head everything's a mindset game you're
+
+
+going to be good. Okay, so these are
+
+
+just a couple examples. And then um the
+
+
+reason I have it set up like this in
+
+
+these different topics is cuz I can
+
+
+continue to chat with it in in different
+
+
+ones, right? And so around product over
+
+
+here is, you know, maybe I might say,
+
+
+you know, I I want you to help me build
+
+
+another feature for Carrot, which which
+
+
+is our LinkedIn account based marketing
+
+
+software or I want you to um I want you
+
+
+to scan kind of what's happening with uh
+
+
+with Carrot, right? And um you know,
+
+
+help me figure out, you know, imbue
+
+
+yourself with the wisdom of the 10 best
+
+
+product people in the world and um you
+
+
+know, rate the product. and I want you
+
+
+to give me ideas that are 95 out of 100.
+
+
+So, you know, that's like a solid A,
+
+
+right? All that to say is the decisions
+
+
+I made here was so when you're setting
+
+
+this up, yes, initially you're going to
+
+
+have to log into the CLI, so the the
+
+
+command line interface. You're going to
+
+
+have to log into your, you know, the
+
+
+terminal. You're going to have to type
+
+
+in a couple commands. There's going to
+
+
+be some some setup required where the
+
+
+things that I want it to do, I'm able to
+
+
+call on this as it relates to my goal.
+
+
+So, whatever you're comfortable sharing
+
+
+should go in here. All right. So, this
+
+
+is me talking to my my bot over here,
+
+
+Alfred. Okay. So, Alfred from Batman.
+
+
+Okay. He even has a little butler hat
+
+
+over here. So, um, Alfred, what I was
+
+
+working with it on it originally was,
+
+
+hey, I want you to again level up the
+
+
+content that we're putting out for for
+
+
+Clickflow, right? And then you can see
+
+
+for ClickFlow, it's a brand new product.
+
+
+And so, for for this year, you know,
+
+
+it'd be nice if we can hit 1.6 million
+
+
+ARR for this new product. Um, probably
+
+
+maybe even more if we can really push
+
+
+the pace on it. But if the content
+
+
+quality is is just levels above, head
+
+
+and shoulders above other people's, I
+
+
+think it can grow even faster than that.
+
+
+And then we want to go kind of probably
+
+
+beyond SEO, too. So, prove Clickflow can
+
+
+publish publishable can produce
+
+
+publishable content within 30 minutes of
+
+
+editing, track conversion impact, right?
+
+
+And so, it has it's it's tracking all
+
+
+these things over here. Document time to
+
+
+publish and quality metrics. Now, you
+
+
+might be wondering from a business
+
+
+standpoint, from a marketing standpoint,
+
+
+okay, you have a lot of goals. You're
+
+
+working with the team. Um, or let's say
+
+
+you're just you're working on a company
+
+
+right now and you report directly to
+
+
+CEO. So, you want these things to be on
+
+
+top of what your metrics are. And so for
+
+
+us, we have our our three-year targets,
+
+
+our, you know, our budget for this year,
+
+
+accountability chart, who owns what
+
+
+exactly, the weekly KPI trends, so to
+
+
+keep the metronome going. And this will
+
+
+tell you if things are off and it can
+
+
+kind of scan around and this I have a
+
+
+lot that's plugged into this locally.
+
+
+Um, you know, my my granola notes, so
+
+
+the notes that I that that take in that
+
+
+happen in my the the meetings that I'm
+
+
+in, right? So that's in there. The gong
+
+
+transcripts, the sales transcripts that
+
+
+we have, the talking to prospects,
+
+
+talking to customers constantly, um,
+
+
+synced in with HubSpot, too. It is
+
+
+synced in with Google Analytics, Google
+
+
+Search Console, right? All these things.
+
+
+Now, key thing that I'll call out over
+
+
+here from a security standpoint is that
+
+
+again, I have this running on a local
+
+
+device and I have a one password vault
+
+
+shared only one vault that that's shared
+
+
+with specific information on access to
+
+
+the these different tools I have. So,
+
+
+I'm not going to give it access to, you
+
+
+know, all the passwords that I have. I'm
+
+
+not going to give it access to my
+
+
+emails. I'm not going to have the login
+
+
+here because prompt injection is a it's
+
+
+a real risk, right? And so, I don't want
+
+
+that to happen. So, am I going to say my
+
+
+security is a 10 out of 10? No. But I
+
+
+also understand that there are no
+
+
+solutions, only trade-offs, right?
+
+
+There's always trade-offs to these
+
+
+things and so I can get things to the
+
+
+best my ability to secure as possible.
+
+
+And I just want to keep that in mind. So
+
+
+I have uh Apple ID for this. I have my
+
+
+own Gmail for this one as well. It has
+
+
+access to its own Gmail, too. And um you
+
+
+know, again, it's it's set up right next
+
+
+to me, this little Mac Mini. I will say
+
+
+one more thing, too. You don't need to
+
+
+necessarily buy a new monitor. If you
+
+
+have an iPad, for example, literally all
+
+
+I did, and maybe I'll just show you
+
+
+right now, is um you can see over here,
+
+
+here's the iPad, right? And this little
+
+
+USBC uh cord over here is hooked in with
+
+
+my Mac Mini. Okay? And so I I downloaded
+
+
+an app called Yam Display. And literally
+
+
+all I did once you set up your your you
+
+
+have to set it up on a normal computer
+
+
+first and then get the Yam Display app
+
+
+for your Mac and then get it for your
+
+
+iPad. And then after that, it's pretty
+
+
+seamless. You just kind of plug it in
+
+
+and then the the keyboard works over
+
+
+here, the mouse works over here. It's
+
+
+great. I didn't expect it to. So
+
+
+originally like I was I was using my
+
+
+studio display to set it up and then I
+
+
+kind of just plugged it in. And that
+
+
+happened actually, you know, a couple
+
+
+hours ago or something. Now it knows
+
+
+your goals. It knows your context. It's
+
+
+going to get better with you. What I
+
+
+will say is, okay, what are the daily
+
+
+cron jobs that are happening? Okay, so
+
+
+you know, 7:30 a.m. daily strategic
+
+
+digest, okay? Calendar urgent items,
+
+
+high max high leverage ideas. So I'm
+
+
+looking for high leverage ideas and it's
+
+
+connected to all the connections I have
+
+
+from a deal manufacturer standpoint,
+
+
+right? And what that means is it's going
+
+
+to look at, oh, it knows, you know,
+
+
+we're trying to grow grow a carrot
+
+
+faster, single grain faster, click flow
+
+
+faster. Okay, the deal of the day that's
+
+
+interesting to you, you should talk to
+
+
+this person over here. And I looked at a
+
+
+couple of the the outputs and like I was
+
+
+like, that's pretty good. like one of
+
+
+the persons people that recommended we
+
+
+connect with we have connected with
+
+
+recently we actually made the hire
+
+
+recently too um and so it was it was
+
+
+spot on. I'll tell you you might
+
+
+thinking that you might be thinking that
+
+
+this is not that useful. I will tell you
+
+
+using this type of um workflow I was
+
+
+able to book a meeting a couple like
+
+
+actually what two meetings with um truly
+
+
+me plus companies um and that that they
+
+
+are now leading to other things. I'll
+
+
+just leave it at that right and so if
+
+
+sales is your thing or marketing is your
+
+
+thing this is something to consider.
+
+
+Select look at this deal of the day. One
+
+
+S tier contact opportunity with outreach
+
+
+template ready to send. So it noted when
+
+
+I when I connected with this person what
+
+
+the angle was and it also gave the
+
+
+outreach as well. And the outreach was
+
+
+pretty damn good. Okay. Now we'll
+
+
+continue over here. X/ Twitter radar
+
+
+three to five relationship opportunities
+
+
+to engage with. Right. Car target
+
+
+research five B2B target companies with
+
+
+decision makers and angles. Uh ClickFlow
+
+
+competitive intel. Uh so Clickflow
+
+
+competes with um you know Surfer Aerobs
+
+
+Clear Scope and we I we we know all
+
+
+these people and they're they're all
+
+
+great. Um but you know there's the the
+
+
+proliferation of software now right
+
+
+means that um taking a look at what
+
+
+people are building and then deciding
+
+
+what we want to do um internally. Um and
+
+
+then YouTube four on four ideas. So this
+
+
+was taken from u one of the YouTube
+
+
+frameworks that we learned in terms of
+
+
+you know five to 10 content ideas um
+
+
+from the top creators in my niche and we
+
+
+want four examples four proven examples
+
+
+and then like similar types of examples
+
+
+that have worked in the last four months
+
+
+or so right and these are you know
+
+
+silent things that are happening you
+
+
+know um behind the scenes. All that to
+
+
+say is that this is your internal
+
+
+command center that is very proactive
+
+
+with you. And I am also being
+
+
+restrictive in terms of what I'm letting
+
+
+it do right now. So you can let it yolo.
+
+
+You can let it do whatever it wants. And
+
+
+you see people on X talk. Oh my god, it
+
+
+built its own, you know, voice agent.
+
+
+Oh, it started drawing a picture of
+
+
+itself. Um, you know, started talking to
+
+
+me through voice. It can do all those
+
+
+things. Okay. The only thing is I don't
+
+
+want it to just kind of freely just go
+
+
+around the internet and and doing
+
+
+whatever it wants right now. I want it
+
+
+to I want it to prove itself to me. Just
+
+
+think of it as you're hiring an
+
+
+employee, you're working with someone
+
+
+new, trust must be earned, right? And
+
+
+you know, until I feel like I can trust
+
+
+it completely. And by the way, like it's
+
+
+it's um it's not like it's it's
+
+
+sentient, right? It's kind of just
+
+
+logging on every day and running the
+
+
+same uh it's running jobs and building
+
+
+on on on context, right? So, you got to
+
+
+set it up correctly there. Real quick,
+
+
+if you want to acquire customers faster
+
+
+and more efficiently this year with the
+
+
+latest strategies and tactics, then
+
+
+check out singlein.com. That is my ad
+
+
+agency. Again, www.singlegrain.com.
+
+
+check it out and if it seems like a fit,
+
+
+we'll get in touch and help you with a
+
+
+free marketing plan. Okay, so a couple
+
+
+things when it comes to setup, you want
+
+
+to make sure that you are not spending
+
+
+as much on from a token standpoint
+
+
+because again it can get very expensive
+
+
+very quickly. So this is from Benjamin
+
+
+Decracker and he's like made some
+
+
+adjustments based on lessons learned
+
+
+combined roughly 200 to 400 times
+
+
+cheaper heartbeat operation. And so
+
+
+heartbeat is just like you're you're you
+
+
+can have it running these jobs in the
+
+
+background every 30 minutes or so, every
+
+
+hour or so, whatever it is exactly. So
+
+
+um you can see here originally he was
+
+
+using Opus which is the most expensive
+
+
+model right now and then now he's using
+
+
+Kimmy which is much cheaper right
+
+
+interval for the heartbeat was every 30
+
+
+minutes now it's 1 1 hour and then um
+
+
+24/7 it's on right this one it's it's 14
+
+
+hours a day and then the the cash but 5
+
+
+minutes over to 60 minutes so 200 to 400
+
+
+times cheaper 12 times less fewer
+
+
+rewrites um an hour savings uh model
+
+
+savings and all these things and so I
+
+
+ran this and basically look I just took
+
+
+a screenshot of this and I dumped it
+
+
+into Telegram and so I installed
+
+
+Telegram onto I have it on I have it on
+
+
+my iPad. I have it on my desktop as
+
+
+well. So, I can control this thing from
+
+
+wherever in the world. And so, it's
+
+
+running locally on my computer. Okay.
+
+
+So, this this type of thing is going to
+
+
+save you a ton of money. All right. And
+
+
+the next thing is I use this to um from
+
+
+Alex Prompter to level up, you know,
+
+
+some of the things over here. So, always
+
+
+estimate token cost, which is what you
+
+
+saw earlier for task, you know, greater
+
+
+than 50 uh 50 cents. Ask permission
+
+
+first, batch some operations, uh
+
+
+security boundaries, communication
+
+
+style, core capabilities. So, these are
+
+
+all rules that you want to set in place
+
+
+because it's it's going to continue to
+
+
+refer to these rules over time. You're
+
+
+better off getting this right initially
+
+
+so you don't end up getting burnt. And
+
+
+this is again why people are like, "Oh,
+
+
+you know, it's it's it's overhyped. The
+
+
+security risk is too much." Well, like
+
+
+when are you actually going to do
+
+
+something? Anyway, that's for another
+
+
+video. Okay. So, then we come over here
+
+
+and this is from Bill, but this is a
+
+
+multiple Telegram threads with your open
+
+
+clause and bit unlock. And so, when I
+
+
+use cloud code, for example, I have
+
+
+multiple tabs open, right? And you have
+
+
+it running and running different things.
+
+
+And so, I did this today. Okay. So, set
+
+
+up a Telegram group, enable topics which
+
+
+allow you to create these different
+
+
+groups which you saw earlier. I had a
+
+
+product one, an SEO one, a social media
+
+
+one. It's just like, oh, Bill and
+
+
+Jarvis, right? So, I'm just working with
+
+
+it within each one. I'm just tagging it
+
+
+saying, "Hey, like I need your help on
+
+
+the SEO stuff over here. I need your
+
+
+help on the social stuff." All that to
+
+
+say is is this is just the very
+
+
+beginning, but I'm having it work in
+
+
+parallel processes right now. And you're
+
+
+able to just get a lot more done that
+
+
+way, right? I would actually prefer to
+
+
+probably work on a desktop, the desktop
+
+
+version of Telegram, cuz working on your
+
+
+phone, it's it's it's tough, right? or
+
+
+even my iPad with the keyboard like I
+
+
+think you're going to be more effective
+
+
+that way. Now the other thing here is um
+
+
+just what I mentioned earlier it's very
+
+
+token hungry and and you want to be more
+
+
+cost- effective with it. So open router
+
+
+actually allows you it routes simple
+
+
+tasks like heartbeats and status checks
+
+
+to cheaper models. So you can actually
+
+
+make this go from what I was mentioning
+
+
+earlier. So you can Kimmy will make it
+
+
+cheaper but if you use this it'll
+
+
+actually bring your cost down from like
+
+
+$60 a month to like I don't know $6 a
+
+
+month or something like that. So this is
+
+
+part of it and I would just recommend
+
+
+that you're you're looking at everything
+
+
+across the board and sometimes I'll just
+
+
+ask I'll take a screenshot and say hey
+
+
+like we've built a lot of things already
+
+
+like how necessary is this right now
+
+
+because again I'm not a technical person
+
+
+so claude or enthropic whatever model
+
+
+you're using codeex right they will
+
+
+teach you or it will teach you what you
+
+
+need to know and understand kind of the
+
+
+trade-offs and and that's very important
+
+
+you should be always asking what are the
+
+
+trade-offs here and not just kind of
+
+
+blindly accept everything which
+
+
+entrepreneurs like myself have a have a
+
+
+propensity to kind of accept everything.
+
+
+The next one I want to call out is from
+
+
+um the founder of Shopify, Toby. So he
+
+
+has a thing called QMD over here, which
+
+
+basically makes it a lot faster to
+
+
+search your entire database. Let's just
+
+
+put it that way, right? So your meeting
+
+
+notes, whatever knowledge base. And so
+
+
+if I have my granola notes, if I have
+
+
+HubSpot data, I have, you know, all by
+
+
+the way, it's ingested all of my
+
+
+podcasts from all the years, my YouTube
+
+
+stuff. Um and it's going to every week
+
+
+it's doing the crown job updating on the
+
+
+most recent content. And then imagine
+
+
+this, if you have a second brain of
+
+
+myself, it can go around actually
+
+
+coaching people too. And then it can
+
+
+learn to make decisions like myself as
+
+
+well. And so this is getting scary good,
+
+
+but there's a lot of these upgrades that
+
+
+you should consider adding. Um, that's
+
+
+why I'm showing you this stuff right
+
+
+now. Even um there's certain like could
+
+
+because it pulls from my GitHub, it's
+
+
+also important for you to kind of look
+
+
+at, you know, different skills you can
+
+
+add too. So Corey Haynes has these
+
+
+really good um these these marketing
+
+
+skills. And so if you just search like
+
+
+by the way Toby Toby T O BI QMD um get
+
+
+you should be able to find this. Um and
+
+
+then if you search for Corey Haynes 31
+
+
+marketing skills you can pause this
+
+
+video at this section if you want. Um
+
+
+but you know you can even look at the
+
+
+different skills that he has. So look
+
+
+you can do AB test you can do form CRO
+
+
+onboarding CRO page CRO all these things
+
+
+and you can upgrade these skills if you
+
+
+want which is what we're doing
+
+
+internally at at my ad agency Single
+
+
+Rain. we're updating these skills
+
+
+because the the future that I'm seeing
+
+
+and this will kind of um this will
+
+
+hopefully make you excited is um you
+
+
+know you're going to have these AI
+
+
+assistants helping you or these uh open
+
+
+claws, let's just call them claws or
+
+
+you're going to have many Alfreds, let's
+
+
+call that, right? You're going have many
+
+
+butlers helping you um do these tasks
+
+
+that to be frank you shouldn't be doing
+
+
+nor should your team be doing. And um
+
+
+you know what we're going to be doing is
+
+
+at least I'm kind of declaring it right
+
+
+now is is you know my team's going to
+
+
+you know they're going to have these
+
+
+Alfreds assisting them. And the way I
+
+
+see this is that Cloudflare actually
+
+
+came out with these programmatic SEO. So
+
+
+this is one of the skills, right? You
+
+
+can see initial assessment, okay, unique
+
+
+value per page, proprietary data wins.
+
+
+This actually starts to ask you
+
+
+questions on, hey, what is your website?
+
+
+What are you trying to do exactly? What
+
+
+are the goals exactly? And then this is
+
+
+um these are the the playbooks. These
+
+
+are the templates that work for
+
+
+programmatic SEO. And so again, you can
+
+
+you can take this and and build on it,
+
+
+right? This is the the the checklist
+
+
+over here. But things are going to
+
+
+become a lot more predictable. and then
+
+
+you have a human in the loop to finish
+
+
+off the last you know 10 15 20% or so
+
+
+the the last mile that is how you want
+
+
+to think about work you don't want to
+
+
+think about work in terms of just tasks
+
+
+in the future or you you want to think
+
+
+about work as evolving tasks and more
+
+
+importantly you want to be thinking
+
+
+about the purpose of the work that
+
+
+you're doing also the purpose of the
+
+
+work that people on your team are doing
+
+
+too because because that's changing
+
+
+rapidly and you want to bring people
+
+
+into this new world to get them to
+
+
+reimagine how they think about things
+
+
+right because you know initially getting
+
+
+set up with cloud code I mean that was
+
+
+literally a month ago okay cloud code
+
+
+and then you know I saw more chatter
+
+
+people talking about clawbot now now
+
+
+called openclaw right and the chatter
+
+
+got got higher and higher everyone
+
+
+started buying these Mac minis I'm like
+
+
+okay I I got I got to get on this right
+
+
+and that was I mean that that all
+
+
+happened within four weeks of each other
+
+
+okay then the world is just changing so
+
+
+quickly it feels like years are
+
+
+happening within weeks right now and let
+
+
+me tell you the most exciting thing that
+
+
+is interesting to me okay so Cloudflare
+
+
+so publicly traded company they are you
+
+
+know content delivery network for all
+
+
+intents and purposes but they do care
+
+
+about enterp Enterprise Security and
+
+
+they're a company that you can you can
+
+
+trust, right? Because a lot of people
+
+
+have tried to hack, you know, Cloudflare
+
+
+in the past. So, Molt Worker is a
+
+
+middleware worker. So, by the way,
+
+
+Claude, okay, it was called Claudebot
+
+
+and then they changed it to Molbot and
+
+
+then now it's called Open Claw. So, it's
+
+
+changed a couple times. Okay, this is
+
+
+designed specifically for OpenClaw. So,
+
+
+mo worker is a middleware worker and
+
+
+adapted scripts that allows running mult
+
+
+sandbox SDK uh software development kit
+
+
+and our developer platform API. So, you
+
+
+can self-host an AI personal assistant
+
+
+without any new hardware. So, what how
+
+
+I'm thinking about this right now is I'm
+
+
+I'm going to have a local version that's
+
+
+just focused on on on me. That's my
+
+
+chief of staff. And I might have more
+
+
+local versions. That's fine. But for my
+
+
+team, because they don't need to have
+
+
+that much, they don't need to go that
+
+
+deep. I don't need to give them all that
+
+
+data. I could have a one of these
+
+
+workers just for the SEO team, one just
+
+
+for the paid media team, one just for
+
+
+the sales team, one for the ops team.
+
+
+Okay? And then by the way, it might
+
+
+train off of my it will continue to
+
+
+train off of my uh my base knowledge and
+
+
+kind of what I'm seeing um and then give
+
+
+feedback on things. And I might not be
+
+
+right all the time. In fact, I'm wrong
+
+
+many times, right? But this allows me to
+
+
+be in multiple places. And this also
+
+
+lets me see kind of decisions that we're
+
+
+making across the board on on different
+
+
+teams. And so, you know, in my mind, I I
+
+
+think this is going to help, you know,
+
+
+there's going to be these um kind of
+
+
+squad leaders um these squad AI Alfreds
+
+
+for different teams. And then I think
+
+
+they're going to be managing um you know
+
+
+Alfreds below them, right? So we're
+
+
+talking about agent on agent on agent
+
+
+and this is this is real autonomous work
+
+
+and um that's how I see it right now.
+
+
+Right? So again you're going to have a
+
+
+local setup like the you know Mac mini
+
+
+um and the reason why I chose the Mac
+
+
+mini and not the VPS is because VPS like
+
+
+with with you know people talk about
+
+
+open cloud like there are huge security
+
+
+vulnerability vulnerabilities right now
+
+
+that people aren't paying attention to.
+
+
+So imagine if if all your personal data
+
+
+is being leaked out there um or you know
+
+
+sensitive you know whatever other other
+
+
+stuff that you have um that is not a
+
+
+good thing right and so you want to do
+
+
+whatever you can and and work with your
+
+
+u your open claw instance and your your
+
+
+assistant just ask hey what else can we
+
+
+do to bolster security and just
+
+
+understand that there will be trade-offs
+
+
+right that's what I would say okay so I
+
+
+want to tie this all together now so I
+
+
+just mentioned you know why it's useful
+
+
+this the specific uses gave you a couple
+
+
+examples too I'd show you a couple
+
+
+things I would recommend re-watching
+
+
+this video because there's a lot
+
+
+examples scattered within here, right?
+
+
+But let me just I'll make it simple for
+
+
+a second. Then I'll go go through what's
+
+
+on the screen. So, I would prefer
+
+
+setting it up locally, which is why I
+
+
+got a Mac Mini. Okay. Number two, you
+
+
+want to make sure that you are setting
+
+
+up for your local device its own Gmail
+
+
+account, its own Apple ID, and you want
+
+
+to make sure that it only has if it has
+
+
+access to things, it only has access to
+
+
+specific segments of it. So, again, I
+
+
+didn't give it access to all of my my
+
+
+password uh manager, you know, folders,
+
+
+right? I only gave it access to one
+
+
+specific thing. and and you know you
+
+
+have to learn how to set that up. The
+
+
+other thing I'll say too is you decide
+
+
+how much context that you want to give
+
+
+it depending on your goals and you
+
+
+should you know work on building trust
+
+
+with it gradually and not try to just
+
+
+yellow everything. The other thing I'll
+
+
+say too is if you're going to try to set
+
+
+it up on on an iPad just make sure
+
+
+you're setting up on a normal monitor
+
+
+and then on an iPad you can download Yam
+
+
+Display and that will allow you to
+
+
+that's Yam Yam Display and it will allow
+
+
+you to kind of just work with everything
+
+
+on the iPad and again I I have the
+
+
+keyboard and you can use the mouse on it
+
+
+too and it's it's great. And then I
+
+
+would say really you want to be scouring
+
+
+X and just seeing what people are
+
+
+talking about and just bookmarking a ton
+
+
+of things. That that's what I've been
+
+
+doing, right? From a security angle.
+
+
+What can I do to save on tokens? What
+
+
+can I do to make it more secure? What
+
+
+can I do to make it more efficient in
+
+
+terms of working with me? And you want
+
+
+to make sure that you you ask it to be
+
+
+proactive with you, right? And so when
+
+
+you're setting it up, it has actually a
+
+
+soulm so sou.md where it has its own
+
+
+personality. U there there are a handful
+
+
+of things that you want to set up. The
+
+
+the soul of it, you know, the the
+
+
+memory, the the long-term memory, the
+
+
+short-term memory. You want to make sure
+
+
+that it's it's not just waiting to be
+
+
+told what to do that it's it's proactive
+
+
+with you right and I would say again I
+
+
+chose to go with telegram and then you
+
+
+know you saw the different groups that I
+
+
+use kind of work with it in parallel and
+
+
+then we use opus but then originally I
+
+
+was using opus by itself and then but
+
+
+that was too expensive and so you want
+
+
+to have it be smart in terms of using
+
+
+the lower cost models in other areas
+
+
+especially when they're like repeating
+
+
+tasks where they maybe don't need to you
+
+
+know put all that thinking power behind
+
+
+it right and a lot of these you know
+
+
+token costs are going to are going to
+
+
+come down over time so uh what I have on
+
+
+my screen over here this is from this by
+
+
+Banu. And so Banu, he has this mission
+
+
+control and you can see these are all
+
+
+the agents that he has. So Banu is over
+
+
+here and then he has you have Friday,
+
+
+the developer agent. You have Fury, the
+
+
+customer research agent. Jarvis, the
+
+
+squad lead. Um, so my squad lead is is
+
+
+Alfred. You have Pepper for email
+
+
+marketing. Each one of these has a
+
+
+personality. So I highly recommend
+
+
+searching for his uh post on mission
+
+
+control. If you just search for like
+
+
+Banu B Hu Mission Control X, you should
+
+
+be able to find it. At least in Grock,
+
+
+you should be able to find it. There's a
+
+
+SEO analyst designer documentation.
+
+
+Okay, so look, he's got 10 agents or 11
+
+
+agents here working with him. And this
+
+
+is almost like a it's a combine board
+
+
+over here. Inbox, assign, in progress,
+
+
+review. And so he can see he can see
+
+
+them all working. Okay. I already was
+
+
+thinking about this over the weekend
+
+
+until I stumbled across this post. I was
+
+
+like, "Okay, if I have one main leader
+
+
+and they're they're coordinating the
+
+
+other ones." This is literally the the
+
+
+org charts that you saw where it's like
+
+
+one agent managing sub agent, sub agents
+
+
+managing sub agents. It just goes more
+
+
+and more and more. This is happening
+
+
+right now. I I I thought we're a couple
+
+
+years out from that, but it's happening
+
+
+right now. And so again, people that say
+
+
+it's overrated or security issues or
+
+
+whatever. Yes, security issues.
+
+
+Definitely not overrated, but as long as
+
+
+you're careful with how you go about
+
+
+these things, I I just think if you
+
+
+don't if you don't actually use it from
+
+
+a for a money-making context, I just
+
+
+think you're being lazy. I'm sorry. I'm
+
+
+not even sorry, actually. Like, I just
+
+
+think you're being lazy. And so, that's
+
+
+why I made this video. Like, I I'm like,
+
+
+you can see the excitement. Like, for me
+
+
+to spend, you know, 10 hours of my
+
+
+weekend on it, I feel like it's be like
+
+
+with cloud code, things have become way
+
+
+more fun with work. I think with this,
+
+
+oh my god, it's like a step change even
+
+
+above that, right? So, I would say you
+
+
+just want to be careful here because I'm
+
+
+going to I'm probably going to set up
+
+
+two of these agents, one for SEO, one
+
+
+for social initially, and then I'll
+
+
+think about and then I'll work with
+
+
+Alfred. So, maybe I'll have like three
+
+
+of these to to work with initially. I I
+
+
+think there's a lot of things that we
+
+
+could be doing better u from an SEO
+
+
+angle just to improve click flow. But on
+
+
+a social angle in terms of repurposing
+
+
+my content and things like that, I think
+
+
+there's a lot more we can do. And so, if
+
+
+I can make these u magical clippers and
+
+
+social media distributors, uh that's
+
+
+going to be great, right? So, just look
+
+
+at all the crazy stuff that can happen
+
+
+here. They're they're kind of commenting
+
+
+and they're interacting with each other.
+
+
+They're talking to each other. So, to
+
+
+me, I think this is very exciting. And
+
+
+that being said, let me know what you
+
+
+think in the comments. And if you
+
+
+haven't really experienced Cloud Code
+
+
+yet, you want to check out this video
+
+
+over here on why Cloud Code will make
+
+
+you a boatload of money on top of Open
+
+
+Cloud. See you there.

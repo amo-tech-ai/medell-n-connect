@@ -1,0 +1,1315 @@
+What's going on guys? Rich Rice here and
+
+
+I want to share with you today what I am
+
+
+doing with Open Claw. It is for real
+
+
+estate. So, you've probably been seeing
+
+
+a lot of people talking about it and a
+
+
+lot of software developers and stuff
+
+
+like that talking about it, but I'm
+
+
+using it for my real estate business and
+
+
+it is absolutely insane. It is crazy. I
+
+
+have so many use cases that I've already
+
+
+used it for. I've only been launched a
+
+
+week and a half ago. I'm on my second
+
+
+week and the things that it has done
+
+
+already have been absolutely insane. So,
+
+
+I didn't like have a plan for this
+
+
+video. I just wanted to talk about it
+
+
+because it's so freaking cool and I'm so
+
+
+excited about what it can do and what
+
+
+it's already done and kind of what I
+
+
+already have planned. So, this video is
+
+
+really raw. I didn't even set up my
+
+
+green screen. I didn't even set up like
+
+
+I barely even loaded in the recording
+
+
+software to do this. There's probably
+
+
+spaghetti sauce on my shirt from my kid
+
+
+from lunch earlier. Uh, like I said, I
+
+
+just I feel like I need to get this out
+
+
+of me before I'm going to explode
+
+
+because I'm like that excited about. So,
+
+
+I'm not going to really dive into like
+
+
+what OpenClaw is. There's thousand other
+
+
+videos for how to do that or whatever,
+
+
+but I'm just going to go into how I use
+
+
+it for real estate. So, first and
+
+
+foremost, I feel like this is augmenting
+
+
+me. I'm just trying to make things
+
+
+easier on myself. And I'm not even
+
+
+joking. Like in the last two weeks, less
+
+
+than two weeks that I've been using
+
+
+this, there's things and projects and
+
+
+stuff that I've done with this thing
+
+
+that I've wanted to do for years that it
+
+
+literally did in 30 seconds. Not even
+
+
+exaggerating. I mean, it took me maybe
+
+
+30 minutes to set some of the skills up,
+
+
+but then it actually did I wanted it to
+
+
+do in less time than you've been
+
+
+watching this video already. It's
+
+
+insane. So, so I have it doing all kinds
+
+
+of stuff. I'm just going to kind of read
+
+
+through a list that I had it make. I
+
+
+didn't even make this list myself. This
+
+
+is just I just asked it purely like you
+
+
+know I'm gonna make a YouTube video.
+
+
+What have we done for the last two
+
+
+weeks? So I've updated my CRM and deal
+
+
+pipeline. I'm going to go through some
+
+
+of these a little bit more. I've got it
+
+
+doing triaging and going through all of
+
+
+my emails. All four different Gmail
+
+
+accounts that I have including
+
+
+everything that's linked to those
+
+
+Gmails. So my calendar, my tasks. I have
+
+
+been working on building automated
+
+
+content and email marketing to my real
+
+
+estate club. that has always been a huge
+
+
+thorn in my side for trying to get
+
+
+weekly emails out of like what's going
+
+
+on in the club and what's coming up next
+
+
+and all of that stuff and starting to
+
+
+automate that process. How I'm working
+
+
+through like some of the knowledge and
+
+
+like memory issues that is inherent in
+
+
+Open Claw and getting it to recall
+
+
+things and do it properly. Then also
+
+
+building like a knowledge base of stuff
+
+
+that I'm feeding it either stuff that
+
+
+I've written in the past or stuff that I
+
+
+have from other people that I want to uh
+
+
+use in my decision-m as far as looking
+
+
+at deals and stuff like that. And then
+
+
+like it also learns my preferences like
+
+
+in real time. So Google Workspace how
+
+
+I'm dealing with some of the
+
+
+infrastructure and security. I do have
+
+
+it on my own Mac Mini uh that's sitting
+
+
+right here on my desk. I decided to silo
+
+
+it off that way and it has its own it
+
+
+has its own Gmail account to do all the
+
+
+things that it needs to do. So I have it
+
+
+all siloed off of that. It doesn't get
+
+
+access to any of my direct access like
+
+
+through a password or anything to any of
+
+
+my stuff other than its own email. And
+
+
+then everything else is done through the
+
+
+API with like nightly security checks
+
+
+and stuff like that. So it is connected
+
+
+fully to my Slack. You'll see a lot of
+
+
+videos people talking about Telegram and
+
+
+WhatsApp and Discord. I already I've
+
+
+been a huge power user of Slack for
+
+
+years. I've literally had my entire
+
+
+business in Slack and it's been that way
+
+
+for at least five years. And if you work
+
+
+for me, you probably know or you've done
+
+
+a project with me. I'm super like
+
+
+militant about Slack. I don't text
+
+
+anything. It's all goes in Slack. If you
+
+
+text me, I I tell you to put it in
+
+
+Slack. So being that that hard on Slack
+
+
+over the years has definitely paid off
+
+
+because now OpenClaw has a full access
+
+
+to my Slack and can look at everything
+
+
+that everybody's been doing for five
+
+
+years plus and do that. So social
+
+
+content and tools I've got it connected
+
+
+to Trello for Trello. I've got it I'm
+
+
+working on connecting it to Opus to do
+
+
+some of that stuff and connected to X
+
+
+and I've been trying to connect it to
+
+
+Facebook. I'm running into a little bit
+
+
+of a roadblock there because I use my
+
+
+personal Facebook instead of like a
+
+
+professional Facebook. So, even though I
+
+
+have professional on my Facebook, but
+
+
+Facebook isn't letting you see as much.
+
+
+Anyways, and then as far as like my
+
+
+agents, I have 10 at the moment. So, I'm
+
+
+going to go into some of that a little
+
+
+bit more. And then the two things that I
+
+
+have that are really like well three
+
+
+actually. So, one, I have a basically a
+
+
+I have it shadowing my accountant, my
+
+
+bookkeeper at the moment and learning
+
+
+from everything that they do so that
+
+
+eventually they can augment them. And
+
+
+then I also have it shadowing my virtual
+
+
+assistant and following their tasks and
+
+
+what it can do to help out. So, and then
+
+
+I also the cool thing for like real
+
+
+estate investor on the real estate
+
+
+investing side, I have it crawling
+
+
+Zillow looking for leads and then it
+
+
+goes through a whole workflow that so
+
+
+yeah. So that's kind of the intro. I'm
+
+
+going to jump in here a little bit on So
+
+
+like this talk about that a little bit
+
+
+more. The deal pipeline. So I have
+
+
+multiple agents. Well, I guess I'll talk
+
+
+about my agents first. So I have
+
+
+multiple agents and I have a lot of
+
+
+windows open here and I'm going to go
+
+
+find the board. But anyways, I'll just
+
+
+look at Slack. So each agent has its own
+
+
+channel in Slack. I have my main one.
+
+
+His name's Gyro named after the
+
+
+Ducttales. for you DuctTales fans out
+
+
+there, named after the inventor on
+
+
+DuctTales. So, he's my he's my like
+
+
+commander. He's my my chief of staff
+
+
+basically. He tells and runs all the
+
+
+other sub aents. It tells him what to
+
+
+do. I pretty much just talk to him only
+
+
+and then the other agents spin up what
+
+
+they need to do. So, I have I then I
+
+
+have Angela who's my deal finding bot
+
+
+named after my mom actually who's a real
+
+
+estate agent. So, and then I have
+
+
+Goliath, who is my ops guy, and
+
+
+Gargoyles fans out there, he's the he's
+
+
+the main man there. So, he's my he's my
+
+
+my bouncer, my security guy, which I
+
+
+think it was I think it was Brooklyn who
+
+
+was the bouncer in Gargoyles. But
+
+
+anyways, it's Goliath. He's my ops guy.
+
+
+He's in charge of making sure
+
+
+everything's straight and working. I got
+
+
+Hermes, who's my comm's guy and my comms
+
+
+bot basically. and he handles he's in
+
+
+charge of like all the calendars and
+
+
+email and some of that stuff. And then I
+
+
+have Homer. Homer is my is my
+
+
+copywriting bot. So Homer named after
+
+
+the poet or the writer, the Odyssey and
+
+
+all that, not the not the Simpsons
+
+
+character, but he handles all my copy.
+
+
+Um I have Neo who is plugged into my CRM
+
+
+system. So go high level and his job is
+
+
+to basically like read the matrix and
+
+
+manipulate it at will to do what we need
+
+
+to do. I have Scout who's going through
+
+
+all of he's in charge of YouTube and
+
+
+social media and all that. He's scouting
+
+
+out potential topics, posts, trending
+
+
+stuff, articles, all that good stuff.
+
+
+And then I have Scribe. Scribe is his
+
+
+job. I got to give him a name. I got to
+
+
+give Scribe and and Scout a name. But
+
+
+Scribe is he's in charge of the journal.
+
+
+So, he's in charge of all the memory and
+
+
+dealing with some of those memory issues
+
+
+and all of that. And then I have
+
+
+Scrooge. Scrooge is in charge of the
+
+
+money bin. He's the CFO. Another
+
+
+Ducttales reference there. As you can
+
+
+tell, I like DuctTales a lot as a kid.
+
+
+And then, so he's in he's in charge of
+
+
+all of it. He has a QuickBooks online
+
+
+integration, so he can read all the
+
+
+books, do all that, and he's the one
+
+
+that's sitting there shadowing the my
+
+
+bookkeeper at the moment and learning
+
+
+from all that. So, he's the CFO
+
+
+basically. And then I have last but not
+
+
+least, I have Spock. And Spock is the
+
+
+logic guy. And Spock is in charge of
+
+
+analyzing all of the deals that are
+
+
+going through these pipelines, running
+
+
+the numbers, and doing all of that. So,
+
+
+and didn't set this up to be able to
+
+
+share screen at the moment, so I can't
+
+
+show you guys any of this. I'm just kind
+
+
+of talking through it. In a later video,
+
+
+maybe I'll get my tech dialed in here to
+
+
+be able to show you guys some of this
+
+
+stuff more. But so anyways, that's kind
+
+
+of the gist of what I'm got going on at
+
+
+the moment as far as that like diving in
+
+
+a little bit more on the So like of
+
+
+things that like I did in
+
+
+minutes of stuff that I've wanted to do
+
+
+for years. So like again, one of the
+
+
+biggest ones is like is the CRM. So for
+
+
+GoHigh Level, I'm not a Gohigh Level
+
+
+expert. I just know it's very powerful.
+
+
+And so already uh I knew my tags were a
+
+
+mess in CRM in my I knew the tags were a
+
+
+problem. And so I I plugged I plugged
+
+
+this in and plugged OpenClaw into
+
+
+plugged gyro into the CRM system. I gave
+
+
+built Neo who's my CRM one. He focused
+
+
+on that and I just asked it that reverse
+
+
+prompting. I just literally asked it
+
+
+like hey here's my here's my CRM. Like
+
+
+what can we do? And it told me that the
+
+
+tags were a mess. let's clean them up.
+
+
+Gave me some suggestions and I
+
+
+literally, like I said, once I told it
+
+
+to go, it took 30 seconds for it to come
+
+
+back and say, "All right, they're all
+
+
+fixed." So now I have tags of members
+
+
+that are tagged properly, member tiers
+
+
+that are tagged properly. I had a lot of
+
+
+old tags that were just kind of sitting
+
+
+there from days when I was on a
+
+
+different CRM system that just got
+
+
+imported at a go high level and they
+
+
+were just stuffing stuff up. So it
+
+
+cleaned all that up almost instantly.
+
+
+The email is crazy. like having it
+
+
+hooked up to my four Gmail accounts is
+
+
+absolutely a game changer. I literally
+
+
+like just today just I got this set up
+
+
+last night that well it was probably a
+
+
+couple days ago but like really started
+
+
+going like ham on it last night and gave
+
+
+it access to tasks my calendar all of
+
+
+that and today it just told me that just
+
+
+having like one one day of it fully
+
+
+operating and loading basically loading
+
+
+looking through all the emails and then
+
+
+loading everything into tasks into my
+
+
+Google tasks as far as like to review
+
+
+and stuff and already caught stuff that
+
+
+was getting under the radar. I had a I
+
+
+had a house that had a pass due utility
+
+
+bill. I never even saw that email. I
+
+
+don't even know where it was to be
+
+
+honest with you, but it was in there on
+
+
+my task and I took care of that. It was
+
+
+like the one property that wasn't on
+
+
+autopay because I just had a tenant
+
+
+move. So, so it caught that which was
+
+
+cool. And then I had got an email from
+
+
+my ADU uh designer like 5 days ago about
+
+
+a new project. Totally missed that
+
+
+email. It told me about that in the
+
+
+task. So, that was cool. And then what
+
+
+was really awesome, I actually use
+
+
+EarthClass mail as a digital as a
+
+
+digital inbox where it scans all my mail
+
+
+and stuff like that. And found this was
+
+
+it. There was like 15 things in there of
+
+
+like they were charging me storage fees
+
+
+on this like random junk mail that like
+
+
+didn't have my name on it or whatever.
+
+
+And so apparently there was an email
+
+
+telling me this at some point, but again
+
+
+I missed that email. And they caught
+
+
+that and I don't even know what they
+
+
+were charging me. Probably a few bucks a
+
+
+month that I've been paying for who
+
+
+knows how long. And so went in and
+
+
+deleted all those, shredded all those
+
+
+and so those are gone. So that was just
+
+
+like that was just today like three
+
+
+things that I was like awesome and that
+
+
+I was spending money on. So like
+
+
+literally like saved me money already
+
+
+like I said. So the Slack integration's
+
+
+been absolutely crazy. It's connected. I
+
+
+have two slacks actually, one for the
+
+
+fire center and my real estate club and
+
+
+then one for all my real estate uh
+
+
+houses and flipping and rentals and all
+
+
+that. They're it's connected to both
+
+
+that could cross analyze all of them. It
+
+
+knows where to put it and only I can
+
+
+talk to it for security wise. Only I can
+
+
+talk to it at the moment. My team can't
+
+
+talk to it at all. Some of the ways they
+
+
+can see it posting, but they can't talk
+
+
+to it in any at the moment. So, and then
+
+
+yeah, I mean that's that's like the gist
+
+
+of what I've got going right now as far
+
+
+as like the deal analyzer workflow. So,
+
+
+I've got it set up right now where it it
+
+
+crawls Zillow and I have a key I have a
+
+
+I have a list of 250 keywords that it
+
+
+searches for. And I actually built this
+
+
+as a custom GPT for my club for the fly
+
+
+for the fire center about a month ago.
+
+
+And then I wanted to take it to the next
+
+
+level. So if you want that custom GPT,
+
+
+you can come become a member of the fire
+
+
+center. But so that one was basically
+
+
+like it would it would build a search
+
+
+string for you to search a specific zip
+
+
+code for at least 250 terms all at once.
+
+
+So I wanted to take that to the next
+
+
+level and have it operate do this
+
+
+automatically, right? So, so I set that
+
+
+up and so it it finds it runs at like
+
+
+3:00 a.m. in the morning and finds leads
+
+
+and then it and then it basically
+
+
+downloads them to its brain, runs all
+
+
+the numbers on it. So, so Angela is out
+
+
+there, sub agent Angela is out there
+
+
+finding the deals. Then once it finds
+
+
+it, it gives it to Spock who sits there
+
+
+and analyzes it and it and he gives me
+
+
+the he gives me the cache option and
+
+
+then three creative options whether
+
+
+that's subject two or a rap or whatever
+
+
+runs all those numbers and then and then
+
+
+pushes that to I forget which one from
+
+
+there either Neo or Scribe and pushes
+
+
+that into GoHigh level as an opportunity
+
+
+card in GoHigh level uh with all of that
+
+
+information in And it even pulls the
+
+
+agent, the listing agent's name, phone
+
+
+number, and their email. And it's
+
+
+actually it's gonna it's supposed to
+
+
+just pull random stuff. It does a pretty
+
+
+good job. Like one of the agents had
+
+
+found uh it found on Instagram um and
+
+
+found her actual email on Instagram and
+
+
+put that in there instead of just like
+
+
+the generic info at whatever broker
+
+
+was.com. So So that's really cool. So it
+
+
+pushes it into go high level and then
+
+
+from there we have a workflow in gohigh
+
+
+level as far as like it goes to a human
+
+
+at that point to review it. And I I got
+
+
+some plans to like what it's gonna do
+
+
+from and then I'm trying to trying to
+
+
+review these these notes here. It's just
+
+
+I mean I've got like threads with in
+
+
+Slack like 200 replies of me talking to
+
+
+this thing and and that's the thing is
+
+
+like this this is nothing like I mean I
+
+
+I am doing like no coding. There was a
+
+
+little tiny bit of like like where I had
+
+
+to look at the code as far as getting it
+
+
+set up that I'm not a programmer. I
+
+
+don't have a I don't have a coding
+
+
+background. I wrote my like a website in
+
+
+HTML when I was in fourth grade and that
+
+
+was it. Okay. And I've well that wasn't
+
+
+it I guess that was the first time I
+
+
+ever did HTML but I've dabbled in
+
+
+websites and stuff like that over the
+
+
+years. And so I can read some of this
+
+
+code. I understand like kind of how code
+
+
+works like at the basic level but I not
+
+
+a coder. Okay. I'm not at all. So but
+
+
+this has all been done literally just by
+
+
+I guess they're calling it vibe coding
+
+
+now where you just talk to this thing
+
+
+and tell it what you want. Sometimes
+
+
+very nicely. Sometimes I get a little
+
+
+frustrated, but you just tell it. You
+
+
+just kind of walk through and it it does
+
+
+all this for you. So, this is crazy.
+
+
+I've been I've been watching podcasts on
+
+
+this stuff and then doing a lot of doing
+
+
+a lot of things as far as building it
+
+
+out. And there's there's so much there's
+
+
+so much that can be done. I mean, my my
+
+
+the ideas are like through the roof here
+
+
+at the moment, but I'll make another
+
+
+video about about that as I do stuff
+
+
+with this. So anyways, I know the
+
+
+channel's been a little quiet here as
+
+
+far as just posting shorts and stuff.
+
+
+I'd like to get to some more long form
+
+
+content here, especially around AI. I
+
+
+mean, I'm I'm doing a lot with this
+
+
+stuff, and I don't think there's there's
+
+
+a lot of people out there talking about
+
+
+real estate as far as AI goes, but this
+
+
+is like I'm a small operator. I just buy
+
+
+and manage rental rental houses. And but
+
+
+I'm trying to basically take all these
+
+
+ideas I've had over the years and into
+
+
+this this AI system. So anyways, that's
+
+
+it for this video, guys. I hope you
+
+
+enjoyed. If you have questions, drop
+
+
+them in the comments. I' or and also if
+
+
+I I'd really I shut down my podcast last
+
+
+year or at the beginning of this year,
+
+
+whatever. And but I'd really like to get
+
+
+on more podcasts of other people's and
+
+
+talk about this stuff. So, if there's
+
+
+anyone out there you think I should be
+
+
+on, tag them, let them know, or shoot me
+
+
+their information, and I'll reach out.
+
+
+So, that's it. Thanks, guys. Appreciate
+
+
+you.

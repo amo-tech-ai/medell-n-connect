@@ -1,0 +1,898 @@
+Title,Description,Priority,Status,Assignee,Created,Completed,Labels,Estimate
+CTI-001A — Supabase coffee_tours core tables + RLS,"**Task ID:** `CTI-001A`
+**Spec:** `tasks/agent/tasks/CTI-001A-coffee-tour-core-schema.md`
+**Repo status:** Open
+**Priority:** P0
+**Phase:** CTI-A
+**Depends on:** F08
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Urgent,Todo,,,,"track:agent, phase-1",
+CTI-001B — coffee_tour_search_logs + coffee_tour_cache,"**Task ID:** `CTI-001B`
+**Spec:** `tasks/agent/tasks/CTI-001B-coffee-tour-logs-cache.md`
+**Repo status:** Open
+**Priority:** P1
+**Phase:** CTI-A
+**Depends on:** CTI-001A
+_Generated from mdeai tasks/ for Linear MDEAPP project._",High,Todo,,,,"track:agent, phase-1",
+CTI-002 — CoffeeTour types + Zod schemas,"**Task ID:** `CTI-002`
+**Spec:** `tasks/agent/tasks/CTI-002-coffee-tour-types.md`
+**Repo status:** Open
+**Priority:** P0
+**Phase:** CTI-A
+**Depends on:** CTI-001A
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Urgent,Todo,,,,"track:agent, phase-1",
+CTI-003 — Seed 5 verified coffee tours,"**Task ID:** `CTI-003`
+**Spec:** `tasks/agent/tasks/CTI-003-seed-coffee-tours.md`
+**Repo status:** Open
+**Priority:** P0
+**Phase:** CTI-A
+**Depends on:** CTI-001A
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Urgent,Todo,,,,"track:agent, phase-1",
+CTI-004 — Concierge tour intent + searchCoffeeTours tool,"**Task ID:** `CTI-004`
+**Spec:** `tasks/agent/tasks/CTI-004-search-coffee-tours-tool.md`
+**Repo status:** Open
+**Priority:** P0
+**Phase:** CTI-A
+**Depends on:** CTI-002, CTI-003, CTI-006, MAP-002, MAP-018C
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Urgent,Todo,,,,"track:agent, phase-1",
+CTI-005 — Places API enrich for coffee tour rows,"**Task ID:** `CTI-005`
+**Spec:** `tasks/agent/tasks/CTI-005-mvp-places-enrich-tours.md`
+**Repo status:** Open
+**Priority:** P1
+**Phase:** CTI-A
+**Depends on:** CTI-003, MAP-018B, MAP-004
+_Generated from mdeai tasks/ for Linear MDEAPP project._",High,Todo,,,,"track:agent, phase-1",
+CTI-006 — rankCoffeeTours scoring function,"**Task ID:** `CTI-006`
+**Spec:** `tasks/agent/tasks/CTI-006-rank-coffee-tours.md`
+**Repo status:** Open
+**Priority:** P1
+**Phase:** CTI-A
+**Depends on:** CTI-002, CTI-003, F50b
+_Generated from mdeai tasks/ for Linear MDEAPP project._",High,Todo,,,,"track:agent, phase-1",
+CTI-007 — CoffeeTourCard + CopilotKit tool render,"**Task ID:** `CTI-007`
+**Spec:** `tasks/agent/tasks/CTI-007-coffee-tour-card-ui.md`
+**Repo status:** Open
+**Priority:** P0
+**Phase:** CTI-A
+**Depends on:** CTI-004, CTI-006, CTI-003, MAP-018F, MAP-019
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Urgent,Todo,,,,"track:agent, phase-1",
+CTI-008 — Map pins + results column for coffee tours,"**Task ID:** `CTI-008`
+**Spec:** `tasks/agent/tasks/CTI-008-map-pins-tours.md`
+**Repo status:** Open
+**Priority:** P1
+**Phase:** CTI-A
+**Depends on:** CTI-007, MAP-030, MAP-031, F50, F50b
+_Generated from mdeai tasks/ for Linear MDEAPP project._",High,Todo,,,,"track:agent, phase-1",
+CTI-009 — smoke:coffee-tours script,"**Task ID:** `CTI-009`
+**Spec:** `tasks/agent/tasks/CTI-009-smoke-coffee-tours.md`
+**Repo status:** Open
+**Priority:** P1
+**Phase:** CTI-A
+**Depends on:** CTI-007, CTI-008
+_Generated from mdeai tasks/ for Linear MDEAPP project._",High,Todo,,,,"track:agent, phase-1",
+CTI-010 — Phase A evidence + task-verifier closeout,"**Task ID:** `CTI-010`
+**Spec:** `tasks/agent/tasks/CTI-010-phase-a-evidence.md`
+**Repo status:** Open
+**Priority:** P1
+**Phase:** CTI-A
+**Depends on:** CTI-009
+_Generated from mdeai tasks/ for Linear MDEAPP project._",High,Todo,,,,"track:agent, phase-1",
+CTI-011 — coffee_tour_embeddings + server embed job,"**Task ID:** `CTI-011`
+**Spec:** `tasks/agent/tasks/CTI-011-postMVP-embeddings-pipeline.md`
+**Repo status:** Open
+**Priority:** P2
+**Phase:** CTI-B
+**Depends on:** CTI-001A, CTI-010
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:agent, phase-1",
+CTI-012 — verifyCoffeeTourSources (Search Grounding),"**Task ID:** `CTI-012`
+**Spec:** `tasks/agent/tasks/CTI-012-verify-tour-sources.md`
+**Repo status:** Open
+**Priority:** P2
+**Phase:** CTI-B
+**Depends on:** CTI-001A, MAP-002D, GS-001
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:agent, phase-1",
+CTI-013 — ADK discovery merge into coffee_tours staging,"**Task ID:** `CTI-013`
+**Spec:** `tasks/agent/tasks/CTI-013-adk-discovery-merge.md`
+**Repo status:** Open
+**Priority:** P2
+**Phase:** CTI-B
+**Depends on:** CTI-001A, CTI-004, MAP-002
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:agent, phase-1",
+CTI-014 — saveCoffeeTour + user interactions RLS,"**Task ID:** `CTI-014`
+**Spec:** `tasks/agent/tasks/CTI-014-save-coffee-tour.md`
+**Repo status:** Open
+**Priority:** P2
+**Phase:** CTI-B
+**Depends on:** CTI-001A, CTI-007, F08
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:agent, phase-1",
+CTI-015 — CoffeeTourCompareDrawer + compareCoffeeTours,"**Task ID:** `CTI-015`
+**Spec:** `tasks/agent/tasks/CTI-015-compare-drawer.md`
+**Repo status:** Open
+**Priority:** P2
+**Phase:** CTI-B
+**Depends on:** CTI-007
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:agent, phase-1",
+CTI-016 — Coffee tour intent chips on ChatQueryBar,"**Task ID:** `CTI-016`
+**Spec:** `tasks/agent/tasks/CTI-016-query-bar-chips.md`
+**Repo status:** Open
+**Priority:** P2
+**Phase:** CTI-B
+**Depends on:** CTI-004
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:agent, phase-1",
+CTI-017 — /tours/[slug] detail page,"**Task ID:** `CTI-017`
+**Spec:** `tasks/agent/tasks/CTI-017-tour-detail-page.md`
+**Repo status:** Open
+**Priority:** P3
+**Phase:** CTI-C
+**Depends on:** CTI-001A, CTI-007
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Low,Todo,,,,"track:agent, phase-2",
+CTI-018 — Extract coffeeTourSearchWorkflow from concierge,"**Task ID:** `CTI-018`
+**Spec:** `tasks/agent/tasks/CTI-018-coffee-tour-workflow.md`
+**Repo status:** Open
+**Priority:** P3
+**Phase:** CTI-C
+**Depends on:** CTI-004, CTI-010
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Low,Todo,,,,"track:agent, phase-2",
+CTI-020 — WhatsApp handoff for coffee tours,"**Task ID:** `CTI-020`
+**Spec:** `tasks/agent/tasks/CTI-020-whatsapp-handoff.md`
+**Repo status:** Open
+**Priority:** P3
+**Phase:** CTI-C
+**Depends on:** CTI-014, CTI-005, F08
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Low,Todo,,,,"track:agent, phase-2",
+"CTEST-000 — Contest diagrams, GitHub repo decisions, and scope gate","**Task ID:** `CTEST-000`
+**Spec:** `tasks/contest/tasks/CTEST-000-diagrams-repo-decisions.md`
+**Repo status:** Draft
+**Priority:** P0
+**Phase:** Contest planning
+**Depends on:** —
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Urgent,Todo,,,,"track:contest, phase-1",
+CTEST-001 — Supabase contest core schema and RLS,"**Task ID:** `CTEST-001`
+**Spec:** `tasks/contest/tasks/CTEST-001-supabase-contest-core-schema.md`
+**Repo status:** Draft
+**Priority:** P0
+**Phase:** Contest data foundation
+**Depends on:** CTEST-000
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Urgent,Todo,,,,"track:contest, phase-1",
+CTEST-002 — Voting and judge scoring ledgers,"**Task ID:** `CTEST-002`
+**Spec:** `tasks/contest/tasks/CTEST-002-voting-scoring-ledgers.md`
+**Repo status:** Draft
+**Priority:** P0
+**Phase:** Contest trust foundation
+**Depends on:** CTEST-001
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Urgent,Todo,,,,"track:contest, phase-1",
+CTEST-003 — Tickets and paid-vote payment-derived schema,"**Task ID:** `CTEST-003`
+**Spec:** `tasks/contest/tasks/CTEST-003-ticket-paid-vote-schema.md`
+**Repo status:** Draft
+**Priority:** P0
+**Phase:** Contest payments foundation
+**Depends on:** CTEST-001, CTEST-002
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Urgent,Todo,,,,"track:contest, phase-1",
+CTEST-004 — CopilotKit contest workspace and approval cards,"**Task ID:** `CTEST-004`
+**Spec:** `tasks/contest/tasks/CTEST-004-copilotkit-contest-workspace.md`
+**Repo status:** Draft
+**Priority:** P0
+**Phase:** Contest AI UI
+**Depends on:** CTEST-001
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Urgent,Todo,,,,"track:contest, phase-1",
+CTEST-005 — Mastra and Gemini contest workflows,"**Task ID:** `CTEST-005`
+**Spec:** `tasks/contest/tasks/CTEST-005-mastra-gemini-workflows.md`
+**Repo status:** Draft
+**Priority:** P0
+**Phase:** Contest AI workflows
+**Depends on:** CTEST-002, CTEST-004
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Urgent,Todo,,,,"track:contest, phase-1",
+"CTEST-006 — Contest screens, routes, and wireframes","**Task ID:** `CTEST-006`
+**Spec:** `tasks/contest/tasks/CTEST-006-screens-wireframes.md`
+**Repo status:** Draft
+**Priority:** P0
+**Phase:** Contest UI
+**Depends on:** CTEST-001, CTEST-004
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Urgent,Todo,,,,"track:contest, phase-1",
+CTEST-007 — Contest Playwright proof gates,"**Task ID:** `CTEST-007`
+**Spec:** `tasks/contest/tasks/CTEST-007-playwright-proof-gates.md`
+**Repo status:** Draft
+**Priority:** P0
+**Phase:** Contest testing
+**Depends on:** CTEST-002, CTEST-003, CTEST-006
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Urgent,Todo,,,,"track:contest, phase-1",
+F20 — Port evaluationAgent + scorers + Vercel deploy prep,"**Task ID:** `F20`
+**Spec:** `tasks/core/F20-evaluation-and-deploy-prep.md`
+**Repo status:** Not Started
+**Priority:** P1
+**Phase:** W8-W9 — observability + deployment
+**Depends on:** F19-concierge-and-restaurants-attractions
+_Generated from mdeai tasks/ for Linear MDEAPP project._",High,Todo,,,,"track:core, phase-1",
+"F21A — Auto-review — manual calibration (rules + subagent only, no hooks)","**Task ID:** `F21A`
+**Spec:** `tasks/core/F21A-auto-review-calibration.md`
+**Repo status:** Not Started
+**Priority:** P2
+**Phase:** W2 — Day 4 / Day 5 (after F09 + F10 ship)
+**Depends on:** F09
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:core, phase-1",
+F22 — Port Medellín hero photo library from legacy,"**Task ID:** `F22`
+**Spec:** `tasks/core/F22-hero-photo-library.md`
+**Repo status:** Not Started
+**Priority:** P2
+**Phase:** W2 — Day 5 (post-F07 quick win)
+**Depends on:** F07
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:core, phase-1",
+F26 — Port RestaurantCard + RestaurantFilters component,"**Task ID:** `F26`
+**Spec:** `tasks/core/F26-restaurant-card-component.md`
+**Repo status:** Not Started
+**Priority:** P1
+**Phase:** W6 — Day 1 (Tourist concierge surface)
+**Depends on:** F07, F22, F24, F25
+_Generated from mdeai tasks/ for Linear MDEAPP project._",High,Todo,,,,"track:core, phase-1",
+F30 — Port OnboardingLayout — first-run shell,"**Task ID:** `F30`
+**Spec:** `tasks/core/F30-onboarding-layout.md`
+**Repo status:** Not Started
+**Priority:** P2
+**Phase:** W7 — Day 1 (first-run UX polish, post-MVP feature)
+**Depends on:** F07
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:core, phase-2",
+F32 — Production smoke against https://mdeapp.vercel.app,"**Task ID:** `F32`
+**Spec:** `tasks/core/F32-production-smoke.md`
+**Repo status:** Not Started
+**Priority:** P1
+**Phase:** W2 — Day 5 (closes the localhost-vs-prod proof gap)
+**Depends on:** F06
+_Generated from mdeai tasks/ for Linear MDEAPP project._",High,Todo,,,,"track:core, phase-1",
+EVP-001-core — Event production proof gates,"**Task ID:** `EVP-001-core`
+**Spec:** `tasks/events/EVP-001-core-production-proof-gates.md`
+**Repo status:** Not Started
+**Priority:** P0
+**Depends on:** EVP-002-core, EVP-004-core, EVP-005-core, EVP-008-core, EVP-009-core, EVP-010-core, EVP-011-core, EVP-012-core
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Urgent,Todo,,,,"track:events, phase-1",
+EVP-003-core — P0 Stripe webhook secret audit (ticket vs sponsor),"**Task ID:** `EVP-003-core`
+**Spec:** `tasks/events/EVP-003-core-stripe-webhook-secret-audit.md`
+**Repo status:** Partial
+**Priority:** P0
+**Phase:** W2 — Day 2 (revenue-critical)
+**Depends on:** F06
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Urgent,In Progress,,,,"track:events, phase-1",
+EVP-013-core — Port EventCard + EventFilters component,"**Task ID:** `EVP-013-core`
+**Spec:** `tasks/events/EVP-013-core-event-card-component.md`
+**Repo status:** Partial
+**Priority:** P1
+**Phase:** W3 — Day 2 (Roberto's events surface)
+**Depends on:** F07, F22
+_Generated from mdeai tasks/ for Linear MDEAPP project._",High,In Progress,,,,"track:events, phase-1",
+EVP-014-core — /host/events list page — Roberto draft + published view (PRD §51 #15),"**Task ID:** `EVP-014-core`
+**Spec:** `tasks/events/EVP-014-core-host-events-list-page.md`
+**Repo status:** Not Started
+**Priority:** P0
+**Phase:** W3 — Day 2 (Roberto hero list view)
+**Depends on:** F07, F08, F22, EVP-013-core, EVP-009-core
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Urgent,Todo,,,,"track:events, phase-1",
+EVP-015-mvp — Grounded event discovery,"**Task ID:** `EVP-015-mvp`
+**Spec:** `tasks/events/EVP-015-mvp-grounded-event-discovery.md`
+**Repo status:** Not Started
+**Priority:** P1
+**Depends on:** EVP-001-core, EVP-005-core, EVP-013-core, GS-001, GS-003
+_Generated from mdeai tasks/ for Linear MDEAPP project._",High,Todo,,,,"track:events, phase-1",
+EVP-016-mvp — Event maps + venue integration,"**Task ID:** `EVP-016-mvp`
+**Spec:** `tasks/events/EVP-016-mvp-event-maps-venue-integration.md`
+**Repo status:** Not Started
+**Priority:** P1
+**Depends on:** EVP-015-mvp, MAP-004, MAP-010
+_Generated from mdeai tasks/ for Linear MDEAPP project._",High,Todo,,,,"track:events, phase-1",
+EVP-018-mvp — Event web discovery — future task pack (EVP-019…028),"**Task ID:** `EVP-018-mvp`
+**Spec:** `tasks/events/EVP-018-mvp-event-web-discovery-task-pack.md`
+**Repo status:** Not Started
+**Priority:** P3
+**Phase:** Post-MVP — Phase 2+
+**Depends on:** EVP-017-mvp
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Low,Todo,,,,"track:events, phase-2",
+"EVP-019-mvp — Research official docs (CopilotKit, Mastra, ADK, Grounding, Places)","**Task ID:** `EVP-019-mvp`
+**Spec:** `tasks/events/EVP-019-mvp-research-official-docs.md`
+**Repo status:** Not Started
+**Priority:** P2
+**Phase:** Post-MVP
+**Depends on:** EVP-017-mvp-event-grounding-architecture
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:events, phase-2",
+EVP-020-mvp — Discovered events data model + RLS,"**Task ID:** `EVP-020-mvp`
+**Spec:** `tasks/events/EVP-020-mvp-discovered-events-data-model.md`
+**Repo status:** Not Started
+**Priority:** P2
+**Phase:** Post-MVP
+**Depends on:** EVP-019-mvp-research-official-docs
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:events, phase-2",
+EVP-021-mvp — Google Search Grounding query templates,"**Task ID:** `EVP-021-mvp`
+**Spec:** `tasks/events/EVP-021-mvp-google-search-grounding.md`
+**Repo status:** Not Started
+**Priority:** P2
+**Phase:** Post-MVP
+**Depends on:** EVP-023-mvp-adk-search-maps-agents, EVP-007-core-event-agent-prompt-and-sources, MAP-002D, GS-001
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:events, phase-2",
+EVP-022-mvp — eventDiscoveryWorkflow (Mastra),"**Task ID:** `EVP-022-mvp`
+**Spec:** `tasks/events/EVP-022-mvp-event-discovery-workflow.md`
+**Repo status:** Not Started
+**Priority:** P2
+**Phase:** Post-MVP
+**Depends on:** EVP-020-mvp-discovered-events-data-model, EVP-005-core-event-tool-and-workflow
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:events, phase-2",
+EVP-023-mvp — ADK SearchAgent + MapsAgent sidecar,"**Task ID:** `EVP-023-mvp`
+**Spec:** `tasks/events/EVP-023-mvp-adk-search-maps-agents.md`
+**Repo status:** Not Started
+**Priority:** P2
+**Phase:** Post-MVP
+**Depends on:** EVP-019-mvp-research-official-docs
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:events, phase-2",
+EVP-024-mvp — Places API enrichment for discovered events,"**Task ID:** `EVP-024-mvp`
+**Spec:** `tasks/events/EVP-024-mvp-places-enrichment.md`
+**Repo status:** Not Started
+**Priority:** P2
+**Phase:** Post-MVP
+**Depends on:** EVP-022-mvp-event-discovery-workflow
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:events, phase-2",
+"EVP-025-mvp — CopilotKit discovery UI (cards, attribution, approval)","**Task ID:** `EVP-025-mvp`
+**Spec:** `tasks/events/EVP-025-mvp-copilotkit-discovery-ui.md`
+**Repo status:** Not Started
+**Priority:** P2
+**Phase:** Post-MVP
+**Depends on:** EVP-022-mvp-event-discovery-workflow, SCREEN-006
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:events, phase-2",
+EVP-026-mvp — Human approval save flow,"**Task ID:** `EVP-026-mvp`
+**Spec:** `tasks/events/EVP-026-mvp-human-approval-save-flow.md`
+**Repo status:** Not Started
+**Priority:** P2
+**Phase:** Post-MVP
+**Depends on:** EVP-020-mvp-discovered-events-data-model, EVP-011-core-approval-panel-hitl
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:events, phase-2",
+EVP-027-mvp — Discovery test plan,"**Task ID:** `EVP-027-mvp`
+**Spec:** `tasks/events/EVP-027-mvp-discovery-test-plan.md`
+**Repo status:** Not Started
+**Priority:** P2
+**Phase:** Post-MVP
+**Depends on:** EVP-025-mvp-copilotkit-discovery-ui
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:events, phase-2",
+EVP-028-mvp — Production readiness checklist,"**Task ID:** `EVP-028-mvp`
+**Spec:** `tasks/events/EVP-028-mvp-production-readiness.md`
+**Repo status:** Not Started
+**Priority:** P2
+**Phase:** Post-MVP
+**Depends on:** EVP-027-mvp-discovery-test-plan
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:events, phase-2",
+EVP-029-advanced — Sponsor CRM-lite + proposal drafts,"**Task ID:** `EVP-029-advanced`
+**Spec:** `tasks/events/EVP-029-advanced-sponsor-crm-lite.md`
+**Repo status:** Not Started
+**Priority:** P2
+**Depends on:** EVP-001-core, EVP-003-core
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:events, phase-1",
+EVP-030-advanced — OpenClaw/Postiz approval sandbox,"**Task ID:** `EVP-030-advanced`
+**Spec:** `tasks/events/EVP-030-advanced-openclaw-postiz-approval-sandbox.md`
+**Repo status:** Not Started
+**Priority:** P3
+**Depends on:** EVP-029-advanced
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Low,Todo,,,,"track:events, phase-1",
+EVP-031-advanced — OpenClaw automation plan (no implementation),"**Task ID:** `EVP-031-advanced`
+**Spec:** `tasks/events/EVP-031-advanced-openclaw-automation-plan.md`
+**Repo status:** Not Started
+**Priority:** P3
+**Phase:** Phase 3
+**Depends on:** EVP-025-mvp-copilotkit-discovery-ui
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Low,Todo,,,,"track:events, phase-1",
+EVP-032-mvp — Luma-style event detail layout,"**Task ID:** `EVP-032-mvp`
+**Spec:** `tasks/events/EVP-032-mvp-luma-event-detail-layout.md`
+**Repo status:** Open
+**Priority:** P1
+**Depends on:** EVP-013-core, EVP-016-mvp
+_Generated from mdeai tasks/ for Linear MDEAPP project._",High,Todo,,,,"track:events, phase-1",
+EVP-033-mvp — Event vibe tags and AI summary,"**Task ID:** `EVP-033-mvp`
+**Spec:** `tasks/events/EVP-033-mvp-event-vibe-ai-summary.md`
+**Repo status:** Open
+**Priority:** P1
+**Depends on:** EVP-032-mvp, EVP-007-core
+_Generated from mdeai tasks/ for Linear MDEAPP project._",High,Todo,,,,"track:events, phase-1",
+EVP-034-mvp — Ask Host and AI Q&A assistant,"**Task ID:** `EVP-034-mvp`
+**Spec:** `tasks/events/EVP-034-mvp-ask-host-ai-qa.md`
+**Repo status:** Open
+**Priority:** P1
+**Depends on:** EVP-032-mvp, EVP-012-core
+_Generated from mdeai tasks/ for Linear MDEAPP project._",High,Todo,,,,"track:events, phase-1",
+EVP-035-mvp — Attendee profiles and audience breakdown,"**Task ID:** `EVP-035-mvp`
+**Spec:** `tasks/events/EVP-035-mvp-attendee-profiles-audience-breakdown.md`
+**Repo status:** Open
+**Priority:** P2
+**Depends on:** EVP-002-core, EVP-032-mvp
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:events, phase-1",
+"EVP-036-mvp — Community, map, and nearby intelligence","**Task ID:** `EVP-036-mvp`
+**Spec:** `tasks/events/EVP-036-mvp-community-map-nearby.md`
+**Repo status:** Open
+**Priority:** P2
+**Depends on:** EVP-016-mvp, EVP-024-mvp, EVP-032-mvp
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:events, phase-1",
+EVP-037-mvp — AI event decision concierge,"**Task ID:** `EVP-037-mvp`
+**Spec:** `tasks/events/EVP-037-mvp-concierge-event-decision-chat.md`
+**Repo status:** Open
+**Priority:** P1
+**Depends on:** EVP-004-core, EVP-005-core, EVP-033-mvp, EVP-035-mvp
+_Generated from mdeai tasks/ for Linear MDEAPP project._",High,Todo,,,,"track:events, phase-1",
+EVP-038-postmvp — AI networking matchmaking and icebreakers,"**Task ID:** `EVP-038-postmvp`
+**Spec:** `tasks/events/EVP-038-postmvp-ai-networking-matchmaking.md`
+**Repo status:** Open
+**Priority:** P2
+**Depends on:** EVP-035-mvp, EVP-037-mvp
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:events, phase-1",
+EVP-039-postmvp — Live event chat and networking rooms,"**Task ID:** `EVP-039-postmvp`
+**Spec:** `tasks/events/EVP-039-postmvp-live-event-chat-rooms.md`
+**Repo status:** Open
+**Priority:** P3
+**Depends on:** EVP-035-mvp, EVP-038-postmvp
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Low,Todo,,,,"track:events, phase-1",
+EVP-040-postmvp — Post-event follow-up assistant,"**Task ID:** `EVP-040-postmvp`
+**Spec:** `tasks/events/EVP-040-postmvp-post-event-follow-up.md`
+**Repo status:** Open
+**Priority:** P2
+**Depends on:** EVP-038-postmvp
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:events, phase-1",
+EVP-041-advanced — Community relationship graph,"**Task ID:** `EVP-041-advanced`
+**Spec:** `tasks/events/EVP-041-advanced-community-relationship-graph.md`
+**Repo status:** Open
+**Priority:** P3
+**Depends on:** EVP-038-postmvp, EVP-039-postmvp, EVP-040-postmvp
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Low,Todo,,,,"track:events, phase-1",
+EVP-042-mvp — Smart event recommendations and compatibility score,"**Task ID:** `EVP-042-mvp`
+**Spec:** `tasks/events/EVP-042-mvp-smart-recommendations-compatibility.md`
+**Repo status:** Open
+**Priority:** P1
+**Depends on:** EVP-033-mvp, EVP-035-mvp, EVP-037-mvp
+_Generated from mdeai tasks/ for Linear MDEAPP project._",High,Todo,,,,"track:events, phase-1",
+"EVP-043-mvp — Neighborhood, safety, transit, and weather intelligence","**Task ID:** `EVP-043-mvp`
+**Spec:** `tasks/events/EVP-043-mvp-neighborhood-safety-transit-intelligence.md`
+**Repo status:** Open
+**Priority:** P1
+**Depends on:** EVP-016-mvp, EVP-024-mvp, EVP-036-mvp
+_Generated from mdeai tasks/ for Linear MDEAPP project._",High,Todo,,,,"track:events, phase-1",
+EVP-044-mvp — WhatsApp and community links,"**Task ID:** `EVP-044-mvp`
+**Spec:** `tasks/events/EVP-044-mvp-whatsapp-community-links.md`
+**Repo status:** Open
+**Priority:** P1
+**Depends on:** EVP-032-mvp, EVP-034-mvp
+_Generated from mdeai tasks/ for Linear MDEAPP project._",High,Todo,,,,"track:events, phase-1",
+EVP-045-mvp — Host pricing suggestions and moderation basics,"**Task ID:** `EVP-045-mvp`
+**Spec:** `tasks/events/EVP-045-mvp-host-pricing-moderation-basics.md`
+**Repo status:** Open
+**Priority:** P2
+**Depends on:** EVP-010-core, EVP-012-core, EVP-034-mvp
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:events, phase-1",
+EVP-046-mvp — Live event updates feed,"**Task ID:** `EVP-046-mvp`
+**Spec:** `tasks/events/EVP-046-mvp-live-event-updates.md`
+**Repo status:** Open
+**Priority:** P2
+**Depends on:** EVP-032-mvp, EVP-035-mvp, EVP-044-mvp
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:events, phase-1",
+EVP-047-postmvp — AI night itinerary builder,"**Task ID:** `EVP-047-postmvp`
+**Spec:** `tasks/events/EVP-047-postmvp-ai-night-itinerary-builder.md`
+**Repo status:** Open
+**Priority:** P2
+**Depends on:** EVP-036-mvp, EVP-037-mvp, EVP-043-mvp
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:events, phase-1",
+GS-005 — Verify ticket source + venue update tools,"**Task ID:** `GS-005`
+**Spec:** `tasks/grounding-search/tasks/GS-005-verify-ticket-venue-tools.md`
+**Repo status:** Not Started
+**Priority:** P2
+**Phase:** Phase 2.1
+**Depends on:** MAP-002D, GS-002
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:grounding, phase-2",
+GS-006 — Gemini tool combination spike (Search + MCP),"**Task ID:** `GS-006`
+**Spec:** `tasks/grounding-search/tasks/GS-006-tool-combination-spike.md`
+**Repo status:** Not Started
+**Priority:** P2
+**Phase:** Phase 2.1
+**Depends on:** MAP-002D
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:grounding, phase-2",
+GS-007 — Restaurant opening / closure verification (Search),"**Task ID:** `GS-007`
+**Spec:** `tasks/grounding-search/tasks/GS-007-restaurant-closure-verify.md`
+**Repo status:** Not Started
+**Priority:** P3
+**Phase:** Phase 2.1
+**Depends on:** MAP-002D, MAP-006
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Low,Todo,,,,"track:grounding, phase-2",
+GS-008 — Neighborhood news search (Search fallback),"**Task ID:** `GS-008`
+**Spec:** `tasks/grounding-search/tasks/GS-008-neighborhood-news-search.md`
+**Repo status:** Not Started
+**Priority:** P3
+**Phase:** Phase 2.1
+**Depends on:** MAP-002D, MAP-012A
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Low,Todo,,,,"track:grounding, phase-2",
+GS-009 — Sponsor research (Search grounding),"**Task ID:** `GS-009`
+**Spec:** `tasks/grounding-search/tasks/GS-009-sponsor-research-search.md`
+**Repo status:** Not Started
+**Priority:** P3
+**Phase:** Phase 3
+**Depends on:** MAP-002D
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Low,Todo,,,,"track:grounding, phase-1",
+MAP-002A-ADK — ADK LlmAgent + McpToolset package (Phase 2 follow-up),"**Task ID:** `MAP-002A-ADK`
+**Spec:** `tasks/maps/MAP-002A-ADK-agent-package.md`
+**Repo status:** Not started
+**Priority:** P2
+**Phase:** Phase 2 — maps intelligence hardening
+**Depends on:** MAP-002
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:maps, phase-2",
+MAP-005 — places-proxy edge + places_cache + RLS,"**Task ID:** `MAP-005`
+**Spec:** `tasks/maps/MAP-005-places-proxy-cache.md`
+**Repo status:** Not Started
+**Priority:** P1
+**Phase:** Post-MVP — cost-safe Places at scale
+**Depends on:** MAP-004
+_Generated from mdeai tasks/ for Linear MDEAPP project._",High,Todo,,,,"track:maps, phase-2",
+MAP-006 — Nearby Search + Show nearby on RentalCard,"**Task ID:** `MAP-006`
+**Spec:** `tasks/maps/MAP-006-nearby-search.md`
+**Repo status:** Not Started
+**Priority:** P1
+**Phase:** Post-MVP — Camila cross-sell
+**Depends on:** MAP-005, F46
+_Generated from mdeai tasks/ for Linear MDEAPP project._",High,Todo,,,,"track:maps, phase-2",
+MAP-010 — Place autocomplete — Roberto host venue,"**Task ID:** `MAP-010`
+**Spec:** `tasks/maps/MAP-010-place-autocomplete-venue.md`
+**Repo status:** Not Started
+**Priority:** P1
+**Phase:** Post-MVP — events (W3–W4)
+**Depends on:** MAP-005, F34
+_Generated from mdeai tasks/ for Linear MDEAPP project._",High,Todo,,,,"track:maps, phase-2",
+MAP-011 — Route previews + commute cards,"**Task ID:** `MAP-011`
+**Spec:** `tasks/maps/MAP-011-route-previews.md`
+**Repo status:** Not Started
+**Priority:** P2
+**Phase:** Post-MVP
+**Depends on:** MAP-002, MAP-004
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:maps, phase-2",
+MAP-012 — Neighborhood intelligence cards,"**Task ID:** `MAP-012`
+**Spec:** `tasks/maps/MAP-012-neighborhood-intelligence.md`
+**Repo status:** Not Started
+**Priority:** P2
+**Phase:** Post-MVP
+**Depends on:** MAP-006, MAP-012A
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:maps, phase-2",
+MAP-012A — Colombia coverage spike — Places Aggregate vs Insights,"**Task ID:** `MAP-012A`
+**Spec:** `tasks/maps/MAP-012A-colombia-aggregate-insights-spike.md`
+**Repo status:** Not Started
+**Priority:** P2
+**Phase:** Post-MVP gate
+**Depends on:** MAP-004
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:maps, phase-2",
+MAP-023 — Static Maps API — event location previews + OG images,"**Task ID:** `MAP-023`
+**Spec:** `tasks/maps/MAP-023-static-maps-event-previews.md`
+**Repo status:** Not Started
+**Priority:** P3
+**Phase:** Post-MVP marketing
+**Depends on:** MAP-004
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Low,Todo,,,,"track:maps, phase-2",
+OCL-001-core — OpenClaw gateway health stub,"**Task ID:** `OCL-001-core`
+**Spec:** `tasks/openclaw/tasks/OCL-001-core-gateway-health.md`
+**Repo status:** Open
+**Priority:** P0
+**Phase:** OCL-0
+**Depends on:** —
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Urgent,Todo,,,,"track:openclaw, phase-1",
+OCL-002-core — Supabase openclaw_jobs + automation_approvals,"**Task ID:** `OCL-002-core`
+**Spec:** `tasks/openclaw/tasks/OCL-002-core-jobs-schema.md`
+**Repo status:** Open
+**Priority:** P0
+**Phase:** OCL-0
+**Depends on:** F08
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Urgent,Todo,,,,"track:openclaw, phase-1",
+OCL-003-core — Mastra openclaw-approval-workflow,"**Task ID:** `OCL-003-core`
+**Spec:** `tasks/openclaw/tasks/OCL-003-core-approval-workflow.md`
+**Repo status:** Open
+**Priority:** P0
+**Phase:** OCL-0
+**Depends on:** OCL-002-core
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Urgent,Todo,,,,"track:openclaw, phase-1",
+OCL-004-core — ClawHub safety policy — no unvetted skills,"**Task ID:** `OCL-004-core`
+**Spec:** `tasks/openclaw/tasks/OCL-004-core-clawhub-safety.md`
+**Repo status:** Open
+**Priority:** P0
+**Depends on:** —
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Urgent,Todo,,,,"track:openclaw, phase-1",
+OCL-005-core — OPENCLAW_DISABLED kill switch,"**Task ID:** `OCL-005-core`
+**Spec:** `tasks/openclaw/tasks/OCL-005-core-kill-switch.md`
+**Repo status:** Open
+**Priority:** P0
+**Depends on:** OCL-001-core
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Urgent,Todo,,,,"track:openclaw, phase-1",
+OCL-006-core — OpenClaw VPS — Gemini provider + model routing,"**Task ID:** `OCL-006-core`
+**Spec:** `tasks/openclaw/tasks/OCL-006-core-gemini-vps-config.md`
+**Repo status:** Open
+**Priority:** P0
+**Phase:** OCL-0
+**Depends on:** OCL-001-core
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Urgent,Todo,,,,"track:openclaw, phase-1",
+OCL-007-core — Rotate OpenClaw gateway token,"**Task ID:** `OCL-007-core`
+**Spec:** `tasks/openclaw/tasks/OCL-007-core-gateway-token-rotate.md`
+**Repo status:** Open
+**Priority:** P0
+**Depends on:** OCL-001-core
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Urgent,Todo,,,,"track:openclaw, phase-1",
+OCL-008-mvp — Admin approvals UI — OpenClaw job preview,"**Task ID:** `OCL-008-mvp`
+**Spec:** `tasks/openclaw/tasks/OCL-008-mvp-admin-approvals-ui.md`
+**Repo status:** Open
+**Priority:** P1
+**Depends on:** OCL-003-core
+_Generated from mdeai tasks/ for Linear MDEAPP project._",High,Todo,,,,"track:openclaw, phase-1",
+OCL-009-mvp — OpenClaw web_search — Gemini grounding provider,"**Task ID:** `OCL-009-mvp`
+**Spec:** `tasks/openclaw/tasks/OCL-009-mvp-gemini-web-search.md`
+**Repo status:** Open
+**Priority:** P1
+**Phase:** OCL-0
+**Depends on:** OCL-006-core
+_Generated from mdeai tasks/ for Linear MDEAPP project._",High,Todo,,,,"track:openclaw, phase-1",
+OCL-010-mvp — mde-tour-enrich (+ mde-enrichment) SKILL.md pack,"**Task ID:** `OCL-010-mvp`
+**Spec:** `tasks/openclaw/tasks/OCL-010-mvp-tour-enrich-skill.md`
+**Repo status:** Open
+**Priority:** P1
+**Depends on:** OCL-004-core, OCL-006-core
+_Generated from mdeai tasks/ for Linear MDEAPP project._",High,Todo,,,,"track:openclaw, phase-1",
+OCL-011-mvp — Mastra enqueueOpenClawJob tool,"**Task ID:** `OCL-011-mvp`
+**Spec:** `tasks/openclaw/tasks/OCL-011-mvp-enqueue-openclaw-job.md`
+**Repo status:** Open
+**Priority:** P1
+**Depends on:** OCL-003-core
+_Generated from mdeai tasks/ for Linear MDEAPP project._",High,Todo,,,,"track:openclaw, phase-1",
+OCL-012-mvp — E2E — reject OpenClaw job without approval,"**Task ID:** `OCL-012-mvp`
+**Spec:** `tasks/openclaw/tasks/OCL-012-mvp-e2e-approval-safety.md`
+**Repo status:** Open
+**Priority:** P0
+**Depends on:** OCL-003-core
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Urgent,Todo,,,,"track:openclaw, phase-1",
+OCL-013-mvp — Coffee tours — source crawler + verify,"**Task ID:** `OCL-013-mvp`
+**Spec:** `tasks/openclaw/tasks/OCL-013-mvp-coffee-tour-crawler.md`
+**Repo status:** Open
+**Priority:** P0
+**Depends on:** CTI-001A, CTI-003, OCL-009-mvp, OCL-010-mvp
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Urgent,Todo,,,,"track:openclaw, phase-1",
+OCL-014-postmvp — Restaurants — menu PDF/HTML extraction,"**Task ID:** `OCL-014-postmvp`
+**Spec:** `tasks/openclaw/tasks/OCL-014-postmvp-menu-extraction.md`
+**Repo status:** Open
+**Priority:** P2
+**Depends on:** OCL-010-mvp, OCL-009-mvp
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:openclaw, phase-1",
+OCL-015-postmvp — Cafés — Instagram / creator discovery crawl,"**Task ID:** `OCL-015-postmvp`
+**Spec:** `tasks/openclaw/tasks/OCL-015-postmvp-instagram-cafe-discovery.md`
+**Repo status:** Open
+**Priority:** P2
+**Depends on:** OCL-010-mvp
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:openclaw, phase-1",
+OCL-016-postmvp — Events — venue intelligence browser enrich,"**Task ID:** `OCL-016-postmvp`
+**Spec:** `tasks/openclaw/tasks/OCL-016-postmvp-venue-intelligence.md`
+**Repo status:** Open
+**Priority:** P2
+**Depends on:** OCL-010-mvp, OCL-017-postmvp, OCL-030-postmvp
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:openclaw, phase-1",
+OCL-017-postmvp — Events — directory / calendar import,"**Task ID:** `OCL-017-postmvp`
+**Spec:** `tasks/openclaw/tasks/OCL-017-postmvp-event-directory-import.md`
+**Repo status:** Open
+**Priority:** P2
+**Depends on:** OCL-010-mvp
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:openclaw, phase-1",
+OCL-018-postmvp — Real estate — listing enrichment crawl,"**Task ID:** `OCL-018-postmvp`
+**Spec:** `tasks/openclaw/tasks/OCL-018-postmvp-listing-enrichment.md`
+**Repo status:** Open
+**Priority:** P2
+**Depends on:** OCL-010-mvp, OCL-003-core
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:openclaw, phase-1",
+OCL-019-postmvp — Marketing — sponsor prospect research,"**Task ID:** `OCL-019-postmvp`
+**Spec:** `tasks/openclaw/tasks/OCL-019-postmvp-sponsor-prospect-research.md`
+**Repo status:** Open
+**Priority:** P2
+**Depends on:** OCL-009-mvp, MAP-002D, OCL-030-postmvp
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:openclaw, phase-1",
+OCL-020-postmvp — Marketing — local SEO / competitor page monitor,"**Task ID:** `OCL-020-postmvp`
+**Spec:** `tasks/openclaw/tasks/OCL-020-postmvp-seo-competitor-monitor.md`
+**Repo status:** Open
+**Priority:** P2
+**Depends on:** OCL-009-mvp, OCL-010-mvp
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:openclaw, phase-1",
+OCL-021-postmvp — Correlation IDs Mastra ↔ OpenClaw,"**Task ID:** `OCL-021-postmvp`
+**Spec:** `tasks/openclaw/tasks/OCL-021-postmvp-correlation-observability.md`
+**Repo status:** Open
+**Priority:** P2
+**Depends on:** OCL-011-mvp
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:openclaw, phase-1",
+OCL-022-advanced — WhatsApp templates + number allowlist,"**Task ID:** `OCL-022-advanced`
+**Spec:** `tasks/openclaw/tasks/OCL-022-advanced-wa-templates-allowlist.md`
+**Repo status:** Open
+**Priority:** P2
+**Depends on:** OCL-029-advanced
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:openclaw, phase-1",
+OCL-023-advanced — Events — T-24h reminder WA drafts,"**Task ID:** `OCL-023-advanced`
+**Spec:** `tasks/openclaw/tasks/OCL-023-advanced-event-reminders.md`
+**Repo status:** Open
+**Priority:** P3
+**Depends on:** OCL-017-postmvp, OCL-022-advanced, G1-G5
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Low,Todo,,,,"track:openclaw, phase-1",
+OCL-024-advanced — Events — sponsor ROI browser screenshots,"**Task ID:** `OCL-024-advanced`
+**Spec:** `tasks/openclaw/tasks/OCL-024-advanced-sponsor-roi-screenshots.md`
+**Repo status:** Open
+**Priority:** P3
+**Depends on:** OCL-010-mvp
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Low,Todo,,,,"track:openclaw, phase-1",
+OCL-025-advanced — Events — external publish draft (outbox),"**Task ID:** `OCL-025-advanced`
+**Spec:** `tasks/openclaw/tasks/OCL-025-advanced-external-publish-draft.md`
+**Repo status:** Open
+**Priority:** P3
+**Depends on:** OCL-003-core, OCL-017-postmvp
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Low,Todo,,,,"track:openclaw, phase-1",
+OCL-026-advanced — Contests — WA leaderboard / reminder drafts,"**Task ID:** `OCL-026-advanced`
+**Spec:** `tasks/openclaw/tasks/OCL-026-advanced-contest-wa-ops.md`
+**Repo status:** Open
+**Priority:** P3
+**Depends on:** G1-G5, OCL-029-advanced, OCL-022-advanced
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Low,Todo,,,,"track:openclaw, phase-1",
+OCL-027-advanced — Marketing — Postiz approved post handoff,"**Task ID:** `OCL-027-advanced`
+**Spec:** `tasks/openclaw/tasks/OCL-027-advanced-postiz-handoff.md`
+**Repo status:** Open
+**Priority:** P3
+**Depends on:** OCL-003-core, OCL-032-postmvp, OCL-034-postmvp
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Low,Todo,,,,"track:openclaw, phase-1",
+OCL-030-postmvp — Apify OpenClaw plugin sandbox,"**Task ID:** `OCL-030-postmvp`
+**Spec:** `tasks/openclaw/tasks/OCL-030-postmvp-apify-plugin-sandbox.md`
+**Repo status:** Open
+**Priority:** P1
+**Depends on:** OCL-004-core, OCL-005-core, OCL-007-core, OCL-008-mvp, OCL-012-mvp
+_Generated from mdeai tasks/ for Linear MDEAPP project._",High,Todo,,,,"track:openclaw, phase-1",
+OCL-031-postmvp — Events — sponsor decision-maker map,"**Task ID:** `OCL-031-postmvp`
+**Spec:** `tasks/openclaw/tasks/OCL-031-postmvp-event-sponsor-decision-maker-map.md`
+**Repo status:** Open
+**Priority:** P1
+**Depends on:** OCL-019-postmvp, OCL-030-postmvp
+_Generated from mdeai tasks/ for Linear MDEAPP project._",High,Todo,,,,"track:openclaw, phase-1",
+OCL-032-postmvp — Events — sponsor proposal draft pack,"**Task ID:** `OCL-032-postmvp`
+**Spec:** `tasks/openclaw/tasks/OCL-032-postmvp-sponsor-proposal-draft-pack.md`
+**Repo status:** Open
+**Priority:** P1
+**Depends on:** EVP-029-advanced, OCL-019-postmvp, OCL-031-postmvp
+_Generated from mdeai tasks/ for Linear MDEAPP project._",High,Todo,,,,"track:openclaw, phase-1",
+OCL-033-postmvp — Events — vendor recruitment research,"**Task ID:** `OCL-033-postmvp`
+**Spec:** `tasks/openclaw/tasks/OCL-033-postmvp-event-vendor-recruitment-research.md`
+**Repo status:** Open
+**Priority:** P2
+**Depends on:** OCL-016-postmvp, OCL-030-postmvp
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:openclaw, phase-1",
+OCL-034-postmvp — Events — Instagram/Facebook social intelligence,"**Task ID:** `OCL-034-postmvp`
+**Spec:** `tasks/openclaw/tasks/OCL-034-postmvp-event-social-intelligence.md`
+**Repo status:** Open
+**Priority:** P2
+**Depends on:** OCL-030-postmvp, EVP-015-mvp
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:openclaw, phase-1",
+OCL-035-advanced — Events — approved WhatsApp/Postiz/social campaign execution,"**Task ID:** `OCL-035-advanced`
+**Spec:** `tasks/openclaw/tasks/OCL-035-advanced-approved-channel-campaigns.md`
+**Repo status:** Open
+**Priority:** P3
+**Depends on:** OCL-022-advanced, OCL-027-advanced, OCL-032-postmvp, OCL-034-postmvp
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Low,Todo,,,,"track:openclaw, phase-1",
+OCL-036-postmvp — Events — repo and OpenClaw skill intake audit gate,"**Task ID:** `OCL-036-postmvp`
+**Spec:** `tasks/openclaw/tasks/OCL-036-postmvp-repo-skill-intake-audit.md`
+**Repo status:** Open
+**Priority:** P1
+**Depends on:** OCL-004-core, OCL-030-postmvp
+_Generated from mdeai tasks/ for Linear MDEAPP project._",High,Todo,,,,"track:openclaw, phase-1",
+OCL-037-postmvp — Events — event planner checklist adapter,"**Task ID:** `OCL-037-postmvp`
+**Spec:** `tasks/openclaw/tasks/OCL-037-postmvp-event-planner-checklist-adapter.md`
+**Repo status:** Open
+**Priority:** P1
+**Depends on:** OCL-036-postmvp, OCL-016-postmvp, OCL-033-postmvp
+_Generated from mdeai tasks/ for Linear MDEAPP project._",High,Todo,,,,"track:openclaw, phase-1",
+OCL-038-postmvp — Events — public event source connector adapters,"**Task ID:** `OCL-038-postmvp`
+**Spec:** `tasks/openclaw/tasks/OCL-038-postmvp-event-source-connector-adapters.md`
+**Repo status:** Open
+**Priority:** P2
+**Depends on:** OCL-017-postmvp, OCL-030-postmvp, OCL-036-postmvp
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:openclaw, phase-1",
+OCL-039-postmvp — Events — source health and connector drift monitor,"**Task ID:** `OCL-039-postmvp`
+**Spec:** `tasks/openclaw/tasks/OCL-039-postmvp-event-source-health-monitor.md`
+**Repo status:** Open
+**Priority:** P2
+**Depends on:** OCL-021-postmvp, OCL-038-postmvp
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:openclaw, phase-1",
+OCL-040-postmvp — Events — event page QA crawler,"**Task ID:** `OCL-040-postmvp`
+**Spec:** `tasks/openclaw/tasks/OCL-040-postmvp-event-page-qa-crawler.md`
+**Repo status:** Open
+**Priority:** P1
+**Depends on:** OCL-012-mvp, OCL-016-postmvp, OCL-017-postmvp
+_Generated from mdeai tasks/ for Linear MDEAPP project._",High,Todo,,,,"track:openclaw, phase-1",
+OCL-041-advanced — Events — live ops ticker and role-specific event updates,"**Task ID:** `OCL-041-advanced`
+**Spec:** `tasks/openclaw/tasks/OCL-041-advanced-live-ops-ticker.md`
+**Repo status:** Open
+**Priority:** P3
+**Depends on:** OCL-022-advanced, OCL-023-advanced, OCL-035-advanced, OCL-040-postmvp
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Low,Todo,,,,"track:openclaw, phase-1",
+OCL-042-mvp — ClawEvents + OpenClaw — Medellín event ingest worker,"**Task ID:** `OCL-042-mvp`
+**Spec:** `tasks/openclaw/tasks/OCL-042-mvp-clawevents-medellin-automation.md`
+**Repo status:** Not Started
+**Priority:** P2
+**Phase:** Post-MVP — after EVP-020..026
+**Depends on:** EVP-020-mvp-discovered-events-data-model, EVP-022-mvp-event-discovery-workflow
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Medium,Todo,,,,"track:openclaw, phase-2",
+OPS-ANDRES-G1 — Andrés G1 — manual Stripe test payment → paid row + wallet QR,"**Task ID:** `OPS-ANDRES-G1`
+**Spec:** `todo.md`
+**Repo status:** Not Started
+**Priority:** P0
+**Phase:** phase-1
+**Depends on:** —
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Urgent,Todo,,,,"track:ops, phase-1",
+CAFE-001 — Cafe booking requests schema + RLS,"**Task ID:** `CAFE-001`
+**Spec:** `tasks/screens/CAFE-001-booking-requests-schema.md`
+**Repo status:** Not Started
+**Priority:** P1
+**Phase:** MVP Phase 1 (SCREEN-021 Phase C)
+**Depends on:** VEC-002
+_Generated from mdeai tasks/ for Linear MDEAPP project._",High,Todo,,,,"track:screens, phase-1",
+SCREEN-002 — Chat Nav Rail + Thread List,"**Task ID:** `SCREEN-002`
+**Spec:** `tasks/screens/SCREEN-002-chat-nav-rail.md`
+**Repo status:** Not Started
+**Priority:** P0
+**Phase:** MVP Phase 1
+**Depends on:** SCREEN-001, F48
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Urgent,Todo,,,,"track:screens, phase-1",
+SCREEN-010 — Map Exploration Right Panel,"**Task ID:** `SCREEN-010`
+**Spec:** `tasks/screens/SCREEN-010-map-exploration-panel.md`
+**Repo status:** Not Started
+**Priority:** P1
+**Phase:** MVP Phase 1 polish
+**Depends on:** MAP-001, MAP-008, F49, SCREEN-018
+_Generated from mdeai tasks/ for Linear MDEAPP project._",High,Todo,,,,"track:screens, phase-1",
+SCREEN-017 — Login / Signup Polish,"**Task ID:** `SCREEN-017`
+**Spec:** `tasks/screens/SCREEN-017-login-signup-polish.md`
+**Repo status:** Not Started
+**Priority:** P1
+**Phase:** MVP Phase 2
+**Depends on:** F08
+_Generated from mdeai tasks/ for Linear MDEAPP project._",High,Todo,,,,"track:screens, phase-2",
+SCREEN-018 — Mobile Responsive 3-Panel Shell,"**Task ID:** `SCREEN-018`
+**Spec:** `tasks/screens/SCREEN-018-mobile-responsive-shell.md`
+**Repo status:** Not Started
+**Priority:** P0
+**Phase:** MVP Phase 1
+**Depends on:** F48, MAP-007B, SCREEN-001
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Urgent,Todo,,,,"track:screens, phase-1",
+VEC-001 — pgvector inventory + duplicate HNSW cleanup plan,"**Task ID:** `VEC-001`
+**Spec:** `tasks/vector/VEC-001-pgvector-inventory-and-duplicate-index-plan.md`
+**Repo status:** Not Started
+**Priority:** P0
+**Phase:** Vector V1
+**Depends on:** —
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Urgent,Todo,,,,"track:vector, phase-1",
+VEC-002 — Semantic V1 schema + RLS plan,"**Task ID:** `VEC-002`
+**Spec:** `tasks/vector/VEC-002-semantic-v1-schema-and-rls-plan.md`
+**Repo status:** Not Started
+**Priority:** P0
+**Phase:** Vector V1
+**Depends on:** VEC-001, VEC-003
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Urgent,Todo,,,,"track:vector, phase-1",
+VEC-003 — Model registry + embedding contract,"**Task ID:** `VEC-003`
+**Spec:** `tasks/vector/VEC-003-model-registry-and-embedding-contract.md`
+**Repo status:** Not Started
+**Priority:** P0
+**Phase:** Vector V1
+**Depends on:** VEC-001
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Urgent,Todo,,,,"track:vector, phase-1",
+VEC-004 — Embedding text builders,"**Task ID:** `VEC-004`
+**Spec:** `tasks/vector/VEC-004-embedding-text-builders.md`
+**Repo status:** Not Started
+**Priority:** P0
+**Phase:** Vector V1
+**Depends on:** VEC-002, VEC-003
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Urgent,Todo,,,,"track:vector, phase-1",
+VEC-005 — Golden semantic eval harness,"**Task ID:** `VEC-005`
+**Spec:** `tasks/vector/VEC-005-semantic-eval-harness.md`
+**Repo status:** Not Started
+**Priority:** P0
+**Phase:** Vector V1
+**Depends on:** VEC-002, VEC-003, VEC-004
+_Generated from mdeai tasks/ for Linear MDEAPP project._",Urgent,Todo,,,,"track:vector, phase-1",
+VEC-006 — Search logs + observability,"**Task ID:** `VEC-006`
+**Spec:** `tasks/vector/VEC-006-semantic-search-logs-and-observability.md`
+**Repo status:** Not Started
+**Priority:** P1
+**Phase:** Vector V1
+**Depends on:** VEC-002, VEC-005
+_Generated from mdeai tasks/ for Linear MDEAPP project._",High,Todo,,,,"track:vector, phase-1",
+VEC-007 — Coffee-tour vector compatibility,"**Task ID:** `VEC-007`
+**Spec:** `tasks/vector/VEC-007-coffee-tour-vector-compatibility.md`
+**Repo status:** Not Started
+**Priority:** P1
+**Phase:** Vector V1
+**Depends on:** VEC-002, VEC-004, VEC-005, VEC-006, CTI-001A, CTI-010
+_Generated from mdeai tasks/ for Linear MDEAPP project._",High,Todo,,,,"track:vector, phase-1",

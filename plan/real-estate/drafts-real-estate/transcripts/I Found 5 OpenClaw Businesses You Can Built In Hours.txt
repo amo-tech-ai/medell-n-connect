@@ -1,0 +1,1651 @@
+In this video, we're going to be going
+
+
+over five OpenClaw use cases of people
+
+
+actually building stuff with OpenClaw
+
+
+and making money right now in hopes that
+
+
+you can take one of these ideas and run
+
+
+with it. You know, these are people who
+
+
+built real businesses and automations
+
+
+with OpenClaw. None of them are
+
+
+developers and all of them started
+
+
+exactly where you are right now. By the
+
+
+end of this video, you're going to pick
+
+
+one of these, build it out, and it's
+
+
+only going to take a weekend. I'm not
+
+
+kidding. These actual setups that real
+
+
+people are running right now took them
+
+
+just days to build out. This isn't
+
+
+hypothetical. This isn't just, oh, I
+
+
+don't know how to do it. I'm not
+
+
+technical. These people built this in
+
+
+just a few days and they're actually
+
+
+making money. And these people already
+
+
+did it. So, I have the sources to all
+
+
+the links of the builds down below. You
+
+
+can deep dive, you know, the Reddit
+
+
+posts and things like that on how they
+
+
+started, where they're at now, and take
+
+
+it, you know, one step at a time. Pick
+
+
+the use case that you like and run with
+
+
+it. The crazy thing is is how different
+
+
+these use cases are. They're covering
+
+
+different niches like finance, the
+
+
+medical field, the food industry. So,
+
+
+we're going to cover all of them. You
+
+
+know, we got a guy running a whole
+
+
+business from Discord, a family
+
+
+assistant that texts you back, a real
+
+
+estate broker who automated 20 hours a
+
+
+week of admin tasks, and an automated
+
+
+newsroom that costs less than a coffee.
+
+
+So, a dude who had an AI call 80
+
+
+restaurants in one day, all on OpenClaw,
+
+
+all built by regular people. So, the
+
+
+first one that absolutely blew my mind
+
+
+and just seeing the potential of
+
+
+OpenClaw right now and people building
+
+
+stuff, it's hard to stay focused on the
+
+
+idea that you actually chose because so
+
+
+many cool use cases are popping up. But
+
+
+this one's crazy. Um, a guy named Alex
+
+
+McFarland runs a six-f figureure
+
+
+business with zero employees and his
+
+
+entire operating system is Discord. Now,
+
+
+most people think Discord is like for
+
+
+gaming and maybe you've used it for
+
+
+community or group chat, but Alex is
+
+
+using it to run his entire company. So,
+
+
+when you see how he set it up, it makes
+
+
+a ton of sense. And here's how it works.
+
+
+He created a Discord server with
+
+
+channels organized by business function.
+
+
+So he's got a channel for YouTube
+
+
+production, a channel for measuring his
+
+
+analytics, another channel for his
+
+
+client work, a channel for content
+
+
+review, and a channel for drafts that
+
+
+need approval. So basically, every part
+
+
+of his business has his own dedicated
+
+
+space. Then he connected to OpenClaw and
+
+
+he connected to two AI agents to that
+
+
+Discord server. Agent number one is
+
+
+called Proxy and Proxy handles his
+
+
+personal brand, you know, content
+
+
+creation, schedule, draft, social media.
+
+
+Agent number two is Atlas. Atlas handles
+
+
+the client work similar to our Atlas
+
+
+that we have handling the coordination
+
+
+in our uh lineup. And basically Atlas
+
+
+also helps with proposals, follow-ups,
+
+
+deliverables, and client communications.
+
+
+So basically, two agents, completely
+
+
+separate contexts. None bleed into each
+
+
+other. You know, they're separate. They
+
+
+don't even know the other one exists.
+
+
+Real quick before we keep going, if
+
+
+you're watching this and you want to
+
+
+actually build with some of these tools,
+
+
+not just watch videos about them, you're
+
+
+going to want to check out our community
+
+
+down below, shipping school. We have a
+
+
+full Claude Code course, a full open
+
+
+claw course, and four live boot camps
+
+
+every single week where we actually help
+
+
+you get set up from scratch. Like
+
+
+actually set this thing up, not just
+
+
+watch a tutorial and figure it out by
+
+
+yourself. And we also provide one-on-one
+
+
+coaching so you could book a call with
+
+
+me. We could share screens and I can
+
+
+help you get Cloud Code or Open Claw
+
+
+running on your machine. That's it. No
+
+
+fluff. I built this community because
+
+
+watching YouTubes only gets you so far.
+
+
+We launched it just 3 days ago and we
+
+
+have over 55 members. You need people
+
+
+around you who are actually building
+
+
+people who hold you accountable and
+
+
+coaches who can help you when you get
+
+
+stuck. I'll put the link in the
+
+
+description down below. Get in now
+
+
+before the price goes up. Here's the
+
+
+part that really got me. He set up cron
+
+
+jobs so these agents work overnight. He
+
+
+literally goes to sleep and then when he
+
+
+wakes up there's finished drafts sitting
+
+
+in a review queue channel waiting for
+
+
+him. He also set up an obsidian bridge
+
+
+so he can see everything the agents
+
+
+build in real time from his own notes
+
+
+app. Here's the part that's crazy. He
+
+
+actually tried Claude code remote first
+
+
+and then made a video saying openclaw
+
+
+was dead. Then he came back and built
+
+
+this Discord setup and then said it was
+
+
+better than anything he had. Hm.
+
+
+Sometimes you got to try the wrong thing
+
+
+to appreciate the right thing,
+
+
+especially for your particular use case.
+
+
+Here's how you'd start this yourself.
+
+
+You'd install OpenClaw on your Mac or
+
+
+whatever your machine. Create a Discord
+
+
+server. Just don't overthink the
+
+
+channels. Just start with four or five
+
+
+like inbox, drafts, content, admin,
+
+
+whatever. Connect to OpenCloud to
+
+
+Discord through the Discord plugin.
+
+
+Create two agent profiles with different
+
+
+system prompts. Give each one permission
+
+
+to read and write in its own channels.
+
+
+Set up a couple cron jobs for
+
+
+reoccurring tasks like every morning at
+
+
+6:00 a.m. check my inbox channel and
+
+
+draft responses. That's basically it.
+
+
+You could have this running by Sunday
+
+
+night. This is actually really similar
+
+
+to what I run with my Wuang agent
+
+
+pipeline. We've got agents handling
+
+
+different functions. The Rizza handles
+
+
+the script outlines. Inspect the deck
+
+
+handles everything on X. Ghost Face
+
+
+gathers intel. Similar concept,
+
+
+different channels for different jobs.
+
+
+Discord just makes it more visual. The
+
+
+second one, and this one's for all the
+
+
+parents out there. Honestly, if you're
+
+
+not even a parent, you'd probably use
+
+
+this. This is going to show you what's
+
+
+possible with AI in your personal life.
+
+
+So, Brandon Gel is the COO of Every.2,
+
+
+which is a pretty big media company in
+
+
+the AI space. He built an open call
+
+
+agent named Zosa. This runs as a family
+
+
+assistant through iMessage. So, I'm
+
+
+going to paint a picture. Brandon and
+
+
+his wife both text Zosa like they'd text
+
+
+a friend. They say things like, "Hey,
+
+
+Zosa, order groceries for this week or
+
+
+how many hours did the nanny work this
+
+
+month?" or "Book a date for Friday night
+
+
+for us." And Zosa handles it just like
+
+
+texting a personal assistant. Except
+
+
+this one never sleeps and never forgets.
+
+
+She tracks the nanny hours. She orders
+
+
+the groceries. She books the date
+
+
+nights. She also reviews documents for
+
+
+both parents. She even monitors their
+
+
+iMessage conversations automatically
+
+
+creates calendar events when she detects
+
+
+appointments. Like if a dentist office
+
+
+confirms a time through text, Zosa
+
+
+caches that and adds it to the calendar.
+
+
+And she adds driving time buffers before
+
+
+and after. She maintains a running
+
+
+inventory of what's in the pantry and in
+
+
+the fridge, and either parent can check
+
+
+from anywhere. She duplicates
+
+
+ingredients across recipes when making
+
+
+grocery lists, so you don't buy double
+
+
+of something. Here's what's pretty
+
+
+crazy. Zosa refused to follow
+
+
+instructions from people she doesn't
+
+
+know. So, Brandon set that up
+
+
+intentionally. Only he and his wife can
+
+
+give her tasks. If someone else texts
+
+
+the number, Zosa won't respond. And
+
+
+that's a security feature built right
+
+
+into the system prompt. That's very
+
+
+smart for a family with a nanny and
+
+
+other people who might have access to
+
+
+the household. The way he built it is
+
+
+pretty straightforward. Open clock
+
+
+connected to iMessage through the
+
+
+iMessage plugin. a system prompt that
+
+
+defines Zosa's personality, her approved
+
+
+users and her boundaries. Access to
+
+
+Apple calendar for scheduling, a grocery
+
+
+list integration, a simple tracking
+
+
+system for nanny hours, an ambient
+
+
+message monitoring that watches for
+
+
+appointment related texts. So, if you're
+
+
+a parent and you're spending 30 minutes
+
+
+a day coordinating household stuff, you
+
+
+could build this in a day. Install
+
+
+OpenClaw, connect it to iMessage, write
+
+
+a system prompt that says you are the
+
+
+family assistant. Here are the two
+
+
+people to take orders from. Here's what
+
+
+you can access. Start with one function
+
+
+just like a grocery list. Get that
+
+
+working and then add more. You can add
+
+
+nanny tracking the calendar monitoring.
+
+
+Build it up piece by piece. Do not try
+
+
+to do it all at once. That's a big
+
+
+mistake people try to do when they get
+
+
+Open Clog going. I love this one because
+
+
+it's not just about making money. It's
+
+
+about getting your time back. And if
+
+
+you've got kids, you know that time is
+
+
+the one thing you never have enough of.
+
+
+That is the kind of build that makes
+
+
+your partner look at you and go, "Okay,
+
+
+I finally why you're getting into this
+
+
+AI stuff." The third one is more for
+
+
+like real estate. And honestly, real
+
+
+estate's about to hit a huge paradigm
+
+
+shift right now when it comes to the AI
+
+
+space. You know, basically anyone who
+
+
+has a job in real estate, you know,
+
+
+you're going to go in all day drowning
+
+
+in admin work. You know, when you get
+
+
+home, all the paperwork, it's very old
+
+
+and traditional, right? Daniel Fo is a
+
+
+Canadian real estate broker. He's the
+
+
+chief of real estate and in Valerie.ca
+
+
+and he co-founded the Habistach which is
+
+
+a data science platform and he hosts
+
+
+Canada's top real estate podcasts. The
+
+
+guy knows his stuff basically, but he
+
+
+spent a full month building an openclaw
+
+
+system specifically for real estate
+
+
+workflows. And what he found is that AI
+
+
+can now handle 70 to 80% of the
+
+
+administration tasks that were eating up
+
+
+20 to 25 hours of his week. So 20 to 25
+
+
+hours a week is not nothing. And now he
+
+
+has replaced that with an open call
+
+
+agent. Here's what his system does. It
+
+
+updates contacts. It does follow-up
+
+
+tasks inside his CRM. He's using
+
+
+Follow-up Boss in the KV Core, which is
+
+
+two of the biggest real estate CRM out
+
+
+there. It generates listing
+
+
+presentations and home appraisals. It
+
+
+schedules showings and adds them to
+
+
+calendars. It organizes paperwork and
+
+
+transaction documents. It drafts
+
+
+outreach campaigns to potential clients.
+
+
+It creates podcast summaries, newsletter
+
+
+posts, and YouTube scripts for his media
+
+
+channels. And the way he interacts with
+
+
+it is absolutely genius. He calls it the
+
+
+screenless CRM management. He texts the
+
+
+AI assistant from his phone while he's
+
+
+driving to showings. He'll send a
+
+
+message like, "Move this contact into a
+
+
+nurture sequence and schedule a
+
+
+follow-up call for Thursday." And the AI
+
+
+updates the CRM, triggers the
+
+
+appropriate automations, and drafts the
+
+
+follow-up message. Goodbye, go high
+
+
+level. This is going to kill that entire
+
+
+industry. All while he's driving in the
+
+
+car between appointments. Insane. He
+
+
+said it perfectly in his YouTube video
+
+
+about real estate is a field job with a
+
+
+desk back in. Agents are now their cars
+
+
+all day. We've all been there. Agents
+
+
+are in their cars all day going to
+
+
+showings, inspection listings. They're
+
+
+not sitting at the computer managing a
+
+
+CRM. But all that admin work still needs
+
+
+to happen. This bridges that gap
+
+
+completely. And as far as I know, nobody
+
+
+else in real estate has done this deep
+
+
+of a project within OpenClaw. And he's
+
+
+basically said that himself in one of
+
+
+his videos. And he truly believes real
+
+
+estate will benefit more from this
+
+
+technology than any other industry. And
+
+
+when you think about it, he's probably
+
+
+right. Every real estate agency is
+
+
+basically a small business owner
+
+
+drowning in admin work and they're based
+
+
+on like traditional methods and
+
+
+traditional concepts. It's like who
+
+
+fills out paperwork anymore? To build
+
+
+something like this yourself, you need
+
+
+an open claw connected to like an
+
+
+iMessage or Telegram for texting
+
+
+interface, API access to your CRM or
+
+
+whatever you're using, a detailed system
+
+
+prompt that understands your specific
+
+
+workflow, and some skills for document
+
+
+generation. basically helping it with
+
+
+your calendar management and helping you
+
+
+manage your listings. So, if you're in
+
+
+real estate or in any field where you
+
+
+are on the go all day and you have tons
+
+
+of desk work waiting for you when you
+
+
+get home, this is your weekend project
+
+
+right now. Start with just the CRM
+
+
+integration, get that working, then
+
+
+layer on the rest. If you're struggling
+
+
+to keep up with content, well, I'm about
+
+
+to save you about 40 days worth of work.
+
+
+I built something called Content
+
+
+Machine. It's [music] 10 AI agents that
+
+
+run on the OpenClaw orchestration, and
+
+
+they handle everything. Scripts, [music]
+
+
+thumbnails, exposts, blogs, outreach,
+
+
+clips, newsletters, all of it. So, I
+
+
+went from 1,000 subscribers to 4,000
+
+
+subscribers on YouTube in 7 days using
+
+
+this exact system. Every single morning,
+
+
+I wake [music] up and the content's
+
+
+already done. I spend maybe 15, 20
+
+
+minutes reviewing and approving them and
+
+
+I move on with my day. It works for any
+
+
+niche, fitness, finance, real estate,
+
+
+marketing, whatever you are building,
+
+
+and it is 100% completely customizable
+
+
+to your use case. So, you get the
+
+
+mission control dashboard, all of the
+
+
+cron jobs, everything I've built over
+
+
+the last 40 [music] days, helping me
+
+
+gain more and more people to subscribe
+
+
+and join the community. So, you plug in
+
+
+your own thing and it molds it to you.
+
+
+It learns how you talk and it writes so
+
+
+it doesn't sound like AI slop. $97 one
+
+
+time. It's not a subscription. I'll put
+
+
+the link down below and you'll thank me
+
+
+later. The fourth one is amazing. This
+
+
+one costs less than $5 a month to get
+
+
+going. And it runs fully automated as a
+
+
+newsroom. This might be the most copy
+
+
+pasteable thing I've ever seen. Like I
+
+
+said, all of these sources are down
+
+
+below. Check out which one you'd want to
+
+
+build for a further deep dive. So
+
+
+basically a guy who goes by Jacob on
+
+
+GitHub built a open-source AI newsroom
+
+
+pipeline. He posted up about it on
+
+
+Reddit and it absolutely blew up. 300 up
+
+
+votes on OpenClaw subreddit. People were
+
+
+going crazy in the comments. The GitHub
+
+
+repo is completely public. Anyone can
+
+
+clone it right now. Here's what it does.
+
+
+Every two hours a job fires off and the
+
+
+system scans for five different data
+
+
+sources. 25 RSS feeds, 13 subreddit
+
+
+posts, Twitter X accounts, GitHub
+
+
+trending repos with star velocity
+
+
+tracking and web search through Teley.
+
+
+It pulls articles all from those
+
+
+sources, runs them through a quality
+
+
+scoring test, dduplicates them in a
+
+
+persistent SQ light database so you
+
+
+never get the same story twice across
+
+
+every scan. It enriches the top eight
+
+
+articles with full text by fetching the
+
+
+actual pages and then it runs everything
+
+
+through an AI editorial system that
+
+
+curates the seven best stories. The AI
+
+
+editor uses the three tier failover
+
+
+chain Gemini Flash Light first because
+
+
+it's the cheapest and if it fails, it
+
+
+falls back to Grock through open router.
+
+
+And if that fails, Gemini Flash has the
+
+
+final backup. So the system literally
+
+
+never breaks. If one model's down, the
+
+
+next one picks it up. The output goes
+
+
+straight to a Telegram channel. He's
+
+
+running one called Gen AI Spotlight that
+
+
+you can actually go follow right now and
+
+
+see it in action. Fully automated. No
+
+
+human touches it after the initial
+
+
+setup. And here's the detail I love. The
+
+
+repo includes an editorial profile
+
+
+system. So there's a nightly cron job
+
+
+that updates the AI's editorial
+
+
+preferences based on which stories you
+
+
+approve or reject over time. So it
+
+
+actually gets better at picking up
+
+
+stories you actually care about. And it
+
+
+learns your taste. The total cost of
+
+
+this five whole dollars. Wow. A month.
+
+
+So Gemini Flashlight API plus Tavi's
+
+
+free teal. That's less than a coffee. So
+
+
+the setup is on GitHub right now. Clone
+
+
+it. Pull the scripts that you want. Put
+
+
+it in your OpenClaw work workspace
+
+
+folder and set up the cron jobs to fire
+
+
+off every two hours with an isolated
+
+
+session. Configure telegram or Slack
+
+
+channel as the delivery target.
+
+
+Customize the RSS feeds and subreddits
+
+
+for your niche and done. That's amazing.
+
+
+This is the one I think that most people
+
+
+could build in a weekend, especially if
+
+
+you're doing a bunch of data scraping.
+
+
+If you're in any niche and you want
+
+
+automated content creation, this is the
+
+
+blueprint. Real estate news. You want
+
+
+crypto news, you want stuff happening in
+
+
+the SAS space or e-commerce, whatever
+
+
+your thing is. Just swap out the data
+
+
+source, change the keywords, and you've
+
+
+got a content pipeline running 24/7 for
+
+
+$5 a month. I run something very similar
+
+
+with my Ghost Face agent. Every morning
+
+
+at 5:00 a.m., Ghostface gathers intel
+
+
+from TubeLab and X-Trends for my content
+
+
+pipeline. Same concept, different
+
+
+flavor. If I was starting from scratch
+
+
+today, though, I'd probably just clone
+
+
+Jacob's repo and customize it from
+
+
+there. Why reinvent the wheel? The fifth
+
+
+one is amazing. A guy named Dave spent
+
+
+24 hours setting up his OpenClaw and
+
+
+immediately did something crazy with it.
+
+
+He had his AI agent call 80 restaurants
+
+
+across five cities, Dallas, Houston,
+
+
+Phoenix, Seattle, and Sacramento. And
+
+
+these weren't just random test calls. He
+
+
+was looking for very specific
+
+
+information. He had an agent call Korean
+
+
+restaurants and faux restaurants asking
+
+
+about whether they use MSG in their
+
+
+cooking and whether they make real bone
+
+
+broth from scratch. very specific
+
+
+dietary questions that you'd normally
+
+
+have to call each restaurant
+
+
+individually just to find out. He set up
+
+
+an automated voice calling with Open
+
+
+AI's real-time voice API through
+
+
+Twillow. The agent sounds like an actual
+
+
+person on the phone. Natural voice,
+
+
+natural pauses, understands responses,
+
+
+and it asks the questions, processes the
+
+
+answers in real time, and compiles them
+
+
+everything into a structured database.
+
+
+80 calls across five cities. That would
+
+
+take a human days. The agent did it in
+
+
+hours. But that's not all he built in
+
+
+those 24 hours. He also connected the
+
+
+agent to iMessage so he could text it
+
+
+tasks. Gave it a web browser so it could
+
+
+look things up and set up monitors that
+
+
+actually scammed Twitter for specific
+
+
+mentions and keywords. So this one agent
+
+
+isn't just making voice calls, it's also
+
+
+receiving text, browsing the web, and
+
+
+monitoring social media all from one
+
+
+Mac. All set up in a single day. To
+
+
+build the voice calling piece yourself,
+
+
+you do need a Twillow account which
+
+
+gives you a phone number. The OpenClaw
+
+
+voice plugin, which is Open AI's
+
+
+real-time voice API for natural sounding
+
+
+conversations, and basically a skill or
+
+
+a script that tells the agent exactly
+
+
+what to ask and how to store the
+
+
+answers. It is a little more technical
+
+
+than the other four cases. I'm not going
+
+
+to be lying about that, but for Dave and
+
+
+he got it up and running in 24 hours and
+
+
+shared the whole process on HackerNews
+
+
+and X, it's something you could follow
+
+
+if you like to go, you know, more
+
+
+technical down the road. So, even if you
+
+
+don't need to call 80 restaurants, think
+
+
+about what the voice calling could do
+
+
+for you as a business. You know, if you
+
+
+have cold callers out there for real
+
+
+estate, they apply the same methodology
+
+
+to this system. So, appointment uh
+
+
+confirmations for a service business,
+
+
+that's a huge one. lead qualification
+
+
+calls for sales or other customer
+
+
+satisfaction, follow-ups, vendor
+
+
+outreach. Any business that makes
+
+
+repetitive phone calls with similar
+
+
+questions can automate this. That's
+
+
+literally hundreds of hours a year. So,
+
+
+those are the five real people running
+
+
+real automations with OpenClaw right
+
+
+now. Alex is running the six-figure
+
+
+business from his Discord with two
+
+
+agents and zero employees. Brandon is
+
+
+automating his entire household with a
+
+
+family assistant named Zosa on iMessage.
+
+
+Daniel replaced 20 hours a week of real
+
+
+estate admin work with a screenless CRM.
+
+
+Jacob built a fully automated newsroom
+
+
+for $5 a month that got 300 up votes on
+
+
+Reddit. And Dave had an AI agent call 80
+
+
+restaurants across five cities in one
+
+
+day. Every single one of these people
+
+
+started where you are starting right now
+
+
+with one idea in a weekend. None of them
+
+
+wrote the perfect setup on day one. They
+
+
+all just started with a connection to
+
+
+one agent and one task and built from
+
+
+there. And if you want help building any
+
+
+of these, this is exactly what we do
+
+
+inside of Shipping School. We have 115
+
+
+members in the last 13 days and we do
+
+
+six live calls a week where we walk you
+
+
+through these setups together step by
+
+
+step. People are shipping real projects
+
+
+every single week. Boot camp builds on
+
+
+Monday, Build Labs with Brett on Tuesday
+
+
+and Thursday, beginners hour on
+
+
+Wednesday, ship and roast on Friday, and
+
+
+Saturday we focus on getting your first
+
+
+customers through social media. The link
+
+
+is in the description. If you want to
+
+
+join us, you could pick one of these
+
+
+five projects, start on a weekend. Don't
+
+
+overthink it. Just install Open Claw,
+
+
+connect it to one thing, and give it one
+
+
+job. That's how every single one of
+
+
+these people started. And look where
+
+
+they are now. So, if you haven't
+
+
+subscribed already, we do four to six
+
+
+videos every single day. And if you like
+
+
+keeping up to date with AI news, make
+
+
+sure you hit the bell icon so you get
+
+
+notified for our next release. I hope
+
+
+you guys have a blessed Sunday. We'll
+
+
+see you in the next one. Bye-bye.

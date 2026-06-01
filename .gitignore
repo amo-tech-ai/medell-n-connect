@@ -1,0 +1,58 @@
+# ── Secrets — never commit (real keys live here) ───────────────────────
+# .env.local at repo root is the source of truth for Maps/Gemini/Stripe/Supabase keys.
+.env
+.env.*
+!.env.example
+
+# ── Nested git repositories — each tracked in its OWN repo ──────────────
+# Committing these would create gitlinks / recursive-history confusion and
+# could pull in huge trees. mdeapp/ is the application (github.com/amo-tech-ai/mdeapp);
+# CopilotKit/ + github/ are vendored reference clones; .wt-* are git worktrees.
+/mdeapp/
+/CopilotKit/
+/github/
+/.wt-*/
+
+# ── Symlink into nested repo + stray backups ───────────────────────────
+# `supabase` -> mdeapp/supabase: the real migration tree lives in the mdeapp repo;
+# tracking the symlink here would dangle and risk a duplicate migration tree.
+/supabase
+/supabase.bak/
+/.ux-010-m1-backup.patch
+/.obsidian-backup/
+
+# ── Claude tooling / skills — HOLD: contains real secrets ──────────────
+# .claude/skills/mde-maps/references/** are scraped Google docs that embed the
+# project's REAL Google Maps API keys (also present in .env.local). Do NOT track
+# until those references are scrubbed. .claude/settings.local.json is machine-specific.
+# .agents/ mirrors the same skill sources (+ an 11M _archive/). Version deliberately
+# later, post-scrub, if reusable workflows are wanted.
+/.claude/
+/.agents/
+
+# ── Dependencies / build output ────────────────────────────────────────
+node_modules/
+.next/
+dist/
+build/
+
+# ── Editor / tool caches (machine-specific, no project value) ──────────
+/.obsidian/
+/.cursor/
+/.codex/
+/.playwright/
+/.playwright-cli/
+/.playwright-mcp/
+
+# ── Heavy assets / service code — version separately if ever needed ────
+# services/ (96M, Phase-2 adk-grounding), screenshots/drafts (image/WIP dumps).
+/services/
+/screenshots/
+/screens/
+/venues/
+/files/
+/drafts/
+
+# ── OS ─────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db

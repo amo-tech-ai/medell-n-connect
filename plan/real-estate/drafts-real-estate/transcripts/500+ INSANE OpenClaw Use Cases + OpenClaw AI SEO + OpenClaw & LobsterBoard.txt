@@ -1,0 +1,2866 @@
+[clears throat] OpenClaw AI SEO 0 to 780
+
+
+SEO traffic a day. So, OpenClaw just
+
+
+became the most powerful free SEO tool
+
+
+on the planet and it's getting websites
+
+
+to the top of Google. Like you can see,
+
+
+it's actually done with mine directly
+
+
+over here. So, you can see us ranking
+
+
+directly inside Google AIO overviews as
+
+
+well as on the first page of Google um
+
+
+using this method. You can also see for
+
+
+example on our traffic that spiked up
+
+
+dramatically since before and after
+
+
+using AI SEO and particularly open
+
+
+clause to do this. So I'm going to guide
+
+
+you through the process. We're talking
+
+
+about going from zero visitors to 780
+
+
+clicks a day using a free AI agent that
+
+
+researches topics, writes full blog
+
+
+posts and publishes them to your website
+
+
+on your own every single day without you
+
+
+doing anything. And we're going to test
+
+
+it live together right now. Here's the
+
+
+problem. Google rewards websites that
+
+
+publish fresh content every single day.
+
+
+Writing articles is exhausting. Most
+
+
+people can't do it, so their websites
+
+
+never grow. OpenClaw can help you fix
+
+
+that. You set up once. It does writing,
+
+
+does publishing, does the research all
+
+
+on autopilot. I'll show you how today.
+
+
+And I'm going to show you exactly what
+
+
+we did to get this article ranking on
+
+
+Google like you can see. and how we went
+
+
+from like literally um we were getting
+
+
+like no clicks a day back over here um
+
+
+to the point now where we are getting at
+
+
+some days like 780 clicks a day from
+
+
+SEO. Uh you can see yesterday we grew to
+
+
+around about 500 or 28 clicks per day
+
+
+using this method. So I'm going to guide
+
+
+you through and show you how. Okay, so
+
+
+here's an example. So I actually said
+
+
+create an SEO optimized article for this
+
+
+um use this prompt etc with open clause.
+
+
+So, we're using OpenClaw inside
+
+
+Telegram. If you don't know what
+
+
+OpenClaw is, basically it's an AI
+
+
+assistant that can go off and do things
+
+
+for you. Um, and you can install it
+
+
+locally. Now, you can use this same
+
+
+method with any sort of um AI agent that
+
+
+you want, but I just like to use Open
+
+
+Claw. I can easily give it source
+
+
+context. I can even give it the
+
+
+tonality. I can use Claude Sonic for
+
+
+writing the content and it can do a
+
+
+pretty good job for me. Now if we have a
+
+
+look as an example um you can see
+
+
+actually created the content directly
+
+
+here. Uh so this is the article that it
+
+
+created for the website. And if you're
+
+
+wondering okay like can it publish
+
+
+directly to WordPress as well? Yes it
+
+
+can. And I'll show you an example. So
+
+
+for example if we go over to openclaw
+
+
+here and I'll talk you through exactly
+
+
+how this works. So you can see that
+
+
+basically it can publish articles
+
+
+directly to WordPress like this um
+
+
+inside openclaw right which is pretty
+
+
+insane. So it can actually for example
+
+
+create content on our website just using
+
+
+our keyword and we're good to go on
+
+
+that. So we can see an example of the
+
+
+WordPress publish page here. Also gives
+
+
+us a local guide file as well. Um let's
+
+
+have a look at another one. So if we
+
+
+click on
+
+
+the chat you can see another example. So
+
+
+actually created this article directly
+
+
+on Kimmy K25 and Claudebot aka Mob and
+
+
+how to rank with it. Right. And the
+
+
+article itself looks pretty nice. Like
+
+
+look at the design, the CTA throughout
+
+
+the page, even creating an image with
+
+
+nano banana and then publish it to the
+
+
+page as well. So let me talk you through
+
+
+exactly how this works in a few separate
+
+
+steps, right? So number one, what you
+
+
+want to do really is you want to make
+
+
+sure that when you're publishing to
+
+
+WordPress inside the chat, go over to
+
+
+your website. So for example, like this
+
+
+and there's two things that you need.
+
+
+Number one, you need a login. So you
+
+
+need to get the login details for the
+
+
+website. So you can just create a
+
+
+separate user for openclaw. Um and I'll
+
+
+talk you through how to do that in a
+
+
+second. So there's so many pop-ups in
+
+
+WordPress crazy. So you can see an
+
+
+example of our open claw right here.
+
+
+Right. So this is a separate account we
+
+
+created for openclaw. And then the other
+
+
+thing that you need for openclaw when
+
+
+you're set up with WordPress and you
+
+
+just give these login details directly
+
+
+to um the AI agent is you need to get an
+
+
+API token key. Right? So you get an API
+
+
+token key. You can see an example right
+
+
+here. So you can add an application
+
+
+password and that just allows you to
+
+
+connect the login details and the API
+
+
+token directly to your website so that
+
+
+when you put it inside the chat, it can
+
+
+then create content directly using that
+
+
+API. Right? So two literally two things
+
+
+you need from WordPress. Number one,
+
+
+login details, username, password, and
+
+
+then the second one is of course the API
+
+
+token. Both of those you can generate
+
+
+inside WordPress. I've shown you how to
+
+
+do that today. Once you've done that,
+
+
+you then need a good prompt for creating
+
+
+the content. Now, you can just say like
+
+
+um just you can just say like create a
+
+
+nice article or whatever if you want. Uh
+
+
+but what I'd recommend is using a prompt
+
+
+like for example, we have inside the AR
+
+
+profit boardroom. So, if you go to the
+
+
+classroom here, scroll down. Uh the
+
+
+prompt that we use is in this section,
+
+
+right? So, we have a full section on
+
+
+like how we create articles and rank
+
+
+them using AICO. and they're the exact
+
+
+same instructions and the prompt which
+
+
+you can see down here. Um you can just
+
+
+grab that in the description for using
+
+
+inside the articles that we rank as
+
+
+well. So if you want to rank those
+
+
+articles, we use that prompt from that
+
+
+section and then we use that to generate
+
+
+articles and and get them ranking
+
+
+directly inside openclaw. And then you
+
+
+can see an example of how it works here.
+
+
+So it's a pretty simple process. You
+
+
+give the login details to WordPress um
+
+
+to open claw. Then once you've done
+
+
+that, you're going to give it a prompt
+
+
+that helps it create content. And then
+
+
+finally from that, what you want to do
+
+
+is just give it a keyword so that it can
+
+
+start ranking it, right? Um, and that's
+
+
+basically how it works step by step. And
+
+
+then you can see here our results with
+
+
+SEO here. So these are some of the
+
+
+keywords that we're ranking for like
+
+
+mobile alarm, anti-gravity, etc. Like
+
+
+stuff that that is trending right now.
+
+
+We typically go for trending keywords.
+
+
+The way that we decide on those keywords
+
+
+we want to rank for is we use HF's
+
+
+keyword explorer. So if I go to HFS over
+
+
+here and you can do this inside Google
+
+
+autocomplete. You don't have to use HFS.
+
+
+I just like to use HFS data. So we can
+
+
+go inside here we can select for example
+
+
+the United States inside the country and
+
+
+then we can just type in for example
+
+
+let's say we want to rank for articles
+
+
+about openclaw. Well we can find a bunch
+
+
+of easy keywords and obviously openclaw
+
+
+itself pretty hard to rank for. You
+
+
+don't want to go for that. What you want
+
+
+to do is instead just find some easy
+
+
+keywords like you can see here. So these
+
+
+are low difficulty keywords that you can
+
+
+easily rank for. Right? So for example,
+
+
+openclaw installation guide. Pretty easy
+
+
+to rank for. I could probably get open
+
+
+claw to create an article around that.
+
+
+Um publish it to WordPress. Use the
+
+
+prompt that I've given it and then it
+
+
+can rank it. Right? And that's basically
+
+
+what we're doing to rank articles like
+
+
+you can see right here. Right? So it's a
+
+
+pretty simple repeatable process. Um it
+
+
+that content is still ranking directly
+
+
+inside Google as well. Um, obviously
+
+
+when we rank for keywords like that, it
+
+
+generates traffic to our website, which
+
+
+is awesome and it's all easy to
+
+
+automate. The other crazy thing here as
+
+
+well is that you can actually you you
+
+
+can actually uh create this across
+
+
+multiple platforms as well, right? So
+
+
+for us, for example, we have multiple
+
+
+websites, we have multiple platforms. We
+
+
+don't just rely on one single platform
+
+
+to rank. like we'll create articles on X
+
+
+on Reddit uh all sorts of different
+
+
+places because it's so easy to create
+
+
+the content and automate it and then
+
+
+publish it with something like open claw
+
+
+and that's basically how the process
+
+
+works right
+
+
+we've actually got a full breakdown as
+
+
+you can see inside the a profit
+
+
+boardroom so step number one you're
+
+
+going to connect open claw to your
+
+
+website step number two you find a
+
+
+keyword step number three you're going
+
+
+to tell claw to write the article and
+
+
+then step number four you're going to
+
+
+schedule it to to run automatically each
+
+
+day because obviously you can schedule
+
+
+tasks with open claw. So you can say
+
+
+like create one article a day on how to
+
+
+use it and that sort of thing. We also
+
+
+have a full six-hour course on how to
+
+
+use openclaw inside the AR profitable
+
+
+boardroom. This is basically my AI
+
+
+community with 2,500 members as you can
+
+
+see that shows you how to scale, save
+
+
+time, and grow with AI automation. So
+
+
+inside the community, you can ask
+
+
+questions, you can get help, you can get
+
+
+support whenever you need it. There's
+
+
+always people online because there's so
+
+
+many people inside the group. We have a
+
+
+daily accountability group so that you
+
+
+can stay 100% focused. Additionally,
+
+
+what I also do is I research these tools
+
+
+for like 60 hours a week and then I
+
+
+condense it down into a weekly update
+
+
+that you can just read inside this
+
+
+section here so you can save time and
+
+
+avoid overwhelm. Also, if you're
+
+
+wondering, okay, like are people getting
+
+
+results with this? How does it work? You
+
+
+know, what what are people's experiences
+
+
+with this? We've actually got 133 pages
+
+
+of testimonials from people getting
+
+
+great results with this. So you can see
+
+
+all the testimonials of people just
+
+
+getting awesome results with our school
+
+
+communities, which is great. And you can
+
+
+see examples of each of these uh on
+
+
+screen right now. So it's it's awesome.
+
+
+I mean, it's pretty much an infinite
+
+
+scroll of people and their wins and and
+
+
+what they're achieving through the
+
+
+school groups. So I'm super happy with
+
+
+that. And also inside the calendar, you
+
+
+get four weekly coaching calls. You can
+
+
+jump on live video calls, ask questions,
+
+
+share your screen, get help, get support
+
+
+whenever you need to. You can meet
+
+
+people in your local area via the map,
+
+
+which is great. It's kind of like a
+
+
+network that connects you with loads of
+
+
+people across the world. And then also
+
+
+inside the classroom, you get all of my
+
+
+best training. So, for example, if you
+
+
+want to go from beginner to expert with
+
+
+AI automation, learn how to build your
+
+
+first AI agent in 5 minutes, you can
+
+
+check that section out right here. If
+
+
+you want to, for example, learn how I
+
+
+automate X, newsletters, shorts,
+
+
+Instagram, how I create avatar videos,
+
+
+then we've got the full processes broken
+
+
+down inside this section. If you want to
+
+
+get the daily updates and all the AI SEO
+
+
+training from today, including an extra
+
+
+video tutorial, you can check that out
+
+
+right here along with a full 6-hour
+
+
+course on OpenCL and also another 3-hour
+
+
+course over there. Um, we're also
+
+
+updating this daily. So, you can see
+
+
+we're just adding new trainings every
+
+
+single day on how to use this stuff, how
+
+
+to um implement it. We've tested out
+
+
+alternatives like Clorex, uh, Copore. We
+
+
+show you how to run free local APIs like
+
+
+for example Lama with Quent 3.5 so that
+
+
+you can actually connect this to um Open
+
+
+Claw and get it running for free as you
+
+
+can see right here. So every single day
+
+
+we're just updating this with new
+
+
+guides, new information, new video
+
+
+tutorials that help you grow based on
+
+
+what I think is most useful for you. Um
+
+
+you can also learn how to get more
+
+
+agency clients with the agency course.
+
+
+You can watch your coaching calls back
+
+
+and you can watch them back if you want
+
+
+to as well. You can learn how to rank
+
+
+number one with the AI SEO automation
+
+
+section. We also have a section on how
+
+
+to grow your YouTube channel with AI
+
+
+based on what's working for me as well.
+
+
+So that's all inside the AI profit
+
+
+boredom link in the comments description
+
+
+or just go to the aiprofitbedom.com.
+
+
+Let's see what we got inside the
+
+
+questions. So Doberman says, "Hello,
+
+
+Bonour from France. Very cool your tips,
+
+
+man. Thanks for all your videos. Happy
+
+
+to help. Thank you very much, sir." Uh
+
+
+Jason Fist says um install desktop claw
+
+
+through Gemini. Uh I would recommend
+
+
+using clawed code if people are watching
+
+
+this and not sure what we're talking
+
+
+about. So there's a desktop app for
+
+
+openclaw that I covered yesterday in
+
+
+this video tutorial. So you can see in
+
+
+this section here we have a full video
+
+
+tutorial and guide on how to use Clorex
+
+
+which is a desktop app for open claw
+
+
+kind of like claw codework but for open
+
+
+claw directly. Um [snorts]
+
+
+and that's that's basically it for the
+
+
+videos
+
+
+and the questions inside the comments.
+
+
+Open claw and lobster board is insane.
+
+
+So open core just got a superpower
+
+
+upgrade and when you combine it with
+
+
+lobster board it becomes something
+
+
+completely different. So lobster board
+
+
+is a free tool that gives you one single
+
+
+screen showing everything and you can
+
+
+host this locally for free. Here's an
+
+
+example of what it looks like. So you
+
+
+can add all these different widgets for
+
+
+your open claw and basically this is a
+
+
+free tool where you can check for
+
+
+example your AI agents activity how many
+
+
+tokens it's used the tasks website
+
+
+traffic service stats all live all in
+
+
+real time all in one place and most
+
+
+people using openclaw have no idea what
+
+
+that agent is actually doing this fixes
+
+
+it completely and we're setting up the
+
+
+whole thing together today I'll show you
+
+
+how to build it from scratch right now
+
+
+if you're running openclaw and you don't
+
+
+have this set up then potentially you
+
+
+don't really know or understand what
+
+
+your agent's working on whether it's
+
+
+doing things and you have no easy way of
+
+
+seeing it all at once. Lobster board
+
+
+basically changes that and it's a free
+
+
+way to set this up as you can see right
+
+
+here. Um so we're going to just have a
+
+
+look at this. We'll look at how to build
+
+
+dashboards together live. There's 50
+
+
+widgets. Um you don't need to code. You
+
+
+can get it set up in a couple of minutes
+
+
+and by the end of this video you'll have
+
+
+a beautiful live command center showing
+
+
+you exactly what your AI is doing at all
+
+
+times. So let's build it right now. So
+
+
+this is lobster board and basically I've
+
+
+already got it installed inside
+
+
+openclaw. Let me show you an example of
+
+
+how that worked. Right. So we literally
+
+
+said can you install this? Gave it a
+
+
+link to the GitHub for lobster board and
+
+
+then once we did that we actually got
+
+
+this installed. Now this is basically a
+
+
+self-hosted drag and drop dashboard
+
+
+builder. So you can kind of build your
+
+
+own sort of mission control like you see
+
+
+here with system log the schedule tasks
+
+
+what you're working on today the
+
+
+calendar everything connected to
+
+
+openclaw but in a more visual way
+
+
+because if you for example just use the
+
+
+chat like you can see right here there's
+
+
+not that much to organize right it's
+
+
+just like it's a little bit messy um you
+
+
+can go through the sections on the left
+
+
+hand side here but it's not really like
+
+
+a mission control dashboard this is
+
+
+essentially what you're building inside
+
+
+Lobster board so it took took a couple
+
+
+of minutes to install that and we
+
+
+literally said, "Can you install this?"
+
+
+Then it thought for a few minutes and
+
+
+then said, "Sure, lobster board is up
+
+
+and running here." And then if we go to
+
+
+that link, you can see an example. If we
+
+
+edit out the layout, you can then edit
+
+
+this how you want to. Now, you can
+
+
+switch between five different styles as
+
+
+you can see. So, you can switch between
+
+
+all these different cool styles of the
+
+
+way it's laid out. So, you get a lot of
+
+
+um customization. Then, you can also
+
+
+switch between the zoom and how much you
+
+
+want to zoom in and that sort of thing.
+
+
+So, we're just going to leave that on
+
+
+default. You can change the canvas size.
+
+
+So this is the canvas for your dashboard
+
+
+that you can sort of build out. And then
+
+
+there's a bunch of other stuff cool here
+
+
+that you can for example like check out
+
+
+templates, you can export templates, you
+
+
+can clear the whole screen as well. So
+
+
+we can actually clear all the widgets
+
+
+off the screen there. And we can preview
+
+
+that as well and then save it once it's
+
+
+done. Right. So if we have a look on the
+
+
+left hand side, we've got for example
+
+
+like we can add a little countdown here.
+
+
+We can scroll down. We can add like
+
+
+details about our system like the CPU,
+
+
+the dis usage etc. Network speed which
+
+
+is pretty useful. Um you can add docker
+
+
+if you're running open claw through
+
+
+through docker as well which is easy.
+
+
+And then if you just click on something
+
+
+you want to delete it you can just click
+
+
+on delete inside your keyboard and it
+
+
+will delete that directly there. All
+
+
+right. There's other interesting stuff
+
+
+as well. So you can add like a sleep
+
+
+score. So I get I guess you can connect
+
+
+that to like an ring or something like
+
+
+that which is pretty interesting. And
+
+
+then over here we have the open claw
+
+
+release calendar. So you can actually
+
+
+check for new releases and these are
+
+
+like specific to open claw right. So on
+
+
+the left hand side you'll see that
+
+
+you've got like system dashboards, you
+
+
+got the basics. So this is just like
+
+
+generic info but the most important
+
+
+thing that probably most people would
+
+
+use here is the open claw um linked
+
+
+widgets. Right? So you can add like
+
+
+chron jobs um system, you can add the
+
+
+release details, you can add the
+
+
+activity list, etc. All right. as you
+
+
+can see. And then you can resize these
+
+
+as well. So, we can move them around or
+
+
+we can resize them in the bottom left
+
+
+like you can see. Um, but it's a really
+
+
+easy way to just build out like an
+
+
+awesome missing control, right? It's
+
+
+kind of like drag and drop. No messing
+
+
+around. Super simple.
+
+
+Open Claw can set it all up in a couple
+
+
+of minutes. And it's completely free to
+
+
+set up as well, right? Look at that.
+
+
+Boom. Um, what else can we do here? We
+
+
+can add like a to-do list. So, we can
+
+
+edit a to-do list, which is pretty nice
+
+
+as well. And
+
+
+you can change the settings on the right
+
+
+hand side. So you can say, okay, here's
+
+
+a widget type, title, position, um
+
+
+here's how often it should refresh. And
+
+
+then here's the content um adjustable
+
+
+things as well. If you want to delete
+
+
+anything, you can just click on it and
+
+
+then click delete widget over here. And
+
+
+then you can add like even like the
+
+
+GitHub stats. Um you can add all sorts
+
+
+of crazy stuff. A quote of the day,
+
+
+which is pretty nice. Content. Um, so
+
+
+you can actually iframe embed a website
+
+
+on here or you can add a new image and
+
+
+that sort of thing. Um, you can add like
+
+
+quick links if you just want to quickly
+
+
+link out from your dashboard from
+
+
+anywhere. And that's basically how it
+
+
+works, right? Then once you've done
+
+
+that, you can click on save. Then once
+
+
+you've done that, you can click on
+
+
+preview and this is what your dashboard
+
+
+looks like. Right? So for example here,
+
+
+if we actually go back to open call
+
+
+control and we click on that link, we've
+
+
+got the dashboard that we literally just
+
+
+set up over here. Right? Super simple
+
+
+and easy, very intuitive to use. Um, you
+
+
+can customize it as much you want and it
+
+
+gives you a ton of different widgets as
+
+
+you can see here. Obviously, it's not
+
+
+like I've not made it look super
+
+
+beautiful because I'm just doing this on
+
+
+a live stream right now and I'm doing it
+
+
+live in front of you guys. But how cool
+
+
+is that? Like you can it's even linked
+
+
+directly to um everything automatically.
+
+
+So, for example, here it's automatically
+
+
+taken the information from OpenClaw.
+
+
+It's got the information on the latest
+
+
+release of open claw, how much disc
+
+
+space this is taking up, how much system
+
+
+memory is taken up as well and then the
+
+
+system log as well. All right, and
+
+
+whether open claw is actually up to
+
+
+date. So you can just get all the key
+
+
+information about open claw and just
+
+
+manage it in one single place. And I
+
+
+think this is the way that opens go in
+
+
+is like you know you can have different
+
+
+templates, you can have like mission
+
+
+control and just easier ways to
+
+
+orchestrate and organize open core. I
+
+
+think that's that's the way that most
+
+
+people want to be uh running this stuff.
+
+
+Let's have a look what we got on the
+
+
+questions.
+
+
+Honestly, love this. Thank you very
+
+
+much, sir.
+
+
+What do you think is the best workflow
+
+
+for building complex AI mobile apps? Uh,
+
+
+the one that I've seen that's the best
+
+
+is Rock. Rock is amazing for creating
+
+
+apps and it makes it super simple to get
+
+
+them published as well. So, I'd
+
+
+recommend that instead. What else we got
+
+
+here? Steven says, "Would you recommend
+
+
+Perplexi Computer or Open Claw for
+
+
+updating blogs?" For updating blogs, I
+
+
+would recommend um using Open Claw
+
+
+instead. That's actually proven for me.
+
+
+Plexi Computer is great for like just
+
+
+going off and doing tasks autonomously,
+
+
+but it doesn't link to other things that
+
+
+well so far. I think they're actually
+
+
+updating. I saw it this morning where
+
+
+they're going to add an update where it
+
+
+links it to skills, but currently that
+
+
+is not set up. Do you actually run
+
+
+openclaw agents? Yes, as of shown today.
+
+
+So, we've already shown for example an
+
+
+example workflow where I was ranking um
+
+
+with the content the SEO content that
+
+
+OpenClaw created. So, it's pretty
+
+
+simple. What skills would you recommend
+
+
+for openclaw?
+
+
+And so if you go to the classroom inside
+
+
+the AI profitable board link in the
+
+
+comments description and then just go to
+
+
+the skills update. So we've we've got a
+
+
+bunch of ideas on skills and that sort
+
+
+of thing. I also show you like how to be
+
+
+careful with this stuff because if
+
+
+you're installing anything related to
+
+
+open quil you always want to be checking
+
+
+okay um what the skill MD files saying
+
+
+etc. Uh is it secure and I have a lot of
+
+
+training on all of that inside there.
+
+
+What's the desktop? Is it free? Yes, you
+
+
+can use um what is it now? We've got a
+
+
+full training on it inside this section,
+
+
+right? It's Clorex. That's the one I
+
+
+checked out yesterday. So, this is a
+
+
+desktop app for Open Claw.
+
+
+Cory says, I have my OpenClaw running on
+
+
+a VM in OVH cloud. How can I actually
+
+
+connect other services? So, you just
+
+
+give it the API, right? So if you want
+
+
+to connect it to 11 labs for example for
+
+
+generating voice um outputs then you
+
+
+would just get an API for 11 labs and
+
+
+give it to open claw and say like save
+
+
+this as a skill.
+
+
+How can I get open claw to send me
+
+
+reminders through discord. So you would
+
+
+connect it to discord. We've got lots of
+
+
+training on that inside the course here.
+
+
+Right. And once you've connected it to
+
+
+discord in fact let me show you
+
+
+something even better. So inside this
+
+
+section, we have a full section on
+
+
+Discord parallel agents and how to set
+
+
+those up. Once you've connected it to
+
+
+Discord, you can actually say, okay,
+
+
+schedule this task and give me reminders
+
+
+like every 5 hours, for example, inside
+
+
+Discord. So it's pretty simple. What do
+
+
+I tell OpenCloud to install this
+
+
+dashboard? So to install the dashboard,
+
+
+all you do is you say, can you install
+
+
+this? And then you paste in the GitHub
+
+
+link, which you can see from lobster
+
+
+board right here.
+
+
+And uh Sebastian says, "Have you seen
+
+
+the guy that made an iOS um app
+
+
+factory?" No, but that's pretty cool. I
+
+
+like the idea of that. That's awesome.
+
+
+Um there's so many cool people doing so
+
+
+many cool things with open claw. I think
+
+
+that's the fantastic thing about it
+
+
+being open source.
+
+
+So that is basically how to use Lobster
+
+
+board. That's that's how it works, etc.
+
+
+I've shown you how to install it, shown
+
+
+you how to set it up, how to use it, and
+
+
+how it works in real time. Um, it's
+
+
+really cool. It's a really powerful
+
+
+tool. If you want to get a full guide on
+
+
+how to use it, all the best ways to use
+
+
+it, etc., you get that inside the AR
+
+
+profit boarding along with all of my
+
+
+best trainings on OpenClaw. So, you can
+
+
+see, for example, here we give you a
+
+
+six-hour course on how to use OpenClaw.
+
+
+Here we have another three-hour course
+
+
+on how to use it with all the best use
+
+
+cases and the step-by-step guide. We
+
+
+update this daily. So we add new
+
+
+trainings every single day on openclaw
+
+
+and all the new updates that come out
+
+
+just to help you as much as we can. So
+
+
+for example recently we compared all the
+
+
+alternatives. We show you how to run
+
+
+open claw for free with o lama and we
+
+
+even for example show how to set up
+
+
+mission control with openclaw to build
+
+
+like awesome dashboards automatically.
+
+
+So you don't even need to drag and drop
+
+
+this stuff. So you can get that all
+
+
+inside the arprofit boarding link in the
+
+
+comments description or just go to the
+
+
+arprofitboard.com.
+
+
+This is my AI automation community that
+
+
+helps you save time, scale, and grow
+
+
+with AI automation. Now, inside the
+
+
+community, you can ask questions, get
+
+
+help, get support whenever you need to.
+
+
+We also have a daily accountability
+
+
+group so that you can stay focused and
+
+
+avoid information overwhelm. And
+
+
+additionally, you can see that what I do
+
+
+is I condense my 60 hours of research
+
+
+each week on AI tools and I show you
+
+
+what's interesting, what's useful, and
+
+
+what you can safely ignore so that you
+
+
+save time, right? It's just like here's
+
+
+the top three most useful things that
+
+
+came out this week. Here's everything
+
+
+else you can safely ignore.
+
+
+Additionally, you can see here that for
+
+
+the AR profit boarding, we actually have
+
+
+over 133 pages of testimonials from
+
+
+happy people inside our school
+
+
+community. So, you can see lots of
+
+
+people getting wins. It's pretty much a
+
+
+infinite scroll at this point and you
+
+
+can see some of the awesome stuff and uh
+
+
+how people are winning with this stuff.
+
+
+So, that's great to see too. Also,
+
+
+inside the calendar, you can get four
+
+
+weekly coaching calls. So you can get
+
+
+weekly coaching calls and jump on live
+
+
+calls and get help and support in real
+
+
+time. Inside the map, you can connect
+
+
+with local community members. What this
+
+
+means essentially, it's like a
+
+
+networking group where you can meet cool
+
+
+people in your area and you can connect
+
+
+with them locally, which is great. Just
+
+
+zoom in on the area. Inside the
+
+
+classroom, you can get access to all of
+
+
+my best training. So you can go from
+
+
+beginner to expert with AI automation
+
+
+and learn how to build your first AI
+
+
+agent in under five minutes.
+
+
+Additionally, you'll get all my best
+
+
+playbooks. So for example, you can learn
+
+
+how to automate AI avatar videos,
+
+
+shorts, Instagram, newsletters, Twitter,
+
+
+etc. We have all of my best automations
+
+
+inside the classroom. And then
+
+
+additionally, you can see that we update
+
+
+daily with new interesting guides inside
+
+
+the SAP update section. So I just look
+
+
+at everything that comes out. I'm like,
+
+
+right, boom. Here's the most interesting
+
+
+stuff for you right now. Uh Stephan
+
+
+Thomasson says, "You're amazing. Thank
+
+
+you, Julian. Happy to help and I'm glad
+
+
+that it helps." So that's it. Thanks for
+
+
+watching. Appreciate it. Hope to get
+
+
+hope to see you inside the AI profit
+
+
+boardroom link in the comments
+
+
+description or just go to the aiprofit
+
+
+boardroom.com
+
+
+500
+
+
+open claw use cases. So, I just built a
+
+
+website with over 500 openclaw use
+
+
+cases, and today I'm going to show you
+
+
+exactly how to use it. This is organized
+
+
+by category. It also shows you, for
+
+
+example, who's using it, how to get
+
+
+access to it. The prompt you can just
+
+
+copy and paste to start automating with
+
+
+this task. And you can click between or
+
+
+search inside this section to get over
+
+
+500 use cases across 14 different
+
+
+categories uh with 500 different copy
+
+
+and paste prompts. And all of these have
+
+
+proven case studies and links to example
+
+
+case studies as you can see right here.
+
+
+So if you're looking for real ways to
+
+
+use OpenClaw, this is one of the best
+
+
+ways to do it. Most people set up
+
+
+OpenClaw and then just kind of stare at
+
+
+it. They have no idea what to do with it
+
+
+and that ends today. This website's
+
+
+basically a cheat code because you have
+
+
+over 500 real things you can make open
+
+
+claw do for you right now. Not someday
+
+
+today. Plus all the copy and pasteable
+
+
+prompts to use it too with links to
+
+
+example case studies for each use case.
+
+
+So we're talking, for example, building
+
+
+tools, running tasks, automating your
+
+
+entire workflow, all without writing a
+
+
+single line of code. And the crazy part
+
+
+is most people of OpenClaw have no idea
+
+
+any of this is even possible. And that's
+
+
+exactly why we built this. So today I'm
+
+
+going to talk you through the whole
+
+
+setup, show you how to find the right
+
+
+use cases for you, and I can show you
+
+
+how we can test some of them live
+
+
+together. So by the end of this video,
+
+
+you're going to know exactly how to make
+
+
+OpenClaw 100 times more powerful, right?
+
+
+So if we have a look at open claw and
+
+
+this setup right here basically what you
+
+
+can see is that we've split this into
+
+
+categories. So we've researched all of
+
+
+the use cases. So for example, if we
+
+
+have a look at this um you can see that
+
+
+we've actually for example taken the
+
+
+morning brief example use case which is
+
+
+from this website right um which is
+
+
+looking at how people are using open
+
+
+claw and then what we've done is we've
+
+
+created a prompt where you can just
+
+
+implement that yourself right so if you
+
+
+want to just uh steal this example you
+
+
+can just copy and paste a prompt then
+
+
+you can go over to open claw and use
+
+
+this example case study um right here.
+
+
+So, we can just paste our prompt right
+
+
+here. And we can say, okay, every day I
+
+
+see it 7:00 a.m. Uh, send me a morning
+
+
+brief with unread email summary, today's
+
+
+calendar, weather, and my top three
+
+
+tasks. Right? And then if I paste in
+
+
+that example prompt into openclaw, it's
+
+
+going to implement it right now. Right?
+
+
+Um, and that's basically how all of this
+
+
+works. So, it's a really simple setup.
+
+
+It's super easy to use and basically you
+
+
+can just check out whatever you want. So
+
+
+for example here we could for example in
+
+
+inbox um and declutter our emails right
+
+
+we could turn our meeting notes to
+
+
+action items. All of these prompts are
+
+
+examples of real ways people are
+
+
+actually using this. So we even for
+
+
+example said u maintain my grocery list
+
+
+when I say add um x add it group items
+
+
+by produce um and whenever I ask and
+
+
+give me the list whenever I need it
+
+
+right all sorts of stuff. Now if we go
+
+
+to for example like content creation we
+
+
+can say okay generate 20 YouTube video
+
+
+ideas for niche channel include and then
+
+
+it would just generate ideas for my
+
+
+channel right here and again we have
+
+
+links to the actual case studies of
+
+
+people using this stuff right so for
+
+
+example here I actually linked to
+
+
+Matthew Burman's article where he talks
+
+
+about how to use this sort of stuff and
+
+
+[snorts]
+
+
+if you need like more information on
+
+
+that particular topic or if you want to
+
+
+just dive deeper into it right so it's
+
+
+[snorts] a pretty amazing tool
+
+
+Basically, the way that I built it, just
+
+
+to be 100% transparent with you, is I
+
+
+went into Claude and just said like,
+
+
+"Give me 500 use cases of how people can
+
+
+use AI and and what it works." Um, let
+
+
+me try and find the original chat here.
+
+
+Yeah. So,
+
+
+This is basically how we built it like
+
+
+just so you know how to build your own
+
+
+version if you wanted to.
+
+
+Um, so we said like find me 500 use
+
+
+cases for openclaw and then a lot of the
+
+
+links came back super generic like the
+
+
+links weren't correct for most of them.
+
+
+And then from there we gave it more
+
+
+ideas, more briefing on how to do it.
+
+
+Added a CTA to our community on top of
+
+
+it. And then um also created a full
+
+
+step-by-step guide on on what Open Claw
+
+
+is and that sort of thing, right? And
+
+
+then once you've done that and once
+
+
+you've generated a website like you can
+
+
+see right here with the 500 use cases um
+
+
+you can just click on share artifacts
+
+
+and that's how you can create an awesome
+
+
+website like this for whatever tool you
+
+
+want to learn about. So if you want to
+
+
+get the full details on that we've
+
+
+actually got it for free this if you
+
+
+want to get access to this website it's
+
+
+completely free inside the AI success
+
+
+lab link in the comments description. So
+
+
+just go to the classroom and then you
+
+
+would go to this section here, the March
+
+
+2026 version and you can just get access
+
+
+right there, right? And you click on
+
+
+that link and it takes you directly to
+
+
+the website where you can just search
+
+
+through and use it however you want to.
+
+
+So if you're wondering, okay, what are
+
+
+the best skills, the best use cases, how
+
+
+it works, etc. It's all right here for
+
+
+you for free.
+
+
+So that's basically it for me. Thanks
+
+
+very much for watching today.
+
+
+Um that is 500 use cases on how OpenAI
+
+
+works. If we have a look at the main use
+
+
+cases here. So you got like productivity
+
+
+and admin, developer and coding, content
+
+
+creation, research and learning. Uh
+
+
+marketing and SEO is a big big one. So
+
+
+I'd recommend checking out that. That's
+
+
+probably one of the most useful
+
+
+sections. Uh communication messaging,
+
+
+you got smart home and personal life.
+
+
+This is quite interesting as well cuz
+
+
+like a lot of people are using this for
+
+
+their personal life too, not just for
+
+
+like business related stuff. And you can
+
+
+see some examples of prompts um and how
+
+
+people are using this with uh links to
+
+
+case studies and everything else. We've
+
+
+also got stuff for example for like
+
+
+community and social data and analytics
+
+
+automation integration like you can
+
+
+actually this is quite interesting. So
+
+
+for example, if you want to create sub
+
+
+agents, we have a prompt for it right
+
+
+here with examples of how it works. And
+
+
+you can see here the prompt is like root
+
+
+task to specialized agents, coding tasks
+
+
+to whatever. And you can separate your
+
+
+open claw into different agents
+
+
+depending on the work um required. So
+
+
+that's all inside here with advanced
+
+
+prompts and and copy and pasteful use
+
+
+cases as you can see. So thanks very
+
+
+much for watching. Appreciate it. Um if
+
+
+you haven't already, feel free to check
+
+
+out the AI profit boardroom. This is my
+
+
+AI automation community where we really
+
+
+deep dive on stuff like openclaw uh link
+
+
+in the comments description or just go
+
+
+to the AI profitab.com. This really
+
+
+focus on helping you save time at scale
+
+
+with AI automation. So for example, we
+
+
+have a daily accountability group where
+
+
+you can post your goals, stay
+
+
+accountable, um and make sure you avoid
+
+
+information overload plus see what other
+
+
+people are working on which is great. We
+
+
+have a weekly update post. So each week
+
+
+I condense my 60 hours of re research
+
+
+into what's good and what you can safely
+
+
+ignore to save you time. You can post
+
+
+questions inside the community, get help
+
+
+and support whenever you need to. And
+
+
+then also inside the calendar here, you
+
+
+can jump on weekly video calls, get help
+
+
+and support in real time. Um these are
+
+
+Zoom meetings where you can actually
+
+
+meet the community as well. Inside the
+
+
+map, you can actually zoom in on your
+
+
+local area and meet cool people in your
+
+
+area which is awesome. And then inside
+
+
+the classroom, you can get all of my
+
+
+best training. So, for example, you can
+
+
+go from beginner to expert with AI
+
+
+automation and learn how to build your
+
+
+first AI agent in under five minutes.
+
+
+Additionally, inside the classroom, you
+
+
+can get my best playbooks on, for
+
+
+example, how to automate X, newsletters,
+
+
+shorts, AI avatar videos, and everything
+
+
+else.
+
+
+Additionally,
+
+
+you can get my daily updates. So inside
+
+
+this section we update this with all the
+
+
+new updates. So recently for example
+
+
+today we created a new training on open
+
+
+AI uh openclaw AI SEO lobster board 500
+
+
+open core use cases. Um you can see
+
+
+we've already covered a video on chat
+
+
+GBT 5.3 instant and Gemini 3.1
+
+
+flashlight. These came out today and we
+
+
+just cover them as soon as we can with a
+
+
+video tutorial and a step-by-step guide
+
+
+so you can implement and learn how to
+
+
+use this stuff yourself. And we do that
+
+
+every single day, right? Um, also inside
+
+
+the classroom here, you can learn how to
+
+
+get more clients with the agency course.
+
+
+You can watch about the coaching calls
+
+
+over here. You can connect with me
+
+
+personally. So, you can actually direct
+
+
+message me personally inside here. And
+
+
+then you can learn how to rank inside
+
+
+Google and AI search engines with this
+
+
+section and how to grow a YouTube
+
+
+channel with AI based on what's working
+
+
+for me. So, that's all inside the AI
+
+
+profit boardroom. Thanks for watching
+
+
+and I'll see you on the next one.
+
+
+Cheers. Bye-bye.
+
+
+Um, Corey says, "Do you cover open
+
+
+source models?" Yeah, absolutely. So if
+
+
+you go inside the classroom here, uh we
+
+
+actually just covered the recent release
+
+
+of Quen 3.5 via O Lama and also Alama
+
+
+and PI which is a free local AI coding
+
+
+agent, right? So if you want to learn
+
+
+about open source models, we have tons
+
+
+of training on Olama and these all come
+
+
+with videos and step-by-step guides. So
+
+
+you can just type in Olama and we show
+
+
+you for example how to set up like KimK
+
+
+2.5 for free with open claw or for
+
+
+example how to use GLM 4.7 flash for
+
+
+free with open claw. So if you like open
+
+
+source local models, we have tons of
+
+
+training on that inside the AI profer
+
+
+boardroom as well. Thanks for watching.
+
+
+Appreciate it. See you on the next one.
+
+
+Cheers. Bye-bye.

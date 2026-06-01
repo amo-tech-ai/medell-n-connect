@@ -1,0 +1,667 @@
+Has AI finally replaced all admin work?
+
+
+Well, something pretty big happened in
+
+
+the world of AI that could change
+
+
+everything. I'm Grant. I lead, one of
+
+
+the top real estate teams here in
+
+
+greater Houston, and this is Mega AI
+
+
+with Grant Rothberg. If you've been
+
+
+tuned in at all on the latest AI stuff,
+
+
+you've probably heard about Claudebot.
+
+
+And the question people are asking is,
+
+
+is this the tool that finally delivers
+
+
+on the promise a lot of us thought AI
+
+
+would deliver on in helping us finally
+
+
+end once and for all all these
+
+
+monotonous administrative tasks? Is this
+
+
+the thing that can do that? I want to
+
+
+break this down a little bit for us and
+
+
+there's some really cool things about
+
+
+what Claudebot is. And first for a lot
+
+
+of folks, this has been a really
+
+
+interesting tool that shows a lot of
+
+
+promise in that it really helps us take
+
+
+the brain of AI that lives in these LLMs
+
+
+like Claude and Gemini and ChatgPT and
+
+
+gives them hands to get out there in the
+
+
+real world. So, if you've been using AI
+
+
+stuff for a while, you've seen popping
+
+
+up in your little tool tray for your
+
+
+your LLM connectors to your Gmail
+
+
+account or your Google account. You've
+
+
+seen things connecting to Excel sheets.
+
+
+Even you've seen a way to connect a
+
+
+bunch of different apps and tools into
+
+
+your large language model of choice and
+
+
+that's a place where we we always talk
+
+
+about this idea of taking a brain that
+
+
+is something like chat GPT or Claude and
+
+
+then giving it some hands and some tools
+
+
+to get out there into the real world.
+
+
+And then comes along this thing called
+
+
+Claudebot that promises to do some
+
+
+really cool stuff. Now what this does
+
+
+first and foremost is it has just like
+
+
+potentially enormous context windows.
+
+
+And by that we mean memory, the ability
+
+
+to remember things that has learned
+
+
+about and the ability to access other
+
+
+information without having to prompt it
+
+
+again and again or come up against those
+
+
+context window limits that we see in a
+
+
+lot of chat windows. This seems to
+
+
+overcome that with one user being able
+
+
+to run 180 million tokens through it in
+
+
+one week, which is pretty crazy. It's
+
+
+also really kind of a cool promising
+
+
+thing because when a lot of us first
+
+
+started hearing about AI, we thought
+
+
+this was going to be amazing like the
+
+
+Jetsons or something where robots just
+
+
+start doing work for us and we all
+
+
+dreamed of this world where I can just
+
+
+tell an AI to manage something like my
+
+
+sales funnel or my email account or my
+
+
+calendar and it just knows what to do
+
+
+intuitively and just does stuff for me.
+
+
+And that's kind of what the promise is
+
+
+of a tool like this where it has hands
+
+
+to reach out there and get stuff done in
+
+
+the real world. And what's really cool
+
+
+about this thing is it it has the
+
+
+promise of connecting a bunch of
+
+
+different channels, things like uh
+
+
+WhatsApp or your your Instagram stories
+
+
+or um your email account or Telegram or
+
+
+Signal or all these different messaging
+
+
+tools that maybe you use where I could
+
+
+just give some simple instructions to
+
+
+something like that and it reaches out
+
+
+to this Cloudbot tool that lives on my
+
+
+computer and then it can go kind of work
+
+
+like a like if I had an assistant at
+
+
+home who was on my machine at all times.
+
+
+is like if I were to call them or text
+
+
+them and ask them to pull up a file for
+
+
+me, this thing can do that for me. And
+
+
+that's pretty incredible that promise.
+
+
+So, it's really a cool thing to think
+
+
+about the idea where we can send in a
+
+
+message to our AI and it can access
+
+
+information that we have that's unique
+
+
+to us and just intuitively go do stuff.
+
+
+Now, you probably know about this. I'm
+
+
+referring to this thing as Clawbot
+
+
+because that's the way it came out. Uh,
+
+
+Claudebot got tons of hype in January
+
+
+and got a bunch of downloads. And then
+
+
+once they started getting some traction,
+
+
+they got hit by a company called
+
+
+Anthropic that owns a product called
+
+
+Claude because sure enough, Claudebot
+
+
+sounds a lot like Clawude. They said it
+
+
+was too similar. So, they got a cease
+
+
+and desist. They had to change the name.
+
+
+So, they called this thing Moltbot
+
+
+instead. When they rebranded to Moltbot,
+
+
+like a lobster multi to the next level.
+
+
+Some people hacked the name, created a
+
+
+fake cryptocurrency, stole millions of
+
+
+dollars from people, and then they
+
+
+changed the name once again now to its
+
+
+current name, which is called Open Claw.
+
+
+And Open Claw is interesting. Same basic
+
+
+features where this is a thing that
+
+
+lives on your computer, and you can give
+
+
+it some instructions and it can go reach
+
+
+into your files. It can use your
+
+
+password to log into accounts and do a
+
+
+lot of really cool stuff. So, I think
+
+
+it's a genuine look into the future of
+
+
+what AI can do. But here's the reality
+
+
+for it. This thing is not ready for
+
+
+prime time yet. And I would caution you,
+
+
+do not use do not use OpenClaw unless
+
+
+you're like an IT genius and find some
+
+
+way to sandbox this thing where it's
+
+
+totally isolated from everything else.
+
+
+The security risks are just enormous
+
+
+because we're giving access to your
+
+
+computer and every email, every
+
+
+password, every API key to a AI that has
+
+
+no security protocols whatsoever and
+
+
+that stores those things in a systematic
+
+
+way that other people know how to use
+
+
+and how to hack. So this is what the
+
+
+vice president of security engineering
+
+
+at Google said. She said, "My threat
+
+
+model is not your threat model, but it
+
+
+should be. do not run Cloudbot. The
+
+
+people at Cisco said, "This is a
+
+
+security nightmare." Someone else said,
+
+
+"It's like we've taken everything we've
+
+
+learned about internet security and data
+
+
+security over the last 30 years and have
+
+
+just thrown it out with a tool like
+
+
+this. It has access to all these
+
+
+passwords and all this information and
+
+
+it's like grabbing a box of your most
+
+
+critical, important, sensitive files at
+
+
+home and putting it on the front porch
+
+
+so that other people can interact with
+
+
+it. Now, that's amazing because your
+
+
+accountant can come by and grab that
+
+
+stuff when they need to and and do work
+
+
+with it, but also a stranger can do the
+
+
+same thing. So, in one way, the
+
+
+incredible functionality of a tool like
+
+
+this is offset by the fact that anybody
+
+
+in the world can also reach out to it
+
+
+and steal stuff from me that's
+
+
+incredibly sensitive. So, it's crazy
+
+
+high risk. In fact, somebody else tested
+
+
+this where they did this little
+
+
+fiveminute email hack. They sent an
+
+
+email to an account that was being
+
+
+watched by a clawbot on someone's
+
+
+computer and it read the email, but
+
+
+because it had that AI brain still
+
+
+analyzing it, it took the instructions
+
+
+literally and some of the instructions
+
+
+included uh information about how to set
+
+
+up malware on that person's computer and
+
+
+within secondsbot responded thinking it
+
+
+was showing initi initiative being a
+
+
+great AI assistant and provided the
+
+
+hackers with every API key, every
+
+
+password that the user had just
+
+
+completely opened up uh everything and
+
+
+blew the doors off of that user's
+
+
+security all in 5 minutes or less. It's
+
+
+not a theoretical threat. It's a real
+
+
+one and the liability is enormous. See,
+
+
+hackers know that we have tons of data
+
+
+in real estate, whether you're in the
+
+
+mortgage space or title or you're a real
+
+
+estate team leader or brokerage owner.
+
+
+to have all that information about
+
+
+contracts and social security numbers
+
+
+sometimes and and to be a trusted source
+
+
+for people a hacker is just salivating
+
+
+to take advantage of that. So this is a
+
+
+really cool tool but should you use it
+
+
+right now? Absolutely not. Absolutely
+
+
+not. This is a hands-off do not touch
+
+
+stay away for anyone in the real estate
+
+
+industry at this point. Now, the truth
+
+
+is this shows us this key principle that
+
+
+sometimes being the first to adopt is
+
+
+not the same thing as being the first to
+
+
+adopt safely. You want to be careful
+
+
+right now in this world of AI where
+
+
+things are advancing so quickly. We want
+
+
+to be fast, but we need to be smart and
+
+
+we need to be secure. Resist the
+
+
+temptation to feel like you have to be
+
+
+the first one to use some new cool
+
+
+gadget. Instead, make sure that you're
+
+
+the first one to deploy it safely and
+
+
+responsibly. Your business requires that
+
+
+your clients deserve it. And man, the
+
+
+risk out there right now is enormous
+
+
+where we just don't know what some of
+
+
+these tools can do. Something like
+
+
+Claudebot or Open Call like it is now is
+
+
+a incredible glimpse of what could be
+
+
+and where AI is going to go before we
+
+
+know it. But this particular tool is not
+
+
+there yet. So don't use this, but start
+
+
+thinking about what the future would
+
+
+look like when we have these AI
+
+
+assistants that can do real meaningful
+
+
+work for us. is coming soon. So, I'm
+
+
+Grant Roth in Houston and for now that's
+
+
+all I've got. So, I'm out.

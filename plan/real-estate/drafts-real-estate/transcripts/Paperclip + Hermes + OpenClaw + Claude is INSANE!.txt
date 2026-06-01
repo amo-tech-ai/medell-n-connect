@@ -1,0 +1,925 @@
+Today, we are going to be looking at
+
+
+Paperclip, which allows you to manage
+
+
+Hermes, OpenClaw, LordCode, Codex,
+
+
+Cursor, all your AI agents in one single
+
+
+place. So, that essentially what you can
+
+
+do here is you can build an AI agent
+
+
+zero human company and organize all of
+
+
+your AI agents together. And it's a free
+
+
+plugin, all right? So, I'm going to show
+
+
+you exactly how to set this up, how to
+
+
+get started, how to start using
+
+
+Paperclip, and what it can do directly.
+
+
+So, let's get started with this. So,
+
+
+we've got Paperclip on GitHub on the
+
+
+left-hand side, and I'm going to set
+
+
+this up inside ClaudeCode just so that
+
+
+it's easy to organize and come back to
+
+
+in the future, too. So, we're going to
+
+
+open up a new folder here. We're going
+
+
+to call this Paperclip because it is a
+
+
+local um setup. And actually, we've got
+
+
+Paperclip already set up here. So, let's
+
+
+just find the name of it. Here we go.
+
+
+Open that up. All right. And then, we're
+
+
+just going to say make sure this is
+
+
+installed inside ClaudeCode. Now, I I
+
+
+tend to find like Claude is the easiest
+
+
+way to set this stuff up from GitHub.
+
+
+You could also just go to the setup
+
+
+instructions and clone the Git from
+
+
+Paperclip, but it's a lot of work, and
+
+
+it's like it's more difficult to set up,
+
+
+right? So, you can see here that it's
+
+
+already set up. We're running it
+
+
+locally, and now we're going to get this
+
+
+set up now. I'll say. So, I'm going to
+
+
+say get this live so that it's running
+
+
+on a local host, and we can open up a
+
+
+dashboard. So, you can see here it's
+
+
+starting up, and boom. Look at that.
+
+
+We're good to go. And so, we've got this
+
+
+set up over here. So, you see it's
+
+
+running locally on this address. We got
+
+
+ClaudeCode to set it up and run it
+
+
+locally. Let me explain what it can do
+
+
+and how it works, etc. So, this is
+
+
+Paperclip on the left-hand side, as you
+
+
+can see. So, we'll pull up the org
+
+
+chart, and you can see
+
+
+that for example, we've got like the CEO
+
+
+AI agent here. We've got OpenClaw, CMO,
+
+
+founding agent, engineer, etc. So,
+
+
+imagine you've got like a team of AI
+
+
+agents. They all work for you 24/7. You
+
+
+know, you've got one that's ClaudeCode,
+
+
+one that's OpenClaw, one that's Hermes,
+
+
+etc. And they all run 24/7 just
+
+
+organizing and doing work for you. That
+
+
+is basically Paperclip, right? It's one
+
+
+of the easiest ways to get this all set
+
+
+up and working together, right? So,
+
+
+usually what people have is they just
+
+
+have one of these. So, for example, they
+
+
+might just have like OpenClaw, for
+
+
+example. Um but the problem with that is
+
+
+like you've only got one AI agent, and
+
+
+it's not efficient when you've got for
+
+
+example, all these different AI agents
+
+
+um
+
+
+working together with different
+
+
+contexts, different setups, etc. And so,
+
+
+the better way to set this up is you
+
+
+have a whole team of AI agents um
+
+
+working together like a AI agent first
+
+
+company. That's what we're trying to do.
+
+
+And this is an open-source project with
+
+
+Paperclip that lets you organize it all
+
+
+together. It's free, and you can get it
+
+
+set up in one click, as you've seen
+
+
+today, and it's pretty easy. And so,
+
+
+most people use AI one task at a time.
+
+
+You ask a ChatGPT question, you get an
+
+
+answer, it's done. With this, basically,
+
+
+if you want AI to run your business um
+
+
+not just answer questions, but actually
+
+
+do work, you know, write emails, post
+
+
+content, handle support, build products,
+
+
+report back to you. There's a lot of
+
+
+tasks, right? And so, you need all of
+
+
+them working together. You need all of
+
+
+your agents working together, and that's
+
+
+what Paperclip solves. So, it gives your
+
+
+AI agents like a boss, a title, a job
+
+
+description, and a goal. So, let me show
+
+
+you how it works step by step. So, for
+
+
+example here, if we go to agents and
+
+
+we'll create a new agent, right? And
+
+
+this is our agent running. It's our CEO
+
+
+agent, right? And so, he's the CEO of
+
+
+our company. We can describe what it can
+
+
+do. We can give it a prompt template if
+
+
+you want. We can set up a title for it
+
+
+as well. And then, we've also got this
+
+
+adapter working for it. So, this is
+
+
+working with Claude directly. You can
+
+
+actually change the model that works
+
+
+with Claude, so this is a Claude AI
+
+
+agent working locally running for us
+
+
+24/7. And so, you could have like a team
+
+
+like we've also got OpenClaw running
+
+
+here, too. This one actually seems a bit
+
+
+messy, so I'm going to just get rid of
+
+
+OpenClaw. The same for this one. I think
+
+
+it's on an old setup. But essentially,
+
+
+you can have like multiple different AI
+
+
+agents working together,
+
+
+building stuff out, um and sending you
+
+
+ideas, right? So, you see how this agent
+
+
+is now thinking and coming up with new
+
+
+ideas? That's what we want. And so, how
+
+
+it actually works is you set the goal.
+
+
+So, as soon as you set up Paperclip,
+
+
+it's going to ask you to set up a goal.
+
+
+So, for example like, I don't know,
+
+
+build the number one AI note-taking app,
+
+
+right? Grow that. That That can be your
+
+
+company mission. And everyone in your
+
+
+team reports to that goal. Everyone's
+
+
+focused on that goal. If you need to
+
+
+change your goal at any point, you can
+
+
+just edit it over here. So, you can see
+
+
+for example, I've said help grow the
+
+
+Boardroom, my AI automation community.
+
+
+Step number two is you hire the team,
+
+
+right? So, you pick your AI workers. So,
+
+
+you've got like a CEO agent, a CTO
+
+
+agent, engineer agents. You can mix and
+
+
+match. Any agent works as well. So, you
+
+
+can have like OpenClaw, ClaudeCode,
+
+
+Codex, Hermes, etc. Hermes actually have
+
+
+an adapter. So, if you want to set up
+
+
+Hermes as an AI agent inside your
+
+
+Paperclip company, you just go to the
+
+
+GitHub, as you can see right here, and
+
+
+you would just set that up with Hermes
+
+
+to get it running. From there, you
+
+
+approve the plan, right? So, you look at
+
+
+the strategy, and you hit go. Let me
+
+
+show you what that looks like. So, for
+
+
+example over here, if you go to our
+
+
+inbox, our CEO will actually send us
+
+
+um questions, right? Like you can see
+
+
+right here. So, it's beginning to now
+
+
+come up with ideas on agents and that
+
+
+sort of thing. So, if we say okay,
+
+
+create a marketing agent, it's now going
+
+
+to start running a task to create this
+
+
+now. And then, it will ask me like, who
+
+
+should they report to, right? So, if you
+
+
+scroll down here, it's like, who should
+
+
+they report to? Um I'm going to say, and
+
+
+look, it's like a board responded, wants
+
+
+a marketing agent, I'll check it out and
+
+
+create it, right? So, this is the CEO of
+
+
+the Paperclip company just coming up
+
+
+with ideas on on what it needs to do
+
+
+next. It's like, I'm going to create the
+
+
+marketing agent. Here's what we're going
+
+
+to do. Here's how it's going to work,
+
+
+etc. You see how it's running directly
+
+
+here. That's basically how we can create
+
+
+our team. And then, you can actually
+
+
+monitor this from your phone, right? So,
+
+
+you can watch everything from a
+
+
+dashboard or on your phone, etc. And
+
+
+what makes it special is that number
+
+
+one, your AI agents have a schedule,
+
+
+right? So, they wake up on a schedule.
+
+
+They check the tasks. They do the work.
+
+
+They report back to you. No more
+
+
+forgetting to like run your agents cuz
+
+
+they're running 24/7. So, you see here
+
+
+it's like giving us recommendations and
+
+
+telling us what we need to do. So, I'm
+
+
+going to say create a Facebook marketing
+
+
+agent. Comment on that. And then, also
+
+
+you can set budgets for each agent. So,
+
+
+you know, when they hit the limit, they
+
+
+stop. You can set goal alignment. Every
+
+
+single task traces back to your main
+
+
+mission, which means your agents are all
+
+
+working together, and they know what to
+
+
+do and why, which is pretty big. And
+
+
+then, you've got the ticketing system as
+
+
+well. So, every conversation is tracked.
+
+
+Every decision is explained. You get a
+
+
+full audit log. So, if something goes
+
+
+wrong, you know exactly why. And then,
+
+
+also you're the boss, right? So, you
+
+
+approve everything. You approve uh hires
+
+
+in the company. You approve and override
+
+
+bad strategies. You pause or get rid of
+
+
+any agents. And then, you can, you know,
+
+
+you have full control over this process,
+
+
+essentially. So, that's basically how it
+
+
+works. And then, you can see like the
+
+
+issues and what's happening here, um the
+
+
+run activity, the status, etc. And you
+
+
+know, it One of the biggest problems
+
+
+that this solves is like for example,
+
+
+before Paperclip, you know, you had like
+
+
+20 different ClaudeCode tabs open. You
+
+
+can't remember which tab does what. You
+
+
+sort of reboot. You lose everything.
+
+
+You're copying and pasting context from
+
+
+like five different places to remind
+
+
+your agents what to do. Then, they get
+
+
+stuck. You forget to run something. You
+
+
+have an idea, but you can't find it,
+
+
+right? With Paperclip, everything is
+
+
+organized. So, tasks are organized like
+
+
+tickets. Conversations are threaded.
+
+
+Sessions survive reboots. Context flows
+
+
+automatically. And you can set up um
+
+
+budgets, and also you can set up
+
+
+heartbeat scheduled tasks, right? So, if
+
+
+we go now to our inbox, you can see here
+
+
+that the CEO has now hired the Facebook
+
+
+marketing specialist. It's given us the
+
+
+task that the icon, the title, the role,
+
+
+the name, and the capabilities, and also
+
+
+the adapter, right? So, whether it's on
+
+
+Claude, or whether it's on OpenClaw,
+
+
+whatever, right? So, if we approve that
+
+
+now, now we've got a Facebook marketing
+
+
+ad specialist in our team, right? As you
+
+
+can see. And you can again see what
+
+
+they've worked on, see what they've
+
+
+done. You can assign a new task. So, we
+
+
+could say okay, come up with some ad
+
+
+ideas for our community. Then, we can
+
+
+organize it like this. And that's
+
+
+basically it, right? That's how you can
+
+
+set this all up. Now, some people ask
+
+
+like, which one is better, Multica,
+
+
+which is another option for using this,
+
+
+versus Paperclip. I might do a future
+
+
+video like comparing both of them, but
+
+
+I'll give you the quick answer now,
+
+
+which I think that honestly, Paperclip
+
+
+is better. I like both of them, but I do
+
+
+feel like you get a lot more control
+
+
+inside Paperclip versus Multica, but
+
+
+Multica is a cool option, too. I think
+
+
+you just got to check both of them out
+
+
+and see which one you like. The thing
+
+
+that I would say is like, when you have
+
+
+Paperclip, it feels more like you're in
+
+
+control. It feels more intuitive. Also,
+
+
+it feels like you just get more more
+
+
+customization, right? And that things
+
+
+are actually working. I think when I set
+
+
+up Multica as well, it's hard to like
+
+
+sync the data from my agents directly to
+
+
+um directly to Multica, whereas with
+
+
+Paperclip, it seems like a lot more
+
+
+intuitive. It seemed to be less buggy,
+
+
+basically. So, we're going to put a task
+
+
+here, add creatives, create issue, and
+
+
+then it should start working on that, as
+
+
+you can see, right? And we'll get an
+
+
+inbox
+
+
+um message once that's done. We can also
+
+
+set up new projects over here. That's
+
+
+how it works. So, that's basically it.
+
+
+Now, if you want a full 30-day roadmap
+
+
+on how to use this, a full guide, step
+
+
+by step, etc., you can get that all
+
+
+inside the AI Profit Boardroom. Link in
+
+
+the comments and description, or go to
+
+
+the AI Profit Boardroom.com. We add new
+
+
+daily tutorials, like you can see right
+
+
+here, on all the new cool stuff that
+
+
+just dropped. And if you want to get a
+
+
+full setup guide to organizing your
+
+
+team, a full roadmap, a full 30-day
+
+
+plan, etc., you can get that all inside
+
+
+the AI Profit Boardroom. Link in the
+
+
+comments and description. We also
+
+
+covered like all the new designs that
+
+
+came out recently. So, for example,
+
+
+Claude design,
+
+
+uh Hermes and O llama, OpenClaw versus
+
+
+ClaudeCode, etc. We also got courses on
+
+
+OpenClaw and Hermes, too. So, feel free
+
+
+to get that. It's all inside the AI
+
+
+Profit Boardroom. We have an amazing
+
+
+community where you can ask questions,
+
+
+get help and support. You can jump on
+
+
+weekly coaching calls where we go deep
+
+
+on this sort of stuff. You can go inside
+
+
+the classroom, get all our latest
+
+
+trainings, and you can also connect with
+
+
+me personally, plus meet people in your
+
+
+local city who are using AI agents just
+
+
+like we are. So, feel free to get that.
+
+
+Link in the comments and description.
+
+
+You can also use the search bar at the
+
+
+top to find anything that you need.

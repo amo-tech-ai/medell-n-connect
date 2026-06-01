@@ -1,0 +1,57 @@
+# Screen + wireframe specs — hub
+
+**Domain folders** now own scr/wire pairs. This folder keeps **platform shell** specs + shared standards.
+
+**Verify all pairings:** `node scripts/verify-scr-wire-pairing.mjs`  
+**Testing standard:** [`SCREEN-TESTING-STANDARD.md`](SCREEN-TESTING-STANDARD.md)  
+**Master task index:** [`../INDEX.md`](../INDEX.md)
+
+---
+
+## Where specs live
+
+| Domain | Folder | INDEX |
+|--------|--------|-------|
+| **Events** (Andrés tickets, Roberto host) | [`../events/wireframes/`](../events/wireframes/INDEX.md) | 003 buyer + 004 host + **015 tickets** |
+| **Venues** (café, nightlife, restaurants, sheet) | [`../venues/`](../venues/INDEX.md) · **Café hub:** [`../venues/cafes/INDEX.md`](../venues/cafes/INDEX.md) | 005–008 + `cafes/` |
+| **Trips** (itinerary, checkout, saved) | [`../trips/`](../trips/INDEX.md) | 010–014 |
+| **Maps** (exploration panel) | [`../maps/wireframes/`](../maps/wireframes/INDEX.md) | 011 |
+| **Real estate** (rental cards) | [`../real-estate/`](../real-estate/INDEX.md) | 009 |
+| **Platform shell** (this folder) | `tasks/screens/` | 001–002, 017–020, shared standards |
+
+---
+
+## Platform shell — specs in this folder
+
+| Group | scr | wire | Legacy SCREEN |
+|-------|-----|------|---------------|
+| **001** | [001-scr-home-chat-chrome](001-scr-home-chat-chrome.md) | [001-wire-home-chat](001-wire-home-chat.md) | 001 |
+| **002** | [002-scr-chat-nav-rail](002-scr-chat-nav-rail.md), [002-scr-chat-query-bar](002-scr-chat-query-bar.md), [017-scr-workflow-progress-strip](017-scr-workflow-progress-strip.md), [018-scr-mobile-responsive-shell](018-scr-mobile-responsive-shell.md) | [002-wire-chat-chrome](002-wire-chat-chrome.md) | 002, 003, 004, 018 |
+| **017** | [017-scr-login-signup-polish](017-scr-login-signup-polish.md), [017-scr-schedule-viewing-modal](017-scr-schedule-viewing-modal.md) | [024-wire-auth-login-signup](024-wire-auth-login-signup.md) | 017, 008 |
+| **019–020** | [019-scr-loading-error-empty-states](019-scr-loading-error-empty-states.md), [020-scr-accessibility-pass](020-scr-accessibility-pass.md) | — | 019, 020 |
+
+**Schedule viewing (SCREEN-008)** shares wire with trips: [`../trips/010-wire-booking-checkout.md`](../trips/010-wire-booking-checkout.md)
+
+---
+
+## Deferred wires (no scr) — still in this folder
+
+[009-wire-rentals-browse](../real-estate/009-wire-rentals-browse.md) · [010-wire-bookings-inbox](../trips/010-wire-bookings-inbox.md) · [016-wire-explore-unified](016-wire-explore-unified.md) · [018-wire-contest-discovery](018-wire-contest-discovery.md) · [019-wire-creator-dashboard](019-wire-creator-dashboard.md) · [020-wire-mindtrip-patterns](020-wire-mindtrip-patterns.md) · [023-wire-onboarding-wizard](023-wire-onboarding-wizard.md) · [025-wire-notifications](025-wire-notifications.md)
+
+---
+
+## Cross-domain flows
+
+```text
+/ chat shell (001–002, 018)
+  ├─ rentals      → real-estate/009-scr + venues/006 sheet
+  ├─ events       → events/wireframes/003-scr + 015-scr (tickets)
+  ├─ cafés        → venues/cafes/INDEX.md (005-scr / SCREEN-021)
+  ├─ nightlife    → venues/007-scr (planned)
+  ├─ restaurants  → venues/008-scr
+  └─ trips/saved  → trips/012-scr, trips/014-scr
+```
+
+[`00-index.md`](00-index.md) redirects here.
+
+*Last updated: 2026-05-27 — domain folder migration*

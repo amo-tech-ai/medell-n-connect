@@ -1,0 +1,895 @@
+The first use case for OpenClaw you
+
+
+definitely need to set up is the morning
+
+
+brief. It's a two-minute message you
+
+
+receive at the beginning of your morning
+
+
+and it offers you an outline for the day
+
+
+ahead. For my morning brief, I get
+
+
+OpenClaw to scan through my emails and
+
+
+tell me exactly which ones I need to
+
+
+reply to or read, especially if there's
+
+
+something urgent. I also get it to have
+
+
+a look at my calendar and give me a
+
+
+summary of all the scheduled meetings I
+
+
+have for that day. Then I get it to have
+
+
+a look at my task list and give me a
+
+
+couple of tasks that are important that
+
+
+I should do that day. And finally, I get
+
+
+it to read through all the latest news
+
+
+that happened overnight and give me a
+
+
+summary of all the important ones based
+
+
+on the industry I'm in, which is tech
+
+
+and AI. The next use case for OpenCL is
+
+
+a research or proactive research. It's
+
+
+the ability for OpenClaw to go out on
+
+
+the web and start investigating tasks
+
+
+that you're doing, emails that you're
+
+
+receiving, or even calendar invites that
+
+
+you have. One way I personally use this
+
+
+is for OpenClaw to jump into my calendar
+
+
+and have a look at the people I'm
+
+
+meeting. often they're international and
+
+
+people I've never met before. It can
+
+
+then go ahead and read some of their
+
+
+blogs, see their LinkedIn profile, and
+
+
+give me a summary of that person so that
+
+
+I get a better idea of exactly who I'm
+
+
+meeting and that I'm not going into that
+
+
+appointment blind. Competitor analysis
+
+
+is the next use case for OpenCore. It
+
+
+sounds very businessoriented, but it
+
+
+doesn't have to be. So, it's when you
+
+
+investigate what other people in the
+
+
+same vertical space as you are currently
+
+
+creating and why they're doing so. For
+
+
+me personally, this is setting up
+
+
+OpenPaw to follow channels like Fire
+
+
+Ship.io or Theo or WebDev Simplified and
+
+
+then finding out exactly what content
+
+
+videos they're creating so that I'm not
+
+
+overlapping or I'm bringing something
+
+
+new to the equation. I find this very
+
+
+useful and it also helps me stay in tune
+
+
+with what's happening right now in the
+
+
+tech industry. The natural progression
+
+
+to this and our next use case is market
+
+
+research. It's essentially like
+
+
+competitor analysis except you're doing
+
+
+it against a trend or a topic. Market
+
+
+research might look like following a
+
+
+topic like AI and then making sure that
+
+
+as soon as new AI models drop, then
+
+
+OpenClaw can inform you of that
+
+
+information. What it'll be doing is
+
+
+scanning through popular news sites and
+
+
+then essentially polling those so that
+
+
+as soon as that information comes into
+
+
+play and it's relevant to you, it'll
+
+
+send you a message about it. For me
+
+
+personally, I've set up OpenClaw to read
+
+
+through the subreddits I normally read,
+
+
+go through websites like daily.dev dev
+
+
+or hash node and then it can read
+
+
+through all the posts and send me only
+
+
+the information I would likely want to
+
+
+read in the first place because a lot of
+
+
+the time I'm just scanning through those
+
+
+websites finding one or two articles I
+
+
+actually want to read and now I have
+
+
+openclaw doing that for me. This brings
+
+
+me to my next use case for openclaw
+
+
+automatic scheduling. It's essentially
+
+
+when you get openclaw to do things at
+
+
+certain intervals. We've already had
+
+
+lots of examples of this, but it's like
+
+
+the morning brief where every time at
+
+
+9:00 a.m. I want a message of the brief
+
+
+of what my day ahead looks like. That's
+
+
+an automatic schedule that's happening
+
+
+once a day at 9:00 a.m. Automatic
+
+
+scheduling can be done for lots of
+
+
+different activities at different types
+
+
+of intervals, and you'll have to decide
+
+
+on your own what those are. Here's how I
+
+
+personally use OpenClaw with automatic
+
+
+scheduling. Once a week, I get OpenClaw
+
+
+to do my competitor analysis, giving me
+
+
+a debrief of exactly who's creating what
+
+
+type of content. Once a day I have my
+
+
+morning brief which is pretty useful and
+
+
+once every hour I have it scanning
+
+
+through and doing market research to see
+
+
+exactly what trends and topics are
+
+
+currently going viral. And just like
+
+
+before this leads me straight into the
+
+
+next use case for openclaw which is
+
+
+monitoring. Monitoring and automatic
+
+
+scheduling go hand in hand. You can have
+
+
+open claw pretty much monitor anything
+
+
+that you can imagine from cryptocurrency
+
+
+or stocks to maybe reviews that are
+
+
+coming in faster than you can read or
+
+
+even for example website services that
+
+
+you might be running. My own
+
+
+implementation of this is just having
+
+
+openclaw monitor the websites that I
+
+
+have online. They check different types
+
+
+of aspects of that website and click
+
+
+through to make sure that they're
+
+
+actually functioning as intended because
+
+
+a lot of the time you might not realize
+
+
+if a service is down until a customer
+
+
+tells you. And this way you have an AI
+
+
+agent automatically continue to monitor
+
+
+that website and tell you as soon as it
+
+
+might crash from an update. The next use
+
+
+case is to set up OpenClaw on a cloud
+
+
+VPS so it can run 24/7. For some reason
+
+
+a lot of people are installing it on
+
+
+their own computers and that is the last
+
+
+thing I would recommend mainly because
+
+
+of security but of course if you want
+
+
+OpenClaw to run properly you want it to
+
+
+run in isolation. I also don't think
+
+
+that going to the Apple store and buying
+
+
+an entire Mac Mini just to run OpenClaw
+
+
+is a good idea unless you're actually
+
+
+running local models, which we'll get to
+
+
+later on. But for me personally, I've
+
+
+been setting mine up in Hosingervp since
+
+
+it's a place that I've actually built a
+
+
+lot of startups in, and it's pretty easy
+
+
+to do. So, here's how you can do it
+
+
+yourself. Head to the link in my
+
+
+description, and in here, you can sign
+
+
+up with a discount of 10% if you use my
+
+
+coupon code. Then, select a server
+
+
+location. I'm going to select US. And
+
+
+once done, you'll be taken to the
+
+
+dashboard here under Docker Manager.
+
+
+I'll head to the projects and I can see
+
+
+OpenClaw is currently being set up. Once
+
+
+it is, then you can just simply copy out
+
+
+the gateway token. And you'll need this
+
+
+for when you log in. To log in, just
+
+
+select the link here, which also has the
+
+
+port for OpenClaw. Paste that token in,
+
+
+and now we're up and running. It's
+
+
+probably one of the easiest and most
+
+
+affordable ways to run OpenClaw 24/7.
+
+
+Our next use case involves the use of
+
+
+MCP tools. It allows you to connect
+
+
+services to OpenClaw without doing so
+
+
+directly. There is a lot of benefits to
+
+
+using MCP such as being able to give
+
+
+OpenClaw access to thousands of apps.
+
+
+Also being able to restrict it to only
+
+
+utilizing certain items from certain
+
+
+apps, unlike API access, which might
+
+
+give it access to simply everything. Let
+
+
+me explain why this is so important. I
+
+
+cannot understate how scary security can
+
+
+be when you're using OpenClaw. For
+
+
+example, when you install it, the very
+
+
+first thing you need to do is accept
+
+
+those risks. I've seen investigation
+
+
+into a lot of the online skills you can
+
+
+download for OpenClaw being honeybots
+
+
+just to steal your information. Pretty
+
+
+scary if you think about it. This is why
+
+
+I'm using Zapier MCP to kind of act as a
+
+
+man in the middle as a trusted source
+
+
+rather than giving it direct access to
+
+
+something like Gmail. It's also pretty
+
+
+easy to set up. Simply ask OpenClaw to
+
+
+connect up to Zapier and some of your
+
+
+services, whether that's Gmail or your
+
+
+calendar or notion. OpenClaw will tell
+
+
+you exactly how to do this. You'll just
+
+
+head to this link for mcp.zapier.com,
+
+
+create a new MCP server, and select to
+
+
+create a new one. And here's one of the
+
+
+benefits of setting up MCP tools for
+
+
+OpenClaw through something like Zapier.
+
+
+You can now connect up thousands of apps
+
+
+straight to OpenClaw without manually
+
+
+configuring them since they're all done
+
+
+through one single Zapier connection.
+
+
+This is not only more secure, but it
+
+
+actually lets you modify the exact
+
+
+permissions that you want to give it,
+
+
+such as finding emails and creating
+
+
+drafts only and not allowing it to
+
+
+accidentally delete emails. After this,
+
+
+simply head to the connections tab and
+
+
+copy out the connect to token and
+
+
+address and paste that straight back
+
+
+into OpenClaw. It'll be able to complete
+
+
+the rest of the setup for itself. And
+
+
+from here, it's now got access to
+
+
+whatever tools and services you provide.
+
+
+There's thousands through Zapier, but
+
+
+right now I'm just connecting up my
+
+
+Gmail here. I'll test that it can pull
+
+
+up my emails. And once confirmed, I can
+
+
+start adding this into different types
+
+
+of morning briefs or routines that I
+
+
+want to set up with OpenClaw. Quick
+
+
+note, if you do want to learn a little
+
+
+bit more about OpenClaw, as well as
+
+
+things like clawed co-work and MCP.
+
+
+There's a pretty cool workshop being run
+
+
+by Zapier, which is on the 18th. You can
+
+
+check out in the link in my description
+
+
+below. The next use case for openclaw is
+
+
+to run it with a local model. Rather
+
+
+than using an online model like from
+
+
+openai using chatgbt or codeex or even
+
+
+anthropic and claude, you can actually
+
+
+run your own models and this can have a
+
+
+significant impact on the amount of
+
+
+money you're going to pay if you're
+
+
+going to start using openclaw. One thing
+
+
+people don't realize is that OpenCore
+
+
+can start to rack up a lot of money,
+
+
+especially with its huge context
+
+
+windows, which means that you could be
+
+
+paying somewhere upwards of hundreds to
+
+
+thousands of dollars a month just
+
+
+running OpenClaw continuously in the
+
+
+background. Now, one way to alleviate a
+
+
+lot of those costs is to run a local
+
+
+model for most of the content and only
+
+
+reach out to online models when you're
+
+
+doing more grunt work that requires a
+
+
+little bit more brain. The way I do this
+
+
+personally is to set up Olama on my own
+
+
+PC and then I download a large language
+
+
+model called Quen 3.5 which does a lot
+
+
+more of that daily activity as well as
+
+
+monitoring and even scheduling. The
+
+
+drawback to this is that it's a lot
+
+
+slower. You're not going to get the same
+
+
+level of thinking and you're not going
+
+
+to get the same level of output
+
+
+performance as you do with large
+
+
+language models in the cloud, but you do
+
+
+get additional security and you do get
+
+
+to save on a lot of costs because now
+
+
+that you're running it on your own
+
+
+hardware, the only thing you're really
+
+
+paying for is electricity. The last use
+
+
+case for OpenClaw is content management
+
+
+system or CMS. It's the ability to store
+
+
+information that it's working with in a
+
+
+way that it can pull it out later when
+
+
+it needs to. And while it's not a direct
+
+
+use case, it's an indirect one that
+
+
+plays a part into every type of task you
+
+
+give OpenClaw. The reason why CMS is
+
+
+important over just working memory is
+
+
+the difference. For example, a context
+
+
+window is only really working in one
+
+
+single chat. Whereas openclaw can save
+
+
+things like skills and working memory
+
+
+inside of its repository as text files.
+
+
+But this isn't very useful if you're
+
+
+using multiple agents with OpenClaw.
+
+
+They might all need to do independent
+
+
+bits of work with similar bits of
+
+
+information. A CMS allows all the agents
+
+
+to share information across the board
+
+
+and then from there they can make sure
+
+
+they're working from one central source
+
+
+of truth. Additionally, if you're
+
+
+working with agents outside of OpenClaw,
+
+
+they can also update that information.
+
+
+And finally, when there's a bigger
+
+
+better version of OpenClaw, maybe Chad
+
+
+GPT claw and that gets released, they
+
+
+can continue to use the same database
+
+
+rather than you trying to manually
+
+
+migrate the context and memory that is
+
+
+currently saved in openclaw. If there
+
+
+are any interesting use cases you
+
+
+figured out on your own and you want to
+
+
+share them, add them in the comments
+
+
+below. If you're excited about OpenClaw
+
+
+and want to start using it, I've got a
+
+
+video up here where I install and set it
+
+
+up. So, definitely check that out next.

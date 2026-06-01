@@ -1,0 +1,1141 @@
+A real estate broker installed open claw
+
+
+that does 12 AI agents. A real estate
+
+
+broker build out his entire prospecting
+
+
+team using open claw. And when I say
+
+
+prospecting, I mean that part of real
+
+
+estate that basically takes up all of
+
+
+your time and makes the least amount of
+
+
+money. There's cold outreach, the
+
+
+research, the follow-ups, all of it. But
+
+
+now, it's automated. And I'm going to be
+
+
+breaking down his system in this video.
+
+
+It all runs in the background while he's
+
+
+out closing deals. And this is a use
+
+
+case that I think is going to resonate
+
+
+with so many people. And you know, you
+
+
+don't have to be in real estate to see a
+
+
+pattern here. This will work for any
+
+
+type of cold outreach. So, the backstory
+
+
+is there's a newsletter called chat CRE,
+
+
+and that covers AI in commercial real
+
+
+estate. And in their March 2026 edition,
+
+
+they featured a student housing broker
+
+
+named Adam Smith. Now, Adam isn't some
+
+
+tech guy who happens to dabble in real
+
+
+estate. And by the way, this is a real
+
+
+person. Check out the link down below if
+
+
+you want the source. And basically, he's
+
+
+a working broker. He has clients, he has
+
+
+deals to close, and he has a pipeline to
+
+
+manage. And like every broker in the
+
+
+world, he was spending way too much of
+
+
+his time on stuff that doesn't directly
+
+
+make money. You know what I'm talking
+
+
+about? The research, going through
+
+
+property records, looking at market
+
+
+data, checking comps, reading through
+
+
+zoning regulations, pulling together
+
+
+packages for potential clients, and then
+
+
+the outreach. So, finding the right
+
+
+contacts, writing up personalized
+
+
+emails, following up when people don't
+
+
+respond, tracking who said what and
+
+
+when. This is a pain. If you're in real
+
+
+estate, you know exactly what I'm
+
+
+talking about. All of that work is
+
+
+necessary, but it's not the part that
+
+
+actually closes the deals. The deal
+
+
+closing happens in the meeting, in the
+
+
+relationship, in the negotiation, but
+
+
+you can't get to the meeting without
+
+
+doing all the groundwork first, which is
+
+
+outreach. So, Adam basically started
+
+
+using open claw about a month ago. And
+
+
+here's what he built. His first
+
+
+automation was a daily briefing agent.
+
+
+Every morning, this thing pulls all of
+
+
+his emails, all of his internal
+
+
+messages, tags, everything by urgency
+
+
+level, and then it actually connects to
+
+
+his printer and prints out a actual
+
+
+physical daily brief every single
+
+
+morning automatically. So, when Adam
+
+
+walks into his office, he already has a
+
+
+printed sheet telling him exactly what
+
+
+needs attention today. And it's also
+
+
+ranked by how urgent it is. No scrolling
+
+
+through 50 emails trying to figure out
+
+
+what matters most. No missing that one
+
+
+important message buried under a bunch
+
+
+of newsletters. Just a clean printed
+
+
+brief. And this can be applied to all
+
+
+sales channels. Real quick, before we
+
+
+keep going, if you're watching this and
+
+
+you want to actually build with some of
+
+
+these tools, not just watch videos about
+
+
+them, then you're going to want to check
+
+
+out our community down below, Shipping
+
+
+School. We have a full Claude code
+
+
+course, a full open claw course, and
+
+
+four live boot camps every single week
+
+
+where we actually help you get set up
+
+
+from scratch. Like actually set this
+
+
+thing up, not just watch a tutorial and
+
+
+figure it out by yourself. And we also
+
+
+provide one-on-one coaching, so you
+
+
+could book a call with me, we could
+
+
+share screens, and I can help you get
+
+
+Claude code or open claw running on your
+
+
+machine. That's it, no fluff. I built
+
+
+this community because watching
+
+
+YouTube's only gets you so far. We
+
+
+launched it just 3 days ago, and we have
+
+
+over 55 members. You need people around
+
+
+you who are actually building, people
+
+
+who hold you accountable, and coaches
+
+
+who can help you when you get stuck.
+
+
+I'll put the link in the description
+
+
+down below. Get in now before the price
+
+
+goes up. But then, Adam went further.
+
+
+Like way deeper. He built a prospecting
+
+
+team of agents. This is where it gets
+
+
+more interesting. In commercial real
+
+
+estate, prospecting means finding
+
+
+property owners who might want to sell,
+
+
+but more than likely don't, finding
+
+
+investors who want to actually buy, and
+
+
+then finding tenants who want to lease
+
+
+the property. And the research involved
+
+
+is pretty crazy. You need to know
+
+
+property ownership records, tax
+
+
+assessments, lease expiration dates,
+
+
+market rents, vacancy rates, recent
+
+
+sales comps, and zoning information. The
+
+
+list goes much longer than that, but
+
+
+that's the ballpark range of what you
+
+
+need to know. Adam's open claw agents
+
+
+now handle a huge chunk of that. So,
+
+
+they research it all automatically, they
+
+
+scan public records, they pull up tax
+
+
+assessment data, they compile market
+
+
+reports, they identify properties that
+
+
+match specific criteria. Like, show me
+
+
+all the student housing buildings within
+
+
+a 5-mile radius of the campus that was
+
+
+built before 2010 and that have more
+
+
+than 50 units. A human doing that
+
+
+research manually might spend a couple
+
+
+hours getting it done, and this agent
+
+
+does it in minutes. And then there's the
+
+
+really cool part of all this is once the
+
+
+research is done, his agents help with
+
+
+the actual outreach. They draft
+
+
+personalized emails based on the
+
+
+research findings, not generic
+
+
+templates, personalized messages that
+
+
+reference specific details about the
+
+
+property, the market conditions, and why
+
+
+right now might be a good time to have a
+
+
+conversation. And they track all that
+
+
+follow-up, too. So, like who was
+
+
+contacted and when and when to respond,
+
+
+what to do in the next step, what should
+
+
+it be. Now, I want to be clear about
+
+
+something. Adam isn't letting his AI
+
+
+close the deals for him. He's not
+
+
+sending emails without reading them
+
+
+first. That would be a terrible idea in
+
+
+commercial real estate when
+
+
+relationships are the foundation. You
+
+
+know, what he's doing is using the agent
+
+
+to do all the prep work. So, you know,
+
+
+when he sits down with a property owner
+
+
+or an investor, he's the most prepared
+
+
+person in the room. He already knows the
+
+
+property details, he already knows the
+
+
+market comps, he already knows the
+
+
+owner's tax situation, and he has the
+
+
+talking points ready. That preparation
+
+
+is what separates a good broker from a
+
+
+great one. And this is a pattern I see
+
+
+over and over again with the best open
+
+
+claw use cases. The agent doesn't
+
+
+replace the human. The agent makes the
+
+
+human 10 times more effective. Because
+
+
+here's the reality of commercial real
+
+
+estate. The brokers who prospect the
+
+
+most get the most deals. It's that
+
+
+simple. It's a numbers game. You got to
+
+
+focus on volume. But most brokers can
+
+
+only make so many calls and send so many
+
+
+emails in a day because the research for
+
+
+each prospect takes so long. So, if you
+
+
+can cut the research time in two and go
+
+
+from maybe 2 hours to 10 minutes,
+
+
+suddenly you could prospect five times
+
+
+as much as other competitors out there,
+
+
+right? And more prospects equals more
+
+
+deals equals more commission. It's a
+
+
+simple math numbers game, right? Now,
+
+
+let me walk you through why this matters
+
+
+even if you're not in real estate
+
+
+because the principle is universal.
+
+
+Every service business has the same
+
+
+problem. The work that makes the money
+
+
+and the work that enables the
+
+
+money-making work. Lawyers have to do
+
+
+case research before they can argue in
+
+
+court. Accountants have to gather
+
+
+documents before they could do tax prep.
+
+
+Consultants have to do discovery before
+
+
+they could deliver recommendations.
+
+
+Financial advisors have to do research
+
+
+investments before they can advise
+
+
+clients. In every single one of these
+
+
+industries, the prep work takes up the
+
+
+most time. And in every single one of
+
+
+these industries, an open claw agent can
+
+
+handle a massive chunk of that prep
+
+
+work. So, if you're thinking about
+
+
+starting an agent as a service business
+
+
+and you're have some domain knowledge in
+
+
+these industries, now's the time to
+
+
+build that agent and serve it and sell
+
+
+it as an agent as a service. Because
+
+
+think about this, not everyone that's a
+
+
+real estate broker or a financial
+
+
+advisor wants to build their own system.
+
+
+That's where the opportunity comes in
+
+
+for you if you're building with AI. And
+
+
+if you think about what Adam's
+
+
+architecture looks like, this is a
+
+
+really simple build. You know, he's got
+
+
+the daily briefing agent that aggregates
+
+
+the information from multiple services
+
+
+and delivers it in a usable format. He
+
+
+also has a research agent that pulls
+
+
+from public databases and compile
+
+
+findings. He's got an outreach agent
+
+
+that drafts personalized communications,
+
+
+and he's got tracking agents that manage
+
+
+the follow-up pipeline. There's four
+
+
+types of agents all working together,
+
+
+and they're all running on open claw,
+
+
+all controlled from his phone. Now, I
+
+
+want to touch on something else that
+
+
+Adam did that I think is genius. He has
+
+
+his agents set up so that before
+
+
+anything goes out to a real person, he
+
+
+reviews it. Highly recommended, you got
+
+
+to do this. There's an approval setup
+
+
+built into the workflow. The agent does
+
+
+the research, drafts the emails, and
+
+
+then sends it to Adam on Telegram for
+
+
+the review process. He reads it, maybe
+
+
+tweaks a line or two, and then approves
+
+
+it to send. That way, he keeps a
+
+
+personal touch while eliminating about
+
+
+90% of the work. And his clients never
+
+
+even know. They don't know he's using
+
+
+open claw, they just think Adam is
+
+
+incredibly well prepared and responsive,
+
+
+which he is. He's just using tools to
+
+
+make it happen. And the cost, you're
+
+
+probably wondering, is API tokens for
+
+
+Claude through open claw maybe 50 to 100
+
+
+bucks a month depending on volume.
+
+
+Compare that to hiring a junior analyst
+
+
+to do the same research work, that's $40
+
+
+to $60,000 a year. Or outsourcing to a
+
+
+virtual assistant overseas, that's still
+
+
+$1,000 to $2,000 a month, and neither
+
+
+option works at 3:00 in the morning when
+
+
+Adam gets an idea about a property he
+
+
+wants to research. His agent does, works
+
+
+24/7. This is what I keep telling people
+
+
+in our Shipping School community. We
+
+
+have over 160 members now, and one of
+
+
+the biggest things I see holding people
+
+
+back is they think open claw is only for
+
+
+tech people. They think you need to be a
+
+
+developer to use it. You don't. Adam is
+
+
+a real estate broker. The doctor I
+
+
+talked about in a previous video is a
+
+
+medical professional. The accountant who
+
+
+found a tax loophole his CPA missed is a
+
+
+finance person. None of these people are
+
+
+software engineers. They're just
+
+
+professionals in their fields who saw
+
+
+that an AI agent can handle the boring
+
+
+repetitive parts of their job. And then
+
+
+they went for it. If you're struggling
+
+
+to keep up with content, what I'm about
+
+
+to save you about 40 days worth of work.
+
+
+[music] I built something called Content
+
+
+Machine. It's 10 AI agents that run on
+
+
+the open claw orchestration, and they
+
+
+handle everything. Scripts, [music]
+
+
+thumbnails, X posts, blogs, outreach,
+
+
+clips, newsletters, all of it. So, I
+
+
+went from 1,000 subscribers to 4,000
+
+
+subscribers on YouTube in 7 days using
+
+
+this exact system. Every single morning
+
+
+I wake up [music] and the content's
+
+
+already done. I spend maybe 15, 20
+
+
+minutes reviewing and approving them and
+
+
+I move on with my day. It works for any
+
+
+niche, fitness, [music]
+
+
+finance, real estate, marketing,
+
+
+whatever you are building and it is 100%
+
+
+completely customizable to your [music]
+
+
+use case. So you get the Mission Control
+
+
+dashboard, all of the cron jobs,
+
+
+everything I've built over the last 40
+
+
+days helping me gain more and more
+
+
+people to subscribe [music] and join the
+
+
+community. So you plug in your own thing
+
+
+and it molds it to you, it learns how
+
+
+you talk and it writes so it doesn't
+
+
+sound like AI slop. $97 one-time, it's
+
+
+not a subscription, I'll put the link
+
+
+down below and you'll thank me later. So
+
+
+here's what I want you to think about
+
+
+watch for watching this video. What's
+
+
+the prep work in your job? What's the
+
+
+research you have to do before you can
+
+
+actually do anything that actually makes
+
+
+the money? Because I promise you there
+
+
+is an Open Claw automation for at least
+
+
+part of it. You don't have to automate
+
+
+everything. Start with one thing. Maybe
+
+
+it's your daily email. Do like what Adam
+
+
+did. Maybe it's pulling market research.
+
+
+Maybe it's drafting first versions of
+
+
+client communications. Just pick one
+
+
+thing and build it. And if you're in
+
+
+commercial real estate specifically, pay
+
+
+attention to what's happening right now.
+
+
+The Chat CRE newsletters just launched
+
+
+for an AI for CRE attorneys workshop.
+
+
+There are people building real estate
+
+
+prospecting tools on Claw Mark. The
+
+
+whole industry is waking up to the fact
+
+
+that agents can handle the back office
+
+
+work that eats up most of their day. The
+
+
+brokers who adopt this now are going to
+
+
+have such an unfair advantage over the
+
+
+ones who wait. Because while one broker
+
+
+is spending 3 hours researching a
+
+
+property, the agent broker already sent
+
+
+the email, moved on to the next one.
+
+
+That's the difference. Speed wins when
+
+
+it comes to prospecting and the agents
+
+
+are fast and they never sleep. I
+
+
+actually think about this a lot because
+
+
+in my own experience running a business,
+
+
+when I was doing Whatnot reselling and
+
+
+so much of my time went into research,
+
+
+looking up comps, checking out what
+
+
+items sold for, figuring out what price
+
+
+items to price at. And if I had Open
+
+
+Claw back then to just do all this for
+
+
+me, I could have had an agent scanning
+
+
+completed listings and looking at other
+
+
+prop or looking at other potential
+
+
+inventory to bring into our business.
+
+
+That would have saved me hours a week
+
+
+and hours I could have spent doing other
+
+
+things. So look at your workflow, find
+
+
+the bottleneck, build the agent and if
+
+
+you need help doing it, that's why I
+
+
+built the community. We have 162 members
+
+
+and I just launched the community 16
+
+
+days ago. We do six live build sessions
+
+
+a week and we really try to help members
+
+
+set up exactly these kinds of
+
+
+automations. So come build with us. You
+
+
+don't need to be technical at all. You
+
+
+don't need a computer science degree,
+
+
+you just need to know your industry and
+
+
+be willing to try something new. That's
+
+
+it. And I'm telling you right now, the
+
+
+people who start building these agent
+
+
+workflows today are going to look back
+
+
+in a year from now and be so happy they
+
+
+started when they did. I am super
+
+
+thankful I jumped into Cloud Code about
+
+
+11 months ago and started to just learn
+
+
+and build stuff. You know, because this
+
+
+stuff is only going to get better, the
+
+
+models are only going to get smarter and
+
+
+the opportunities are going to get
+
+
+bigger. So don't sit on the sidelines.
+
+
+And if you haven't subscribed to the
+
+
+channel already, please do, hit the
+
+
+notification bell because we release
+
+
+four to six videos every single day. Try
+
+
+to keep you up to date with Open Claw
+
+
+use cases, people making money with AI
+
+
+agents and AI news that drops every
+
+
+single second. So we'll see you in the
+
+
+next one and have a blessed day.

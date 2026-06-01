@@ -1,0 +1,36 @@
+{
+  "mcpServers": {
+    "mastra": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@mastra/mcp-docs-server@latest"
+      ],
+      "env": {}
+    },
+    "copilotkit": {
+      "type": "http",
+      "url": "https://mcp.copilotkit.ai/mcp"
+    },
+    "google-maps-code-assist": {
+      "type": "stdio",
+      "command": "/home/sk/mdeai/scripts/mcp-google-maps-code-assist.sh",
+      "args": [],
+      "env": {}
+    },
+    "gemini-api-docs-mcp": {
+      "type": "stdio",
+      "command": "/home/sk/mdeai/scripts/mcp-gemini-api-docs.sh",
+      "args": [],
+      "env": {}
+    },
+    "google-developer-knowledge": {
+      "type": "http",
+      "url": "https://developerknowledge.googleapis.com/mcp",
+      "headers": {
+        "X-Goog-Api-Key": "${env:GOOGLE_DEVELOPER_KNOWLEDGE_API_KEY}"
+      }
+    }
+  }
+}

@@ -1,0 +1,1505 @@
+{
+  "updated": [
+    {
+      "identifier": "SAN-112",
+      "taskId": "SCREEN-017",
+      "sortOrder": 1000,
+      "milestone": "P1 — Screens & café",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-109",
+      "taskId": "CAFE-001",
+      "sortOrder": 2000,
+      "milestone": "P1 — Screens & café",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-110",
+      "taskId": "SCREEN-002",
+      "sortOrder": 3000,
+      "milestone": "P1 — Screens & café",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-113",
+      "taskId": "SCREEN-018",
+      "sortOrder": 4000,
+      "milestone": "P1 — Screens & café",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-101",
+      "taskId": "MAP-002A-ADK",
+      "sortOrder": 5000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-273",
+      "taskId": "TRIP-001",
+      "sortOrder": 6000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-274",
+      "taskId": "TRIP-002",
+      "sortOrder": 7000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-275",
+      "taskId": "TRIP-003",
+      "sortOrder": 8000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-276",
+      "taskId": "TRIP-004",
+      "sortOrder": 9000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-102",
+      "taskId": "MAP-005",
+      "sortOrder": 10000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-277",
+      "taskId": "TRIP-005",
+      "sortOrder": 11000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-103",
+      "taskId": "MAP-006",
+      "sortOrder": 12000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-278",
+      "taskId": "TRIP-006",
+      "sortOrder": 13000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-337",
+      "taskId": "DATA-007",
+      "sortOrder": 14000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-279",
+      "taskId": "TRIP-007",
+      "sortOrder": 15000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-338",
+      "taskId": "DATA-008",
+      "sortOrder": 16000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-280",
+      "taskId": "TRIP-008",
+      "sortOrder": 17000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-247",
+      "taskId": "WIRE-008",
+      "sortOrder": 18000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-281",
+      "taskId": "TRIP-009",
+      "sortOrder": 19000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-292",
+      "taskId": "VEN-009",
+      "sortOrder": 20000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-339",
+      "taskId": "DATA-010",
+      "sortOrder": 21000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-104",
+      "taskId": "MAP-010",
+      "sortOrder": 22000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-282",
+      "taskId": "TRIP-010",
+      "sortOrder": 23000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-293",
+      "taskId": "VEN-010",
+      "sortOrder": 24000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-340",
+      "taskId": "DATA-011",
+      "sortOrder": 25000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-105",
+      "taskId": "MAP-011",
+      "sortOrder": 26000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-290",
+      "taskId": "TRIP-011",
+      "sortOrder": 27000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-294",
+      "taskId": "VEN-011",
+      "sortOrder": 28000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-106",
+      "taskId": "MAP-012",
+      "sortOrder": 29000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-107",
+      "taskId": "MAP-012A",
+      "sortOrder": 30000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-291",
+      "taskId": "TRIP-012",
+      "sortOrder": 31000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-295",
+      "taskId": "VEN-012",
+      "sortOrder": 32000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-283",
+      "taskId": "TRIP-013",
+      "sortOrder": 33000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-296",
+      "taskId": "VEN-013",
+      "sortOrder": 34000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-284",
+      "taskId": "TRIP-014",
+      "sortOrder": 35000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-297",
+      "taskId": "VEN-014",
+      "sortOrder": 36000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-285",
+      "taskId": "TRIP-015",
+      "sortOrder": 37000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-298",
+      "taskId": "VEN-015",
+      "sortOrder": 38000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-286",
+      "taskId": "TRIP-016",
+      "sortOrder": 39000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-299",
+      "taskId": "VEN-016",
+      "sortOrder": 40000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-287",
+      "taskId": "TRIP-017",
+      "sortOrder": 41000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-300",
+      "taskId": "VEN-017",
+      "sortOrder": 42000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-288",
+      "taskId": "TRIP-018",
+      "sortOrder": 43000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-301",
+      "taskId": "VEN-018",
+      "sortOrder": 44000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-289",
+      "taskId": "TRIP-019",
+      "sortOrder": 45000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-302",
+      "taskId": "VEN-019",
+      "sortOrder": 46000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-95",
+      "taskId": "F20",
+      "sortOrder": 47000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-307",
+      "taskId": "VEN-020",
+      "sortOrder": 48000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-349",
+      "taskId": "DATA-021",
+      "sortOrder": 49000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-96",
+      "taskId": "F21A",
+      "sortOrder": 50000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-304",
+      "taskId": "VEN-021",
+      "sortOrder": 51000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-97",
+      "taskId": "F22",
+      "sortOrder": 52000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-308",
+      "taskId": "VEN-022",
+      "sortOrder": 53000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-108",
+      "taskId": "MAP-023",
+      "sortOrder": 54000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-310",
+      "taskId": "VEN-023",
+      "sortOrder": 55000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-311",
+      "taskId": "VEN-024",
+      "sortOrder": 56000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-270",
+      "taskId": "WIRE-024",
+      "sortOrder": 57000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-313",
+      "taskId": "VEN-025",
+      "sortOrder": 58000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-98",
+      "taskId": "F26",
+      "sortOrder": 59000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-305",
+      "taskId": "VEN-026",
+      "sortOrder": 60000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-309",
+      "taskId": "VEN-027",
+      "sortOrder": 61000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-356",
+      "taskId": "DATA-028",
+      "sortOrder": 62000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-306",
+      "taskId": "VEN-028",
+      "sortOrder": 63000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-303",
+      "taskId": "VEN-029",
+      "sortOrder": 64000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-99",
+      "taskId": "F30",
+      "sortOrder": 65000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-312",
+      "taskId": "VEN-030",
+      "sortOrder": 66000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-314",
+      "taskId": "VEN-031",
+      "sortOrder": 67000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-158",
+      "taskId": "VEN-032",
+      "sortOrder": 68000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-160",
+      "taskId": "VEN-033",
+      "sortOrder": 69000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-161",
+      "taskId": "VEN-034",
+      "sortOrder": 70000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-164",
+      "taskId": "VEN-035",
+      "sortOrder": 71000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-162",
+      "taskId": "VEN-036",
+      "sortOrder": 72000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-163",
+      "taskId": "VEN-037",
+      "sortOrder": 73000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-165",
+      "taskId": "VEN-038",
+      "sortOrder": 74000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-166",
+      "taskId": "VEN-039",
+      "sortOrder": 75000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-167",
+      "taskId": "VEN-040",
+      "sortOrder": 76000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-159",
+      "taskId": "VEN-041",
+      "sortOrder": 77000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-168",
+      "taskId": "VEN-042",
+      "sortOrder": 78000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-175",
+      "taskId": "VEN-043",
+      "sortOrder": 79000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-316",
+      "taskId": "Fix rental price parsing (“$500 a night”)",
+      "sortOrder": 80000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-322",
+      "taskId": "Add production AI chat health monitor",
+      "sortOrder": 81000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-319",
+      "taskId": "Add visible “thinking” state in AI chat",
+      "sortOrder": 82000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-118",
+      "taskId": "Build Roberto’s “My events” dashboard",
+      "sortOrder": 83000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-323",
+      "taskId": "Clear ghost map pins after empty search",
+      "sortOrder": 84000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-368",
+      "taskId": "Deploy grounded place search to production",
+      "sortOrder": 85000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-324",
+      "taskId": "Fix confusing Save button tooltip",
+      "sortOrder": 86000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-117",
+      "taskId": "Fix event cards inside AI chat",
+      "sortOrder": 87000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-178",
+      "taskId": "Prove live ticket purchase on production",
+      "sortOrder": 88000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-366",
+      "taskId": "Prove Roberto can publish an event on production",
+      "sortOrder": 89000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-321",
+      "taskId": "Reset chat and map on “New chat”",
+      "sortOrder": 90000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-100",
+      "taskId": "Run production smoke tests on mdeai.co",
+      "sortOrder": 91000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-320",
+      "taskId": "Show retryable errors when AI chat fails",
+      "sortOrder": 92000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-115",
+      "taskId": "Sign off MVP launch proof checklist",
+      "sortOrder": 93000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-369",
+      "taskId": "Verify Google Maps pins on production",
+      "sortOrder": 94000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-367",
+      "taskId": "Verify production login and Vercel env",
+      "sortOrder": 95000,
+      "milestone": "P1 — Maps & core",
+      "priority": 2
+    },
+    {
+      "identifier": "SAN-151",
+      "taskId": "VEC-001",
+      "sortOrder": 96000,
+      "milestone": "Phase 2 — Vector",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-152",
+      "taskId": "VEC-002",
+      "sortOrder": 97000,
+      "milestone": "Phase 2 — Vector",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-153",
+      "taskId": "VEC-003",
+      "sortOrder": 98000,
+      "milestone": "Phase 2 — Vector",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-154",
+      "taskId": "VEC-004",
+      "sortOrder": 99000,
+      "milestone": "Phase 2 — Vector",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-155",
+      "taskId": "VEC-005",
+      "sortOrder": 100000,
+      "milestone": "Phase 2 — Vector",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-156",
+      "taskId": "VEC-006",
+      "sortOrder": 101000,
+      "milestone": "Phase 2 — Vector",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-157",
+      "taskId": "VEC-007",
+      "sortOrder": 102000,
+      "milestone": "Phase 2 — Vector",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-169",
+      "taskId": "CTI-011",
+      "sortOrder": 103000,
+      "milestone": "Phase 2 — Coffee tours (CTI)",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-170",
+      "taskId": "CTI-012",
+      "sortOrder": 104000,
+      "milestone": "Phase 2 — Coffee tours (CTI)",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-171",
+      "taskId": "CTI-013",
+      "sortOrder": 105000,
+      "milestone": "Phase 2 — Coffee tours (CTI)",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-172",
+      "taskId": "CTI-014",
+      "sortOrder": 106000,
+      "milestone": "Phase 2 — Coffee tours (CTI)",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-173",
+      "taskId": "CTI-015",
+      "sortOrder": 107000,
+      "milestone": "Phase 2 — Coffee tours (CTI)",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-174",
+      "taskId": "CTI-016",
+      "sortOrder": 108000,
+      "milestone": "Phase 2 — Coffee tours (CTI)",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-176",
+      "taskId": "CTI-018",
+      "sortOrder": 109000,
+      "milestone": "Phase 2 — Coffee tours (CTI)",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-177",
+      "taskId": "CTI-020",
+      "sortOrder": 110000,
+      "milestone": "Phase 2 — Coffee tours (CTI)",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-119",
+      "taskId": "EVP-015-mvp",
+      "sortOrder": 111000,
+      "milestone": "Phase 2 — Events discovery",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-120",
+      "taskId": "EVP-016-mvp",
+      "sortOrder": 112000,
+      "milestone": "Phase 2 — Events discovery",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-121",
+      "taskId": "EVP-018-mvp",
+      "sortOrder": 113000,
+      "milestone": "Phase 2 — Events discovery",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-122",
+      "taskId": "EVP-019-mvp",
+      "sortOrder": 114000,
+      "milestone": "Phase 2 — Events discovery",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-123",
+      "taskId": "EVP-020-mvp",
+      "sortOrder": 115000,
+      "milestone": "Phase 2 — Events discovery",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-124",
+      "taskId": "EVP-021-mvp",
+      "sortOrder": 116000,
+      "milestone": "Phase 2 — Events discovery",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-125",
+      "taskId": "EVP-022-mvp",
+      "sortOrder": 117000,
+      "milestone": "Phase 2 — Events discovery",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-126",
+      "taskId": "EVP-023-mvp",
+      "sortOrder": 118000,
+      "milestone": "Phase 2 — Events discovery",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-127",
+      "taskId": "EVP-024-mvp",
+      "sortOrder": 119000,
+      "milestone": "Phase 2 — Events discovery",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-128",
+      "taskId": "EVP-025-mvp",
+      "sortOrder": 120000,
+      "milestone": "Phase 2 — Events discovery",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-129",
+      "taskId": "EVP-026-mvp",
+      "sortOrder": 121000,
+      "milestone": "Phase 2 — Events discovery",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-130",
+      "taskId": "EVP-027-mvp",
+      "sortOrder": 122000,
+      "milestone": "Phase 2 — Events discovery",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-131",
+      "taskId": "EVP-028-mvp",
+      "sortOrder": 123000,
+      "milestone": "Phase 2 — Events discovery",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-132",
+      "taskId": "EVP-029-advanced",
+      "sortOrder": 124000,
+      "milestone": "Phase 2 — Events discovery",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-133",
+      "taskId": "EVP-030-advanced",
+      "sortOrder": 125000,
+      "milestone": "Phase 2 — Events discovery",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-134",
+      "taskId": "EVP-031-advanced",
+      "sortOrder": 126000,
+      "milestone": "Phase 2 — Events discovery",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-136",
+      "taskId": "EVP-033-mvp",
+      "sortOrder": 127000,
+      "milestone": "Phase 2 — Events discovery",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-137",
+      "taskId": "EVP-034-mvp",
+      "sortOrder": 128000,
+      "milestone": "Phase 2 — Events discovery",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-138",
+      "taskId": "EVP-035-mvp",
+      "sortOrder": 129000,
+      "milestone": "Phase 2 — Events discovery",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-139",
+      "taskId": "EVP-036-mvp",
+      "sortOrder": 130000,
+      "milestone": "Phase 2 — Events discovery",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-140",
+      "taskId": "EVP-037-mvp",
+      "sortOrder": 131000,
+      "milestone": "Phase 2 — Events discovery",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-141",
+      "taskId": "EVP-038-postmvp",
+      "sortOrder": 132000,
+      "milestone": "Phase 2 — Events discovery",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-142",
+      "taskId": "EVP-039-postmvp",
+      "sortOrder": 133000,
+      "milestone": "Phase 2 — Events discovery",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-143",
+      "taskId": "EVP-040-postmvp",
+      "sortOrder": 134000,
+      "milestone": "Phase 2 — Events discovery",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-144",
+      "taskId": "EVP-041-advanced",
+      "sortOrder": 135000,
+      "milestone": "Phase 2 — Events discovery",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-145",
+      "taskId": "EVP-042-mvp",
+      "sortOrder": 136000,
+      "milestone": "Phase 2 — Events discovery",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-146",
+      "taskId": "EVP-043-mvp",
+      "sortOrder": 137000,
+      "milestone": "Phase 2 — Events discovery",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-147",
+      "taskId": "EVP-044-mvp",
+      "sortOrder": 138000,
+      "milestone": "Phase 2 — Events discovery",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-148",
+      "taskId": "EVP-045-mvp",
+      "sortOrder": 139000,
+      "milestone": "Phase 2 — Events discovery",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-149",
+      "taskId": "EVP-046-mvp",
+      "sortOrder": 140000,
+      "milestone": "Phase 2 — Events discovery",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-150",
+      "taskId": "EVP-047-postmvp",
+      "sortOrder": 141000,
+      "milestone": "Phase 2 — Events discovery",
+      "priority": 3
+    },
+    {
+      "identifier": "SAN-227",
+      "taskId": "GS-005",
+      "sortOrder": 142000,
+      "milestone": "Deferred — Grounding search",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-228",
+      "taskId": "GS-006",
+      "sortOrder": 143000,
+      "milestone": "Deferred — Grounding search",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-229",
+      "taskId": "GS-007",
+      "sortOrder": 144000,
+      "milestone": "Deferred — Grounding search",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-230",
+      "taskId": "GS-008",
+      "sortOrder": 145000,
+      "milestone": "Deferred — Grounding search",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-231",
+      "taskId": "GS-009",
+      "sortOrder": 146000,
+      "milestone": "Deferred — Grounding search",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-187",
+      "taskId": "OCL-001-core",
+      "sortOrder": 147000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-188",
+      "taskId": "OCL-002-core",
+      "sortOrder": 148000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-189",
+      "taskId": "OCL-003-core",
+      "sortOrder": 149000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-190",
+      "taskId": "OCL-004-core",
+      "sortOrder": 150000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-191",
+      "taskId": "OCL-005-core",
+      "sortOrder": 151000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-192",
+      "taskId": "OCL-006-core",
+      "sortOrder": 152000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-193",
+      "taskId": "OCL-007-core",
+      "sortOrder": 153000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-194",
+      "taskId": "OCL-008-mvp",
+      "sortOrder": 154000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-195",
+      "taskId": "OCL-009-mvp",
+      "sortOrder": 155000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-196",
+      "taskId": "OCL-010-mvp",
+      "sortOrder": 156000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-197",
+      "taskId": "OCL-011-mvp",
+      "sortOrder": 157000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-198",
+      "taskId": "OCL-012-mvp",
+      "sortOrder": 158000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-199",
+      "taskId": "OCL-013-mvp",
+      "sortOrder": 159000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-200",
+      "taskId": "OCL-014-postmvp",
+      "sortOrder": 160000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-201",
+      "taskId": "OCL-015-postmvp",
+      "sortOrder": 161000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-202",
+      "taskId": "OCL-016-postmvp",
+      "sortOrder": 162000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-203",
+      "taskId": "OCL-017-postmvp",
+      "sortOrder": 163000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-204",
+      "taskId": "OCL-018-postmvp",
+      "sortOrder": 164000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-205",
+      "taskId": "OCL-019-postmvp",
+      "sortOrder": 165000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-206",
+      "taskId": "OCL-020-postmvp",
+      "sortOrder": 166000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-207",
+      "taskId": "OCL-021-postmvp",
+      "sortOrder": 167000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-208",
+      "taskId": "OCL-022-advanced",
+      "sortOrder": 168000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-209",
+      "taskId": "OCL-023-advanced",
+      "sortOrder": 169000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-210",
+      "taskId": "OCL-024-advanced",
+      "sortOrder": 170000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-211",
+      "taskId": "OCL-025-advanced",
+      "sortOrder": 171000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-212",
+      "taskId": "OCL-026-advanced",
+      "sortOrder": 172000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-213",
+      "taskId": "OCL-027-advanced",
+      "sortOrder": 173000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-214",
+      "taskId": "OCL-030-postmvp",
+      "sortOrder": 174000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-215",
+      "taskId": "OCL-031-postmvp",
+      "sortOrder": 175000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-216",
+      "taskId": "OCL-032-postmvp",
+      "sortOrder": 176000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-217",
+      "taskId": "OCL-033-postmvp",
+      "sortOrder": 177000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-218",
+      "taskId": "OCL-034-postmvp",
+      "sortOrder": 178000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-219",
+      "taskId": "OCL-035-advanced",
+      "sortOrder": 179000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-220",
+      "taskId": "OCL-036-postmvp",
+      "sortOrder": 180000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-221",
+      "taskId": "OCL-037-postmvp",
+      "sortOrder": 181000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-222",
+      "taskId": "OCL-038-postmvp",
+      "sortOrder": 182000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-223",
+      "taskId": "OCL-039-postmvp",
+      "sortOrder": 183000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-224",
+      "taskId": "OCL-040-postmvp",
+      "sortOrder": 184000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-225",
+      "taskId": "OCL-041-advanced",
+      "sortOrder": 185000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-226",
+      "taskId": "OCL-042-mvp",
+      "sortOrder": 186000,
+      "milestone": "Deferred — OpenClaw",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-179",
+      "taskId": "CTEST-000",
+      "sortOrder": 187000,
+      "milestone": "Deferred — Contest",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-180",
+      "taskId": "CTEST-001",
+      "sortOrder": 188000,
+      "milestone": "Deferred — Contest",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-181",
+      "taskId": "CTEST-002",
+      "sortOrder": 189000,
+      "milestone": "Deferred — Contest",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-182",
+      "taskId": "CTEST-003",
+      "sortOrder": 190000,
+      "milestone": "Deferred — Contest",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-183",
+      "taskId": "CTEST-004",
+      "sortOrder": 191000,
+      "milestone": "Deferred — Contest",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-184",
+      "taskId": "CTEST-005",
+      "sortOrder": 192000,
+      "milestone": "Deferred — Contest",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-185",
+      "taskId": "CTEST-006",
+      "sortOrder": 193000,
+      "milestone": "Deferred — Contest",
+      "priority": 4
+    },
+    {
+      "identifier": "SAN-186",
+      "taskId": "CTEST-007",
+      "sortOrder": 194000,
+      "milestone": "Deferred — Contest",
+      "priority": 4
+    }
+  ],
+  "dryRun": false,
+  "top20": [
+    {
+      "order": 1,
+      "identifier": "SAN-112",
+      "taskId": "SCREEN-017",
+      "milestone": "P1 — Screens & café",
+      "sortOrder": 1000
+    },
+    {
+      "order": 2,
+      "identifier": "SAN-109",
+      "taskId": "CAFE-001",
+      "milestone": "P1 — Screens & café",
+      "sortOrder": 2000
+    },
+    {
+      "order": 3,
+      "identifier": "SAN-110",
+      "taskId": "SCREEN-002",
+      "milestone": "P1 — Screens & café",
+      "sortOrder": 3000
+    },
+    {
+      "order": 4,
+      "identifier": "SAN-113",
+      "taskId": "SCREEN-018",
+      "milestone": "P1 — Screens & café",
+      "sortOrder": 4000
+    },
+    {
+      "order": 5,
+      "identifier": "SAN-101",
+      "taskId": "MAP-002A-ADK",
+      "milestone": "P1 — Maps & core",
+      "sortOrder": 5000
+    },
+    {
+      "order": 6,
+      "identifier": "SAN-273",
+      "taskId": "TRIP-001",
+      "milestone": "P1 — Maps & core",
+      "sortOrder": 6000
+    },
+    {
+      "order": 7,
+      "identifier": "SAN-274",
+      "taskId": "TRIP-002",
+      "milestone": "P1 — Maps & core",
+      "sortOrder": 7000
+    },
+    {
+      "order": 8,
+      "identifier": "SAN-275",
+      "taskId": "TRIP-003",
+      "milestone": "P1 — Maps & core",
+      "sortOrder": 8000
+    },
+    {
+      "order": 9,
+      "identifier": "SAN-276",
+      "taskId": "TRIP-004",
+      "milestone": "P1 — Maps & core",
+      "sortOrder": 9000
+    },
+    {
+      "order": 10,
+      "identifier": "SAN-102",
+      "taskId": "MAP-005",
+      "milestone": "P1 — Maps & core",
+      "sortOrder": 10000
+    },
+    {
+      "order": 11,
+      "identifier": "SAN-277",
+      "taskId": "TRIP-005",
+      "milestone": "P1 — Maps & core",
+      "sortOrder": 11000
+    },
+    {
+      "order": 12,
+      "identifier": "SAN-103",
+      "taskId": "MAP-006",
+      "milestone": "P1 — Maps & core",
+      "sortOrder": 12000
+    },
+    {
+      "order": 13,
+      "identifier": "SAN-278",
+      "taskId": "TRIP-006",
+      "milestone": "P1 — Maps & core",
+      "sortOrder": 13000
+    },
+    {
+      "order": 14,
+      "identifier": "SAN-337",
+      "taskId": "DATA-007",
+      "milestone": "P1 — Maps & core",
+      "sortOrder": 14000
+    },
+    {
+      "order": 15,
+      "identifier": "SAN-279",
+      "taskId": "TRIP-007",
+      "milestone": "P1 — Maps & core",
+      "sortOrder": 15000
+    },
+    {
+      "order": 16,
+      "identifier": "SAN-338",
+      "taskId": "DATA-008",
+      "milestone": "P1 — Maps & core",
+      "sortOrder": 16000
+    },
+    {
+      "order": 17,
+      "identifier": "SAN-280",
+      "taskId": "TRIP-008",
+      "milestone": "P1 — Maps & core",
+      "sortOrder": 17000
+    },
+    {
+      "order": 18,
+      "identifier": "SAN-247",
+      "taskId": "WIRE-008",
+      "milestone": "P1 — Maps & core",
+      "sortOrder": 18000
+    },
+    {
+      "order": 19,
+      "identifier": "SAN-281",
+      "taskId": "TRIP-009",
+      "milestone": "P1 — Maps & core",
+      "sortOrder": 19000
+    },
+    {
+      "order": 20,
+      "identifier": "SAN-292",
+      "taskId": "VEN-009",
+      "milestone": "P1 — Maps & core",
+      "sortOrder": 20000
+    }
+  ]
+}

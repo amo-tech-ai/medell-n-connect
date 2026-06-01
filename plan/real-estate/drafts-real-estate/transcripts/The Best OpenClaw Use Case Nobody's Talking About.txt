@@ -1,0 +1,874 @@
+All right, ladies and gentlemen, do I
+
+
+have an absolute banger open claw video
+
+
+for you today. This might be my best
+
+
+video yet. I don't know. You tell me. Uh
+
+
+but you got to watch it first. And uh
+
+
+this is going to be really juicy. Extra
+
+
+juicy. You know that sauce that like
+
+
+secret sauce some restaurants have and
+
+
+they put it on top of uh the food and
+
+
+you're like, damn. Well, that's this
+
+
+video. So, buckle up. Uh let's go. So,
+
+
+in this video, you're going to learn the
+
+
+exact strategy that My Open Claw uses to
+
+
+generate leads completely for free. I
+
+
+don't care what business you're in. I
+
+
+don't care what industry you're in. This
+
+
+will work for pretty much any business.
+
+
+Uh, and it's super powerful. So, if you
+
+
+like free leads, then uh you should
+
+
+probably uh watch this whole video
+
+
+because I got a lot of good stuff for
+
+
+you. And at the end, I I'm going to give
+
+
+you the exact prompts and the exact
+
+
+things you need to do with your agent to
+
+
+make this work for you perfectly. So,
+
+
+[snorts] let's dive right into it. All
+
+
+right, here's the exact lead genen stack
+
+
+that I use to create free leads. Uh,
+
+
+obviously, you got to have openclaw and
+
+
+uh I use ampify to scrape the leads. Web
+
+
+fetch is a tool that comes with openclaw
+
+
+to actually browse the and crawl
+
+
+websites. Uh, Himalaya is Gmail or
+
+
+Google's new CLI which is super
+
+
+powerful. You'll see that in action
+
+
+today. And then a Gmail account. Uh,
+
+
+also Google Sheets or even like Apple
+
+
+Numbers, whatever. Either one works. And
+
+
+then I'm using Claude AI to write these
+
+
+emails because I think Claude's a little
+
+
+bit better at writing than OpenAI, but
+
+
+you can use any LLM you want to actually
+
+
+uh analyze and and write some of these
+
+
+uh outreach messages. So, let me show
+
+
+you Amplify first. So, Amplify has been
+
+
+around a while. Uh, it's got a ton of
+
+
+different scrapers for different social
+
+
+media apps and that kind of thing. Uh,
+
+
+but in this video today, we're going to
+
+
+use the Google Maps scraper
+
+
+specifically. And what's cool is they
+
+
+give you $5 of free scraping credit
+
+
+every single month. So, it's free to
+
+
+use. And if you want to use more, you
+
+
+can. Uh, and it's it's really
+
+
+inexpensive depending on which uh
+
+
+scraper you use. Uh, but the Google map
+
+
+scraper that I'm using, it's like two
+
+
+cents a lead after you've spent the $5.
+
+
+So, you literally can get like 250 leads
+
+
+for free with this system I'm going to
+
+
+show you. And then after that, if you
+
+
+want more leads, it's like 2 cents a
+
+
+lead. So, uh, super duper powerful. Uh,
+
+
+and let me show you what you got to do.
+
+
+So, you go to the dashboard, you create
+
+
+your free account, and then you go to
+
+
+integrations and up at the top you can
+
+
+click API and uh, from there you give
+
+
+the API to your agent so he knows how to
+
+
+use Apify. And I have no affiliation
+
+
+with Ampify, at least right now. I just
+
+
+found it and it works and it's free and
+
+
+it's cool, so that's why I use it. All
+
+
+right, here's the flow to give you like
+
+
+a nice visual of what we're doing here.
+
+
+So, Ampify will find the leads um
+
+
+through the Google map scraper,
+
+
+specifically that one. Uh and then it's
+
+
+going to scan the websites uh with your
+
+
+open claw using web fetch as well. Uh
+
+
+then it'll do uh an AI analysis. So,
+
+
+it'll score um each lead. So the leads
+
+
+I'm going to generate because I have an
+
+
+AI automation agency. So I'm going to
+
+
+generate leads for my AI automation
+
+
+agency to add like I don't know chat
+
+
+bots, uh voice bots, uh website tools,
+
+
+any type of AI automation for that
+
+
+business, right? Uh so I'm going to
+
+
+specifically target HVAC uh in Phoenix
+
+
+because I live in Scottsdale, Arizona.
+
+
+and I'm going to target HVAC and I'm
+
+
+going to uh craft uh emails uh and
+
+
+outreach me outreach messages
+
+
+specifically for that niche. So you can
+
+
+tell your open call anything like
+
+
+whatever industry or business you're in
+
+
+be like these are the type of leads I
+
+
+want in this area XYZ and it'll like
+
+
+only scrape and find those leads. Uh so
+
+
+I'll keep going with the flow here. Uh
+
+
+it does the AI analysis to score it. So,
+
+
+it'll even tell me like, "Okay, this
+
+
+after it looks at their website, it'll
+
+
+be like, all right, this uh business
+
+
+really needs AI help." And it will give
+
+
+me like a 10 out of 10 if it really
+
+
+needs AI help or give me like a one out
+
+
+of 10 if it's already got a bunch of
+
+
+good AI stuff. Uh, what it's going to do
+
+
+after that is add this all to a Google
+
+
+sheet or a numbers, Apple numbers,
+
+
+whatever. [snorts] Uh, I'm gonna use
+
+
+Apple numbers for this demo so you can
+
+
+see what I'm talking about. Then it's
+
+
+actually going to use the Gmail CLI and
+
+
+draft up all the emails and save them as
+
+
+drafts in my Gmail. So, I'll show you
+
+
+that uh here in a second. Uh and then
+
+
+me, I'm going to be the human in the
+
+
+loop that basically
+
+
+uh says yes or no or makes edits if I
+
+
+need to uh before the emails actually go
+
+
+out. All right. I've already built the
+
+
+skill with my open call agent so he kind
+
+
+of knows this flow and I'll give that
+
+
+skill to you guys at the end of the
+
+
+video. Uh, but I'm gonna tell them right
+
+
+now to get uh a 100 leads for HVAC for
+
+
+my AI agency and deliver me all the
+
+
+information that is within that skill.
+
+
+So, uh, watch. Yo, Max, what's going on,
+
+
+my man? I'm ready to get some leads. Can
+
+
+you please generate me a hundred leads
+
+
+using our lead genen powerp pack skill?
+
+
+Uh, and then deliver them to my numbers
+
+
+document. I'm filming a video right now
+
+
+for YouTube and I want to show everyone
+
+
+how this works live and in action. So,
+
+
+go ahead and generate those leads along
+
+
+with all the information that comes with
+
+
+those based on the skill that I created
+
+
+for you. Guys, I use uh Whisper Flow for
+
+
+talk to text. A lot of people keep
+
+
+asking me that in the comments, so
+
+
+that's what I use. I'll I'll put the
+
+
+link in the comments just if you guys
+
+
+want to do it as well. Highly recommend
+
+
+talk to text. Saves you a ton of time. I
+
+
+rarely type anymore. I type like maybe 5
+
+
+10% of the day. All right, Max is
+
+
+cooking right now. I just want to show
+
+
+you here's the empty list. He is going
+
+
+to get back to me any minute with 100
+
+
+different leads. All HVAC in Arizona.
+
+
+Let's see what he can cook up. That took
+
+
+a little bit of time. Uh about 5 to 10
+
+
+minutes, but it's worth it because it's
+
+
+free leads, right? Uh and uh he came
+
+
+back and he told me about half of the
+
+
+hundred actually had emails listed on
+
+
+their websites. So, we got those emails.
+
+
+I'm going to blur them out here for uh
+
+
+YouTube purposes. Uh it's against policy
+
+
+to show other contact information on
+
+
+YouTube, so I'll blur that out. But I
+
+
+also have phone numbers as well. So I
+
+
+can call them manually. I can email them
+
+
+individually. Really, really powerful.
+
+
+But a lot of these websites that don't
+
+
+have emails, they have a contact us
+
+
+form. So what Max did is he drafted up
+
+
+uh little messages that I can copy and
+
+
+paste into their contact us uh form on
+
+
+their website. So that's like a backup
+
+
+option if they don't have an email.
+
+
+Really, really powerful. Uh he also
+
+
+rated them nine out of 10, eight out of
+
+
+10, etc., etc. for high opportunity to
+
+
+reach out and they need AI automation
+
+
+services based on what he found on their
+
+
+website. And he personalized each
+
+
+message and he personalized uh
+
+
+everything based on what's on their
+
+
+website and what he found. So crazy that
+
+
+he can do this. Really powerful. Uh now
+
+
+I'm going to show you uh the next step
+
+
+because that remember that Google CLI.
+
+
+He actually is able to input that
+
+
+information and draft up responses in
+
+
+Gmail. So let's check that out right
+
+
+now. Holy sholi. Look at these drafts. I
+
+
+got multiple drafts already preset ready
+
+
+to go to every one of these leads. This
+
+
+is insane. Uh Google CLI is powerful.
+
+
+was my like first time using it to its
+
+
+fullest capacity and he even organized
+
+
+everything and labeled everything when I
+
+
+told him to do that uh all in my Gmail
+
+
+account. But anyway, let's just look at
+
+
+a first one. I'm going show you an
+
+
+example.
+
+
+Look how nice this is because it's
+
+
+already preset ready to go. And
+
+
+obviously you can like train your agent
+
+
+to be really good at SEO or really good
+
+
+at copywriting and uh fine-tune the
+
+
+writing skills to get it really uh
+
+
+powerful and and and connect with these
+
+
+businesses and and get uh more
+
+
+engagement. But the fact that it can go
+
+
+through this process uh from me just
+
+
+talking to it um to generating leads
+
+
+ready to be sent emails insane. Uh I
+
+
+think this is powerful. I think it's
+
+
+valuable. I can always level this up and
+
+
+take it a step further. Uh but uh I
+
+
+think this is pretty cool for now. Uh if
+
+
+you think this is cool, please let me
+
+
+know. Uh because I think it's cool. I
+
+
+think it's pretty cool for any business
+
+
+to get free leads. One quick note I want
+
+
+to make, a lot of you already know this,
+
+
+but just to remind those of you and also
+
+
+for those of you that don't, is that
+
+
+there is legal compliance when it comes
+
+
+to mass texting, mass emailing, that
+
+
+kind of thing. Uh, so depending on where
+
+
+you live, just look up your local laws,
+
+
+what country and state you're in, but
+
+
+you can cold email businesses without
+
+
+their consent because they put this
+
+
+information out there publicly on Google
+
+
+Maps, right? Uh, and you can you can
+
+
+send contact forms on their website as
+
+
+much as you want. Uh, and personal
+
+
+outreach, all of that. That's all legal.
+
+
+Uh, but if you're going to take these
+
+
+phone numbers and do a mass text uh,
+
+
+without their consent, that's illegal.
+
+
+Also, you have to put a unsubscribe link
+
+
+in the email. Uh, so you can
+
+
+individually text them though. You don't
+
+
+if you don't use like a power dialer or
+
+
+a mass tester, you can individually do
+
+
+it. Uh, so just know the laws in your
+
+
+local area. That's all I'm saying. Uh,
+
+
+and be smart about it because you can
+
+
+get fined for that kind of thing. So,
+
+
+uh, generate the leads for free and and
+
+
+contact them legally. That's all I'm
+
+
+saying. And you're you're golden. All
+
+
+right. I told you I'd give you
+
+
+everything for free, the skill, the
+
+
+prompts, everything. And I'm going to do
+
+
+it right now. So, in the description
+
+
+below the pin comment, there's
+
+
+agentcommandkit.com.
+
+
+jump in there. I have a ton of stuff
+
+
+from other videos in there as well. So,
+
+
+if you haven't watched any of my other
+
+
+videos, definitely do that to, you know,
+
+
+skills and tools and memory and all that
+
+
+good stuff. But, uh, if you go there and
+
+
+you click, uh, lead gen Power Pack, it's
+
+
+all in here. Uh, step by step amplify,
+
+
+where to go, uh, what to install, the
+
+
+the prompt for the lead genen agent
+
+
+prompt, and the lead genen skill. It's
+
+
+all in there. And what to do, what not
+
+
+to do. Uh there you go. I hope uh this
+
+
+was helpful. I hope it was valuable. I
+
+
+hope that you realize there this is a
+
+
+powerful use case. So everyone who keeps
+
+
+asking like what are the use cases of
+
+
+OpenClaw? I think this is a pretty
+
+
+powerful use case. If you ask me, you
+
+
+got free leads. All right. So, uh super
+
+
+fun. I enjoyed this video. I put a lot
+
+
+of time and thought into it. If you
+
+
+enjoy this type of content, please
+
+
+subscribe. Trying to get my channel
+
+
+going. I want to do this full-time, but
+
+
+I can't unless I have your help and
+
+
+support and I have enough eyeballs on
+
+
+this content. So, uh, like, subscribe,
+
+
+hype it up if you're hyped, and, uh,
+
+
+comment below. Let me know the next type
+
+
+of video you want to see with OpenClaw,
+
+
+your business, Claude Code, whatever.
+
+
+Let me know. to the next video. See you

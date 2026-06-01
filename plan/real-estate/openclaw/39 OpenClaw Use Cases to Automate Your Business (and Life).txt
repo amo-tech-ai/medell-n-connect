@@ -1,0 +1,6916 @@
+I was venting to it. I was like, "God
+
+
+damn it, I don't want to clean the snow
+
+
+today." And it asked me, "Do you want me
+
+
+to find someone?" And it actually went
+
+
+on the website, found someone,
+
+
+negotiated the price, and the funny
+
+
+thing is like our doorbell is not
+
+
+working. So the guy just entered through
+
+
+like another door, he found the shovels,
+
+
+and without even ringing our doorbell or
+
+
+anything, he just cleaned the snow. And
+
+
+then he just called me on the phone.
+
+
+Hey, I'm outside. I'm done. And I'm
+
+
+like, whoa, whoa, that happened.
+
+
+>> This is Kids. He was one of the first
+
+
+users of Open Cloud. While most people
+
+
+didn't even know that OpenCloud existed,
+
+
+he already had 13 agents wired into his
+
+
+life. His calendar, his email, his home
+
+
+assistant, his printer, his phone, his
+
+
+fridge. He plugged Open Cloud
+
+
+everywhere. In this episode, kids show
+
+
+us all setup. What works, what broke,
+
+
+what he's building next, and why he
+
+
+think people who don't get it are about
+
+
+to get left behind.
+
+
+>> So, it's like someone is giving you like
+
+
+a god computer that can do anything. And
+
+
+your first thought is like, I don't know
+
+
+what to use this for. It's like
+
+
+mind-blowing to me. And trust me, people
+
+
+will watch this video and there will be
+
+
+comments, nah, I don't know if this is
+
+
+that useful.
+
+
+>> Let's deep dive into the 39 ways you can
+
+
+use Open Cloud to optimize your life.
+
+
+>> But I hope this entire conversation
+
+
+sparked something in you in your life
+
+
+like damn I can solve this, I can solve
+
+
+that, I can start a business. I always
+
+
+want
+
+
+>> So Kit, I know that you said that you
+
+
+stop trying to convince people to try
+
+
+Open Cloud. There's people who don't get
+
+
+it. They don't want to get involved in
+
+
+it. But for someone who is watching this
+
+
+video and have no clue about what Open
+
+
+Cloud is, what would you say to this
+
+
+person to convince him to try?
+
+
+>> I love how you jump straight into the
+
+
+deep end. No intro, no. Hey kids, how
+
+
+are you doing? Everything good on your
+
+
+end. You're like, tell me about Open
+
+
+Claw. I don't care about your life. I
+
+
+love it. Um,
+
+
+the vibe has shifted around Open Claw. I
+
+
+think uh it's following the natural
+
+
+progress of like everyone being hyped
+
+
+about something and then eventually the
+
+
+hype dying down and then just the people
+
+
+who actually find usage for it, those
+
+
+are the only ones who will continue
+
+
+tinkering with it and continue using it
+
+
+basically. So in my personal experience
+
+
+there's a lot of laring and there's a
+
+
+lot of pretend productivity with open
+
+
+claw where
+
+
+for example for the first time in my
+
+
+life I was late with paying my mortgage.
+
+
+I missed three different appointments. I
+
+
+drove to my veterinarian instead of
+
+
+driving to the dentist. So I missed an
+
+
+appointment there. So, it seems like
+
+
+when you're setting this up with like 13
+
+
+agents and everything else, it would
+
+
+make your life more uh organized. And
+
+
+the reality is like I'm spending more
+
+
+time on improving my setup than my life
+
+
+actually being fixed. So, what I would
+
+
+tell beginners or someone who is
+
+
+actually starting with this is
+
+
+the thought of fixing your entire life
+
+
+at once is going to excite you, but try
+
+
+to try to fix like one thing. for
+
+
+example, I don't know, managing your
+
+
+caliber or or whatever. Um, cuz it it's
+
+
+funny like my open clock can do [ __ ]
+
+
+like it can rewire my Ziggby lights and
+
+
+pear to Home Assistant, but then I ask
+
+
+it, can you move this event in my
+
+
+calendar? It's like, oh, sorry, the
+
+
+connection to the calendar is buggy. And
+
+
+I'm like, that that misses the entire
+
+
+point, you know. Um, yeah, let me know
+
+
+what you want to what you want to know
+
+
+exactly and I'll try to be more
+
+
+specific. No, I I totally understand
+
+
+you. Like I was telling the same to my
+
+
+fiance the other day because I spent my
+
+
+entire days like trying to optimize
+
+
+everything about my open cloud and then
+
+
+I forgot to actually apply what he gave
+
+
+me. He gave me crazy stuff, crazy
+
+
+content to do and I forgot to apply. And
+
+
+I think that's what you say like you
+
+
+have to
+
+
+>> be careful about it and apply actually
+
+
+what he says to you.
+
+
+>> Yeah. and and and try to do one thing
+
+
+instead of I tried when I set this up. I
+
+
+tried to fix everything in my life. Like
+
+
+let's do um groceries and shopping on
+
+
+Amazon and calendar and to-dos and
+
+
+habits and it's like trying to fix 50
+
+
+things but they're all like half fixed
+
+
+that none of it works. Like when I ask
+
+
+it do something in the browser it's like
+
+
+which method do you want me to use? I
+
+
+tried to use this but it and I wish I
+
+
+could just go one step at a time like
+
+
+we're doing um you probably heard of
+
+
+Tinker Club by now. Uh you'll probably
+
+
+link it and we'll talk more about it
+
+
+later but we started doing this like
+
+
+challenges daily challenges in the
+
+
+discord that it feels like a gym for our
+
+
+open clause in a way. So every day you
+
+
+try to give it like one skill and to
+
+
+solve one problem and that's it. You
+
+
+might be tempted to do all the
+
+
+challenges at once, but do one thing
+
+
+today and then in 30 days when you look
+
+
+back, you would have done like 30 new
+
+
+additions of of like what your open claw
+
+
+can do. And I think that's a much better
+
+
+approach. But when you first set it up,
+
+
+you're excited and you're like, I want
+
+
+to do everything.
+
+
+>> Yeah. I think it's like taking it as a
+
+
+new employee in your life. Like you will
+
+
+not say, okay, fix everything. You will
+
+
+go task per task and explain everything
+
+
+if process actually.
+
+
+>> You understand? Yeah, it makes sense. Uh
+
+
+what is your setup? I know you
+
+
+you shared not long ago you was using
+
+
+Discord. You have different channel for
+
+
+like your different part of your life.
+
+
+Like did you upgrade that? Did you
+
+
+change anything about it?
+
+
+>> I
+
+
+like my setup right now is a mess to be
+
+
+honest with you. I'm reaching the
+
+
+limitations of every chat platform. Like
+
+
+I don't like Telegram. Like I I created
+
+
+10 bots and they all take care of a
+
+
+different part of my life. take care.
+
+
+They don't do anything for now. But I'm
+
+
+just experimenting like what is the
+
+
+right way to use this tool? Because when
+
+
+you have like 10 bots and then you have
+
+
+like one Discord channel and then you
+
+
+have multiple topics and then within the
+
+
+topics you have threads, you get lost in
+
+
+the who am I talking to in which channel
+
+
+in which like it's that bell curve meme
+
+
+of like have one-on-one conversations on
+
+
+Telegram and then you go multi- aent
+
+
+multi- channel setup and then eventually
+
+
+you go and you're like yeah just have
+
+
+one agent and talk to them on Telegram
+
+
+and they should maybe shop your
+
+
+groceries and also vibe code your apps.
+
+
+Um so it's tricky. I've been
+
+
+experimenting. I'm making my own app
+
+
+which talks to the open claw gateway. So
+
+
+it's not like a open claw alternative
+
+
+but it's like a chat app that talks to
+
+
+the open claw gateway and what I've done
+
+
+in it so far is you have topics but you
+
+
+have nested topics which discord doesn't
+
+
+have and a topic can be for example uh
+
+
+home and work and then within work we
+
+
+have projects topic and within projects
+
+
+topic we have let's say tinker club and
+
+
+within tinker club we have tinker club
+
+
+landing page. So for that particular
+
+
+topic I can right click it edit it and
+
+
+choose which agent will answer in this
+
+
+topic by default and I can choose let's
+
+
+say my customer support agent will be or
+
+
+my five coding agent will be assigned to
+
+
+this particular topic. So that's part
+
+
+one. Part two, what's cool about my app
+
+
+is you can assign context to every one
+
+
+of the topics. Like you can write a
+
+
+little description. So I can say in my
+
+
+work topic, I can write, "Hi, I'm K and
+
+
+this is what I'm doing. I'm VIP coding
+
+
+on many products blah blah blah." You
+
+
+can find them in that particular
+
+
+directory on disk. So that's part one.
+
+
+Then we have projects. So we have work
+
+
+where I describe my work. We have
+
+
+projects where I describe my projects.
+
+
+We have Tinker Club where I have to
+
+
+describe Tinker Club is this platform
+
+
+community blah blah blah blah. And then
+
+
+we have Tinker Club landing page and in
+
+
+it I point to hey this is the landing
+
+
+page. This is where it's located on
+
+
+disk. This is what methodologies we use.
+
+
+This is what we want to happen. This is
+
+
+what we don't want to happen. And now
+
+
+anytime I start a new conversation
+
+
+within the thinker club landing page, it
+
+
+has all the context from all the parents
+
+
+basically. So it knows this is the
+
+
+landing page. This is the description.
+
+
+That's the parent description. That's
+
+
+his project in his work. So now it has
+
+
+like this knowledge tree. It's it's not
+
+
+like a lot of times when talking to
+
+
+openclaw, it feels like you're talking
+
+
+to the void. It feels like it feels like
+
+
+it it loses all of its memory and it
+
+
+loses all of its context. So you will
+
+
+tell it, hey, fix my Tinker Glove
+
+
+landing page. And you were like, huh?
+
+
+And I'm like, [ __ ] we talked
+
+
+about that like 15 minutes ago. How do
+
+
+you forget about it? In my app like when
+
+
+you click new chat anytime in the first
+
+
+message everything is injected so he
+
+
+knows exactly like you know which agent
+
+
+you're talking to and you know
+
+
+the agent knows which context is it in
+
+
+so it doesn't it's really too far from
+
+
+from the thing. So I'm trying to make
+
+
+this work but inventing your own chat
+
+
+app like you cannot make it as smooth as
+
+
+Discord like once you try to make it you
+
+
+realize how much work does it go behind
+
+
+doing something like Discord and Slack
+
+
+and making sure that you know uh
+
+
+making sure that every part moves
+
+
+smoothly.
+
+
+>> Did you fix the memory because you say
+
+
+that all the you say like you didn't fix
+
+
+it. No,
+
+
+>> I saw few.
+
+
+>> I I I don't even I don't even try to
+
+
+deal with my memory because uh for me
+
+
+that's like an advanced step that too
+
+
+many people are taking too early. And I
+
+
+think once I have my app that I'm
+
+
+working on and once I fix that, I know
+
+
+who am I talking to in which channel,
+
+
+then the next step will be solving
+
+
+memory. But for now, I feel paralyzed
+
+
+when I need to do something. I feel like
+
+
+um decision paralysis of like where do I
+
+
+dump this and who do I give this to you
+
+
+know and ironically in the first day of
+
+
+open glow I had it only on telegram I
+
+
+was walking my dog and I was so
+
+
+productive I was like handling customers
+
+
+doing web research and a bunch of other
+
+
+[ __ ] and now if I want to do something
+
+
+I'm like which agent which channel which
+
+
+topic so
+
+
+and that's the current state of things
+
+
+man
+
+
+>> because I saw your video and I saw you
+
+
+on Discord talking to all this guy and I
+
+
+was like [ __ ] like that's maybe like the
+
+
+the way to do it and then now you say
+
+
+that and it's true that I'm just using
+
+
+telegram and it works pretty well like
+
+
+talking to one person
+
+
+>> and having all these different agent
+
+
+that are imaginary in a way.
+
+
+>> Yes. Yeah.
+
+
+>> Yeah. Can you just tell me a little bit
+
+
+more about how you use it daily because
+
+
+you say that you used it like for Tinker
+
+
+Club for your other business like let's
+
+
+focus on the business part like how do
+
+
+you use it daily? What are the biggest
+
+
+task that you give and that are 100%
+
+
+right now
+
+
+>> zero like right now my setup I went from
+
+
+being super productive with it to being
+
+
+just feeling like paralyzed by you know
+
+
+decisions that now I'm just tinkering
+
+
+with my setup but it's not doing
+
+
+anything useful meaning I have customers
+
+
+yelling at me or like hey man you didn't
+
+
+answer me you didn't do this you didn't
+
+
+do that and I'm like ah how to explain
+
+
+to you guys that my setup is not good
+
+
+enough for me to deleg delegate work in
+
+
+it because I had a telegram bot uh which
+
+
+was using the heartbeat of openclaw to
+
+
+archive my emails and I had a pretty
+
+
+strict list of what needs to be archived
+
+
+and in the instructions I told it you
+
+
+you can only archive things which we
+
+
+agree here you cannot go on your own and
+
+
+just vibe to archive your own things I
+
+
+read the chat it's like you have an
+
+
+offer for an investment in tinkerers
+
+
+club and to me this seems like a cold
+
+
+email so I'm assuming like a cold
+
+
+outreach whatever is called. So I'm
+
+
+assuming this needs to be archived and
+
+
+it's archiving an email from potential
+
+
+investors. So even if this happens once
+
+
+every 100 emails, I cannot fully trust
+
+
+it that it's going to do the the right
+
+
+thing, you know. So I've just turned off
+
+
+the chron job and I turned off the
+
+
+heartbeat and I'm like until I am 100%
+
+
+sure and I write the right instructions
+
+
+that this is not going to go off path
+
+
+and do something stupid, I cannot rely
+
+
+on it. So
+
+
+email broken. I cannot fully trust it. I
+
+
+can tell it actually.
+
+
+There's a difference between you telling
+
+
+it to do things specifically and it
+
+
+doing things on its own. So I'm more in
+
+
+the camp right now of like I want to
+
+
+give it specific instructions or what
+
+
+needs to be done and in that case it can
+
+
+do stuff for me. Like for example, I can
+
+
+tell it read my Twitter DMs. There there
+
+
+was someone who wanted to sponsor Tinker
+
+
+Club and they put like their um company
+
+
+information in there. So, I can tell it
+
+
+read my Twitter DMs, find who wanted to
+
+
+sponsor, go to my accounting platform,
+
+
+create an invoice, and send it to them
+
+
+via email. But this is a very um this is
+
+
+a very specific
+
+
+um
+
+
+instruction because if I'm a bit more
+
+
+vague and if I tell it uh check my DMs
+
+
+and figure out the invoice, like it's
+
+
+God knows what it's going to do. So, I
+
+
+have to be very specific.
+
+
+read the previous few messages, find the
+
+
+ones that's talking about an investment,
+
+
+use the infact platform. So I cannot
+
+
+tell it make an invoice because it's
+
+
+going to invent its own way of doing
+
+
+invoices. So I have to tell it use the
+
+
+impact platform for doing an invoice and
+
+
+then I have to tell it use the GG or NAS
+
+
+integration for sending an email to
+
+
+them. So it feels like
+
+
+talking to my 2 and 1/ halfyear-old, you
+
+
+know, I have to be super specific
+
+
+because if I'm going to do something
+
+
+stupid. So that's where it's useful for
+
+
+me right now that I don't have to click
+
+
+through five different interfaces to
+
+
+copy the thing and do blah blah blah.
+
+
+When I give it specific instructions,
+
+
+it's super useful. If I let it run on
+
+
+its own in the background on a heartbeat
+
+
+or on a chron job, it's a dumbass and
+
+
+it's useless.
+
+
+>> I feel like the honeymoon is dead with
+
+
+you.
+
+
+>> Yeah. The honeymoon phase at the
+
+
+beginning where everything is beautiful
+
+
+and after you lose memory and you lose
+
+
+hope in it.
+
+
+>> Yeah. Yeah. Yeah. I I think the
+
+
+honeymoon phase with this project is
+
+
+like and I've said this on Twitter, it
+
+
+doesn't matter who owns it at this
+
+
+point. It doesn't matter if it's OpenAI,
+
+
+it doesn't matter if Claude does their
+
+
+own thing. It opened our eyes of how the
+
+
+future could be. And right now, if it's
+
+
+dumb and the memory is dumb, it's up to
+
+
+me to fix it because it completely
+
+
+relies on markdown files. And I cannot
+
+
+blame Sam Alman. I cannot blame someone
+
+
+else. It's like completely up to me. I
+
+
+can even fork it and improve it on my
+
+
+own or like I can give it the right
+
+
+instructions and the right setup to
+
+
+actually be smart and to remember
+
+
+things. This is what I like about this
+
+
+project that I don't blame anyone else
+
+
+that oh Asian suck or blah blah blah.
+
+
+Like I have fully the power to make this
+
+
+uh either super powerful or a dumbass.
+
+
+And I think that's what is overwhelming
+
+
+about this project. Like you know the
+
+
+potential you know that if you give it
+
+
+the right tools it can actually click
+
+
+through the apps and the browser and do
+
+
+everything for you. But when it doesn't,
+
+
+like it's very [ __ ] frustrating
+
+
+because you're like, "Oh man, I know you
+
+
+have potential. Why don't you do the
+
+
+thing?"
+
+
+>> Yeah. And I know exactly his feeling.
+
+
+Like the first task that he did was
+
+
+optimizing my podcast website. That's
+
+
+the first thing he did.
+
+
+>> And the other day I was like, "Can you
+
+
+go on my podcast website and do it?" And
+
+
+he was like, "I don't have the link to
+
+
+your website."
+
+
+>> Yeah, exactly.
+
+
+>> You built it like that. You're the guy
+
+
+who gave the ID. You built it and you
+
+
+forgot it. So yeah, that's incredible.
+
+
+It is.
+
+
+>> Yeah. When you say that the the idea
+
+
+that come in my mind is maybe like build
+
+
+SOPs and on paper on something and like
+
+
+instead of saying do that, do SOP one,
+
+
+you know, like do this process and then
+
+
+this process is written and then you
+
+
+always go to the precess, read it and do
+
+
+it. Probably use a lot of credit, but
+
+
+maybe the only way to
+
+
+>> Yeah. So I have a I have a solution for
+
+
+this and this is why I started building
+
+
+my own app for uh for this is um
+
+
+there's a concept of skills that are
+
+
+injected in the first prompt right and
+
+
+then the agent chooses which skill to
+
+
+use and there's the concept of commands
+
+
+and like slash commands cursor has slash
+
+
+commands I think now claude and codeex
+
+
+and everyone else has slash commands so
+
+
+your thing that you're saying about the
+
+
+podcast needs to be converted into a
+
+
+slash command So sometimes you need a
+
+
+skill. A skill would be managing my
+
+
+podcast where you would actually
+
+
+describe where is your podcast, where
+
+
+does it live, blah blah blah. But even
+
+
+then you might need to pair that skill
+
+
+with a slash command that's like upload
+
+
+the latest episode of this podcast. So a
+
+
+slash command would just be a very tight
+
+
+specific um instruction written in
+
+
+markdown about what exactly do you want
+
+
+to happen. So I think people rely too
+
+
+much on chatting with it and and hoping
+
+
+it's going to do good. But I think what
+
+
+you need to do is every time you do
+
+
+something successful, you either convert
+
+
+it to a skill or you convert it to a
+
+
+slash command or you or you make a mix
+
+
+of both. So in the f future, you have
+
+
+this so which you can easily repeat
+
+
+instead of just vibing it every single
+
+
+time. So what I'm doing in my app is
+
+
+there's and what Discord and Telegram
+
+
+and the others don't have is you can add
+
+
+things. So when you chat with a bot, you
+
+
+can mention
+
+
+uh a skill, you can mention a slash
+
+
+command, and you can mention another
+
+
+bot, and I'm working on adding like a
+
+
+knowledge base. So you'll be able to
+
+
+mention your knowledge base. So when you
+
+
+talk to the bot, you can be like, hey,
+
+
+use my at Gmail skill to make an invoice
+
+
+using no to add make an invoice where
+
+
+make an invoice would be like a slash
+
+
+command or a mini procedure. Get it? And
+
+
+then basically your prompt expands and
+
+
+you just add a few things but you give
+
+
+so much context to the agent that it
+
+
+will know exactly what to do. As
+
+
+compared to discord right now you're
+
+
+just shooting in the dark. You're like
+
+
+use the inact platform for invoices but
+
+
+it's a guess whether it's going to use
+
+
+the skill or it's going to ask you uh
+
+
+what is in fact I tried logging in but
+
+
+it doesn't work.
+
+
+>> So this is why I like that you can add
+
+
+things and precisely tell it what what
+
+
+do you want to to happen.
+
+
+I like that you take the responsibility
+
+
+of it because I think that's the right
+
+
+thing to do. It's like again like hiring
+
+
+an employee and ask him to fix your
+
+
+company and complaining about it the
+
+
+first day. I feel like you really have
+
+
+to give it a a structure and some people
+
+
+are just prompting and are waiting for
+
+
+magical to happen and as you say it's
+
+
+like it's not possible. It can work the
+
+
+first days really well, but then after
+
+
+that you understand that you have to
+
+
+structure and that it's actually
+
+
+>> a biggest task that it was supposed to
+
+
+be
+
+
+100%. And people do this with vibe
+
+
+coding too. Like vibe coding can be
+
+
+turned into vibe engineering. I have an
+
+
+entire talk about this or you can maybe
+
+
+link it somewhere in the description.
+
+
+It's called from vibe coding to vibe
+
+
+engineering. VIP coder just shoots in
+
+
+the dark and constantly it's like please
+
+
+fix please fix please fix just hoping
+
+
+it's going to do the thing. A VIP
+
+
+engineer equips their agent with skills,
+
+
+commands and a bunch of other stuff and
+
+
+is very precise in what they ask. And
+
+
+then the agents will give you good
+
+
+outputs if you actually ask the right
+
+
+way and people are lazy. They'll lazy
+
+
+prompt and be like oh v coding sucks
+
+
+this doesn't work.
+
+
+In your video with Greg, you shared like
+
+
+few crazy case studies and I don't know
+
+
+remember the fact that you were talking
+
+
+about you asking your agent to actually
+
+
+print something random and he found your
+
+
+printer.
+
+
+>> Did you find any new personal case study
+
+
+that were pretty crazy or did you find
+
+
+like any people online who are doing
+
+
+crazy stuff with it?
+
+
+>> I'm doing a lot of crazy things. I
+
+
+actually did a a presentation at a
+
+
+meetup in Vienna about this. Uh so there
+
+
+was an open cloud meetup in Vienna and I
+
+
+did um like a fast round of like 30 use
+
+
+cases in uh 5 minutes. The problem is
+
+
+the the website with the presentation is
+
+
+down. So we can keep chatting while I
+
+
+tell one of my bots to um actually
+
+
+publish it over. Let me see if the link
+
+
+overell is live. It is live. Awesome.
+
+
+So, if you want, I can even uh share my
+
+
+screen and we can go quickly through the
+
+
+presentation. So, this was the first
+
+
+slide about Pete because I literally
+
+
+feel like this guy changed uh my life
+
+
+with this project. Um I had a cloud set
+
+
+up before there was onboarding
+
+
+available. So, I was one of the first
+
+
+people in the cloud mode discord and
+
+
+even Peter asked me like, "Man, how do
+
+
+you have this set up?" Because there was
+
+
+no onboarding and I just use clot code
+
+
+in order to set it up. So, that was
+
+
+pretty cool. Uh, these are people
+
+
+talking about LLM psychosis and I have
+
+
+LLM schizophrenia. Like I have 20 bots
+
+
+and they're in a group called Arkham
+
+
+Asylum and they're all crazy and they're
+
+
+mostly performative and useless. Another
+
+
+fun fact is I made the Open Claw logo
+
+
+with 3:00 a.m. because Peter sent me the
+
+
+article for announcing OpenCaw and I was
+
+
+like, man, that's a horrible logo. So, I
+
+
+created one and now it's the logo from
+
+
+for for the thingy. Uh, Tinker Club, we
+
+
+can talk more about it later and people
+
+
+can find it at the thing. here's 50
+
+
+things are going to change your life. So
+
+
+customer support agent as I said it is
+
+
+pretty useful because it can handle so
+
+
+many customers in batch. So I can tell
+
+
+it it can tell me the heartbeat is still
+
+
+on and it tells me uh there's like two
+
+
+people asking for a refund and I'll be
+
+
+like you know the procedure refund them
+
+
+handle them whatever and it's very
+
+
+useful to just batch the emails without
+
+
+looking at your email. Uh giving the bot
+
+
+its own phone number uh is pretty cool.
+
+
+Also, I gave it a Twilio phone number.
+
+
+And to be honest with you, I've never
+
+
+done anything with uh with this. So,
+
+
+it's not useful, but it's wired, and I'm
+
+
+hoping to make it useful at some point.
+
+
+Uh build a mailbox app. This is still
+
+
+work in progress. So, I built an app uh
+
+
+where my bot lives on the Mac Studio
+
+
+that uses um Apple script and uses full
+
+
+disk access to read all of my emails
+
+
+from the Apple email app. And then
+
+
+instead of my open claw directly reading
+
+
+from this app, I have a jury of like
+
+
+five independent LLMs that judge every
+
+
+email whether it's has prompt injection,
+
+
+whether it's safe or whether it's spam.
+
+
+So those five agree on their own and
+
+
+then they take action and my open clock
+
+
+can only access emails that are safe. Um
+
+
+I don't want to do the entire
+
+
+presentation without you interrupting.
+
+
+So just feel free to like we can go
+
+
+slide by slide and you can tell me like
+
+
+move on to next or maybe you want to ask
+
+
+something about this one in particular.
+
+
+No, I love it. I feel like um the phone
+
+
+number I wanted to try it to give it.
+
+
+For example, I have an Indonesian number
+
+
+here and I have the WhatsApp and a lot
+
+
+of things are dealt with WhatsApp here.
+
+
+Like if you want to order coconut, if
+
+
+you want to order like anything is
+
+
+through WhatsApp. I feel like for me
+
+
+that would be
+
+
+>> Have you ordered a coconut through
+
+
+WhatsApp?
+
+
+>> Yeah, I ordered a coconut through
+
+
+WhatsApp. There's a guy his name is like
+
+
+Ray coconut man and I send him a message
+
+
+one second later he answer me and he
+
+
+deliver coconut like twice a week man
+
+
+and
+
+
+>> and you order like one coconut and he
+
+
+comes even without a bag and he's like
+
+
+here's your one coconut
+
+
+>> eight or 10 the maximum I can fit in my
+
+
+fridge and then like yeah when it's like
+
+
+over I just like buy more I drink like
+
+
+one coconut a day minimum
+
+
+>> that's insane
+
+
+okay you can presentation later like 50
+
+
+ways I use Coca-Cola,
+
+
+>> right? I will I will try it and I will
+
+
+send you the video. But basically here
+
+
+in Indonesia, you can order anything
+
+
+through WhatsApp. So giving a phone
+
+
+number and an access to WhatsApp makes a
+
+
+lot of sense because
+
+
+>> he can deal with the admin
+
+
+administrative thing. He can deal with a
+
+
+lot of thing in my life. So that will be
+
+
+a personal assistant in Indonesia. Yeah,
+
+
+it will be perfect. It makes sense for
+
+
+the mailbox. I think it's really good
+
+
+that you talk about that because I feel
+
+
+like
+
+
+I still didn't figure out how to do
+
+
+that. I'm I will not giving my you know
+
+
+the address the access of my email of my
+
+
+Gmail but yeah how does it work exactly
+
+
+like did you already make it happen?
+
+
+>> Yeah. So this app basically like I'm
+
+
+logged into the mail app to the native
+
+
+mail app and uh it's connected to all of
+
+
+my accounts but for now it's read only.
+
+
+So the bot can read stuff but it cannot
+
+
+send stuff through this app. So I'm
+
+
+making like a safe app and meanwhile
+
+
+while I'm building the app I've given it
+
+
+access like full access to everything
+
+
+through GG CLI and for people who cannot
+
+
+get goggles.
+
+
+So NASA is a platform for like
+
+
+connecting your emails and they give you
+
+
+an API and it's kind of more stable for
+
+
+me than GG to be honest. So that that's
+
+
+it about email. It's still like be
+
+
+careful not to get prompt injected and
+
+
+everything you know and uh
+
+
+hopefully this will be live soon and
+
+
+people can use email in a safe way.
+
+
+>> Amazing. Yeah. I have a few question
+
+
+about safety by the way. Um you say like
+
+
+you know be careful about being prompt
+
+
+injected. Did you learn anything like
+
+
+what are the biggest step to actually be
+
+
+safe with open cloud?
+
+
+>> Uh you need to figure out where can
+
+
+prompt injection happen from and it's
+
+
+your email your messages and browsing.
+
+
+So it's usually an external factor and
+
+
+how I protect myself from it is like I'm
+
+
+building this app which is like not
+
+
+going to have it's going to be every
+
+
+email is going to be judged for prompt
+
+
+injections and it already works and it's
+
+
+always good. Uh but meanwhile use a very
+
+
+smart model. I see people are like oh my
+
+
+god I'm using Gemini 3 or I'm using uh
+
+
+Minmax or whatever the [ __ ] And it's
+
+
+like no use Opus. Use the latest version
+
+
+of Opus. Don't even downgrade to Sonnet.
+
+
+This was something that Peter was
+
+
+repeating to all of us in the Discord
+
+
+back before his life blew up. Someone
+
+
+would be like, "Oh my god, a switch to
+
+
+solid is so much faster." And he would
+
+
+be like, "No, use Opus cuz you're going
+
+
+to get hacked. You're going to get
+
+
+prompt injected." Cuz I had Opus
+
+
+actually laughing at a few cases of
+
+
+people who wanted to prompt inject me.
+
+
+It's like, "Haha, this is funny. I'm not
+
+
+going to fall for this." But if you use
+
+
+Gemini Flash, it might fall for it. And
+
+
+then there goes your computer. So that
+
+
+would be one advice. Um, for messages,
+
+
+I'm I let it read messages, but I'm
+
+
+pretty sure that all the senders that
+
+
+send me messages, I've locked down my
+
+
+messaging to a point where no one
+
+
+malicious can send me messages to try to
+
+
+prompt inject me. And then the last one
+
+
+is browsing. I'm also working on a
+
+
+browser called uh Clauser like Clauser
+
+
+browser, which is a browser for agents
+
+
+where humans don't touch it. So you
+
+
+don't go and you don't type in it, you
+
+
+don't click in it. And one of the
+
+
+functionalities of the browser is going
+
+
+to be every website when it loads it
+
+
+gets again judged by a couple of LLMs
+
+
+and even local LLM like is there
+
+
+something malicious on it and then when
+
+
+it's approved only then open claw can do
+
+
+stuff on that website and you can
+
+
+manually approve c certain websites and
+
+
+be like I know that Amazon is safe this
+
+
+is safe that is safe and basically it is
+
+
+I've been using it a lot that like I see
+
+
+it in the corner of my eye this I have
+
+
+another monitor right where open claw is
+
+
+living and I can see it opening the
+
+
+browser and then anytime I'm curious
+
+
+like what it does I can just lean in and
+
+
+actually see a hide it open couple of
+
+
+tabs and many agents can work in
+
+
+parallel in different tabs because I
+
+
+feel um well we can talk more about the
+
+
+browser when it's like there's a slide
+
+
+about it uh so same browsing save email
+
+
+save messages and use smart models those
+
+
+would be my four that that would be my
+
+
+advice for safety
+
+
+>> yeah I think uh using a Smart LM is like
+
+
+something people want to be cheap on it
+
+
+but I think it's just for cheap whatever
+
+
+you use compared to like what it brings
+
+
+you like you know if I had to hire you
+
+
+like to do all the the tweet and
+
+
+everything
+
+
+>> and yeah it makes sense to have a team
+
+
+of A player you know working for you and
+
+
+not use a C player just because you want
+
+
+to be cheap and like someone who can do
+
+
+a big mistake and yes
+
+
+>> I don't know break all your structure so
+
+
+yeah it makes sense
+
+
+>> I would personally like currently I'm
+
+
+paying uh around $600 for alarms per
+
+
+month. And I'm only doing that because I
+
+
+haven't found a way to make them useful
+
+
+all the time and to make them useful at
+
+
+night. When I figure out, and I will
+
+
+soon, ways to make my agents work 24/7
+
+
+and basically fix stuff and handle
+
+
+customers and spin up new businesses and
+
+
+landing pages and deploy apps for iOS
+
+
+and Android. Like, this is all possible.
+
+
+I I won't care about the credits. He's
+
+
+like a $200 employee. Are you kidding
+
+
+me? like I'll get 10 of them. I'll get
+
+
+20 of them. Like the it scales. You
+
+
+should scale it with how much value it
+
+
+brings you in. Like it's stupid to buy
+
+
+10 accounts and do nothing with them.
+
+
+But if you pay $200 is literally the
+
+
+cheapest assistant you can have in life.
+
+
+I've had assistance previously from um
+
+
+services like Athena. I don't know if
+
+
+you've heard of them and a bunch of
+
+
+other things. And even them like the
+
+
+lowest amount that you can pay was
+
+
+around €3,000 per month I think in order
+
+
+to have an assistant. and someone would
+
+
+tell you man you're paying 3,000 and you
+
+
+think that's a little I am actually if I
+
+
+have um executive assistant from
+
+
+whatever country from somewhere per
+
+
+thousand so people are competing like
+
+
+how you can go lower and sometimes you
+
+
+might be lucky that you pay low and you
+
+
+get someone good but don't think that
+
+
+price is going to be $200 $200 you're
+
+
+never going to find someone who's going
+
+
+to like read all of your rules apply
+
+
+everything that you tell it is not going
+
+
+to get mad he's not going to get sick
+
+
+it's not going to get blah blah blah
+
+
+blah, it's like $200. It's It's a
+
+
+no-brainer. It's a no-brainer if you
+
+
+have a business and if you're trying to
+
+
+do more in life
+
+
+>> otherwise.
+
+
+>> Yeah,
+
+
+>> I totally agree. I feel like a lot of
+
+
+people are taking open cloud and putting
+
+
+it on the Mac Mini or even in a VPS and
+
+
+>> way to make money. But I think for me
+
+
+the like the best the best use case is
+
+
+having a business and using it to help
+
+
+you you know like for example for me
+
+
+right now my focus is the podcast. How
+
+
+can I automate everything every task
+
+
+around the podcast
+
+
+>> and for that it help me a lot and
+
+
+whatever I will pay for it it's worth it
+
+
+and for you it's probably the same but
+
+
+like for someone who just like take open
+
+
+cloud to actually start a business and
+
+
+make money.
+
+
+>> Yeah.
+
+
+>> Yeah. It's harder. What is your
+
+
+structure with LLM? Do you just use Opus
+
+
+4.6 or do you use like I don't know
+
+
+codeex or anything else?
+
+
+>> Just opus. Uh for vibe coding I'm using
+
+
+codeex for everything.
+
+
+>> Uh I don't use I really sometimes I'll
+
+
+be really tired and I'll use Opus
+
+
+because I cannot wait for Codex because
+
+
+Codex is insanely slow.
+
+
+>> Other than that OP um Codex for coding,
+
+
+Opus for chat.
+
+
+>> And you say you build the M app, the
+
+
+browser and all this other tool. Do you
+
+
+how do you build it everything with open
+
+
+crow or do you just use like
+
+
+>> I've built a bunch of stuff with open
+
+
+claw like the entire tinker club landing
+
+
+page that so many people are I I don't
+
+
+think it's anything special like I've
+
+
+put some effort in it but people are
+
+
+like oh wow this design is amazing and
+
+
+blah blah blah and I'm like I just coded
+
+
+this with telegram you know so that was
+
+
+one of the first things where I didn't
+
+
+open a terminal I didn't do anything it
+
+
+was all done through openclaw I give it
+
+
+skills for buying a domain. I give it
+
+
+skills for managing my domains. I give
+
+
+it skills for Versell, for a bunch of
+
+
+other stuff. So from my computer to
+
+
+wiring it to the domain, deploying it,
+
+
+whatever. Everything was done through
+
+
+Telegram. This was back in the days when
+
+
+I was actually productive with OpenClaw
+
+
+instead of being like ah what is the
+
+
+right way to to use it. Now um my wife
+
+
+is joining me for Tinker Club and she
+
+
+has been doing QA and manual testing for
+
+
+all her apps in the past. So she's been
+
+
+doing customer support um taking care of
+
+
+um documentation, change logs and also
+
+
+quality assurance and testing basically.
+
+
+So she would report the bugs and I would
+
+
+pick up and fix the bugs and we would go
+
+
+in a cycle. So now when I work have to
+
+
+work with her um we're trying to use a
+
+
+special discord called vibe coding which
+
+
+is only because I'm not someone who has
+
+
+two projects. If I had two projects we
+
+
+can use anything telegram whatever but I
+
+
+probably have more than 50 projects on
+
+
+disk. No, probably more than 70 projects
+
+
+if you count that. Like for example,
+
+
+Tinker Club is like consists of landing
+
+
+page A, B and C or Benji consists of
+
+
+Benji electron app, Benji extension,
+
+
+Benji back, Benji front end. If you
+
+
+count like that, I probably have 70
+
+
+projects. So I cannot use Telegram and
+
+
+do one-on-one about all of these
+
+
+projects. I'm trying to use Discord. And
+
+
+when I made a word Discord, I got lost
+
+
+in it because I have like 70 channels
+
+
+for all my projects. And then I have
+
+
+accounting, invoices, business,
+
+
+marketing, blah blah blah, everything at
+
+
+once. So I'm like, this is not going to
+
+
+to work. So then we split into two
+
+
+discords. One is called VIP coding where
+
+
+it's only for listing all the projects
+
+
+and being able to v code on them. And
+
+
+the idea is that my wife will also be in
+
+
+that. So when she finds a button instead
+
+
+of reporting it to me, she will just vip
+
+
+code it and uh basically fix it by
+
+
+herself. But even that's to me that's
+
+
+not the ideal flow because I cannot
+
+
+review the work that way. You know
+
+
+that's fine for quick things but when
+
+
+collaborating with someone it would be
+
+
+nice to use something like GitHub issues
+
+
+or cloud agents or something like that
+
+
+where you can actually see a canon
+
+
+moving and you can review it before it
+
+
+goes to to the next stage. So in this
+
+
+question we have an answer for like how
+
+
+would you do it if you're like one
+
+
+person working with agents on many
+
+
+projects or do you have one person
+
+
+working on a couple of projects or you
+
+
+have a team trying to vibe code on many
+
+
+projects and the answer is like very
+
+
+different for all of those scenarios. I
+
+
+I'm personally trying to find my uh what
+
+
+is my ideal way of doing things because
+
+
+sometimes for quick fix of a landing
+
+
+page I can do it through telegram um
+
+
+doing couple of things I can do them by
+
+
+myself on discord but now it gets
+
+
+complex when I involve another person
+
+
+like how do we do peer programming peer
+
+
+vibing together while making sure that
+
+
+we don't break the app consistently.
+
+
+Yeah, I see. And you were talking about
+
+
+the fact that you use a studio. Why is
+
+
+that? Like, you know, for someone who
+
+
+don't understand, like why would you use
+
+
+a studio and not a Mac Mini?
+
+
+Because I had it at home. I've been
+
+
+actually a huge fan of Mac Minis and
+
+
+Studios before all of this started. I've
+
+
+been using since 2018,
+
+
+probably. So, I went from Mac Mini to
+
+
+another Mac Mini and then to Studio. And
+
+
+now I use a MacBook because I need more
+
+
+portability. But and my studio is used
+
+
+as a home server. But even these Macinis
+
+
+people call them powerful and [ __ ] but
+
+
+they're only like 24 GB of RAM, which is
+
+
+not enough. So if in Tinker Club, what
+
+
+we started is we started self-hosting
+
+
+everything. And I mean literally
+
+
+everything. There are people
+
+
+self-hosting GitHub because they don't
+
+
+work with anyone. So why would they use
+
+
+GitHub? They can use a self-hosted
+
+
+version of it. And there's like plenty
+
+
+of things like I went from someone who
+
+
+hated self-hosting. Dude, I was so
+
+
+against I was like just buy paperell or
+
+
+railway or whoever the [ __ ] and don't
+
+
+bother with self-hosting. And like last
+
+
+year I got a head snner server and I
+
+
+said I'm coolify on it. I'm like [ __ ]
+
+
+this the same thing as railway except
+
+
+I'm paying $50 instead of $200 $300. So
+
+
+that was my first entrance into I can do
+
+
+things on my own. And now openclaw open
+
+
+the gates for you can just own your
+
+
+assistant and people buy these powerful
+
+
+machines put them on their desk only to
+
+
+host openclaw on it like you have free
+
+
+memory sitting both like storage and RAM
+
+
+and everything. So in Tinker Club we
+
+
+started exploring what can we self host.
+
+
+We started from like home assistant,
+
+
+home automation, cameras, um your own
+
+
+analytics, your own og and basically
+
+
+when you go into it, you realize like I
+
+
+can have docker running on a Mac studio
+
+
+and basically I can self host most of
+
+
+the tools I use in my life as
+
+
+subscriptions. You can use it as a
+
+
+download server. You can download
+
+
+definitely
+
+
+legal movies and legal TV shows and all
+
+
+of these legal things that people are
+
+
+legally setting up. And
+
+
+>> I I I don't I don't want to I don't want
+
+
+to overhype Tinker Club because actually
+
+
+we're trying to slow down the adoption,
+
+
+but the amount of madmen that they have
+
+
+gathered in here like I thought I'll be
+
+
+the one telling people how to do things,
+
+
+but sometimes I read the channels and
+
+
+I'm like someone is self-hosting GitHub.
+
+
+Someone is like I own 46 Burger Kings.
+
+
+Someone is like you'll mention a book
+
+
+and someone is like yeah I know that
+
+
+author. I was his assistant for like six
+
+
+months in New York. So a crazy mix of
+
+
+people and every day
+
+
+uh I'm reaching a new point where my Mac
+
+
+studio is not even enough. The amount of
+
+
+[ __ ] that these people just invent that
+
+
+you can do and you can sell host. I
+
+
+think I'm getting a warning cause and
+
+
+like going out of memory. I'm going out
+
+
+of RAM and I'm trying to maybe get
+
+
+another one or get like multiple
+
+
+machines and just um
+
+
+I think uh I'm ADHD so I'm going to
+
+
+answer your questions with 30 answers.
+
+
+So, what you what you asked me is like
+
+
+if you're planning to go down the rabbit
+
+
+hole of self-hosting and tinkering, then
+
+
+get a Mac Studio over Mac Mini because
+
+
+it's a more powerful machine overall.
+
+
+But if you're planning only to use Open
+
+
+Claw and nothing else, then I'm not sure
+
+
+if you would even need a Mac Mini. You
+
+
+can find an old MacBook, can find an old
+
+
+Raspberry Pi or anything. So, that would
+
+
+be the the advice there. So, Mailbox
+
+
+app, clean the snow in my driveway. This
+
+
+was a very cool use case of OpenClaw cuz
+
+
+I connected it to a local platform in
+
+
+Poland for uh finding contractors for uh
+
+
+anything, painting, whatever. And I was
+
+
+venting to it. I was like, "God damn it,
+
+
+I don't want to clean the snow today."
+
+
+And it asked me, "Do you want me to find
+
+
+someone?" And it actually went on the
+
+
+website, found someone, negotiated the
+
+
+price. And the funny thing is like our
+
+
+doorbell is not working. So the guy just
+
+
+entered through like another door and he
+
+
+found um he found the shovels because
+
+
+they were like buried in the snow
+
+
+outside and without even ringing our
+
+
+door doorbell or anything he just
+
+
+cleaned the snow and then he just called
+
+
+me on the phone. I'm like hey I'm
+
+
+outside I'm done and I'm like whoa whoa
+
+
+that happened. So it felt like I just
+
+
+vented to open claw about something and
+
+
+a guy came in did the job and he just
+
+
+called me for a payment and I would
+
+
+eventually want to close that loop that
+
+
+even openclaw is like watching my
+
+
+cameras managing the people maybe even
+
+
+talking through the cameras to them and
+
+
+when it's time to to pay them it can
+
+
+just use an API and pay them and just
+
+
+send them on their way. So this was the
+
+
+first moment where I feel like how you
+
+
+can connect the real world with your
+
+
+Roman claw and you you leverage like
+
+
+real people to like as you said bring
+
+
+you coconuts or bring you like the plans
+
+
+the crazy plans that I have is like
+
+
+having cameras in my pantry in my fridge
+
+
+and in other places that eventually like
+
+
+it auto replenishes all the groceries or
+
+
+the pantry or the spices that you don't
+
+
+do stuff. It just
+
+
+finds ways in the real world and
+
+
+unblocks itself. Like if service A
+
+
+doesn't work I'll text a guy, I'll hire
+
+
+a guy. I'll do something, you know, to
+
+
+to do stuff in the real world for you in
+
+
+the background.
+
+
+>> Man, I love that because I've been
+
+
+thinking about exactly the same thing. I
+
+
+probably a lot of people, but for me,
+
+
+the the mind-blowing moment was like,
+
+
+you know, that was the first time I
+
+
+installed AI in an
+
+
+I understood that okay, it's possible.
+
+
+Then if you put this hardware in a robot
+
+
+or in anything, then he will understand
+
+
+the movement. he will understand what's
+
+
+happening and he will learn by himself
+
+
+and then when I thought about that I
+
+
+thought like people are thinking that
+
+
+right now it's a geeky stuff you know oh
+
+
+yeah you play with your computer that
+
+
+would
+
+
+>> this crazy game that we are playing
+
+
+actually have impact in the real life
+
+
+like the structure the workflow you
+
+
+build have impact right now you make
+
+
+more money with it but tomorrow I feel
+
+
+like it will have impact in the real
+
+
+life the same way that you just explor
+
+
+>> you find someone easily you build an
+
+
+entire build like I don't know you there
+
+
+is a guy like uh he talked about real
+
+
+estate he's using that for his real
+
+
+estate um company and then like it's
+
+
+yeah it just apply in the real world in
+
+
+robots that you will use in camera that
+
+
+you will put in your fridge we see when
+
+
+the yogurt is over when there is no
+
+
+coconut powder more coconut you know and
+
+
+that's really cool part of it
+
+
+>> that I'm really excited about
+
+
+>> I I think that's the most appealing part
+
+
+of open claw for It's like it's your job
+
+
+to equip it with more tools to give it
+
+
+access to your cameras, to microphones,
+
+
+to like I was even thinking of getting
+
+
+like a cheap iPad and putting it on a
+
+
+stick and putting it on my vacuum robot
+
+
+so it can actually go to rooms. So I can
+
+
+ask it go and check what's going on.
+
+
+Yeah, I can be like, "Hey, I heard a
+
+
+noise. Can you go check?" And let's say
+
+
+I don't have a camera at that spot. And
+
+
+it can like undock the room by just walk
+
+
+itself there. And you're given like a
+
+
+new interface. I think all of this is a
+
+
+preview of how we're going to have
+
+
+robots at home now. They're too
+
+
+expensive, but I see a future. You've
+
+
+seen these Neo and whatever robots,
+
+
+right? Like, they're a bit creepy.
+
+
+They're creepy to me because the robot
+
+
+does something and then they're done and
+
+
+they go and they sit on the living room
+
+
+couch like this and just creepily
+
+
+observe you like while you and your wife
+
+
+uh finish your lunch. To me, that's a
+
+
+no. But if you think how do vacuum
+
+
+robots work? Uh, usually we use ours
+
+
+when we go out when everyone is out, we
+
+
+turn it on to do stuff because it's
+
+
+annoying while we're at home. So I think
+
+
+the same thing I would like to have a
+
+
+robot like Neo that's locked in a
+
+
+metallic container that it cannot get
+
+
+out from and only I have the the thing
+
+
+to unlock it and then when I leave the
+
+
+house we let it go and it looks at the
+
+
+to-do list and things that need to be
+
+
+done and it might be slow cuz people are
+
+
+um I hate when people are like oh yeah
+
+
+open claw can use the browser but I can
+
+
+do it faster like that's the worst
+
+
+mindset to have about the thing. The
+
+
+thing is like how can you have seven
+
+
+open claws doing seven things in
+
+
+parallel in the browser while you do
+
+
+something else? And it's going to be the
+
+
+same with the robots. People are like,
+
+
+"Oh, it's too slow folding laundry, man.
+
+
+I can do it in 5 minutes. Why does it do
+
+
+it in 15 minutes?" But if you're out of
+
+
+town or if you're out for two hours,
+
+
+this can do things slowly, but in 1 hour
+
+
+or in two hours, it can finish a lot of
+
+
+things while you're not at home. So, I
+
+
+think that's how we need to look into
+
+
+all of this. Like what people call open
+
+
+call overhyped and blah blah. And I just
+
+
+don't know how they don't see that
+
+
+you're building a new type of web, not
+
+
+web as in the internet, like a new type
+
+
+connection between like humans and
+
+
+machines that eventually a lot of things
+
+
+in your life are going to be seamless
+
+
+because the right APIs are going to hit
+
+
+and talk to each other without you doing
+
+
+much. Right now you need to manually go
+
+
+and teach it how to order groceries and
+
+
+blah blah blah, but in the future it's
+
+
+just going to find ways for you. So
+
+
+whichever platform is more open to
+
+
+robots,
+
+
+those are the platforms that are going
+
+
+to survive in the future. Like you can
+
+
+have Upwork for example, but if Upwork
+
+
+doesn't have a full API where robots can
+
+
+hire humans, Upwork is going to die and
+
+
+some other platform is going to come in
+
+
+its place where it's like hire your own
+
+
+human to do blah blah blah. I've tweeted
+
+
+this and this is this is a bit insane
+
+
+for people to think about because every
+
+
+early thought is insane to people. the
+
+
+roles are going to reverse where right
+
+
+now we're prompting robots to build a
+
+
+better life to build a better future to
+
+
+build like on a scale to improve
+
+
+humanity. It's inevitable in the next
+
+
+upcoming years that robots will prompt
+
+
+us. The AI will prompt us. So the AI
+
+
+will be able to do enough and only for
+
+
+the last 10% where it needs a human, it
+
+
+will talk to you or it will hire it or
+
+
+it will figure out how to finish those
+
+
+10%. And now we do we do it the opposite
+
+
+way. Like we do do and we tell the robot
+
+
+like this is what I need from you. But
+
+
+it's going to flip around. And if you
+
+
+have a little bit of imagination, you
+
+
+can predict how everything unfolds. And
+
+
+I'm just amazed when people are
+
+
+skeptical about all of this. Like to me,
+
+
+this was the final moment that we're
+
+
+we're entering a new territory this
+
+
+year.
+
+
+>> I I totally agree. And I feel like yeah,
+
+
+Open Cloud for me is the gate between
+
+
+the virtual and the real. like there is
+
+
+like now it's it's possible that this AI
+
+
+start to move start to have legs start
+
+
+to go in your life start to connect with
+
+
+everything around you and comes in the
+
+
+real life and you know I was thinking
+
+
+about that that we will be outside and I
+
+
+will be like on my telegram talking to
+
+
+my robot hey did I close the window oh
+
+
+no but I just closed it and by the way I
+
+
+did your dishes you know like
+
+
+>> it will be like that and this thing that
+
+
+you say I already experienced that it's
+
+
+promptic prompting me in a way that now
+
+
+every day he also give me task to do you
+
+
+know we are still stuck on this task
+
+
+because he didn't do that and he repeat
+
+
+that to me every single day so I'm
+
+
+>> yes
+
+
+>> I thought it would work for me but at
+
+
+the end I'm also working for it you know
+
+
+and that's pretty weird a weird
+
+
+situation but
+
+
+>> exciting and I 100% agree with you that
+
+
+>> I don't understand people who don't
+
+
+understand you know
+
+
+the future if what's coming Yeah. Yeah.
+
+
+I mean, we can have an entire other
+
+
+discussion which we won't have time for,
+
+
+maybe another time, maybe on my podcast
+
+
+about the future of computers and
+
+
+interfaces, but to me, it's so obvious
+
+
+where it's going to go. And people are
+
+
+like, "No, my my grandma will never vibe
+
+
+code." And it's like that's such a
+
+
+narrow view of what the future holds.
+
+
+It's incredible to me. But I would I
+
+
+would park that discussion for for
+
+
+another time to be honest cuz you wanted
+
+
+to dedicate this to open claw so we can
+
+
+just go and and talk open claw things.
+
+
+>> Yeah, I would love to have this
+
+
+conversation later for sure. There's one
+
+
+thing that I want to know. You say that
+
+
+you add a skill to your Benji, right?
+
+
+That he can actually buy a domain name.
+
+
+Um how does he pay? Do you give him like
+
+
+a credit card, a top up credit card? Um,
+
+
+>> it's already wired in in NameCheep and
+
+
+they don't ask for a confirmation.
+
+
+>> Okay. So, you never gave any payment
+
+
+method to your AI?
+
+
+>> No, but I'm planning to use wise.com.
+
+
+So, it's wise for people who don't know
+
+
+it's like similar to Revolute. So, it's
+
+
+like online banking and blah blah blah.
+
+
+And Wise has unlike Revolute, they have
+
+
+a very nice REST API. So, you can give
+
+
+it a wise skill. It will have its own
+
+
+credit card and every month you can send
+
+
+it like $200, $300, whatever. And then
+
+
+through the API it can pay contractors
+
+
+it can do other things because it will
+
+
+have like a limited amount of money.
+
+
+Currently you can give it like a
+
+
+revolute card like a virtual card with a
+
+
+limit but the difference is it cannot
+
+
+pay your veterinarian it cannot pay a
+
+
+contractor. It cannot pay you know.
+
+
+>> Mhm.
+
+
+>> So uh because Revolute cannot do
+
+
+transactions via API and Wise can. So
+
+
+wise can be like for example I take my
+
+
+dog to the groomer and I can just I
+
+
+don't even need to text telegram like it
+
+
+can find my location. It knew that I was
+
+
+at the groomer's place and I can have an
+
+
+automation use the wise API just pay
+
+
+them and that's it. No, this is actually
+
+
+like I want to say something here where
+
+
+um you should use your open claw
+
+
+to build automations that are repeatable
+
+
+that you can put them in n in home
+
+
+assistant in node red in something like
+
+
+that instead of you every time you're
+
+
+the groomer you open your telegram and
+
+
+you text me please the groomer so if you
+
+
+find something repetitive enough you
+
+
+need to put in old school web hook type
+
+
+of flow when a happens I be to happen.
+
+
+Instead of constantly texting your open
+
+
+CL, hey, every time I enter my garage,
+
+
+you turn on the lights like you don't
+
+
+want that has nothing to do with AI. You
+
+
+can use AI build you better automations
+
+
+in your home, in your life. Like this
+
+
+one with the groomer, for example, I can
+
+
+tell it to have access to my home
+
+
+assistant, make an automation when I go
+
+
+into the radios of this particular place
+
+
+to send me maybe a push notification
+
+
+saying, do you want to pay or not? And
+
+
+if I click yes, then it goes ahead and
+
+
+does the payments. But it doesn't use
+
+
+AI. It will only use like old school if
+
+
+else logic if you if you get what I'm
+
+
+saying.
+
+
+>> Yeah, I get it 100%. Yes. No, it was two
+
+
+days ago I went to the restaurant and I
+
+
+was joking like soon I will just say my
+
+
+agent will contact you, you know, like I
+
+
+will leave around the my
+
+
+>> I mean it's already reality. Yeah. Yeah.
+
+
+>> Yeah.
+
+
+>> You set it up on your Apple Ultra,
+
+
+right? To know where you are in the room
+
+
+or where you are. It's located.
+
+
+>> I I switched. I'm I'm an Android boy
+
+
+now. So I'm I'm on Pixel. We can go I
+
+
+I'll try to go through the slides and
+
+
+there are no
+
+
+>> That's good for
+
+
+>> We will never go through them. But uh
+
+
+this is a skill that I did for booking
+
+
+airport parking automatically. It's
+
+
+nothing fancy. It just I taught it how
+
+
+to use the parking website. So now when
+
+
+we go on trips, ideally it will be on
+
+
+automation. Every time I go to a trip,
+
+
+it will ask me am I going by car and it
+
+
+will book a parking spot in advance.
+
+
+Connected it to my printer. This is
+
+
+really nice because I can just text it
+
+
+and be like print whatever images
+
+
+whatever it works. Uh this is not fully
+
+
+implemented but I will implement it
+
+
+soon. Uh we have like a cleaning service
+
+
+coming uh to clean a house and they
+
+
+speak a different language and it's hard
+
+
+to we use Google translate, Apple
+
+
+translate to just make a plan for what
+
+
+should be cleaned and blah blah blah. I
+
+
+made an app where we have like um the
+
+
+entire cleaning schedule and everything
+
+
+that needs to be done. Eventually, I
+
+
+just need to put the cleaning service in
+
+
+a group chat with my bot. I'll make a
+
+
+special bot for this. And they can just
+
+
+text what they've done on the day and
+
+
+the bot can make them a plan. Like,
+
+
+let's say they're coming on Wednesday.
+
+
+We need to do all of these things that
+
+
+haven't been done in a while in the
+
+
+house. So,
+
+
+that's a useful use case. Fully manages
+
+
+home assistant and home automation. I
+
+
+moved my home assistant from a special
+
+
+computer like a Raspberry computer to
+
+
+the Mac Studio. And now the bot has full
+
+
+access to Home Assistant and it can
+
+
+build me dashboards. I just manually
+
+
+went and paired all of my lights and all
+
+
+my sockets and all my switches and all
+
+
+the smart things. And now anytime I'm
+
+
+frustrated with doing something
+
+
+manually, I can text my bot and be like,
+
+
+"Hey, every time I walk into the
+
+
+hallway, I want the light to turn on for
+
+
+10 seconds and blah blah blah." And it's
+
+
+a very natural way to build automations
+
+
+instead of going in an interface and
+
+
+doing drag and drop and doing a bunch of
+
+
+stuff.
+
+
+>> Very cool.
+
+
+uh home smartness overview. It built
+
+
+this dashboard to figure out which of my
+
+
+rooms are fully smart and which of the
+
+
+rooms still need to pair some stuff and
+
+
+blah blah blah in order to make the
+
+
+entire house smart. Um it can control my
+
+
+screens. So I have this screen right now
+
+
+the the e in this is the terminal screen
+
+
+and as you can see open claw is now has
+
+
+a skill to put html dashboards to put
+
+
+some warning to to tell me something
+
+
+through the screen and also it can cast
+
+
+on the Google home devices and um it can
+
+
+cast on every TV in the house basically.
+
+
+So it builds a HTML dashboard it
+
+
+screenshots it as an image and then it
+
+
+cast that image. So eventually what I
+
+
+want to build with this is like there's
+
+
+a huge intersection between a smartphone
+
+
+and the open claw because it can know in
+
+
+which room you are. It can know which TV
+
+
+or which speaker or whatever you have
+
+
+and it can kind of come into the real
+
+
+world a little bit by speaking to you in
+
+
+that room or just showing you a warning.
+
+
+Like imagine you enter a room and the TV
+
+
+lights up and it tells you garage door
+
+
+open for 15 minutes in like big red text
+
+
+so you cannot miss it. So there's like
+
+
+plenty of things you can do like it can
+
+
+speak to you through a speaker. It can
+
+
+manage your So, this is a a pretty
+
+
+interesting stuff.
+
+
+>> I I love it because it's so futuristic,
+
+
+but it's like right now. That's crazy.
+
+
+>> Mhm. Mhm. Manager of my router. I I made
+
+
+it a special account, so it's actually
+
+
+the admin of my router. Eventually, it
+
+
+needs to help me to fix my sleep
+
+
+schedule, which is non-existent right
+
+
+now. So, it should know that it's late
+
+
+for me and just turn off the internet on
+
+
+all of my devices, so I'm not able to do
+
+
+anything after a certain time. And the
+
+
+nice thing is like if there's any
+
+
+problems with the router, my wife can
+
+
+now text this bot which is like we have
+
+
+Tony Stark who is in charge of uh the
+
+
+smart home and in charge of the router
+
+
+and everything and she is technical but
+
+
+she doesn't want to fiddle with the UI
+
+
+of routers and stuff. She can just text
+
+
+him and be like hey I don't know I want
+
+
+the TV unblocked because of whatever
+
+
+reason or just managing anything like
+
+
+the internet is down and she can check
+
+
+what is happening and what is going on
+
+
+or blah blah blah. So this is a useful
+
+
+use case.
+
+
+>> That's amazing. Yeah,
+
+
+>> wireless weight sensors everywhere. This
+
+
+is not implemented. Uh I will. So
+
+
+there's like these cheap sensors you can
+
+
+buy from Alibaba or Teimo or whatever
+
+
+and you can put them under your chairs,
+
+
+uh sofa, bed, whatever. So anytime you
+
+
+go on it, um your smartphone will know
+
+
+that it's occupied and then you can
+
+
+inject that context to Open Claw. So
+
+
+when it talks to you, it will know where
+
+
+you're sitting, whether something is
+
+
+occupied or not. So it can be way more
+
+
+useful when you tell it do something it
+
+
+will know ah he's in that room probably
+
+
+doing that. So as we said the more you
+
+
+give it the better it's going to be as
+
+
+your assistant and helper
+
+
+close we're just entering the craziness
+
+
+by the way it's um I made a skill where
+
+
+I can take a selfie or I can upload a
+
+
+photo from my from an outfit which I'm
+
+
+wearing. my outfits are affordable and
+
+
+it's using like a pipeline of GPT and
+
+
+nano banana and a bunch of other things
+
+
+to extract the items, clean them up,
+
+
+classify them by color, by type, whether
+
+
+it's shoes, clothes, like shirts,
+
+
+whatever. And then eventually I want to
+
+
+build build like a wardrobe type
+
+
+functionality where it's like giving you
+
+
+matching outfits and maybe helping you
+
+
+dress better and maybe ordering clothes
+
+
+and telling you you should donate some
+
+
+clothes and stuff like that.
+
+
+>> So this is work in progress, but it's
+
+
+just
+
+
+>> Yeah. Tell me if she need because my
+
+
+fiance, she's a personal stylist for men
+
+
+and she's like dreaming about that
+
+
+because you know she works with men and
+
+
+she has to clean the wardrobe and
+
+
+everything and that's a big big job
+
+
+every time. So yeah.
+
+
+>> Yeah,
+
+
+>> this one is a pretty cool one as well.
+
+
+>> Yeah, smart laundry baskets. I want to
+
+
+put sensors like weight sensors in the
+
+
+laundry basket so we can know when it's
+
+
+getting too full. the bot should do
+
+
+something. Maybe make some light red or
+
+
+text us or do something to figure out
+
+
+like, hey, I already gave it like a
+
+
+laundry skill. I'm teaching it because
+
+
+we have like a smart dryer and we have
+
+
+like a smart uh clothes washer and they
+
+
+can be connected to the smart home. The
+
+
+only thing that's missing is the laundry
+
+
+baskets. So that way open claw or even
+
+
+open claw can build the automations and
+
+
+then not bother with this. The idea is
+
+
+to make the laundry cycle smart enough
+
+
+that we don't forget things in the
+
+
+dryer. We don't forget things in the
+
+
+washer. The laundry baskets are not
+
+
+overflowing and blah blah blah. So, to
+
+
+kind of make this uh better, this is
+
+
+insane. I'm waiting for my 3D printer to
+
+
+arrive. I want to make like the pantry
+
+
+where we have like spices and when we
+
+
+hold other things to have like holes for
+
+
+the jars and then every hole to have
+
+
+like a weight sensor underneath and to
+
+
+to basically monitor the entire
+
+
+situation and know if you're running low
+
+
+on something. So when it's going to run
+
+
+um when it's going to order groceries,
+
+
+it should look at the camera that's
+
+
+pointed at the fridge to see the fridge.
+
+
+It should look at the weight sensors for
+
+
+the pantry and make a rough plan of what
+
+
+are we missing. And even if it makes a
+
+
+mistake, it's nicer to have your
+
+
+groceries magically delivered than you
+
+
+going and opening and checking what do
+
+
+we need to buy and blah blah blah. This
+
+
+is a bit futuristic. I haven't done it,
+
+
+but it's on my list of crazy things to
+
+
+do. Sleep tracking. This is pretty
+
+
+obvious. You can connect your Whoop. I
+
+
+connected my Whoop and it just giving me
+
+
+like a nice dashboard of how am I
+
+
+sleeping and stuff. I built this
+
+
+dashboard for blood test analysis uh
+
+
+where I upload my PDFs from the last few
+
+
+months and it gives me an AI summary of
+
+
+how everything is going and you don't
+
+
+need AI to see that I'm overweight right
+
+
+now and I have cholesterol issues. So,
+
+
+but it's instead of fixing that I'm
+
+
+making dashboards for analyzing.
+
+
+>> Yeah, that's
+
+
+>> because it can tell you if something is
+
+
+going up, something's going down,
+
+
+whether you need to check something and
+
+
+and blah blah blah.
+
+
+>> That's cool. And you can mix everything
+
+
+actually like um you sleep, your blood
+
+
+work, um all these talks together.
+
+
+>> Yeah.
+
+
+>> Yes.
+
+
+>> I uh I've built Benji which is like a
+
+
+lifeway app. I don't know if you know it
+
+
+or not, but in Benji, I've been building
+
+
+it for three years and it has tudos,
+
+
+habits, sauna tracking, gym tracking,
+
+
+um, fasting, hydration, food, macros,
+
+
+anything that you might need from 30
+
+
+apps, Benji has it in one app because I
+
+
+wanted to build like a life OS. When I
+
+
+saw Open Claw, I realized
+
+
+Benji can maybe play a part in the life
+
+
+OS, but the amount of things that you
+
+
+can do with like a fluid agent that
+
+
+generates UIs on the fly and generates
+
+
+mini apps that work for me. It's way
+
+
+more powerful than something like Benji
+
+
+because Benji might work for me, but it
+
+
+might not work for you. I might build
+
+
+this like blood analysis thing and put
+
+
+it into Benji, but then someone will be
+
+
+like, um, I don't care about
+
+
+cholesterol. I want to have something
+
+
+else on top. someone will be like I
+
+
+don't like how these dashboards look
+
+
+like I would like charts. So we're
+
+
+entering that era of like I can either
+
+
+make an app like Benji with trillion
+
+
+configuration and options right so
+
+
+everyone can configure their own thing
+
+
+but I think we're entering the era of
+
+
+like you want software that's like
+
+
+highly specific to you and your case
+
+
+only. So I might give you the prompt
+
+
+that to build this but then you build it
+
+
+and then you continue tweaking it on
+
+
+your own and my blood analysis dashboard
+
+
+and yours have nothing in common because
+
+
+yours is specifically yours. Yeah, I
+
+
+still have cholesterol. But yeah, I
+
+
+understand.
+
+
+>> And
+
+
+for someone who is listening, all this
+
+
+stuff that you build like you know for
+
+
+your life, for your business, for
+
+
+everything, it's only one open cloud
+
+
+installation.
+
+
+>> One one one you can even do this like
+
+
+the thing is you don't need to use
+
+
+openclaw for this. You can make this
+
+
+with claw claw code. You can make this
+
+
+with codeex. You can make this with
+
+
+whatever you can be like build me a live
+
+
+OS. Let's start simple. Let's start with
+
+
+I don't know habits blah blah blah and
+
+
+then you can continue adding blunt
+
+
+dashboards and other stuff and you can
+
+
+build it with any agent and then expose
+
+
+it via rest API so your open claw can
+
+
+actually talk to it. So not necessarily
+
+
+that you need to build all of these mini
+
+
+projects with open claw itself. You can
+
+
+but you don't have to.
+
+
+>> Okay cool.
+
+
+>> It's just giving it something to connect
+
+
+to to be more useful like it will know
+
+
+your sleep. It will know your blood. It
+
+
+will know your where you are and and
+
+
+other stuff. This is also crazy. Uh, I
+
+
+gave it all my bank transactions and I
+
+
+gave it email access to find all the
+
+
+emails with my dentist and it built this
+
+
+like mouth visualization with all my
+
+
+teeth. And it even like if you see here,
+
+
+it shows my implant. It shows it on this
+
+
+particular tooth I have an implant and
+
+
+it shows when I hover a tooth, it can
+
+
+tell me the history of where I've done
+
+
+it, to which dentist I went to. So if
+
+
+I'm in a foreign country, let's say, and
+
+
+my tooth hurts and whatever, and they
+
+
+ask for my dental history, I can just
+
+
+open this and be like, "This is the
+
+
+history. This is everything that
+
+
+happened on that particular tooth." So
+
+
+it's a it's a whimsical thing, not that
+
+
+useful, but it's um I think it's
+
+
+interesting to experiment with open
+
+
+claw. What can you build that's
+
+
+interesting for your life? You know,
+
+
+>> that's what I wanted to say. Like you
+
+
+were talking about, you know, this meme
+
+
+of like one agent, 10 an agent. Like
+
+
+right now we are in the experiment
+
+
+experiment thing. Well, I would not say
+
+
+the word phase and like you want to try
+
+
+everything
+
+
+>> to just understand and see what's
+
+
+possible with it. I'm in the same mood
+
+
+like I just want to try so many thing
+
+
+with it. So yeah, I understand.
+
+
+>> I am I am so disappointed in people who
+
+
+were like even on the first days they're
+
+
+like, "Oh, so I tried this and I don't
+
+
+get the hype. I don't And I'm like, you
+
+
+cannot find three use cases in your life
+
+
+where you're grinding and doing stuff
+
+
+manually and you might want to automate
+
+
+that. If you cannot do that, you're not
+
+
+going to survive the upcoming years in
+
+
+it. And so many people are proudly
+
+
+seeing it. So they're announcing their
+
+
+skill issue like, "Oh, I tried this.
+
+
+It's overhyped. I don't know what to use
+
+
+it for." So it's like someone is giving
+
+
+you like a god computer that can do
+
+
+anything. And your first thought is
+
+
+like, "I don't know what to use this
+
+
+for." It's like mind-blowing to me. And
+
+
+trust me, people will watch this video
+
+
+and there will be comments. Nah, I don't
+
+
+know if this is that useful. Like, my
+
+
+stupid dental plan might not be useful
+
+
+to you, but I hope this entire
+
+
+conversation sparks something in you, in
+
+
+your life. Like, damn, I can solve this,
+
+
+I can solve that, I can start a business
+
+
+I always wanted. Like, if I show you
+
+
+this room right now, I I I my hobbies
+
+
+that was I was sleeping on, now I'm
+
+
+trying to resurrect them. Like, I got 3D
+
+
+printer, a printer, like a bunch of
+
+
+hardware. I feel I can do anything right
+
+
+now even when I sleep you know so why
+
+
+not toy with with all these things
+
+
+>> I I'm totally like for me like it
+
+
+brought me like such an energy in me
+
+
+because I'm I have this god feeling as
+
+
+well it's like the first time in my life
+
+
+that I can actually talk to a computer
+
+
+that have the capacity to build anything
+
+
+for me he can code send a message he can
+
+
+do whatever I want and I'm not
+
+
+>> I'm not a developer I'm not
+
+
+>> you know I'm not crazy backend developer
+
+
+who understand all this stuff and now I
+
+
+have access to all this stuff with
+
+
+Telegram and I can ask anything it will
+
+
+build it and the thing is that I feel
+
+
+like I've been a guru the past few days
+
+
+because everyone around me is ordering a
+
+
+Mac Mini and the thing is that when they
+
+
+instal it my fiance my friend yesterday
+
+
+order it the first thing they say they
+
+
+are blown away they're like what is that
+
+
+like and they just want to do that every
+
+
+single day it becomes an addiction
+
+
+because you have this feeling of I can
+
+
+do anything. I think you have to be a
+
+
+little bit creative, right, to probably
+
+
+understand theirility. Yeah.
+
+
+>> Yeah. But I'm very worried about people
+
+
+who cannot understand. As you said, this
+
+
+is like a god computer that can do
+
+
+anything, man. Like it can build things
+
+
+for you. It's
+
+
+And people are like, I don't know what
+
+
+to use this for. Meaning, don't be in
+
+
+it, man. Go go go go go find another
+
+
+hobby, find another profession because
+
+
+in the upcoming years you will only
+
+
+survive and have monetary success if you
+
+
+are creative. Everything else will be
+
+
+automated. All of your skills are for
+
+
+nothing. If you're a good coder, nobody
+
+
+cares. Are you a good designer?
+
+
+Having taste actually matters to
+
+
+differentiate yourself, but even that's
+
+
+going to be solved. So unless you're
+
+
+creative to know what to create with
+
+
+these things, you're absolutely cooked.
+
+
+It's over.
+
+
+Do you think like that's like a thought
+
+
+I had like that it's also a replica of
+
+
+yourself in a way for example
+
+
+>> 100 million% yes
+
+
+>> I gave I fed him all my content right I
+
+
+gave him all my content on X and
+
+
+everything I told you I told him go in
+
+
+that read everything
+
+
+>> he did an article on X that got like
+
+
+right now 170,000 impression I didn't
+
+
+write the single word on this. It's 100%
+
+
+my agent and the thing is that I would
+
+
+have write this article
+
+
+>> like it's exactly my thought the way I
+
+
+write everything. Maybe a little bit
+
+
+better, you know, but
+
+
+>> like I feel like it's a replica of
+
+
+myself in a way that you didn't write
+
+
+something that's totally not me
+
+
+>> and like this is
+
+
+>> Yeah, maybe it's a mirror of people. If
+
+
+you don't have any idea, you struggle
+
+
+with it. Maybe that's a mirror. I don't
+
+
+know.
+
+
+>> 100%. Um, people have said this about
+
+
+social media and it's true that how you
+
+
+use social media is a mirror of
+
+
+yourself. People are like Tik Tok is bad
+
+
+and this is bad and blah blah blah. If
+
+
+you don't have hobbies and visions and
+
+
+whatever, sure, Tik Tok is bad and
+
+
+Reddit is bad and Twitter is bad and any
+
+
+tool is bad because you use it for doom
+
+
+scrolling. But I was always anti- Tik
+
+
+Tok. I opened a Tik Tok in the last
+
+
+month. The algorithm is so [ __ ] good.
+
+
+And once it learns you that you're
+
+
+someone who wants to to learn, to
+
+
+improve, to tinker with the hardware,
+
+
+whatever. Like, I'm studying on this
+
+
+thing basically. You know, every time I
+
+
+open it, I'm like, if I don't like
+
+
+something, I dislike it. But it knows
+
+
+that I like all of this hardware
+
+
+tinkering, 3D printing. So, you can turn
+
+
+it to your advantage. And it's the same
+
+
+thing with AI. Like, unless
+
+
+some people are like, I don't have
+
+
+anything to fix in my life. And it's
+
+
+like, good, man. Then don't use open
+
+
+cloud. Like, what are you going to fix?
+
+
+But you're also admitting that in this
+
+
+era of abundance, you cannot group two
+
+
+and two together and create something. I
+
+
+don't think there's a person on earth
+
+
+who has their life
+
+
+settled enough outside from these
+
+
+millionaires, billionaires, whatever to
+
+
+say, well, my life is pretty perfect. I
+
+
+don't want to make it even better. Like
+
+
+that's an insane sentence to say that
+
+
+your life is like first of all, most
+
+
+people need more money. Most people are
+
+
+stuck in in mortgages and this and that.
+
+
+And this tool, if you study it, if you
+
+
+learn it, it will actually create
+
+
+businesses for you and help you make
+
+
+more money, pay off your mortgage, do
+
+
+this, do that. But move from the side of
+
+
+skepticism, move to the side of being
+
+
+enthusiastic, you know, about the
+
+
+future.
+
+
+There is one thing I want to say. If
+
+
+you're someone who have no idea, but you
+
+
+have a business and you have like, I
+
+
+don't know, a SAS or whatever product,
+
+
+use it for churn. I think that's the
+
+
+best
+
+
+>> the best way to use it and to be blown
+
+
+away because if you're not someone who
+
+
+is 100% into that I used it not long ago
+
+
+and it will fix so many thing in your
+
+
+product that you will be blown away and
+
+
+you will earn money straight away and I
+
+
+think like best thing to do like
+
+
+straight away there's a lot of fun will
+
+
+watch this just try on your churn first
+
+
+thing you do if you don't have any idea
+
+
+to use it trying for that
+
+
+>> because that's not like click based or
+
+
+whatever you will check the analytics
+
+
+and see what's wrong it and you will
+
+
+make money
+
+
+>> 100%. But even that takes some
+
+
+creativity right to come up with the use
+
+
+case. It's mind-blowing to me that
+
+
+people don't come up with the use case
+
+
+that you just mentioned. Why? You don't
+
+
+need to spin up new creative things. But
+
+
+if you have an existing business, this
+
+
+cannot double, triple, quadruple your
+
+
+money. It's all of the processes in the
+
+
+business. There's a guy in Tinkerbell.
+
+
+He's also on Twitter. I'm forgetting his
+
+
+name. He automated their parents' entire
+
+
+business for selling tea. So, you have
+
+
+like these old people who are like, I
+
+
+don't know, 70 or something sitting down
+
+
+recording SOPs of how they're running
+
+
+their business. And then this guy
+
+
+automated their entire business
+
+
+processes. And now the these people are
+
+
+hooked running their entire business
+
+
+through Telegram, which is amazing. He
+
+
+saw that use case like my parents or
+
+
+whoever they are, they're struggling and
+
+
+I want to improve their business and he
+
+
+did it within like a few days. It was
+
+
+wasn't something great, you know.
+
+
+>> Yeah. I mean, yeah, it's we say that
+
+
+like yeah, great guys and bear say it a
+
+
+lot, but like that's just like the the
+
+
+time of the creative. No, the ID guy,
+
+
+right? Like
+
+
+>> Yeah. Now ide
+
+
+what can I do for my dog?
+
+
+>> I I made a bot that like takes care of
+
+
+all of these things. Medicine, vet
+
+
+visits, teeth cleaning, grooming, all
+
+
+track. It's just doesn't have any
+
+
+special skills, but it's contained
+
+
+enough that I taught it, hey, you only
+
+
+care about my dog and nothing else. You
+
+
+don't need to worry about the home, the
+
+
+bills, the other stuff. Um, Mac Studio
+
+
+dashboard. This is pretty cool. I made
+
+
+this dashboard for managing my Mac
+
+
+Studio and stuff which has like a
+
+
+trillion widgets and gadgets and um I
+
+
+made a mobile dashboard for Mac Studio.
+
+
+So basically is is there a slide about
+
+
+my Android phone? There's not. So I
+
+
+switched to an Android phone just so I
+
+
+can fully integrate Open Claw in my
+
+
+life. And now I'm vibe coding Android
+
+
+apps, something that I've never done in
+
+
+my life before. And the cool thing is
+
+
+they can appear on your phone and they
+
+
+can self update and they could do
+
+
+anything because it's Android without
+
+
+anyone's approval. So I made like this
+
+
+mobile dashboard to monitor the computer
+
+
+where open claw and my docker and
+
+
+everything else is is working on. Um
+
+
+another use case for having a dedicated
+
+
+Mac studio or Mac Mini is all of my dev
+
+
+servers are running there, not on my
+
+
+MacBook Pro. Meaning even when I'm out
+
+
+of town, when my MacBook is closed or
+
+
+whatever, the processes are running on
+
+
+that computer, they're served on nice
+
+
+domains. So they're not served on a port
+
+
+like 5173 that I need to guess. They
+
+
+have nice domains and I can be chatting
+
+
+through my Telegram, Discord, MacBook,
+
+
+whatever. And it does the heavy lifting
+
+
+on the Mac Studio, which means my
+
+
+MacBook stays cool. It doesn't run all
+
+
+the processes. It doesn't do a lot of
+
+
+[ __ ] It just opens the URL and I tell
+
+
+it what to change, but the code remains
+
+
+on the on the Mac Studio.
+
+
+Skill syncing. I made something that
+
+
+syncs all of my skills between the
+
+
+MacBook, Mac, Claude, Codeex, all the
+
+
+bots. Um, Pi Hole is something
+
+
+interesting to set up. Um, I think I
+
+
+want to put that in Tinker Club today as
+
+
+a challenge. Uh, have you heard of Pi
+
+
+Hole? Do you know what it what it is or
+
+
+No,
+
+
+>> not at all.
+
+
+>> You can ask your bot set up Pi Hole on
+
+
+my network and it will guide you and any
+
+
+device on your network will not have any
+
+
+ads from Google, from Google ads, from
+
+
+like nothing. meaning your browsing will
+
+
+be a bit faster and everything will feel
+
+
+it doesn't block YouTube ads but it
+
+
+blocks everything else and if you have
+
+
+like a family wife girlfriend husband
+
+
+whatever you can install uh tail scale
+
+
+on their phones so you're basically all
+
+
+on the same network and all of their
+
+
+devices like if you have kids is
+
+
+especially useful to not have your kids
+
+
+tapped on ads so it will block ads on
+
+
+your entire network and even when you go
+
+
+out on your phone u using tail scale it
+
+
+will connect to your home network first
+
+
+and it will clean all the ads. So
+
+
+whether you're home or a trip, whatever,
+
+
+you will not see ads in your life. And I
+
+
+knew about this for like 10 years. I was
+
+
+just too lazy to set it up and now I was
+
+
+just chilling on my bed. I'm like, "Hey,
+
+
+block my ads at home, you know."
+
+
+>> So you just asked your agent and it
+
+
+worked.
+
+
+>> I mean, let's not make it that magical.
+
+
+It took a bunch of back and forth, you
+
+
+know, like and it will ask you to do
+
+
+certain things in your router or it can
+
+
+use the browser with clicks to set it up
+
+
+in your router, too. So, it's not as
+
+
+magical, but it was set up in like less
+
+
+than 30 minutes, let's say. And then
+
+
+>> that's amazing. Yeah,
+
+
+>> you you don't have ads on your network.
+
+
+I gave it this skill for making diagrams
+
+
+and I self-hosted Excalibraw. So, it
+
+
+doesn't go to excalraw.com. Now I have
+
+
+Excalibur Draw running on my Mac Studio
+
+
+for free and I have like my own
+
+
+instance. So my diagrams don't end up on
+
+
+anyone's servers. I sell hosted N8N. I
+
+
+haven't used this for anything honestly
+
+
+yet. It was just magical to me that I
+
+
+was bored in bed and I just texted my
+
+
+bot and like one minute later it gives
+
+
+me a link to like hey here's your N810.
+
+
+Here's your password login. And now I'm
+
+
+running that fully locally. I don't need
+
+
+to use N10 in the cloud. So that was
+
+
+pretty nice. Um I moved everything to
+
+
+markdown files. I'm not using notion
+
+
+anymore, Koda, nothing. The platform of
+
+
+the future is just using markdown files
+
+
+and just modify them through your bot.
+
+
+That's it. No more hidden interfaces,
+
+
+cloud, AI, payments, databases,
+
+
+whatever. Everything is a markdown file.
+
+
+Everything is local.
+
+
+>> Why is that?
+
+
+>> Because the bots work better when they
+
+
+have local files to work with. They can
+
+
+use local tools like GB and whatever to
+
+
+quickly navigate the files and find and
+
+
+write. They work way quicker than
+
+
+actually connecting to an API that
+
+
+changes all the time. And we can go
+
+
+through the last few use cases and we
+
+
+can wrap up because I'm going out of
+
+
+voice.
+
+
+>> Yeah. Yeah.
+
+
+>> Um, self-hosted Wikipedia is a pretty
+
+
+useful example. You can tell your open
+
+
+claw to find everything that it knows
+
+
+about you and make your own family
+
+
+Wikipedia. And it's silly to look at
+
+
+your life, but you read it like
+
+
+Wikipedia articles like kids that drinks
+
+
+instant coffee exclusively. No fancy
+
+
+machines, no rituals, no waiting. And it
+
+
+even links parts of your life. So about
+
+
+your work, about your family, about your
+
+
+wife. So it's a fun experiment. Not very
+
+
+useful.
+
+
+>> I think it's useful like any backup like
+
+
+this can be useful for your next setup.
+
+
+Like let's say tomorrow you open cloud
+
+
+there is like a mware or whatever you
+
+
+lose it. It's amazing to have all this
+
+
+backup as well.
+
+
+>> Um
+
+
+sure. And it also can be useful like
+
+
+there's some people in our think
+
+
+tinkerer club that actually use this as
+
+
+the main memory in a way because when it
+
+
+writes in Wikipedia style it writes
+
+
+about facts. Wikipedia is factbased,
+
+
+right? Like that happened on that date
+
+
+and blah blah blah. So the bots kind of
+
+
+like to read from a database that's all
+
+
+with facts and it's not the memory files
+
+
+are too bloated and it's seeing all
+
+
+sorts of [ __ ] in a memory files. But
+
+
+when he's writing something in the
+
+
+Wikipedia, he writes it as a fact like
+
+
+as if a war happened. You know on day
+
+
+14th kit decided to do this this and
+
+
+that and the battle of the kitchen
+
+
+happened on blah blah blah. So it is
+
+
+useful
+
+
+old Android tablet ADB automation. Uh I
+
+
+have a tablet that I found plugged into
+
+
+Mac Studio gave it full access to tap
+
+
+and control the tablet and this is
+
+
+pretty useful because uh the native apps
+
+
+on Android and on iOS they don't have
+
+
+capture. So if you're trying to do
+
+
+something on the web and you're running
+
+
+into capture all the time, you can
+
+
+instead of that teach your open claw to
+
+
+tap on an Android tablet and there's no
+
+
+native apps with captures. So you can
+
+
+use Amazon Teu shopping apps, grocery
+
+
+delivery apps, whatever through the
+
+
+thingy tapping on it and they'll never
+
+
+going to be blocked and it's you're
+
+
+never going to be detected as a bot. So,
+
+
+I'm trying to replace most of my browser
+
+
+automations with Android native apps
+
+
+just because it's more friction less.
+
+
+>> The watch tracking is the thing that you
+
+
+ask me. You can buy these 5 devices
+
+
+called like ESP32 and you can flash them
+
+
+with like a Bluetooth tracking thingy
+
+
+and put them around your home and
+
+
+anytime you move with a Bluetooth
+
+
+device, it can be any watch, doesn't
+
+
+need to be Apple Watch or like any other
+
+
+Bluetooth thing you have, it can detect
+
+
+the proximity that you're in that room
+
+
+precisely. So it can know whether you're
+
+
+on your desk, whether you're in the
+
+
+kitchen, whether you're here and there.
+
+
+And as we said, the more you give to
+
+
+your open claw, the more it knows, the
+
+
+better it is to help you with with
+
+
+context. Cuz if you know GPS location is
+
+
+at home, room location is in the
+
+
+kitchen, and he's asking me to, I don't
+
+
+know, turn off lights or do something,
+
+
+it can do a better job if it knows where
+
+
+you where you are.
+
+
+Oh man, this is an insane list. Custom
+
+
+podcast. I was annoyed by Billboard
+
+
+talking about sports and politics. So, I
+
+
+made a thing where OpenCloud downloads
+
+
+these podcasts as MP3 files, transcribes
+
+
+them, cuts out the politics, cuts out
+
+
+the [ __ ] sports ads, everything,
+
+
+stitches them back together in an MP3
+
+
+file, and serves me my own locally
+
+
+hosted podcast server where I can listen
+
+
+to my favorite podcast. But there's no
+
+
+[ __ ] that I don't want to listen to.
+
+
+>> I will have I will have to cut this
+
+
+because then everyone will do that with
+
+
+me. Please see you then.
+
+
+>> I was joking. If you do this with Joe
+
+
+Rogan, you will get empty files, but
+
+
+sometimes he says useful things. Uh I
+
+
+ordered this, which I cannot wait for it
+
+
+to arrive. It's like a pebble ring uh
+
+
+with a mini button. You can see the
+
+
+button right here. And you can hold the
+
+
+button to dictate something to your
+
+
+finger. And then um it goes to their
+
+
+app. And from their app, you can put in
+
+
+an API like do whatever with it. So,
+
+
+this will be very useful for like
+
+
+anytime you have a thought that needs to
+
+
+go to open claw, you can just do it on a
+
+
+pebble ring so you don't forget it. And
+
+
+it's more useful than a watch because
+
+
+the watch has the friction of you need
+
+
+to lift your hand up, you need to maybe
+
+
+press something or say something. And
+
+
+this you always have access to this
+
+
+finger even when you're biking or doing
+
+
+whatever and you can just say the thing
+
+
+and any castage you have in mind will
+
+
+easily go to your open clock.
+
+
+>> That's good actually. That's a pretty
+
+
+Yeah, I actually got this watch
+
+
+yesterday and I already vibe coded an
+
+
+app that does the same thing. So, I have
+
+
+a complication here and if I click it, I
+
+
+can say a command and it will listen to
+
+
+my voice and it just be done with it and
+
+
+that goes to Open Claw and Open Claw can
+
+
+see maybe I want to order groceries,
+
+
+maybe I want to do something, but it's
+
+
+more friction because I have to click
+
+
+it. This is right on the on the finger.
+
+
+>> Man, do you sleep sometimes?
+
+
+>> No, man. You can see my my eye bags.
+
+
+Like in the last month, I slept 3 to
+
+
+four hours every night and it's
+
+
+annoying. Um, but I'm going to pay off
+
+
+my mortgage soon, so that's a that's a
+
+
+pro of that.
+
+
+>> Congrat.
+
+
+>> Uh, Android phone. Not going to go too
+
+
+deep into this, but Android is like way
+
+
+more powerful for open claw controlling
+
+
+it. So, you can speak to me, clear my
+
+
+notifications, read my notifications,
+
+
+put on do not disturb volume,
+
+
+brightness. So my phone is like another
+
+
+extension to the open claw. With iOS
+
+
+like it couldn't do it couldn't do much.
+
+
+Uh it can set up my lock screen and
+
+
+wallpaper. It can use nano banana to
+
+
+make me like a dynamic wallpaper that's
+
+
+relevant to I don't know maybe I'm in
+
+
+Prague and it's raining. So when I
+
+
+unlock my phone it's going to have a
+
+
+nice wallpaper of raining in Prague plus
+
+
+maybe some painted reminder of like
+
+
+idiot. I don't know it's your grandma's
+
+
+birthday or whatever. So that's cool. It
+
+
+can fully control the phone. We already
+
+
+said that. It can read my notification
+
+
+center which is pretty nice. Like if you
+
+
+send me a message on some platform that
+
+
+Open Claw doesn't support, Open Claw can
+
+
+actually read it from my notification
+
+
+center, it can be like, "Hey, this is
+
+
+urgent. Check your phone." So that's
+
+
+nice. Uh it can display dialogues and
+
+
+fingerprint dialogues on my phone. Like
+
+
+let's say I need to order food or
+
+
+whatever. It can show me a full screen
+
+
+dialogue like do you want sushi, pizza,
+
+
+whatever? And I can click like a mini
+
+
+form without building an app. or let's
+
+
+say it needs to deploy a super secure
+
+
+hidden website or whatever it can show
+
+
+me a fingerprint dialogue and only when
+
+
+I approve with a fingerprint open claw
+
+
+will continue doing whatever it's doing.
+
+
+So that's pretty nice. Um I made a mini
+
+
+app store for myself because of course I
+
+
+didn't uh where I can text on telegram
+
+
+and new Android apps will appear or the
+
+
+old ones will get um updated. So anytime
+
+
+I want a new app on my phone, I can just
+
+
+be like, I don't know, a medication
+
+
+tracker or whatever, I can just conjure
+
+
+it in a few minutes and it appears as a
+
+
+n fully native app on my phone. So it
+
+
+gets built on the Mac Studio. It gets
+
+
+stored on Mac Studio and then it gets
+
+
+installed on the Android phone, which is
+
+
+pretty nuts. Um, of course, I made my
+
+
+own Android launcher. If you if people
+
+
+most people don't know what a launcher
+
+
+is if you're an iOS person. So when I
+
+
+unlock my phone, basically, let me see
+
+
+if I can show you if I don't have
+
+
+something private. Uh, when I unlock my
+
+
+phone, I'm going to my own launcher.
+
+
+There's no grid of icons. And this is
+
+
+fully customizable by Open Claw. I made
+
+
+an entire video. We can link it on my
+
+
+channel. So, anytime I unlock my phone,
+
+
+I see relevant things for my life like
+
+
+to-dos, habits, medication, trip. The
+
+
+apps are changing dynamically or based
+
+
+on what's happening in my life. And open
+
+
+claw can iterate and build on this
+
+
+launcher even further. So, when I want
+
+
+this launcher to change, I can just
+
+
+voice text that hey, I don't like I
+
+
+don't know the medication. we just
+
+
+change it and few seconds later my
+
+
+entire home screen will change. So this
+
+
+is why I'm saying like open claw for me
+
+
+changed the game so much that I'm
+
+
+reinventing my entire life. Like I moved
+
+
+to Android, I'm buying hardware. Like
+
+
+it's crazy, man. Let's finish like
+
+
+there's few few more things. This is
+
+
+like for multi-agent management so I can
+
+
+go to one of my bots and make sure it
+
+
+has the right skills, the right agents,
+
+
+the right memory, the right blah blah
+
+
+blah. So I needed a more visual place to
+
+
+manage my my agents. Um this is the app
+
+
+that I was telling you about that I'm
+
+
+making. It's like a Slack discord-l like
+
+
+interface for talking to your open claw
+
+
+but in a more organized way. You can see
+
+
+here we have personal news house
+
+
+contractors projects blah blah blah. So
+
+
+it's a bit more organized. I hope that
+
+
+I'll have this available for everyone to
+
+
+to download. This is the browser I was
+
+
+telling you about. So this is a browser
+
+
+only for agents to work in. You don't
+
+
+use it. You don't touch it. You don't
+
+
+click it. Um this is a cool hardware
+
+
+project that I did. I have this running
+
+
+on my desk over there. So, it's like a
+
+
+face for open claw and if a gateway dies
+
+
+or something happens, it's going to go
+
+
+dead and it's going to beep to fix it.
+
+
+So, it's like a little Tamaguchi open
+
+
+claw. Uh, this is my crazy vision of
+
+
+like getting a Roomba and just putting a
+
+
+tablet or a GoPro on it. Uh, oh, okay.
+
+
+So, that's a screenshot from Tinkerers
+
+
+Club. We do like meeting twice per week
+
+
+and we have all of these people
+
+
+discussing u open clause, self-hosting,
+
+
+automation, LLM, coding. when new models
+
+
+drop like OBUS and Codeex, we hop up on
+
+
+a call and we have like a um priority
+
+
+meeting, however you call it, to like
+
+
+discuss what's new in
+
+
+and uh yeah, people I I think I have a
+
+
+link here and people can even use this
+
+
+code. This was the last slide at the
+
+
+meetup that I g to and there's like a
+
+
+discount code for 20% off. If you want
+
+
+for your audience, we can give like a
+
+
+specific discount instead of using this
+
+
+particular one. So just on the shank
+
+
+here and
+
+
+>> well kids I don't think if my brain can
+
+
+recover for that
+
+
+>> I know I know I know
+
+
+>> now that was amazing and that's really
+
+
+what I expected from you like just all
+
+
+this idea all this crazy thing that we
+
+
+can build now with open cloud and all
+
+
+these possibilities like that's what I
+
+
+wanted to share and I'm happy that you
+
+
+came here to share that because that's
+
+
+really the vision like what's going to
+
+
+happen and what you're already building
+
+
+is Crazy. When did you start actually
+
+
+just to know like using open cloud the
+
+
+first time?
+
+
+>> I was one of the first users but around
+
+
+September I tried to build I had a
+
+
+version of my own open claw. I just
+
+
+never connected it to telegram and [ __ ]
+
+
+So I was kind of preparing my skills and
+
+
+stuff. So when open claw came I was
+
+
+ready to move my skills from cloud code
+
+
+to open claw. And that's why I had so
+
+
+many use cases ready because I figured
+
+
+out wait cloud code can be used for more
+
+
+than code. And that's basically open
+
+
+clock. It's like a thin layer on top of
+
+
+harnesses to do AI things for for you.
+
+
+>> Well, K, thank you very much for coming
+
+
+here. I think we'll have to again soon.
+
+
+And uh
+
+
+>> you should come on on my podcast so you
+
+
+have a chance to talk because I didn't
+
+
+know I didn't learn anything about you
+
+
+and how you do things. So hopefully I'm
+
+
+going to give a chance to talk
+
+
+>> and I will come then and uh yeah I will
+
+
+put all the link in the description
+
+
+everything you talked about Tinker Club
+
+
+of course and if you want to learn more
+
+
+go watch his YouTube channel it will be
+
+
+linked in the description as well and
+
+
+that's it. Thank you very much.
+
+
+>> Thank you so much man. Appreciate it.

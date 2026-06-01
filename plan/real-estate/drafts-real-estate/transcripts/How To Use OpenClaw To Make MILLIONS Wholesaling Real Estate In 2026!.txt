@@ -1,0 +1,853 @@
+The game completely changed for
+
+
+wholesaling real estate with this new AI
+
+
+technology. Now, I'm sure you've been
+
+
+hearing about AI and its use in
+
+
+wholesaling real estate for a minute
+
+
+now, but you're like, none of this is
+
+
+really a gamecher. Well, with the
+
+
+Cloudbot, with the Mac Mini, it is a
+
+
+game changer. What this can do for your
+
+
+wholesaling business is revolutionary
+
+
+and for any business, quite frankly.
+
+
+This thing and the future of AI is
+
+
+crazy. I know everybody's like, "AI is
+
+
+not there yet. We're waiting for it to
+
+
+get good enough to really have a good
+
+
+use case. Well, the Clawbot Open Claw
+
+
+has just unlocked that. It's harnessed
+
+
+the power of AI with the ability to
+
+
+control your computer and now it can do
+
+
+pretty much anything you can do. So, I
+
+
+know a lot of wholesalers out there use
+
+
+VAS to help them with their business.
+
+
+Whether it's text messaging sellers with
+
+
+text blast marketing, whether it's
+
+
+pulling data, whether it's um looking up
+
+
+properties, right? We have VAS doing a
+
+
+lot of tedious tasks for our wholesaling
+
+
+real estate business. What if we were
+
+
+able to use an AI robot to do all that
+
+
+and now we could have our VAS doing
+
+
+better tasks. This Cloudbot can pull
+
+
+data. It can scrape lists. It can pull
+
+
+county records. It can go ahead and
+
+
+reach out to cash buyers. It can text
+
+
+buyers. It can email buyers. It can even
+
+
+call people. Guys, Open Claw and Clawbot
+
+
+is a complete gamecher. And I've been
+
+
+implementing it in my wholesaling real
+
+
+estate business. Every single task that
+
+
+any of my sales guys, my acquisition
+
+
+managers, my disposition managers, my
+
+
+virtual assistants are doing, that is a
+
+
+tedious task. I'm now giving it to my
+
+
+robot friend, Claudebot, OpenClaw, and
+
+
+it is going ahead and doing all of that
+
+
+for me. So that way my real people right
+
+
+can be focused on the highest money
+
+
+generating activities possible. The best
+
+
+thing to do is get a separate computer
+
+
+and Mac um is the best to go with
+
+
+because it runs smoother without
+
+
+crashing, without updating. So that way
+
+
+it can run 24/7. Guys, this this
+
+
+Cloudbot, it's working on my business
+
+
+while I'm sleeping. So what you're going
+
+
+to do is you can get a Mac Mini. that's
+
+
+the best to run with. Or you can use a
+
+
+MacBook, but ideally you want it to be a
+
+
+separate computer because you don't want
+
+
+it to have access to all your stuff. It
+
+
+can control the whole computer. So if
+
+
+your credit cards are on your computer,
+
+
+it could go spend money, right? It's
+
+
+crazy. If all your contact list is on
+
+
+there, it could go call up and prank
+
+
+call everybody in your phone book. And
+
+
+that people have had that happen. So you
+
+
+want to be careful on what you're giving
+
+
+it access to. That's why you want it
+
+
+running on its own machine. not only so
+
+
+it can run 247 and always be working,
+
+
+but so that way you know you're doing it
+
+
+safely, right? There is some risks. So
+
+
+keep that in mind. But as long as you
+
+
+only give it what you want it to have
+
+
+access to, everything's cool. So once
+
+
+you get that, you'll then go to
+
+
+OpenClaw. There's some pretty simple
+
+
+stuff on here on how to install it.
+
+
+Essentially, you got to copy this code,
+
+
+paste it into terminal,
+
+
+and when you paste it into terminal,
+
+
+then it'll run you through prompts. Now,
+
+
+I had a little bit of trouble because
+
+
+when I was pasting the code into
+
+
+terminal, it wasn't auto setting itself
+
+
+up. So, all I did was go to chat GBT and
+
+
+ask what to do and it told me exactly
+
+
+what to do and I worked through the
+
+
+process of getting it set up. Now,
+
+
+essentially how it works is it does an
+
+
+API connection to your chat GBT account
+
+
+or you can use Gemini or any of these
+
+
+other AI out there, the chats, right?
+
+
+And what it does is it uses that in
+
+
+integration with the computer to now be
+
+
+able to instead of you just chat with it
+
+
+and get answers, it now can be told to
+
+
+do anything on your computer and it'll
+
+
+work like that. Um, so that's how you
+
+
+harness the power of it. Now,
+
+
+essentially mine's all set up here and
+
+
+I'm going to give you an example of what
+
+
+it can do. So you can talk to it in a
+
+
+few different ways. Way number one is I
+
+
+can just go directly on terminal and
+
+
+tell it what to do. So, I'm going to say
+
+
+pull up my YouTube channel on YouTube on
+
+
+Google. Jacob blank. And watch this.
+
+
+Come a little bit closer. Watch this.
+
+
+It's going to go ahead and control my
+
+
+computer now.
+
+
+So, it's running. You see it's running
+
+
+right there. Boom. There we go. Just
+
+
+pulled up my YouTube channel on Google.
+
+
+It's exactly what I told it to do. Now,
+
+
+the other way you can control it is you
+
+
+can connect it to WhatsApp or Telegram.
+
+
+So, all my virtual assistants are on
+
+
+WhatsApp, right? So, I'm normally
+
+
+texting my assistant, hey, do this, do
+
+
+that, or I'm calling them or I'm sending
+
+
+them a voice note. Well, I can just go
+
+
+in here and say, click on the YouTube
+
+
+channel
+
+
+in WhatsApp just like I'm messaging a
+
+
+team member of mine. And it's going to
+
+
+go ahead and do that.
+
+
+Boom. Just clicked on the YouTube
+
+
+channel. All right. Now, another way
+
+
+is I can go ahead and text it from my
+
+
+phone.
+
+
+Go ahead and click play on my most
+
+
+recent video. I want you to watch
+
+
+through it and then I want you to give
+
+
+me a summary of everything you learned
+
+
+about wholesaling real estate from my
+
+
+most recent video.
+
+
+So, I just sent it a voice note. It's
+
+
+going to listen to that. It's going to
+
+
+go watch my most recent video, give me a
+
+
+summary, and learn everything about
+
+
+wholesaling. So right now it's been
+
+
+doing tasks for my business, but also
+
+
+I'm in the process of training it up.
+
+
+The more information you give it, the
+
+
+better it's going to get at helping you
+
+
+run your business. So I've been giving
+
+
+it all my past chat GBT export of all
+
+
+the things I've asked about my business
+
+
+before so it knows about that. I've been
+
+
+having it watch through my inner circle
+
+
+mentorship training videos so it can
+
+
+learn everything about my mentorship.
+
+
+And there you go, guys. While I'm
+
+
+talking, it's playing the video. The
+
+
+computer's running.
+
+
+Boom.
+
+
+>> It's controlling the computer.
+
+
+>> So that's to give you an idea.
+
+
+>> Watch. Um
+
+
+>> telling it to skip the ads.
+
+
+>> So that you can understand.
+
+
+>> I know this is a simple example,
+
+
+>> but if you see its ability to just do
+
+
+this,
+
+
+>> imagine what else it could do. I'm using
+
+
+it to pull data. I'm using it to skip
+
+
+trace LLC's to find cash buyers. I'm
+
+
+using it to text buyers, right? I'm
+
+
+using it to go ahead and tweak all of
+
+
+our marketing campaigns to analyze them,
+
+
+tell us what's working, where where
+
+
+we're getting the most deals, right?
+
+
+It's analyzing my business every day.
+
+
+>> And there we go. It's watching my most
+
+
+recent video. And this video is about
+
+
+dos and don'ts for beginners in
+
+
+wholesaling. So, if you haven't seen
+
+
+that video, go check it out. I have a
+
+
+ton of other videos on my channel that
+
+
+are helpful. So, make sure to hit the
+
+
+red button and subscribe. So guys, I'm
+
+
+using it to to help me with my whole
+
+
+business. Also, what it does is it
+
+
+analyzes our marketing campaigns and it
+
+
+analyzes the performance of my sales
+
+
+guys every day and it texts me a summary
+
+
+report of how our marketing channels are
+
+
+performing, how my sales guys are
+
+
+performing. Normally, I had a VA, a
+
+
+human in Mexico, one of my virtual
+
+
+assistants, send me this end of day
+
+
+report every day. No longer does he need
+
+
+to do that tedious task. The Claudebot
+
+
+can do it. So, guys, this is
+
+
+revolutionary. I'm going to have many
+
+
+more videos coming out about how OpenCL
+
+
+claw Claudebot can be used for
+
+
+wholesaling real estate. Guys, if you're
+
+
+a oneman show, all you got to do is
+
+
+invest 600 bucks, get a Mac Mini.
+
+
+Claudebot is free. You need a ChatGpt
+
+
+Plus subscription. It's like 15 bucks a
+
+
+month. And now you can have another team
+
+
+member. I'm probably going to end up
+
+
+buying like five of these. And I'm going
+
+
+to try to run my whole business with
+
+
+with AI. I know I made a video a few
+
+
+months back where I was like, look, the
+
+
+AI isn't really there yet to help you
+
+
+out in wholesaling, but guys, this this
+
+
+OpenClaw, its ability to access the
+
+
+computer, harness the power of Chat GBT,
+
+
+combine that, it's game changer. Like,
+
+
+I'm shocked when I first turned this on,
+
+
+got it all set up, and it started
+
+
+running my computer, I got goosebumps.
+
+
+Life's about to change forever. Now,
+
+
+that being said, it's more important
+
+
+than ever that you get rich and you
+
+
+become financially stable yourself. So
+
+
+many regular jobs are going to be wiped
+
+
+out. If you're in college right now,
+
+
+whatever you're studying, 90% of it's
+
+
+going to be useless because AI is taking
+
+
+over. So, with that being said, if
+
+
+you're just starting in wholesaling real
+
+
+estate, I hold a free 1-hour live
+
+
+training every single week where I will
+
+
+show you how to get your first deal in
+
+
+the next 30 days and make $20,000 or
+
+
+more. And if you're already doing deals,
+
+
+I'll show you how to scale up to make
+
+
+over a h 100,000 a month. So if you want
+
+
+to get on a free 1-hour mentorship call
+
+
+with me, click the link down below and
+
+
+sign up. I hold one of these trainings
+
+
+every week, but there's limited spots. I
+
+
+want to see you on the call with me. So
+
+
+if you're ready to learn, now's the
+
+
+time. Click the link down below. And I
+
+
+want to let you know there is so much
+
+
+opportunity out there in wholesaling
+
+
+real estate right now. There is hundreds
+
+
+of thousands of distressed properties
+
+
+and properties sitting vacant across the
+
+
+country in every market. There's no
+
+
+shortage of deals, no shortage of
+
+
+opportunity. It's time to capitalize on
+
+
+that. Let me show you how to go out
+
+
+there and find these deals using my
+
+
+proven sevenstep process. Also, if you
+
+
+guys want to download my free contracts
+
+
+and scripts that I give you for free, go
+
+
+to jacoblank.com/free.
+
+
+You'll be able to download my resources.
+
+
+And also, I have a free 20 video course
+
+
+showing you wholesaling uh for free.
+
+
+It's called my wholesaling university.
+
+
+There's a link down below in the
+
+
+description for that. I want to see you
+
+
+inside my course. Uh it's on school. Um,
+
+
+and I'll see you in there. But guys, I'm
+
+
+going to be making more videos every
+
+
+single week about how I'm using this for
+
+
+my business and the levels that it takes
+
+
+me to in wholesaling. So, all you got to
+
+
+do, get a Mac Mini and rock and roll
+
+
+with me. So, get your Mac Mini, sign up,
+
+
+set it up, watch my videos every week.
+
+
+I'm going to show you how to get this
+
+
+rocking and rolling for your wholesale
+
+
+business to take it to the next level.
+
+
+This is gamechanging stuff. Hope you
+
+
+found this video valuable because this
+
+
+is this is big news. Um, but other than
+
+
+that guys, if you're not already
+
+
+subscribed to the channel, hit the red
+
+
+button and subscribe. If you like the
+
+
+video, hit the like button. And if you
+
+
+have any questions down below about AI
+
+
+use in wholesaling, comment down below.
+
+
+I'll be sure to answer. Other than that,
+
+
+I'll see you guys next time. Peace.

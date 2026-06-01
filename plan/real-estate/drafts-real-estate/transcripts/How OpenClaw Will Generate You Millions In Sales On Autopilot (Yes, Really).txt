@@ -1,0 +1,1348 @@
+OpenClaw just booked me a meeting with a
+
+
+multi-trillion dollar company. The good
+
+
+news is I didn't even surface it myself.
+
+
+It surfaced it for me and then it sent
+
+
+the message for me after I approved it.
+
+
+So stay till the end of this video. I'm
+
+
+going to show you the parts on the
+
+
+examples. I'm going to show you the
+
+
+agent squad that I have and most
+
+
+importantly you're going to get a sense
+
+
+on how you can drive revenue, not just
+
+
+fun from open claw. Let's get into it.
+
+
+>> [music]
+
+
+>> And so once I implemented this,
+
+
+literally what happened is said you
+
+
+should reach out to this multi-t
+
+
+trillion dollar company over here. And
+
+
+the message that you should send, it was
+
+
+a very generic message. In fact, I can
+
+
+pull it up right here. I'm just looking
+
+
+at it right now. It says, "Hi name, hope
+
+
+all is well. Wondering your primary
+
+
+focus is right now and how we might be
+
+
+able to collaborate down to chat." I
+
+
+didn't change this at all. This is a
+
+
+very basic version of it. Okay. So he
+
+
+responds a day later and says, "What's
+
+
+up, Eric? Would be happy to chat. What
+
+
+days times work best?" I said, "Anytime
+
+
+here look good." I just share my
+
+
+calendar link. That's it. Okay. And this
+
+
+is a relationship that I've had. I
+
+
+haven't talked to this guy for [music]
+
+
+years and years. So what I'm going to
+
+
+pull up here is what it actually looks
+
+
+like on my screen now using OpenClaw.
+
+
+Okay. So here's how it looks in
+
+
+OpenClaw. So this is a deal daily
+
+
+finder. So what OpenClaw does, it goes
+
+
+through our CRM sales transcripts and
+
+
+based on our goals figures out the right
+
+
+people to talk to and what the angle is.
+
+
+So it comes up with all these things. I
+
+
+don't need to do the thinking. Okay.
+
+
+Literally this is a this is a real
+
+
+meeting. Okay. So this is you know the
+
+
+who why now the gap and this was from a
+
+
+call that happened a year ago for carrot
+
+
+which is our LinkedIn accountbased
+
+
+marketing software and she had said on
+
+
+that call here's how much she spends on
+
+
+ads a year here's her current role and
+
+
+then you know why now discovery call was
+
+
+this explicitly said she was looking for
+
+
+this so you will forget the context from
+
+
+a lot of your conversations but this has
+
+
+the context so it's going to surface it
+
+
+for you and then it says okay it comes
+
+
+up with a copy hey great connecting it
+
+
+wasn't last Friday but it was a year ago
+
+
+but been thinking about what you said
+
+
+regarding the ad personalization gap you
+
+
+mentioned so it literally calls out
+
+
+contacts from the call itself, okay? And
+
+
+you know, basically ask to re-engage.
+
+
+And so I want to say this is perfect,
+
+
+but it gets it going. And the cool thing
+
+
+with Open Claw is that you can have it
+
+
+just get it to this point where a
+
+
+human's reviewing or you can have it be
+
+
+autonomous and you can just have it
+
+
+yellow. I prefer because we're talking
+
+
+business and you don't want to screw
+
+
+these things up. I would say you
+
+
+probably should have a human in the loop
+
+
+checking these things out and then
+
+
+moving these things along, right? And
+
+
+you can you can see the context over
+
+
+here. So this is valuable because it's
+
+
+not just, hey, I'm just checking in to
+
+
+see how things are going, right? what it
+
+
+is and like maybe you can't work with
+
+
+them right now, but maybe you want to
+
+
+see what she's up to. Maybe you can
+
+
+help. Maybe you can make some
+
+
+introductions and things like that
+
+
+because these things always come back to
+
+
+you later. Just give give give and
+
+
+everything will come back to you down
+
+
+the road. So, this is the daily deal
+
+
+finder and it's not that hard to build
+
+
+using an open claw. And so I'll get to
+
+
+this towards the end in terms of how my
+
+
+my squad is set up and how you should be
+
+
+thinking about this, but you got to be
+
+
+thinking about using open claw for
+
+
+revenue generation and not just making
+
+
+phone calls for you and which it can
+
+
+make phone calls for you, right? So the
+
+
+other piece I want I want to cover, I'm
+
+
+going to give you more real life
+
+
+examples here. So my ad agency Single
+
+
+Grain recently was talking to a prospect
+
+
+and this prospect wanted to have you
+
+
+know thousands of ad creatives a month,
+
+
+right? I was just wondering I was like I
+
+
+wonder if I can have the agent so open
+
+
+call is an autonomous open source agent.
+
+
+I'm like, I wonder if it could the agent
+
+
+can just look through their ad library,
+
+
+their website, their competitors,
+
+
+understand their brand, and just do all
+
+
+the initial research and then come up
+
+
+with the UGC ad concepts that scale. So,
+
+
+I'm like, okay, well, it seems like it
+
+
+can not only do the strategic, like the
+
+
+creative research, the strategy, and it
+
+
+does it in, we're talking like minutes
+
+
+instead of waiting a week or two. They
+
+
+did a really good job of looking at
+
+
+their ad library, looking at the
+
+
+competitors as well. And not only that,
+
+
+I wanted to have an example like a quick
+
+
+video photo mockups using the the latest
+
+
+Gemini models because those are pretty
+
+
+good at making images, pretty good at uh
+
+
+doing videos, right? And so this is just
+
+
+an example, but just me messing around
+
+
+with this. This wasn't even a great
+
+
+prompt. It came up with this. And this
+
+
+this is not my this is just one of the
+
+
+the the examples, right? On how we might
+
+
+scale out UGC. So I'm not saying this is
+
+
+amazing. I'm just saying this was done
+
+
+in like a the more work you put into it,
+
+
+the more context you give it, it's going
+
+
+to be better. And so I'm saying this is
+
+
+this is decent for what it was and and
+
+
+me just kind of sitting on the couch
+
+
+doing it, right? Just doing it for fun,
+
+
+seeing what's possible. And so if you
+
+
+spend more time on this, the ad creative
+
+
+scaler, imagine you hand it off to your
+
+
+creative team. The daily deal finder,
+
+
+that's great. Hand it off to your your
+
+
+your sales team. And by the way, if you
+
+
+feel really comfortable with it and you
+
+
+you're comfortable just letting it yolo,
+
+
+these can become your full-time
+
+
+employees. My whole thing is I'd rather
+
+
+build trust. I want to see that these
+
+
+things can run and and come up with good
+
+
+ideas consistently, and I want to
+
+
+continue to fine-tune it before I let it
+
+
+go and and unlock more gates for it to
+
+
+do more things. That's what I would say.
+
+
+Number three, so let's say I'm doing a
+
+
+long form podcast. So marketing school,
+
+
+we do 80 minutes a week or so. We're
+
+
+talking about the latest in in business,
+
+
+lot talk about the latest in in
+
+
+marketing. The the problem is we haven't
+
+
+done a good job of clipping this
+
+
+content. And so there are certainly a
+
+
+lot of great products out there like
+
+
+Opus and they do a decent job of of
+
+
+clipping, but they haven't found the the
+
+
+the great clips over time, right? And I
+
+
+would just say, okay, I I feel like
+
+
+there's a lot of wasted potential. And
+
+
+normally, you would actually hire a
+
+
+social media clipper to help you just
+
+
+find these moments. And that actually is
+
+
+a role, believe it or not, for Tik Tok,
+
+
+for Instagram reels, like if you want to
+
+
+put it on these short form channels. So,
+
+
+what I did instead was I was like,
+
+
+"Okay, well, I just want to see how this
+
+
+will go." Like, here's one of my videos
+
+
+over here. Help me find, you know, some
+
+
+clips. So, cloud code will replace your
+
+
+marketing team. It shows you the time
+
+
+stamps over here. Here's the hook. And
+
+
+then 150 times faster to engineer. So, I
+
+
+could either repurpose those videos or I
+
+
+can make brand new net new uh short
+
+
+forms just repurposed from this, right?
+
+
+But the whole idea here is like a lot of
+
+
+stuff when it comes to social, when it
+
+
+comes to content production is the
+
+
+ideation piece and then the execution
+
+
+piece. This can actually handle it all.
+
+
+So again, open claw for business, not
+
+
+just personal, okay, for revenue. Now,
+
+
+my background is in SEO, AEO, okay, so I
+
+
+have an agent here that feeds me, okay,
+
+
+like insights are great, but ultimately
+
+
+as humans, what do we want to happen? We
+
+
+want people to do it for us. And so what
+
+
+this does over here, it hooks in with
+
+
+our Google search console, our Google
+
+
+Analytics, our HRS API. It understands
+
+
+my goals, my SEO goals, my AEO goals as
+
+
+a company. Not only that, because we
+
+
+have an SEO product called ClickFlow, a
+
+
+content production product. It actually
+
+
+uses ClickFlow and it provides product
+
+
+feedback on ClickFlow over time and it
+
+
+leaves notes on how we can improve the
+
+
+prompts, how we can improve the the the
+
+
+content. And so, not only is it doing
+
+
+the research, coming up with the
+
+
+insights, it is doing the work, but it's
+
+
+also using our product and giving
+
+
+product feedback at the same time. How
+
+
+cool is that? Again, these are
+
+
+superpowers that we didn't have before,
+
+
+and you're able to do these. Look at
+
+
+these deliverables. Uh, you should do
+
+
+enterprise ROI calculator, AEO,
+
+
+performance research program, enterprise
+
+
+survey framework. These are all things
+
+
+I'm going to review in a little bit. But
+
+
+imagine if you just handed these things
+
+
+off to your team. You just keep spinning
+
+
+these things up and handing off to your
+
+
+team. eventually because again this for
+
+
+revenue generation it's for business you
+
+
+don't want to let it yellow so a lot of
+
+
+people are just letting it do its own
+
+
+things for personal stuff maybe you can
+
+
+do it for personal I wouldn't recommend
+
+
+it just keep that in mind so those are
+
+
+just a couple examples for you on open
+
+
+call for revenue real quick if acquiring
+
+
+customers has been a struggle for you
+
+
+and you are trying to figure out how AEO
+
+
+[music] works answer engine optimization
+
+
+or the new version of SEO how paid works
+
+
+how all this AI stuff is going to play
+
+
+into your customer acquisition strategy
+
+
+then check out my ad agency Singler it's
+
+
+singingrain.com and if it looks like
+
+
+it's a good fit will help you with a
+
+
+free marketing plan. So again, go to
+
+
+singlebrain.com and we'll see you on the
+
+
+other side. Now, how does it scale for
+
+
+business, right? So we talk about multi-
+
+
+aent squads. So this image generated by
+
+
+Gemini, not a bad image. Okay, so this
+
+
+is actually my character from my book,
+
+
+Leveling Up. U this is actually what he
+
+
+looks like, right? So pretty cool.
+
+
+Alfred is my chief of staff. So you want
+
+
+to think about your your multi- squad of
+
+
+agents. You want to have one squad
+
+
+leader. This squad leader has the most
+
+
+context, meaning that it has it's
+
+
+connected to all my my CRM data. My, by
+
+
+the way, it's ingested all of my content
+
+
+and each week it's ingesting more
+
+
+content, so it's most up to date with
+
+
+that. It looks at all my granola calls
+
+
+as well. And so this is ran locally on
+
+
+my my Mac Mini over here. And I that Mac
+
+
+Mini, I give it very limited control
+
+
+over passwords, things like that. It
+
+
+only has like one vault that's dedicated
+
+
+to it. And so, you know, that's why I
+
+
+give it. So, it's it's um I have more
+
+
+security with this. And Alfred, you
+
+
+know, understands a lot of my content.
+
+
+I'm chatting with Alfred the most. He's
+
+
+like, "Uh, think about it this way. It's
+
+
+Alfred the Butler from Batman. Okay, so
+
+
+all my, by the way, all my my team
+
+
+members on the squad over here, they're
+
+
+all from the DC universe." So we have
+
+
+Oracle here, but from SEO, okay? Working
+
+
+on SEO. We have Green Arrow working on
+
+
+sales, right? And then we have Flash,
+
+
+who's working on social, and you can see
+
+
+how these these squads are working. You
+
+
+want to think about these things as very
+
+
+crawl, walk, run. So what I mean by that
+
+
+is you don't want to just let it like
+
+
+crawl might be is giving you reports and
+
+
+insights. Walk might be maybe it's
+
+
+drafting things up for you. Run is
+
+
+you're just kind of letting it go. Even
+
+
+then, I I would just make sure you have
+
+
+a human in the loop here. Um, but you
+
+
+can see my my my different things I was
+
+
+talking about the daily deal finder, ad
+
+
+creative scaler, social media clipper.
+
+
+It put it up here, which is amazing to
+
+
+me, right? When you think about this,
+
+
+you want to maybe test out your chief of
+
+
+staff first, work with it, and then you
+
+
+can start to add in these you can start
+
+
+to add in your squad. And then the whole
+
+
+idea here is that you have your squad
+
+
+talking to each other and they're just
+
+
+just getting closer to your goal every
+
+
+single day. Every day they're getting
+
+
+closer to your goal. Maybe they're
+
+
+working through the evening and there's
+
+
+work for you to review in the morning
+
+
+and then maybe you just have it execute,
+
+
+right? that to me it's you're relatively
+
+
+safe because if you just let it do its
+
+
+own thing and it's not learning over
+
+
+time then how's it how's it going to
+
+
+know how's it going to know right and so
+
+
+that's why it's more important than ever
+
+
+if you're someone that is a leader and
+
+
+you have taste you're infinitely more
+
+
+valuable now right and so just you want
+
+
+to make sure that you're constantly and
+
+
+by the way how do you acquire more taste
+
+
+well by by by being curious by learning
+
+
+by talking to other people right that's
+
+
+how you acquire more taste and so that's
+
+
+that's the first thing that I want to
+
+
+call out here I mean you know the the
+
+
+multis squad agents and you know each
+
+
+one has its own you know they they get
+
+
+its own domain to to focus on and then
+
+
+just like employees agents need to earn
+
+
+trust over time and currently my setup's
+
+
+in Telegram but eventually as it gets
+
+
+more advanced I'm probably going to set
+
+
+up some some type of you know mission
+
+
+control where it's it's um almost like a
+
+
+comban board where there you know
+
+
+there's like a you know to-do doing done
+
+
+situation and then you know they're com
+
+
+they're commenting each other now I
+
+
+talked about crawl walk run already but
+
+
+again you want to unlock execution
+
+
+rights over time so like drafting
+
+
+content for outreach for purchasing
+
+
+things like I I would be very scared if
+
+
+you just kind of you let let it yellow
+
+
+on on on buying things. You might give
+
+
+it a virtual credit card a month on
+
+
+maybe, you know, a couple hundred bucks
+
+
+a month or something like that. And we
+
+
+have very simple infrastructure here. We
+
+
+don't need to go that hardcore yet. And
+
+
+again, I my main goal is I want to see
+
+
+this scale to to 10 agents before we
+
+
+before we grow it out more. So, you
+
+
+know, not like a crazy database, very
+
+
+git friendly, human readable. And you
+
+
+know, I I would say too by by the way,
+
+
+like it's also important for maybe I'll
+
+
+make another video, drop it in the
+
+
+comments if you want me to make another
+
+
+video on on the setup of this stuff,
+
+
+right? is there are things such as you
+
+
+know saving on the tokens that you're
+
+
+spending and in terms of you know how
+
+
+it's finding uh queries for how you're
+
+
+setting up memory initially the
+
+
+personality setup like all these things
+
+
+to initially worry about you want to
+
+
+make sure that you that you get that
+
+
+right how do you make sure that you're
+
+
+compacting your context windows or
+
+
+clearing your context windows over time
+
+
+how do you make sure that you're setting
+
+
+up different channels for them to to
+
+
+chat in right how do you make sure that
+
+
+you're setting things up for security so
+
+
+let me know in the comments if you want
+
+
+that to happen but also you want these
+
+
+things I I think this is very important
+
+
+over here but you want these to be
+
+
+proactive and so you don't want to just
+
+
+be like every day you have and tell it
+
+
+what to do or you have to ask questions.
+
+
+That is a lot of energy. It's a lot of
+
+
+mental energy. So, not only does it
+
+
+understand my latest content, my company
+
+
+goals, it also understands how my goals
+
+
+are changing over time, it also
+
+
+understands the content that I'm putting
+
+
+out. It's it's basically it has all my
+
+
+granola calls. Okay? So, how is this
+
+
+thing not keeping in lock step with me
+
+
+the whole time? So, that's why Alfred is
+
+
+your most important one. It's very
+
+
+proactive with you every morning. And
+
+
+you're going to have to refine this over
+
+
+time because a lot of these these cron
+
+
+jobs like these daily tasks that you set
+
+
+up checking your email, calendar,
+
+
+business data, and surface issues and
+
+
+prioritizing that gives it to me at 7:30
+
+
+a.m. But your issues change over time.
+
+
+Your priorities change over time. So
+
+
+that's why you have to continue to work
+
+
+with it. Another thing, too, is one
+
+
+thing that you might want to consider is
+
+
+if you're using Cloud Code or or any of
+
+
+these these products to to help you plan
+
+
+better prompts, I would I would
+
+
+recommend that because a lot of times
+
+
+you're just working within Telegram and
+
+
+you're working with your your local
+
+
+device over here. I'm pointing at my Mac
+
+
+Mini. you know, there's just so much
+
+
+context that happens within a chat and
+
+
+you lose that context quickly. Just keep
+
+
+that in mind. And the final thing I'll
+
+
+call out here is and this is maybe if if
+
+
+the other video makes sense, drop it in
+
+
+the chat or or comments is my my setup
+
+
+currently runs on a on a Mac Mini and I
+
+
+have a one password vault um that's
+
+
+specifically dedicated to OpenClaw. Um
+
+
+so it doesn't have access to all my
+
+
+passwords, just that one vault. And my
+
+
+Telegram bots have strict allow list,
+
+
+right? So meaning that they can only
+
+
+talk to approved users, mostly myself or
+
+
+the bots themselves. And you want you
+
+
+want to make sure that you have audit
+
+
+trails in your memory files, right? And
+
+
+so this is all it's all very fun right
+
+
+now. I think Cloud Code was was
+
+
+definitely a a a huge moment. I think
+
+
+this one has made it even more fun,
+
+
+right? Just working with this stuff. I'm
+
+
+making this video. I'm telling you, I
+
+
+I've probably only been playing I'm
+
+
+playing I've been playing with this for
+
+
+for less than a week or so, this open
+
+
+claw, and it it's already doing wonders
+
+
+for me, right? So, let me know in the
+
+
+comments what other topics you like me
+
+
+to cover around this stuff. I would also
+
+
+recommend that you check out this video
+
+
+over here on $1 versus $100 million
+
+
+Claude user because there's a big
+
+
+difference in how you use these [music]
+
+
+products. And by the way, Claude feeds
+
+
+into OpenClaw. So anyway, I'll catch you
+
+
+in that video. See you.

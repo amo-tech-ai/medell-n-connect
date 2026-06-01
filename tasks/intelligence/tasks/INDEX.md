@@ -78,7 +78,7 @@ Added after the program audit closed gaps the 00-program-report flagged. Not par
 | Order | ID | Title | Phase | P | Status | Depends | Owner | Note |
 |------:|----|-------|-------|---|--------|---------|-------|------|
 | 21 | [INT-021](./INT-021-restaurant-venue-intelligence-wrapper.md) | [SAN-424](https://linear.app/sanjiovani/issue/SAN-424) | Restaurant & venue wrapper | MVP | P1 | 🟡 In Progress | INT-001, INT-005 |
-| 22 | [INT-022](./INT-022-routing-confidence-instrumentation.md) | [SAN-425](https://linear.app/sanjiovani/issue/SAN-425) | Routing confidence telemetry | MVP | P2 | ⚪ Not Started | INT-002 |
+| 22 | [INT-022](./INT-022-routing-confidence-instrumentation.md) | [SAN-425](https://linear.app/sanjiovani/issue/SAN-425) | Routing confidence telemetry | MVP | P2 | ✅ Done | INT-002 |
 
 ## Real-world examples by phase
 

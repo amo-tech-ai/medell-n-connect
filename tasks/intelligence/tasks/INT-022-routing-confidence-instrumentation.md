@@ -3,7 +3,7 @@ id: INT-022
 title: Routing & confidence instrumentation
 phase: MVP
 priority: P2
-status: Not Started
+status: Done
 owner_system: [Mastra, App, Testing]
 personas: [Sofía, Lucía]
 depends_on: [INT-002]

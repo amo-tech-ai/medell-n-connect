@@ -86,10 +86,10 @@ prod: https://www.mdeai.co
 | | Legacy | Successor | Linear | Notes |
 |:-:|--------|-----------|--------|-------|
 | 🟢 | UX-001 | — | [SAN-315](https://linear.app/sanjiovani/issue/SAN-315) | Concierge restored |
-| 🟡 | UX-002 | UX-015 | [SAN-320](https://linear.app/sanjiovani/issue/SAN-320) | Error bubble — In Review |
+| 🟢 | UX-002 | UX-015 | [SAN-320](https://linear.app/sanjiovani/issue/SAN-320) | Error bubble — Done (SAN-320) |
 | 🟢 | UX-003 | UX-035 verify | [SAN-316](https://linear.app/sanjiovani/issue/SAN-316) | Parser merged; prod verify open |
 | 🔴 | UX-004 | — | [SAN-317](https://linear.app/sanjiovani/issue/SAN-317) | Canceled |
-| 🟡 | UX-005 | UX-015 | [SAN-319](https://linear.app/sanjiovani/issue/SAN-319) | Merged into UX-015 |
+| 🟢 | UX-005 | UX-015 | [SAN-319](https://linear.app/sanjiovani/issue/SAN-319) | Done — merged into UX-015 |
 | ⚪ | UX-006 | UX-032 | [SAN-321](https://linear.app/sanjiovani/issue/SAN-321) | New chat reset |
 | ⚪ | UX-007 | UX-033 | [SAN-323](https://linear.app/sanjiovani/issue/SAN-323) | Stale markers |
 | 🟢 | UX-008 | UX-027 | [SAN-324](https://linear.app/sanjiovani/issue/SAN-324) | Save tooltip shipped |

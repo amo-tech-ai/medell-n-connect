@@ -3,7 +3,7 @@ id: INT-006
 title: Rental availability date filters
 phase: MVP
 priority: P1
-status: In Progress
+status: Done
 owner_system: [Supabase, Mastra]
 personas: [Camila]
 depends_on: [INT-002, INT-005]

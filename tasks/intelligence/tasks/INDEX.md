@@ -44,7 +44,7 @@ Parallel platform work (do not block CORE): **VEC-001…003** before INT-016.
 | 3 | [INT-003](./INT-003-gemini-smart-clarify-routing.md) | [SAN-406](https://linear.app/sanjiovani/issue/SAN-406) | Gemini smart clarify routing | CORE | P0 | 🟢 In Review ⚠️ | INT-001, INT-002 |
 | 4 | [INT-004](./INT-004-no-canned-clarify-bypass.md) | [SAN-407](https://linear.app/sanjiovani/issue/SAN-407) | No canned clarify bypass | CORE | P0 | 🟢 In Review ⚠️ | INT-003 |
 | 5 | [INT-005](./INT-005-intelligence-regression-tests.md) | [SAN-408](https://linear.app/sanjiovani/issue/SAN-408) | Intelligence regression tests | CORE | P0 | ✅ Done | INT-002–004 |
-| 6 | [INT-006](./INT-006-rental-availability-date-filters.md) | [SAN-409](https://linear.app/sanjiovani/issue/SAN-409) | Rental availability date filters | MVP | P1 | 🟡 In Progress | INT-002 |
+| 6 | [INT-006](./INT-006-rental-availability-date-filters.md) | [SAN-409](https://linear.app/sanjiovani/issue/SAN-409) | Rental availability date filters | MVP | P1 | ✅ Done | INT-002 |
 | 7 | [INT-007](../archive/INT-007-event-intelligence-wrapper.md) | [SAN-410](https://linear.app/sanjiovani/issue/SAN-410) | Event intelligence wrapper | MVP | P1 | ✅ Done · archived | INT-001, INT-005 |
 | 8 | [INT-008](../archive/INT-008-cafe-intelligence-wrapper.md) | [SAN-411](https://linear.app/sanjiovani/issue/SAN-411) | Café intelligence wrapper | MVP | P1 | ✅ Done · archived | INT-001, INT-005 |
 | 9 | [INT-009](./INT-009-copilot-readable-ui-state.md) | [SAN-412](https://linear.app/sanjiovani/issue/SAN-412) | CopilotKit readable UI state | MVP | P1 | 🟡 In Progress | INT-003 |

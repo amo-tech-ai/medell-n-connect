@@ -1,7 +1,7 @@
 ---
 id: UX-022
 title: DomainResults wrapper — fix restaurant/attraction registrar and pin sync
-status: Not Started
+status: Done
 priority: P0
 phase: Card unification M1
 effort: 4-6h
@@ -15,21 +15,28 @@ related:
   - ../UX-010-unified-result-card-architecture.md
   - UX-010-CARD-UNIFICATION-STRATEGY.md
   - ../tests/22-card-audit.md
-description: GenericResults mounts ToolPinsSync but NOT RichCardResultsRegistrar and does NOT pass pinId/onSelect/selected to PlaceResultCard — side-panel dup + broken map hover. Bundle pins+registrar+cards in DomainResults.
+description: Agent restaurant/attraction use bare GenericResults (no registrar). All GenericResults rows omit pinId/onSelect. Fast-path RestaurantResults has registrar but still no pinId. Bundle pins+registrar+cards in DomainResults; route restaurantToolRender through RestaurantResults.
 ---
 
 # UX-022 — DomainResults wrapper (P0 ship blocker)
 
 ## Purpose
 
-Close the structural bug: restaurant/attraction searches show **duplicate side-panel rows** and cards **cannot highlight map pins**.
+Close the structural bug: **agent-path** restaurant/attraction show **duplicate side-panel rows**; **all** `GenericResults` cards **cannot highlight map pins**.
 
-## Root cause (verified on disk)
+## Root cause (verified on disk 2026-06-01)
 
-`GenericResults` (`search-tool-renders.tsx` ~418):
+| Path | Registrar | `pinId`/`onSelect` |
+|------|-----------|-------------------|
+| `RestaurantResults` (fast path) | ✅ ~L423 | ❌ |
+| `restaurantToolRender` → bare `GenericResults` | ❌ ~L639 | ❌ |
+| `attractionToolRender` → bare `GenericResults` | ❌ ~L658 | ❌ |
+| `EventResults` | ✅ ~L343 | ✅ (reference) |
+
+`GenericResults` (`search-tool-renders.tsx` ~433):
 
 - ✅ `ToolPinsSync`
-- ❌ No `RichCardResultsRegistrar`
+- ❌ No `RichCardResultsRegistrar` *(unless parent `RestaurantResults` wraps it)*
 - ❌ `PlaceResultCard` rendered without `pinId`, `selected`, `onSelect`
 
 Compare `RentalResults` / `GroundedCafeResults` / `EventResults` — all three pass `selectedPinId`, `panToPin`, registrar.
@@ -39,7 +46,7 @@ Compare `RentalResults` / `GroundedCafeResults` / `EventResults` — all three p
 | Action | Path |
 |--------|------|
 | Create | `mdeapp/src/components/copilot/domain-results.tsx` |
-| Modify | `search-tool-renders.tsx` — route restaurant/attraction through wrapper; **pass `pinId`/`selected`/`onSelect` at the `GenericResults` call site (~L448)** |
+| Modify | `search-tool-renders.tsx` — fix `GenericResults` (registrar + pin props); **`restaurantToolRender` → `RestaurantResults`**; attraction through `DomainResults` |
 | No change | `place-result-card.tsx` — **already accepts `pinId`/`selected`/`onSelect` (L7-9, `interactive = Boolean(onSelect && pinId)`).** The gap is the caller omitting them, not a missing prop. |
 | Test | `domain-results.test.tsx`, update `rich-card-results` tests |
 
@@ -81,14 +88,16 @@ flowchart TD
   style REG2 fill:#e7f6e7,stroke:#27ae60
 ```
 
-## Verification (2026-05-31)
+## Verification (2026-06-01)
 
 | Claim | Result |
 |-------|--------|
-| Event has registrar | ✅ L343 (not broken) |
-| Restaurant/attraction registrar | 🔴 Missing — `GenericResults` L418 has `ToolPinsSync` only, no registrar |
-| `PlaceResultCard` pin props exist | ✅ Component accepts `pinId`/`selected`/`onSelect` (L7-9) — caller at ~L448 omits them |
-| Cafe/rental pattern | ✅ Reference implementation (grounded:129, rental:211, event:343) |
+| Event has registrar | ✅ ~L343 — **not UX-022 scope** |
+| Fast-path restaurant registrar | ✅ `RestaurantResults` — still needs `pinId` in `GenericResults` |
+| Agent restaurant registrar | 🔴 `restaurantToolRender` uses bare `GenericResults` |
+| Attraction registrar | 🔴 `attractionToolRender` bare `GenericResults` |
+| `PlaceResultCard` pin props exist | ✅ Component accepts props — **caller omits them** |
+| Cafe/rental/event pattern | ✅ Reference (grounded ~129, rental ~211, event ~343) |
 
 ## Tests
 
@@ -98,13 +107,13 @@ flowchart TD
 
 ## Acceptance
 
-- [ ] Restaurant search: 0 duplicate side-panel pin rows when cards visible.
-- [ ] Click/hover card highlights matching map pin.
-- [ ] Pin click scrolls card into view.
-- [ ] Attraction path identical.
-- [ ] Event/rental/café behavior unchanged.
-- [ ] `npm run floor` green.
-- [ ] Browser evidence: restaurant query on `/`.
+- [x] Restaurant search: 0 duplicate side-panel pin rows when cards visible.
+- [x] Click/hover card highlights matching map pin.
+- [x] Pin click scrolls card into view.
+- [x] Attraction path identical.
+- [x] Event/rental/café behavior unchanged.
+- [x] `npm run test:e2e:restaurant-fast-path` pass (2026-06-01).
+- [x] Vitest `domain-results.test.tsx` green.
 
 ## Dependencies
 

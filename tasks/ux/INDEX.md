@@ -86,7 +86,7 @@ Source: [`tests/24-mde-audit.md`](tests/24-mde-audit.md) · router: [`tasks/INDE
 
 ### Card unification (UX-010 strategy + UX-020…030)
 
-Strategy + task pack: [`tasks/UX-010-CARD-UNIFICATION-STRATEGY.md`](tasks/UX-010-CARD-UNIFICATION-STRATEGY.md) · audit [`tests/22-card-audit.md`](tests/22-card-audit.md). Parent [`UX-010-unified-result-card-architecture.md`](UX-010-unified-result-card-architecture.md) is vision-only — execute UX-020…030.
+Strategy + task pack: [`tasks/UX-010-CARD-UNIFICATION-STRATEGY.md`](tasks/UX-010-CARD-UNIFICATION-STRATEGY.md) · audit [`tests/22-card-audit.md`](tests/22-card-audit.md). Parent [`UX-010-unified-result-card-architecture.md`](UX-010-unified-result-card-architecture.md) — architecture + §6.6 disk status. **Next:** UX-022 → UX-025.
 
 ### Legacy consolidation (UX-001…010)
 

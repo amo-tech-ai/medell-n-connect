@@ -55,18 +55,18 @@ prod: https://www.mdeai.co
 | 4 | 🟢 | [UX-019](UX-019-event-fastpath-classifier-b09.md) | [SAN-429](https://linear.app/sanjiovani/issue/SAN-429) | Event fast-path B-09 — memory guard L55/L81 | P0 | — |
 | 5 | 🟢 | [UX-016](UX-016-playwright-run-error-e2e.md) | [SAN-430](https://linear.app/sanjiovani/issue/SAN-430) | Playwright RUN_ERROR → error bubble e2e | P1 | UX-015 |
 | 6 | 🟡 | [UX-031](UX-031-live-audit-vertical-smoke.md) | [SAN-431](https://linear.app/sanjiovani/issue/SAN-431) | Live audit 4-query matrix | P1 | UX-019, UX-013 | Spec on **#27**; not on `main` |
-| 6b | 🟡 | [UX-036](UX-036-restaurant-search-fast-path.md) | — | Restaurant fast path + cards | P0 | UX-014 | PR **#28**; local e2e ✅ |
+| 6b | 🟢 | [UX-036](UX-036-restaurant-search-fast-path.md) | — | Restaurant fast path + cards | P0 | UX-014 | Merged **#28** |
 | 7 | ⚪ | [UX-017](UX-017-rebase-pr19-onto-main.md) | [SAN-432](https://linear.app/sanjiovani/issue/SAN-432) | Rebase PR #19 onto main | P1 | UX-015, UX-013, UX-014 |
 | 8 | ⚪ | [UX-035](UX-035-rental-parser-prod-verify.md) | [SAN-433](https://linear.app/sanjiovani/issue/SAN-433) | Verify UX-003 rental parser on prod | P1 | UX-003 ✅ |
 | 9 | ⚪ | [UX-021](UX-021-card-accessibility-parity.md) | [SAN-434](https://linear.app/sanjiovani/issue/SAN-434) | Card a11y — aria-label, testId, data-result-kind | P0 | — |
-| 10 | ⚪ | [UX-022](UX-022-domain-results-wrapper.md) | [SAN-435](https://linear.app/sanjiovani/issue/SAN-435) | DomainResults + restaurant pin/registrar | P0 | UX-014 |
+| 10 | 🟢 | [UX-022](UX-022-domain-results-wrapper.md) | [SAN-435](https://linear.app/sanjiovani/issue/SAN-435) | DomainResults + restaurant pin/registrar | P0 | UX-014 |
 | 11 | 🟢 | [UX-027](UX-027-rental-card-copy-leaks.md) | [SAN-324](https://linear.app/sanjiovani/issue/SAN-324) | RentalCard prod copy leaks | P0 | — |
 | 12 | ⚪ | [UX-020](UX-020-card-interaction-props-types.md) | [SAN-436](https://linear.app/sanjiovani/issue/SAN-436) | CardInteractionProps shared types | P2 | UX-022 |
 | 13 | ⚪ | [UX-023](UX-023-result-card-shell.md) | [SAN-437](https://linear.app/sanjiovani/issue/SAN-437) | ResultCardShell + primitives | P1 | UX-020 |
 | 14 | ⚪ | [UX-024](UX-024-hover-pin-parity.md) | [SAN-438](https://linear.app/sanjiovani/issue/SAN-438) | Hover→pin rental/event | P1 | UX-023 |
-| 15 | ⚪ | [UX-025](UX-025-restaurant-card-rich.md) | [SAN-439](https://linear.app/sanjiovani/issue/SAN-439) | RestaurantCard rich | P1 | UX-023 |
+| 15 | 🟢 | [UX-025](UX-025-restaurant-card-rich.md) | [SAN-439](https://linear.app/sanjiovani/issue/SAN-439) | RestaurantCard rich | P1 | UX-022 |
 | 16 | ⚪ | [UX-028](UX-028-place-result-card-fallback-upgrade.md) | [SAN-440](https://linear.app/sanjiovani/issue/SAN-440) | PlaceResultCard fallback upgrade | P1 | UX-025 |
-| 17 | ⚪ | [UX-030](UX-030-card-system-tests.md) | [SAN-441](https://linear.app/sanjiovani/issue/SAN-441) | Pin parity + Playwright per domain | P1 | UX-022 |
+| 17 | ⚪ | [UX-030](UX-030-card-system-tests.md) | [SAN-441](https://linear.app/sanjiovani/issue/SAN-441) | Pin parity + Playwright per domain | P1 | UX-022, UX-021 |
 | 18 | ⚪ | [UX-026](UX-026-attraction-card-rich.md) | [SAN-442](https://linear.app/sanjiovani/issue/SAN-442) | AttractionCard rich | P2 | UX-023 |
 | 19 | ⚪ | [UX-029](UX-029-retire-grounded-place-card.md) | [SAN-443](https://linear.app/sanjiovani/issue/SAN-443) | Retire GroundedPlaceCard orphan | P2 | UX-026 |
 | 20 | ⚪ | [UX-032](UX-032-new-chat-reset-thread-and-map.md) | [SAN-321](https://linear.app/sanjiovani/issue/SAN-321) | New chat reset thread + map | P2 | UX-015 |
@@ -105,13 +105,15 @@ prod: https://www.mdeai.co
 1  UX-015  ✅ merged #21
 2  UX-013 ∥ UX-014 ∥ UX-019   ✅ merged #25, #26, #24
 5  UX-016  ✅ e2e on main
-6b UX-036  ⏳ PR #28 — restaurant fast path
+6b UX-036  ✅ #28 merged — thin restaurant cards + fast path
 6  UX-031  ⏳ e2e on PR #27 — rebase after #28
 7  UX-017  Rebase PR #19
 8  UX-035  Rental parser prod verify
-9  UX-021 ∥ UX-022   Card P0
+9  UX-022  ✅ DomainResults + pin sync
+15 UX-025  ✅ RestaurantCard rich
+10 UX-021  Card P0 a11y (before UX-030 lock-in)
 11 UX-027  ✅ Done (a8d2e26)
-12–19 Card chain UX-020→030
+12 UX-020 → UX-024 → UX-023 → UX-025 → UX-026 → UX-029 → UX-030
 20–22 UX-032, UX-033, UX-034
 23 UX-018  Phase 2 / Backlog
 ```

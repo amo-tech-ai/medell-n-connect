@@ -1,15 +1,16 @@
 ---
 title: "UX-010 — Unified result-card architecture (one result = one rich card + one pin)"
-updated: 2026-05-29
+updated: 2026-06-01
 owner: claude
-status: M1 implemented (uncommitted WIP)
+status: Approved — execute via UX-020…030 (see §6.6 implementation status)
 sev: High
 difficulty: Med–Large (phased)
 personas: [Tourist, Camila, Roberto]
 surfaces: ["/", "/api/copilotkit"]
 source_audit: tasks/ux/audit/10-audit-cards.md (+ §2 below)
-branch_context: "feat/c012-cafe-places-detail @ 895f459 (café fix is branch-only; prod runs main)"
+branch_context: "main @ 7a5c91e+ (UX-036 #28 merged); re-verify line numbers on each PR"
 related_evidence: ../testing/evidence/2026-05-29/cafe-rich-card-dedup-runtime-proof.md
+execution_pack: tasks/ux/tasks/UX-010-CARD-UNIFICATION-STRATEGY.md
 ---
 
 # UX-010 — Unified result-card architecture
@@ -20,21 +21,21 @@ related_evidence: ../testing/evidence/2026-05-29/cafe-rich-card-dedup-runtime-pr
 
 ## 0. TL;DR (read this first)
 
-The café de-dup work on `feat/c012-cafe-places-detail` already proves the *target* pattern for one domain. The problem is it was wired **per-domain by hand**, so only **rentals + cafés** got the full treatment. **Events, restaurants, and attractions still double-render** (a card in chat **and** a pin-row in the side panel), and restaurants/attractions are still **minimal** cards.
+The café de-dup work proves the *target* pattern for one domain. The problem is **per-domain hand wiring**: **rentals, cafés, and events** now mount `<RichCardResultsRegistrar>` on `main`. **Restaurants and attractions** are still broken on the **agent tool render path** (`restaurantToolRender` / `attractionToolRender` use bare `GenericResults` without registrar). **All** `GenericResults` rows still omit `pinId`/`onSelect` → hover→pin dead for restaurant/attraction. Cards remain **minimal** (`PlaceResultCard`) until **UX-025/026**.
 
-- **Root cause (one line):** `RICH_CARD_CATEGORIES` lists 5 domains, but only `rental` and `grounded` actually mount `<RichCardResultsRegistrar>`. The suppression check (`shouldSuppressGenericMapResults`) therefore **never fires** for events / restaurants / attractions → their entities render twice.
+- **Root cause (one line):** Registrar + pin props must live in **one wrapper** (`DomainResults` / fixed `GenericResults`) so no path can ship pins without suppression or card↔pin sync. Today `RestaurantResults` (fast path, UX-036) has registrar but agent path and `GenericResults` internals do not pass `pinId`.
 - **"Nightlife" is not a domain.** It is an *event* category (`event-discovery-workflow.ts`) and a rental amenity tag. Nightlife results render through `EventCard` / pin as `event`. No new map-pin category needed.
 - **The fix is structural, not cosmetic:** bundle "card list + registrar + pin sync" into one shared wrapper so a domain **physically cannot** be wired with pins-but-no-registrar (today's exact bug), build all rich cards on one shared shell, and demote the side-panel list.
 
-System UX today ≈ **63/100** (rentals/cafés great, events mediocre, restaurants/attractions poor). Target ≈ **90+/100** across the board.
+System UX today ≈ **70/100** on `main` (rentals/cafés/events wiring OK; restaurants show thin cards + pins via fast path; agent restaurant/attraction dup + no hover sync remain). Target ≈ **90+/100** across the board.
+
+> **Status source of truth:** Child tasks UX-020…030 are **Not Started** until each PR merges. This doc tracks **disk truth** + phased plan — not "WIP" on the parent while children are open.
 
 ## 1. Beginner explanation (no jargon)
 
 Picture the Tourist on `/` asking *"best ramen in Poblado."* The right answer is: **a stack of pretty cards in the chat** (photo, rating, buttons) and **a matching dot for each one on the map.** One restaurant = one card = one dot. Hover a card, its dot lights up. Click a dot, a little card pops up on the map.
 
-Right now that only works cleanly for **rentals** and **cafés**. For **restaurants, attractions, and events**, the same restaurant shows up **twice**: once as a card in the chat, and *again* as a plain text row in a "Map results" strip lower down. And for restaurants/attractions the card is the **boring** version (just a title + a link), not the pretty one.
-
-Why? Because each domain was wired up by hand, and three of them were given "show a pin" but forgotten the "...and hide the duplicate list" half. This doc makes that impossible to forget by gluing the two halves together, and gives every domain the pretty card.
+Right now that works cleanly for **rentals**, **cafés**, and **events** (registrar mounted). For **restaurants on the agent path** and **attractions**, results can still **double** in the side panel because `GenericResults` in `restaurantToolRender` / `attractionToolRender` skips the registrar. Fast-path restaurants (UX-036) suppress the dup but cards are still **boring** (title + neighborhood + $/person). This doc glues pins + registrar + `pinId` in one wrapper (**UX-022**) then rich cards (**UX-025+**).
 
 ## 2. Audit — per-domain findings
 
@@ -44,12 +45,12 @@ Surface: concierge chat at `/` (the `/chat` path redirects home). Dispatch: `src
 |---|--------|----------------|--------------|-------------------|---------------|----------------------|-----------------|---------|
 | 1 | **Rentals** | `RentalCard` | **Rich** | No | Yes | N/A (no grounding) | **No** — suppressed via registrar | **92** |
 | 2 | **Cafés** | `CafeResultCard` | **Rich** | No *(branch only)* | Yes | No — `GroundingAttribution` orphaned; footer link per card | **No** — suppressed via registrar | **90** |
-| 3 | **Events** | `EventCard` | **Rich** | **Yes** — card + side-panel pin row | Yes | Partial — web citations appear **inline (chat)** *and* in `EventResultsPanel` footer | **Yes** — no registrar | **62** |
-| 4 | **Restaurants** | `PlaceResultCard` | **Minimal** | **Yes** — card + side-panel pin row | Yes | N/A | **Yes** — no registrar | **46** |
-| 5 | **Attractions** | `PlaceResultCard` | **Minimal** | **Yes** — card + side-panel pin row | Yes | N/A | **Yes** — no registrar | **46** |
-| — | **Nightlife** | *(none — it's an event facet)* | Inherits `EventCard` | inherits events | inherits events | inherits events | inherits events | **n/a → 62** |
+| 3 | **Events** | `EventCard` | **Rich** | **No** *(registrar @ L343)* | Yes | Partial — web citations inline + `EventResultsPanel` footer | **No** | **72** |
+| 4 | **Restaurants** | `PlaceResultCard` | **Minimal** | **Agent: Yes** · **Fast path: No** | Pins yes; **hover sync No** | N/A | **Agent: Yes** · **Fast path: No** | **55** |
+| 5 | **Attractions** | `PlaceResultCard` | **Minimal** | **Yes** — agent `GenericResults` | Pins yes; **hover sync No** | N/A | **Yes** — no registrar | **48** |
+| — | **Nightlife** | *(none — event facet only)* | Inherits `EventCard` | inherits events | inherits events | inherits events | inherits events | **n/a → 72** |
 
-**Weighted system score ≈ 63/100.**
+**Weighted system score ≈ 70/100** on `main` (2026-06-01). Re-audit after **UX-022** (expect ~78) and **UX-025** (expect ~85+).
 
 ### 2.1 The single root cause
 
@@ -65,19 +66,18 @@ export function shouldSuppressGenericMapResults(counts, activeMapCategory) {
 }
 ```
 
-…but in `search-tool-renders.tsx` only two domains push a count:
+…on `main` @ 2026-06-01 (`search-tool-renders.tsx`):
 
-| Domain | `<ToolPinsSync>` (pin) | `<RichCardResultsRegistrar>` (suppress) |
-|--------|:----------------------:|:---------------------------------------:|
-| grounded (café) | ✅ L131 | ✅ L129 |
-| rental | ✅ L213 | ✅ L211 |
-| event | ✅ L343 | ❌ **missing** |
-| restaurant | ✅ L596 | ❌ **missing** |
-| attraction | ✅ L615 | ❌ **missing** |
+| Domain | `<ToolPinsSync>` | `<RichCardResultsRegistrar>` | `pinId`/`onSelect` on cards |
+|--------|:----------------:|:----------------------------:|:---------------------------:|
+| grounded (café) | ✅ | ✅ ~L129 | ✅ `CafeResultCard` |
+| rental | ✅ | ✅ ~L211 | ✅ `RentalCard` |
+| event | ✅ | ✅ ~L343 | ✅ `EventCard` |
+| restaurant fast (`RestaurantResults`) | ✅ | ✅ ~L423 | ❌ `GenericResults` omits |
+| restaurant agent (`restaurantToolRender`) | ✅ | ❌ bare `GenericResults` | ❌ |
+| attraction agent (`attractionToolRender`) | ✅ | ❌ bare `GenericResults` | ❌ |
 
-> Line numbers re-verified on disk 2026-05-30 (branch `feat/c012-cafe-places-detail`); the file grew since authoring — restaurant/attraction moved from L442 → L596/L615. The **gap itself is unchanged**: only `grounded` + `rental` mount the registrar.
-
-So events/restaurants/attractions emit a pin (→ side-panel row) but never register a count (→ never suppressed). That is the duplicate.
+**UX-022 closes:** one `DomainResults` (or fixed `GenericResults`) for restaurant + attraction — registrar on **every** path + `pinId`/`onSelect` on every `PlaceResultCard` row. Route `restaurantToolRender` through `RestaurantResults` (same as fast path).
 
 ### 2.2 Secondary findings (cleanup debt)
 
@@ -105,27 +105,31 @@ flowchart TD
 
     D -->|rental| R1["RentalCard - RICH<br/>+ registrar + pin sync"]
     D -->|grounded| C1["CafeResultCard - RICH<br/>+ registrar + pin sync"]
-    D -->|event| E1["EventCard - RICH<br/>pin sync, NO registrar"]
-    D -->|restaurant| RE1["PlaceResultCard - MINIMAL<br/>pin sync, NO registrar"]
-    D -->|attraction| A1["PlaceResultCard - MINIMAL<br/>pin sync, NO registrar"]
+    D -->|event| E1["EventCard - RICH<br/>registrar + pin sync"]
+    D -->|restaurant fast| RE1["RestaurantResults - MINIMAL<br/>registrar, NO pinId on cards"]
+    D -->|restaurant agent| RE2["GenericResults - MINIMAL<br/>NO registrar"]
+    D -->|attraction| A1["GenericResults - MINIMAL<br/>NO registrar"]
 
     R1 --> CHAT["In-chat card list<br/>(primary surface)"]
     C1 --> CHAT
     E1 --> CHAT
     RE1 --> CHAT
+    RE2 --> CHAT
     A1 --> CHAT
 
     R1 -->|suppresses| SP["Side panel<br/>ChatResultsColumn pin rows"]
     C1 -->|suppresses| SP
-    E1 -->|NOT suppressed = DUP| SP
-    RE1 -->|NOT suppressed = DUP| SP
+    E1 -->|suppresses| SP
+    RE1 -->|suppresses| SP
+    RE2 -->|NOT suppressed = DUP| SP
     A1 -->|NOT suppressed = DUP| SP
 
     E1 -->|2nd web surface| EWC["EventResultsPanel<br/>web citations footer"]
 
     classDef dup fill:#fde2e2,stroke:#c0392b,color:#7b241c;
     classDef ok fill:#e7f6e7,stroke:#27ae60,color:#145a32;
-    class E1,RE1,A1,SP dup;
+    class RE2,A1 dup;
+    class R1,C1,E1,RE1 ok;
     class R1,C1 ok;
 ```
 
@@ -263,20 +267,37 @@ Because pins + registrar live in the same component, **you cannot ship pins with
 ### 6.5 Nightlife decision
 Keep nightlife as an **event facet** (recommended): zero new pin category, inherits `EventCard` + `event` pin automatically. Only add a `nightlife` `MapPinCategory` if product wants a distinct glyph/colour — not required for this work.
 
+## 6.6 Implementation status (source of truth — 2026-06-01)
+
+| Milestone | Status on `main` | Task |
+|-----------|------------------|------|
+| UX-014 agent emit | ✅ Merged (#26) | Cards can render without `writer.custom` |
+| UX-036 restaurant fast path | ✅ Merged (#28) | Thin cards + pins; `RestaurantResults` + registrar |
+| **M1** registrar + pin sync | ✅ Done | **UX-022** — `DomainResults`, agent/fast-path parity |
+| M0 shell | ⚪ Not started | UX-023 (does **not** block UX-022) |
+| M2 rich restaurant | ✅ Done | **UX-025** — `RestaurantCard` on fast path + agent |
+| M3 rich attraction | ⚪ Not started | UX-026 |
+| M4 cleanup | ⚪ Not started | UX-029 after rich cards stable |
+| M5 tests | ⚪ Not started | UX-030 after UX-022 + **UX-021** |
+
+**Authoritative build order:** see [`tasks/UX-010-CARD-UNIFICATION-STRATEGY.md`](tasks/UX-010-CARD-UNIFICATION-STRATEGY.md) §7.
+
+**Done gate per slice:** screenshot + targeted Playwright + `npm run floor` → evidence under `tasks/testing/evidence/<date>/`.
+
 ## 7. Implementation plan & migration order
 
-Ordered for **safety** (rentals + the working café flow stay visually identical until the very end) and **highest-impact-first** (the duplicate dies in M1).
+Ordered for **highest-impact-first** (UX-022 before shell/cleanup).
 
 | Step | Scope | Risk | Persona win |
 |------|-------|------|-------------|
-| **M0** | Extract `ResultCardShell`; refactor `RentalCard`/`CafeResultCard`/`EventCard` onto it. **Pure refactor — snapshots unchanged.** | Low | none yet (foundation) |
-| **M1** | Add `DomainResults` wrapper; route **events + restaurants + attractions** through it → side-panel dup vanishes for them. **Highest impact.** | Low–Med | Tourist stops seeing every place twice |
+| **M0** | Extract `ResultCardShell`; refactor `RentalCard`/`CafeResultCard`/`EventCard` onto it. **Pure refactor — snapshots unchanged.** | Low | none yet (foundation) — **after UX-022** |
+| **M1** | `DomainResults` / fix `GenericResults` — **restaurant agent + attraction** paths + `pinId`/`onSelect`. Events already have registrar. | Low–Med | Tourist stops dup panel; hover highlights pin |
 | **M2** | `RestaurantCard` (rich) on the shell; swap restaurant render. | Med | restaurants look like cafés |
 | **M3** | `AttractionCard` (rich) on the shell; swap attraction render. | Med | attractions look like cafés |
 | **M4** | Cleanup: delete `GroundingAttribution`, `grounded-place-card.tsx`, dead helpers; collapse event web-citations to one footer; demote/remove `ChatResultsColumn` results list. | Med | cleaner chat, smaller bundle |
 | **M5** | Lock-in: unit + registry + pin-parity tests, per-domain Playwright "one card + one pin + no dup panel", floor green. | Low | Sofía/Lucía catch regressions |
 
-**Sequencing note:** land on top of (or after) `feat/c012-cafe-places-detail` so M0's `CafeResultCard` refactor doesn't conflict with the in-flight café branch. One worktree, one PR per `mde-worktree-pr-flow`.
+**Sequencing note:** **Ship UX-022 first** — do not wait for M0 shell. Café branch is merged to `main`. One worktree, one PR per `mde-worktree-pr-flow`. No rental redesign. No nightlife `MapPinCategory`.
 
 ## 8. Risks & failure points
 
@@ -316,6 +337,7 @@ Ordered for **safety** (rentals + the working café flow stay visually identical
 
 ## 12. Evidence / provenance
 
-- Audit performed 2026-05-29 against `feat/c012-cafe-places-detail @ 895f459` by reading: `search-tool-renders.tsx` (dispatch), all five card components, `rich-card-results.ts`, `rich-card-results-context.tsx`, `chat-results-column.tsx`, `center-panel-map-results-slot.tsx`, `chat-center-panel.tsx`, `GroundingAttribution.tsx`, `event-results-panel.tsx`, `event-search-results-context.tsx`, `parse-grounded-tool-result.ts`, `merge-pins-by-category.ts`, `active-map-category.ts`, `category-map-marker.ts`, `ClusteredCategoryMarkers.tsx`, `MapPinInfoWindow.tsx`, `SelectedPlaceOverlayCard.tsx`, plus grep confirmation of registrar/pin wiring and orphan status.
+- Plan revised 2026-06-01 per forensic verdict (82/100): stale event/registrar claims corrected; M1 WIP label removed; UX-022-first sequencing locked.
+- Audit performed 2026-05-29; re-verified 2026-06-01 on `main` by reading: `search-tool-renders.tsx` (dispatch), all five card components, `rich-card-results.ts`, `rich-card-results-context.tsx`, `chat-results-column.tsx`, `center-panel-map-results-slot.tsx`, `chat-center-panel.tsx`, `GroundingAttribution.tsx`, `event-results-panel.tsx`, `event-search-results-context.tsx`, `parse-grounded-tool-result.ts`, `merge-pins-by-category.ts`, `active-map-category.ts`, `category-map-marker.ts`, `ClusteredCategoryMarkers.tsx`, `MapPinInfoWindow.tsx`, `SelectedPlaceOverlayCard.tsx`, plus grep confirmation of registrar/pin wiring and orphan status.
 - Café single-domain proof that this pattern works: [`cafe-rich-card-dedup-runtime-proof.md`](../testing/evidence/2026-05-29/cafe-rich-card-dedup-runtime-proof.md).
 - All four diagrams above validated via the mermaid validator (`valid: true`).

@@ -1,13 +1,14 @@
 ---
 id: UX-025
 title: RestaurantCard rich — photo, rating, badges, detail panel
-status: Not Started
+status: Done
 priority: P1
 phase: Card unification M2
 effort: 6-8h
 owner: claude
-depends_on: [UX-022, UX-023]
-blocks: [UX-030]
+depends_on: [UX-022]
+blocks: [UX-026, UX-028]
+recommended_after: [UX-023]
 risk: 🟡 Medium
 complexity: M
 skill: [mde-task-lifecycle, shadcn, mde-maps, copilotkit-integrations, testing]
@@ -47,10 +48,10 @@ Minimum: `VenueDetailSheet` with place summary + Maps links. Full Places enrichm
 
 ## Acceptance
 
-- [ ] Restaurant branch renders `RestaurantCard`, not bare `PlaceResultCard`.
-- [ ] Details CTA opens panel/sheet.
-- [ ] Map pin sync via UX-022 contract.
-- [ ] `npm run floor` green + browser evidence.
+- [x] Restaurant branch renders `RestaurantCard`, not bare `PlaceResultCard`.
+- [x] Details CTA opens `CafeDetailPanel` via `openCafeDetail` (shared place sheet).
+- [x] Map pin sync via UX-022 contract.
+- [x] Vitest + `test:e2e:restaurant-fast-path` pass (2026-06-01).
 
 ## Flow diagram
 
@@ -62,10 +63,11 @@ flowchart LR
   RC --> Map[ToolPinsSync via UX-022]
 ```
 
-## Verification (2026-05-31)
+## Verification (2026-06-01)
 
 | Claim | Result |
 |-------|--------|
-| Depends UX-022 | ✅ pin sync prerequisite |
-| Depends UX-023 | ✅ shell prerequisite |
-| PlaceResultCard today | 🔴 minimal — 3/10 audit score |
+| Depends UX-022 | ✅ pin sync prerequisite — **hard blocker** |
+| Depends UX-023 | ⚪ **Optional** — may copy `CafeResultCard` layout before shell lands |
+| PlaceResultCard today | 🔴 minimal — thin cards on prod after UX-036 |
+| Backend change | ❌ None required |

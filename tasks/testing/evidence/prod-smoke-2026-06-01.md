@@ -20,8 +20,15 @@
 3. `suggest restaurants medellin` → restaurant-fast-path-panel  
 4. `good specialty coffee in Laureles` → café grounded cards  
 
-## Local sign-off (same day)
+## Local sign-off (2026-06-01 verified)
 
-- `npm run test:e2e:p0-focused` — run after CK commit + dev restart  
-- `npm run test:e2e:card-unification` — UX-T-030 slice  
-- Evidence: `tasks/testing/evidence/visual-cards/01–04.png`
+| Suite | Result |
+|-------|--------|
+| `npm run test:e2e:p0-focused` | ✅ 3/3 (~50s) |
+| `npm run test:e2e:card-unification` | ✅ 4/4 (~6.5m) |
+| `npm run test:e2e:live-audit` | ✅ 4/4 (~5.5m) |
+
+Evidence:
+- `tasks/testing/evidence/visual-cards/01–04.png`
+- `tasks/testing/evidence/live-audit-verticals/01–04.png`
+- `tasks/testing/evidence/2026-06-01/*-RESULTS.md`

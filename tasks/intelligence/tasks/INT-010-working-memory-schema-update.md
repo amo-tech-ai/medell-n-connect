@@ -3,7 +3,7 @@ id: INT-010
 title: Working memory schema update
 phase: MVP
 priority: P1
-status: In Review
+status: In Progress
 owner_system: [Mastra, CopilotKit]
 personas: [Camila, Roberto]
 depends_on: [INT-001]

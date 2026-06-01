@@ -48,7 +48,7 @@ Parallel platform work (do not block CORE): **VEC-001…003** before INT-016.
 | 7 | [INT-007](../archive/INT-007-event-intelligence-wrapper.md) | [SAN-410](https://linear.app/sanjiovani/issue/SAN-410) | Event intelligence wrapper | MVP | P1 | ✅ Done · archived | INT-001, INT-005 |
 | 8 | [INT-008](../archive/INT-008-cafe-intelligence-wrapper.md) | [SAN-411](https://linear.app/sanjiovani/issue/SAN-411) | Café intelligence wrapper | MVP | P1 | ✅ Done · archived | INT-001, INT-005 |
 | 9 | [INT-009](./INT-009-copilot-readable-ui-state.md) | [SAN-412](https://linear.app/sanjiovani/issue/SAN-412) | CopilotKit readable UI state | MVP | P1 | 🟡 In Progress | INT-003 |
-| 10 | [INT-010](./INT-010-working-memory-schema-update.md) | [SAN-413](https://linear.app/sanjiovani/issue/SAN-413) | Working memory schema update | MVP | P1 | 🟢 In Review ⚠️ | INT-001 |
+| 10 | [INT-010](./INT-010-working-memory-schema-update.md) | [SAN-413](https://linear.app/sanjiovani/issue/SAN-413) | Working memory schema update | MVP | P1 | 🟡 In Progress · PR #39 open | INT-001 |
 | 11 | [INT-011](./INT-011-user-preferences-schema.md) | [SAN-414](https://linear.app/sanjiovani/issue/SAN-414) | user_preferences schema + RLS | POST-MVP | P1 | ⚪ Not Started | INT-005 |
 | 12 | [INT-012](./INT-012-user-interactions-schema.md) | [SAN-415](https://linear.app/sanjiovani/issue/SAN-415) | user_interactions schema | POST-MVP | P1 | ⚪ Not Started | INT-011 |
 | 13 | [INT-013](./INT-013-retrieve-preferences-before-search.md) | [SAN-416](https://linear.app/sanjiovani/issue/SAN-416) | Retrieve prefs before search | POST-MVP | P1 | ⚪ Not Started | INT-011, INT-012 |

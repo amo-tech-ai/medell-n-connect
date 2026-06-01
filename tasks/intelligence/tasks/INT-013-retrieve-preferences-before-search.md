@@ -29,6 +29,18 @@ As **Camila**, repeat visit boosts Laureles without me saying Laureles again.
 
 Prefs: `preferred_neighborhood=Laureles` → `search-rentals` default neighborhood or boost.
 
+## Workflow
+
+```mermaid
+flowchart LR
+    TURN["Camila: search request<br/>(no neighborhood typed)"] --> WM["Read working memory<br/>lastRentalQuery"]
+    WM --> RP["retrieve-user-preferences<br/>domain=rental"]
+    RP --> DB[("user_preferences<br/>RLS: own rows only")]
+    DB --> MG["Merge prefs<br/>working memory wins<br/>for explicit overrides"]
+    MG --> SR["search-rentals<br/>default: Laureles<br/>from stored pref"]
+    SR --> RES["Laureles results<br/>without user re-typing"]
+```
+
 ## Implementation steps
 
 1. Mastra tool `retrieve-user-preferences` (domain=rental)
@@ -71,5 +83,5 @@ INT-011, INT-012, INT-006
 ## Verify
 
 ```bash
-cd mdeapp && npm run test -- src/mastra/tools/__tests__/retrieve-user-preferences.test.ts
+cd mdeapp && npx vitest run src/mastra/tools/__tests__/retrieve-user-preferences.test.ts && npx tsc --noEmit
 ```

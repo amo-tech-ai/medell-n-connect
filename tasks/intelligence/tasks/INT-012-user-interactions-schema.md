@@ -34,12 +34,46 @@ As **Patricia**, I can see which listings Camila ignored vs saved for tuning.
 | rejected | reason optional |
 | search_abandoned | filter_snapshot |
 
+## Schema diagram
+
+```mermaid
+erDiagram
+    AUTH_USERS ||--o{ USER_INTERACTIONS : "owns interactions"
+    USER_INTERACTIONS {
+        uuid id PK
+        uuid user_id FK
+        text item_type "rental/event/restaurant/venue/cafe"
+        text item_id
+        text action "viewed/saved/rejected/search_abandoned/contacted"
+        jsonb metadata "dwell_ms filter_snapshot"
+        timestamptz created_at
+    }
+```
+
 ## Implementation steps
 
-1. Migration `user_interactions`
-2. RLS owner-only
-3. Client helper `logUserInteraction()` (anon/authenticated)
-4. Wire card click handlers (rental first)
+1. Migration DDL:
+
+```sql
+CREATE TABLE user_interactions (
+  id          uuid DEFAULT gen_random_uuid() PRIMARY KEY,
+  user_id     uuid NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,
+  item_type   text NOT NULL CHECK (item_type IN ('rental','event','restaurant','venue','cafe')),
+  item_id     text NOT NULL,
+  action      text NOT NULL CHECK (action IN ('viewed','saved','rejected','search_abandoned','contacted')),
+  metadata    jsonb,  -- safe: dwell_ms, filter_snapshot. NEVER: raw query text, IP, device ID
+  created_at  timestamptz NOT NULL DEFAULT now()
+);
+ALTER TABLE user_interactions ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "owner only" ON user_interactions
+  FOR ALL USING (auth.uid() = user_id) WITH CHECK (auth.uid() = user_id);
+CREATE POLICY "anon denied" ON user_interactions FOR ALL TO anon USING (false);
+CREATE INDEX ON user_interactions(user_id, item_type, created_at DESC);
+```
+
+2. Server helper `logUserInteraction()` — wire through `/api/interactions` route, not direct client insert (prevents log injection)
+3. Wire card click handlers (rental first)
+4. v1: authenticated users only. Pre-login anonymous tracking deferred to POST-MVP+.
 
 ## Files likely touched
 

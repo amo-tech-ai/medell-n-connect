@@ -29,6 +29,24 @@ As **Sofia**, query and document embeddings use the same model/dimensions (VEC-0
 
 Summarize: “Camila prefers furnished Laureles monthly under $1.2k” → `embedContent` → store 768d vector.
 
+## Workflow
+
+```mermaid
+sequenceDiagram
+    participant EV as Pref change event
+    participant GE as gemini-embed.ts
+    participant G as Gemini embedContent
+    participant DB as user_memory_embeddings
+
+    EV->>GE: summarize pref text
+    Note over EV,GE: "Camila: furnished Laureles monthly under $1.2k"
+    GE->>G: embedContent(text, gemini-embedding-001)
+    G-->>GE: vector 768 dimensions
+    GE->>DB: upsert user_id + content + vector
+    Note over GE,DB: dimension 768 locked to gemini-embedding-001
+    Note over GE,DB: model upgrade needs new column + full re-embed
+```
+
 ## Implementation steps
 
 1. Lock `gemini-embedding-001` @ 768 (VEC-003)
@@ -70,5 +88,7 @@ VEC-003, INT-016
 ## Verify
 
 ```bash
-cd mdeapp && npm run test -- src/lib/embeddings/
+# Verify gemini embedding model name BEFORE implementation:
+# mcp__gemini-api-docs-mcp__search_docs('embedding models')
+cd mdeapp && npx vitest run src/lib/embeddings/ && npx tsc --noEmit
 ```

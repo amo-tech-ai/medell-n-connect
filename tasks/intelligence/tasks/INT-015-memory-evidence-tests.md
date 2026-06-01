@@ -32,6 +32,19 @@ As **Lucía**, I need proof prefs affect search before ADVANCED pgvector ships.
 3. Top results skew Laureles
 4. Evidence markdown + screenshots
 
+## Workflow
+
+```mermaid
+flowchart TD
+    SEED["Seed: pref Laureles<br/>test user with RLS"] --> VT["Vitest integration<br/>real auth path"]
+    VT --> RT["retrieve-user-preferences<br/>returns Laureles pref"]
+    RT --> SR["search-rentals<br/>applies Laureles boost"]
+    SR --> CHK{"Top results<br/>skew Laureles?"}
+    CHK -->|"yes"| EV["Evidence doc<br/>int-015-memory-post-mvp.md"]
+    CHK -->|"no"| FIX["Investigate ranking<br/>or pref retrieval"]
+    EV --> CI["CI gate passes<br/>npm run test"]
+```
+
 ## Implementation steps
 
 1. Vitest integration with test user + RLS

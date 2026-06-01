@@ -29,6 +29,25 @@ As **Camila**, listings matching my saved style rank higher; Gemini explains why
 
 Laureles + furnished + WiFi pref → +boost; Gemini: “Strong match for remote work in Laureles.”
 
+## Workflow
+
+```mermaid
+flowchart LR
+    BASE["Base SQL results<br/>(price order)"] --> RK["rankListingsWithMemory<br/>deterministic — no LLM sort"]
+    subgraph SIG["Ranking signals"]
+        S1["pref_key match +0.30"]
+        S2["saved +0.25"]
+        S3["viewed over 5s +0.10"]
+        S4["rejected -0.20"]
+        S5["abandoned -0.05"]
+        S6["recency decay x0.5 at 45d"]
+    end
+    SIG --> RK
+    RK --> SORTED["Re-ranked listings<br/>same input = same order"]
+    SORTED --> EX["Gemini explainRanking<br/>optional post-sort only"]
+    EX --> UI["Cards + explanation"]
+```
+
 ## Implementation steps
 
 1. Deterministic `rankListingsWithMemory(baseResults, prefs, interactions)` 
@@ -68,8 +87,21 @@ N/A (ranking server-side).
 
 INT-013
 
+## Ranking weights (v1 — tune after INT-022 telemetry data)
+
+| Signal | Weight |
+|---|---|
+| pref_key match | +0.30 |
+| interaction: saved | +0.25 |
+| interaction: viewed >5s | +0.10 |
+| interaction: rejected | -0.20 |
+| interaction: search_abandoned | -0.05 |
+| Recency decay (90d half-life) | ×0.5 at 45d |
+
+Note: LLM may EXPLAIN the ranking after the deterministic sort. LLM must NEVER produce numeric scores or determine sort order.
+
 ## Verify
 
 ```bash
-cd mdeapp && npm run test -- src/lib/ranking/
+cd mdeapp && npx vitest run src/lib/ranking/ && npx tsc --noEmit
 ```

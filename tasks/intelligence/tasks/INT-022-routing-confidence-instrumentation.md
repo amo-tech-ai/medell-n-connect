@@ -41,9 +41,37 @@ As **Sofía**, when I adjust a confidence threshold I want a log of real decisio
   "confidence": 0.85, "action": "search_now", "source": "fast-path", "resultCount": 7, "ts": "..." }
 ```
 
+## Workflow
+
+```mermaid
+flowchart LR
+    Q["User query<br/>(Camila rental ask)"] --> P["rental-query-parser<br/>extract slots + confidence"]
+    P --> DEC{"routing<br/>decision"}
+    DEC -->|"0.85 or above"| FP["fast-path<br/>action: search_now"]
+    DEC -->|"0.50 to 0.84"| CL["clarify branch<br/>action: clarify"]
+    DEC -->|"below 0.50"| AG["agent route<br/>action: agent"]
+    FP & CL & AG --> LOG["logRoutingDecision<br/>intent slots confidence<br/>action source ts"]
+    LOG --> OUT["int-routing log line<br/>no raw query text<br/>no PII"]
+```
+
 ## Implementation steps
 
 1. **Thin logger** — `src/lib/intelligence-telemetry.ts` (new): one function `logRoutingDecision(record)` that emits a single structured line (`console.info` with a stable `[int-routing]` tag, or `LOG_LEVEL`-gated). No DB writes in v1.
+
+```ts
+// TS type for the telemetry record
+export type RoutingDecision = {
+  intent: 'rental_search' | 'event_discovery' | 'restaurant_search'
+        | 'cafe_search' | 'venue_search' | 'unknown';
+  slots: Record<string, string | number | boolean>;  // derived — NOT raw query text
+  confidence: number;
+  action: 'search_now' | 'clarify' | 'agent' | 'canned_fallback';
+  source: 'fast-path' | 'clarify-branch' | 'agent-route';
+  resultCount?: number;
+  turnId?: string;  // CopilotKit messageId — deduplicate double-logs
+  ts: string;
+};
+```
 2. **Call sites** — emit one record at each decision point: the rental fast-path hook (`use-rental-search-fast-path.ts`), the clarify branch, and (post-UX-001) the agent route. Record `intent`, `slots`, `confidence`, `action` (`search_now`/`clarify`/`agent`), `source`, and `resultCount` when known.
 3. **No PII** — log the **derived slots and score**, not raw free-text the user typed (or hash/truncate it). This keeps the log safe to ship and analyze.
 4. **Optional (defer):** a follow-up could persist to `ai_runs` via the server-only `src/mastra/lib/**` carve-out — **out of scope for v1**; structured logs are the MVP.

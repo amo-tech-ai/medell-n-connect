@@ -3,7 +3,7 @@ id: INT-006
 title: Rental availability date filters
 phase: MVP
 priority: P1
-status: Not Started
+status: In Progress
 owner_system: [Supabase, Mastra]
 personas: [Camila]
 depends_on: [INT-002, INT-005]
@@ -29,6 +29,18 @@ As **Camila**, June 1–30 should filter listings whose availability overlaps my
 ## Example prompt
 
 `list rentals in june 1 to 30 $1000 medellin` → SQL excludes non-overlapping rows when dates set.
+
+## Workflow
+
+```mermaid
+flowchart LR
+    U["Camila: june 1-30 $1000"] --> PA["Parser<br/>checkIn/checkOut/stayType"]
+    PA --> AQ["API /rentals/search<br/>Zod validates dates"]
+    AQ --> SQL["SQL overlap filter<br/>available_from ≤ checkOut<br/>available_to ≥ checkIn"]
+    SQL -->|"stayType=monthly"| MB["ORDER BY min_stay ≥28<br/>then price ASC"]
+    SQL -->|"stayType=nightly"| PR["ORDER BY price ASC"]
+    MB & PR --> RES["Rental cards<br/>June-only availability"]
+```
 
 ## Implementation steps
 
@@ -62,9 +74,23 @@ Existing apartments RLS unchanged; API uses user-scoped client.
 - [ ] Implements [RE-019](../../real-estate/tasks/RE-019-rental-availability-search.md)
 - [ ] Monthly stay boosts `minimum_stay_days >= 28` when `stayType === monthly`
 
+## SQL overlap formula
+
+```sql
+-- Standard date-range overlap: listing is available if its window overlaps the stay window
+WHERE available_from <= :checkOut
+  AND available_to   >= :checkIn
+  -- Monthly boost: surface long-stay listings first when stayType = monthly
+  ORDER BY
+    CASE WHEN :stayType = 'monthly' AND minimum_stay_days >= 28 THEN 0 ELSE 1 END,
+    nightly_price ASC
+```
+
+Edge case: if `stayType = monthly` and no `checkOut`, calculate `checkOut = checkIn + 30 days`.
+
 ## Failure points
 
-- Missing indexes (data-009) → slow queries
+- Missing indexes (data-009) → slow queries. Add: `CREATE INDEX ON apartments(available_from, available_to);`
 
 ## Dependencies
 
@@ -73,5 +99,5 @@ INT-002, INT-005
 ## Verify
 
 ```bash
-cd mdeapp && npm run test -- src/mastra/tools/__tests__/search-rentals.test.ts
+cd mdeapp && npx vitest run src/mastra/tools/__tests__/search-rentals.test.ts && npx tsc --noEmit
 ```

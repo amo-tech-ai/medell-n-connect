@@ -3,7 +3,7 @@ id: INT-009
 title: CopilotKit readable UI state
 phase: MVP
 priority: P1
-status: Not Started
+status: In Progress
 owner_system: [CopilotKit]
 personas: [Camila, Tourist]
 depends_on: [INT-003]
@@ -28,6 +28,18 @@ As **Camila**, when I pan the map to Envigado, the agent should know my map cont
 ## Example prompt
 
 User selects rental pin → asks “how walkable is this?” — agent reads `selectedPinId` from readable state.
+
+## Workflow
+
+```mermaid
+flowchart LR
+    MAP["Map component<br/>pan or pin select"] --> RD["useCopilotReadable<br/>mapUi: viewport<br/>selectedPinId pinCounts"]
+    RD --> CPK["CopilotKit runtime<br/>/api/copilotkit"]
+    CPK --> CA["conciergeAgent<br/>reads mapUi context"]
+    CA -->|"pin selected"| PW["Walkability reply<br/>for selected listing"]
+    CA -->|"map panned"| LB["location bias<br/>viewport lat/lng"]
+    PW & LB --> UI["Contextual chat reply<br/>no re-typing needed"]
+```
 
 ## Implementation steps
 

@@ -3,7 +3,7 @@ id: INT-004
 title: No canned clarify bypass
 phase: CORE
 priority: P0
-status: Not Started
+status: In Review
 owner_system: [CopilotKit, App]
 personas: [Camila]
 depends_on: [INT-003]
@@ -31,6 +31,21 @@ As **Camila**, the app must never ignore information I already typed (budget, da
 ## Example prompt
 
 Same hero rental query — must not show generic three-bullet clarify asking for budget/dates again.
+
+## Workflow
+
+```mermaid
+flowchart LR
+    Q["Rental query<br/>(Camila)"] --> P["rental-query-parser<br/>extract slots"]
+    P --> SC{"confidence?"}
+    SC -->|"≥ 0.85"| FP["Fast-path search<br/>API instant"]
+    SC -->|"0.50 – 0.84"| CA["conciergeAgent<br/>clarify or search"]
+    SC -->|"less than 0.25<br/>zero slots"| CB["Canned clarify<br/>single message only"]
+    FP --> RS["Rental cards"]
+    CA --> RS
+    CB --> Q2["Camila adds detail"]
+    Q2 --> P
+```
 
 ## Implementation steps
 

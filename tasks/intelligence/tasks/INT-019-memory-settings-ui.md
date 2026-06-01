@@ -29,6 +29,18 @@ As **Camila**, I can remove “party hostel” ephemeral pref that expired wrong
 
 Settings page lists: neighborhood, budget style, semantic memories (summarized text).
 
+## Workflow
+
+```mermaid
+flowchart TD
+    U["Camila visits<br/>/settings/memory"] --> LIST["List user_preferences<br/>RLS: own rows only"]
+    LIST --> PREFS["Pref cards<br/>neighborhood, budget style<br/>semantic summaries"]
+    PREFS --> DEL["Delete pref<br/>cascades to embeddings row"]
+    PREFS --> EXP["expires_at shown<br/>ephemeral prefs flagged"]
+    DEL --> VERIFY["retrieve-user-preferences<br/>no longer returns deleted pref"]
+    VERIFY --> CLEAN["Next search<br/>no stale bias"]
+```
+
 ## Implementation steps
 
 1. Route `/settings/memory` or Patricia admin slice

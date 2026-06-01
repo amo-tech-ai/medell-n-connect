@@ -3,7 +3,7 @@ id: INT-005
 title: Intelligence regression tests
 phase: CORE
 priority: P0
-status: Not Started
+status: Done
 owner_system: [Testing]
 personas: [Lucía, Camila]
 depends_on: [INT-002, INT-003, INT-004]
@@ -33,6 +33,18 @@ As **Lucía**, I need automated proof that CORE intelligence does not regress wh
 | `list rentals in june 1 to 30 $1000 medellin` | Generic canned clarify | Gemini or search |
 | `1BR in Laureles under $80/night` | Agent round-trip | Fast-path API 200 |
 | `salsa events this weekend near Provenza` | — | event slots (INT-007 prep) |
+
+## Workflow
+
+```mermaid
+flowchart LR
+    H["Hero query<br/>june 1-30 $1000 medellin"] --> RP["rental-query-parser<br/>unit test"]
+    H --> FP["rental-search-fast-path<br/>unit test"]
+    H --> IS["intent-slots<br/>unit test"]
+    H --> CT["concierge schema<br/>working memory test"]
+    RP & FP & IS & CT --> CI["CI gate<br/>npx vitest run"]
+    CI --> EV["Evidence doc<br/>int-005-core-regression.md"]
+```
 
 ## Implementation steps
 
@@ -77,5 +89,10 @@ INT-002, INT-003, INT-004
 ## Verify
 
 ```bash
-cd mdeapp && npm run test && npm run typecheck
+cd mdeapp && npx vitest run \
+  src/lib/__tests__/rental-query-parser.test.ts \
+  src/lib/__tests__/rental-search-fast-path.test.ts \
+  src/lib/__tests__/intent-slots.test.ts \
+  src/mastra/agents/__tests__/concierge.test.ts \
+  && npx tsc --noEmit
 ```

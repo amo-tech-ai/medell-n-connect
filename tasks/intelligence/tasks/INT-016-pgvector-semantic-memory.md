@@ -29,6 +29,18 @@ As **Camila**, semantic recall finds related prefs I never stored as exact keys.
 
 Query embedding ≈ memory: “prefers calm streets and reliable WiFi”.
 
+## Workflow
+
+```mermaid
+flowchart LR
+    Q["Query: quiet<br/>remote work rental"] --> QE["gemini-embedding-001<br/>768d query vector"]
+    QE --> RPC["match_user_memory RPC<br/>user_id = auth.uid()<br/>filter INSIDE function"]
+    RPC --> VDB[("user_memory_embeddings<br/>vector 768<br/>RLS: owner only")]
+    VDB --> MATCH["cosine similarity<br/>threshold 0.7"]
+    MATCH --> REC["Recalled: prefers calm<br/>WiFi Laureles area"]
+    REC --> SR["search-rentals<br/>semantic bias applied"]
+```
+
 ## Implementation steps
 
 1. Complete **VEC-001** inventory + duplicate index cleanup
@@ -59,10 +71,37 @@ Query embedding ≈ memory: “prefers calm streets and reliable WiFi”.
 - [ ] VEC-001/002 Done evidence linked
 - [ ] Implements partial [RE-020](../../real-estate/tasks/RE-020-rental-preference-memory.md)
 
+## Critical security pattern — filter inside the RPC function
+
+PostgREST applies WHERE clauses **after** a function returns, not inside it. If the RPC selects all users' vectors and relies on PostgREST to filter by `user_id`, **other users' data is exposed**. The `user_id = auth.uid()` filter MUST be inside the SQL function body:
+
+```sql
+-- CORRECT — user data stays private
+CREATE FUNCTION match_user_memory(
+  query_embedding vector(768),
+  match_threshold float DEFAULT 0.7,
+  match_count int DEFAULT 5
+)
+RETURNS TABLE (id uuid, content text, similarity float)
+LANGUAGE sql SECURITY DEFINER
+AS $$
+  SELECT id, content,
+         1 - (embedding <=> query_embedding) AS similarity
+  FROM user_memory_embeddings
+  WHERE user_id = auth.uid()          -- filter HERE, not via PostgREST
+    AND 1 - (embedding <=> query_embedding) > match_threshold
+  ORDER BY embedding <=> query_embedding
+  LIMIT match_count;
+$$;
+-- WRONG: SELECT * FROM match_user_memory(...) WHERE user_id = auth.uid()
+--        PostgREST adds this AFTER the function returns all rows
+```
+
 ## Failure points
 
 - Duplicate HNSW indexes (VEC-001)
-- PostgREST outer filter on RPC (filter inside fn)
+- PostgREST outer filter on RPC — see security pattern above; filter inside fn body
+- Model dimension lock: `vector(768)` is tied to `gemini-embedding-001`. Any model upgrade requires a new column + full re-embed — never in-place update
 
 ## Dependencies
 

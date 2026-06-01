@@ -29,6 +29,17 @@ As **Camila**, after many clicks the agent learns I avoid Poblado without me sta
 
 Interactions: 5× ignored Poblado, 3× saved Laureles → observation: “prefers Laureles over Poblado nightlife.”
 
+## Workflow
+
+```mermaid
+flowchart LR
+    CLICKS["User behavior signals<br/>5x ignored Poblado<br/>3x saved Laureles"] --> JOB["summarize-observations.ts<br/>cron job<br/>custom — not Mastra OM"]
+    JOB --> SCORE{"confidence<br/>threshold 0.6?"}
+    SCORE -->|"below 0.6<br/>low signal"| SKIP["Discard<br/>do not write pref"]
+    SCORE -->|"0.6 or above<br/>repeated pattern"| WRITE["user_preferences<br/>source: observational<br/>expires_at set"]
+    WRITE --> GUARD["Never overwrites<br/>explicit prefs<br/>source=explicit protected"]
+```
+
 ## Implementation steps
 
 1. Evaluate Mastra [observational memory](https://mastra.ai/docs/memory/observational-memory) vs custom summarizer
@@ -54,10 +65,16 @@ Summaries stored with same RLS as prefs.
 - Synthetic interaction stream → one pref candidate
 - Ephemeral observations expire
 
+## Confidence threshold
+
+- **v1 threshold: 0.6** — inferred prefs start at 0.4 (low); reach 0.6 only after repeated consistent behavior (e.g., 5+ rejections of same neighborhood)
+- Inferred prefs always use `source: 'observational'`; explicit user-set prefs are `source: 'explicit'` and are NEVER overwritten by observations
+- Architecture decision: use custom `summarize-observations.ts` cron job for write path (Mastra's observational memory API is preview-only and unstable). Use Mastra `semanticRecall` for read path only.
+
 ## Acceptance criteria
 
-- [ ] Design doc: Mastra OM vs custom chosen
-- [ ] No observational write without confidence threshold
+- [ ] Design doc: Mastra OM vs custom chosen → decision = custom job (see above)
+- [ ] No observational write below confidence threshold 0.6
 
 ## Failure points
 
@@ -70,5 +87,5 @@ INT-012, INT-016
 ## Verify
 
 ```bash
-cd mdeapp && npm run test -- src/mastra/jobs/
+cd mdeapp && npx vitest run src/mastra/jobs/ && npx tsc --noEmit
 ```

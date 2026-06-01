@@ -34,11 +34,34 @@ As **Camila**, remote-work rental prefs boost quiet cafés in Laureles on `/chat
 | Restaurant | `romantic dinner in El Poblado under $80` |
 | Venue | `birthday venue for 20 people with music` |
 
+## needs tag vocabulary
+
+Shared `needs` tags used across domains (all optional on any slot):
+
+```
+remote_work · quiet · outdoor · family_friendly · romantic · live_music
+pet_friendly · accessible · vegan · group_dining · date_night · quick_bite
+```
+
+## Workflow
+
+```mermaid
+flowchart LR
+    RP["Rental prefs<br/>needs: quiet remote_work<br/>neighborhood: Laureles"] --> CDT["cross-domain-boost.ts<br/>server-side ranking only<br/>not in agent prompt"]
+    CDT -->|"quiet needs tag"| CQ["Cafe search<br/>noise=low boosted"]
+    CDT -->|"Laureles neighborhood"| RQ["Restaurant search<br/>Laureles location bias"]
+    CDT -->|"remote_work tag"| VQ["Venue search<br/>wifi+quiet boosted"]
+    CQ & RQ & VQ --> AG["conciergeAgent reads<br/>boosted results only"]
+```
+
 ## Implementation steps
 
 1. `domain` column on prefs/embeddings (rental | event | cafe | restaurant | venue)
-2. Cross-domain boost rules (deterministic): shared `needs` tags
-3. Specialist modules read cross-domain prefs (no mega-prompt)
+2. Cross-domain boost rules (deterministic, NOT in prompt): shared `needs` tags drive boosts at ranking time
+   - rental.needs includes 'quiet' → café boost: noise=low, outdoor=false
+   - rental.neighborhood = Laureles → restaurant location bias: Laureles area
+   - Cross-domain boost lives in `cross-domain-boost.ts` (server-side ranking), NOT in the agent prompt
+3. Specialist modules read cross-domain prefs (no mega-prompt). The agent reads boosted results, not boost logic.
 4. Restaurant/venue slot extension (defer venue booking to future task)
 
 ## Files likely touched

@@ -3,7 +3,7 @@ id: INT-010
 title: Working memory schema update
 phase: MVP
 priority: P1
-status: Not Started
+status: In Review
 owner_system: [Mastra, CopilotKit]
 personas: [Camila, Roberto]
 depends_on: [INT-001]
@@ -30,6 +30,28 @@ As **Camila**, turn 2 should inherit June + $1000/month from turn 1 without re-p
 ## Example prompt
 
 Turn 1: hero rental → Turn 2: `Laureles furnished` uses `lastRentalQuery` with dates/budgetType.
+
+## Workflow
+
+```mermaid
+sequenceDiagram
+    participant C as Camila
+    participant A as conciergeAgent
+    participant M as WorkingMemory (LibSQL)
+
+    C->>A: june 1-30 $1000 rentals
+    A->>M: read(lastRentalQuery)
+    M-->>A: null (first turn)
+    A->>A: search-rentals tool
+    A->>M: write lastRentalQuery<br/>budgetType checkIn checkOut<br/>genericAskPending=false
+    A-->>C: rental cards shown
+
+    C->>A: more options in Laureles
+    A->>M: read(lastRentalQuery)
+    M-->>A: dates + budgetType preserved
+    A->>A: refine search (inherit dates)
+    A-->>C: refined cards, no re-parse
+```
 
 ## Implementation steps
 

@@ -2,6 +2,103 @@
 
 > Source of truth for what shipped. Newest first. Each entry: date, surface, what changed, verification.
 
+## 2026-06-02 — SCREEN-002 chat nav rail + thread list
+
+### Shipped
+- **SCREEN-002 / SAN-488** — Chat nav rail with thread list, new-chat button, active thread highlight, loading skeleton, Saved/Trips disabled stubs (Phase 4 tooltip). Thread context wired to `<CopilotKit threadId>` via `ThreadNavProvider`.
+
+### Files
+- `mdeapp/src/app/api/threads/route.ts` — new GET endpoint, service-role reads `mastra_threads`
+- `mdeapp/src/lib/chat/thread-nav-context.tsx` — new `ThreadNavProvider` + `useThreadNav()`
+- `mdeapp/src/lib/chat/use-nav-threads.ts` — new `useNavThreads()` fetch hook
+- `mdeapp/src/components/copilot/copilot-kit-provider.tsx` — passes `activeThreadId` as `threadId` to `<CopilotKit>`
+- `mdeapp/src/components/chat/chat-nav-rail.tsx` — rewritten with thread list UI
+- `mdeapp/e2e/screens/SCREEN-002-nav-rail.spec.ts` — 5 Playwright tests
+
+### Verification
+- `npm run lint` exit 0 ✅ · `npx tsc --noEmit` exit 0 ✅ · `npm test -- --run` 445/445 ✅
+- Evidence: [`tasks/notes/SCREEN-002-evidence.md`](tasks/notes/SCREEN-002-evidence.md)
+
+---
+
+## 2026-06-01 — DATA stack + chat hygiene (`main` @ `a9eb176`)
+
+### Merged PRs
+- [#40](https://github.com/amo-tech-ai/mdeapp/pull/40) **PR-04 / DATA-048** — C1 migrations (79 files) + DATA-050 B1–B4 replay repair
+- [#42](https://github.com/amo-tech-ai/mdeapp/pull/42) **PR-05** — C2 edge functions from #23
+- [#43](https://github.com/amo-tech-ai/mdeapp/pull/43) **PR-06** — C3 venue seeds
+- [#44](https://github.com/amo-tech-ai/mdeapp/pull/44) **PR-07** — C4 rollbacks + README
+- [#41](https://github.com/amo-tech-ai/mdeapp/pull/41) **PR-02/03** — hoist `ConciergeCoAgentProvider` + widen new-chat remount (`a9eb176`)
+
+### Closed
+- [#23](https://github.com/amo-tech-ai/mdeapp/pull/23) — superseded by #40–#44
+
+### Prod migration history (human-gated, no DDL)
+- `migration repair --status applied` for `20260430140000`, `20260430140500`, `20260503130000`
+- B4 alias drift on prod (`20260601120700` / `20800`) — intentional, not repaired
+- Shadow replay: **79/79** apply · `supabase db diff --from migrations --to linked` exit 0
+
+Evidence: [`tasks/PR/NOTES/notes-5.md`](tasks/PR/NOTES/notes-5.md) · [`tasks/data/evidence/DATA-050-base-table-backfill.md`](tasks/data/evidence/DATA-050-base-table-backfill.md)
+
+---
+
+## 2026-06-01 — Stabilization wave 1 shipped (`main` @ `c9e54b8`)
+
+### Merged PRs
+- [#35](https://github.com/amo-tech-ai/mdeapp/pull/35) **UX-028 / SAN-440** — restaurant Places photos (`d9ce40c`)
+- [#36](https://github.com/amo-tech-ai/mdeapp/pull/36) **UX-032 / SAN-321** — new chat resets thread, map, fast-path state (`1a51ad2`)
+- [#37](https://github.com/amo-tech-ai/mdeapp/pull/37) **UX-034 / SAN-322** — nightly prod 4-query synthetic smoke (`c9e54b8`)
+- [#34](https://github.com/amo-tech-ai/mdeapp/pull/34) — SEARCH-002 events hybrid safety (same train)
+
+### Code highlights
+- `restaurant-place-photo.ts` + API search route — `id,photos` field mask + photo proxy
+- `concierge-session-context.tsx` + `nav-new-chat` — session reset
+- `.github/workflows/prod-synthetic-smoke.yml` + `e2e/prod-synthetic-smoke.spec.ts`
+- Vitest floor: **401** tests @ `c9e54b8`
+
+Evidence: [`tasks/testing/evidence/stabilization-wave1-2026-06-01.md`](tasks/testing/evidence/stabilization-wave1-2026-06-01.md) · [`tasks/PR/tasks/STATUS-2026-06-01.md`](tasks/PR/tasks/STATUS-2026-06-01.md)
+
+---
+
+## 2026-06-01 — PR remediation ↔ Linear (`track:pr`)
+
+- Created label **`track:pr`** on MDEAPP · issues **SAN-447–460** (+ mapped SAN-432/444/445/446)
+- Disk map: [`tasks/PR/LINEAR.md`](tasks/PR/LINEAR.md) · [`tasks/linear/pr-remediation-queue.json`](tasks/linear/pr-remediation-queue.json)
+- [`tasks/INDEX.md`](tasks/INDEX.md) Tier **1D** + active PR queue table
+- **PR-13** → [SAN-447](https://linear.app/sanjiovani/issue/SAN-447) In Progress
+
+---
+
+## 2026-06-01 — PR-13 hotfix pile triage (process)
+
+- Primary `mdeapp` tree reset to **`main` @ `c9e54b8`** — wave-1 duplicates discarded (not re-PR'd)
+- Landlord migration preserved off-tree: [`tasks/PR/evidence/20260430140000_landlord_v1_base_tables.sql.preserved`](tasks/PR/evidence/20260430140000_landlord_v1_base_tables.sql.preserved)
+- Checklist: [`tasks/PR/evidence/PR-13-triage-2026-06-01.md`](tasks/PR/evidence/PR-13-triage-2026-06-01.md)
+- **Next:** PR-14 worktrees · PR-08 landlord scope gate · do not `git add -A` untracked `supabase/` from hotfix tree
+
+---
+
+## 2026-06-01 — G2d complete (G2c + café hotfix on production)
+
+### Shipped to `main` / production
+- [#29](https://github.com/amo-tech-ai/mdeapp/pull/29) — DomainResults, RestaurantCard, AttractionCard (`d47bf16`)
+- [#30](https://github.com/amo-tech-ai/mdeapp/pull/30) — CopilotKit POST-storm fix, UX-021 a11y, card-unification + live-audit e2e (`cd7fb09`)
+- [#33](https://github.com/amo-tech-ai/mdeapp/pull/33) — café grounded fast path (`259f1ef` → merge `a8b33a2`) — **production @ 2026-06-01T12:49Z**
+- [#27](https://github.com/amo-tech-ai/mdeapp/pull/27) — closed superseded by #30
+
+### G2d production smoke — **PASS** ([`tasks/testing/evidence/prod-smoke-2026-06-01.md`](tasks/testing/evidence/prod-smoke-2026-06-01.md))
+- 🟢 Rentals, events, cafés (post-#33), CK idle POST, no duplicate side panel
+- 🟡 Restaurants — cards OK; photo placeholders only (non-blocking)
+- Q4 proof: `prod-smoke/04-cafes-hotfix.png` — 5× `grounded-card`, 5 map pins, 0 CK POSTs on turn
+
+### Linear
+- **SAN-318** → Done · **SAN-433** (UX-035) → Done
+
+### Scope protected
+- [#23](https://github.com/amo-tech-ai/mdeapp/pull/23) DATA-048 · [#32](https://github.com/amo-tech-ai/mdeapp/pull/32) SEARCH — not touched in G2d train
+
+---
+
 ## 2026-05-30 — Full progress-tracker audit ([`tasks/prompts/progress-tracker.md`](tasks/prompts/progress-tracker.md))
 
 ### Added

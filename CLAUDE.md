@@ -20,25 +20,30 @@ Planning + application workspace building a new mdeai app (`mdeapp/`) on Copilot
 
 | Item | State |
 |---|---|
-| Phase | Phase 1 — Week 1 (foundation F01–F06) |
+| Phase | Phase 1 — MVP launch prep (W6+). Foundation ~78% complete. |
+| Cycle | Cycle 1: **Jun 8–22, 2026** — 12 P0 issues (`phase:launch`). See `linear.md`. |
+| North star | Camila on `/` cards + pins · Andrés paid ticket · Roberto host publish @ mdeai.co |
 | Plan | `plan/prd.md` v6.0 (10 chunks under `plan/prd/`) |
 | App path | `/home/sk/mdeai/mdeapp/` |
-| Foundation example | `/home/sk/mdeai/CopilotKit/examples/integrations/mastra/` |
 | Supabase | Reuses legacy project `zkwcbyxiwklihegjhuql` (122 tables, RLS-tight) |
-| Legacy `/home/sk/mde/` | Hard-freeze at end of W1; only P0 security fixes |
+| Legacy `/home/sk/mde/` | Hard-frozen 2026-05-26; P0 security fixes only |
+| Tests | 445+ Vitest · Playwright e2e active (`mdeapp/e2e/`) |
 
 ## Hard rules
 
 Compact always-on guardrails; deeper detail in the named skill. (13 enforcement hooks make these deterministic.) **Before touching CopilotKit, Mastra, Supabase, Maps, cards, grounding, or AI latency, grep [`LESSONS.md`](./LESSONS.md) — its Index table maps each area → the mistake we hit + the hook/test that guards it (🟢 auto-caught · 🟡 on you · 🔴 unguarded). Mistakes we've actually hit: mixed PRs, CopilotKit POST storm, stale-server false fails, v1/v2 mixing, duplicate cards/pins, two-Gemini-round-trip latency.**
 
 - **Production AI = Gemini only.** No `@anthropic-ai/*` SDK in `mdeapp/` or edge functions. (→ `gemini`)
-- **No service-role keys in `mdeapp/src/**`** — edge functions only. **F13 carve-out:** `mdeapp/src/mastra/lib/**` + `mdeapp/src/lib/supabase/service-env.ts` & `service.ts` may use `SUPABASE_SERVICE_ROLE_KEY` for server-only `ai_runs` writes (imported by in-process Mastra + `/api/copilotkit` only; hook `no-service-role-in-src.mjs` enforces paths). Add service-role nowhere else under `mdeapp/src/**`. (→ `mde-supabase`)
+- **No service-role keys in `mdeapp/src/**`** — edge functions only. **F13 carve-out:** `mdeapp/src/mastra/lib/**` + `mdeapp/src/lib/supabase/service-env.ts` & `service.ts` + any server-only API route under `src/app/api/**` that must read Mastra-managed tables (e.g. `mastra_threads`, `ai_runs`) inaccessible to anon may use `SUPABASE_SERVICE_ROLE_KEY` **if**: (1) user identity is verified first via `createClient()`, (2) the route is never imported by client code, (3) hook `no-service-role-in-src.mjs` passes. Examples: `/api/copilotkit`, `/api/threads`. Add service-role nowhere else under `mdeapp/src/**`. (→ `mde-supabase`)
 - **Every new Supabase table:** RLS enabled + ≥ 1 policy. (→ `mde-supabase`)
 - **Every Places API New call:** `X-Goog-FieldMask` (cost lever). (→ `mde-maps`)
 - **Every `<AdvancedMarker>`:** `mapId` on the parent `<Map>`. (→ `mde-maps`)
 - **CopilotKit pinned at `1.55.2`** for Phase 1 — v1 imports only, never mix v1/v2. Migrate to v2 in Phase 2 when Mastra ships on v2. (→ `copilotkit`)
 - **One worktree, one PR.** (→ `mde-worktree-pr-flow`, `/invoke`-only)
-- **Localhost runtime proof required for Done** (2026-05-20): no task flips `status: Done` without evidence that `npm run dev` booted clean AND the relevant surface responded (e.g. `curl :3001/` 200, `POST :3001/api/copilotkit` 400/200, persona path reachable). Anti-fake-done gate 9 (`.claude/skills/task-verifier/references/anti-fake-done-checklist.md`). N/A only for pure-doc tasks touching zero source/config/hook files, recorded explicitly in evidence.
+- **Localhost runtime proof required for Done** (2026-05-20): no task flips `status: Done` without evidence that `npm run dev` booted clean AND the relevant surface responded. Anti-fake-done gate 9 (`.claude/skills/task-verifier/references/anti-fake-done-checklist.md`). N/A only for pure-doc tasks.
+- **Before any UI/SCREEN work: read [`DESIGN.MD`](./DESIGN.MD)** — color tokens (oklch), layout system, component anatomy, do/don't rules, and Mindtrip competitive patterns. Using hardcoded `gray-*` shades, omitting `prefers-reduced-motion`, or skipping skeletons are regressions. (→ `shadcn`, `tailwind-best-practices`)
+- **Before touching any route or page: check [`sitemap.md`](./sitemap.md)** — it has live/shell/MVP/post status for all 53 routes. Building a page that is already `✅ LIVE` is scope creep; building `⚫ POST` is out-of-phase.
+- **Linear workflow: follow [`linear.md`](./linear.md)** — phase labels (`phase:launch`, `phase:mvp`), branch naming (`ai/san-NNN-spec-id-slug`), PR magic words (`Closes SAN-NNN`), and which prefixes are deprecated (`SCREEN-*`, `EVP-*`). (→ MCP `mcp__0ebfc964__save_issue`)
 
 ## Commands (from `mdeapp/`)
 
@@ -52,7 +57,7 @@ npm run build              # next build
 npm run audit              # npm audit --audit-level=high
 ```
 
-Test runner: Vitest lands W2 (F09); Playwright e2e W3+.
+Test runner: Vitest active (445+ tests, `npm test -- --run`); Playwright e2e active (`mdeapp/e2e/`). Both must be green before any task flips Done.
 
 ## Local dev URLs (verified 2026-05-19)
 
@@ -94,7 +99,7 @@ Servers live in `.mcp.json` (mastra, copilotkit, google-maps-code-assist, gemini
 
 Next.js 16 (App Router, React 19, Turbopack, Tailwind v4) wires CopilotKit 1.55.2's React UI to a local Mastra agent over AG-UI. **Phase 1 hero: Roberto creating an event via AI form-fill at `/host/event/new`** (W3–W4); **Camila's rentals + chat at `/rentals` + `/chat`** (W5–W7). Full onboarding: [`mdeapp/docs/ARCHITECTURE.md`](mdeapp/docs/ARCHITECTURE.md).
 
-Data flow (after F02+F03): **UI** (`src/app/page.tsx`, `<CopilotSidebar>`, `useCoAgent<MdeState>({ name: "pingAgent" })`, `<html lang="en">`) → **runtime** (`src/app/api/copilotkit/route.ts` builds `CopilotRuntime` per request, bridges Mastra via `MastraAgent.getLocalAgents({ mastra })`, `ExperimentalEmptyAdapter`) → **Mastra core** (`src/mastra/index.ts`, in-memory LibSQL + `ConsoleLogger` honoring `LOG_LEVEL`) → **agent** (`src/mastra/agents/index.ts`, `pingAgent` on `google("gemini-3.5-flash")`, thread-scoped working memory, Zod `MdeState` mirroring `src/lib/types.ts`). Tools empty W1; W3 adds `set_event_basics`/`set_venue`/`add_ticket_tier`/`preview_and_publish` (HITL via `renderAndWaitForResponse`); W5+ adds `search_rentals`/`search_events`/`search_grounded_places`.
+Data flow: **UI** (`src/app/page.tsx`, `<html lang="en">`) → **CopilotKit provider** (`src/components/copilot/copilot-kit-provider.tsx`, agent name `"conciergeAgent"`, `threadId` from `ThreadNavProvider`) → **runtime** (`src/app/api/copilotkit/route.ts` builds `CopilotRuntime` per request, bridges Mastra via `getLocalAgentsWithLogging`, `ExperimentalEmptyAdapter`) → **Mastra core** (`src/mastra/index.ts`, in-memory LibSQL + `ConsoleLogger` honoring `LOG_LEVEL`) → **agent** (`src/mastra/agents/index.ts`, `conciergeAgent` on `google("gemini-3.5-flash")`, thread-scoped working memory, Zod `MdeState` mirroring `src/lib/types.ts`). Active tools: `search_rentals` / `search_events` / `search_grounded_places` / HITL approval. Event wizard tools at `/host/event/new`: `set_event_basics` / `set_venue` / `add_ticket_tier` / `preview_and_publish` (HITL via `renderAndWaitForResponse`).
 
 Invariants:
 - Agent **name** in `useCoAgent({ name })` must match the key in `Mastra({ agents: {…} })`.
@@ -116,7 +121,18 @@ When explaining anything (empty tables, infra choices, why a task matters), anch
 | **Lucía** | QA | Playwright + chrome-devtools MCP — E2E flows, console-error sweep |
 | **Tourist** | Restaurants / attractions | `/chat` concierge (W6) — `conciergeAgent`, grounded places |
 
-Surfaces: `/`, `/login`, `/host/event/new`, `/host/events`, `/rentals`, `/chat`, `/admin/*`, `/api/copilotkit`.
+Key surfaces (full map in `sitemap.md`): `/` · `/chat` · `/login` · `/signup` · `/host/event/new` · `/host/events` · `/rentals` · `/events/[slug]` · `/saved` · `/trips` · `/me/tickets` · `/admin/*` · `/api/copilotkit`.
+
+## Key reference documents
+
+| Doc | What it owns | When to read |
+|---|---|---|
+| [`DESIGN.MD`](./DESIGN.MD) | Color tokens, typography, layout system, component anatomy, do/don't | Before any UI/SCREEN task |
+| [`sitemap.md`](./sitemap.md) | Status of all 53 routes (LIVE/SHELL/MVP/POST) + API inventory | Before adding/editing any page or route |
+| [`linear.md`](./linear.md) | Projects, phases, labels, branch naming, cycle, bulk scripts | Before creating/updating Linear issues |
+| [`LESSONS.md`](./LESSONS.md) | Past mistakes + hooks that guard each area | Before touching CopilotKit, Mastra, Maps, cards, grounding |
+| [`mdeapp/docs/ARCHITECTURE.md`](mdeapp/docs/ARCHITECTURE.md) | Full app architecture onboarding | Deep dives into data flow |
+| `plan/prd.md` | PRD v6.0 (10 chunks) | Scope/priority disputes |
 
 ## Working in this repo
 
@@ -124,6 +140,7 @@ Surfaces: `/`, `/login`, `/host/event/new`, `/host/events`, `/rentals`, `/chat`,
 - `.env.local` at repo root is the source of truth for keys.
 - Read the dated/numbered planning docs in `plan/prd/`, `plan/audit/`, `plan/diagrams/` for current direction; legacy `docs/` may be superseded — cross-check `plan/audit/01-plan-audit.md` §11.
 - Use `mde-task-lifecycle` to plan/ship a task; floor before shipping: `/verify-floor`.
+- Linear label taxonomy and deprecated prefixes are in `linear.md` §Labels. Do not use `SCREEN-*`, `EVP-*`, `IMP-*` as new issue prefixes.
 
 ## Legacy app freeze (2026-05-26)
 

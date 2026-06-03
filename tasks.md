@@ -9,6 +9,7 @@ venues: tasks/venues/tasks/INDEX-VENUE.md
 trips: tasks/trips/tasks/INDEX.md
 linear: https://linear.app/sanjiovani/view/mvp-b4f1afdff207
 audit: tasks/notes/audit-01-tasks.md
+linear_audit: tasks/notes/audit-linear.md
 playbook: tasks/notes/improve.md
 ---
 
@@ -193,7 +194,7 @@ Platform shell **SCREEN-001/002/004/006/015/019/020** → [Done below](#screens-
 
 | # | Task | Feature | Use case (real world) | % | Dot | Linear |
 |--:|------|---------|------------------------|--:|:---:|--------|
-| 42 | **SCREEN-018** | Mobile 3-panel shell | **Camila** on iPhone: chat drawer + map + FAB — usable `dvh`, not clipped header | 55 | 🟡 | [SAN-521](https://linear.app/sanjiovani/issue/SAN-521) |
+| 42 | **SCREEN-018** | Mobile 3-panel shell | **Camila** on iPhone: chat drawer + map + FAB — usable `dvh`, not clipped header | 100 | 🟢 | [SAN-489](https://linear.app/sanjiovani/issue/SAN-489) |
 | 43 | **MOB-CK-001** | CK mobile baseline | **Camila** hits 44px Send target with thumb — safe-area on notch iPhones | 60 | 🟡 | [SAN-521](https://linear.app/sanjiovani/issue/SAN-521) |
 | 44 | **MOB-CHAT-001** | Composer + keyboard | **Camila** types rental query — Send stays visible above iOS keyboard | 0 | ⚪ | [SAN-522](https://linear.app/sanjiovani/issue/SAN-522) |
 | 45 | **MAP-011-M** | Single mobile map | **Tourist** switches chat ↔ map — one map instance, no duplicate loaders | 0 | ⚪ | [SAN-524](https://linear.app/sanjiovani/issue/SAN-524) |

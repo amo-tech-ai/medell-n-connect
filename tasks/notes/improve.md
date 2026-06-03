@@ -1,7 +1,7 @@
 ---
 title: Operator queue — how to implement tasks correctly
 updated: 2026-06-03
-companion: tasks.md · plan.md · audit-01-tasks.md
+companion: tasks.md · plan.md · audit-01-tasks.md · audit-linear.md
 purpose: Production-ready execution playbook — tests, skills, MCP, diagrams, evidence
 ---
 

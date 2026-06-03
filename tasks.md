@@ -66,7 +66,7 @@ Commerce deferred → [D1–D5](#deferred--commerce-mvp-exit).
 | 3 | **DATA-041** | `venue_signals` seed | **Carlos:** *"quiet rooftop Provenza"* ranks Relato / O.C.I. above generic Google placeholders | 100 | 🟢 | [SAN-379](https://linear.app/sanjiovani/issue/SAN-379) |
 | 4 | **DATA-008** | Places backfill cron | **Sarah** opens café Details and sees **hours + phone** for Pergamino, not empty panel while agent waits on Google | 40 | 🟡 | [SAN-338](https://linear.app/sanjiovani/issue/SAN-338) |
 | 5 | **PR-16** | Branch protection + Floor | **Sofía:** broken lint/test can't merge to `main` — Camila never hits a red deploy | 70 | 🟡 | [SAN-458](https://linear.app/sanjiovani/issue/SAN-458) |
-| 6 | **MAP-008B** | Map ID on prod | **Tourist** searches restaurants — pins appear on map at Provenza, not blank *"No pins yet"* / DEMO_MAP_ID | 50 | 🟡 | [SAN-369](https://linear.app/sanjiovani/issue/SAN-369) |
+| 6 | **MAP-008B** | Map ID on prod | **Tourist** searches restaurants — pins appear on map at Provenza, not blank *"No pins yet"* / DEMO_MAP_ID | 85 | 🟡 | [SAN-369](https://linear.app/sanjiovani/issue/SAN-369) |
 | 7 | **MAP-002B** | ADK on prod | **Tourist** on prod chat: *"specialty coffee Laureles"* returns grounded café cards (Cloud Run sidecar live on Vercel) | 30 | 🟡 | [SAN-368](https://linear.app/sanjiovani/issue/SAN-368) |
 | 8 | **F13** | Thread / `ai_runs` persistence | **Camila** turn 11 still remembers Laureles budget from turn 1 after Vercel cold-start | 50 | 🟡 | — |
 | 9 | **DATA-EMBED** | Embed API 403 fix | **Camila:** *"2BR near Estadio"* uses full hybrid semantic + keyword fusion, not keyword-only fallback | 30 | 🟡 | — |
@@ -103,8 +103,8 @@ Blocked until **SAN-462** 3/3 (row 1).
 | 18 | **VEN-010** | panel | Restaurant detail panel | **Carlos** taps O.C.I. → slide panel with photos, hours, **Book table** CTA | 90 | 🟡 | [`010`](tasks/venues/tasks/mvp/010-ven-restaurant-detail-panel.md) |
 | 19 | **VEN-011** | routing | Nightlife grounding intent | Agent routes *"rooftop cocktails Provenza"* to nightlife search, not café tool | 70 | 🟡 | [`011`](tasks/venues/tasks/mvp/011-ven-nightlife-grounding-intent.md) |
 | 20 | **VEN-013** | panel | Nightlife detail panel | **Carlos** opens rooftop bar → safety copy, sibling venues, book CTA — mirror restaurant panel | 75 | 🟡 | [`013`](tasks/venues/tasks/mvp/013-ven-nightlife-detail-panel.md) |
-| 21 | **SCREEN-023** | `/restaurants` | Restaurant browse page | **Tourist** browses `/restaurants` with map — no chat required; shares API with concierge | 40 | 🟥 | [`008-scr`](tasks/venues/tasks/mvp/wireframes/008-scr-restaurant-listings-map.md) |
-| 22 | **SCREEN-022** | `/nightlife` | Nightlife browse page | **Carlos** browses `/nightlife` for clubs in Manila/La 70 — blocked on VEN-013 polish | 15 | ⚪ | [`007-scr`](tasks/venues/tasks/mvp/wireframes/007-scr-nightlife-listings-map.md) |
+| 21 | **SCREEN-023** | `/restaurants` | Restaurant browse page | **Tourist** browses `/restaurants` with filters — no chat required; PR merge pending prod | 95 | 🟡 | [SAN-490](https://linear.app/sanjiovani/issue/SAN-490) |
+| 22 | **SCREEN-022** | `/nightlife` | Nightlife browse page | **Carlos** browses `/nightlife` — placeholder shell today; full browse after VEN-013 | 20 | 🟡 | [`007-scr`](tasks/venues/tasks/mvp/wireframes/007-scr-nightlife-listings-map.md) |
 
 *VEN-012 Done (#48): *"reggaeton club El Poblado"* opens nightlife panel, not café tabs.*
 

@@ -8,7 +8,7 @@
 | Check | Result |
 |-------|--------|
 | Restaurant signals with evidence | ✅ 20/20 |
-| Anchor signals with evidence | ⚠️ 0/10 — Phase 1b before café hybrid |
+| Anchor signals with evidence jsonb | ✅ 10/10 (FK `venue_source_evidence` Phase 1b) |
 | Rooftop leaders plausible | ✅ Relato 0.91, O.C.I. 0.96, Sambombi 0.85 |
 | hidden_gem leaders | Mondongos Laureles 0.70, El Botánico 0.621 |
 | No null confidence on restaurant rows | ✅ all ≥ 0.75 |
@@ -38,6 +38,8 @@
 | Role | Name | Date | Verdict |
 |------|------|------|---------|
 | Editorial QA (Patricia) | | | ☐ Pass ☐ Fail |
-| Engineering (Sofía) | auto pre-check 2026-05-30 | 2026-05-30 | ☐ Pass pending commit |
+| Engineering (Sofía) | verify-mis-phase1 9/9 + GQ-S01 | 2026-06-03 | ✅ Pass — see [`DATA-041-verify-2026-06-03.md`](./DATA-041-verify-2026-06-03.md) |
 
 **Fail action:** Downgrade confidence or fix evidence row; do not mark MIS-M1 Done.
+
+**Engineering Done (2026-06-03):** Table, RLS, 30 rows, GQ-S01, app join verified. Patricia editorial ☐ does not block DATA-041 task closure.

@@ -4,10 +4,14 @@ title: venue_signals polymorphic + seed (human QA top 30)
 layer: DATA
 phase: intel-1
 priority: P0
-status: Not Started
+status: Done
+completed: 2026-06-03
 estimated_effort: 6h
 depends_on: [DATA-039, DATA-040]
 unblocks: [DATA-045, SEARCH-003]
+evidence:
+  - ../evidence/DATA-041-verify-2026-06-03.md
+  - ../evidence/DATA-041-venue-signals-human-qa.md
 skills: [mde-supabase, gemini, mde-task-lifecycle]
 related:
   - ../../venues/data/venue-dataplan.md

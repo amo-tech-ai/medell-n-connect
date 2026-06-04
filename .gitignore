@@ -11,7 +11,11 @@
 /mdeapp/
 /CopilotKit/
 /github/
+# `github` is a SYMLINK -> mdeapp/github; the trailing-slash rule above misses it
+/github
 /.wt-*/
+# agent git worktrees (wt-san521, wt-ux-020) — ~3 GB, must never be tracked
+/.worktrees/
 
 # ── Symlink into nested repo + stray backups ───────────────────────────
 # `supabase` -> mdeapp/supabase: the real migration tree lives in the mdeapp repo;

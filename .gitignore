@@ -42,6 +42,9 @@ build/
 
 # ── Editor / tool caches (machine-specific, no project value) ──────────
 .obsidian/
+/.vscode/
+# Infisical secrets-tool config — keep out of version control
+/.infisical.json
 /.cursor/
 /.codex/
 /.playwright/

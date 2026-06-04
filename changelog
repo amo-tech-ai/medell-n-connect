@@ -2,6 +2,20 @@
 
 > Source of truth for what shipped. Newest first. Each entry: date, surface, what changed, verification.
 
+## 2026-06-04 — Progress audit + MVP Linear view
+
+### Tracker
+- Rewrote [`tasks/progres.md`](tasks/progres.md) — systems architect audit: Discovery Beta ~68%, prod readiness ~55%, persona journeys, top 5 next actions.
+- Synced [`tasks.md`](tasks.md): AUTH-011 + MAP-008B → 🟢; MVP view → [`phase:mvp`](https://linear.app/sanjiovani/view/mvp-48ab105e7f0a).
+- Updated [`todo.md`](todo.md) gate table + Discovery Beta checklist.
+
+### Verification
+- Linear: SAN-367 Done · SAN-369 Done · SAN-462 1/3 soak · SAN-368 In Progress
+- `npm test -- --run`: **485/486** — fail: `smoke.test.ts` gemini-3.5-flash agent assertion
+- Prod: `bf40ef9` · local `main`: `57adf17`
+
+---
+
 ## 2026-06-02 — SCREEN-002 chat nav rail + thread list
 
 ### Shipped

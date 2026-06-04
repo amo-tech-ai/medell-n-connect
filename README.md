@@ -33,7 +33,16 @@ See [.gitignore](.gitignore) for the annotated list. Summary:
 - **`.claude/` + `.agents/`** — currently held back: their scraped `mde-maps` reference docs embed the project's **real** Google Maps API keys. Track only after scrubbing.
 - **Heavy/asset/cache dirs** — `services/`, `screenshots/`, `drafts/`, editor caches.
 
+## Security — secrets & pre-push
+
+This is a planning repo, but it has held a real leaked key before, so treat every push as a release of secrets-bearing material until proven otherwise.
+
+- **Run the scan before any push:** `bash scripts/verify-no-secrets.sh` must exit `0`. It scans only *tracked* files (never reads `.env.local` / `.claude` / `.agents`), matches secret **values** not env-var names, and masks anything it surfaces. Full pre-push steps: [`docs/security/pre-push-secret-checklist.md`](docs/security/pre-push-secret-checklist.md).
+- **`.claude/` + `.agents/` stay git-ignored** because their scraped `mde-maps` reference docs embed the project's **real** Google Maps API keys. Do not track them until those references are scrubbed.
+- **Key rotation is deferred by owner decision (2026-06-01).** We are *not* rotating the once-leaked Maps key. Compensating controls instead: keep it out of git/remotes (the scan + checklist), and keep the Google Cloud restrictions tight — referrer allowlist, API restriction, billing + quota caps. Manual Console checklist: [`docs/security/google-maps-key-restrictions.md`](docs/security/google-maps-key-restrictions.md).
+- **Push only to a private remote, only after the scan passes.** Never a public remote.
+
 ## Known follow-ups
 - This repo is **local-only** — add a private remote for backup (see DATA docs / review notes).
-- A real Google Maps key once leaked into a committed console-error audit; it has been redacted. Rotate the key if its exposure window is uncertain.
+- A real Google Maps key once leaked into a committed console-error audit; it has been **redacted and expunged from git history**. Rotation is **deferred by owner decision** — see [Security](#security--secrets--pre-push). Revisit only if the Cloud restrictions can't be confirmed tight.
 - Decide whether to version reusable AI workflows (`.claude/skills/`, `.agents/`) after scrubbing the embedded keys.

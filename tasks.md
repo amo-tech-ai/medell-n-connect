@@ -1,13 +1,13 @@
 ---
 title: mdeai — Task queue (implementation order)
-updated: 2026-06-03
+updated: 2026-06-04
 prod_sha: bf40ef9
 prod_url: https://www.mdeai.co
 companion: plan.md
 wireframes: tasks/wireframes/screens/INDEX.md
 venues: tasks/venues/tasks/INDEX-VENUE.md
 trips: tasks/trips/tasks/INDEX.md
-linear: https://linear.app/sanjiovani/view/mvp-b4f1afdff207
+linear: https://linear.app/sanjiovani/view/mvp-48ab105e7f0a
 audit: tasks/notes/audit-01-tasks.md
 linear_audit: tasks/notes/audit-linear.md
 playbook: tasks/notes/improve.md
@@ -62,15 +62,15 @@ Commerce deferred → [D1–D5](#deferred--commerce-mvp-exit).
 | # | Task | Feature | Use case (real world) | % | Dot | Linear |
 |--:|------|---------|------------------------|--:|:---:|--------|
 | 1 | **SAN-462** | Prod chat synthetic smoke | **Sofía:** 3 nights in a row, prod answers *"1BR Laureles under $80"* + *"salsa this weekend"* without 5xx — merge chat PRs safely | 33 | 🟡 | [SAN-462](https://linear.app/sanjiovani/issue/SAN-462) |
-| 2 | **AUTH-011** | Prod auth checklist | **Camila** signs up on iPhone at mdeai.co, logs in, session persists after refresh — not localhost-only | 40 | 🟡 | [SAN-367](https://linear.app/sanjiovani/issue/SAN-367) |
+| 2 | **AUTH-011** | Prod auth checklist | **Camila** signs up on iPhone at mdeai.co, logs in, session persists after refresh — not localhost-only | 100 | 🟢 | [SAN-367](https://linear.app/sanjiovani/issue/SAN-367) |
 | 3 | **DATA-041** | `venue_signals` seed | **Carlos:** *"quiet rooftop Provenza"* ranks Relato / O.C.I. above generic Google placeholders | 100 | 🟢 | [SAN-379](https://linear.app/sanjiovani/issue/SAN-379) |
 | 4 | **DATA-008** | Places backfill cron | **Sarah** opens café Details and sees **hours + phone** for Pergamino, not empty panel while agent waits on Google | 40 | 🟡 | [SAN-338](https://linear.app/sanjiovani/issue/SAN-338) |
 | 5 | **PR-16** | Branch protection + Floor | **Sofía:** broken lint/test can't merge to `main` — Camila never hits a red deploy | 70 | 🟡 | [SAN-458](https://linear.app/sanjiovani/issue/SAN-458) |
-| 6 | **MAP-008B** | Map ID on prod | **Tourist** searches restaurants — pins appear on map at Provenza, not blank *"No pins yet"* / DEMO_MAP_ID | 85 | 🟡 | [SAN-369](https://linear.app/sanjiovani/issue/SAN-369) |
+| 6 | **MAP-008B** | Map ID on prod | **Tourist** searches restaurants — pins appear on map at Provenza, not blank *"No pins yet"* / DEMO_MAP_ID | 100 | 🟢 | [SAN-369](https://linear.app/sanjiovani/issue/SAN-369) |
 | 7 | **MAP-002B** | ADK on prod | **Tourist** on prod chat: *"specialty coffee Laureles"* returns grounded café cards (Cloud Run sidecar live on Vercel) | 30 | 🟡 | [SAN-368](https://linear.app/sanjiovani/issue/SAN-368) |
-| 8 | **F13** | Thread / `ai_runs` persistence | **Camila** turn 11 still remembers Laureles budget from turn 1 after Vercel cold-start | 50 | 🟡 | — |
-| 9 | **DATA-EMBED** | Embed API 403 fix | **Camila:** *"2BR near Estadio"* uses full hybrid semantic + keyword fusion, not keyword-only fallback | 30 | 🟡 | — |
-| 10 | **OPS-JOURNEY** | Prod journey J05–J20 | **Lucía** runs Carlos nightlife + Sarah brunch prompts on **mdeai.co** and logs PASS before venues stop | 25 | 🟡 | — |
+| 8 | **F13** | Thread / `ai_runs` persistence | **Camila** turn 11 still remembers Laureles budget from turn 1 after Vercel cold-start | 50 | 🟡 | [SAN-548](https://linear.app/sanjiovani/issue/SAN-548) |
+| 9 | **DATA-EMBED** | Embed API 403 fix | **Camila:** *"2BR near Estadio"* uses full hybrid semantic + keyword fusion, not keyword-only fallback | 30 | 🟡 | [SAN-545](https://linear.app/sanjiovani/issue/SAN-545) |
+| 10 | **OPS-JOURNEY** | Prod journey J05–J20 | **Lucía** runs Carlos nightlife + Sarah brunch prompts on **mdeai.co** and logs PASS before venues stop | 25 | 🟡 | [SAN-546](https://linear.app/sanjiovani/issue/SAN-546) |
 
 *Row 9:* embed 403 → `hybridUsed=false`; signal path OK. *Row 10:* [`09-prod-live-journey-matrix.md`](tasks/testing/09-prod-live-journey-matrix.md).
 
@@ -84,8 +84,8 @@ Blocked until **SAN-462** 3/3 (row 1).
 |--:|------|---------|------------------------|--:|:---:|--------|
 | 11 | **SEARCH-002** | Event hybrid UI | **Andrés:** *"salsa events this weekend"* shows ticketed **event cards in chat** (PR #38), not tool-only backend | 60 | 🟡 | [SAN-387](https://linear.app/sanjiovani/issue/SAN-387) |
 | 12 | **UX-023** | `ResultCardShell` | **Camila** sees rental, event, restaurant, café cards with same layout — rating row, CTA strip, photo aspect | 10 | ⚪ | [SAN-437](https://linear.app/sanjiovani/issue/SAN-437) |
-| 13 | **UX-024** | Hover → pin parity | **Camila** hovers Laureles rental card — matching pin pulses on map (desktop) | 0 | ⚪ | — |
-| 14 | **UX-029** | Retire `GroundedPlaceCard` | **Tourist** gets one café card component, not duplicate legacy + new card for same place | 0 | ⚪ | — |
+| 13 | **UX-024** | Hover → pin parity | **Camila** hovers Laureles rental card — matching pin pulses on map (desktop) | 0 | ⚪ | [SAN-438](https://linear.app/sanjiovani/issue/SAN-438) |
+| 14 | **UX-029** | Retire `GroundedPlaceCard` | **Tourist** gets one café card component, not duplicate legacy + new card for same place | 0 | ⚪ | [SAN-443](https://linear.app/sanjiovani/issue/SAN-443) |
 | 15 | **UX-033** | Stale marker cleanup | **Camila** searches events then rentals — old event pins disappear, no ghost markers in El Poblado | 0 | ⚪ | [SAN-323](https://linear.app/sanjiovani/issue/SAN-323) |
 | 16 | **PR-18** | SHA-pin Actions | **Sofía:** CI uses pinned GitHub Action SHAs — supply-chain safe for merge automation | 0 | ⚪ | [SAN-460](https://linear.app/sanjiovani/issue/SAN-460) |
 
@@ -97,31 +97,31 @@ Blocked until **SAN-462** 3/3 (row 1).
 
 ### Phase 2 — Restaurant + nightlife UI
 
-| # | Task | Screen | Feature | Use case (real world) | % | Dot | Spec |
-|--:|------|--------|---------|------------------------|--:|:---:|------|
-| 17 | **VEN-009** | in-chat | Restaurant result cards | **Carlos:** *"Italian dinner El Poblado"* → cards show cuisine, rating, price — not generic PlaceCard | 88 | 🟡 | [`009`](tasks/venues/tasks/mvp/009-ven-restaurant-result-card.md) |
-| 18 | **VEN-010** | panel | Restaurant detail panel | **Carlos** taps O.C.I. → slide panel with photos, hours, **Book table** CTA | 90 | 🟡 | [`010`](tasks/venues/tasks/mvp/010-ven-restaurant-detail-panel.md) |
-| 19 | **VEN-011** | routing | Nightlife grounding intent | Agent routes *"rooftop cocktails Provenza"* to nightlife search, not café tool | 70 | 🟡 | [`011`](tasks/venues/tasks/mvp/011-ven-nightlife-grounding-intent.md) |
-| 20 | **VEN-013** | panel | Nightlife detail panel | **Carlos** opens rooftop bar → safety copy, sibling venues, book CTA — mirror restaurant panel | 75 | 🟡 | [`013`](tasks/venues/tasks/mvp/013-ven-nightlife-detail-panel.md) |
+| # | Task | Screen | Feature | Use case (real world) | % | Dot | Linear |
+|--:|------|--------|---------|------------------------|--:|:---:|--------|
+| 17 | **VEN-009** | in-chat | Restaurant result cards | **Carlos:** *"Italian dinner El Poblado"* → cards show cuisine, rating, price — not generic PlaceCard | 88 | 🟡 | [SAN-292](https://linear.app/sanjiovani/issue/SAN-292) |
+| 18 | **VEN-010** | panel | Restaurant detail panel | **Carlos** taps O.C.I. → slide panel with photos, hours, **Book table** CTA | 90 | 🟡 | [SAN-293](https://linear.app/sanjiovani/issue/SAN-293) |
+| 19 | **VEN-011** | routing | Nightlife grounding intent | Agent routes *"rooftop cocktails Provenza"* to nightlife search, not café tool | 70 | 🟡 | [SAN-294](https://linear.app/sanjiovani/issue/SAN-294) |
+| 20 | **VEN-013** | panel | Nightlife detail panel | **Carlos** opens rooftop bar → safety copy, sibling venues, book CTA — mirror restaurant panel | 75 | 🟡 | [SAN-296](https://linear.app/sanjiovani/issue/SAN-296) |
 | 21 | **SCREEN-023** | `/restaurants` | Restaurant browse page | **Tourist** browses `/restaurants` with filters — no chat required; PR merge pending prod | 95 | 🟡 | [SAN-490](https://linear.app/sanjiovani/issue/SAN-490) |
-| 22 | **SCREEN-022** | `/nightlife` | Nightlife browse page | **Carlos** browses `/nightlife` — placeholder shell today; full browse after VEN-013 | 20 | 🟡 | [`007-scr`](tasks/venues/tasks/mvp/wireframes/007-scr-nightlife-listings-map.md) |
+| 22 | **SCREEN-022** | `/nightlife` | Nightlife browse page | **Carlos** browses `/nightlife` — placeholder shell today; full browse after VEN-013 | 20 | 🟡 | [SAN-491](https://linear.app/sanjiovani/issue/SAN-491) |
 
 *VEN-012 Done (#48): *"reggaeton club El Poblado"* opens nightlife panel, not café tabs.*
 
 ### Phase 3 — Places cache
 
-| # | Task | Feature | Use case (real world) | % | Dot | Spec |
-|--:|------|---------|------------------------|--:|:---:|------|
-| 23 | **VEN-014** | Places cache + field mask | **Sarah** sees Pergamino **opening hours** on panel — one masked Google call, cached 24h | 62 | 🟡 | [`014`](tasks/venues/tasks/mvp/014-ven-places-cache-field-mask.md) |
+| # | Task | Feature | Use case (real world) | % | Dot | Linear |
+|--:|------|---------|------------------------|--:|:---:|--------|
+| 23 | **VEN-014** | Places cache + field mask | **Sarah** sees Pergamino **opening hours** on panel — one masked Google call, cached 24h | 62 | 🟡 | [SAN-297](https://linear.app/sanjiovani/issue/SAN-297) |
 
 ### Phase 4 — Booking (persist ✅ — HITL next)
 
 | # | Task | Feature | Use case (real world) | % | Dot | Spec |
 |--:|------|---------|------------------------|--:|:---:|------|
-| 24 | **VEN-015** | Booking schema + RLS | **Sarah's** booking row visible only to her + Patricia ops — anon can't read `venue_booking_requests` | 85 | 🟡 | [`015`](tasks/venues/tasks/mvp/015-ven-booking-requests-schema.md) |
-| 25 | **VEN-017** | Shared booking sheet | **Carlos** picks date/party size for Mamacita — same RHF form for café, restaurant, nightlife | 80 | 🟡 | [`017`](tasks/venues/tasks/mvp/017-ven-booking-sheet.md) |
-| 26 | **AUTH-009** | JWT → Mastra context | **Camila's** booking tool runs as *her* user — not anonymous server identity | 0 | ⚪ | [`AUTH-009`](tasks/data/tasks-data/AUTH-009-jwt-request-context.md) |
-| 27 | **VEN-019** | CopilotKit HITL booking | **Sarah:** agent shows booking form → *"Confirm send request?"* → she approves before DB write | 0 | ⚪ | [`019`](tasks/venues/tasks/mvp/019-ven-booking-copilot-action.md) |
+| 24 | **VEN-015** | Booking schema + RLS | **Sarah's** booking row visible only to her + Patricia ops — anon can't read `venue_booking_requests` | 85 | 🟡 | [SAN-298](https://linear.app/sanjiovani/issue/SAN-298) |
+| 25 | **VEN-017** | Shared booking sheet | **Carlos** picks date/party size for Mamacita — same RHF form for café, restaurant, nightlife | 80 | 🟡 | [SAN-300](https://linear.app/sanjiovani/issue/SAN-300) |
+| 26 | **AUTH-009** | JWT → Mastra context | **Camila's** booking tool runs as *her* user — not anonymous server identity | 0 | ⚪ | [SAN-547](https://linear.app/sanjiovani/issue/SAN-547) |
+| 27 | **VEN-019** | CopilotKit HITL booking | **Sarah:** agent shows booking form → *"Confirm send request?"* → she approves before DB write | 0 | ⚪ | [SAN-302](https://linear.app/sanjiovani/issue/SAN-302) |
 
 *VEN-021 Done: form POST persists. VEN-020 Done: **Pending** chip on panel after submit.*
 
@@ -129,26 +129,26 @@ Blocked until **SAN-462** 3/3 (row 1).
 
 | # | Task | Feature | Use case (real world) | % | Dot | Spec |
 |--:|------|---------|------------------------|--:|:---:|------|
-| 28 | **VEN-022** | Draft WhatsApp to venue | **Host** gets WA draft: *"Hola, reserva para 4 el viernes en Relato…"* to paste/send | 0 | ⚪ | [`022`](tasks/venues/tasks/mvp/022-ven-draft-venue-whatsapp.md) |
-| 29 | **VEN-023** | Patricia WA outbox | **Patricia** reviews draft, approves, sends to venue — HITL before WhatsApp | 0 | ⚪ | [`023`](tasks/venues/tasks/mvp/023-ven-wa-approval-outbox.md) |
-| 30 | **VEN-024** | Admin booking queue | **Patricia** at `/admin/bookings` sees pending Provenza requests, marks confirmed | 0 | ⚪ | [`024`](tasks/venues/tasks/mvp/024-ven-admin-booking-queue.md) |
+| 28 | **VEN-022** | Draft WhatsApp to venue | **Host** gets WA draft: *"Hola, reserva para 4 el viernes en Relato…"* to paste/send | 0 | ⚪ | [SAN-308](https://linear.app/sanjiovani/issue/SAN-308) |
+| 29 | **VEN-023** | Patricia WA outbox | **Patricia** reviews draft, approves, sends to venue — HITL before WhatsApp | 0 | ⚪ | [SAN-310](https://linear.app/sanjiovani/issue/SAN-310) |
+| 30 | **VEN-024** | Admin booking queue | **Patricia** at `/admin/bookings` sees pending Provenza requests, marks confirmed | 0 | ⚪ | [SAN-311](https://linear.app/sanjiovani/issue/SAN-311) |
 
 ### Phase 6 — Hardening
 
 | # | Task | Feature | Use case (real world) | % | Dot | Spec |
 |--:|------|---------|------------------------|--:|:---:|------|
-| 31 | **VEN-025** | RLS penetration tests | **User B** cannot fetch **User A's** Mamacita booking via API fuzz — proven in CI | 0 | ⚪ | [`025`](tasks/venues/tasks/mvp/025-ven-rls-penetration-tests.md) |
-| 32 | **VEN-026** | Idempotency + duplicate UX | **Sarah** double-taps Book — one row in DB, UI shows existing request not twins | 55 | 🟡 | [`026`](tasks/venues/tasks/mvp/026-ven-booking-idempotency-duplicates.md) |
-| 33 | **VEN-027** | WhatsApp consent | **Sarah** opts in before venue gets WA — legal gate for Colombia outreach | 0 | ⚪ | [`027`](tasks/venues/tasks/mvp/027-ven-whatsapp-consent-suppression.md) |
-| 34 | **VEN-028** | Retry + error recovery | **Carlos** sees *"Could not save — retry"* not silent fail when Supabase down | 0 | ⚪ | [`028`](tasks/venues/tasks/mvp/028-ven-booking-retry-error-recovery.md) |
-| 35 | **VEN-029** | Tool/action registry CI | **Sofía:** `requestVenueBooking` Mastra key = CopilotKit action name — no prod 404 on HITL | 70 | 🟡 | [`029`](tasks/venues/tasks/mvp/029-ven-tool-action-registry-ci.md) |
-| 36 | **VEN-030** | Admin audit log | **Patricia** sees who changed booking from pending → confirmed and when | 0 | ⚪ | [`030`](tasks/venues/tasks/mvp/030-ven-admin-audit-log.md) |
+| 31 | **VEN-025** | RLS penetration tests | **User B** cannot fetch **User A's** Mamacita booking via API fuzz — proven in CI | 0 | ⚪ | [SAN-313](https://linear.app/sanjiovani/issue/SAN-313) |
+| 32 | **VEN-026** | Idempotency + duplicate UX | **Sarah** double-taps Book — one row in DB, UI shows existing request not twins | 55 | 🟡 | [SAN-305](https://linear.app/sanjiovani/issue/SAN-305) |
+| 33 | **VEN-027** | WhatsApp consent | **Sarah** opts in before venue gets WA — legal gate for Colombia outreach | 0 | ⚪ | [SAN-309](https://linear.app/sanjiovani/issue/SAN-309) |
+| 34 | **VEN-028** | Retry + error recovery | **Carlos** sees *"Could not save — retry"* not silent fail when Supabase down | 0 | ⚪ | [SAN-306](https://linear.app/sanjiovani/issue/SAN-306) |
+| 35 | **VEN-029** | Tool/action registry CI | **Sofía:** `requestVenueBooking` Mastra key = CopilotKit action name — no prod 404 on HITL | 70 | 🟡 | [SAN-303](https://linear.app/sanjiovani/issue/SAN-303) |
+| 36 | **VEN-030** | Admin audit log | **Patricia** sees who changed booking from pending → confirmed and when | 0 | ⚪ | [SAN-312](https://linear.app/sanjiovani/issue/SAN-312) |
 
 ### Phase 7 — E2E release gate
 
 | # | Task | Feature | Use case (real world) | % | Dot | Spec |
 |--:|------|---------|------------------------|--:|:---:|------|
-| 37 | **VEN-031** | Playwright venue suite | **Lucía:** signed-in flow — chat → book café → chip pending → `/restaurants` browse — green on CI | 40 | 🟡 | [`031`](tasks/venues/tasks/mvp/031-ven-playwright-venue-screens.md) |
+| 37 | **VEN-031** | Playwright venue suite | **Lucía:** signed-in flow — chat → book café → chip pending → `/restaurants` browse — green on CI | 40 | 🟡 | [SAN-314](https://linear.app/sanjiovani/issue/SAN-314) |
 
 **Venues MVP stop:** VEN-031 + VEN-025 + OPS-JOURNEY J05–J08 on prod.
 
@@ -179,12 +179,12 @@ Blocked until **SAN-462** 3/3 (row 1).
 
 ## Other screens (rows 38–41)
 
-| # | Task | Route | Feature | Use case (real world) | % | Dot | Spec |
-|--:|------|-------|---------|------------------------|--:|:---:|------|
-| 38 | **SCREEN-005** + **SEARCH-001** | `/rentals` | Rental browse + hybrid | **Camila** opens `/rentals` — browse Laureles 1BR cards + map (**today: redirect to chat**) | 25 | 🟥 | [`009-scr`](tasks/wireframes/real-estate/009-scr-rental-card-polish.md) |
-| 39 | **SCREEN-017** | `/login`, `/signup` | Auth polish | **Andrés** logs in from Stripe checkout return URL lands on `/me/tickets`, not broken redirect | 90 | 🟡 | [`017-scr`](tasks/wireframes/screens/017-scr-login-signup-polish.md) |
-| 40 | **EVP-014** | `/host/events` | Host event list | **Roberto** sees *Medellín Tech Meetup* + draft events on `/host/events` | 0 | ⚪ | [`EVP-014`](tasks/events/tasks/MVP/EVP-014-core-host-events-list-page.md) |
-| 41 | **SCREEN-010** | `/` map column | Map exploration panel | **Tourist** drills into map column place list without new chat turn | 0 | ⚪ | [`011-scr`](tasks/maps/wireframes/011-scr-map-exploration-panel.md) |
+| # | Task | Route | Feature | Use case (real world) | % | Dot | Linear |
+|--:|------|-------|---------|------------------------|--:|:---:|--------|
+| 38 | **SCREEN-005** + **SEARCH-001** | `/rentals` | Rental browse + hybrid | **Camila** opens `/rentals` — browse Laureles 1BR cards + map (**today: redirect to chat**) | 25 | 🟥 | [SAN-242](https://linear.app/sanjiovani/issue/SAN-242) · [SAN-386](https://linear.app/sanjiovani/issue/SAN-386) |
+| 39 | **SCREEN-017** | `/login`, `/signup` | Auth polish | **Andrés** logs in from Stripe checkout return URL lands on `/me/tickets`, not broken redirect | 90 | 🟡 | [SAN-112](https://linear.app/sanjiovani/issue/SAN-112) |
+| 40 | **EVP-014** | `/host/events` | Host event list | **Roberto** sees *Medellín Tech Meetup* + draft events on `/host/events` | 0 | ⚪ | [SAN-118](https://linear.app/sanjiovani/issue/SAN-118) |
+| 41 | **SCREEN-010** | `/` map column | Map exploration panel | **Tourist** drills into map column place list without new chat turn | 0 | ⚪ | [SAN-111](https://linear.app/sanjiovani/issue/SAN-111) |
 
 Platform shell **SCREEN-001/002/004/006/015/019/020** → [Done below](#screens--platform-done).
 
@@ -199,7 +199,7 @@ Platform shell **SCREEN-001/002/004/006/015/019/020** → [Done below](#screens-
 | 44 | **MOB-CHAT-001** | Composer + keyboard | **Camila** types rental query — Send stays visible above iOS keyboard | 0 | ⚪ | [SAN-522](https://linear.app/sanjiovani/issue/SAN-522) |
 | 45 | **MAP-011-M** | Single mobile map | **Tourist** switches chat ↔ map — one map instance, no duplicate loaders | 0 | ⚪ | [SAN-524](https://linear.app/sanjiovani/issue/SAN-524) |
 | 46 | **MOB-CARD-001** | Card carousel | **Camila** swipes rental cards horizontally — Book / Details tappable | 0 | ⚪ | [SAN-525](https://linear.app/sanjiovani/issue/SAN-525) |
-| 47 | **AIM-010** | Mobile AI UX | **Tourist** taps *Events* / *Rentals* chips — skeleton while agent streams | 0 | ⚪ | — |
+| 47 | **AIM-010** | Mobile AI UX | **Tourist** taps *Events* / *Rentals* chips — skeleton while agent streams | 0 | ⚪ | [SAN-523](https://linear.app/sanjiovani/issue/SAN-523) |
 | 48 | **AUTH-006** | Mobile OAuth Safari | **Camila** Google login in Mobile Safari completes without cookie loop | 0 | ⚪ | [SAN-527](https://linear.app/sanjiovani/issue/SAN-527) |
 
 ---
@@ -293,4 +293,4 @@ Platform shell **SCREEN-001/002/004/006/015/019/020** → [Done below](#screens-
 5. **Row 37** — VEN-031 after booking spine + prod J05–J08.
 6. **T1–T19** — Phase 2 trips; after venues MVP + AUTH-011 + MAP-008B.
 
-*Verified 2026-06-03 · prod `bf40ef9` · vitest **488/488***
+*Verified 2026-06-04 · prod `bf40ef9` · vitest **485/486** (1 smoke fail) · MVP board: [`phase:mvp` view](https://linear.app/sanjiovani/view/mvp-48ab105e7f0a) · tracker: [`tasks/progres.md`](tasks/progres.md)*

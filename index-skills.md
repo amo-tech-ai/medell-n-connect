@@ -20,7 +20,7 @@ legend:
 | **Scan root** | `.claude/skills/` only — symlinks to `.agents/skills/` |
 | **Load cap** | **≤5 skills** per task — pick one row below |
 | **mdeapp stack** | CopilotKit **1.55.2 (v1)** + Mastra + Gemini **`gemini-3.5-flash`** + Supabase + vis.gl maps |
-| **v2 trap** | `copilotkit-develop` documents **v2** — for **mdeapp** use **`copilotkit-integrations`** + `CopilotKit/examples/integrations/mastra/` |
+| **v2 trap** | `copilotkit-develop` = **v2** — for **mdeapp** use **`copilotkitV1`** + **`copilotkit-integrations`** (`mastra.md`) |
 | **Before Done** | `mde-task-lifecycle` → `task-verifier` + [`checklist.md`](checklist.md) |
 
 ### Load by work type (authoritative routing)
@@ -29,7 +29,7 @@ legend:
 |-----------|------------|------|-----|
 | **Any task / Done gate** | `mde-task-lifecycle` | `task-verifier`, `testing` | — |
 | **CopilotKit runtime / chat UI** | `copilotkit` | `copilotkit-integrations` | copilotkit |
-| **CK hooks / generative UI** | `copilotkit-integrations` | `copilotkit-agui` — adapt v1 from integrations, **not** raw `copilotkit-develop` v2 | copilotkit |
+| **CK hooks / generative UI** | `copilotkitV1` | `copilotkit-integrations` (mastra.md), `copilotkit-agui` — **not** `copilotkit-develop` v2 | copilotkit |
 | **Mastra agents / tools / workflows** | `mastra` | `gemini`, `mastra-smoke-test` | mastra |
 | **Maps / Places / pins** | `mde-maps` | `testing` | google-maps-code-assist |
 | **Supabase / RLS / edge fn** | `mde-supabase` | `task-verifier` | user-supabase |
@@ -37,9 +37,9 @@ legend:
 | **Stripe / tickets** | `mde-stripe` | `mde-supabase` | — |
 | **Ship / PR / commit** | `mde-worktree-pr-flow` | `code-review` | — |
 | **UI polish (shadcn/Tailwind)** | `shadcn` | `tailwind-best-practices` | — |
-| **Screens (`SCREEN-*`)** | `copilotkit-integrations` | `mde-maps` if pins, `testing` | — |
+| **Screens (`SCREEN-*`)** | `copilotkitV1` | `copilotkit-integrations`, `mde-maps` if pins, `testing` | — |
 
-**Paths:** `.claude/skills/copilotkit` · `copilotkit-develop` (v2 reference only) · `copilotkit-integrations` · `gemini` · `mastra` · `mde-maps` · `mde-supabase` · `mde-task-lifecycle` · `tailwind-best-practices`
+**Paths:** `.claude/skills/copilotkitV1` · `copilotkit` · `copilotkit-develop` (v2 reference only) · `copilotkit-integrations` · `gemini` · `mastra` · `mde-maps` · `mde-supabase` · `mde-task-lifecycle` · `tailwind-best-practices`
 
 ---
 
@@ -65,10 +65,11 @@ legend:
 
 | Skill | Score | Path |
 |-------|------:|------|
+| copilotkitV1 | 97 | symlink — **v1 hooks for mdeapp** (1.55.2) |
 | copilotkit | 98 | `.agents` → symlink `.claude` |
 | copilotkit-setup | 96 | symlink |
 | copilotkit-integrations | 98 | symlink — **Mastra wiring** |
-| copilotkit-develop | 88 | symlink — **v2 docs**; mdeapp uses `copilotkit-integrations` + Mastra example |
+| copilotkit-develop | 88 | symlink — **v2 docs**; mdeapp uses `copilotkitV1` + integrations |
 | copilotkit-agui | 92 | symlink — HITL + shared state |
 | copilotkit-debug | 94 | symlink — incident response |
 | mastra | 98 | `.claude/skills/mastra` native |
@@ -98,7 +99,7 @@ legend:
 | Schema / seed | mde-supabase, task-verifier | user-supabase |
 | Tools / rank | mastra, copilotkit-integrations, gemini, testing | user-mastra, gemini-api-docs-mcp |
 | Maps / place_id | mde-maps | google-maps-code-assist |
-| UI / smoke | copilotkit-develop, shadcn, webapp-testing | copilotkit |
+| UI / smoke | copilotkitV1, shadcn, webapp-testing | copilotkit |
 | Embeddings (Phase B) | pgvector, gemini | user-supabase |
 | OpenClaw crawl | open-claw, mde-hostinger | **OCL-013-mvp** — not CTI-019 |
 
@@ -175,12 +176,13 @@ legend:
 
 | Skill | Score | | Phase 1? | Notes |
 |-------|------:|:---:|----------|-------|
+| copilotkitV1 | 97 | 🟢 | Yes | v1 hooks — **mdeapp default** |
 | copilotkit | 98 | 🟢 | Yes | Orchestrator |
 | copilotkit-integrations | 98 | 🟢 | Yes | `MastraAgent.getLocalAgents` |
 | copilotkit-setup | 96 | 🟢 | W1 | Bootstrap |
 | copilotkit-debug | 94 | 🟢 | Always | CORS, SSE, agent down |
 | copilotkit-agui | 92 | 🟢 | W4–W6 | HITL + state |
-| copilotkit-develop | 88 | 🟡 | W2–W10 | **v2-oriented** — use `copilotkit-integrations` + mastra example for mdeapp |
+| copilotkit-develop | 88 | 🟡 | W2–W10 | **v2-oriented** — use `copilotkitV1` + integrations for mdeapp |
 | mastra-smoke-test | 74 | 🟢 | W3+ | Studio smoke |
 | supabase-edge-functions | 82 | 🟢 | W4+ | Redirects to mde-supabase deep refs |
 | code-review | 82 | 🟢 | PRs | CodeRabbit |
@@ -294,7 +296,7 @@ Includes: `ai-building-chatbots-vendor`, `better-chatbot-vendor`, `google-maps-s
 
 | PRD requirement | Skill status | Gap |
 |-----------------|-------------|-----|
-| CopilotKit 1.55.2 + Mastra | 🟢 Full pack | Route UI via **`copilotkit-integrations`** — not v2-only `copilotkit-develop` |
+| CopilotKit 1.55.2 + Mastra | 🟢 Full pack | Route UI via **`copilotkitV1`** + **`copilotkit-integrations`** — not v2-only `copilotkit-develop` |
 | Supabase reuse | 🟢 mde-supabase | Edge fn forensic W5 — use symlink + MCP |
 | Gemini **`3.5-flash`** | 🟢 gemini + MCP | CLAUDE.md registry; CTI-004/011 use `@ai-sdk/google` |
 | Maps W5–W6 | 🟢 mde-maps | Remove `google-maps-api` / `react-google-maps` from default load |

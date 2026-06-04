@@ -16,6 +16,12 @@
 /.wt-*/
 # agent git worktrees (wt-san521, wt-ux-020) — ~3 GB, must never be tracked
 /.worktrees/
+# local-only Explorer shortcuts (absolute-path symlinks into the above) + editor workspace
+/wt-main-clean
+/wt-san521
+/worktrees-all
+/wt-visibility/
+/mdeai-worktrees.code-workspace
 
 # ── Symlink into nested repo + stray backups ───────────────────────────
 # `supabase` -> mdeapp/supabase: the real migration tree lives in the mdeapp repo;

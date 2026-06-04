@@ -10,8 +10,10 @@
       "env": {}
     },
     "copilotkit": {
-      "type": "http",
-      "url": "https://mcp.copilotkit.ai/mcp"
+      "type": "stdio",
+      "command": "/home/sk/mdeai/scripts/mcp-copilotkit.sh",
+      "args": [],
+      "env": {}
     },
     "google-maps-code-assist": {
       "type": "stdio",
@@ -30,6 +32,21 @@
       "url": "https://developerknowledge.googleapis.com/mcp",
       "headers": {
         "X-Goog-Api-Key": "${env:GOOGLE_DEVELOPER_KNOWLEDGE_API_KEY}"
+      }
+    },
+    "gcp": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "gcp-mcp"],
+      "env": {}
+    },
+    "chatwoot": {
+      "type": "stdio",
+      "command": "/home/sk/mdeai/scripts/mcp-chatwoot.sh",
+      "args": [],
+      "env": {
+        "CHATWOOT_URL": "${env:CHATWOOT_URL}",
+        "CHATWOOT_API_TOKEN": "${env:CHATWOOT_API_TOKEN}"
       }
     }
   }

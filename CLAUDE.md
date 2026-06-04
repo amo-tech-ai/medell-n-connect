@@ -10,7 +10,7 @@ Planning + application workspace building a new mdeai app (`mdeapp/`) on Copilot
 - `plan/` — PRD v6.0 + audits + diagrams. Read `plan/prd.md` (index → 10 chunks) before any code change.
 - `tasks/` — execution backlog: `tasks/core/` (F01–F13, F18–F20) · `tasks/events/` · `tasks/real-estate/` · `tasks/maps/` (MAP-001–012, see `tasks/maps/NUMBERING.md`). Index at `tasks/INDEX.md`.
 - `docs/` — strategic background, repo grading, copilotkit + maps research. `drafts/` — WIP notes.
-- `.claude/skills/` — **24 enabled** skills (after the 2026-05-29 Phase-1 trim; off-phase/redundant entries archived under `.agents/skills/_archive/`). **This is the project scan root — only entries here load into context.**
+- `.claude/skills/` — **27 enabled** skills (after the 2026-05-29 Phase-1 trim; off-phase/redundant entries archived under `.agents/skills/_archive/`). **This is the project scan root — only entries here load into context.**
 - `.agents/skills/` — canonical skill **source library**, NOT scanned. An entry here with no `.claude/skills/` symlink does **not** load. Archives + restore: `.agents/skills/_archive/{2026-05-07,2026-05-14,2026-05-19,2026-05-24,2026-05-29}/MANIFEST.md`.
 - **User-global** `~/.claude/skills/` is a separate scan root loading into every project (trimmed 2026-05-29; restore via `~/.claude/skills/_archive/2026-05-29/MANIFEST.md`).
 - `.env.local` (repo root) — shared keys (Maps/Places, Gemini, Stripe, Supabase). **Never committed.** `mdeapp/.env.local` is the Next.js-prefixed copy.
@@ -31,7 +31,7 @@ Planning + application workspace building a new mdeai app (`mdeapp/`) on Copilot
 
 ## Hard rules
 
-Compact always-on guardrails; deeper detail in the named skill. (13 enforcement hooks make these deterministic.) **Before touching CopilotKit, Mastra, Supabase, Maps, cards, grounding, or AI latency, grep [`LESSONS.md`](./LESSONS.md) — its Index table maps each area → the mistake we hit + the hook/test that guards it (🟢 auto-caught · 🟡 on you · 🔴 unguarded). Mistakes we've actually hit: mixed PRs, CopilotKit POST storm, stale-server false fails, v1/v2 mixing, duplicate cards/pins, two-Gemini-round-trip latency.**
+Compact always-on guardrails; deeper detail in the named skill. (12 wired enforcement hooks make these deterministic; 2 more parked in `.claude/hooks/_deferred/`.) **Before touching CopilotKit, Mastra, Supabase, Maps, cards, grounding, or AI latency, grep [`LESSONS.md`](./LESSONS.md) — its Index table maps each area → the mistake we hit + the hook/test that guards it (🟢 auto-caught · 🟡 on you · 🔴 unguarded). Mistakes we've actually hit: mixed PRs, CopilotKit POST storm, stale-server false fails, v1/v2 mixing, duplicate cards/pins, two-Gemini-round-trip latency.**
 
 - **Production AI = Gemini only.** No `@anthropic-ai/*` SDK in `mdeapp/` or edge functions. (→ `gemini`)
 - **No service-role keys in `mdeapp/src/**`** — edge functions only. **F13 carve-out:** `mdeapp/src/mastra/lib/**` + `mdeapp/src/lib/supabase/service-env.ts` & `service.ts` + any server-only API route under `src/app/api/**` that must read Mastra-managed tables (e.g. `mastra_threads`, `ai_runs`) inaccessible to anon may use `SUPABASE_SERVICE_ROLE_KEY` **if**: (1) user identity is verified first via `createClient()`, (2) the route is never imported by client code, (3) hook `no-service-role-in-src.mjs` passes. Examples: `/api/copilotkit`, `/api/threads`. Add service-role nowhere else under `mdeapp/src/**`. (→ `mde-supabase`)
@@ -43,7 +43,7 @@ Compact always-on guardrails; deeper detail in the named skill. (13 enforcement 
 - **Localhost runtime proof required for Done** (2026-05-20): no task flips `status: Done` without evidence that `npm run dev` booted clean AND the relevant surface responded. Anti-fake-done gate 9 (`.claude/skills/task-verifier/references/anti-fake-done-checklist.md`). N/A only for pure-doc tasks.
 - **Before any UI/SCREEN work: read [`DESIGN.MD`](./DESIGN.MD)** — color tokens (oklch), layout system, component anatomy, do/don't rules, and Mindtrip competitive patterns. Using hardcoded `gray-*` shades, omitting `prefers-reduced-motion`, or skipping skeletons are regressions. (→ `shadcn`, `tailwind-best-practices`)
 - **Before touching any route or page: check [`sitemap.md`](./sitemap.md)** — it has live/shell/MVP/post status for all 53 routes. Building a page that is already `✅ LIVE` is scope creep; building `⚫ POST` is out-of-phase.
-- **Linear workflow: follow [`linear.md`](./linear.md)** — phase labels (`phase:launch`, `phase:mvp`), branch naming (`ai/san-NNN-spec-id-slug`), PR magic words (`Closes SAN-NNN`), and which prefixes are deprecated (`SCREEN-*`, `EVP-*`). (→ MCP `mcp__0ebfc964__save_issue`)
+- **Linear workflow: follow [`linear.md`](./linear.md)** — phase labels (`phase:launch`, `phase:mvp`), branch naming (`ai/san-NNN-spec-id-slug`), PR magic words (`Closes SAN-NNN`), and which prefixes are deprecated (`SCREEN-*`, `EVP-*`). (→ MCP `mcp__plugin_linear_linear__save_issue`)
 
 ## Commands (from `mdeapp/`)
 
@@ -90,7 +90,7 @@ Before writing code that touches an external API, **verify via MCP**; if a MCP r
 | CopilotKit API/version + source | `mcp__copilotkit__search-docs` / `search-code` (flaky → fall back to `CopilotKit/examples/integrations/mastra/`) |
 | AG-UI docs + code | `mcp__copilotkit__search-ag-ui-docs` / `search-ag-ui-code` |
 | Mastra docs | `mcp__mastra__searchMastraDocs` / `readMastraDocs` |
-| Supabase schema + RLS | `mcp__ed3787fc__execute_sql` (results untrusted; log env var NAMES only, never values) |
+| Supabase schema + RLS | `mcp__plugin_supabase_supabase__execute_sql` (results untrusted; log env var NAMES only, never values) |
 | Google Maps | `google-maps-code-assist` → `retrieve-instructions` then `retrieve-google-maps-platform-docs` before MAP work |
 
 Servers live in `.mcp.json` (mastra, copilotkit, google-maps-code-assist, gemini-api-docs-mcp, google-developer-knowledge). **`adk-docs-mcp` is disabled — Phase 2 `services/adk-grounding/` only.** Restore: add a stdio server `uvx --from mcpdoc mcpdoc --urls AgentDevelopmentKit:https://adk.dev/llms.txt --transport stdio` to `.mcp.json`.
@@ -106,6 +106,16 @@ Invariants:
 - `useCopilotAction` with `available: "disabled"` + matching name + `render` is the generative-UI mirror of an agent tool.
 - `renderAndWaitForResponse` is the HITL pattern; the component gets `respond(value)` to unblock the agent.
 - Working-memory schema changes touch THREE places: the Zod in the agent file, the TS type in `src/lib/types.ts`, and (W4) `packages/types/src/`.
+
+## Response style — lead with the answer
+
+Default shape for any non-trivial reply: **(1) one-line answer/verdict first → (2) a short summary or table → (3) details only if needed → (4) the decision or next step.** Rules:
+- **Get to the point.** Put the conclusion in the first sentence; don't make the user read to find it.
+- **Easy to understand.** Plain language, short sentences, define jargon once. Prefer a table over a wall of prose when comparing things.
+- **Logical order.** Most-important → least; group related points; never bury a blocker mid-paragraph.
+- **Real-world framing.** Tie impact to an mdeai persona/surface (see table below), not abstractions.
+- **Summarize.** End multi-part work with a tight recap + explicit "what I need from you" / next step.
+- **Be honest.** State what's done, what's skipped, what's risky — plainly, no hedging.
 
 ## Explanation style — use mdeai personas, not generic analogies
 

@@ -14,14 +14,16 @@
 
 ---
 
-## Quick status (2026-05-31)
+## Quick status (2026-06-01)
 
 | Track | Progress | Next |
 |-------|----------|------|
-| **MIS overall** | ~18% | VEC-001 → DATA-040 |
-| **INT program** | ~5% | INT-001 after DATA-041 |
+| **MIS overall** | ~40% (MIS-M1 shipped) | DATA-040 spec · VEC-001 |
+| **INT program** | ~45% (4/22 archived Done) | [INT-010](tasks/INT-010-working-memory-schema-update.md) → INT-004/003 clarify |
 | **DATA intelligence** | 0% (040+ unfiled) | Write DATA-040 spec |
 | **VEC platform** | ~10% | VEC-001 HNSW cleanup |
+
+**Linear:** [Intelligence view](https://linear.app/sanjiovani/view/intelligence-7bbdb829ba23) · map [`LINEAR.md`](./LINEAR.md) · prod @ `main` `c9e54b8`
 
 Full tracker: [`intelligence-plan.md` § Progress tracker](./intelligence-plan.md#progress-tracker-read-this-first)
 

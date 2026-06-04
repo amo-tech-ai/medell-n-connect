@@ -117,6 +117,36 @@ INT-002 (the confidence score must exist to log). Soft-related: INT-005 (regress
 
 ## Verify
 
+### Unit tests — telemetry shape + PII redaction
+
 ```bash
-cd mdeapp && npm run test -- src/lib/__tests__/intelligence-telemetry.test.ts && npm run typecheck
+cd mdeapp && npx vitest run src/lib/__tests__/intelligence-telemetry.test.ts
+# Expected: all assertions green — structured record emitted, no raw query text in output
+```
+
+### Full suite + types
+
+```bash
+cd mdeapp && npm run test && npx tsc --noEmit
+```
+
+### Live log proof (requires `npm run dev`)
+
+```bash
+# Start dev server with debug logging, then send a rental query and grep for the [int-routing] tag
+LOG_LEVEL=debug cd mdeapp && npm run dev &
+sleep 5
+curl -s -X POST http://localhost:3001/api/rentals/search \
+  -H "Content-Type: application/json" \
+  -d '{"queryText":"1BR in Laureles under $80","limit":3}'
+# Then grep server stdout for structured telemetry line:
+# grep '\[int-routing\]' — expect: {"intent":"rental_search","confidence":0.85,"action":"search_now",...}
+```
+
+### Band-distribution check (10 sample queries across three bands)
+
+```bash
+# Manually send 10 queries spanning <0.50, 0.50-0.84, >=0.85 and grep logs:
+# grep '\[int-routing\]' server.log | jq -r '.action' | sort | uniq -c
+# Expected: counts for search_now / clarify / agent — no count of 0 if all bands were exercised
 ```

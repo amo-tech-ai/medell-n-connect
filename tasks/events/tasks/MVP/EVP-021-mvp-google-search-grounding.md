@@ -1,5 +1,6 @@
 ---
 id: EVP-021-mvp
+linear: SAN-124
 legacy_id: EVT-D05
 title: Google Search Grounding query templates
 status: Not Started

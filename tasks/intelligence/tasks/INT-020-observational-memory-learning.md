@@ -86,6 +86,37 @@ INT-012, INT-016
 
 ## Verify
 
+### Unit tests — observation pipeline
+
 ```bash
-cd mdeapp && npx vitest run src/mastra/jobs/ && npx tsc --noEmit
+cd mdeapp && npx vitest run src/mastra/jobs/
+# Expected:
+#   Synthetic interaction stream (5× "rejected" for Envigado) → inferred pref candidate generated
+#   Candidate below 0.6 confidence threshold → NOT written to user_preferences
+#   Candidate at/above 0.6 threshold → written with source="observational", confidence set
+#   Explicit pref (source="explicit") is NEVER overwritten by observational write
+#   Ephemeral observations expire (created_at + TTL < now() → filtered out in candidate scoring)
+```
+
+### Confidence gate proof
+
+```bash
+cd mdeapp && npx vitest run src/mastra/jobs/ -- --reporter=verbose 2>&1 | grep -i "confidence\|threshold\|0\.4\|0\.6"
+# Expected: test names or log lines confirming 0.4 (initial) and 0.6 (write gate) threshold tests pass
+```
+
+### Full suite + types
+
+```bash
+cd mdeapp && npm run test && npx tsc --noEmit
+```
+
+### Observational learning E2E (requires `npm run dev` + seeded interactions)
+
+```
+1. Seed 6× user_interactions: {item_id: various-envigado-apt-ids, action: "rejected", neighborhood: "Envigado"}
+2. Trigger cron job: POST /api/cron/summarize-observations (or Mastra scheduled job)
+3. Check user_preferences: {pref_key: "rejected_neighborhood", pref_value: "Envigado", source: "observational"}
+4. Verify: confidence >= 0.6 (threshold met after 5+ rejections)
+5. Send: "show me rentals" → Envigado results are NOT boosted (negative pref applied)
 ```

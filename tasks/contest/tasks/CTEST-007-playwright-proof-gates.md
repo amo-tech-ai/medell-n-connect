@@ -5,6 +5,7 @@ status: Draft
 priority: P0
 phase: Contest testing
 effort: 1-2d
+owner: codex
 depends_on:
   - CTEST-002
   - CTEST-003
@@ -12,64 +13,120 @@ depends_on:
 skill:
   - testing
   - playwright-cli
+  - task-verifier
+labels:
+  - prefix:CONT
+  - prefix:EVT
+  - track:contest
+  - track:events
+  - phase:phase2
+linear_project: events-platform-46150ec19346
+linear: SAN-539
+evidence: tasks/contest/notes/CTEST-007-evidence.md
+mvp_track: MVP-A
+verified_against:
+  - /home/sk/mdeai/.claude/skills/testing/SKILL.md
+  - /home/sk/mdeai/.claude/skills/playwright-cli/SKILL.md
+  - https://playwright.dev/docs/locators
 docs:
-  - ../../../plan/contests/docs/12-task-proof-gates.md
+  - ../../../../docs/plan/contests/docs/12-task-proof-gates.md
+  - ../docs/05-production-task-standard.md
 ---
 
 # CTEST-007 — Contest Playwright Proof Gates
 
-## Goal
+## 1. Purpose
 
-Define the test suite that prevents fake Done status for contest work.
+Define and maintain the contest E2E suite that blocks fake Done — SQL/RPC proof first, then Playwright on real routes.
 
-## Required Test Specs
+## 2. Goals
 
-| Spec | Flow |
-|---|---|
-| `e2e/contest/host-contest-new.spec.ts` | Roberto creates draft and sees approval card. |
-| `e2e/contest/public-contest.spec.ts` | Fan views public contest and contestant profile. |
-| `e2e/contest/vote-free.spec.ts` | Fan submits valid free vote and receives receipt. |
-| `e2e/contest/vote-negative.spec.ts` | Duplicate/closed/invalid token votes fail. |
-| `e2e/contest/stripe-paid-vote.spec.ts` | Stripe fixture issues paid vote credit via webhook. |
-| `e2e/contest/ticket-qr-checkin.spec.ts` | Paid ticket shows QR; valid/duplicate/invalid scan behavior. |
-| `e2e/contest/judge-scoring.spec.ts` | Judge submits score; locked score cannot change. |
-| `e2e/contest/sponsor-proposal.spec.ts` | Sponsor proposal draft requires approval before send/export. |
+- `mdeapp/e2e/contest/*.spec.ts` covers MVP-A flows + negatives.
+- Done bundle runs with `npm run floor` and contest shard.
+- Fixtures: no live Stripe, WhatsApp, OpenClaw, or Postiz.
 
-## Done Gate Bundle
+## 3. Features
 
-```bash
-cd mdeapp
-npm run test
-npm run lint
-npm run typecheck
-npm run build
-npm run verify:console
-npm run floor
-npx playwright test e2e/contest --project=chromium
+| Spec | Flow | Depends |
+|---|---|---|
+| `host-contest-new.spec.ts` | Roberto draft + approval card | CTEST-004 |
+| `public-contest.spec.ts` | Fan hub + profile | CTEST-006/010 |
+| `contestant-signup.spec.ts` | Signup + URL intake | CTEST-008 |
+| `contestant-profile-editor.spec.ts` | Profile edit + review | CTEST-009 |
+| `contestant-photos.spec.ts` | Upload states | CTEST-009 |
+| `contestant-coach.spec.ts` | Coach without auto-publish | CTEST-009 |
+| `vote-free.spec.ts` | Valid vote + receipt | CTEST-002 |
+| `vote-negative.spec.ts` | Duplicate/closed/invalid | CTEST-002 |
+| `profile-share.spec.ts` | Share + UTM | CTEST-010 |
+| `stripe-paid-vote.spec.ts` | Webhook credit | CTEST-003 (MVP-B) |
+| `ticket-qr-checkin.spec.ts` | QR scan rules | CTEST-003 (MVP-B) |
+| `judge-scoring.spec.ts` | Score lock | CTEST-002 |
+| `sponsor-proposal.spec.ts` | HITL before send | CTEST-005 (MVP-B) |
+| `discovery-sandbox.spec.ts` | No send path | CTEST-011 (MVP-B) |
+| `responsive.spec.ts` | 375/414/768/1024/1440 | CTEST-006 |
+
+## 4. Workflows
+
+1. Add test data factory (one contest, three contestants, judge, fixtures).
+2. Create specs as upstream routes land — **do not** mark CTEST-007 Done until MVP-A specs green.
+3. Run bundle:
+   ```bash
+   cd mdeapp
+   npm run test && npm run lint && npm run typecheck && npm run build
+   npm run verify:console && npm run floor
+   npx playwright test e2e/contest --project=chromium
+   ```
+4. Save traces/screenshots on failure; record in `tasks/contest/notes/CTEST-007-evidence.md`.
+
+## 5. User Journeys
+
+- End-to-end proof for Roberto setup, contestant onboarding, fan vote, Patricia audit — per `12-task-proof-gates.md`.
+
+## 6. Agents
+
+- E2E asserts coach/host cards do not auto-commit publish/vote without HITL.
+
+## 7. Integrations
+
+- Playwright + existing mdeapp `PW_SKIP_WEBSERVER=1` patterns.
+- Cross-ref: `tasks/testing/evidence/` for ship evidence format.
+
+## 8. Summary
+
+Anti-fake-done test gate for the contest vertical.
+
+## 9. Definition Of Done
+
+- [ ] MVP-A specs exist and pass locally.
+- [ ] Test factory documented.
+- [ ] Negative vote/payment/approval tests included.
+- [ ] Responsive spec passes five widths.
+- [ ] Evidence lists all commands with exit codes.
+
+## 10. Tests
+
+| Gate | Command | Expected |
+|---|---|---|
+| Unit | `npm run test` | exit 0 |
+| Lint | `npm run lint` | exit 0 |
+| Build | `npm run build` | exit 0 |
+| Floor | `npm run floor` | exit 0 |
+| Contest E2E | `npx playwright test e2e/contest --project=chromium` | all MVP-A green |
+
+**Do not:** mark Done on docs-only if `mdeapp/src` changed without green E2E; hit production Stripe/WhatsApp.
+
+
+## 11. Mermaid diagrams
+
+### Proof gate order (no fake Done)
+
+```mermaid
+flowchart TD
+  SQL[SQL or RPC proof] --> VIT[Vitest helpers]
+  VIT --> PW[Playwright e2e/contest]
+  PW --> EV[tasks/contest/notes evidence]
+  EV --> DONE[Task Done]
+  PW -.blocked if CTEST-002 not Done.-> VoteRoute["/contests/*/vote"]
 ```
 
-## Acceptance Criteria
-
-- [ ] Test data factory creates one contest, three contestants, one judge, one sponsor lead, one ticket tier.
-- [ ] E2E tests avoid real external charges/messages.
-- [ ] Stripe uses fixtures/test mode only.
-- [ ] Browser screenshots/traces saved on failure.
-- [ ] Evidence files record route, SQL, API, and browser proof.
-
-## Evidence Files
-
-| Task | Evidence path |
-|---|---|
-| CTEST-001 | `tasks/contest/notes/CTEST-001-evidence.md` |
-| CTEST-002 | `tasks/contest/notes/CTEST-002-evidence.md` |
-| CTEST-003 | `tasks/contest/notes/CTEST-003-evidence.md` |
-| CTEST-004 | `tasks/contest/notes/CTEST-004-evidence.md` |
-| CTEST-005 | `tasks/contest/notes/CTEST-005-evidence.md` |
-| CTEST-006 | `tasks/contest/notes/CTEST-006-evidence.md` |
-| CTEST-007 | `tasks/contest/notes/CTEST-007-evidence.md` |
-
-## Do Not Do
-
-- Do not mark tasks Done based on docs alone if app/source/config changed.
-- Do not hit live Stripe, WhatsApp, OpenClaw, or Postiz in E2E.
-- Do not skip negative tests for voting, payments, or approvals.
+**Production standard:** `../docs/05-production-task-standard.md` + `../../../../docs/plan/contests/docs/12-task-proof-gates.md`.

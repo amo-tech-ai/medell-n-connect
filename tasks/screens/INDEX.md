@@ -6,6 +6,15 @@
 **Testing standard:** [`SCREEN-TESTING-STANDARD.md`](SCREEN-TESTING-STANDARD.md)  
 **Master task index:** [`../INDEX.md`](../INDEX.md)
 
+> **Skill caveat — CopilotKit v1 vs v2.** The `copilotkit-develop` and `copilotkit-integrations`
+> skills teach **v2** APIs (`useFrontendTool`, `useAgent`, `useHumanInTheLoop`, `useRenderToolCall`,
+> `createCopilotEndpoint`, `@copilotkit/react`). mdeapp is **pinned to v1.55.2** (CLAUDE.md hard rule),
+> so any screen spec must **translate to v1**: `useCopilotAction` / `useCoAgent` /
+> `renderAndWaitForResponse`, `<CopilotChat>` from `@copilotkit/react-ui` (Input is **not** exported —
+> compose a custom textarea), runtime via `copilotRuntimeNextJSAppRouterEndpoint` +
+> `ExperimentalEmptyAdapter` + `MastraAgent.getLocalAgents`. Agent name must equal the Mastra key
+> (`conciergeAgent`). v2 migration is Phase 2 only.
+
 ---
 
 ## Where specs live

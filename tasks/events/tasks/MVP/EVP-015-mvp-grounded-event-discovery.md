@@ -1,5 +1,6 @@
 ---
 id: EVP-015-mvp
+linear: SAN-119
 legacy_id: EVT-MVP-02
 title: Grounded event discovery
 status: Not Started

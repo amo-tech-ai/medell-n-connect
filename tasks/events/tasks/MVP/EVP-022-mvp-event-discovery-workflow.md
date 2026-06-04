@@ -1,5 +1,6 @@
 ---
 id: EVP-022-mvp
+linear: SAN-125
 legacy_id: EVT-D03
 title: eventDiscoveryWorkflow (Mastra)
 status: Not Started

@@ -82,7 +82,44 @@ INT-003
 
 ## Verify
 
+### Unit tests — readable state shape
+
 ```bash
-cd mdeapp && npm run dev
-# Browser: select pin, ask walkability
+cd mdeapp && npx vitest run \
+  src/platform/contracts/__tests__/map-ui-state.test.ts \
+  src/lib/__tests__/map-ui-summary.test.ts
+# Expected: mapUi shape matches ConciergeWorkingMemory.mapUi; viewport + selectedPinId present
+```
+
+### Full suite + types
+
+```bash
+cd mdeapp && npm run test && npx tsc --noEmit
+```
+
+### Browser proof (requires `npm run dev`)
+
+```
+1. Open http://localhost:3001/rentals
+2. Wait for map to load with rental pins
+3. Click a rental pin — selectedPinId must update
+4. In chat, send: "how walkable is this neighborhood?"
+5. Assert: agent reply references the selected listing (not a generic answer)
+   Network: POST /api/copilotkit request body contains mapUi.selectedPinId
+```
+
+### Agent context proof
+
+```
+6. Pan the map to Envigado (drag map viewport)
+7. Send: "show me options here"
+8. Assert: search results are for Envigado (location bias from viewport — not Laureles or Poblado)
+   Network: search_rentals tool call contains neighborhood matching viewport area
+```
+
+### CopilotKit version guard
+
+```bash
+cd mdeapp && grep '"@copilotkit/' package.json | grep -v "1\.55\."
+# Expected: empty — all CopilotKit packages pinned at 1.55.x
 ```

@@ -1,5 +1,14 @@
-# Moved
+# Moved — canonical specs
 
-All screen + wireframe indexing lives in **[INDEX.md](INDEX.md)** (single source of truth).
+**Edit specs in [`tasks/wireframes/`](../../wireframes/screens/INDEX.md)** (canonical).  
+This folder mirrors platform-shell files for legacy links only.
 
-`00-index.md` is kept only so old links do not 404.
+After editing wireframes, sync:
+
+```bash
+cp tasks/wireframes/screens/002-scr-*.md tasks/screens/
+cp tasks/wireframes/screens/001-scr-*.md tasks/screens/
+# … or run node scripts/verify-scr-wire-pairing.mjs to catch drift
+```
+
+Full index: **[`tasks/wireframes/screens/INDEX.md`](../../wireframes/screens/INDEX.md)**

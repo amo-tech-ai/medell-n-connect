@@ -1,43 +1,21 @@
-# Data tasks (MVP steps 01–25)
+# Data tasks — active backlog (`tasks/PR/tasks-data/`)
 
-Build **in order**. **Canonical folder:** `tasks/data/tasks-data/`. Auth: [`INDEX.md`](INDEX.md).
+**Index:** [`INDEX-data.md`](INDEX-data.md) · **PR execution order:** [`../INDEX.md`](../INDEX.md) · **Done specs (25):** [`../../data/archive/`](../../data/archive/README.md) · **Done AUTH:** [`../../archive/data-A/`](../../archive/data-A/README.md)
 
-**Live audit:** [`../audit-supabase.md`](../audit-supabase.md) · **Plan:** [`../supabase-plan.md`](../supabase-plan.md) · **Index:** [`INDEX-data.md`](INDEX-data.md)
+**Live audit:** [`../../data/audit-supabase.md`](../../data/audit-supabase.md) · **Plan:** [`../../data/supabase-plan.md`](../../data/supabase-plan.md)
 
-**Linear:** [Data view](https://linear.app/sanjiovani/view/data-54425dec37b9) — filter `label:track:data` · titles `DATA-### — …` · SAN-325 = DATA-001 … SAN-359 = DATA-033 · resync [`scripts/linear-import-data-tasks.mjs`](../../../scripts/linear-import-data-tasks.mjs)
+**Linear:** [Data view](https://linear.app/sanjiovani/view/data-54425dec37b9) — `label:track:data`
 
-| Step | File | Domain | Priority |
-|------|------|--------|----------|
-| 01–08 | data-001 … data-008 | Venues + cache | P0–P1 |
-| 09–11 | data-009 … data-011 | Venue migrations + security | P0–P1 |
-| 12–18 | data-012 … data-018 | Events schema | P0–P2 |
-| 19–25 | data-019 … data-025 | **Rentals schema** | P0–P2 |
-| 26–32 | data-026 … data-032 | **Trips schema** | P0–P2 |
-| 33–34 | data-033 … data-034 | **Maps schema** | P1–P2 |
+**Spec audit:** all files in this folder verified **100%** on 2026-06-01 vs `main` @ `c9e54b8` — see [`../VERIFICATION.md`](../VERIFICATION.md).
 
-## Dependency graph
+## PR-linked specs (do not duplicate)
 
-```text
-data-001 → data-002 → data-009 (venues M1–M3 incl. rental price_daily indexes)
-data-001 → data-012 (events) → data-013/016/018
-data-001 → data-019 (rentals) → data-020 → data-021
-data-001 → data-026 (trips) → data-027 → data-029 → data-028
-data-026 → data-030 (golden queries)
-data-026 → data-031/032 (P2 indexes)
-data-001 → data-034 (maps geo inventory) → data-009 / MAP-012
-data-033 (route_cache) → MAP-011
-MAP-005 → data-007 (cache hit-rate audit) → data-008
-data-019 → data-023 (rental golden queries; after data-009 M3)
-data-019 → data-022/024/025 (P2)
-data-001 → data-007 → data-008
-VEC-001 · EVP-003 · AUTH-* · TRIP-* · MAP-005+ (parallel)
-```
+| Spec | PR task | Linear |
+|------|---------|--------|
+| [DATA-048](DATA-048-migration-version-prefix-realign.md) | [PR-04](../tasks/PR-04-c1-migrations.md) | SAN-446 |
+| [DATA-050](DATA-050-out-of-band-base-table-migrations.md) | [PR-08](../tasks/PR-08-restore-postmvp-decision.md) | SAN-445 |
+| [SEARCH-002](SEARCH-002-event-hybrid.md) | GitHub **#38** (not PR-11) | SAN-387 |
 
 ## Skills
 
-| Skill | Use for |
-|-------|---------|
-| `mde-supabase` | migrations, RLS, edge fn audit |
-| `mde-task-lifecycle` | phase gates |
-| `task-verifier` | Done evidence |
-| `pgvector` | VEC-001 with data-001 |
+`mde-supabase` · `mde-task-lifecycle` · `task-verifier` · `mde-worktree-pr-flow` (PR train)

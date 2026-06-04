@@ -110,6 +110,42 @@ INT-005 (CORE stable); **VEC-002** design alignment (soft)
 
 ## Verify
 
+### Migration + RLS proof (Supabase MCP or CLI)
+
 ```bash
-# Supabase MCP or CLI: verify policies
+# Apply migration
+cd mdeapp && supabase migration up
+
+# Verify table exists with RLS enabled
+supabase db query "SELECT relname, relrowsecurity FROM pg_class WHERE relname = 'user_preferences';"
+# Expected: relrowsecurity = true
+
+# Verify policies
+supabase db query "SELECT policyname, cmd FROM pg_policies WHERE tablename = 'user_preferences';"
+# Expected: 'owner only' (ALL) + 'anon denied' (ALL)
+```
+
+### RLS isolation test — user A cannot read user B prefs
+
+```bash
+cd mdeapp && npx vitest run src/lib/supabase/__tests__/user-scoped.test.ts
+# When INT-011 test added: user_preferences rows from user A must not appear in user B's session
+```
+
+### Schema field check
+
+```bash
+supabase db query "
+  SELECT column_name, data_type, is_nullable
+  FROM information_schema.columns
+  WHERE table_name = 'user_preferences'
+  ORDER BY ordinal_position;
+"
+# Expected: id, user_id, domain, pref_key, pref_value (jsonb), confidence (numeric), source, expires_at, created_at, updated_at
+```
+
+### Full suite + types (after migration applied)
+
+```bash
+cd mdeapp && npm run test && npx tsc --noEmit
 ```

@@ -8,7 +8,7 @@
 |---------|------|
 | **Implementation order (CORE + MVP)** | [`../plan.md`](../plan.md) |
 | **Machine queue** | [`linear/core-mvp-order.json`](linear/core-mvp-order.json) |
-| **Linear board sync** | [`linear/04-core-mvp-linear-plan.md`](linear/04-core-mvp-linear-plan.md) |
+| **Linear board sync** | [`linear/04-core-mvp-linear-plan.md`](04-core-mvp-linear-plan.md) |
 | **Status metrics (slim)** | [`INDEX.md`](INDEX.md) |
 | **What shipped** | [`archive/README.md`](archive/README.md) |
 | **ADV / post-MVP** | [`MVP-REQUIRED.md`](MVP-REQUIRED.md) § ADV |

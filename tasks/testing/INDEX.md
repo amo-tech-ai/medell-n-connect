@@ -26,7 +26,7 @@ curl -s -o /dev/null -w "%{http_code}\n" http://localhost:3001/
 2. **Localhost** — HTTP 200 on `/` + pack or Playwright proof.
 3. **Production** — repeat on `https://www.mdeai.co/` before ship/Done claims.
 
-Cursor rule: [`.cursor/rules/mdeai-testing.mdc`](../../.cursor/rules/mdeai-testing.mdc) · Mandate: [00-agent-testing-mandate.md](./00-agent-testing-mandate.md)
+Cursor rule: [`.cursor/rules/mdeai-testing.mdc`](../../.cursor/rules/mdeai-testing.mdc) · Live prod: [`.cursor/rules/mdeai-live-prod-check.mdc`](../../.cursor/rules/mdeai-live-prod-check.mdc) · Mandate: [00-agent-testing-mandate.md](./00-agent-testing-mandate.md)
 
 ## Tools
 
@@ -49,6 +49,7 @@ Cursor rule: [`.cursor/rules/mdeai-testing.mdc`](../../.cursor/rules/mdeai-testi
 | [06-map-pin-sync-smoke.md](./06-map-pin-sync-smoke.md) | Pin/geo API + Playwright sync |
 | [07-supabase-data-smoke.md](./07-supabase-data-smoke.md) | Read-only SQL inventory checks |
 | [08-response-quality-rubric.md](./08-response-quality-rubric.md) | /100 scoring for prompts |
+| [09-prod-live-journey-matrix.md](./09-prod-live-journey-matrix.md) | **Prod live** — events/restaurants/cafés/rentals + J05–J20 journeys |
 | [scripts/chat-smoke.mjs](./scripts/chat-smoke.mjs) | API shape + timing smoke |
 | [scripts/mastra-routing-smoke.mjs](./scripts/mastra-routing-smoke.mjs) | Routing unit tests + APIs |
 | [scripts/maps-smoke.mjs](./scripts/maps-smoke.mjs) | lat/lng + geo backing smoke |

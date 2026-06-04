@@ -4,15 +4,21 @@ mvp_step: 021
 title: VenueBookingSheet + DB persist
 layer: UI
 priority: P0
-status: In Review
-depends_on: [VEN-016, VEN-017]
-unblocks: [VEN-019, VEN-020, VEN-026, VEN-028]
+status: Done
+verified_at: 2026-06-02
+evidence: ./evidence/VEN-021-verify-2026-06-02.md
+merge_sha: bf2599d
+linear: SAN-304
+linear_note: Catalog title says VEN-025; repo task ID is VEN-021. SAN-300 is form-only (VEN-017).
+depends_on: [VEN-015, VEN-016, VEN-017]
+unblocks: [VEN-019, VEN-020, VEN-026, VEN-028, VEB-010]
 skills: [shadcn, copilotkit-develop, mde-supabase]
 doc: ../docs/02-booking-whatsapp.md
-description: Shared booking sheet for café · restaurant · nightclub; persists via MSV-002.
+description: Same VenueBookingForm (RHF + Zod) submit → API persist; no second form implementation.
+form_stack: react-hook-form + zod + shadcn-field
 ---
 
-# VEN-20 — Booking sheet persist
+# VEN-21 — Booking sheet persist
 
 **UI:** [`016-ven-booking-sheet.md`](./016-ven-booking-sheet.md)  
 **Wire:** [`018-ven-booking-copilot-action.md`](./018-ven-booking-copilot-action.md)
@@ -28,7 +34,7 @@ description: Shared booking sheet for café · restaurant · nightclub; persists
 
 ## What we're building
 
-Shared booking form for café · restaurant (nightlife when VEN-013 lands) that persists via `POST /api/venue-booking/request` → `venue_booking_requests` (`source: web`).
+**No new form UI** — reuse `VenueBookingForm` from VEN-017 (React Hook Form + Zod + shadcn Field). This task wires submit → `POST /api/venue-booking/request` → `venue_booking_requests` (`source: web`) for café · restaurant · nightlife.
 
 ## Features
 
@@ -54,14 +60,26 @@ MSV-007 on submit
 
 - [x] Submit creates `venue_booking_requests` row (signed-in; `lib/venues/venue-booking-core.ts`)
 - [x] Honest copy — pending, not confirmed (form + `venue-booking-confirmation-card`)
-- [x] Works from café + restaurant detail panels
-- [ ] Works from nightlife detail panel (VEN-013)
+- [ ] Works from restaurant detail panel (no `restaurant-booking-sheet.tsx` on disk yet)
+- [x] Works from nightlife booking sheet (`venue_kind=nightclub`; VEN-013 detail panel CTA)
 - [x] API idempotency key on web submit (VEN-026 partial — duplicate 409 UX pending)
 - [x] Failure does not show success chip (throws → `role="alert"` on form)
 
 **Disk:** `app/api/venue-booking/request/route.ts`, `submit-venue-booking.ts`, `venue-booking-form.tsx`
 
 **Not in scope yet:** Agent HITL persist path (VEN-019) — tool path separate via VEN-016.
+
+## Related — event venue booking (VEB pack)
+
+| Pack | Table / path | Relationship |
+|------|----------------|--------------|
+| **VEN-015…021** (this task) | `venue_booking_requests` | **Place visits** — café / restaurant / nightclub from `/chat` grounded cards |
+| **VEB-001…018** (`tasks/venues/tasks/event-booking/`) | Same table + future `venue_event_offerings` | **Event proposals** — private dinners, Roberto host wizard, Mamacita partner CTAs |
+
+VEB-010 workflow **reuses** the insert spine from VEN-021; it adds proposal fields, WhatsApp draft (VEN-022), and Patricia queue (VEB-011). Prerequisite on disk: VEN-015 schema ✅ · VEN-021 web persist 🟡 · VEB-001 offerings schema ❌.
+
+Linear: [SAN-304](https://linear.app/sanjiovani/issue/SAN-304) · VEB-010 [SAN-501](https://linear.app/sanjiovani/issue/SAN-501)
+
 ---
 
 ## Verification gate

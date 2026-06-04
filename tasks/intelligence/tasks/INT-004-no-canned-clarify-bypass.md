@@ -3,7 +3,7 @@ id: INT-004
 title: No canned clarify bypass
 phase: CORE
 priority: P0
-status: In Review
+status: Todo
 owner_system: [CopilotKit, App]
 personas: [Camila]
 depends_on: [INT-003]
@@ -90,6 +90,37 @@ INT-003
 
 ## Verify
 
+### Unit tests — canned clarify does NOT fire when slots are present
+
 ```bash
-cd mdeapp && npm run test -- src/lib/__tests__/rental-search-fast-path.test.ts
+cd mdeapp && npx vitest run \
+  src/lib/__tests__/rental-search-fast-path.test.ts \
+  src/lib/__tests__/rental-query-parser.test.ts
+# Expected: shouldInstantRentalClarify("list rentals medellin") = false
+#           shouldInstantRentalClarify("") or zero-slot queries = true (canned only for truly empty)
 ```
+
+### Grep guard — RENTAL_CLARIFY_MESSAGE must not be in routing hot path
+
+```bash
+cd mdeapp && grep -r "RENTAL_CLARIFY_MESSAGE\|showClarify" src/hooks/ src/components/ | grep -v "\.test\."
+# Expected: showClarify only called when confidence < 0.25 with zero extracted signals
+```
+
+### Full suite + types
+
+```bash
+cd mdeapp && npm run test && npx tsc --noEmit
+```
+
+### Browser proof (requires `npm run dev` AND UX-001 + UX-002 green)
+
+```
+1. Open http://localhost:3001/chat
+2. Send: "list rentals in june 1 to 30 $1000 medellin"  ← has budget + dates + cityWide
+3. Assert: NOT the three-bullet generic clarify
+4. Send: "show rentals" (no slots)
+5. Assert: canned single-line clarify IS shown (fallback for truly empty still works)
+```
+
+> ⚠️ **Deployment gate:** Do NOT ship to prod before UX-001 (restore concierge) AND UX-002 (surface RUN_ERROR) are live. See sequencing guard at top of this task.

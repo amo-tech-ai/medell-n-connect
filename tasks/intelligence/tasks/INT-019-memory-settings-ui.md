@@ -81,7 +81,41 @@ INT-011, INT-016
 
 ## Verify
 
+### Component tests
+
 ```bash
-cd mdeapp && npm run dev
-# Browser /settings/memory
+cd mdeapp && npx vitest run src/components/settings/
+# Expected: MemorySettingsPage renders preference list; delete button fires DELETE /api/user/preferences/:id;
+#           "Clear all" shows confirmation modal before deleting
+```
+
+### Full suite + types
+
+```bash
+cd mdeapp && npm run test && npx tsc --noEmit
+```
+
+### Browser proof (requires `npm run dev` + auth)
+
+```
+1. Navigate to http://localhost:3001/settings/memory
+2. Assert: list of saved preferences is shown (neighborhood, budget, dietary etc.)
+3. Click delete on a single preference
+4. Assert: preference disappears from list (no page reload needed)
+   Network: DELETE /api/user/preferences/:id → 200
+5. Click "Clear all memory"
+6. Assert: confirmation dialog appears ("Are you sure?")
+7. Confirm → all preferences deleted, list shows empty state
+   Network: DELETE /api/user/preferences → 200
+8. Navigate away, come back
+9. Assert: empty state persists (not re-populated from stale cache)
+```
+
+### RLS check — user can only delete own prefs
+
+```bash
+# Attempt to DELETE another user's pref ID via API — must return 404 or 403
+curl -s -X DELETE http://localhost:3001/api/user/preferences/ANOTHER-USER-PREF-ID \
+  -H "Authorization: Bearer $USER_A_TOKEN" -o /dev/null -w "%{http_code}"
+# Expected: 404 (row not found under RLS) or 403
 ```

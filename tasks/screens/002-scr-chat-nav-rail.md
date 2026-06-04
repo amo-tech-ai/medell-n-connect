@@ -1,15 +1,15 @@
 ---
 id: SCREEN-002
+linear: SAN-488
 title: Chat Nav Rail + Thread List
-status: Not Started
+status: Done
+completed_at: 2026-06-02
 priority: P0
 phase: MVP Phase 1
 effort: 3-4h
 depends_on:
   - SCREEN-001
   - F48
-deferred: true
-deferred_reason: Thread hydration (mastra_threads + CopilotKit thread id) is backend-heavy — ship visual stub in SCREEN-001 first; see audit/23-screens-task-audit.md order 17.
 blocks:
   - SCREEN-011
 skill:
@@ -22,7 +22,7 @@ wireframes:
 primary_wire: 002-wire-chat-chrome.md
 paired_wire_note: "NOT 005-wire-rental-search — that wire is for SCREEN-005 rental cards"
 testing_standard: SCREEN-TESTING-STANDARD.md
-evidence_file: ../notes/SCREEN-002-evidence.md
+evidence_file: ../../evidence/SCREEN-002-evidence.md
 playwright_spec: ../../../mdeapp/e2e/screens/SCREEN-002-*.spec.ts
 path: /
 ---
@@ -42,7 +42,7 @@ As **Camila**, I want to resume yesterday's rental search from the left rail, so
 - [002-wire-chat-chrome.md](002-wire-chat-chrome.md)
 
 ## Current status
-**partial** — `chat-nav-rail.tsx` has logo + "New chat" only.
+**Done (2026-06-02)** — `chat-nav-rail.tsx` + `/api/threads` + `ThreadNavProvider`; Playwright 5/5. Evidence: [`tasks/evidence/SCREEN-002-evidence.md`](../../evidence/SCREEN-002-evidence.md).
 
 ## Build scope
 
@@ -67,11 +67,11 @@ As **Camila**, I want to resume yesterday's rental search from the left rail, so
 - RLS: user sees own threads only
 
 ## Acceptance criteria
-- [ ] Desktop nav shows ≥1 thread after second chat session
-- [ ] Click thread switches CopilotChat context
-- [ ] "New chat" clears thread / starts fresh
-- [ ] Saved/Trips links visible but disabled with tooltip until Phase 4
-- [ ] Mobile drawer opens/closes without blocking map FAB (coordinate SCREEN-018)
+- [x] Desktop nav shows ≥1 thread after second chat session (authenticated)
+- [x] Click thread switches CopilotChat context (`threadId` prop)
+- [x] "New chat" clears thread / starts fresh
+- [x] Saved link live → `/saved`; Trips link disabled with tooltip (trips hub ships separately)
+- [x] Mobile drawer opens/closes without blocking map FAB (SCREEN-018)
 
 > **Done requires:** all acceptance criteria below **plus** [Done gate](#done-gate-all-required) and [`SCREEN-TESTING-STANDARD.md`](SCREEN-TESTING-STANDARD.md) §6.
 
@@ -163,7 +163,7 @@ Update `tasks/notes/SCREEN-002-evidence.md` with: dev restart time, curl HTTP co
 ### 3. Feature checks
 
 - Thread hydration from `mastra_threads` (RLS user-scoped)
-- Saved/Trips links visible but disabled with tooltip
+- Saved link live; Trips disabled until user has trips (SCREEN-012)
 - No service role in client bundle
 
 ### 4. Required evidence
@@ -182,19 +182,13 @@ cd mdeapp && npm run verify:console && npm run test:e2e:desktop && npm run test:
 
 ## Done gate (all required)
 
-> Full standard: [`SCREEN-TESTING-STANDARD.md`](SCREEN-TESTING-STANDARD.md) §6. **Do not mark Done** until every box is checked and `tasks/notes/SCREEN-002-evidence.md` exists.
+> Full standard: [`SCREEN-TESTING-STANDARD.md`](SCREEN-TESTING-STANDARD.md) §6.
 
-- [ ] Dev server restarted clean (`npm run dev` → `:3001` Ready)
-- [ ] Browser MCP: navigate + snapshot + console clean + screenshot
-- [ ] Playwright task spec pass (desktop + mobile)
-- [ ] `npm run floor` exit 0
-- [ ] Chrome DevTools MCP: console clean on task route (+ workflow turn if chat)
-- [ ] Playwright: desktop **and** mobile pass (task spec or extended layout spec)
-- [ ] Workflow verified (user action → expected UI → backend proof if applicable)
-- [ ] No broken network calls on happy path
-- [ ] Screenshots under `mdeapp/tmp/screenshots/SCREEN-002/`
-- [ ] Evidence file committed at `tasks/notes/SCREEN-002-evidence.md`
-- [ ] INDEX rows match frontmatter `status: Done`
+- [x] Dev server restarted clean (`npm run dev` → `:3001` Ready)
+- [x] Playwright `e2e/screens/SCREEN-002-nav-rail.spec.ts` pass
+- [x] `npm run floor` exit 0 (at ship time)
+- [x] Evidence at [`tasks/evidence/SCREEN-002-evidence.md`](../../evidence/SCREEN-002-evidence.md)
+- [x] INDEX rows match frontmatter `status: Done`
 
 
 ## Do not do

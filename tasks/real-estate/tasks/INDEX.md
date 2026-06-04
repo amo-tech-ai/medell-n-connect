@@ -44,4 +44,4 @@ archived_done: ../../archive/real-estate-A/README.md
 
 ## Data dependencies
 
-[data-019](../../data/tasks-data/data-019-rentals-data-inventory.md) · [data-020](../../data/tasks-data/data-020-leads-rental-fk-columns.md) · [data-021](../../data/tasks-data/data-021-showings-lead-bridge.md) · [data-009 M3](../../data/tasks-data/data-009-schema-migrations-m1-m3.md)
+[data-019](../../data/archive/data-019-rentals-data-inventory.md) · [data-020](../../data/archive/data-020-leads-rental-fk-columns.md) · [data-021](../../data/archive/data-021-showings-lead-bridge.md) · [data-009 M3](../../data/archive/data-009-schema-migrations-m1-m3.md)

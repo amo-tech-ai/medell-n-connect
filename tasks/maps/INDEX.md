@@ -58,7 +58,7 @@ Evidence: `tasks/notes/MAP-###-evidence.md`
 | 3 | **MAP-012A** | [CO spike](./MAP-012A-colombia-aggregate-insights-spike.md) | Not started | MAP-004 ✅ |
 | 4 | **MAP-012** | [neighborhood intel](./MAP-012-neighborhood-intelligence.md) | Not started | MAP-006, MAP-012A |
 | 5 | **MAP-010** | [venue autocomplete](./MAP-010-place-autocomplete-venue.md) | Not started | MAP-005, F34 |
-| 6 | **data-033** | [route_cache](../../data/tasks-data/data-033-route-cache-schema.md) | Not started | data-001 |
+| 6 | **data-033** | [route_cache](../../data/tasks-data/data-033-route-cache-schema.md) | Not started | [data-034 archive](../../data/archive/data-034-maps-geo-inventory.md) |
 | 7 | **MAP-011A** | [compute_routes sidecar](./MAP-011A-adk-compute-routes.md) | Not started | MAP-002B ✅, MAP-002 ✅, data-033 |
 | 8 | **MAP-011** | [routes](./MAP-011-route-previews.md) | Not started | MAP-011A, MAP-004 ✅, data-033 |
 | 9 | **MAP-023** | [Static Maps OG](./MAP-023-static-maps-event-previews.md) | Not started | MAP-004 ✅ |

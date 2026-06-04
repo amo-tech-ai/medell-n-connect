@@ -1,5 +1,6 @@
 ---
 id: EVP-025-mvp
+linear: SAN-128
 legacy_id: EVT-D07
 title: CopilotKit discovery UI (cards, attribution, approval)
 status: Not Started

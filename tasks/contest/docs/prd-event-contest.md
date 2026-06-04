@@ -13,6 +13,29 @@ scope_note: Contests are post-MVP/advanced relative to current mdeai Phase 1; th
 
 # AI Contest, Event, Sponsorship, Voting, and Creator Growth OS
 
+## 2026-06-02 Task Verification Update
+
+The contest pack is **not yet 100% implementation-correct** under the repo-local `task-verifier` rubric. It is a strong planning pack, but current proof shows:
+
+| Area | Current proof | Verdict |
+|---|---|---|
+| Linear | Events Platform project exists. Before sync, issue list was empty; `prefix:EVT` existed and `prefix:CONT` was missing. This pass created `prefix:CONT` and CTEST issues SAN-532 through SAN-544. | Synced; re-check before execution to avoid duplicates. |
+| App routes | `mdeapp/src/app` has event, ticket, rental, restaurant, auth, and CopilotKit routes; no `/contests` or contestant profile routes exist yet. | Contest routes not implemented. |
+| Supabase | `mdeapp/supabase/migrations` has event/sponsor/realtime foundations; no contest core schema migration exists yet. | Contest DB not set up. |
+| Shadcn | Project is Next.js 16, Tailwind v4, shadcn base-nova, lucide, and only core UI components installed. | Contest forms must add/use Field, Input Group, Select, Tabs, Table, Sheet/Drawer as needed. |
+| Screens | Existing wireframe doc covered only a subset of MVP screens. | Added missing contestant signup/profile/coach/discovery surfaces. |
+| Task spec quality | Existing CTEST-000..007 specs are useful but do not all follow the full ten-section task template. | Added CTEST-012 to normalize specs before execution. |
+
+Immediate additions from this pass:
+
+- `CTEST-008` for contestant signup, Instagram/public URL intake, and profile extraction.
+- `CTEST-009` for contestant profile editing, photo uploads, casting/event preparation, and CopilotKit coaching.
+- `CTEST-010` for public contestant voting/share pages and growth loops.
+- `CTEST-011` for governed OpenClaw/Firecrawl discovery and approved invite drafts.
+- `CTEST-012` for task template normalization, Linear sync, labels, and verification evidence.
+
+Updated product rule: a contestant can paste an Instagram or public portfolio URL to draft a profile, but the system must never bypass platform terms, scrape private content, or auto-contact anyone. URL extraction is draft-only, source-attributed, and approval-gated.
+
 > Product thesis: **mdeai becomes the AI operating system for contests, live events, sponsorships, influencers, and experiential marketing.** Beauty contests are the primary wedge because they combine identity, stage production, ticketing, voting, sponsors, live audiences, creators, local businesses, and high-emotion fan participation.
 
 ## Non-Negotiable System Rules

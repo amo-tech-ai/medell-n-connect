@@ -3,7 +3,8 @@ id: INT-001
 title: Shared intent + slot schema
 phase: CORE
 priority: P0
-status: In Progress
+status: Done
+closed: 2026-06-01  # committed origin/main c9e54b8 (intent-slots.ts → extract-intent-slots tool, wired into concierge.ts); fast-path API intact per prod synthetic smoke run 26760735915 (success, https://www.mdeai.co)
 owner_system: [Mastra, Gemini]
 personas: [Camila, Roberto, Tourist]
 depends_on: []

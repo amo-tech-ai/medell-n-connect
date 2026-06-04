@@ -4,8 +4,12 @@ mvp_step: 020
 title: Booking status chips on detail panels
 layer: UI
 priority: P1
-status: Not Started
+status: Done
+linear: SAN-307
 depends_on: [VEN-021]
+evidence: ./evidence/VEN-020-verify-2026-06-02.md
+merge_sha: 3772d79
+verified_at: 2026-06-03
 skills: [shadcn, copilotkit-develop]
 doc: ../docs/02-booking-whatsapp.md
 description: Status chip on Cafe/Restaurant/Nightlife detail when user has pending booking.
@@ -47,8 +51,10 @@ Reflects Patricia + WA pipeline
 
 ## Acceptance
 
-- [ ] Chip reflects DB status for current user + place_id
-- [ ] Copy matches doc 02 table — no false "Confirmed"
+- [x] Chip reflects DB status for current user + place_id (RLS client query)
+- [x] Copy matches honest mapping — no false "Confirmed"
+- [x] Nightlife → `venue_kind=nightclub`
+- [x] RLS fetch proof on `ChIJven021proof01` (`prove-ven-020-status-fetch.mjs`)
 ---
 
 ## Verification gate

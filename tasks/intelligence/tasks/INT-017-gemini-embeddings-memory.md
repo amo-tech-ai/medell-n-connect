@@ -87,8 +87,46 @@ VEC-003, INT-016
 
 ## Verify
 
+### Pre-implementation: verify embedding model name via MCP
+
 ```bash
-# Verify gemini embedding model name BEFORE implementation:
+# ALWAYS run this before touching any embedding model name in code:
 # mcp__gemini-api-docs-mcp__search_docs('embedding models')
-cd mdeapp && npx vitest run src/lib/embeddings/ && npx tsc --noEmit
+# Expected: confirm current model ID (e.g. "gemini-embedding-001") and vector dimensions (768)
+# Model names change — do not hardcode without MCP verification
+```
+
+### Unit tests — embedding generation
+
+```bash
+cd mdeapp && npx vitest run \
+  src/lib/embeddings/ \
+  src/mastra/lib/__tests__/query-embedding.test.ts
+# Expected:
+#   embedText returns Float32Array of length 768
+#   API key absent → returns null gracefully (no throw)
+#   Model dimension assertion: vector length === 768
+```
+
+### Live embedding smoke (requires GOOGLE_GENERATIVE_AI_API_KEY in .env.local)
+
+```bash
+cd mdeapp && node -e "
+  const { embedQueryText } = require('./src/mastra/lib/query-embedding');
+  embedQueryText('test rental in Laureles').then(v => console.log('dims:', v?.length ?? 'null (no key)'));
+"
+# Expected: dims: 768  OR  dims: null (no key — acceptable for CI without key)
+```
+
+### Vector dimension lock assertion
+
+```bash
+cd mdeapp && grep -r "vector(768)\|dimensions.*768\|768.*dimension" src/ supabase/
+# Expected: consistent 768 everywhere — mismatch between embedding output and table column type causes silent failures
+```
+
+### Full suite + types
+
+```bash
+cd mdeapp && npm run test && npx tsc --noEmit
 ```

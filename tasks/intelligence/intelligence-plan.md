@@ -88,7 +88,7 @@ VEC-001 → DATA-039 → DATA-040 → DATA-041 → DATA-042 → DATA-043 → DAT
 
 **Migration rule:** 1 file = 1 concern. Never signals + embeddings + cache together.
 
-**Linear:** [`11-intelligence-views.md`](../linear/11-intelligence-views.md) · `node scripts/linear-import-intelligence-tasks.mjs`
+**Linear:** [`11-intelligence-views.md`](11-intelligence-views.md) · `node scripts/linear-import-intelligence-tasks.mjs`
 
 ### Plans vs shipped
 
@@ -402,7 +402,7 @@ flowchart TB
 
 | **Linear title format:** `{SPEC-ID} — readable title` · Labels: `track:intelligence`, `phase:intel-1`, `prefix:DATA`, etc.
 
-**Linear title prefixes (frozen):** MAP, EVT, RE, VEN, DATA, UX, PAY, OPS, TEST, AI — per [`linear.md`](../linear/linear.md). **INT / VEC / SEARCH** tasks use disk IDs + labels (`track:intelligence`, `layer:vector`, `track:search`) — not necessarily title prefixes.
+**Linear title prefixes (frozen):** MAP, EVT, RE, VEN, DATA, UX, PAY, OPS, TEST, AI — per [`linear.md`](linear/docs/linear.md). **INT / VEC / SEARCH** tasks use disk IDs + labels (`track:intelligence`, `layer:vector`, `track:search`) — not necessarily title prefixes.
 
 **Do not create:** duplicate `RESTAURANTS-SEARCH-*` — use GS-007 or SEARCH-*.
 
@@ -963,7 +963,7 @@ event_live_updates INSERT → edge notify → concierge working memory refresh
 | Grounding | [`../grounding-search/tasks/INDEX.md`](../grounding-search/tasks/INDEX.md) |
 | Venues MVP | [`../venues/tasks/mvp/mvp-index.md`](../venues/tasks/mvp/mvp-index.md) |
 | MVP execution | [`../MVP-EXECUTION.md`](../MVP-EXECUTION.md) |
-| Linear hub | [`../linear/linear.md`](../linear/linear.md) |
+| Linear hub | [`../linear/linear.md`](linear/docs/linear.md) |
 
 ---
 
@@ -977,7 +977,7 @@ When creating individual task files from this registry:
 4. Linear: `node scripts/linear-import-data-tasks.mjs` after DATA rows added
 5. Commit slice: one migration OR one tool — never both in one commit
 
-**Next spec to write:** [`DATA-040-embedding-jobs.md`](../data/tasks-data/DATA-040-embedding-jobs.md) (template for Phase 1 pack).
+**DATA-040:** Done — [`DATA-040-embedding-jobs.md`](../data/archive/DATA-040-embedding-jobs.md) (archived).
 
 ---
 

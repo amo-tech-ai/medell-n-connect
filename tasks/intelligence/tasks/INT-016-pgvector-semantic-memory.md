@@ -109,6 +109,39 @@ VEC-001, VEC-002, INT-011
 
 ## Verify
 
+### Migration + extension proof
+
 ```bash
-# pgvector skill scripts + Supabase MCP
+cd mdeapp && supabase migration up
+
+# Verify pgvector extension enabled
+supabase db query "SELECT extname FROM pg_extension WHERE extname = 'vector';"
+# Expected: vector
+
+# Verify table + HNSW index exists
+supabase db query "SELECT indexname FROM pg_indexes WHERE tablename = 'user_memory_embeddings';"
+# Expected: user_memory_embeddings_embedding_idx (or similar HNSW index)
+```
+
+### RLS filter-inside-function proof
+
+```bash
+supabase db query "
+  SELECT proname, prosrc FROM pg_proc WHERE proname = 'match_user_memory';
+" | grep "auth.uid()"
+# Expected: auth.uid() appears INSIDE the function body (not filtered by PostgREST after return)
+```
+
+### Semantic search proof (requires embedding seeded)
+
+```bash
+cd mdeapp && npx vitest run src/mastra/lib/__tests__/query-embedding.test.ts
+# When INT-017 ships: npx vitest run src/lib/embeddings/
+# Expected: vector(768) dimensions match gemini-embedding-001 output
+```
+
+### Full suite + types
+
+```bash
+cd mdeapp && npm run test && npx tsc --noEmit
 ```

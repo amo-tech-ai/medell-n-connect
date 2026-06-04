@@ -1,5 +1,6 @@
 ---
 id: EVP-027-mvp
+linear: SAN-130
 legacy_id: EVT-D10
 title: Discovery test plan
 status: Not Started

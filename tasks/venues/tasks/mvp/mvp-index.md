@@ -40,9 +40,9 @@
 |------|------|------|--------------------------|
 | **09** | [009-ven-restaurant-result-card](009-ven-restaurant-result-card.md) | Restaurant cards | 🟡 In Review |
 | **10** | [010-ven-restaurant-detail-panel](010-ven-restaurant-detail-panel.md) | Restaurant detail | 🟡 In Review |
-| **11** | [011-ven-nightlife-grounding-intent](011-ven-nightlife-grounding-intent.md) | Nightlife intent | 🟡 In Progress (tool only) |
-| **12** | [012-ven-grounded-kind-split](012-ven-grounded-kind-split.md) | Café vs nightclub routing | 🔴 In Progress (bug) |
-| **13** | [013-ven-nightlife-detail-panel](013-ven-nightlife-detail-panel.md) | Nightlife detail | 🔴 Not started |
+| **11** | [007a-ven-nightlife-grounding-intent](007a-ven-nightlife-grounding-intent.md) | Nightlife intent | 🟡 In Progress (tool only) |
+| **12** | [007b-ven-grounded-kind-split](007b-ven-grounded-kind-split.md) | Café vs nightclub routing | 🔴 In Progress (bug) |
+| **13** | [07c-ven-nightlife-detail-panel](07c-ven-nightlife-detail-panel.md) | Nightlife detail | 🔴 Not started |
 
 **Intelligence (parallel):** [INT-001…005](../../../intelligence/tasks/INDEX.md) · gate **INT-008** after step **12**
 

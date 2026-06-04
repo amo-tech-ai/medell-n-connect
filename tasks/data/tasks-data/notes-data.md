@@ -464,8 +464,8 @@ Want me to patch the DATA-010/011/021 specs with these MCP findings (counts, P0 
 **Note:** Live restaurant count is **43/43** with place_id (was 44 at DATA-004 audit; dedupe migration). Contract still passes.
 
 ### Updates applied
-- [`data-006-golden-queries.md`](tasks/data/tasks-data/data-006-golden-queries.md) → `status: Done`, `layer_a: Done`, `layer_b: Open`
-- [`INDEX-data.md`](tasks/data/tasks-data/INDEX-data.md) → DATA-006 🟢 Layer A 100%; pack **17/35 ≈ 49%**
+- [`data-006-golden-queries.md`](../data/archive/data-006-golden-queries.md) → `status: Done`, `layer_a: Done`, `layer_b: Open`
+- [`INDEX-data.md`](./INDEX-data.md) → DATA-006 🟢 Layer A 100%; active specs in this folder
 - **Linear [SAN-336](https://linear.app/sanjiovani/issue/SAN-336/imp-166-data-006-golden-eval-queries-cafe-restaurant-nightclub)** → Done
 
 ### Remaining Layer B (app track — does not block DATA-006 Layer A)

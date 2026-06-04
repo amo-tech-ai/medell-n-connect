@@ -85,6 +85,37 @@ INT-013, INT-014
 
 ## Verify
 
+### Full test suite (memory + ranking + RLS)
+
 ```bash
-cd mdeapp && npm run test
+cd mdeapp && npm run test && npx tsc --noEmit
+# Expected: all suites green including INT-011 migration, INT-012 interaction logging,
+#           INT-013 preference retrieval, INT-014 ranking boost
+```
+
+### RLS isolation test (must be included in evidence file)
+
+```bash
+cd mdeapp && npx vitest run src/lib/supabase/__tests__/user-scoped.test.ts
+# Expected: user A cannot read user B's user_preferences or user_interactions rows
+```
+
+### localhost boot proof (required in evidence file)
+
+```bash
+cd mdeapp && npm run dev &
+sleep 5
+curl -s http://localhost:3001/ -o /dev/null -w "%{http_code}"
+# Expected: 200 — server booted clean, no startup errors
+```
+
+### Evidence file location
+
+```
+tasks/testing/evidence/YYYY-MM-DD/int-015-memory-evidence.md
+# Must contain:
+#   - localhost boot screenshot or curl 200 proof
+#   - RLS denial test result
+#   - Preference→search bias E2E walkthrough
+#   - Ranking boost before/after result comparison
 ```

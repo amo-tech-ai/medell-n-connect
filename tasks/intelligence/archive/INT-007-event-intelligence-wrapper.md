@@ -3,7 +3,8 @@ id: INT-007
 title: Event intelligence wrapper
 phase: MVP
 priority: P1
-status: Not Started
+status: Done
+closed: 2026-06-01  # committed origin/main c9e54b8 (use-event-search-fast-path.ts + event-discovery-workflow.ts, events hybrid via #32/#34); LIVE — prod synthetic smoke run 26760735915 events query → event-card on https://www.mdeai.co (success)
 owner_system: [Mastra, Gemini]
 personas: [Roberto, Andrés]
 depends_on: [INT-001, INT-005]

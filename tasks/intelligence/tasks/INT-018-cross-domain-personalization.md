@@ -98,6 +98,36 @@ INT-016, INT-007, INT-008
 
 ## Verify
 
+### Unit tests — cross-domain preference propagation
+
 ```bash
-cd mdeapp && npm run test -- src/lib/personalization/
+cd mdeapp && npx vitest run src/lib/personalization/
+# Expected:
+#   Rental Laureles preference propagates as neighborhood bias to restaurant + event search
+#   Café quiet preference propagates to rental workspace_score signal boost
+#   Test isolation: domain A pref does NOT leak to unrelated domain B (no false cross-pollination)
+#   Agent calls domain-specific tool (search-restaurants vs search-rentals) — no giant single-agent call
+```
+
+### Cross-domain E2E (requires `npm run dev` + seeded prefs)
+
+```
+1. Set rental pref: preferred_neighborhood = "El Poblado"
+2. Send: "find me a good dinner spot"  (restaurant query, no neighborhood)
+3. Assert: restaurant results are near El Poblado (cross-domain bias applied)
+4. Send: "show events this weekend"  (event query, no neighborhood)
+5. Assert: events near El Poblado surface (cross-domain propagated to events too)
+```
+
+### No-giant-agent guard
+
+```bash
+cd mdeapp && grep -r "conciergeAgent\|searchAgent" src/mastra/agents/ | grep -v "\.test\." | grep -i "all\|every\|universal"
+# Expected: empty — no single agent handling all domains; specialist routing preserved
+```
+
+### Full suite + types
+
+```bash
+cd mdeapp && npm run test && npx tsc --noEmit
 ```

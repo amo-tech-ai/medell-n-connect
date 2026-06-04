@@ -3,16 +3,24 @@ title: MVP Scope
 status: Strategic appendix
 date: 2026-05-24
 related:
-  - ../../../plan/contests/docs/11-mvp-scope.md
-  - ../../../plan/contests/docs/12-task-proof-gates.md
-  - ../../../plan/contests/docs/13-security-checklist.md
+  - ../prd-event-contest.md
+  - ./04-verification-report-2026-06-02.md
 ---
 
 # MVP Scope
 
-This is the short execution copy of the contest MVP boundary. The deeper numbered version is [11-mvp-scope.md](../../../plan/contests/docs/11-mvp-scope.md).
+This is the short execution copy of the contest MVP boundary. The deeper version is [prd-event-contest.md](../prd-event-contest.md).
 
-## Build First
+## MVP tracks (execution order)
+
+| Track | Tasks | Ship when |
+|---|---|---|
+| **MVP-A** | CTEST-000 → 001 → 002 → 004 → 005 → 006 → 008 → 009 → 010 → 007 (core specs) | Free vote ledger + host workspace + contestant signup/profile + public vote page + E2E |
+| **MVP-B** | CTEST-003, 011, sponsor/WhatsApp surfaces in 006 | After MVP-A green: paid tickets/votes, discovery sandbox |
+
+Vote UI (`/contests/*/vote`) is **blocked** until CTEST-002 RPCs pass SQL proof.
+
+## Build First (full vertical — split by track above)
 
 | Area | MVP scope |
 |---|---|

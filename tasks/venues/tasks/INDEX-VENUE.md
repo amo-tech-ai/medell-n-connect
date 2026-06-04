@@ -111,9 +111,9 @@ Map shell, card pattern, detail architecture — before nightlife-specific panel
 |------:|----|--------|------|--------|------------|----------|-------|
 | 13 | [VEN-009](mvp/009-ven-restaurant-result-card.md) | [SAN-292](https://linear.app/sanjiovani/issue/SAN-292) | Restaurant result card | 🟡 | DATA-004 | P0 | Card shell — browse page shipped; chat card polish remains |
 | 14 | [VEN-010](mvp/010-ven-restaurant-detail-panel.md) | [SAN-293](https://linear.app/sanjiovani/issue/SAN-293) | Restaurant detail panel | 🟡 | VEN-009 | P0 | Slide panel + booking CTA pattern |
-| 15 | [VEN-011](mvp/011-ven-nightlife-grounding-intent.md) | [SAN-294](https://linear.app/sanjiovani/issue/SAN-294) | Nightlife grounding intent | 🟡 | DATA-005 | P0 | Tool query normalization |
-| 16 | [VEN-012](mvp/012-ven-grounded-kind-split.md) | [SAN-295](https://linear.app/sanjiovani/issue/SAN-295) | Grounded café vs nightlife split | 🟢 | VEN-011 | **P0** | PR #48 — Linear Done 2026-06-03 |
-| 17 | [VEN-013](mvp/013-ven-nightlife-detail-panel.md) | [SAN-296](https://linear.app/sanjiovani/issue/SAN-296) | Nightlife detail panel | 🟢 | VEN-012 | P0 | Linear Done 2026-06-03 |
+| 15 | [VEN-011](007a-ven-nightlife-grounding-intent.md) | [SAN-294](https://linear.app/sanjiovani/issue/SAN-294) | Nightlife grounding intent | 🟡 | DATA-005 | P0 | Tool query normalization |
+| 16 | [VEN-012](007b-ven-grounded-kind-split.md) | [SAN-295](https://linear.app/sanjiovani/issue/SAN-295) | Grounded café vs nightlife split | 🟢 | VEN-011 | **P0** | PR #48 — Linear Done 2026-06-03 |
+| 17 | [VEN-013](07c-ven-nightlife-detail-panel.md) | [SAN-296](https://linear.app/sanjiovani/issue/SAN-296) | Nightlife detail panel | 🟢 | VEN-012 | P0 | Linear Done 2026-06-03 |
 
 ### VEN-012 — routing (was 🔥)
 

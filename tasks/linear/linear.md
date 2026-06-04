@@ -15,11 +15,11 @@ aliases: [docs/linear.md]
 |------|------|
 | [MDEAPP project](https://linear.app/sanjiovani/project/mdeapp-099cd7795071/issues) | All issues (~275) |
 | [Phase 1 initiative](https://linear.app/sanjiovani/initiative/phase-1-mdeai-mvp-launch-c968b744a1a8) | Target **2026-06-17** (estimate) |
-| **MVP dashboard** | [`MVP-EXECUTION.md`](../MVP-EXECUTION.md) — next 10, blockers, deps |
-| **Progress changelog** | [Initiative Updates](https://linear.app/sanjiovani/initiative/phase-1-mdeai-mvp-launch-c968b744a1a8/overview) — weekly; playbook [`12-linear-official-practices.md`](./12-linear-official-practices.md) |
+| **MVP dashboard** | [`MVP-EXECUTION.md`](MVP-EXECUTION.md) — next 10, blockers, deps |
+| **Progress changelog** | [Initiative Updates](https://linear.app/sanjiovani/initiative/phase-1-mdeai-mvp-launch-c968b744a1a8/overview) — weekly; playbook [`12-linear-official-practices.md`](12-linear-official-practices.md) |
 | Operator checklist | [`todo.md`](../../todo.md) |
-| MVP exit gates | [`MVP-REQUIRED.md`](../MVP-REQUIRED.md) |
-| Naming audit | [`NAMING-CLEANUP-REPORT.md`](./NAMING-CLEANUP-REPORT.md) |
+| MVP exit gates | [`MVP-REQUIRED.md`](MVP-REQUIRED.md) |
+| Naming audit | [`NAMING-CLEANUP-REPORT.md`](NAMING-CLEANUP-REPORT.md) |
 
 **Architecture frozen 2026-05-31** — ship MVP proofs; no more task-system refactors.
 
@@ -49,7 +49,7 @@ Linear titles use **SPEC-ID** (`PAY-001`, `EVT-013`, `UX-003`). Disk filenames m
 **Allowed prefixes:** MAP, EVT, RE, VEN, TRIP, AUTH, DATA, UX, PAY, OPS, TEST, AI  
 **Deprecated in titles:** IMP-*, EVP-*, SCREEN-*, F32/F48, RNT/AIA/ATH/UIX catalog
 
-**Canonical map:** [`mvp-canonical-titles.json`](./mvp-canonical-titles.json) · **Queue:** [`mvp-queue.json`](./mvp-queue.json)
+**Canonical map:** [`mvp-canonical-titles.json`](mvp-canonical-titles.json) · **Queue:** [`mvp-queue.json`](mvp-queue.json)
 
 ---
 
@@ -61,12 +61,12 @@ Run this after any bulk Linear change or when views look empty.
 
 | Check | Expected | Command / path |
 |-------|----------|----------------|
-| MVP dashboard | Next 10 + blockers | [`../MVP-EXECUTION.md`](../MVP-EXECUTION.md) |
-| Machine queue | PAY→EVT chain | [`mvp-queue.json`](./mvp-queue.json) |
-| Title map | 22 P0/P1 rows | [`mvp-canonical-titles.json`](./mvp-canonical-titles.json) |
-| Last title sync | 22 updated, 0 errors | [`mvp-title-sync-log.json`](./mvp-title-sync-log.json) |
+| MVP dashboard | Next 10 + blockers | [`../MVP-EXECUTION.md`](MVP-EXECUTION.md) |
+| Machine queue | PAY→EVT chain | [`mvp-queue.json`](mvp-queue.json) |
+| Title map | 22 P0/P1 rows | [`mvp-canonical-titles.json`](mvp-canonical-titles.json) |
+| Last title sync | 22 updated, 0 errors | [`mvp-title-sync-log.json`](mvp-title-sync-log.json) |
 | Operator todo | No IMP-* rows | [`../../todo.md`](../../todo.md) |
-| Progress tracker | PAY/EVT spec IDs | [`../progres.md`](../progres.md) |
+| Progress tracker | PAY/EVT spec IDs | [`../progres.md`](progres.md) |
 
 ```bash
 cd /home/sk/mdeai
@@ -110,13 +110,13 @@ Initiative: Phase 1 — mdeai MVP launch
         └── 🔮 Phase 2 / deferred
 ```
 
-Milestone detail: [`02-views-sort.md`](./02-views-sort.md) · Legacy catalog: [`07-mvp.md`](./07-mvp.md)
+Milestone detail: [`02-views-sort.md`](02-views-sort.md) · Legacy catalog: [`07-mvp.md`](07-mvp.md)
 
 ---
 
 ## Saved views (labels only — never title text)
 
-Create or fix in Linear UI. Full copy-paste: [`09-views-setup.md`](./09-views-setup.md) · [`10-mvp-module-views.md`](./10-mvp-module-views.md)
+Create or fix in Linear UI. Full copy-paste: [`09-views-setup.md`](09-views-setup.md) · [`10-mvp-module-views.md`](10-mvp-module-views.md)
 
 | View | Filter |
 |------|--------|
@@ -130,7 +130,7 @@ Create or fix in Linear UI. Full copy-paste: [`09-views-setup.md`](./09-views-se
 | **INTELLIGENCE** | `project:MDEAPP label:track:intelligence` |
 | **INTEL Phase 1 (frozen)** | `project:MDEAPP label:phase:intel-1` |
 
-Setup: [`11-intelligence-views.md`](./11-intelligence-views.md) · Queue: [`intelligence-queue.json`](./intelligence-queue.json)
+Setup: [`11-intelligence-views.md`](11-intelligence-views.md) · Queue: [`intelligence-queue.json`](intelligence-queue.json)
 
 | **AUTH** | `project:MDEAPP (label:prefix:ATH OR label:stack:supabase)` |
 | **POST-MVP** | `project:MDEAPP label:phase:post-mvp` |
@@ -155,10 +155,10 @@ Todo  →  In Progress  →  In Review  →  Done
 
 | Column | Who moves |
 |--------|-----------|
-| **Todo** | Top = [`mvp-queue.json`](./mvp-queue.json) order |
+| **Todo** | Top = [`mvp-queue.json`](mvp-queue.json) order |
 | **In Progress** | Agent / you (≤3) |
 | **In Review** | Agent after floor + evidence |
-| **Done** | **User only** — [`04-completion-approval.md`](./04-completion-approval.md) |
+| **Done** | **User only** — [`04-completion-approval.md`](04-completion-approval.md) |
 
 Import scripts map disk `Done` → **In Review**, not Done.
 
@@ -169,15 +169,15 @@ Import scripts map disk `Done` → **In Review**, not Done.
 ### Start work
 
 1. Read spec under `tasks/**`
-2. Find SAN in description, [`import-log.json`](./import-log.json), or frontmatter
+2. Find SAN in description, [`import-log.json`](import-log.json), or frontmatter
 3. Linear → **In Progress**
 4. Branch: `ai/san-###-slug` from `mdeapp/`
 
 ### Open PR
 
 1. PR body mentions `SAN-###`
-2. Linear → **In Review** ([`GITHUB-LINEAR-SETUP.md`](./GITHUB-LINEAR-SETUP.md))
-3. Small commits per [`tasks/commit/00-commit-playbook.md`](../commit/00-commit-playbook.md)
+2. Linear → **In Review** ([`GITHUB-LINEAR-SETUP.md`](GITHUB-LINEAR-SETUP.md))
+3. Small commits per [`tasks/commit/00-commit-playbook.md`](00-commit-playbook.md)
 
 ### Ship slice
 
@@ -205,10 +205,10 @@ node scripts/linear-sort-todo.mjs              # Todo manual order
 
 ## Pull order
 
-1. [`MVP-EXECUTION.md`](../MVP-EXECUTION.md) — primary dashboard
+1. [`MVP-EXECUTION.md`](MVP-EXECUTION.md) — primary dashboard
 2. [`todo.md`](../../todo.md) — checklist
-3. [`mvp-queue.json`](./mvp-queue.json) — deps + order
-4. [`10-mvp-module-views.md`](./10-mvp-module-views.md) — view filters
+3. [`mvp-queue.json`](mvp-queue.json) — deps + order
+4. [`10-mvp-module-views.md`](10-mvp-module-views.md) — view filters
 
 Do not pull from 🔮 deferred milestones while 🚨 Launch Critical is open.
 
@@ -220,7 +220,7 @@ Do not pull from 🔮 deferred milestones while 🚨 Launch Critical is open.
 
 | Script | When |
 |--------|------|
-| `linear-sync-mvp-titles.mjs` | Align titles to [`mvp-canonical-titles.json`](./mvp-canonical-titles.json) |
+| `linear-sync-mvp-titles.mjs` | Align titles to [`mvp-canonical-titles.json`](mvp-canonical-titles.json) |
 | `linear-fetch-all-issues.mjs` | Before/after bulk edits |
 | `linear-restore-track-labels.mjs` | UX/Data views empty |
 | `linear-apply-stack-labels.mjs` | Refresh `stack:*` |
@@ -235,8 +235,8 @@ Logs: `mvp-title-sync-log.json`, `track-labels-restore-log.json`, `data-import-l
 
 | Integration | Doc |
 |-------------|-----|
-| GitHub ↔ SAN | [`GITHUB-LINEAR-SETUP.md`](./GITHUB-LINEAR-SETUP.md) |
-| Cursor delegate | [`06-linear-claude-code.md`](./06-linear-claude-code.md) |
+| GitHub ↔ SAN | [`GITHUB-LINEAR-SETUP.md`](GITHUB-LINEAR-SETUP.md) |
+| Cursor delegate | [`06-linear-claude-code.md`](06-linear-claude-code.md) |
 
 Delegate: `@Cursor … [repo=amo-tech-ai/mdeapp]` on the issue.
 
@@ -260,24 +260,24 @@ Delegate: `@Cursor … [repo=amo-tech-ai/mdeapp]` on the issue.
 | File | Role |
 |------|------|
 | **linear.md** (this file) | Hub — setup, verify, sync |
-| [09-views-setup.md](./09-views-setup.md) | View URL + filter copy-paste |
-| [10-mvp-module-views.md](./10-mvp-module-views.md) | Module view detail |
-| [mvp-canonical-titles.json](./mvp-canonical-titles.json) | SAN → SPEC-ID map |
-| [mvp-queue.json](./mvp-queue.json) | P0 queue + dependencies |
-| [NAMING-CLEANUP-REPORT.md](./NAMING-CLEANUP-REPORT.md) | Migration audit |
-| [04-completion-approval.md](./04-completion-approval.md) | Done gate |
-| [08-linear-improve.md](./08-linear-improve.md) | Backlog (non-blocking) |
-| [12-linear-official-practices.md](./12-linear-official-practices.md) | Linear docs + Method → MDEAPP mapping |
-| [templates/initiative-update.md](./templates/initiative-update.md) | Weekly Initiative changelog template |
-| [templates/project-update.md](./templates/project-update.md) | MDEAPP project update (when workspace enables) |
+| [09-views-setup.md](09-views-setup.md) | View URL + filter copy-paste |
+| [10-mvp-module-views.md](10-mvp-module-views.md) | Module view detail |
+| [mvp-canonical-titles.json](mvp-canonical-titles.json) | SAN → SPEC-ID map |
+| [mvp-queue.json](mvp-queue.json) | P0 queue + dependencies |
+| [NAMING-CLEANUP-REPORT.md](NAMING-CLEANUP-REPORT.md) | Migration audit |
+| [04-completion-approval.md](04-completion-approval.md) | Done gate |
+| [08-linear-improve.md](08-linear-improve.md) | Backlog (non-blocking) |
+| [12-linear-official-practices.md](12-linear-official-practices.md) | Linear docs + Method → MDEAPP mapping |
+| [templates/initiative-update.md](initiative-update.md) | Weekly Initiative changelog template |
+| [templates/project-update.md](project-update.md) | MDEAPP project update (when workspace enables) |
 
 ---
 
 ## Quick start
 
 1. Open [MVP EXECUTION](https://linear.app/sanjiovani/view/mvp-b4f1afdff207) — filter `label:phase:launch`
-2. Read [`MVP-EXECUTION.md`](../MVP-EXECUTION.md) next 10
+2. Read [`MVP-EXECUTION.md`](MVP-EXECUTION.md) next 10
 3. Open disk spec; note `SAN-###`
 4. Implement → floor → evidence → PR → **In Review**
 5. You approve → **Done**
-6. **Weekly:** post Initiative update (`Shift+U`) — template [`templates/initiative-update.md`](./templates/initiative-update.md)
+6. **Weekly:** post Initiative update (`Shift+U`) — template [`templates/initiative-update.md`](initiative-update.md)

@@ -7,6 +7,8 @@ Structured specs, audits, and roadmaps for **mdeapp** + Supabase project `zkwcby
 | Path | Purpose |
 |------|---------|
 | [`plan/`](plan/) | Architecture roadmaps, audits (17–22), product schema — **active reference** |
+| [`../PR/tasks-data/`](../PR/tasks-data/INDEX-data.md) | **Active DATA specs** — open / in-progress / blocked |
+| [`archive/`](archive/) | **Done DATA specs** (25 files, 2026-06-01) |
 | [`auth/`](auth/) | **Open auth tasks** AUTH-005, 009, 011 — Done → [`../archive/data-A/`](../archive/data-A/README.md) |
 | [`supabase/`](supabase/) | Supabase README + links to audits & skills |
 | [`diagrams/`](diagrams/) | Mermaid sources (auth journeys, RLS, etc.) |

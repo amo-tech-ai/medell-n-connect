@@ -30,7 +30,7 @@ Skipping any of the three is a **process failure**, same as skipping lint.
 | Hit **both** localhost and `https://www.mdeai.co/` when the change affects prod-deployed surfaces | Mark Done from code review alone |
 | Save evidence under `tasks/testing/evidence/YYYY-MM-DD/` | Claim PASS without a results file when the task spec requires evidence |
 
-**User only steps in for:** login/passkey, billing, secrets you cannot access, or explicit approval to move Linear **Done** (see [`tasks/linear/04-completion-approval.md`](../linear/04-completion-approval.md)).
+**User only steps in for:** login/passkey, billing, secrets you cannot access, or explicit approval to move Linear **Done** (see [`tasks/linear/04-completion-approval.md`](04-completion-approval.md)).
 
 ---
 

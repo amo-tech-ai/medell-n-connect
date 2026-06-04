@@ -112,6 +112,57 @@ INT-001 (shared intent/slot schema), INT-005 (regression fixture to extend). Sof
 
 ## Verify
 
+### Unit tests — slot extraction for restaurant + venue intents
+
 ```bash
-cd mdeapp && npm run test -- src/mastra/agents/__tests__/concierge.test.ts && npm run typecheck
+cd mdeapp && npx vitest run \
+  src/mastra/lib/__tests__/intelligence-restaurant-search.test.ts \
+  src/mastra/tools/__tests__/search-restaurants-logic.test.ts \
+  src/mastra/agents/__tests__/concierge.test.ts
+# Expected:
+#   "romantic dinner in El Poblado under $80" → intent=restaurant_search, vibe=romantic, budget=80
+#   "vegan lunch near Laureles for 4" → dietary=vegan, partySize=4, neighborhood=Laureles
+#   "birthday venue for 20 people with music" → intent=venue_search, capacity=20, needs=[music]
+```
+
+### Tool routing assertion
+
+```bash
+cd mdeapp && npx vitest run \
+  src/mastra/tools/__tests__/search-restaurants-tool-fallback.test.ts \
+  src/lib/__tests__/restaurant-search-fast-path.test.ts
+# Expected: restaurant intent → search-restaurants called; venue intent → search-grounded-places called
+```
+
+### Full suite + types + build
+
+```bash
+cd mdeapp && npm run test && npx tsc --noEmit && npm run build
+```
+
+### API smoke (requires `npm run dev`)
+
+```bash
+# Restaurant search — expect Supabase source, real results
+curl -s -X POST http://localhost:3001/api/restaurants/search \
+  -H "Content-Type: application/json" \
+  -d '{"neighborhood":"El Poblado","limit":3}' | jq '{source, count: (.results | length)}'
+
+# Venue search via grounded places
+curl -s "http://localhost:3001/api/grounded/search?q=event+venue+El+Poblado&limit=3" | jq '{count: (.places | length)}'
+```
+
+### No-generic-clarify guard
+
+```bash
+# "romantic dinner in El Poblado" must NOT trigger the canned rental clarify ask
+cd mdeapp && grep -r "shouldInstantRentalClarify\|RENTAL_CLARIFY_MESSAGE" src/ | grep -v "\.test\." | grep -i "restaurant\|venue"
+# Expected: empty — restaurant/venue paths must not touch rental clarify logic
+```
+
+### Map rules check
+
+```bash
+cd mdeapp && grep -r "AdvancedMarker" src/components/ | grep -v "mapId"
+# Expected: empty — every AdvancedMarker has a mapId on its parent Map
 ```

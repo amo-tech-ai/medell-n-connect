@@ -1,5 +1,7 @@
 {
-  "updated": "2026-05-30",
+  "updated": "2026-06-01",
+  "linear_view": "https://linear.app/sanjiovani/view/intelligence-7bbdb829ba23",
+  "disk_map": "tasks/intelligence/LINEAR.md",
   "rule": "Linear title = {SPEC-ID} — {real-world title}. INT specs: tasks/intelligence/tasks/.",
   "count": 56,
   "tasks": [

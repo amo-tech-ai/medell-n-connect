@@ -1,5 +1,6 @@
 ---
 id: EVP-024-mvp
+linear: SAN-127
 legacy_id: EVT-D06
 title: Places API enrichment for discovered events
 status: Not Started

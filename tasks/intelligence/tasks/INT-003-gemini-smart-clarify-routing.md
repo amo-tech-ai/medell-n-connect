@@ -3,7 +3,7 @@ id: INT-003
 title: Gemini smart clarify routing
 phase: CORE
 priority: P0
-status: Not Started
+status: Todo
 owner_system: [Mastra, Gemini]
 personas: [Camila]
 depends_on: [INT-001, INT-002]
@@ -96,7 +96,38 @@ INT-002, INT-001
 
 ## Verify
 
+### Unit tests — parser routes 0.50–0.84 band to agent (not canned)
+
 ```bash
-cd mdeapp && npm run dev
-# Manual: hero query on :3001
+cd mdeapp && npx vitest run \
+  src/lib/__tests__/rental-query-parser.test.ts \
+  src/lib/__tests__/rental-search-fast-path.test.ts \
+  src/mastra/agents/__tests__/concierge.test.ts
+# Expected: all green; hero query confidence ≥ 0.85 takes fast-path; 0.50-0.84 routes to conciergeAgent
 ```
+
+### Full suite + types
+
+```bash
+cd mdeapp && npm run test && npx tsc --noEmit
+```
+
+### Browser proof (requires `npm run dev` AND UX-001 green on prod)
+
+```
+1. Open http://localhost:3001/chat or /rentals
+2. Send: "list rentals in june 1 to 30 $1000 medellin"
+3. Assert: response is NOT the canned RENTAL_CLARIFY_MESSAGE three-bullet ask
+4. Assert: response asks about neighborhood (Laureles / Poblado / Envigado) or shows search results
+5. Reply: "Laureles"
+6. Assert: rental cards + map pins appear (search_rentals tool was called)
+```
+
+### Network assertion (browser DevTools or playwright)
+
+```
+POST /api/copilotkit → response contains "Laureles" or "Poblado" or tool call "search_rentals"
+NOT: static string "What are your preferred dates, budget, and setup?"
+```
+
+> ⚠️ **Blocked until UX-001** restores `conciergeAgent` on prod. Local dev only until then.

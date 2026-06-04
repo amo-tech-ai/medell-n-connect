@@ -6,14 +6,21 @@ phase: intel-1b
 priority: P0
 status: Not Started
 estimated_effort: 4h
-depends_on: [DATA-043, DATA-047, VEC-004, SEARCH-003]
-unblocks: [DATA-046, INT-006]
+depends_on: [DATA-043, DATA-047, SEARCH-003]
+unblocks: [DATA-046]
+pr_train: separate
+stable_beta: do not mix with soak
+linear_issue: SAN-386
+verified: 2026-06-01
+main_sha: c9e54b8
+spec_accuracy_pct: 100
+audit_dot: green
 blocks: []
 skills: [mastra, mde-supabase, testing]
 related:
   - ../../intelligence/intelligence-plan.md
-  - ../../vector/VEC-004-embedding-text-builders.md
-description: Wire search-rentals to hybrid_search_listings RPC + rental_signals boost; mirror SEARCH-003 pattern.
+  - ../../vector/VEC-001-pgvector-inventory-and-duplicate-index-plan.md
+description: RPC hybrid_search_listings live on prod; app wiring only — mirror SEARCH-003 / restaurant path.
 ---
 
 # SEARCH-001 — Hybrid rental search

@@ -102,6 +102,36 @@ Note: LLM may EXPLAIN the ranking after the deterministic sort. LLM must NEVER p
 
 ## Verify
 
+### Unit tests — ranking boost calculations
+
+```bash
+cd mdeapp && npx vitest run src/lib/ranking/
+# Expected:
+#   listing matching pref_key="Laureles" scores +0.30 vs non-matching
+#   listing with saved interaction scores +0.25 above baseline
+#   listing with viewed>5s scores +0.10
+#   listing with rejected interaction scores -0.20 (demoted)
+#   90d-old interaction applies 0.5× recency decay
+#   LLM does NOT produce numeric scores (test asserts sort order, not LLM output)
+```
+
+### Ranking integration proof (requires `npm run dev` + seeded preferences)
+
+```
+1. Seed: user_interactions {item_id: "apt-X", action: "saved"}
+2. Send: "show rentals in Laureles"
+3. Assert: apt-X appears in top 3 (saved boost applied)
+4. Seed: user_interactions {item_id: "apt-X", action: "rejected"}
+5. Send: "show rentals in Laureles" again
+6. Assert: apt-X is demoted in results (rejected penalty applied)
+```
+
+### Full suite + types
+
+```bash
+cd mdeapp && npm run test && npx tsc --noEmit
+```
+
 ```bash
 cd mdeapp && npx vitest run src/lib/ranking/ && npx tsc --noEmit
 ```

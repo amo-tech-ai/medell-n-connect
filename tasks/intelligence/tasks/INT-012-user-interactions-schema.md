@@ -109,6 +109,45 @@ INT-011
 
 ## Verify
 
+### Migration + RLS proof
+
 ```bash
-cd mdeapp && npm run test -- src/lib/interactions/
+cd mdeapp && supabase migration up
+
+# Verify RLS enabled
+supabase db query "SELECT relname, relrowsecurity FROM pg_class WHERE relname = 'user_interactions';"
+# Expected: relrowsecurity = true
+
+# Verify owner-only policy
+supabase db query "SELECT policyname FROM pg_policies WHERE tablename = 'user_interactions';"
+```
+
+### Unit tests — log-interaction + RLS cross-user denial
+
+```bash
+cd mdeapp && npx vitest run src/lib/interactions/
+# Expected: log-interaction mock writes correct item_type/action/metadata shape;
+#           RLS test confirms user A cannot select user B rows
+```
+
+### Interaction logging proof (requires `npm run dev`)
+
+```
+1. Open http://localhost:3001/rentals
+2. Click a rental card (triggers "viewed" action)
+3. Save a rental (triggers "saved" action)
+4. Check browser network: no PII in metadata payload (only item_id, item_type, action)
+```
+
+### No-PII guard
+
+```bash
+cd mdeapp && grep -r "logInteraction\|log_interaction" src/ | grep -v "\.test\." | grep -i "email\|phone\|name\|query"
+# Expected: empty — raw user text must not appear in interaction metadata
+```
+
+### Full suite + types
+
+```bash
+cd mdeapp && npm run test && npx tsc --noEmit
 ```

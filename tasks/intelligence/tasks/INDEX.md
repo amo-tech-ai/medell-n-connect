@@ -41,8 +41,8 @@ Parallel platform work (do not block CORE): **VEC-001…003** before INT-016.
 |------:|----|--------|-------|-------|---|--------|---------|
 | 1 | [INT-001](../archive/INT-001-shared-intent-slot-schema.md) | [SAN-404](https://linear.app/sanjiovani/issue/SAN-404) | Shared intent + slot schema | CORE | P0 | ✅ Done · archived | — |
 | 2 | [INT-002](../archive/INT-002-rental-parser-monthly-date-city.md) | [SAN-405](https://linear.app/sanjiovani/issue/SAN-405) | Rental parser monthly/date/city | CORE | P0 | ✅ Done · archived | INT-001 |
-| 3 | [INT-003](./INT-003-gemini-smart-clarify-routing.md) | [SAN-406](https://linear.app/sanjiovani/issue/SAN-406) | Gemini smart clarify routing | CORE | P0 | 🟢 In Review ⚠️ | INT-001, INT-002 |
-| 4 | [INT-004](./INT-004-no-canned-clarify-bypass.md) | [SAN-407](https://linear.app/sanjiovani/issue/SAN-407) | No canned clarify bypass | CORE | P0 | 🟢 In Review ⚠️ | INT-003 |
+| 3 | [INT-003](./INT-003-gemini-smart-clarify-routing.md) | [SAN-406](https://linear.app/sanjiovani/issue/SAN-406) | Gemini smart clarify routing | CORE | P0 | 🟥 Todo ⚠️ | INT-001, INT-002 |
+| 4 | [INT-004](./INT-004-no-canned-clarify-bypass.md) | [SAN-407](https://linear.app/sanjiovani/issue/SAN-407) | No canned clarify bypass | CORE | P0 | 🟥 Todo ⚠️ | INT-003 |
 | 5 | [INT-005](./INT-005-intelligence-regression-tests.md) | [SAN-408](https://linear.app/sanjiovani/issue/SAN-408) | Intelligence regression tests | CORE | P0 | ✅ Done | INT-002–004 |
 | 6 | [INT-006](./INT-006-rental-availability-date-filters.md) | [SAN-409](https://linear.app/sanjiovani/issue/SAN-409) | Rental availability date filters | MVP | P1 | ✅ Done | INT-002 |
 | 7 | [INT-007](../archive/INT-007-event-intelligence-wrapper.md) | [SAN-410](https://linear.app/sanjiovani/issue/SAN-410) | Event intelligence wrapper | MVP | P1 | ✅ Done · archived | INT-001, INT-005 |

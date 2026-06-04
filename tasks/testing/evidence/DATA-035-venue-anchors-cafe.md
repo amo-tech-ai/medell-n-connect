@@ -34,3 +34,18 @@ status: Done
 ## Unblocks
 
 DATA-003 sign-off, DATA-006 golden queries, DATA-007 cache audit.
+
+## Re-verify (2026-06-02)
+
+| Check | Result |
+|-------|--------|
+| Supabase MCP — active cafés | **17** |
+| `metadata.ai_vibe_summary` | **17/17** |
+| Duplicate `google_place_id` | **0** |
+| Vitest café fallback | **3/3** pass |
+| Linear SAN-332 | **Done** (evidence links attached) |
+| Localhost `:3001` | UI **200**, CopilotKit reachable |
+
+**Remaining gap (not DATA-035):** DATA-008 spot-check — detail panel phone/hours from `place_details_cache`.
+
+**Grade:** **A- / 90** — production-ready for seed catalog; chat still ADK-grounding-first.

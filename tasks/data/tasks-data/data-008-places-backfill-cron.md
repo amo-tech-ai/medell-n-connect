@@ -5,7 +5,9 @@ legacy_id: CAF-009
 title: Places backfill cron / edge job
 layer: DATA
 priority: P1
-status: Not Started
+status: Partial
+verified: 2026-06-02
+evidence: ../../testing/evidence/DATA-008-backfill-evidence.md
 estimated_effort: 1 day
 depends_on: ["data-007"]
 unblocks: ["data-004", "CKV-001"]
@@ -59,6 +61,8 @@ Optional batch job — not user-facing
 
 ## Acceptance
 
-- [ ] ≥80% anchor rows have cache entry after one run (data-007 metric)
-- [ ] No browser-side Places calls
-- [ ] RLS unchanged on public tables
+- [x] Edge path: `/api/places/detail` read-through cache + field mask
+- [x] Backfill script idempotent by `place_id` + `field_mask_version`
+- [x] No browser-side Places calls
+- [ ] ≥80% anchor rows have cache entry after one run (blocked: Google API 403/429 on env)
+- [x] RLS unchanged on public tables

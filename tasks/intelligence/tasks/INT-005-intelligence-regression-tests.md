@@ -88,11 +88,38 @@ INT-002, INT-003, INT-004
 
 ## Verify
 
+### Unit tests — parser + routing + intent
+
 ```bash
 cd mdeapp && npx vitest run \
   src/lib/__tests__/rental-query-parser.test.ts \
   src/lib/__tests__/rental-search-fast-path.test.ts \
   src/lib/__tests__/intent-slots.test.ts \
   src/mastra/agents/__tests__/concierge.test.ts \
-  && npx tsc --noEmit
+  src/mastra/lib/__tests__/intelligence-rental-search.test.ts \
+  src/mastra/tools/__tests__/search-rentals-date-passthrough.test.ts
+```
+
+### Full suite + types
+
+```bash
+cd mdeapp && npm run test && npx tsc --noEmit
+```
+
+### Hero query smoke (requires `npm run dev`)
+
+```bash
+# Confirm fast-path routes: confidence ≥ 0.85 → API, no agent round-trip
+curl -s -X POST http://localhost:3001/api/rentals/search \
+  -H "Content-Type: application/json" \
+  -d '{"queryText":"1BR in Laureles under $80/night","limit":3}' | jq '{source, count: (.results | length)}'
+# Expected: source "supabase", count > 0
+```
+
+### Regression guard: no canned clarify on hero query
+
+```bash
+# Hero query must not match RENTAL_CLARIFY_MESSAGE text
+grep -r "RENTAL_CLARIFY_MESSAGE" src/lib/ src/hooks/ src/components/ | grep -v "\.test\." | grep -v "_tests_"
+# Expected: only the definition in rental-clarify-copy.ts, not in routing paths for high-confidence queries
 ```

@@ -3,7 +3,8 @@ id: INT-008
 title: Café intelligence wrapper
 phase: MVP
 priority: P1
-status: Not Started
+status: Done
+closed: 2026-06-01  # committed origin/main c9e54b8 (search-grounded-places.ts cafe path: isCafeGroundingQuery + cafe intent, #33); LIVE — prod synthetic smoke run 26760735915 cafes query → grounded-card[cafe] on https://www.mdeai.co (success)
 owner_system: [Mastra, Gemini, Google Maps]
 personas: [Tourist]
 depends_on: [INT-001, INT-005, VEN-012]

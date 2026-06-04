@@ -71,8 +71,11 @@ Existing apartments RLS unchanged; API uses user-scoped client.
 
 ## Acceptance criteria
 
-- [ ] Implements [RE-019](../../real-estate/tasks/RE-019-rental-availability-search.md)
-- [ ] Monthly stay boosts `minimum_stay_days >= 28` when `stayType === monthly`
+- [x] Implements [RE-019](../../real-estate/tasks/RE-019-rental-availability-search.md)
+- [x] Monthly stay boosts `minimum_stay_days >= 28` when `stayType === monthly`
+- [x] Hybrid path (`queryText` present) also filters by availability — **blocker closed 2026-06-01**
+- [x] `isAvailableForStay` shared helper with 9 boundary tests
+- [x] Live Supabase proof passed — see below
 
 ## SQL overlap formula
 
@@ -96,8 +99,81 @@ Edge case: if `stayType = monthly` and no `checkOut`, calculate `checkOut = chec
 
 INT-002, INT-005
 
+## Proof (live — 2026-06-01)
+
+### Commands run
+
+```bash
+# Baseline — confirm real Supabase, not mock
+curl -s -X POST http://localhost:3001/api/rentals/search \
+  -H "Content-Type: application/json" -d '{"limit":3}'
+# → source: supabase  count: 3
+
+# Structured path: date filter reduces Laureles 5→4 (closed-window listing excluded)
+curl -s -X POST http://localhost:3001/api/rentals/search \
+  -H "Content-Type: application/json" \
+  -d '{"neighborhood":"Laureles","checkIn":"2026-06-01","checkOut":"2026-06-30","limit":20}'
+# → count: 4  (filtered out: "Cozy Studio Apartment in Laureles" available Jan 2025–Jun 2025)
+
+# Hybrid path: queryText + checkIn/checkOut + stayType=monthly
+curl -s -X POST http://localhost:3001/api/rentals/search \
+  -H "Content-Type: application/json" \
+  -d '{"queryText":"digital nomad rental Laureles june 1 to 30","checkIn":"2026-06-01","checkOut":"2026-06-30","stayType":"monthly","limit":6}'
+# → source: supabase  hybridUsed: false  count: 4  rankExplanation: digital_nomad_score 0.798
+
+# Monthly sort: city-wide, all 8 results are long-stay, sorted by price ASC
+curl -s -X POST http://localhost:3001/api/rentals/search \
+  -H "Content-Type: application/json" \
+  -d '{"checkIn":"2026-06-01","checkOut":"2026-06-30","stayType":"monthly","limit":8}'
+# → [LONG]$18 [LONG]$45 [LONG]$55 [LONG]$58 [LONG]$60 [LONG]$65 [LONG]$75 [LONG]$80
+
+# Validation: non-ISO date string → 400
+curl -s -o /dev/null -w "%{http_code}" -X POST http://localhost:3001/api/rentals/search \
+  -H "Content-Type: application/json" -d '{"checkIn":"june 1"}'
+# → 400
+
+# Reverse proof: Jan 2025 window — same Studio listing correctly included
+curl -s -X POST http://localhost:3001/api/rentals/search \
+  -H "Content-Type: application/json" \
+  -d '{"checkIn":"2025-01-01","checkOut":"2025-01-31","neighborhood":"Laureles","limit":8}'
+# → count: 1  "Cozy Studio Apartment in Laureles" (available Jan 19 – Jun 29, 2025) ✓
+```
+
+### Key findings
+
+| Check | Result |
+|---|---|
+| Source | `supabase` — real data, not mock |
+| Date filter reduces result set | Laureles: 5 → 4 (1 closed-window listing excluded) ✓ |
+| Excluded listing | "Cozy Studio" `available_to = 2025-06-29` < `checkIn = 2026-06-01` |
+| Same listing included for Jan 2025 window | `available_to = 2025-06-29` ≥ `checkIn = 2025-01-01` ✓ |
+| NULL `available_to` listings pass | All open-ended (Apr 2026–) correctly included ✓ |
+| Monthly sort | 8 long-stay results sorted $18→$80 by price ✓ |
+| Validation | Non-ISO date string → 400 ✓ |
+| Hybrid path notes | `hybridUsed: false` — embedding key not in local dev; non-hybrid fallback ran (also fixed) |
+
+### Unit test suite
+
+```bash
+cd mdeapp
+npx vitest run src/lib/__tests__/rental-date-filter.test.ts          # 12/12 ✓
+npx vitest run src/lib/__tests__/rental-query-parser.test.ts         # 11/11 ✓
+npx vitest run src/mastra/lib/__tests__/intelligence-rental-search.test.ts  # 21/21 ✓
+npx vitest run src/mastra/agents/__tests__/concierge.test.ts         # 10/10 ✓
+npx vitest run src/mastra/tools/__tests__/search-rentals-date-passthrough.test.ts  # 2/2 ✓
+npm run test                                                          # 435/435 ✓
+npx tsc --noEmit                                                      # 0 errors ✓
+npm run build                                                         # clean ✓
+```
+
 ## Verify
 
 ```bash
-cd mdeapp && npx vitest run src/mastra/tools/__tests__/search-rentals.test.ts && npx tsc --noEmit
+cd mdeapp && npx vitest run \
+  src/lib/__tests__/rental-date-filter.test.ts \
+  src/lib/__tests__/rental-query-parser.test.ts \
+  src/mastra/lib/__tests__/intelligence-rental-search.test.ts \
+  src/mastra/agents/__tests__/concierge.test.ts \
+  src/mastra/tools/__tests__/search-rentals-date-passthrough.test.ts \
+  && npm run test && npx tsc --noEmit
 ```

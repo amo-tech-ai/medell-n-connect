@@ -96,6 +96,44 @@ INT-001
 
 ## Verify
 
+### Unit tests — schema round-trip + Zod↔TS parity
+
 ```bash
-cd mdeapp && npm run test -- src/mastra/agents/__tests__/concierge.test.ts
+cd mdeapp && npx vitest run \
+  src/mastra/agents/__tests__/concierge.test.ts \
+  src/mastra/lib/__tests__/intelligence-rental-search.test.ts
+# Expected: lastRentalQuery with checkIn/checkOut/stayType/genericAskPending persists across turns;
+#           Zod schema round-trips all fields without stripping unknowns
+```
+
+### Drift guard — Zod schema and TS type must be in sync
+
+```bash
+cd mdeapp && npx tsc --noEmit
+# Expected: 0 errors — no TS type mismatch between concierge.ts Zod and src/lib/types.ts
+```
+
+### Working memory multi-turn proof (requires `npm run dev`)
+
+```
+1. Turn 1: send "rentals in Laureles june 1 to 30 $80/night"
+   → fast-path triggers, search results shown
+   → working memory written: lastRentalQuery {checkIn, checkOut, neighborhood}
+2. Turn 2: send "show me furnished options"
+   → agent reads lastRentalQuery from memory
+   → new search inherits checkIn/checkOut from turn 1 (no re-parse)
+   Network: search_rentals tool call on turn 2 includes checkIn="2026-06-01"
+```
+
+### genericAskPending round-trip proof
+
+```bash
+cd mdeapp && npx vitest run src/lib/__tests__/rental-search-fast-path.test.ts
+# Expected: clarify-once flag survives Zod validation (not stripped as unknown key)
+```
+
+### Full suite + build
+
+```bash
+cd mdeapp && npm run test && npm run build
 ```

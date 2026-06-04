@@ -57,9 +57,9 @@ Single sequence: implement top → bottom. **Same VEN number in `mvp/` vs `post-
 |------:|----|------|-------|--------|------------|-------|
 | 13 | [VEN-009](tasks/mvp/009-ven-restaurant-result-card.md) | Restaurant result card | **A- / 90** | 🟡 | DATA-004 | [SCREEN-023](../testing/evidence/2026-06-02/SCREEN-023-RESULTS.md) · spec In Review |
 | 14 | [VEN-010](tasks/mvp/010-ven-restaurant-detail-panel.md) | Restaurant detail panel | **A- / 92** | 🟡 | VEN-009 | Booking CTA → `VenueBookingForm` |
-| 15 | [VEN-011](tasks/mvp/011-ven-nightlife-grounding-intent.md) | Nightlife grounding intent | **D+ / 58** | 🟡 | DATA-005 | Tool normalization only; UI routing pending |
-| 16 | [VEN-012](tasks/mvp/012-ven-grounded-kind-split.md) | Grounded café vs nightlife split | **B+ / 88** | 🟡 | VEN-011 | **🔥 CRITICAL** — routing infra; code on disk, e2e pending |
-| 17 | [VEN-013](tasks/mvp/013-ven-nightlife-detail-panel.md) | Nightlife detail panel | **B+ / 87** | 🟡 | VEN-012 | SCREEN-022 on disk |
+| 15 | [VEN-011](007a-ven-nightlife-grounding-intent.md) | Nightlife grounding intent | **D+ / 58** | 🟡 | DATA-005 | Tool normalization only; UI routing pending |
+| 16 | [VEN-012](007b-ven-grounded-kind-split.md) | Grounded café vs nightlife split | **B+ / 88** | 🟡 | VEN-011 | **🔥 CRITICAL** — routing infra; code on disk, e2e pending |
+| 17 | [VEN-013](07c-ven-nightlife-detail-panel.md) | Nightlife detail panel | **B+ / 87** | 🟡 | VEN-012 | SCREEN-022 on disk |
 
 **Parallel:** [INT-001…008](../intelligence/tasks/INDEX.md) — gate **INT-008** after VEN-012.
 

@@ -11,9 +11,10 @@ unblocks: [VEN-020]
 skills: [copilotkit-develop, copilotkit-integrations, copilotkit-agui]
 mcp: [project-0-mdeai-copilotkit]
 description: Generative UI mirror for MSV-002 — renderAndWaitForResponse + disabled render registration.
+form_stack: react-hook-form + zod + shadcn-field
 ---
 
-# VEN-18 — Booking CopilotKit action
+# VEN-19 — Booking CopilotKit action
 
 
 ## At a glance
@@ -26,7 +27,7 @@ description: Generative UI mirror for MSV-002 — renderAndWaitForResponse + dis
 
 ## What we're building
 
-Generative UI mirror for booking tool — renderAndWaitForResponse pattern like Roberto's event publish.
+Generative UI mirror for booking tool — `renderAndWaitForResponse` embeds the **same** `VenueBookingForm` (RHF + Zod + Field) as VEN-017, not a one-off HITL markup.
 
 ## Features
 

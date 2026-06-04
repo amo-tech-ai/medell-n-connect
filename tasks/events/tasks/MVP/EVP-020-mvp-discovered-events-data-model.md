@@ -1,5 +1,6 @@
 ---
 id: EVP-020-mvp
+linear: SAN-123
 legacy_id: EVT-D02
 title: Discovered events data model + RLS
 status: Not Started

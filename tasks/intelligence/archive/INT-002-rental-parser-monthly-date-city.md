@@ -3,7 +3,8 @@ id: INT-002
 title: Rental parser monthly/date/city extraction
 phase: CORE
 priority: P0
-status: Not Started
+status: Done
+closed: 2026-06-01  # committed origin/main c9e54b8 (rental-query-parser.ts: cityWide + budgetType monthly + date-range confidence bands + shouldInstantRentalClarify); LIVE — prod synthetic smoke run 26760735915 rentals query → rental-card on https://www.mdeai.co (success)
 owner_system: [Gemini, App]
 personas: [Camila]
 depends_on: [INT-001]

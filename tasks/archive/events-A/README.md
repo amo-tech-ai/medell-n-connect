@@ -1,14 +1,16 @@
 ---
 title: Events — archived pack A (Done core)
-updated: 2026-05-26
-active_backlog: ../../events/INDEX.md
+updated: 2026-06-04
+active_backlog: ../../events/tasks/INDEX.md
 ---
 
 # Events archive — pack A
 
 **11 EVP specs + 4 Done wireframe SCRs** archived **2026-05-26** — **`status: Done`** in frontmatter with disk + Vitest proof (`npm test -- event` **54/54**).
 
-**Active backlog:** [`../../events/INDEX.md`](../../events/INDEX.md) — EVP-001, 003, 013–016, 018–047.
+**Active backlog:** [`../../events/tasks/INDEX.md`](../../events/tasks/INDEX.md) — EVP-001, 003, 014–016, 018–047 + G3.
+
+**Pack B archive:** [`../../events/archive/`](../../events/archive/README.md) — EVP-013 (2026-06-04).
 
 ---
 

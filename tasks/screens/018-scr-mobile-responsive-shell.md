@@ -1,7 +1,8 @@
 ---
 id: SCREEN-018
+linear: SAN-489
 title: Mobile Responsive 3-Panel Shell
-status: Not Started
+status: Done
 priority: P0
 phase: MVP Phase 1
 effort: 3-4h

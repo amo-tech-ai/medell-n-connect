@@ -34,7 +34,7 @@
 | `/restaurants` browse | [SAN-490](https://linear.app/sanjiovani/issue/SAN-490) | 🟢 Done | PR #57 @ `41cfe99` · [SCREEN-023 evidence](../../notes/SCREEN-023-restaurants-browse-evidence.md) |
 | Map pins prod | [SAN-369](https://linear.app/sanjiovani/issue/SAN-369) / MAP-008B | 🟢 Done | [MAP-008B evidence](../../notes/MAP-008B-evidence.md) |
 | ADK grounding prod | [SAN-368](https://linear.app/sanjiovani/issue/SAN-368) / MAP-002B | 🟥 **Blocked** | [MAP-002B evidence](../../notes/MAP-002B-evidence.md) — **do not close** |
-| Playwright release gate | [SAN-314](https://linear.app/sanjiovani/issue/SAN-314) / VEN-031 | 🟡 | Agent flake; signed-in booking proof pending |
+| Playwright release gate | [SAN-314](https://linear.app/sanjiovani/issue/SAN-314) / VEN-031 | 🟡 | PR [#60](https://github.com/amo-tech-ai/mdeapp/pull/60) merged — signed-in booking e2e + SAN-368 still open |
 | Browser Maps JS key | — | 🟥 | Prod “development purposes only” modal — separate GCP referrer/billing fix |
 
 ---
@@ -66,7 +66,7 @@ Not numbered in venue phases; gates chat cards and browse surfaces.
 | MAP-002B | [SAN-368](https://linear.app/sanjiovani/issue/SAN-368) | ADK Grounding Lite on Cloud Run | 🟥 | Cloud Run `/health` 503 · Grounding Lite permission · prod may use `venue_anchors` fallback |
 | SCREEN-021 | [SAN-114](https://linear.app/sanjiovani/issue/SAN-114) | Café listings + map (chat) | 🟢 | ARCH-005 |
 | SCREEN-023 | [SAN-490](https://linear.app/sanjiovani/issue/SAN-490) | `/restaurants` browse | 🟢 | Merged PR #57 |
-| SCREEN-022 | — | `/nightlife` full browse | ⚪ | Mirror `/restaurants` — create Linear before ship |
+| SCREEN-022 | [SAN-491](https://linear.app/sanjiovani/issue/SAN-491) | `/nightlife` full browse | 🟢 | PR #67 @ `ae9a1e6` · [SCREEN-022 evidence](evidence/SCREEN-022-evidence.md) |
 | — | — | `/cafes` full browse | 🟡 | Placeholder shell on prod; full browse backlog |
 
 ---

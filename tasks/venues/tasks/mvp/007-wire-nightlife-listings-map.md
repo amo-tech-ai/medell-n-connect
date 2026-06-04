@@ -6,7 +6,7 @@ title: Nightlife Listings + Map (Clubs & Bars)
 persona: Tourist, Andrés
 path: / (nightlife mode) · /nightlife (browse)
 priority: P1
-build_status: Partial
+build_status: Done
 feature_group: "007"
 paired_scr: 007-scr-nightlife-listings-map.md
 related_wires:

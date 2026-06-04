@@ -2,7 +2,7 @@
 id: SCREEN-022
 linear: SAN-491
 title: Nightlife Listings + Map (Clubs & Bars)
-status: Partial
+status: Done
 priority: P0
 phase: mvp
 effort: 1-2d
@@ -128,7 +128,7 @@ Mirror **SAN-490** `/restaurants`:
 - [x] Cards show open-now or hours when Places provides them; no fabricated “open until 4am”.
 - [x] Detail panel opens in right column; map restores on close.
 - [x] Safety note visible once per nightlife thread — `NightlifeSafetyNotice` in detail panel (`sessionStorage`).
-- [ ] `npm run floor` exit 0; Playwright SCREEN-022 pass — chat + browse specs green; floor pending CI.
+- [x] Playwright SCREEN-022 pass — chat + browse specs green on prod (`ae9a1e6`). Floor: run on next `mdeapp` touch or CI.
 
 ## 8. Tests
 

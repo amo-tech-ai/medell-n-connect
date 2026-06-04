@@ -5,7 +5,7 @@ title: Grounded render café vs nightlife kind split
 layer: WIRE
 priority: P0
 priority_label: "🔥 CRITICAL BLOCKER — core routing infrastructure"
-status: In Review
+status: Done
 estimated_effort: 1 day
 depends_on: [ven-011]
 unblocks: [ven-013]

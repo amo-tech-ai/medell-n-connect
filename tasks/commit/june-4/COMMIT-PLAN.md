@@ -152,6 +152,26 @@ Reserve Vercel preview + smoke for the eventual app-code branches.
 
 Grade key: 🟢 90–100 ready · 🟡 75–89 review · 🟠 60–74 risky · 🔴 <60 blocked.
 
+## Worktree discipline (v0.4.0 — use with slices)
+
+**Skill:** `.agents/skills/mde-worktree-pr-flow` (keep; do not replace). **Risk doc:** `references/worktree-safety-v040.md`.
+
+Before any new `git worktree add` on this repo:
+
+```bash
+bash .agents/skills/mde-worktree-pr-flow/scripts/guard-gitignore-worktrees.sh
+bash .agents/skills/mde-worktree-pr-flow/scripts/guard-worktree-context.sh
+bash .agents/skills/mde-worktree-pr-flow/scripts/verify-clean.sh
+```
+
+Weekly: `bash .agents/skills/mde-worktree-pr-flow/scripts/tidy-worktrees.sh`
+
+**Two git roots:** planning = `mdeai` (this file); app = `mdeapp/` (separate remote). One worktree per goal per repo — see `mde-wt-search-clean` for app `main`.
+
+Optional sibling pattern: [linear-worktree](https://www.skills.sh/mblode/agent-skills/linear-worktree) — not required; mdeai uses `.worktrees/wt-san-NNN-slug`.
+
+---
+
 ## What's done vs pending
 
 - [x] Slice 1 working-tree edit (`.gitignore`) — leaks now unstageable (verified via `git check-ignore`)

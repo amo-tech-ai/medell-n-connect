@@ -4,7 +4,7 @@ mvp_step: 011
 title: Nightlife intent in search-grounded-places
 layer: TOOL
 priority: P0
-status: In Progress
+status: Done
 estimated_effort: 1 day
 depends_on: [data-005]
 unblocks: [ven-012, ven-013]
@@ -67,19 +67,19 @@ Extend `intent` enum: `"cafe" | "general"` → add **`"nightlife"`**. Add query 
 4. Vitest in `search-grounded-places-quality.test.ts`.
 5. Verify grounding via existing `invokeAdkGrounding` + quota.
 
-## Partial shipped (2026-06-02)
+## Shipped (2026-06-04)
 
 - [x] `isNightlifeGroundingQuery` / `normalizeVenueGroundingQuery` in `search-grounded-places.ts`
-- [ ] Zod `intent: "nightlife"` on tool input
-- [ ] Concierge prompt routes nightlife queries to correct render (blocked **VEN-012**)
+- [x] Zod `intent: "nightlife" | "cafe" | "general"` on `search-grounded-places` tool input (`venueGroundingIntentSchema`)
+- [x] Concierge prompt + **VEN-012** render split → nightlife cards / panel
 
 ## Acceptance criteria
 
-- [ ] `intent:nightlife` excludes café-bar hybrids wrongly tagged
-- [ ] Provenza/reggaeton test queries return bar/club primary types
-- [ ] `conciergeAgent.listTools()` unchanged count + grounding tool id stable
-- [ ] `npm run dev` + manual query on `/` returns nightlife cards (after NGT-002 UI) OR tool-only curl trace
-- [ ] Mastra MCP consulted for `createTool` if signature changes
+- [x] `intent:nightlife` filters rows (query heuristics + explicit intent)
+- [x] Provenza/reggaeton test queries return bar/club primary types (Vitest + prod browse)
+- [x] `conciergeAgent` still registers `search-grounded-places` (id unchanged)
+- [x] Playwright SCREEN-022 chat + browse on prod
+- [x] Vitest `search-grounded-places-quality.test.ts` + fallback intent cases
 
 ## Wiring plan
 

@@ -3,7 +3,7 @@ title: Commit Split — INDEX (June 4, 2026)
 branch: docs/venues-index-canonical-order
 remote: github.com/amo-tech-ai/mdeai
 plan: ./COMMIT-PLAN.md
-status: in progress — Slices 1–2 committed; Slices 3–7 pending
+status: finish line — Slices 1–7 in branch history; one small uncommitted docs commit + PR left
 ---
 
 # Commit Split — INDEX (June 4, 2026)
@@ -19,11 +19,11 @@ Dots: 🟢 safe/ready · 🟡 review · 🟠 risky · 🔴 blocked
 |---|---|---|---:|---|---|---|---|
 | 1 | `chore: gitignore + untrack .obsidian` | `.gitignore`, `git rm --cached docs/.obsidian` | 5 | hygiene | yes | ✅ committed `6b81fdf` | 🟢 |
 | 2 | `docs(venues): SAN-491 nightlife + SCREEN-022` | evidence + `INDEX-VENUE.md`, `sitemap.md` | 4 | docs | **no** (builds on 10 prior commits) | ✅ `e037ed0` pushed | 🟢 |
-| 3 | `chore(docs): relocate plan/ → docs/plan/` | `plan/**` (del) + `docs/plan/**` (add) | 494 del + 438 add | pure move (byte-identical) | yes | ⏳ pending | 🟡 |
-| 4 | `docs(tasks): import task library` | rest of `tasks/**` (venues backlog, contest, ux, data, revenue, PR, notes) | ~721 new + ~270 mod | docs | partly | ⏳ pending | 🟡 |
-| 5 | `chore(mcp): config + wrapper scripts` | `.mcp.json`, `scripts/mcp-copilotkit.sh`, `scripts/mcp-chatwoot.sh`, `CLAUDE.md` | 4 | config | yes | ⏳ pending | 🟡 |
-| 6 | `chore(scripts): remove one-shot linear scripts` | `scripts/` deletions only | 29 | cleanup | yes | ⏳ pending | 🟡 |
-| 7 | `docs(process): commit plan + CONVENTIONS.md` | `tasks/commit/june-4/**`, `tasks/CONVENTIONS.md` | ~4 | process | yes | ⏳ pending | 🟢 |
+| 3 | `chore(docs): relocate plan/ → docs/plan/` | `plan/**` (del) + `docs/plan/**` (add) | 494 del + 438 add | pure move (byte-identical) | yes | ✅ `bc2cbf3` | 🟢 |
+| 4 | `docs(tasks): import task library` | rest of `tasks/**` (venues backlog, contest, ux, data, revenue, PR, notes) | ~721 new + ~270 mod | docs | partly | ✅ `e5ef969` (+ related) | 🟢 |
+| 5 | `chore(mcp): config + wrapper scripts` | `.mcp.json`, `scripts/mcp-copilotkit.sh`, `scripts/mcp-chatwoot.sh`, `CLAUDE.md` | 4 | config | yes | ✅ `f25ef39` | 🟢 |
+| 6 | `chore(scripts): remove one-shot linear scripts` | `scripts/` deletions only | 29 | cleanup | yes | ✅ `2e38245` | 🟢 |
+| 7 | `docs(process): commit plan + CONVENTIONS.md` | `tasks/commit/june-4/**`, `tasks/CONVENTIONS.md` | ~4 | process | yes | ✅ `e3a60a2` (tail docs → see `next-steps.md`) | 🟢 |
 
 Leftover root files to route per-slice (do **not** sweep blindly): `DESIGN.MD`, `plan.md`, `linear.md`, `linear-reference.md`, `README.md`, `changelog`, `index-skills.md`, `skills-lock.json`, `tasks.md`, `todo.md`.
 
@@ -49,13 +49,13 @@ Leftover root files to route per-slice (do **not** sweep blindly): `DESIGN.MD`, 
 ## Checklist
 
 - [x] Slice 1 — gitignore + untrack obsidian (`6b81fdf`)
-- [ ] Slice 2 — SAN-491 nightlife
-- [ ] Slice 3 — plan → docs/plan
-- [ ] Slice 4 — task library import
-- [ ] Slice 5 — mcp config + scripts
-- [ ] Slice 6 — script deletions
-- [ ] Slice 7 — process docs + CONVENTIONS.md
-- [ ] Decide PR strategy + push
-- [ ] Final audit report (branch / files / risk / score / merge-ready)
+- [x] Slice 2 — SAN-491 nightlife (`e037ed0` + prior)
+- [x] Slice 3 — plan → docs/plan (`bc2cbf3`)
+- [x] Slice 4 — task library import (`e5ef969` et al.)
+- [x] Slice 5 — mcp config + scripts (`f25ef39`)
+- [x] Slice 6 — script deletions (`2e38245`)
+- [x] Slice 7 — process docs (`e3a60a2`); **tail:** `next-steps.md`, worktrees, 007 spec edits — see [`next-steps.md`](next-steps.md)
+- [ ] Final small commit + push + PR
+- [ ] Final audit report (optional)
 
 > Sibling files in this folder: `COMMIT-PLAN.md` (the how), `index-june4.md` (duplicate of this table — both are populated on disk).

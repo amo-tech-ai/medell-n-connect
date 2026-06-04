@@ -4,7 +4,7 @@ mvp_step: 013
 title: NightlifeDetailPanel + mobile sheet
 layer: UI
 priority: P0
-status: In Review
+status: Done
 estimated_effort: 1 day
 depends_on: [ven-012]
 unblocks: [VEN-031]

@@ -75,4 +75,4 @@ mdeapp:    CopilotSidebar → /api/copilotkit → MastraAgent bridge (AG-UI)
 
 The official example is the **compatibility layer** story; mdeapp already has the **product** layer via [Copilot Runtime](https://docs.copilotkit.ai/mastra/copilot-runtime) + [AG-UI](https://docs.copilotkit.ai/mastra/ag-ui). Treat v5 `useChat` as migration reference, not a second user-facing chat.
 
-**Related:** [`../03-best-practices.md`](../03-best-practices.md) v1 vs v2 table · [00-index](00-index.md)
+**Related:** [`../03-best-practices.md`](../03-best-practices.md) v1 vs v2 table · [00-index](plan/mastra/examples/00-index.md)

@@ -72,4 +72,4 @@ As Patricia, support replays a thread with the same `runtimeContext` snapshot lo
 
 Pass context in the **server** CopilotRuntime handler, not in client-exposed secrets. Mirror official [support agent](https://mastra.ai/examples/v0/agents/runtime-context) pattern without duplicating three physical agents in the CopilotKit provider — unless UX needs separate `agent=` keys per tier.
 
-**Related:** [`../04-user-stories.md`](../04-user-stories.md) server section · Example index [00-index](00-index.md)
+**Related:** [`../04-user-stories.md`](../04-user-stories.md) server section · Example index [00-index](plan/mastra/examples/00-index.md)

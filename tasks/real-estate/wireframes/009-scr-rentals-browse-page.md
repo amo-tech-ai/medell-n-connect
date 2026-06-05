@@ -76,8 +76,17 @@ As **Camila**, I want to browse apartments on `/rentals` with neighborhood and p
 - [ ] Filters update URL search params and narrow results
 - [ ] Card click opens detail sheet or navigates to `/rentals/[id]` (REAL-012 may stub)
 - [ ] Mobile: single-column list + bottom sheet detail
-- [ ] Playwright spec `REAL-011-rentals-browse.spec.ts` pass
+- [ ] Playwright `e2e/screens/REAL-011-rentals-browse.spec.ts` pass
 - [ ] Evidence at `tasks/evidence/REAL-011-evidence.md`
+
+### Sidebar nav activation (Done gate — do not enable early)
+
+- [ ] Sidebar nav activation **only after** browse route is production-ready:
+  - [ ] Update `src/components/chat/chat-nav-rail.tsx`: `rentals` `href: null` → `"/rentals"`
+  - [ ] Remove Coming soon disabled state for `rentals` row
+  - [ ] Playwright: `[data-testid="nav-rentals-link"]` click → HTTP 200 on `/rentals`
+  - [ ] Route shows **real catalog content** — not placeholder, `redirect("/chat")`, or 404
+  - [ ] Verify checklist item on SAN-584 (SCR-002b)
 
 ## Do not do
 

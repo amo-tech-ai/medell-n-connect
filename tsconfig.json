@@ -1,0 +1,8 @@
+{
+  "files": [],
+  "references": [{ "path": "./mdeapp" }],
+  "compilerOptions": {
+    "disableReferencedProjectLoad": true,
+    "disableSolutionSearching": true
+  }
+}

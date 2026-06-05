@@ -21,7 +21,7 @@ linear_plan: ./linear/07-mvp.md
 >
 > **MVP dashboard (frozen):** [`MVP-EXECUTION.md`](MVP-EXECUTION.md) · [`linear/mvp-queue.json`](linear/mvp-queue.json) · [`linear/NAMING-CLEANUP-REPORT.md`](NAMING-CLEANUP-REPORT.md)  
 > **Linear titles:** PAY-*, EVT-*, UX-*, MAP-*, AUTH-*, OPS-* — IMP/EVP/SCREEN deprecated  
-> **Views:** [MVP](https://linear.app/sanjiovani/view/mvp-b4f1afdff207) `label:phase:launch` · [UX](https://linear.app/sanjiovani/view/ux-tasks-0e5d9fe91725) `label:track:ux` · [MDEAPP project](https://linear.app/sanjiovani/project/mdeapp-099cd7795071/issues) · PR train `label:track:pr`
+> **Views:** [MVP](https://linear.app/sanjiovani/view/mvp-b4f1afdff207) `label:phase:launch` · [UX](https://linear.app/sanjiovani/view/ux-tasks-0e5d9fe91725) `label:track:ux` — **single live design queue** (epic SAN-566, D-01…D-14 ← `tasks/design/index-design.md`; filter status≠Done; the `screens` project is just the folder, *not* a second queue) · [MDEAPP project](https://linear.app/sanjiovani/project/mdeapp-099cd7795071/issues) · PR train `label:track:pr`
 
 | Dot | Status |
 |-----|--------|
@@ -129,7 +129,7 @@ TIER R — Revenue (post-MVP-exit, 37 tasks across R1–R5)
   R3 (wk 6–12): C4 → C5 → C7 → C8 → C14
   R4 (mo 3–6):  M1 → M4 ‖ M5 ‖ M6 ‖ M7 ‖ M8 → M2 → M9 ‖ M11 ‖ M3 ‖ M10 ‖ M12
   R5 (mo 6–18): A5 ‖ A6 ‖ A10 → A8 ‖ A2 → A1 → A3 ‖ A7 ‖ A4 ‖ A9
-  Index: tasks/revenue/INDEX.md · Linear: Commerce Platform · AI & Intelligence · Growth & Operations
+  Index: tasks/revenue/INDEX-revenue.md · Linear: Commerce Platform · AI & Intelligence · Growth & Operations
 ```
 
 **Retired IDs (do not use in new specs):** `ven-01–24` · `CTI-*` · `tasks/venues/tasks-intelligent/` · `cafes/listings/` (use `tasks/venues/tasks/listings/`). Migration: [`venues/tasks/VEN-MIGRATION-2026-05-28.md`](venues/tasks/VEN-MIGRATION-2026-05-28.md).

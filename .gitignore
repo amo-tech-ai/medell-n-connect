@@ -65,6 +65,8 @@ build/
 /venues/
 /files/
 /drafts/
+# Editor "paste image" dumps (Obsidian/VS Code) — incidental, not docs
+Pasted image*.png
 
 # ── OS ─────────────────────────────────────────────────────────────────
 .DS_Store

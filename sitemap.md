@@ -1,6 +1,6 @@
 ---
 title: mdeai — Sitemap
-updated: 2026-06-02
+updated: 2026-06-05
 app: mdeapp/ (Next.js App Router)
 prod: https://www.mdeai.co
 ---
@@ -31,13 +31,14 @@ prod: https://www.mdeai.co
 ├── /rentals                         🔵 MVP P0  Redirects to `/chat` today — **REAL-011 (SAN-478)** ships catalog browse
 │   └── /rentals/[id]                🔵 MVP P1  Rental detail page (REAL-012 / SAN-479)
 │
-├── /events/[slug]                   ✅ LIVE    Event detail — ticket tiers + Buy CTA
-│   └── [overlay] booking-checkout  ⚠️ SHELL   Stripe checkout (session works; webhook finalize missing)
+├── /events                          🔵 MVP P1  **No route today** — public catalog **SCREEN-027 (SAN-518)** · sidebar greyed (`href: null`)
+│   └── /events/[slug]               ✅ LIVE    Event detail — ticket tiers + Buy CTA
+│       └── [overlay] booking-checkout  ⚠️ SHELL   Stripe checkout (session works; webhook finalize missing)
 │
 ├── /restaurants                     ✅ LIVE    Restaurant browse + filters (SAN-490)
 │   └── /restaurants/[slug]          ⚫ POST    Restaurant detail page
 │
-├── /cafes                           ⚠️ SHELL   Café browse placeholder — chat + SCREEN-021 in-chat live
+├── /cafes                           ⚠️ SHELL   Café browse placeholder — **SAN-519** ships catalog · sidebar greyed until Done
 │
 ├── /nightlife                       ✅ LIVE    Nightlife browse — curated venue_anchors + chat panels (SCREEN-022)
 │   └── /nightlife/[slug]            ⚫ POST    Nightlife venue / event detail
@@ -185,9 +186,10 @@ WhatsApp Business (+57 XXX)          💫 PHASE 2 Same Mastra brain, WhatsApp re
 | `ticket-payment-webhook` | Stripe finalize edge fn **deployed** (v33 ACTIVE, `verify_jwt=false`, idempotent, finalize RPC). Remaining: Stripe Dashboard event subscriptions + live checkout→finalize e2e proof | 🟡 verify |
 | `/chat` nav rail | `/chat` is an intentional redirect alias → `/` (verified on disk); canonical concierge surface is home. Nav-rail status tracked on `/`, not this alias | 🟡 reframed |
 | Mobile bottom-sheet | SCREEN-018 mobile responsive shell shipped (SAN-489 Done, PR #51) | ✅ resolved |
-| `/rentals` display | Rental cards broken since 2026-05-27 revert — Camila's main browse path shows nothing | P0 |
+| `/rentals` display | Redirects to `/chat` — **SAN-478** ships catalog; sidebar greyed until Done | P0 |
 | `/restaurants` | Browse page in PR — prod 404 until deploy | P1 |
-| `/cafes` | Placeholder only — full catalog browse not shipped | P1 |
+| `/events` browse | No `/events` route — **SAN-518** + **SAN-586**; sidebar greyed until Done | P1 |
+| `/cafes` | Placeholder only — **SAN-519** ships catalog; sidebar greyed until Done | P1 |
 | `/nightlife` | Browse grid live (`venue_anchors` kind nightclub) + chat nightlife panels | P1 |
 | `/host/events` | Roberto has no view after publishing — can't see his own event list | P1 |
 | `/rentals/[id]` | Rental detail page doesn't exist — cards link nowhere | P1 |

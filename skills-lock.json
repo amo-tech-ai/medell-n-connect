@@ -1,6 +1,12 @@
 {
   "version": 1,
   "skills": {
+    "21st-dev-builder-v2": {
+      "source": "trin-zenityx/21st-dev-builder-v2",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "b5741f63a7dfa902d43a28a9485aaa236f6487c52bd0b430ffc8e3ed1bc81c1b"
+    },
     "Frontend Responsive Design Standards": {
       "source": "am-will/codex-skills",
       "sourceType": "github",
@@ -19,11 +25,29 @@
       "skillPath": "skills/cloud/agent-platform-skill-registry/SKILL.md",
       "computedHash": "de229d00a9578fe54da917d4dc93547a3456333eda4b3e69b2231a2bb4a1ff76"
     },
+    "building-admin-dashboard-customizations": {
+      "source": "medusajs/medusa-claude-plugins",
+      "sourceType": "github",
+      "skillPath": "plugins/medusa-dev/skills/building-admin-dashboard-customizations/SKILL.md",
+      "computedHash": "4cd60098a12fcfd682ae4f7668bd1cf0c5986c27e2ebfcf45166e3d69c4e5f1c"
+    },
     "building-components": {
       "source": "vercel/components.build",
       "sourceType": "github",
       "skillPath": "skills/building-components/SKILL.md",
       "computedHash": "20889af7cb9b3abca1e38824f7fffaa873eb0cc4d45187967b97bd85462cf934"
+    },
+    "building-storefronts": {
+      "source": "medusajs/medusa-claude-plugins",
+      "sourceType": "github",
+      "skillPath": "plugins/medusa-dev/skills/building-storefronts/SKILL.md",
+      "computedHash": "288f645ffd2b29f925f5c70077b9e57af6b787843fc98b276e84150d253511a7"
+    },
+    "building-with-medusa": {
+      "source": "medusajs/medusa-claude-plugins",
+      "sourceType": "github",
+      "skillPath": "plugins/medusa-dev/skills/building-with-medusa/SKILL.md",
+      "computedHash": "fef62d911eba65523b679baea2ce9bf1c253211f18499115374dc9727c024e4f"
     },
     "chatwoot-cli": {
       "source": "chatwoot/cli",
@@ -36,6 +60,18 @@
       "sourceType": "github",
       "skillPath": "skills/cloud/cloud-run-basics/SKILL.md",
       "computedHash": "d04d21b683f404fcd6c3b798095c0399d61e5e9d84cb913da46a09e0aa90c708"
+    },
+    "db-generate": {
+      "source": "medusajs/medusa-agent-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/medusa-dev/skills/db-generate/SKILL.md",
+      "computedHash": "054793865ece11794c7d0738304257775ca9a86460301e91233f4633c06cc9c5"
+    },
+    "db-migrate": {
+      "source": "medusajs/medusa-agent-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/medusa-dev/skills/db-migrate/SKILL.md",
+      "computedHash": "67e08aa2633481106be84d196381320a4ba88410e6d710395234e23e394cd07e"
     },
     "deploy-to-vercel": {
       "source": "vercel-labs/agent-skills",
@@ -109,6 +145,30 @@
       "skillPath": "skills/google-agents-cli-workflow/SKILL.md",
       "computedHash": "491c409d11013583de55730c1c7259d7921e0ccca6227583a623218b7b1f8884"
     },
+    "infisical-agent": {
+      "source": "infisical/ai-skills",
+      "sourceType": "github",
+      "skillPath": "skills/infisical-agent/SKILL.md",
+      "computedHash": "0cd11d25800d37f7d837c907e9a8c947f5065adc5f1f1a488c8201f923aa5c7d"
+    },
+    "infisical-api": {
+      "source": "infisical/ai-skills",
+      "sourceType": "github",
+      "skillPath": "skills/infisical-api/SKILL.md",
+      "computedHash": "cc87bc545fe1655d24386bdea262cc3e341db52fde8f79e2b1cf1a111ff23439"
+    },
+    "infisical-sync-skill": {
+      "source": "rightnow-ai/openfang",
+      "sourceType": "github",
+      "skillPath": "crates/openfang-hands/bundled/infisical-sync/SKILL.md",
+      "computedHash": "f3f03e8014ae5c68e249e359b22c2946dda0abbd629a830cae550cfb4e062f0f"
+    },
+    "infisical-user-setup-guide": {
+      "source": "infisical/ai-skills",
+      "sourceType": "github",
+      "skillPath": "skills/infisical-setup/SKILL.md",
+      "computedHash": "7281c2e1ee7817c822ca40095ae92ca2096b575d5e2b1cf96672e30689269032"
+    },
     "javascript-testing-patterns": {
       "source": "wshobson/agents",
       "sourceType": "github",
@@ -126,6 +186,12 @@
       "sourceType": "github",
       "skillPath": "skills/linear-claude-skill/SKILL.md",
       "computedHash": "0585af56bcea1c7030faced15008fbce469474147a46d08ee6e92be036dc89b1"
+    },
+    "medusa-commerce": {
+      "source": "membranedev/application-skills",
+      "sourceType": "github",
+      "skillPath": "skills/medusa-commerce/SKILL.md",
+      "computedHash": "9de8f2eb9206ff81f1b3ba0869e6408510b873a2f8da50b24b4823d94da1a107"
     },
     "mermaid-diagram-specialist": {
       "source": "davila7/claude-code-templates",
@@ -168,6 +234,12 @@
       "sourceType": "github",
       "skillPath": "skills/skill-creator/SKILL.md",
       "computedHash": "5ea13a6d9f0d4bb694405d79acd00cadec0d21bb138c4dd10fcf3c500cb835c2"
+    },
+    "storefront-best-practices": {
+      "source": "medusajs/medusa-agent-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/ecommerce-storefront/skills/storefront-best-practices/SKILL.md",
+      "computedHash": "633f757031071344075cce6450ff8c5bf209691a8d072bb6cc73be153faa4ba4"
     },
     "tailwind-responsive-ui": {
       "source": "pproenca/dot-skills",

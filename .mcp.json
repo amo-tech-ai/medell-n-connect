@@ -48,6 +48,12 @@
         "CHATWOOT_URL": "${env:CHATWOOT_URL}",
         "CHATWOOT_API_TOKEN": "${env:CHATWOOT_API_TOKEN}"
       }
+    },
+    "shadcn": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "shadcn@latest", "mcp"],
+      "env": {}
     }
   }
 }

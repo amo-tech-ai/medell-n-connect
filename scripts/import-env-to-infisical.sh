@@ -18,6 +18,10 @@ ENV_FILE="${1:?usage: $0 <env-file> <env-slug>}"
 ENV_SLUG="${2:?usage: $0 <env-file> <env-slug>}"
 [ -f "$ENV_FILE" ] || { echo "no such file: $ENV_FILE" >&2; exit 1; }
 
+# Optional: target a specific project (needed for Cloud / machine-identity auth)
+PROJ_FLAG=""
+[ -n "${INFISICAL_PROJECT_ID:-}" ] && PROJ_FLAG="--projectId=${INFISICAL_PROJECT_ID}"
+
 set_count=0; skip_count=0; fail_count=0; lineno=0
 while IFS= read -r line || [ -n "$line" ]; do
   lineno=$((lineno + 1))
@@ -34,7 +38,11 @@ while IFS= read -r line || [ -n "$line" ]; do
   case "$key" in
     ''|*[!A-Za-z0-9_]*) echo "SKIP line $lineno (invalid key)" >&2; skip_count=$((skip_count + 1)); continue;;
   esac
-  if infisical secrets set "$key=$val" --env="$ENV_SLUG" --path=/ >/dev/null 2>&1; then
+  # Optional exclude list (space-separated) so a 2nd file can't clobber existing values
+  case " ${EXCLUDE_KEYS:-} " in
+    *" $key "*) echo "EXCLUDE: $key (preserving existing value)" >&2; skip_count=$((skip_count + 1)); continue;;
+  esac
+  if infisical secrets set "$key=$val" --env="$ENV_SLUG" --path=/ $PROJ_FLAG >/dev/null 2>&1; then
     echo "set: $key"; set_count=$((set_count + 1))
   else
     echo "FAIL: $key" >&2; fail_count=$((fail_count + 1))

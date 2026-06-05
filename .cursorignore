@@ -1,0 +1,5 @@
+# Vendored reference clones — not mdeapp product code
+mdeapp/github/
+mdeapp/workspace/
+CopilotKit/
+.wt-*/

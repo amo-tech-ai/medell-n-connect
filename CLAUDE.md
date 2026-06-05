@@ -13,7 +13,7 @@ Planning + application workspace building a new mdeai app (`mdeapp/`) on Copilot
 - `.claude/skills/` — **27 enabled** skills (after the 2026-05-29 Phase-1 trim; off-phase/redundant entries archived under `.agents/skills/_archive/`). **This is the project scan root — only entries here load into context.**
 - `.agents/skills/` — canonical skill **source library**, NOT scanned. An entry here with no `.claude/skills/` symlink does **not** load. Archives + restore: `.agents/skills/_archive/{2026-05-07,2026-05-14,2026-05-19,2026-05-24,2026-05-29}/MANIFEST.md`.
 - **User-global** `~/.claude/skills/` is a separate scan root loading into every project (trimmed 2026-05-29; restore via `~/.claude/skills/_archive/2026-05-29/MANIFEST.md`).
-- `.env.local` (repo root) — shared keys (Maps/Places, Gemini, Stripe, Supabase). **Never committed.** `mdeapp/.env.local` is the Next.js-prefixed copy.
+- `.env.local` (repo root + `mdeapp/.env.local`) — **migrated to Infisical Cloud 2026-06-04; now intentionally empty.** Shared keys (Maps/Places, Gemini, Stripe, Supabase, etc.) inject at runtime via `infisical run` (see "Working in this repo"). Plaintext backups: `*.env.local.bak` (gitignored). **Never committed.**
 - `CopilotKit/` — monorepo clone for `examples/integrations/mastra/` reference. `github/` — vendored reference repos.
 
 ## Project status
@@ -147,7 +147,7 @@ Key surfaces (full map in `sitemap.md`): `/` · `/chat` · `/login` · `/signup`
 ## Working in this repo
 
 - Default to the relevant skill before deriving knowledge: `copilotkit`, `copilotkit-integrations`, `mastra`, `mde-supabase`, `gemini`, `mde-maps`, `mde-task-lifecycle`, `testing`, `vitest`, `mde-vercel`, `mde-worktree-pr-flow`, `mde-real-estate`, `code-review`, `task-verifier`, `mermaid-diagrams`, `mastra-smoke-test`. Full pack: `plan/audit/02-skills-audit.md` §4. (`autofix`, `mastra-smoke-test`, `mde-worktree-pr-flow` are `/invoke`-only.)
-- `.env.local` at repo root is the source of truth for keys.
+- **Infisical Cloud is the source of truth for keys** (project `md-eapp-hn-nz`, env `dev`, path `/` — `.infisical.json` links the repo). Secrets inject at runtime via `infisical run`, wired into `mdeapp/package.json`: `dev`, `dev:debug`, `floor`, and every `verify:*`/`smoke:*`. `build`/`start` stay raw (Vercel supplies prod env). Both `.env.local` files are intentionally empty; restore the plaintext via `cp .env.local.bak .env.local` (gitignored). For a standalone run not yet wrapped, prefix `infisical run --silent --env=dev --path=/ -- <cmd>`.
 - Read the dated/numbered planning docs in `plan/prd/`, `plan/audit/`, `plan/diagrams/` for current direction; legacy `docs/` may be superseded — cross-check `plan/audit/01-plan-audit.md` §11.
 - Use `mde-task-lifecycle` to plan/ship a task; floor before shipping: `/verify-floor`.
 - Linear label taxonomy and deprecated prefixes are in `linear.md` §Labels. Do not use `SCREEN-*`, `EVP-*`, `IMP-*` as new issue prefixes.

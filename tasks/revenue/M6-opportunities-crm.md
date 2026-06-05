@@ -12,9 +12,13 @@ schema_tables: [opportunities]
 depends_on: [MVP-exit, C8]
 blocks: []
 linear_project: Growth & Operations
-prefix: GRW
 skills: [mde-supabase]
 description: A lightweight CRM pipeline on top of lead_qualifications (C8) that tracks each operator lead through sales stages — from qualification to proposal sent to closed won or lost. Surfaces in the /business portal (M2) and gives Patricia a conversion funnel to manage.
+linear_phase: post-mvp
+linear_labels:
+  - phase:post-mvp
+  - prefix:OPS
+  - area:launch
 ---
 
 # M6 — `opportunities` CRM Pipeline

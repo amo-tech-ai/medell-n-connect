@@ -11,10 +11,16 @@ order: 26
 schema_tables: [rental_bookings]
 depends_on: [MVP-exit, M1, C2]
 blocks: []
-linear_project: Revenue
-prefix: REV
+linear_project: Real Estate
 skills: [mde-stripe, mde-supabase]
 description: End-to-end rental booking flow — tourist submits a deposit hold, platform captures after host confirmation, host receives payout via Connect destination charges. Platform takes 3% commission. Complements C4 (lead billing) by handling the transaction once a lead converts to a signed lease.
+linear_phase: post-mvp
+linear_labels:
+  - phase:post-mvp
+  - prefix:PAY
+  - area:payments
+  - track:real
+  - stack:stripe
 ---
 
 # M10 — Rental Deposit & Booking via Connect

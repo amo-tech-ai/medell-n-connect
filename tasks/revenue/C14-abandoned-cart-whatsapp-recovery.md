@@ -12,9 +12,14 @@ schema_tables: []
 depends_on: [MVP-exit, C7]
 blocks: []
 linear_project: Growth & Operations
-prefix: GRW
 skills: [mde-supabase, mastra]
 description: Re-engagement automation that sends a personalized WhatsApp message when a tourist abandons a Stripe checkout session, or when a qualified rental lead goes 48h without contact. Triggered by Stripe webhook (checkout.session.expired) and a daily Supabase cron. Uses marketingAgent (C7) gen_content + wa_campaign tools for delivery.
+linear_phase: post-mvp
+linear_labels:
+  - phase:post-mvp
+  - prefix:OPS
+  - area:launch
+  - stack:whatsapp
 ---
 
 # C14 — Abandoned-Cart & Lead WhatsApp Recovery

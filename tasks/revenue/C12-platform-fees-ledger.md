@@ -12,9 +12,15 @@ schema_tables: [platform_fees]
 depends_on: [MVP-exit, C2]
 blocks: [M1]
 linear_project: Commerce Platform
-prefix: REV
 skills: [mde-stripe, mde-supabase]
 description: Create a platform_fees ledger that records MDE AI's commission on every transaction. Fed by a webhook extension on ticket-payment-webhook (and later checkout-webhook). Paired with a nightly reconciliation edge function that cross-checks Stripe balance transactions against the ledger.
+linear_phase: post-mvp
+linear_labels:
+  - phase:post-mvp
+  - prefix:PAY
+  - area:payments
+  - stack:stripe
+  - stack:supabase
 ---
 
 # C12 — `platform_fees` Ledger + Reconciliation

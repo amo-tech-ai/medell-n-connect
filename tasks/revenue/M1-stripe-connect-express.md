@@ -12,9 +12,14 @@ schema_tables: [connect_accounts]
 depends_on: [MVP-exit, C2, C12]
 blocks: [M3, M10, M11, A1, A3, A4]
 linear_project: Commerce Platform
-prefix: REV
 skills: [mde-stripe, mde-supabase]
 description: Wire Stripe Connect Express so operators (event organizers, tour operators, rental hosts) receive automatic payouts while MDE AI deducts its platform fee via application_fee_amount on every destination charge. Foundation for the full marketplace — nothing in M3, M10, or A1 can ship without it.
+linear_phase: post-mvp
+linear_labels:
+  - phase:post-mvp
+  - prefix:PAY
+  - area:payments
+  - stack:stripe
 ---
 
 # M1 — Stripe Connect Express

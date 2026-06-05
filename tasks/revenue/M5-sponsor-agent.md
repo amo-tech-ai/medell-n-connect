@@ -12,9 +12,14 @@ schema_tables: [sponsor_proposals]
 depends_on: [MVP-exit, C5]
 blocks: []
 linear_project: AI & Intelligence
-prefix: AGENT
 skills: [mastra, mde-supabase, copilotkit-integrations]
 description: Mastra agent that automates the sponsor discovery-to-contract pipeline. sponsorAgent matches inbound sponsor inquiries to available placement inventory (sponsor_placements from C5), generates a tailored proposal, and creates a Supabase invoice row — replacing a manual sales process with an AI-driven loop.
+linear_phase: post-mvp
+linear_labels:
+  - phase:post-mvp
+  - track:intelligence
+  - prefix:INT
+  - stack:mastra
 ---
 
 # M5 — Sponsor Agent

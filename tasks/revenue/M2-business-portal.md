@@ -12,9 +12,13 @@ schema_tables: []
 depends_on: [MVP-exit, C3, C8]
 blocks: [M9, M11]
 linear_project: Growth & Operations
-prefix: GRW
-skills: [mde-supabase, copilotkitV1, shadcn]
+skills: [mde-supabase, copilotkit, shadcn]
 description: The self-serve business portal at /business that every operator (venue, host, organizer, tour operator) uses to manage their subscription, view qualified leads from leadAgent (C8), see 30-day analytics, and manage their Connect payout status (M1). The primary retention surface for operator relationships.
+linear_phase: post-mvp
+linear_labels:
+  - phase:post-mvp
+  - prefix:OPS
+  - area:launch
 ---
 
 # M2 — /business Portal

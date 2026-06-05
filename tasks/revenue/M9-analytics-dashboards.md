@@ -12,9 +12,13 @@ schema_tables: []
 depends_on: [MVP-exit, M2]
 blocks: []
 linear_project: Growth & Operations
-prefix: GRW
 skills: [mde-supabase, shadcn]
 description: Extends the M2 portal analytics panel into a full-featured dashboard that surfaces roi_daily, analytics_events_daily, and outbound_clicks data with period selectors, ranked listing tables, and CSV export. Starter-tier operators see 30-day windows; Pro-tier operators see 12-month history.
+linear_phase: post-mvp
+linear_labels:
+  - phase:post-mvp
+  - prefix:OPS
+  - area:launch
 ---
 
 # M9 — Organizer & Venue Analytics Dashboards

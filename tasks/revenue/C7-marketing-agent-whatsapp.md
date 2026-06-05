@@ -7,14 +7,20 @@ status: Not Started
 estimated_effort: 3 weeks
 area: ai-agents
 tier: TIER R3-B
-order: 13
+order: 14
 schema_tables: []
 depends_on: [MVP-exit, C1, CW-3]
 blocks: [C14, M7, M8]
 linear_project: AI & Intelligence
-prefix: AGENT
 skills: [mastra, mde-supabase]
 description: Mastra marketingAgent that powers the AI Marketing Agency (C1) delivery pipeline. Three tools — gen_content (Gemini), wa_campaign (wa_outbox INSERT), schedule_post (queue). Activated by conciergeAgent on marketing_request intent, or triggered by M8's automation-engine edge function. Requires live Chatwoot → WhatsApp Cloud API bridge (CW-3) before shipment.
+linear_phase: post-mvp
+linear_labels:
+  - phase:post-mvp
+  - track:intelligence
+  - prefix:INT
+  - stack:mastra
+  - stack:whatsapp
 ---
 
 # C7 — Marketing Agent + WhatsApp Automation

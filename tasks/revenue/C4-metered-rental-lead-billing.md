@@ -6,15 +6,21 @@ priority: P1
 status: Not Started
 estimated_effort: 2 weeks
 area: backend
-tier: TIER R3
+tier: TIER R3-A
 order: 11
 schema_tables: [rental_leads, lead_billing_subscriptions]
 depends_on: [MVP-exit, C3]
 blocks: [C8]
 linear_project: Commerce Platform, Real Estate
-prefix: REV
 skills: [mde-stripe, mde-supabase]
 description: Bill property hosts per qualified rental lead delivered by MDE AI's concierge. Hosts subscribe to a metered "lead generation" plan; Stripe records a usage event each time a qualified lead is confirmed; Stripe invoices monthly. Activates the rental monetization loop that the concierge already feeds.
+linear_phase: post-mvp
+linear_labels:
+  - phase:post-mvp
+  - prefix:PAY
+  - area:payments
+  - track:real
+  - stack:stripe
 ---
 
 # C4 — Metered Rental-Lead Billing

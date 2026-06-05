@@ -6,15 +6,21 @@ priority: P1
 status: Not Started
 estimated_effort: 2–3 weeks
 area: ai-agents
-tier: TIER R3
-order: 14
+tier: TIER R3-A
+order: 13
 schema_tables: [lead_qualifications]
 depends_on: [MVP-exit, C4]
 blocks: [M6]
 linear_project: AI & Intelligence, Real Estate
-prefix: AGENT
 skills: [mastra, mde-supabase, copilotkit-integrations]
 description: New Mastra agent that qualifies rental and event leads captured by the concierge, enriches them with preference context, and routes them to the right host or organizer via a structured lead_qualifications row in Supabase. No WhatsApp dependency — operates entirely inside the Supabase data layer.
+linear_phase: post-mvp
+linear_labels:
+  - phase:post-mvp
+  - track:intelligence
+  - track:real
+  - prefix:INT
+  - stack:mastra
 ---
 
 # C8 — Lead Agent

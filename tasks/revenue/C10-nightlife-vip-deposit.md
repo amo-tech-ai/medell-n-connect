@@ -12,9 +12,14 @@ schema_tables: [bookings, venue_booking_requests]
 depends_on: [MVP-exit, C2, C6]
 blocks: [M10]
 linear_project: Venues
-prefix: VEN
 skills: [mde-stripe, mde-supabase, mastra]
 description: Enable in-chat VIP table / bottle service bookings for Medellín nightlife. Tourist requests a VIP spot → salesAgent triggers a deposit checkout (Stripe Checkout with authorize-and-capture or partial charge) → venue notified → MDE AI takes 10–15% commission.
+linear_phase: post-mvp
+linear_labels:
+  - phase:post-mvp
+  - track:venues
+  - prefix:VEN
+  - stack:stripe
 ---
 
 # C10 — Nightlife VIP Booking + Deposit

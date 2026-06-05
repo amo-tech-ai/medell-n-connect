@@ -12,9 +12,15 @@ schema_tables: []
 depends_on: [MVP-exit, C1]
 blocks: [C4, C9, M4, M12]
 linear_project: Commerce Platform
-prefix: REV
 skills: [mde-stripe, mde-supabase]
 description: Extend the Stripe Billing scaffolding from C1 (agency subscriptions only) to cover ALL revenue verticals — restaurant retainers, business tiers, consumer Pro — by creating Stripe Products/Prices objects for every plan, wiring Customer Portal for self-service management, and handling the full dunning webhook surface (updated, deleted, invoice.payment_failed).
+linear_phase: post-mvp
+linear_labels:
+  - phase:post-mvp
+  - prefix:PAY
+  - area:payments
+  - stack:stripe
+  - stack:supabase
 ---
 
 # C3 — Stripe Billing (All-Verticals)

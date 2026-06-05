@@ -12,9 +12,14 @@ schema_tables: []
 depends_on: [MVP-exit, C2]
 blocks: []
 linear_project: Commerce Platform
-prefix: REV
 skills: [mde-stripe, mde-supabase, mastra]
 description: Ship real Stripe Promotion Code validation via the apply_promo Mastra tool (C6 stub). Add a promo code field to CheckoutWidget. Wire Stripe Checkout to accept promotion codes on ticket + venue sessions.
+linear_phase: post-mvp
+linear_labels:
+  - phase:post-mvp
+  - prefix:PAY
+  - area:payments
+  - stack:stripe
 ---
 
 # C15 — Promo / Discount Codes

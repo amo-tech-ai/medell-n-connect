@@ -12,9 +12,15 @@ schema_tables: []
 depends_on: [MVP-exit, C13, C2]
 blocks: [C10, C15, M3, M5]
 linear_project: AI & Intelligence
-prefix: AGENT
-skills: [mastra, copilotkit-integrations, copilotkitV1]
+skills: [mastra, copilotkit-integrations, copilotkit]
 description: New Mastra Sales Agent that upsells, bundles, and converts — registers create_checkout + apply_promo + bundle_builder tools, wires to CopilotKit via useCopilotAction, and activates as the commercial layer on top of conciergeAgent's discovery flows.
+linear_phase: post-mvp
+linear_labels:
+  - phase:post-mvp
+  - track:intelligence
+  - prefix:INT
+  - stack:mastra
+  - stack:copilotkit
 ---
 
 # C6 — Sales Agent
@@ -179,7 +185,7 @@ export function SalesAction() {
 }
 ```
 
-**copilotkitV1 rule:** Import from `@copilotkit/react-core` (v1). Never mix v1/v2. `available: 'disabled'` means agent-only — user cannot trigger.
+**copilotkit rule:** Import from `@copilotkit/react-core` (v1.55.2). Never mix v1/v2. `available: 'disabled'` means agent-only — user cannot trigger.
 
 ## 5. Agent definition
 

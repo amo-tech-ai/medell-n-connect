@@ -67,6 +67,8 @@ Track gate progress: [Linear MVP view](https://linear.app/sanjiovani/view/mvp-48
 | Linear | Overlaps | Action |
 |--------|----------|--------|
 | SAN-563 | C2 checkout widget | Backlog · blockedBy 551 · merge into SAN-551 |
+| SAN-564 | C2 create_checkout (dup) | **Duplicate of SAN-551** · canceled 2026-06-05 |
+| SAN-558 | SCREEN-028 /cafes | **Duplicate of SAN-519** · canceled 2026-06-05 |
 | SAN-565 | C6 Sales Agent | Backlog · relatedTo 551 · defer until R2 C6 import |
 | SAN-559 | C10 nightlife VIP | Backlog · blockedBy 551 · defer until R2 C10 import |
 | SAN-560 | M7 restaurant reservations | Backlog · blockedBy 551 · defer until R4 M7 import |

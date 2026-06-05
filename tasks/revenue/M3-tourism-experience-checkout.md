@@ -11,10 +11,15 @@ order: 25
 schema_tables: [experience_bookings]
 depends_on: [MVP-exit, M1, C2]
 blocks: []
-linear_project: Revenue
-prefix: REV
+linear_project: Commerce Platform
 skills: [mde-stripe, mde-supabase]
 description: Checkout for guided tours, cultural experiences, and local activities. Tourists book and pay directly through MDE AI; the platform takes a 15–20% application fee via Stripe Connect destination charges. Operator receives 80–85% of the ticket price directly in their Connect account.
+linear_phase: post-mvp
+linear_labels:
+  - phase:post-mvp
+  - prefix:PAY
+  - area:payments
+  - stack:stripe
 ---
 
 # M3 — Tourism Experience Checkout

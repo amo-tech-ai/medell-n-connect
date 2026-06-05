@@ -24,7 +24,9 @@ All revenue tasks live in existing Linear projects. No new projects needed for C
 | **Trips** | [link](https://linear.app/sanjiovani/project/trips-14c2b4268402) | M12, A1, A2 |
 | **Discovery Platform** | [link](https://linear.app/sanjiovani/project/discovery-platform-23d24b177348) | A3 |
 
-> **Label convention (follow `linear.md`):** new revenue issues should carry `phase:mvp` (CORE tasks) or `phase:launch` (none — launch phase is done), plus a stack label (`stack:stripe`, `stack:mastra`, `stack:supabase`) and track label (`track:commerce`, `track:ai`, `track:growth`).
+> **Label convention (follow `linear.md`):** all revenue issues use **`phase:post-mvp`** plus stack/track labels from each task's `linear_labels` frontmatter — see [`tasks/revenue/INDEX-revenue.md`](../../tasks/revenue/INDEX-revenue.md). Do **not** use deprecated issue prefixes (`REV-*`, `GRW-*`, `AGENT-*`); use SAN-### + labels instead.
+>
+> **Linear import log:** [`tasks/revenue/LINEAR-REVENUE.md`](../../tasks/revenue/LINEAR-REVENUE.md) — R1 + CW pilot uploaded 2026-06-05.
 
 ---
 
@@ -33,36 +35,50 @@ All revenue tasks live in existing Linear projects. No new projects needed for C
 Revenue tasks slot into the existing tier system in `tasks/INDEX.md` **after** the current Tier 1 MVP exit is complete.
 
 ### TIER R1 — First revenue sprint (immediately post-MVP-exit, week 1–2)
-> Theme: zero-infra cash and internal cleanup. No new tables, no new agents yet.
+> Theme: agent cleanup + agency cash + first transact tool. C11 (wallets) starts in R2 after C2.
 
 | Order | ID | Task | Linear Project | Effort | Why first |
 |---|---|---|---|---|---|
-| 1 | C13 | Remove `pingAgent`, collapse `routerAgent`, park `evaluationAgent` | AI & Intelligence | 3–5 days | Cuts complexity + COGS before adding agents |
-| 2 | C1 | Productize the AI Marketing Agency | Growth & Operations | 2–3 wk | Fastest cash; 80–95% margin; no infra required; bills in week 3 |
-| 3 | C11 | Extend wallets (Apple/Google Pay) to all checkouts | Commerce Platform | 1 wk | S effort; +20–50% mobile conversion; reuses existing wallet route |
-| 4 | C2 | `create_checkout` Mastra tool + checkout widget | Commerce Platform | 3–4 wk | Unblocks all transaction revenue; depends on ticket edge (done) |
+| 1 | C13 | Remove `pingAgent`, collapse `routerAgent`, park `evaluationAgent` | AI & Intelligence | 3–5 days | Cuts complexity + COGS before adding agents · [SAN-550](https://linear.app/sanjiovani/issue/SAN-550) |
+| 2 | C1 | Productize the AI Marketing Agency (`/advertise` Agency section) | Growth & Operations | 2–3 wk | Fastest cash; 80–95% margin; bills in week 3 · [SAN-552](https://linear.app/sanjiovani/issue/SAN-552) |
+| 3 | C2 | `create_checkout` Mastra tool + checkout widget | Commerce Platform | 3–4 wk | Unblocks all transaction revenue · [SAN-551](https://linear.app/sanjiovani/issue/SAN-551) |
 
-### TIER R2 — Revenue infrastructure (weeks 3–7, after C2 ships)
-> Theme: add the billing rails so discovery flows can close.
+### TIER CW — Chatwoot prerequisite (parallel with R2, before WhatsApp agents)
+
+| Order | ID | Task | Linear Project | Depends on | Linear |
+|---|---|---|---|---|---|
+| CW-1 | CW-1 | Deploy Chatwoot on Hetzner (Coolify) | Growth & Operations | MVP-exit | [SAN-553](https://linear.app/sanjiovani/issue/SAN-553) |
+| CW-2 | CW-2 | WhatsApp Cloud API inbox + templates | Growth & Operations | CW-1 | [SAN-554](https://linear.app/sanjiovani/issue/SAN-554) |
+| CW-3 | CW-3 | `/api/chatwoot-bridge` Mastra pipeline | Growth & Operations | CW-2 | [SAN-555](https://linear.app/sanjiovani/issue/SAN-555) |
+| CW-4 | CW-4 | Contact/conversation Supabase mirror | Growth & Operations | CW-3 | [SAN-556](https://linear.app/sanjiovani/issue/SAN-556) |
+| CW-5 | CW-5 | G2 rental lead capture hook | Growth & Operations | CW-4 | [SAN-557](https://linear.app/sanjiovani/issue/SAN-557) |
+
+### TIER R2 — Revenue infrastructure (weeks 2–7, after C2 ships)
+> Theme: wallets on CheckoutWidget + billing rails + Sales Agent.
 
 | Order | ID | Task | Linear Project | Effort | Depends on |
 |---|---|---|---|---|---|
-| 5 | C3 | Stripe Billing + `subscriptions` table | Commerce Platform | 2–4 wk | C1 (first clients need recurring billing) |
-| 6 | C12 | `platform_fees` ledger + reconciliation | Commerce Platform | 1–2 wk | C2 (webhook must exist first) |
-| 7 | C6 | Sales Agent (upsell / bundle / convert) | AI & Intelligence | 2–3 wk | C2 (`create_checkout` tool must exist) |
+| 4 | C11 | Extend wallets (Apple/Google Pay) to all checkouts | Commerce Platform | 1 wk | C2 |
+| 5 | C3 | Stripe Billing + `subscriptions` table | Commerce Platform | 2–4 wk | C1 |
+| 6 | C12 | `platform_fees` ledger + reconciliation | Commerce Platform | 1–2 wk | C2 |
+| 7 | C6 | Sales Agent (upsell / bundle / convert) | AI & Intelligence | 2–3 wk | C13, C2 |
 | 8 | C15 | Promo/discount codes on tickets | Commerce Platform | 1 wk | C2 |
 | 9 | C9 | Restaurant/venue marketing retainer + featured | Venues | 2 wk | C3, C5 |
-| 10 | C10 | Nightlife VIP booking + deposit | Commerce Platform + Venues | 2–3 wk | C2, C6 |
+| 10 | C10 | Nightlife VIP booking + deposit | Venues | 2–3 wk | C2, C6 |
 
-### TIER R3 — Lead monetization + WhatsApp wire (weeks 6–12)
-> Theme: bill the leads already captured; wire the outbox already built.
+### TIER R3-A — Lead monetization (weeks 6–12, no Chatwoot required)
 
 | Order | ID | Task | Linear Project | Effort | Depends on |
 |---|---|---|---|---|---|
-| 11 | C4 | Metered rental-lead billing (`lead_billing`) | Commerce Platform + Real Estate | 2 wk | C3 (Billing must exist) |
-| 12 | C5 | `/advertise` self-serve over `sponsor.*` | Growth & Operations | 3–4 wk | none (activates dormant schema) |
-| 13 | C7 | Marketing Agent + WhatsApp automation | AI & Intelligence + Growth & Operations | 3 wk | C1 (agency delivers via this) |
-| 14 | C8 | Lead Agent (qualify / enrich / route) | AI & Intelligence + Real Estate | 2–3 wk | C4 |
+| 11 | C4 | Metered rental-lead billing (`lead_billing`) | Commerce Platform + Real Estate | 2 wk | C3 |
+| 12 | C5 | `/advertise` Get Listed over `sponsor.*` | Growth & Operations | 3–4 wk | C2 |
+| 13 | C8 | Lead Agent (qualify / enrich / route) | AI & Intelligence + Real Estate | 2–3 wk | C4 |
+
+### TIER R3-B — Chatwoot-dependent (after CW-3 live)
+
+| Order | ID | Task | Linear Project | Effort | Depends on |
+|---|---|---|---|---|---|
+| 14 | C7 | Marketing Agent + WhatsApp automation | AI & Intelligence + Growth & Operations | 3 wk | C1, CW-3 |
 | 15 | C14 | Abandoned-cart / lead WhatsApp recovery | Growth & Operations | 1–2 wk | C7 |
 
 ### TIER R4 — Marketplace rail (months 3–6, parallel tracks)
@@ -81,7 +97,7 @@ Revenue tasks slot into the existing tier system in `tasks/INDEX.md` **after** t
 | 24 | M11 | `/partners` operator onboarding | Growth & Operations | 2–3 wk | M1 |
 | 25 | M3 | Tourism experience checkout + operator subscriptions | Commerce Platform | 4–6 wk | M1, C2 |
 | 26 | M10 | Rental deposit/booking via Connect | Real Estate | 4 wk | M1 |
-| 27 | M12 | Consumer Pro/VIP (trips perks) | Trips | 2–3 wk | C3 |
+| 27 | M12 | Consumer Pro/VIP — **$19/mo / $149/yr** (trips perks) | Trips | 2–3 wk | C3 |
 
 ### TIER R5 — Advanced / Phase 2 (months 6–18)
 > Theme: marketplace scale, AI OS, multi-operator monetization.
@@ -124,21 +140,21 @@ Revenue tasks slot into the existing tier system in `tasks/INDEX.md` **after** t
 
 | # | ID | Task Name | Linear Project | Prefix | Score | Complexity | Effort | Rev |
 |---|---|---|---|---|---|---|---|---|
-| 1 | C13 | Remove `pingAgent`, collapse `routerAgent`, park `evaluationAgent` | AI & Intelligence | AGENT | 80 | S | 3–5 days | ⭐ |
-| 2 | C1 | Productize the AI Marketing Agency | Growth & Operations | GRW | 98 | M | 2–3 wk | ⭐⭐⭐⭐⭐ |
-| 3 | C11 | Extend wallets (Apple/Google Pay) to all checkouts | Commerce Platform | REV | 84 | S | 1 wk | ⭐⭐⭐ |
-| 4 | C2 | `create_checkout` Mastra tool + checkout widget | Commerce Platform | REV | 96 | M | 3–4 wk | ⭐⭐⭐⭐⭐ |
-| 5 | C3 | Stripe Billing + `subscriptions` table | Commerce Platform | REV | 95 | M | 2–4 wk | ⭐⭐⭐⭐⭐ |
-| 6 | C12 | `platform_fees` ledger + reconciliation | Commerce Platform | REV | 82 | S–M | 1–2 wk | ⭐⭐ |
-| 7 | C6 | Sales Agent (upsell / bundle / convert) | AI & Intelligence | AGENT | 90 | M | 2–3 wk | ⭐⭐⭐⭐⭐ |
-| 8 | C15 | Promo/discount codes on tickets | Commerce Platform | REV | 76 | S | 1 wk | ⭐⭐ |
+| 1 | C13 | Remove `pingAgent`, collapse `routerAgent`, park `evaluationAgent` | AI & Intelligence | INT | 80 | S | 3–5 days | ⭐ |
+| 2 | C1 | Productize the AI Marketing Agency | Growth & Operations | OPS | 98 | M | 2–3 wk | ⭐⭐⭐⭐⭐ |
+| 3 | C2 | `create_checkout` Mastra tool + checkout widget | Commerce Platform | PAY | 96 | M | 3–4 wk | ⭐⭐⭐⭐⭐ |
+| 4 | C11 | Extend wallets (Apple/Google Pay) to all checkouts | Commerce Platform | PAY | 84 | S | 1 wk | ⭐⭐⭐ |
+| 5 | C3 | Stripe Billing + `subscriptions` table | Commerce Platform | PAY | 95 | M | 2–4 wk | ⭐⭐⭐⭐⭐ |
+| 6 | C12 | `platform_fees` ledger + reconciliation | Commerce Platform | PAY | 82 | S–M | 1–2 wk | ⭐⭐ |
+| 7 | C6 | Sales Agent (upsell / bundle / convert) | AI & Intelligence | INT | 90 | M | 2–3 wk | ⭐⭐⭐⭐⭐ |
+| 8 | C15 | Promo/discount codes on tickets | Commerce Platform | PAY | 76 | S | 1 wk | ⭐⭐ |
 | 9 | C9 | Restaurant/venue marketing retainer + featured | Venues | VEN | 87 | S–M | 2 wk | ⭐⭐⭐⭐ |
 | 10 | C10 | Nightlife VIP booking + deposit | Venues | VEN | 85 | M | 2–3 wk | ⭐⭐⭐⭐ |
-| 11 | C4 | Metered rental-lead billing (`lead_billing`) | Real Estate | RENT | 94 | S–M | 2 wk | ⭐⭐⭐⭐ |
-| 12 | C5 | `/advertise` self-serve over `sponsor.*` | Growth & Operations | GRW | 92 | M | 3–4 wk | ⭐⭐⭐⭐ |
-| 13 | C7 | Marketing Agent + WhatsApp automation | AI & Intelligence | AGENT | 89 | M | 3 wk | ⭐⭐⭐⭐ |
-| 14 | C8 | Lead Agent (qualify / enrich / route) | AI & Intelligence | AGENT | 88 | M | 2–3 wk | ⭐⭐⭐⭐ |
-| 15 | C14 | Abandoned-cart / lead WhatsApp recovery | Growth & Operations | GRW | 78 | S–M | 1–2 wk | ⭐⭐⭐ |
+| 11 | C4 | Metered rental-lead billing (`lead_billing`) | Real Estate | PAY | 94 | S–M | 2 wk | ⭐⭐⭐⭐ |
+| 12 | C5 | `/advertise` Get Listed over `sponsor.*` | Growth & Operations | OPS | 92 | M | 3–4 wk | ⭐⭐⭐⭐ |
+| 13 | C7 | Marketing Agent + WhatsApp automation | AI & Intelligence | INT | 89 | M | 3 wk | ⭐⭐⭐⭐ |
+| 14 | C8 | Lead Agent (qualify / enrich / route) | AI & Intelligence | INT | 88 | M | 2–3 wk | ⭐⭐⭐⭐ |
+| 15 | C14 | Abandoned-cart / lead WhatsApp recovery | Growth & Operations | OPS | 78 | S–M | 1–2 wk | ⭐⭐⭐ |
 
 ### MVP — 3–6 Months · Target $25k MRR
 
@@ -155,7 +171,7 @@ Revenue tasks slot into the existing tier system in `tasks/INDEX.md` **after** t
 | 24 | M11 | `/partners` operator onboarding | Growth & Operations | GRW | 75 | M | 2–3 wk | ⭐⭐⭐ |
 | 25 | M3 | Tourism experience checkout + operator subscriptions | Commerce Platform | REV | 87 | L | 4–6 wk | ⭐⭐⭐⭐ |
 | 26 | M10 | Rental deposit/booking via Connect | Real Estate | RENT | 77 | L | 4 wk | ⭐⭐⭐ |
-| 27 | M12 | Consumer Pro/VIP (trips perks) | Trips | TRP | 72 | M | 2–3 wk | ⭐⭐ |
+| 27 | M12 | Consumer Pro/VIP ($19/mo · $149/yr) | Trips | TRP | 72 | M | 2–3 wk | ⭐⭐ |
 
 ### ADVANCED — 6–18 Months · Target $50–100k MRR
 

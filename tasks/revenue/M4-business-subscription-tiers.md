@@ -12,9 +12,14 @@ schema_tables: []
 depends_on: [MVP-exit, C3]
 blocks: [M12]
 linear_project: Commerce Platform
-prefix: REV
-skills: [mde-stripe, mde-supabase, copilotkitV1]
+skills: [mde-stripe, mde-supabase, copilotkit]
 description: Extend C3's Stripe Billing infrastructure with operator-facing subscription tiers across all verticals — restaurant/cafe/nightclub, tour operator, rental host, event organizer. Each tier unlocks specific platform features (lead delivery, featured placement, analytics, priority support). The recurring B2B SaaS layer on top of the marketplace.
+linear_phase: post-mvp
+linear_labels:
+  - phase:post-mvp
+  - prefix:PAY
+  - area:payments
+  - stack:stripe
 ---
 
 # M4 — Business Subscription Tiers

@@ -12,9 +12,14 @@ schema_tables: [campaigns, audiences, audience_members, automations, automation_
 depends_on: [MVP-exit, C7]
 blocks: []
 linear_project: Growth & Operations
-prefix: GRW
 skills: [mde-supabase, mastra]
 description: The database backbone and execution engine for marketing automation. Defines campaigns (what to send), audiences (who to send to), and automations (when to trigger). The Marketing Agent (C7) uses this schema to deliver campaigns at scale. Replaces the current ad-hoc wa_outbox pattern with a structured, auditable automation layer.
+linear_phase: post-mvp
+linear_labels:
+  - phase:post-mvp
+  - prefix:OPS
+  - area:launch
+  - stack:whatsapp
 ---
 
 # M8 — Campaigns / Audiences / Automations Engine

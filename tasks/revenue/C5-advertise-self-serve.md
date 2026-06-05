@@ -6,15 +6,21 @@ priority: P1
 status: Not Started
 estimated_effort: 3–4 weeks
 area: fullstack
-tier: TIER R3
+tier: TIER R3-A
 order: 12
-schema_tables: [sponsor_advertisers, sponsor_placements]
+schema_tables: [sponsor.organizations, sponsor.applications, sponsor.placements]
 depends_on: [MVP-exit, C2]
 blocks: [C9, M5]
 linear_project: Growth & Operations
-prefix: GRW
-skills: [mde-stripe, mde-supabase, copilotkitV1]
+skills: [mde-stripe, mde-supabase, copilotkit]
 description: Build a self-serve advertising portal at /advertise where any Medellín business (restaurant, tour, hotel, venue) can buy a directory listing or featured placement directly — no sales call. Activates the dormant sponsor.* schema. Infrastructure that C9 (restaurant retainer) and M5 (Sponsor Agent) build on.
+linear_phase: post-mvp
+linear_labels:
+  - phase:post-mvp
+  - prefix:OPS
+  - area:launch
+  - stack:stripe
+  - stack:supabase
 ---
 
 # C5 — /advertise Self-Serve Portal
@@ -29,7 +35,7 @@ description: Build a self-serve advertising portal at /advertise where any Medel
 |---------|--------|-------|
 | **Restaurant owner** | Emails the team to ask about advertising; waits days | Visits `/advertise`, picks "Starter Listing $49/mo", pays, live immediately |
 | **Tourist** | Sees equally-ranked results with no curation signal | Featured listings have a badge; sponsored results labeled clearly |
-| **Patricia** (ops) | No self-serve B2B revenue | `SELECT count(*), sum(amount) FROM sponsor_placements WHERE active = true` |
+| **Patricia** (ops) | No self-serve B2B revenue | `SELECT count(*), sum(amount_cents) FROM sponsor.placements WHERE is_active = true` |
 | **Camila** | Rental results based on data quality only | Featured properties can appear higher when their host subscribes |
 
 **User journey — self-serve listing:**
@@ -37,7 +43,7 @@ description: Build a self-serve advertising portal at /advertise where any Medel
 2. Scrolls to "Get Listed" section → picks a package (Starter / Featured / Premium)
 3. Fills intake form (business name, category, neighborhood, website)
 4. Clicks "Subscribe" → Stripe Checkout Session (subscription or one-time)
-5. `placement-webhook` fires on `checkout.session.completed` → inserts `sponsor_placements` row
+5. `placement-webhook` fires on `checkout.session.completed` → inserts `sponsor.placements` row
 6. Listing goes live; search tools prioritize the placement
 
 ```mermaid
@@ -51,7 +57,7 @@ flowchart TD
     C --> D[POST /api/billing/create-listing-session]
     D --> E[Stripe Checkout Session]
     E -->|payment complete| F[placement-webhook fires]
-    F --> G[(INSERT sponsor_placements)]
+    F --> G[(INSERT sponsor.placements)]
     G --> H{Placement type?}
     H -->|listing| I[Appears in search results]
     H -->|featured| J[Elevated in results + badge]
@@ -80,7 +86,7 @@ stateDiagram-v2
 
 MDE AI has a `sponsor.*` schema sitting dormant in Supabase — the tables exist but nothing writes to them and no discovery tool reads from them. C5 activates this schema by building a self-serve portal that lets any business buy a listing without involving the sales team.
 
-C5 is **infrastructure** — it provides the `sponsor_placements` table and the checkout flow that:
+C5 is **infrastructure** — it activates `sponsor.organizations`, `sponsor.applications`, and `sponsor.placements` and the checkout flow that:
 - **C9** extends for restaurant monthly retainers
 - **M5** (Sponsor Agent) uses to propose and manage placements autonomously
 
@@ -90,12 +96,11 @@ Distinct from **C1** (managed AI Marketing Agency — MDE AI team delivers conte
 
 ## 2. Goals
 
-- `sponsor_advertisers` table: business profile linked to user
-- `sponsor_placements` table: active placements with type, vertical, neighborhood, expiry
-- `/advertise` page (C1 created agency section) — add "Get Listed" section with 3 listing packages
+- Reuse existing `sponsor.organizations` + `sponsor.applications`; write active rows to `sponsor.placements`
+- `/advertise` page (C1 ships Agency section first) — add **Get Listed** section with 3 listing packages
 - `POST /api/billing/create-listing-session` route creates Stripe Checkout Session for selected package
-- `placement-webhook` edge function handles `checkout.session.completed` → inserts `sponsor_placements` row
-- `search-restaurants.ts` and `search-events.ts` updated to LEFT JOIN `sponsor_placements` and sort sponsored first
+- `placement-webhook` edge function handles `checkout.session.completed` → inserts `sponsor.placements` row
+- Search tools updated to JOIN `sponsor.placements` (active only) and sort sponsored first
 - `npm run build` exits 0; Vitest floor stays ≥ 401
 
 ## 3. Packages
@@ -108,11 +113,14 @@ Distinct from **C1** (managed AI Marketing Agency — MDE AI team delivers conte
 
 ## 4. Wiring plan
 
-### 4A — Schema
+### 4A — Schema (use existing `sponsor.*` — no new `public.sponsor_*` tables)
 
 | Layer | File | Action |
 |-------|------|--------|
-| Migration | `supabase/migrations/YYYYMMDD_sponsor_placements.sql` | Create — see §5 |
+| Migration | `supabase/migrations/YYYYMMDD_c5_listing_checkout.sql` | **Only if needed:** extend `sponsor.applications` metadata columns (neighborhood, package tier) — do **not** duplicate `sponsor.placements` in `public` |
+| Edge ACL | existing `sponsor` schema RLS | Verify service-role webhook + authenticated owner reads via `sponsor.placements_select_own` |
+
+**Flow:** checkout → `sponsor.applications` row → `sponsor.invoices` paid → `activate_placements_if_ready()` sets `sponsor.placements.active = true` (see `20260512140000_sponsor_schema_foundation.sql`).
 
 ### 4B — Checkout route
 
@@ -164,24 +172,18 @@ export async function POST(req: Request) {
 
 | Layer | File | Action |
 |-------|------|--------|
-| Webhook | `supabase/functions/placement-webhook/index.ts` | Create — handles `checkout.session.completed` with `metadata.placement_type`; inserts `sponsor_placements` |
+| Webhook | `supabase/functions/placement-webhook/index.ts` | Create — `checkout.session.completed` → upsert `sponsor.applications` + `sponsor.invoices`; call activation path for `sponsor.placements` |
 
 ```ts
-// placement-webhook: on checkout.session.completed
+// placement-webhook: on checkout.session.completed (service role → sponsor schema)
 if (event.type === 'checkout.session.completed') {
   const session = event.data.object as Stripe.Checkout.Session
   const meta = session.metadata ?? {}
   if (meta.placement_type && meta.user_id) {
-    await serviceClient.from('sponsor_placements').insert({
-      user_id: meta.user_id,
-      business_name: meta.business_name,
-      placement_type: meta.placement_type,   // 'listing' | 'featured' | 'premium'
-      vertical: meta.vertical,
-      neighborhood: meta.neighborhood,
-      stripe_subscription_id: session.subscription as string,
-      active: true,
-      starts_at: new Date().toISOString(),
-    })
+    // 1. insert sponsor.applications (package tier in metadata)
+    // 2. insert sponsor.invoices status=paid
+    // 3. insert sponsor.placements (active=false until contract signed OR simplify Phase-1: active=true for self-serve)
+    await serviceClient.schema('sponsor').from('placements').insert({ ... })
   }
 }
 ```
@@ -190,8 +192,8 @@ if (event.type === 'checkout.session.completed') {
 
 | Layer | File | Action |
 |-------|------|--------|
-| Restaurant tool | `src/mastra/tools/search-restaurants.ts` | Modify — LEFT JOIN `sponsor_placements` on venue; sort premium → featured → listing → organic |
-| Events tool | `src/mastra/tools/search-events.ts` | Modify — same LEFT JOIN pattern for event promotions |
+| Restaurant tool | `src/mastra/tools/search-restaurants.ts` | Modify — JOIN `sponsor.placements` (active) via application; sort by `weight` / surface |
+| Events tool | `src/mastra/tools/search-events.ts` | Modify — same pattern for promoted events |
 
 ### 4E — UI
 
@@ -203,71 +205,41 @@ if (event.type === 'checkout.session.completed') {
 
 **CLAUDE.md note:** `/advertise` is `⚫ POST` in `sitemap.md` — C1 moves it to `🟡 MVP`; C5 ships its self-serve section on top.
 
-## 5. Schema
+## 5. Schema reference (disk — do not recreate)
 
-```sql
--- supabase/migrations/YYYYMMDD_sponsor_placements.sql
+Tables already exist under **`sponsor`** schema:
 
-CREATE TABLE public.sponsor_advertisers (
-  id            uuid PRIMARY KEY DEFAULT gen_random_uuid(),
-  user_id       uuid NOT NULL REFERENCES auth.users(id),
-  business_name text NOT NULL,
-  category      text,
-  neighborhood  text,
-  website       text,
-  created_at    timestamptz NOT NULL DEFAULT now()
-);
-ALTER TABLE public.sponsor_advertisers ENABLE ROW LEVEL SECURITY;
-CREATE POLICY "owner_read" ON public.sponsor_advertisers
-  FOR SELECT USING (user_id = (SELECT auth.uid()));
+| Table | Role |
+|-------|------|
+| `sponsor.organizations` | Business profile |
+| `sponsor.applications` | Listing / placement application |
+| `sponsor.invoices` | Payment state (`paid` triggers activation) |
+| `sponsor.contracts` | Signed contract (optional Phase-1 waiver for self-serve) |
+| `sponsor.placements` | Active placement rows (`surface`, `weight`, `active`, `start_at`, `end_at`) |
 
-CREATE TABLE public.sponsor_placements (
-  id                     uuid PRIMARY KEY DEFAULT gen_random_uuid(),
-  user_id                uuid REFERENCES auth.users(id),
-  business_name          text NOT NULL,
-  placement_type         text NOT NULL
-    CHECK (placement_type IN ('listing', 'featured', 'premium')),
-  vertical               text NOT NULL
-    CHECK (vertical IN ('restaurant', 'event', 'venue', 'rental', 'tour')),
-  neighborhood           text,
-  stripe_subscription_id text,
-  active                 boolean NOT NULL DEFAULT true,
-  starts_at              timestamptz NOT NULL DEFAULT now(),
-  ends_at                timestamptz,
-  created_at             timestamptz NOT NULL DEFAULT now()
-);
-ALTER TABLE public.sponsor_placements ENABLE ROW LEVEL SECURITY;
-
--- Public read — advertiser identity is public (business name, neighborhood, category)
-CREATE POLICY "public_read_active" ON public.sponsor_placements
-  FOR SELECT USING (active = true);
-
--- Owner reads all their own rows (including inactive)
-CREATE POLICY "owner_read_all" ON public.sponsor_placements
-  FOR SELECT USING (user_id = (SELECT auth.uid()));
-```
+Migration work is **wiring + optional metadata columns only** — not new `public.sponsor_advertisers` / `public.sponsor_placements`.
 
 ## 6. Edge cases
 
-- **Existing `sponsor.*` tables:** If Supabase already has `sponsor.placements` in a `sponsor` schema, create `public.sponsor_placements` as a new table (do not modify the legacy schema — it may be used by the legacy app). Add a `TODO: reconcile with sponsor.* schema in Phase 2` comment in the migration.
-- **Cancellation:** When `customer.subscription.deleted` fires, set `sponsor_placements.active = false` and `ends_at = now()`.
+- **Activation:** Prefer existing `activate_placements_if_ready()`; for self-serve MVP, document whether contract step is auto-signed or bypassed.
+- **Cancellation:** On `customer.subscription.deleted`, set `sponsor.placements.active = false` and `end_at = now()`.
 - **Multiple placements per user:** Allowed — a restaurant could have both a Featured Listing and a Premium Placement in different neighborhoods. The LEFT JOIN in search tools must handle multiple matching rows; `ORDER BY placement_type_rank DESC LIMIT 1` per venue.
 - **Neighborhood targeting:** For Phase 1, `neighborhood` is a free text field. Phase 2 can add a lookup against `places.neighborhood` enum.
 - **`STRIPE_PRICE_LISTING_*` env vars:** Must be added to `.env.local` and Vercel/Supabase secrets. Add them to the `.env.local` template in CLAUDE.md or a secrets checklist.
 
 ## 7. Real-world examples
 
-**Tacos y Tequila owner** visits `/advertise`, scrolls to "Get Listed," picks Featured Listing ($149/mo). Enters business name + "El Poblado" neighborhood. Clicks "Subscribe." Stripe Checkout opens, he pays. `placement-webhook` inserts a `sponsor_placements` row with `placement_type: 'featured'`. Next time a tourist asks the concierge for dinner in Poblado, Tacos y Tequila appears in the top-3 with a ⭐ badge.
+**Tacos y Tequila owner** visits `/advertise`, scrolls to "Get Listed," picks Featured Listing ($149/mo). Enters business name + "El Poblado" neighborhood. Clicks "Subscribe." Stripe Checkout opens, he pays. `placement-webhook` writes `sponsor.applications` + `sponsor.placements` with `active = true`. Next time a tourist asks the concierge for dinner in Poblado, Tacos y Tequila appears in the top-3 with a ⭐ badge.
 
-**Patricia** queries: `SELECT business_name, placement_type, neighborhood FROM sponsor_placements WHERE active = true ORDER BY placement_type DESC` — advertiser report.
+**Patricia** queries: `SELECT surface, weight, active FROM sponsor.placements WHERE active = true` — advertiser report.
 
 ## 8. Acceptance criteria
 
-1. `sponsor_placements` and `sponsor_advertisers` tables exist with RLS policies.
+1. Checkout writes to **`sponsor.applications`** + **`sponsor.placements`** (not `public.sponsor_*`).
 2. `GET /advertise` renders 3 listing package cards (Starter / Featured / Premium) below agency packages.
 3. `POST /api/billing/create-listing-session` with valid auth returns `{ url: "https://checkout.stripe.com/..." }`.
-4. `placement-webhook` inserts a `sponsor_placements` row on `checkout.session.completed` with listing metadata.
-5. `search-restaurants.ts` returns featured restaurants before non-featured when `sponsor_placements` has an active row.
+4. `placement-webhook` activates placement rows on `checkout.session.completed` with listing metadata.
+5. `search-restaurants.ts` elevates venues with active `sponsor.placements` rows.
 6. `npm run build` exits 0; Vitest floor stays ≥ 401.
 
 ## 9. Outcomes
@@ -277,4 +249,4 @@ CREATE POLICY "owner_read_all" ON public.sponsor_placements
 | `sponsor.*` schema | Dormant | Active — writes on every checkout |
 | B2B self-serve revenue | Zero | $49–$299/mo per listing subscriber |
 | Discovery ranking | Data quality only | Sponsored + featured placements elevate listings |
-| C9 / M5 unblock | Blocked | `sponsor_placements` table + checkout flow ready |
+| C9 / M5 unblock | Blocked | `sponsor.placements` + checkout flow ready |

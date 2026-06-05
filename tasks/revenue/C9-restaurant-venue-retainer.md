@@ -8,13 +8,18 @@ estimated_effort: 2 weeks
 area: backend
 tier: TIER R2
 order: 9
-schema_tables: [sponsor_placements]
+schema_tables: [sponsor.placements]
 depends_on: [MVP-exit, C3, C5]
 blocks: [M7]
 linear_project: Venues
-prefix: VEN
 skills: [mde-stripe, mde-supabase]
 description: Let restaurants and venue owners subscribe to a monthly marketing retainer that gives them a featured placement in MDE AI's discovery feeds (chat results, map pins, event listings). Uses Stripe Billing subscriptions (C3) and activates the dormant sponsor.placements schema.
+linear_phase: post-mvp
+linear_labels:
+  - phase:post-mvp
+  - track:venues
+  - prefix:VEN
+  - stack:stripe
 ---
 
 # C9 — Restaurant / Venue Marketing Retainer

@@ -12,9 +12,14 @@ schema_tables: [reservations]
 depends_on: [MVP-exit, C7]
 blocks: []
 linear_project: Venues
-prefix: VEN
-skills: [mde-supabase, mde-stripe, copilotkitV1]
+skills: [mde-supabase, mde-stripe, copilotkit]
 description: A venue-facing reservation inbox in /business where restaurant and venue owners receive booking requests, confirm or decline them, and view upcoming reservations. The WhatsApp confirm loop (C7) sends the initial notification; M7 provides the portal interface and the business logic for confirmation, decline, and no-show handling.
+linear_phase: post-mvp
+linear_labels:
+  - phase:post-mvp
+  - track:venues
+  - prefix:VEN
+  - stack:stripe
 ---
 
 # M7 — Restaurant Reservation Management

@@ -7,13 +7,22 @@ status: Not Started
 estimated_effort: 3–4 weeks
 area: ai-agents
 tier: TIER R1
-order: 4
+order: 3
 schema_tables: []
 depends_on: [MVP-exit, C13]
 blocks: [C6, C10, C11, C12, C15, M3, M10, A1]
 linear_project: Commerce Platform
-prefix: REV
 description: Ship the first Mastra transact tool — create_checkout — that any agent (Sales, Marketing, concierge) can call to open a Stripe checkout for any product type (ticket, venue deposit, tour, rental). Paired with a reusable CheckoutWidget React component that renders in-chat or on any page.
+linear_phase: post-mvp
+linear_id: SAN-551
+linear_url: https://linear.app/sanjiovani/issue/SAN-551/rev-c2-create-checkout-tool-checkout-widget
+linear_blocked_by: [SAN-178, SAN-115, SAN-368, SAN-550]
+linear_labels:
+  - phase:post-mvp
+  - prefix:PAY
+  - area:payments
+  - stack:stripe
+  - stack:mastra
 ---
 
 # C2 — `create_checkout` Mastra Tool + CheckoutWidget

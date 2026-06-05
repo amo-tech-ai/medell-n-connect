@@ -11,8 +11,17 @@ order: 1
 schema_tables: []
 depends_on: [MVP-exit]
 linear_project: AI & Intelligence
-prefix: AGENT
 description: Remove dead-weight agents from the Mastra registry before adding revenue agents. Reduces COGS (fewer Gemini calls per session), removes obsolete routing indirection, and unblocks Sales Agent (C6) from inheriting a clean agent namespace.
+linear_phase: post-mvp
+linear_id: SAN-550
+linear_url: https://linear.app/sanjiovani/issue/SAN-550/rev-c13-agent-cleanup-pingrouterevaluation
+linear_blocked_by: [SAN-178, SAN-115, SAN-368]
+linear_labels:
+  - phase:post-mvp
+  - track:intelligence
+  - prefix:INT
+  - stack:mastra
+  - stack:copilotkit
 ---
 
 # C13 — Agent Cleanup

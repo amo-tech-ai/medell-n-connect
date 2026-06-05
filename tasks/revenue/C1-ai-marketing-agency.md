@@ -11,15 +11,23 @@ order: 2
 schema_tables: [subscriptions]
 depends_on: [MVP-exit, C13]
 linear_project: Growth & Operations
-prefix: GRW
 description: Turn the AI marketing capability into a billable service — define packages, ship a pricing + intake page, create the Marketing Agent skeleton, and wire a Stripe Billing subscription so the first client can pay in week 3 post-MVP.
+linear_phase: post-mvp
+linear_id: SAN-552
+linear_url: https://linear.app/sanjiovani/issue/SAN-552/rev-c1-agency-agent-advertise-agency-section
+linear_blocked_by: [SAN-178, SAN-115, SAN-368, SAN-550]
+linear_labels:
+  - phase:post-mvp
+  - prefix:OPS
+  - area:launch
+  - stack:stripe
 ---
 
 # C1 — Productize the AI Marketing Agency
 
 ## 0. Quick Read
 
-**What this does in one sentence:** Roberto visits `/advertise`, picks a monthly plan, pays with Stripe Billing, and MDE AI starts delivering AI-generated content for his venue — this is the first recurring revenue stream.
+**What this does in one sentence:** Roberto visits `/advertise` → **Agency** section, picks a monthly plan, pays with Stripe Billing, and MDE AI starts delivering AI-generated content for his venue — this is the first recurring revenue stream. (C5 adds a separate **Get Listed** section on the same page later.)
 
 **Revenue model:** B2B retainer. Three tiers: Starter $299/mo · Growth $599/mo · Scale $999/mo. 80–95% gross margin — AI delivers content with one human QA pass.
 
@@ -27,7 +35,7 @@ description: Turn the AI marketing capability into a billable service — define
 
 | Persona | Before | After |
 |---------|--------|-------|
-| **Roberto** (host) | No way to buy ongoing marketing help | Visits `/advertise`, picks Growth plan, pays, gets onboarding email in minutes |
+| **Roberto** (host) | No way to buy ongoing marketing help | Visits `/advertise` Agency section, picks Growth plan, pays, gets onboarding email in minutes |
 | **Venue owner** | Must DM the team to ask about AI marketing | Self-serve: pick a package → subscribe → Mastra delivers content calendar |
 | **Patricia** (ops) | Zero recurring revenue | `SELECT plan, count(*), sum(price) FROM subscriptions WHERE status='active'` → MRR |
 

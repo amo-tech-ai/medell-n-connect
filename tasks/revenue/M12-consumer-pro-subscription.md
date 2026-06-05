@@ -11,19 +11,24 @@ order: 27
 schema_tables: []
 depends_on: [MVP-exit, C3]
 blocks: []
-linear_project: Revenue
-prefix: REV
-skills: [mde-stripe, mde-supabase, copilotkitV1]
-description: The consumer-facing premium subscription ($9.99/mo or $79.99/yr). Pro subscribers get enhanced AI itinerary generation, priority concierge access, zero platform booking fees, and a Pro badge. Targets frequent travelers who use MDE AI 2+ times per month and for whom fee savings alone justify the cost.
+linear_project: Trips
+skills: [mde-stripe, mde-supabase, copilotkit]
+description: The consumer-facing premium subscription ($19/mo or $149/yr — matches C3 `consumer_pro` Price). Pro subscribers get enhanced AI itinerary generation, priority concierge access, zero platform booking fees, and a Pro badge.
+linear_phase: post-mvp
+linear_labels:
+  - phase:post-mvp
+  - track:trips
+  - prefix:TRP
+  - stack:stripe
 ---
 
 # M12 — Consumer Pro Subscription
 
 ## 0. Quick Read
 
-**What this does in one sentence:** Camila upgrades to Consumer Pro for $9.99/mo and gets richer AI trip plans, zero booking fees on experiences, and priority concierge access — turning MDE AI from a free discovery tool into a daily travel companion she actually pays for.
+**What this does in one sentence:** Camila upgrades to Consumer Pro for $19/mo and gets richer AI trip plans, zero booking fees on experiences, and priority concierge access — turning MDE AI from a free discovery tool into a daily travel companion she actually pays for.
 
-**The business case:** The operator subscription stack (C3, M4) monetizes B2B. Consumer Pro monetizes B2C — the high-frequency travel planners. Target conversion: 3–5% of MAU at $9.99/mo. A user who books one experience per month saves more in waived fees than the subscription costs.
+**The business case:** The operator subscription stack (C3, M4) monetizes B2B. Consumer Pro monetizes B2C — the high-frequency travel planners. Target conversion: 3–5% of MAU at $19/mo. A user who books one experience per month saves more in waived fees than the subscription costs.
 
 | Persona | Before | After |
 |---------|--------|-------|
@@ -46,7 +51,7 @@ flowchart TD
     B -->|"Yes - Pro"| I[Zero platform booking fees]
     B -->|"Yes - Pro"| J[Priority concierge access]
     C & D & E & F --> K{Hits limit?}
-    K -->|Yes| L["Upgrade prompt: Consumer Pro $9.99/mo"]
+    K -->|Yes| L["Upgrade prompt: Consumer Pro $19/mo"]
     L --> N[/me/upgrade Stripe Checkout]
     N --> O[subscription created - pro unlocked]
     G & H & I & J --> P([Pro user experience])
@@ -84,13 +89,13 @@ All previous revenue tasks (C1–C15, M1–M11) monetize operators: subscription
 
 The target persona is Camila — a traveler who uses MDE AI 2–3× per week to plan outings, find experiences, and book tables. For her, the free tier is useful but limited. Consumer Pro removes friction: no fees, no rate limits, richer AI output.
 
-**Why $9.99/mo:** Below the "think twice" threshold for frequent travelers. Annual plan ($79.99) is 33% off — incentivizes commitment and reduces churn.
+**Why $19/mo:** Aligns with C3 `consumer_pro` Price. Annual plan ($149/yr) is ~35% off — incentivizes commitment and reduces churn.
 
 **Key implementation note:** The zero-platform-fee perk requires the checkout routes (M3, C10) to check `subscriptions` for the user before computing `application_fee_amount`. This check must be server-side — never trust client-side "I'm a Pro" claims.
 
 ## 2. Goals
 
-- Two Stripe Price objects: Consumer Pro monthly ($9.99) + annual ($79.99)
+- Two Stripe Price objects: Consumer Pro monthly ($19) + annual ($149) — reuse C3 `consumer_pro_monthly` Price
 - `POST /api/billing/consumer-pro/checkout` creates a subscription Checkout session
 - `/me/upgrade` page renders plan comparison (free vs Pro) and initiates checkout
 - Checkout routes (M3, C10) check `subscriptions` server-side to waive platform fee for Pro
@@ -153,11 +158,11 @@ If no row: apply standard fee (15–20% for experiences, 5% for tickets).
 - **Grace period on lapsed Pro:** If a Pro subscription is `past_due` (before cancellation), treat as still-Pro for 7 days. Read `subscriptions.status IN ('active', 'past_due')` for the Pro check and record when `past_due` first occurred.
 - **Annual plan proration:** If a monthly Pro user upgrades to annual, use Stripe's built-in prorate option. Do not implement custom proration logic.
 - **Rate limiting for free tier:** The `conciergeAgent` rate limit for free users is enforced in the agent instructions (or via middleware on `/api/copilotkit`). Pro users bypass this check. Implementation: check `GET /api/consumer/pro/status` → if `isPro`, skip rate limit enforcement.
-- **In-chat upgrade prompt:** The concierge can suggest upgrading when a free user hits rate limits. Use `useCopilotAction` with `renderAndWaitForResponse` to render an in-chat upgrade button: "Upgrade to Consumer Pro for $9.99/mo to continue." The button links to `/me/upgrade`.
+- **In-chat upgrade prompt:** The concierge can suggest upgrading when a free user hits rate limits. Use `useCopilotAction` with `renderAndWaitForResponse` to render an in-chat upgrade button: "Upgrade to Consumer Pro for $19/mo to continue." The button links to `/me/upgrade`.
 
 ## 6. Real-world examples
 
-**Camila** (free tier) has asked 5 questions today and hits the rate limit. Concierge: "You've reached your daily limit. Upgrade to Consumer Pro for $9.99/mo — unlimited suggestions + zero booking fees." She clicks the in-chat button → `/me/upgrade` → selects annual ($79.99/yr) → pays → `subscriptions` row created with `plan: 'consumer_pro'`. Tomorrow she books a food tour: no platform fee (saves ~$12 on a $58 booking). Payback on the annual subscription: less than one booking per month.
+**Camila** (free tier) has asked 5 questions today and hits the rate limit. Concierge: "You've reached your daily limit. Upgrade to Consumer Pro for $19/mo — unlimited suggestions + zero booking fees." She clicks the in-chat button → `/me/upgrade` → selects annual ($149/yr) → pays → `subscriptions` row created with `plan: 'consumer_pro'`. Tomorrow she books a food tour: no platform fee (saves ~$12 on a $58 booking). Payback on the annual subscription: less than one booking per month.
 
 ## 7. Acceptance criteria
 

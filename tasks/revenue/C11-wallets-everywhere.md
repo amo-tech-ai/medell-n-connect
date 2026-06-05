@@ -6,13 +6,18 @@ priority: P1
 status: Not Started
 estimated_effort: 1 week
 area: frontend
-tier: TIER R1
-order: 3
+tier: TIER R2
+order: 4
 schema_tables: []
 depends_on: [MVP-exit, C2]
 linear_project: Commerce Platform
-prefix: REV
 description: Reuse the existing Stripe Payment Element (Apple Pay / Google Pay) wallet infrastructure from the ticket checkout and wire it into every checkout flow across the app — venue deposits, tour bookings, restaurant reservations — via the generic CheckoutWidget (C2).
+linear_phase: post-mvp
+linear_labels:
+  - phase:post-mvp
+  - prefix:PAY
+  - area:payments
+  - stack:stripe
 ---
 
 # C11 — Wallets Everywhere

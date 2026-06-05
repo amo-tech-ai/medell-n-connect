@@ -12,9 +12,13 @@ schema_tables: []
 depends_on: [MVP-exit, M1, M2]
 blocks: []
 linear_project: Growth & Operations
-prefix: GRW
-skills: [copilotkitV1, shadcn]
+skills: [copilotkit, shadcn]
 description: The /partners marketing and onboarding page where new operators (venues, rental hosts, event organizers, tour operators) discover subscription tiers, subscribe, and complete Stripe Connect Express onboarding. The conversion funnel from "interested business owner" to "live on MDE AI, receiving payouts."
+linear_phase: post-mvp
+linear_labels:
+  - phase:post-mvp
+  - prefix:OPS
+  - area:launch
 ---
 
 # M11 — /partners Operator Onboarding

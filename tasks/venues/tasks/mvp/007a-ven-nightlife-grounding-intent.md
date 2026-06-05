@@ -102,9 +102,9 @@ Extend `intent` enum: `"cafe" | "general"` → add **`"nightlife"`**. Add query 
 
 | Field | Value |
 |-------|-------|
-| Evidence | `tasks/venues/tasks/evidence/VEN-011-verify-YYYY-MM-DD.md` |
-| Grade | ⚪ Pending |
-| Production ready | No |
+| Evidence | PR [#68](https://github.com/amo-tech-ai/mdeapp/pull/68) → `main` @ `ac8390e` (2026-06-04) |
+| Grade | 🟢 Tool shipped; concierge pass-through pending follow-up |
+| Production ready | Partial — tool on `main`; agent must pass `intent` for chat benefit |
 
 ### Verify before Done
 

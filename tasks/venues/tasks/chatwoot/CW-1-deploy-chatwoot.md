@@ -12,7 +12,13 @@ schema_tables: []
 depends_on: [MVP-exit]
 blocks: [CW-2]
 linear_project: Growth & Operations
-prefix: GRW
+linear_id: SAN-553
+linear_url: https://linear.app/sanjiovani/issue/SAN-553/cw-1-deploy-chatwoot-on-hetzner-coolify
+linear_blocked_by: [SAN-178, SAN-115, SAN-368]
+linear_phase: post-mvp
+linear_labels:
+  - phase:post-mvp
+  - stack:whatsapp
 skills: [mde-supabase]
 description: Self-host Chatwoot on a Hetzner VPS via Coolify. Provisions Postgres, Redis, and S3-compatible object storage. The foundation all other CW tasks depend on. Ships before CW-2 so the WhatsApp inbox has somewhere to land.
 ---

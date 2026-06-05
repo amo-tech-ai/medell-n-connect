@@ -12,8 +12,15 @@ schema_tables: []
 depends_on: [CW-2]
 blocks: [C7, CW-4, CW-5]
 linear_project: Growth & Operations
-prefix: GRW
-skills: [mastra, mde-supabase, copilotkitV1]
+linear_id: SAN-555
+linear_url: https://linear.app/sanjiovani/issue/SAN-555/cw-3-apichatwoot-bridge-mastra-pipeline
+linear_blocked_by: [SAN-554]
+linear_phase: post-mvp
+linear_labels:
+  - phase:post-mvp
+  - stack:whatsapp
+  - stack:mastra
+skills: [mastra, mde-supabase, copilotkit]
 description: The stateless Next.js route that bridges Chatwoot webhooks to the Mastra agent pipeline. n8n routes Chatwoot events (message.created, conversation.status_changed) to this endpoint. The bridge loads contact context, runs the correct Mastra agent, checks the WhatsApp 24h window, and posts the AI reply back to Chatwoot. The single shared brain between CopilotKit web and Chatwoot messaging.
 ---
 

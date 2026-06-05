@@ -12,7 +12,13 @@ schema_tables: []
 depends_on: [CW-1]
 blocks: [CW-3]
 linear_project: Growth & Operations
-prefix: GRW
+linear_id: SAN-554
+linear_url: https://linear.app/sanjiovani/issue/SAN-554/cw-2-whatsapp-cloud-api-inbox-templates
+linear_blocked_by: [SAN-553]
+linear_phase: post-mvp
+linear_labels:
+  - phase:post-mvp
+  - stack:whatsapp
 skills: [mde-supabase]
 description: Connect the WhatsApp Cloud API to the Chatwoot inbox. Verify the WhatsApp Business Account (WABA), configure the webhook endpoint pointing at n8n, and submit the first Meta-approved message templates (cart_recovery_v1, lead_followup_v1). The WhatsApp send loop lives here.
 ---

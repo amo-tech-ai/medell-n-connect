@@ -59,6 +59,16 @@ As **Carlos**, I want to browse specialty coffee shops in Laureles on `/cafes` w
 - [ ] Filter bar matches DESIGN.MD tokens (no hardcoded `gray-*`)
 - [ ] Empty state links to chat: "Ask the concierge for more"
 - [ ] Evidence `tasks/evidence/SCREEN-028-evidence.md`
+- [ ] Playwright `e2e/screens/SCREEN-028-cafes-browse.spec.ts` pass
+
+### Sidebar nav activation (Done gate — do not enable early)
+
+- [ ] Sidebar nav activation **only after** browse route is production-ready:
+  - [ ] Update `src/components/chat/chat-nav-rail.tsx`: `cafes` `href: null` → `"/cafes"`
+  - [ ] Remove Coming soon disabled state for `cafes` row
+  - [ ] Playwright: `[data-testid="nav-cafes-link"]` click → HTTP 200 on `/cafes`
+  - [ ] Route shows **real catalog content** — not placeholder (`EmptyState`), redirect, or 404
+  - [ ] Verify checklist item on SAN-584 (SCR-002b)
 
 ## Linear label
 

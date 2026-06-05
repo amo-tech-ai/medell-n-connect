@@ -12,7 +12,13 @@ schema_tables: []
 depends_on: [CW-4]
 blocks: [C7, C8]
 linear_project: Growth & Operations
-prefix: GRW
+linear_id: SAN-557
+linear_url: https://linear.app/sanjiovani/issue/SAN-557/cw-5-g2-rental-lead-capture-hook
+linear_blocked_by: [SAN-556]
+linear_phase: post-mvp
+linear_labels:
+  - phase:post-mvp
+  - stack:whatsapp
 skills: [mde-supabase, mastra]
 description: Wires the existing G2 lead capture edge function into the Chatwoot/WhatsApp pipeline so rental inquiries on WhatsApp create leads in Supabase the same way web chat does. The rental agent, running in the CW-3 bridge, calls the chat-lead-capture edge function when intent = rental and preferences are extracted. Closes the loop from WhatsApp → Mastra → Supabase → host inbox → lead billing (C4).
 ---

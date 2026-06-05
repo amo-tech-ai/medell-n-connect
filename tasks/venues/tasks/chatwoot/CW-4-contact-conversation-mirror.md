@@ -12,7 +12,13 @@ schema_tables: [chatwoot_contacts, chatwoot_conversations]
 depends_on: [CW-3]
 blocks: [CW-5]
 linear_project: Growth & Operations
-prefix: GRW
+linear_id: SAN-556
+linear_url: https://linear.app/sanjiovani/issue/SAN-556/cw-4-supabase-contactconversation-mirror
+linear_blocked_by: [SAN-555]
+linear_phase: post-mvp
+linear_labels:
+  - phase:post-mvp
+  - stack:whatsapp
 skills: [mde-supabase]
 description: Mirror Chatwoot contacts and conversations into Supabase so the Mastra agents have a query-able CRM layer and Patricia can run SQL analytics on conversations. Supabase owns business objects; Chatwoot owns the conversation thread. The mirror is a read-optimized copy triggered by Chatwoot webhooks via the CW-3 bridge.
 ---

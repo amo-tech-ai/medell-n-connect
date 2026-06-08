@@ -11,6 +11,21 @@ const warnMs = process.argv.includes("--warn-ms")
   ? Number(process.argv[process.argv.indexOf("--warn-ms") + 1])
   : 2500;
 
+/** Prod CopilotKit route allows same-origin browser requests without Bearer (see copilotkit-auth.ts). */
+function requestHeaders(extra = {}) {
+  const headers = { ...extra };
+  try {
+    const origin = new URL(base).origin;
+    if (origin.includes("mdeai.co")) {
+      headers.Origin = origin;
+      headers.Referer = `${origin}/chat`;
+    }
+  } catch {
+    // base may be malformed in tests — skip Origin
+  }
+  return headers;
+}
+
 async function timedFetch(url, init) {
   const t0 = performance.now();
   const res = await fetch(url, init);
@@ -28,13 +43,16 @@ async function timedFetch(url, init) {
 async function post(path, body) {
   return timedFetch(`${base}${path}`, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: requestHeaders({ "Content-Type": "application/json" }),
     body: JSON.stringify(body),
   });
 }
 
 async function get(path) {
-  return timedFetch(`${base}${path}`, { method: "GET" });
+  return timedFetch(`${base}${path}`, {
+    method: "GET",
+    headers: requestHeaders(),
+  });
 }
 
 function ok(label, pass, detail = "") {
@@ -60,7 +78,10 @@ async function main() {
   let failed = 0;
   let warns = 0;
 
-  const home = await timedFetch(`${base}/`, { method: "GET" });
+  const home = await timedFetch(`${base}/`, {
+    method: "GET",
+    headers: requestHeaders(),
+  });
   if (!ok("GET /", home.res.status === 200, `${home.res.status} ${home.ms}ms`)) failed++;
   else warnSlow("GET /", home.ms) && warns++;
 

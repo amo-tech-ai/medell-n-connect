@@ -1,0 +1,26 @@
+tasks/testing/scripts/chat-smoke.mjs
+  s_b36771af174a1f::t_4c242bde0a3f65 46,52-55
+  s_b36771af174a1f::t_c34ecb457803e3 81-84
+  s_b36771af174a1f::t_050eec13d9c3c2 14-28
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "7eb97a19269934a24044350208faaa05d20b9080",
+  "prompts": {},
+  "humans": {
+    "h_893db8c595c073": {
+      "author": "Sanjiovani <ai@socialmediville.ca>"
+    }
+  },
+  "sessions": {
+    "s_b36771af174a1f": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "e275ed1c-ebc2-46f2-91f8-b18574a1b947",
+        "model": "default"
+      },
+      "human_author": "Sanjiovani <ai@socialmediville.ca>"
+    }
+  }
+}

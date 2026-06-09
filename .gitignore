@@ -37,7 +37,11 @@
 # until those references are scrubbed. .claude/settings.local.json is machine-specific.
 # .agents/ mirrors the same skill sources (+ an 11M _archive/). Version deliberately
 # later, post-scrub, if reusable workflows are wanted.
-/.claude/
+# EXCEPTION (2026-06-09): .claude/docs/ is tracked — mirrored Anthropic docs,
+# secret-scanned clean. Parent must be `/.claude/*` (not `/.claude/`) because git
+# never descends into a fully-ignored directory, so a bare negation wouldn't work.
+/.claude/*
+!/.claude/docs/
 /.agents/
 
 # ── Dependencies / build output ────────────────────────────────────────

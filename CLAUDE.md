@@ -8,7 +8,9 @@ Planning + application workspace building a new mdeai app (`mdeapp/`) on Copilot
 
 - `mdeapp/` — the new Next.js 16 app (CopilotKit 1.55.2 + Mastra + AG-UI). All build/run/test runs from here.
 - `plan/` — PRD v6.0 + audits + diagrams. Read `plan/prd.md` (index → 10 chunks) before any code change.
-- `tasks/` — execution backlog: `tasks/core/` (F01–F13, F18–F20) · `tasks/events/` · `tasks/real-estate/` · `tasks/maps/` (MAP-001–012, see `tasks/maps/NUMBERING.md`). Index at `tasks/INDEX.md`.
+- `tasks/` — execution backlog. **The ENTIRE tree lives at `mdeapp/docs/tasks/` since 2026-06-09** — every `tasks/<entry>` is a compat symlink to `../mdeapp/docs/tasks/<entry>` (same files either way; events moved first, the rest completed the same day). Index at `tasks/INDEX.md` · docs map at [`mdeapp/docs/index-docs.md`](mdeapp/docs/index-docs.md).
+  - **Git home = the mdeapp repo** (the outer repo ignores `/mdeapp/`, so the symlinked content is untracked here — outer git only sees the symlinks). Commit task/doc changes inside `mdeapp/` or they exist in no git history. Pre-migration snapshot: `/home/sk/mdeai-tasks-backup-20260609/` (outside the repo).
+  - Current **data-model audit**: [`mdeapp/docs/tasks/events/data/data-model-audit.md`](mdeapp/docs/tasks/events/data/data-model-audit.md) (2026-06-09, 85% · B); prior structural audit `events/audit/04-data-model-audit.md`. Loose root-level copies in `events/` (`06-*.md`, `04-*.md`, root `VENUE-DATA-MODEL.md`) are relocation leftovers — **the subdir copy wins**.
 - `docs/` — strategic background, repo grading, copilotkit + maps research. `drafts/` — WIP notes.
 - `.claude/skills/` — **27 enabled** skills (after the 2026-05-29 Phase-1 trim; off-phase/redundant entries archived under `.agents/skills/_archive/`). **This is the project scan root — only entries here load into context.**
 - `.agents/skills/` — canonical skill **source library**, NOT scanned. An entry here with no `.claude/skills/` symlink does **not** load. Archives + restore: `.agents/skills/_archive/{2026-05-07,2026-05-14,2026-05-19,2026-05-24,2026-05-29}/MANIFEST.md`.
@@ -31,7 +33,7 @@ Planning + application workspace building a new mdeai app (`mdeapp/`) on Copilot
 
 ## Hard rules
 
-Compact always-on guardrails; deeper detail in the named skill. (12 wired enforcement hooks make these deterministic; 2 more parked in `.claude/hooks/_deferred/`.) **Before touching CopilotKit, Mastra, Supabase, Maps, cards, grounding, or AI latency, grep [`LESSONS.md`](./LESSONS.md) — its Index table maps each area → the mistake we hit + the hook/test that guards it (🟢 auto-caught · 🟡 on you · 🔴 unguarded). Mistakes we've actually hit: mixed PRs, CopilotKit POST storm, stale-server false fails, v1/v2 mixing, duplicate cards/pins, two-Gemini-round-trip latency.**
+Compact always-on guardrails; deeper detail in the named skill. (13 wired enforcement hooks make these deterministic; 2 more parked in `.claude/hooks/_deferred/`.) **Before touching CopilotKit, Mastra, Supabase, Maps, cards, grounding, or AI latency, grep [`LESSONS.md`](./LESSONS.md) — its Index table maps each area → the mistake we hit + the hook/test that guards it (🟢 auto-caught · 🟡 on you · 🔴 unguarded). Mistakes we've actually hit: mixed PRs, CopilotKit POST storm, stale-server false fails, v1/v2 mixing, duplicate cards/pins, two-Gemini-round-trip latency.**
 
 - **Production AI = Gemini only.** No `@anthropic-ai/*` SDK in `mdeapp/` or edge functions. (→ `gemini`)
 - **No service-role keys in `mdeapp/src/**`** — edge functions only. **F13 carve-out:** `mdeapp/src/mastra/lib/**` + `mdeapp/src/lib/supabase/service-env.ts` & `service.ts` + any server-only API route under `src/app/api/**` that must read Mastra-managed tables (e.g. `mastra_threads`, `ai_runs`) inaccessible to anon may use `SUPABASE_SERVICE_ROLE_KEY` **if**: (1) user identity is verified first via `createClient()`, (2) the route is never imported by client code, (3) hook `no-service-role-in-src.mjs` passes. Examples: `/api/copilotkit`, `/api/threads`. Add service-role nowhere else under `mdeapp/src/**`. (→ `mde-supabase`)
@@ -107,15 +109,28 @@ Invariants:
 - `renderAndWaitForResponse` is the HITL pattern; the component gets `respond(value)` to unblock the agent.
 - Working-memory schema changes touch THREE places: the Zod in the agent file, the TS type in `src/lib/types.ts`, and (W4) `packages/types/src/`.
 
-## Response style — lead with the answer
+## Response style — MANDATORY template (enforced via output style `mdeai-plain`)
 
-Default shape for any non-trivial reply: **(1) one-line answer/verdict first → (2) a short summary or table → (3) details only if needed → (4) the decision or next step.** Rules:
-- **Get to the point.** Put the conclusion in the first sentence; don't make the user read to find it.
-- **Easy to understand.** Plain language, short sentences, define jargon once. Prefer a table over a wall of prose when comparing things.
-- **Logical order.** Most-important → least; group related points; never bury a blocker mid-paragraph.
-- **Real-world framing.** Tie impact to an mdeai persona/surface (see table below), not abstractions.
-- **Summarize.** End multi-part work with a tight recap + explicit "what I need from you" / next step.
-- **Be honest.** State what's done, what's skipped, what's risky — plainly, no hedging.
+**Enforcement (two layers, wired in BOTH scan roots — `/home/sk/mdeai/.claude/` and `mdeapp/.claude/`):**
+1. *Steering:* `.claude/output-styles/mdeai-plain.md` is the active output style (`outputStyle` in `.claude/settings.json`) — it injects these rules into the system prompt every session.
+2. *Deterministic:* Stop hook `.claude/hooks/stop-plain-language-gate.mjs` runs at every turn end — **blocks** (exit 2) any reply that mentions a `SAN-NNN` without pairing it with its name at least once, and **warns** on arrow chains (`A → B → C`) in prose. Code blocks, inline code, and URLs are exempt.
+
+This section is the same contract as the output style; do not let the two drift.
+
+Every non-trivial reply MUST follow this shape — written for a smart non-engineer who is deciding what to do next:
+1. **The answer, first sentence, plain words** — what happened / what you found / yes-or-no.
+2. **What it means in the real world** — 1–3 sentences naming an mdeai persona or business effect ("Camila's map still shows stale pins", "no real money has moved yet"). No real-world effect? Say "internal only — no user impact."
+3. **Details** — only what changes a decision; prefer a short table; cut the rest.
+4. **Next step** — what you'll do, or the ONE thing you need from the user.
+
+Language rules:
+- **Gloss every technical term in parentheses on first use** — "the floor check (the repo's pass/fail quality gate)", "RLS (per-row database access rules)". Then use it freely.
+- **Always name every task.** Never a bare ID: `SAN-### · SPEC-ID — <full task name>` (e.g. `SAN-492 · EVT-033 — Event Venue + Offerings Schema`), in chat, docs, tables, commits, Linear. Look the name up if you don't know it.
+- Short sentences. Numbers need anchors ("31 of 49 events", not "31 rows"). No arrow chains in summaries. Never bury a blocker mid-paragraph.
+- **Length discipline:** the summary layer (1–2 + next step) fits in ~10 lines; long audits keep depth but layered — plain summary on top, detail tables after, so the reader can stop early.
+- **Be honest.** Done / skipped / risky — stated plainly, no hedging.
+
+Self-check before sending: could the user read only the first 3 lines and know what to do? Any unglossed jargon? Does every finding name who it affects? Is there a concrete next step?
 
 ## Explanation style — use mdeai personas, not generic analogies
 

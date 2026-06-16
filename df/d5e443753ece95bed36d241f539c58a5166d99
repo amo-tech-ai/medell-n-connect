@@ -1,0 +1,25 @@
+CLAUDE.md
+  s_bcfa22475523c5::t_3367564c301baa 121-122,126-128
+  s_bcfa22475523c5::t_b356332baab780 43
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.7",
+  "base_commit_sha": "dfd5e443753ece95bed36d241f539c58a5166d99",
+  "prompts": {},
+  "humans": {
+    "h_893db8c595c073": {
+      "author": "Sanjiovani <ai@socialmediville.ca>"
+    }
+  },
+  "sessions": {
+    "s_bcfa22475523c5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a4c0e6df-559e-4768-bdc4-abc0aabb5dc3",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Sanjiovani <ai@socialmediville.ca>"
+    }
+  }
+}

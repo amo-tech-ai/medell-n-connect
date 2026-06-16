@@ -54,6 +54,12 @@
       "command": "npx",
       "args": ["-y", "shadcn@latest", "mcp"],
       "env": {}
+    },
+    "qodo": {
+      "type": "stdio",
+      "command": "qodo",
+      "args": ["--mcp"],
+      "env": {}
     }
   }
 }

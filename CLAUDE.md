@@ -40,7 +40,7 @@ Compact always-on guardrails; deeper detail in the named skill. (13 wired enforc
 - **Every new Supabase table:** RLS enabled + ≥ 1 policy. (→ `mde-supabase`)
 - **Every Places API New call:** `X-Goog-FieldMask` (cost lever). (→ `mde-maps`)
 - **Every `<AdvancedMarker>`:** `mapId` on the parent `<Map>`. (→ `mde-maps`)
-- **CopilotKit pinned at `1.55.2`** for Phase 1 — v1 imports only, never mix v1/v2. Migrate to v2 in Phase 2 when Mastra ships on v2. (→ `copilotkit`)
+- **CopilotKit frontend is on v2** (the `/v2` subpath of the still-pinned `1.55.2` packages — a subpath swap, **not** a version bump; landed on `main` via PRs #217/#219/#220/#222). Use v2 hooks in `src/**`: `useAgent`, `useHumanInTheLoop`, `useFrontendTool`/`useRenderTool`, `useAgentContext`. v1 symbols (`useCoAgent`, `renderAndWaitForResponse`, `useCopilotAction`, `useCopilotReadable`, `@copilotkit/react-ui`) are **retired** — never reintroduce them; CI guards `npm run audit:copilotkit-v2*` block new v1 imports. Backend/Mastra is unchanged. Never mix v1 and v2 within the frontend. (→ `copilotkit`)
 - **One worktree, one PR.** (→ `mde-worktree-pr-flow`, `/invoke`-only)
 - **Localhost runtime proof required for Done** (2026-05-20): no task flips `status: Done` without evidence that `npm run dev` booted clean AND the relevant surface responded. Anti-fake-done gate 9 (`.claude/skills/task-verifier/references/anti-fake-done-checklist.md`). N/A only for pure-doc tasks.
 - **Before any UI/SCREEN work: read [`DESIGN.MD`](./DESIGN.MD)** — color tokens (oklch), layout system, component anatomy, do/don't rules, and Mindtrip competitive patterns. Using hardcoded `gray-*` shades, omitting `prefers-reduced-motion`, or skipping skeletons are regressions. (→ `shadcn`, `tailwind-best-practices`)
@@ -118,10 +118,14 @@ Invariants:
 This section is the same contract as the output style; do not let the two drift.
 
 Every non-trivial reply MUST follow this shape — written for a smart non-engineer who is deciding what to do next:
-1. **The answer, first sentence, plain words** — what happened / what you found / yes-or-no.
-2. **What it means in the real world** — 1–3 sentences naming an mdeai persona or business effect ("Camila's map still shows stale pins", "no real money has moved yet"). No real-world effect? Say "internal only — no user impact."
+1. **The answer — first sentence, plain words.** What happened / what you found / yes-or-no.
+2. **What it means in the real world.** 1–3 sentences naming an mdeai persona or business effect ("Camila's map still shows stale pins", "no real money has moved yet"). No real-world effect? Say "internal only — no user impact."
 3. **Details** — only what changes a decision; prefer a short table; cut the rest.
 4. **Next step** — what you'll do, or the ONE thing you need from the user.
+
+**Worked example — same finding, wrong vs right:**
+- ❌ *"The persistence layer is wired; threads now hydrate from LibSQL on cold-start via the after() flush."* — jargon, no persona, no decision.
+- ✅ *"Camila's chat now survives a redeploy. Before, turn 11 forgot turns 1–10 when the server cold-started; now the history reloads. Plumbing is done — next I'll add a test that proves it."*
 
 Language rules:
 - **Gloss every technical term in parentheses on first use** — "the floor check (the repo's pass/fail quality gate)", "RLS (per-row database access rules)". Then use it freely.
